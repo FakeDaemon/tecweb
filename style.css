@@ -9,24 +9,27 @@
 html{
   height:100%;
   font-family: Arial, sans-serif;
+  background: black url("images/DOOMbackground.jpg") center/cover no-repeat fixed;
 }
 body{
   width:var(--body-width);
   height:100%;
   margin:auto;
-  background-color:rgba(0, 0, 0, 0.3);
+  background-color:rgba(150, 150, 150, 1);
 }
 header{
-  height: 15%;
-  background-color:rgba(90, 90, 90, 0.3);
+  height: 20%;
+  background-color:rgba(10,10,10,1);
+  overflow: hidden;
 }
 nav{
   position:relative;
-  height: 10vh;
-  background-color:rgba(90, 90, 90, 1);
+  height: 10%;
+  background-color:rgba(25,25,25,1);
   margin: auto;
-  width:80%;
-  top: -50px;
+  width:90%;
+  top: -5%;
+  overflow: hidden;
 }
 ul{
   width:100%;
@@ -40,7 +43,8 @@ ul li{
   display: inline-block;
   text-align:center;
   vertical-align:middle;
-  font-size:2em;
+  font-size:1.6em;
+  font-weight: bold;
   width:25%;
   height:100%;
   color:white;
@@ -52,31 +56,42 @@ ul li{
   transition: all 0.1s ease-in;
 }
 ul li:hover{
-  background-color:rgba(40,40,40, 1);
-  font-size:2.2em;
+  background-color:rgba(0,0,0,1);
+  font-size:1.8em;
   color:white;
 }
 ul li a{
+  font-weight: normal;
   text-decoration: none;
   color:rgb(200,200,200);
+}
+.disabled{
+  pointer-events: none;
+}
+.disabled:hover{
+  background-color: inherit;
+  font-size: 1.6em;
+  color: white;
 }
 #logo{
   display: inline-block;
   margin:  1% auto auto auto;
   text-align: center;
   width: 100%;
-  height: 50%;
+  height: 60%;
+  color:white;
+  text-indent: -9999px;
+  background: black url("images/Logo_doom.png") center/contain no-repeat;
 }
 /*------------
 MAIN-CONTENT
 ------------*/
 .main{
   min-height:75%;
-  margin-top:-10vh;
+  margin-top: -9.5%;
   background-color:rgba(255, 255, 255, 0.2);
   display: flex;
   flex-flow: row wrap;
-  padding-top: 5%;
   text-align: center;
 }
 .main img{
@@ -142,9 +157,11 @@ IMAGE-SLIDER
   height: 100%;
 }
 
-
+/*------------
+FOOTER
+------------*/
 footer{
   width:100%;
-  height:10%;
+  height:5%;
   background-color:rgba(90,90,90,1);
 }
