@@ -1,0 +1,14 @@
+<div class="image_slider_widget_">
+      <a href="#" onclick="doNothing(event)" id="prev_icon_2"></a>
+      <div class="image_slider_container_">
+        <div id="image_slider_2" class="image_slider_">
+          <div class="image_box_">
+            
+          </div>
+          <div class="image_box_">
+            
+          </div>
+        </div>
+      </div>
+      <a href="#" onclick="doNothing(event)" id="next_icon_2"></a>
+    </div>
