@@ -13,7 +13,7 @@ html{
 }
 body{
   width:var(--body-width);
-  height:100%;
+  height:auto;
   margin:auto;
   background-color:rgba(150, 150, 150, 1);
 }
