@@ -1,5 +1,6 @@
 :root{
-  --body-width:1024px;
+  --body-width:100%;
+  --background-color:rgb(50,0,0);
 }
 *{
   margin:0;
@@ -11,33 +12,33 @@
   backdrop-filter: blur(8px);
 }
 html{
-  height:100vh;
+  min-height:100vh;
   font-family: Arial, sans-serif;
-  background: black url("images/DOOMbackground.jpeg") center/cover no-repeat fixed;
+  background: var(--background-color) url("images/DOOMbackground.png") center/cover no-repeat fixed;
 }
 body{
-  max-width:var(--body-width);
-  background-color: rgb(0,0,0);
+  max-width:100%;
   height:auto;
   margin:auto;
   color: white;
 }
 header{
+  position: sticky;
+  top:0;
+  left:0;
   height: 25vh;
   width: 100%;
-  background-color:rgba(10,10,10,1);
-  overflow: hidden;
+  background-color: black;
+  border-radius: 0 0 50% 50%;
 }
 nav{
-  position:relative;
   height: 10vh;
-  background-color:rgba(25,25,25,1);
+  background-color:black;
   margin: auto;
-  width:90%;
-  top: -5vh;
+  max-width:1024px;
   overflow: hidden;
 
-  -webkit-box-shadow: 0px 0px 11px 4px rgba(255,255,255,0.69); 
+  -webkit-box-shadow: 0px 0px 11px 4px rgba(255,255,255,0.69);
   box-shadow: 0px 0px 11px 4px rgba(255,255,255,0.69);
 }
 ul{
@@ -49,12 +50,11 @@ ul{
   justify-content: space-between;
 }
 ul li{
-  
   text-align:center;
   vertical-align:middle;
   font-size:1.6em;
   font-weight: bold;
-  width:25%;
+  width:20%;
   height:100%;
   color:white;
 
@@ -81,7 +81,7 @@ ul li.disabled{
   background: -moz-radial-gradient(circle, rgba(255,0,0,0.5) 0%, rgba(255,255,255,0) 40%);
   background: -webkit-radial-gradient(circle, rgba(255,0,0,0.5) 0%, rgba(255,255,255,0) 40%);
   background: radial-gradient(circle, rgba(255,0,0,0.5) 0%, rgba(255,255,255,0) 40%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff0000",endColorstr="#ffffff",GradientType=1);
+  progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff0000",endColorstr="#ffffff",GradientType=1);
 }
 .disabled:hover{
   background-color: inherit;
@@ -96,14 +96,15 @@ ul li.disabled{
   height: 60%;
   color:white;
   text-indent: -9999px;
-  background: black url("images/Logo_doom.png") center/contain no-repeat;
+  background: transparent url("images/Logo_doom.png") center/contain no-repeat;
 }
 /*------------
 MAIN-CONTENT
 ------------*/
 .main{
+  max-width: 1024px;
   min-height:75vh;
-  margin-top: -4vh;
+  margin: -4vh auto 0 auto;
   display: flex;
   flex-flow: row wrap;
   text-align: center;
@@ -123,7 +124,6 @@ IMAGE-SLIDER
 .image_slider_widget_{
   display: flex;
   flex-direction: row;
-  width: var(--body-width);
   height: 50vh;
   margin:auto;
   overflow:hidden;
