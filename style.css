@@ -6,19 +6,25 @@
   padding:0;
   border:0;
 }
+.blurred{
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
 html{
   height:100vh;
   font-family: Arial, sans-serif;
   background: black url("images/DOOMbackground.jpeg") center/cover no-repeat fixed;
 }
 body{
-  width:var(--body-width);
+  max-width:var(--body-width);
+  background-color: rgb(0,0,0);
   height:auto;
   margin:auto;
   color: white;
 }
 header{
   height: 25vh;
+  width: 100%;
   background-color:rgba(10,10,10,1);
   overflow: hidden;
 }
