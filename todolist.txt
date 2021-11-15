@@ -1,0 +1,11 @@
+TODO_list
+
+style.css da render cool, baby
+
+Community (con tutto cio` che ne deriva, da decidere)
+
+Stats: tabella mega op
+    - Armi
+    - Power up
+    - Boss
+    - Who knows??
