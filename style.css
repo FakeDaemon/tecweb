@@ -201,7 +201,7 @@ ul.cards {
     grid-template-columns: 1fr 3fr;
     grid-template-rows: auto;
     grid-gap: 0.5em;
-    grid-template-areas: "a b b";
+    grid-template-areas: "a b b b";
 }
 
 li.gunName {
