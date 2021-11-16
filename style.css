@@ -100,6 +100,11 @@ ul li.disabled {
     color: white;
 }
 
+p.history {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
 #logo {
     display: inline-block;
     margin: 1% auto auto auto;
