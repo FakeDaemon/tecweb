@@ -17,7 +17,7 @@
 html {
     min-height: 100vh;
     font-family: Arial, sans-serif;
-    background: var(--background-color) url("images/DOOMbackground.png") center/cover no-repeat fixed;
+    background: var(--background-color) url("../IMAGES/DOOMbackground.png") center/cover no-repeat fixed;
 }
 
 body {
@@ -108,7 +108,7 @@ ul li.disabled {
     height: 60%;
     color: white;
     text-indent: -9999px;
-    background: transparent url("images/Logo_doom.png") center/contain no-repeat;
+    background: transparent url("../IMAGES/Logo_doom.png") center/contain no-repeat;
 }
 
 /*------------
@@ -148,7 +148,7 @@ IMAGE-SLIDER
 #prev_icon_2 {
     width: 50px;
     height: 100%;
-    background-image: url(ICONS/back.png);
+    background-image: url(../ICONS/back.png);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -157,7 +157,7 @@ IMAGE-SLIDER
 #next_icon_2 {
     width: 50px;
     height: 100%;
-    background-image: url(ICONS/next.png);
+    background-image: url(../ICONS/next.png);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
