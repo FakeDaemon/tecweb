@@ -116,7 +116,7 @@ MAIN-CONTENT
 ------------*/
 .main {
     max-width: 1024px;
-    min-height: 75vh;
+    min-height: 65vh;
     margin: 10vh auto 0 auto;
     display: flex;
     flex-flow: row wrap;
@@ -226,6 +226,6 @@ FOOTER
 ------------*/
 footer {
     width: 100%;
-    height: 5%;
+    height: 5vh;
     background-color: rgba(10, 10, 10, 1);
 }
