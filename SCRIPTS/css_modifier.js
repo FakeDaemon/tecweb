@@ -1,5 +1,5 @@
-var user_creation_background="url(../IMAGES/register_icon.png";
-var login_background="url(../IMAGES/login_icon.png)";
+var user_creation_background="url(IMAGES/register_icon.png)";
+var login_background="url(IMAGES/login_icon.png)";
 $(document).ready(function(){
   $("#user_creation").toggleClass("undisplayed");
   $("#login").toggleClass("undisplayed");

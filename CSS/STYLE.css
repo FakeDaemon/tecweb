@@ -219,6 +219,7 @@ LOGIN-WIDGET
   width: 45%;
   height: 100%;
   transition: width 0.3s ease-in;
+  border-right: 5px dashed var(--background-color);
 }
 #user_creation_wrapper{
   background-position: center;
