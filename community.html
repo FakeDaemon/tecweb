@@ -26,30 +26,43 @@
     </nav>
   </header>
   <div class="main">
+
     <div id="login_widget">
-      <form id="login" action="index.html" method="post">
-        <datafield>
-          <legend>Utente già registrato</legend>
-          <label for="username">Username</label>
-          <input id="username" type="text" name="username" placeholder="Email o nome utente...">
-          <label for="password">Password</label>
-          <input id="password" type="password" name="password" placeholder="Inserisci la password...">
-        </datafield>
-        <a href="zeb_89.html">Password o Username dimenticate?</a>
-      </form>
-      <form id="user_creation" action="index.html" method="post">
-        <datafield>
-          <legend>Utente non registrato</legend>
-          <label for="username">Email</label>
-          <input id="username" type="text" name="email" placeholder="Email">
-          <label for="username">Username</label>
-          <input id="username" type="text" name="username" placeholder="Nome Utente">
-          <label for="password">Password</label>
-          <input id="password" type="text" name="password" placeholder="Password">
-          <label for="password confirm">Conferma Password</label>
-          <input id="password confirm" type="text" name="password" placeholder="Conferma Password">
-        </datafield>
-      </form>
+      <div id="login_wrapper">
+
+        <form id="login" class="fade-in" action="community_homepage.html" method="post">
+          <datafield>
+            <legend>Utente già registrato</legend>
+            <label for="username_login_">Username</label>
+            <input id="username_login_" type="text" name="username" placeholder="Email o nome utente...">
+            <label for="password_login_">Password</label>
+            <input id="password_login_" type="password" name="password" placeholder="Inserisci la password...">
+          </datafield>
+          <input type="submit" name="login_button" value="ACCEDI">
+          <input type="reset" name="login_reset" value="RESET">
+          <a href="zeb_89.html">Password o Username dimenticate?</a>
+        </form>
+
+      </div>
+
+      <div id="user_creation_wrapper" class="">
+
+        <form id="user_creation" class="fade-in" action="user_creation.html" method="post">
+          <datafield>
+            <legend>Utente non registrato</legend>
+            <label for="email_u_c_">Email</label>
+            <input id="email_u_c_" type="text" name="email" placeholder="Email">
+            <label for="username_u_c_">Username</label>
+            <input id="username_u_c_" type="text" name="username" placeholder="Nome Utente">
+            <label for="password_u_c_">Password</label>
+            <input id="password_u_c_" type="text" name="password" placeholder="Password">
+            <label for="password_confirm_u_c_">Conferma Password</label>
+            <input id="password_confirm_u_c_" type="text" name="password" placeholder="Conferma Password">
+          </datafield>
+        </form>
+
+      </div>
+
     </div>
   </div>
   <footer>

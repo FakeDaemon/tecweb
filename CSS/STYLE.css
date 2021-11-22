@@ -1,203 +1,238 @@
 :root {
-    --body-width: 100%;
-    --background-color: rgb(50, 0, 0);
+  --body-width: 100%;
+  --background-color: rgb(50, 0, 0);
 }
-
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
 * {
-    margin: 0;
-    padding: 0;
-    border: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
 .blurred {
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
 }
 
 html {
-    min-height: 100vh;
-    font-family: Arial, sans-serif;
-    background: var(--background-color) url("../IMAGES/DOOMbackground.png") center/cover no-repeat fixed;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: var(--background-color) url("../IMAGES/DOOMbackground.png") center/cover no-repeat fixed;
 }
 
 body {
-    max-width: 100%;
-    height: auto;
-    margin: auto;
-    color: white;
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+  color: white;
 }
 
 header {
-    position: sticky;
-    top: 0;
-    left: 0;
-    height: 20vh;
-    width: 100%;
-    background: linear-gradient(to bottom, #000000 50%, rgb(50, 0, 0) 90%);
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 20vh;
+  width: 100%;
+  background: linear-gradient(to bottom, #000000 50%, rgb(50, 0, 0) 90%);
 }
 
 #main_menu{
-    height: 10vh;
-    background-color: black;
-    margin: auto;
-    max-width: 1024px;
-    overflow: hidden;
+  height: 10vh;
+  background-color: black;
+  margin: auto;
+  max-width: 1024px;
+  overflow: hidden;
 
-    -webkit-box-shadow: 0px 0px 11px 4px rgba(255, 255, 255, 0.69);
-    box-shadow: 0px 0px 11px 4px rgba(255, 255, 255, 0.69);
+  -webkit-box-shadow: 0px 0px 11px 4px rgba(255, 255, 255, 0.69);
+  box-shadow: 0px 0px 11px 4px rgba(255, 255, 255, 0.69);
 }
 
 #main_menu ul{
-    width: 100%;
-    height: 100%;
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 #main_menu ul li {
-    text-align: center;
-    vertical-align: middle;
-    font-size: 1.6em;
-    font-weight: bold;
-    width: 20%;
-    height: 100%;
-    color: white;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 1.6em;
+  font-weight: bold;
+  width: 20%;
+  height: 100%;
+  color: white;
 
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
 
-    transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
 }
 
 #main_menu ul li:hover {
-    background-color: rgba(255, 255, 255, 0.6);
-    font-size: 1.8em;
-    color: black;
+  background-color: rgba(255, 255, 255, 0.6);
+  font-size: 1.8em;
+  color: black;
 }
 
 #main_menu ul li a {
-    font-weight: normal;
-    text-decoration: none;
-    color: inherit;
+  font-weight: normal;
+  text-decoration: none;
+  color: inherit;
 }
 
 #main_menu ul li.disabled {
-    pointer-events: none;
+  pointer-events: none;
 
-    background: rgb(255, 0, 0);
-    background: -moz-radial-gradient(circle, rgba(255, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0) 40%);
-    background: -webkit-radial-gradient(circle, rgba(255, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0) 40%);
-    background: radial-gradient(circle, rgba(255, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0) 40%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff0000", endColorstr="#ffffff", GradientType=1);
+  background: rgb(255, 0, 0);
+  background: -moz-radial-gradient(circle, rgba(255, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0) 40%);
+  background: -webkit-radial-gradient(circle, rgba(255, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0) 40%);
+  background: radial-gradient(circle, rgba(255, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0) 40%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff0000", endColorstr="#ffffff", GradientType=1);
 }
 
 .disabled:hover {
-    background-color: inherit;
-    font-size: 1.6em;
-    color: white;
+  background-color: inherit;
+  font-size: 1.6em;
+  color: white;
 }
 
 #logo {
-    display: inline-block;
-    margin: 1% auto auto auto;
-    text-align: center;
-    width: 100%;
-    height: 60%;
-    color: white;
-    text-indent: -9999px;
-    background: transparent url("../IMAGES/Logo_doom.png") center/contain no-repeat;
+  display: inline-block;
+  margin: 1% auto auto auto;
+  text-align: center;
+  width: 100%;
+  height: 60%;
+  color: white;
+  text-indent: -9999px;
+  background: transparent url("../IMAGES/Logo_doom.png") center/contain no-repeat;
 }
 
 /*------------
 MAIN-CONTENT
 ------------*/
 .main {
-    max-width: 1024px;
-    min-height: 65vh;
-    margin: 10vh auto 0 auto;
-    display: flex;
-    flex-flow: row wrap;
-    text-align: center;
+  max-width: 1024px;
+  min-height: 65vh;
+  margin: 10vh auto 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
 }
 
 .main img {
-    width: auto;
-    max-height: 30vh;
+  width: auto;
+  max-height: 30vh;
 }
 
 .main p {
-    width: 80%;
-    margin: auto;
-    font-size: 1.5em;
+  width: 80%;
+  margin: auto;
+  font-size: 1.5em;
 }
 
 /*------------
 IMAGE-SLIDER
 ------------*/
 .image_slider_widget_ {
-    display: flex;
-    flex-direction: row;
-    height: 50vh;
-    margin: auto;
-    overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  height: 50vh;
+  margin: auto;
+  overflow: hidden;
 }
 
 #prev_icon_2 {
-    width: 50px;
-    height: 100%;
-    background-image: url(../ICONS/back.png);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
+  width: 50px;
+  height: 100%;
+  background-image: url(../ICONS/back.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 #next_icon_2 {
-    width: 50px;
-    height: 100%;
-    background-image: url(../ICONS/next.png);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
+  width: 50px;
+  height: 100%;
+  background-image: url(../ICONS/next.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .image_slider_container_ {
-    width: calc(var(--body-width) - 100px);
-    height: 100%;
-    overflow: hidden;
+  width: calc(var(--body-width) - 100px);
+  height: 100%;
+  overflow: hidden;
 }
 
 .image_box_ {
-    width: calc(var(--body-width) - 100px);
-    height: 100%;
+  width: calc(var(--body-width) - 100px);
+  height: 100%;
 }
 
 .image_box_ img {
-    height: auto;
-    width: auto;
-    max-height: 100%;
-    max-width: 100%;
-    display: inline-block;
-    margin: 0;
+  height: auto;
+  width: auto;
+  max-height: 100%;
+  max-width: 100%;
+  display: inline-block;
+  margin: 0;
 }
 
 .image_slider_ {
-    --local-width: calc(calc(var(--body-width) - 100px) * 2);
-    --local-translate: calc((-1 * var(--local-width))/2);
-    display: flex;
-    flex-flow: row nowrap;
-    width: var(--local-width);
-    transform: translate(calc(var(--local-translate)*(0)));
-    height: 100%;
+  --local-width: calc(calc(var(--body-width) - 100px) * 2);
+  --local-translate: calc((-1 * var(--local-width))/2);
+  display: flex;
+  flex-flow: row nowrap;
+  width: var(--local-width);
+  transform: translate(calc(var(--local-translate)*(0)));
+  height: 100%;
 }
 /*------------
 LOGIN-WIDGET
 ------------*/
+.fade-in{
+  opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 0.3s;
+}
+#user_creation.undisplayed, #login.undisplayed{
+  display: none;
+}
+#login_wrapper{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 70% auto;
+  width: 45%;
+  height: 100%;
+  transition: width 0.3s ease-in;
+}
+#user_creation_wrapper{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 70% auto;
+  width: 45%;
+  height:100%;
+  transition: width 0.3s ease-in;
+}
 #login_widget{
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
 
   border: 2px solid black;
   border-radius: 10%;
@@ -213,18 +248,23 @@ LOGIN-WIDGET
   margin: 2vh auto auto auto;
 }
 #login{
-  transition: all 0.2s ease-out;
-  border: 1px solid white;
-  width: 45%;
-  height: 80%;
-  margin:auto 0 auto auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  transition: opacity 0.1s ease-in;
+  opacity:1;
 }
 #user_creation{
-  transition: all 0.2s ease-out;
-  border: 1px solid violet;
-  width: 45%;
-  height: 80%;
+  width: 100%;
+  height: 100%;
   margin:auto auto auto 0;
+
+  transition: opacity 0.1s ease-in;
+  opacity:1;
 }
 #login_widget * datafield legend{
   width: 100%;
@@ -243,6 +283,19 @@ LOGIN-WIDGET
   text-align: center;
   font-size: 1.2em;
 }
+#login a{
+  width: 100%;
+}
+#login input[type=submit], #login input[type=reset]{
+  margin:1vh auto 1vh auto;
+  width: 45%;
+  color: black;
+}
+#user_creation{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 #zeb89{
   margin:auto;
   width: 100%;
@@ -253,35 +306,35 @@ LOGIN-WIDGET
 TABLES
 ------------*/
 ul.cards {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-template-rows: auto;
-    grid-gap: 0.5em;
-    grid-template-areas: "a b b b";
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: auto;
+  grid-gap: 0.5em;
+  grid-template-areas: "a b b b";
 }
 
 li.gunName {
-    grid-area: a;
+  grid-area: a;
 }
 
 /*nome arma*/
 li.gunDesc {
-    grid-area: b;
+  grid-area: b;
 }
 
 /*descrizione arma*/
 
 div.wrapper {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 5em);
-    justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 5em);
+  justify-content: center;
 }
 
 /*------------
 FOOTER
 ------------*/
 footer {
-    width: 100%;
-    height: 5vh;
-    background-color: rgba(10, 10, 10, 1);
+  width: 100%;
+  height: 5vh;
+  background-color: rgba(10, 10, 10, 1);
 }
