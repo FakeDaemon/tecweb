@@ -208,34 +208,46 @@ LOGIN-WIDGET
   height: 50vh;
   width: 100%;
 
-  background-color: rgb(20,20,20);
+  background-color: rgba(20,20,20, 0.7);
 
   margin: 2vh auto auto auto;
 }
 #login{
   transition: all 0.2s ease-out;
   border: 1px solid white;
-  width: 50%;
+  width: 45%;
   height: 80%;
   margin:auto 0 auto auto;
 }
 #user_creation{
   transition: all 0.2s ease-out;
   border: 1px solid violet;
-  width: 50%;
+  width: 45%;
   height: 80%;
   margin:auto auto auto 0;
 }
-#login datafield legend{
+#login_widget * datafield legend{
   width: 100%;
   font-size: 2em;
 }
-#login datafield{
+#login_widget * datafield{
   display: flex;
   flex-direction: column;
 }
-#login label{
+#login_widget * label{
   font-size: 1.5em;
+}
+#login_widget * input{
+  width: 75%;
+  margin:auto;
+  text-align: center;
+  font-size: 1.2em;
+}
+#zeb89{
+  margin:auto;
+  width: 100%;
+  height: auto;
+  max-height: 100%;
 }
 /*------------
 TABLES
