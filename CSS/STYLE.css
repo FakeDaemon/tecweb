@@ -129,10 +129,10 @@ MAIN-CONTENT
   flex-flow: row wrap;
   text-align: center;
 }
-
 .main img {
-  width: auto;
-  max-height: 30vh;
+    width: auto;
+    max-height: 30vh;
+    margin: auto;
 }
 
 .main p {
