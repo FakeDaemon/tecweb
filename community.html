@@ -1,33 +1,45 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-    <link href="CSS/STYLE.css" rel="stylesheet">
-    <meta charset="utf-8">
-    <title> Home </title>
-    <meta name="keywords" content="DOOM"/>
-    <meta name="description" content="DOOM Wiki"/>
-    <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano , Angeloni Alberto"/>
-    <script type="text/javascript" src="SCRIPTS/cookie_extractor_">
-
-    </script>
+  <link href="CSS/STYLE.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <title> Home </title>
+  <meta name="keywords" content="DOOM"/>
+  <meta name="description" content="DOOM Wiki"/>
+  <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano , Angeloni Alberto"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="SCRIPTS/css_modifier.js"></script>
 </head>
 
-<body>
+<body onload="redirection()">
+  <script type="text/javascript" src="SCRIPTS/cookie_extractor.js"></script>
   <header>
     <h1 id="logo">DOOM WIKI</h1>
-  <nav>
-    <ul>
-      <li lang="en"><a href="index.html">HOME</a></li>
-      <li><a href="history.html">CAPITOLI</a></li>
-      <li lang="en"><a href="stats.html">STATS</a></li>
-      <li><a href="trivia.html">CURIOSITÀ</a></li>
-      <li lang="en" class="disabled">COMMUNITY</li>
-    </ul>
-  </nav>
-</header>
+    <nav>
+      <ul>
+        <li lang="en"><a href="index.html">HOME</a></li>
+        <li><a href="history.html">CAPITOLI</a></li>
+        <li lang="en"><a href="stats.html">STATS</a></li>
+        <li><a href="trivia.html">CURIOSITÀ</a></li>
+        <li lang="en" class="disabled">COMMUNITY</li>
+      </ul>
+    </nav>
+  </header>
   <div class="main">
-    <div class="login_widget">
+    <div id="login_widget">
+      <form id="login" action="index.html" method="post">
+        <datafield>
+          <legend>Utente già registrato</legend>
+          <label for="username">Username:</label>
+          <input id="username" type="text" name="username" placeholder="Email o nome utente...">
+          <label for="password">Password:</label>
+          <input id="password" type="password" name="password" placeholder="Inserisci la password...">
+        </datafield>
+        <a href="credential_recovery.html">Password o Username dimenticate?</a>
+      </form>
+      <form id="user_creation" action="index.html" method="post">
 
+      </form>
     </div>
   </div>
   <footer>
