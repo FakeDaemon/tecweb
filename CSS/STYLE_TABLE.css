@@ -1,0 +1,20 @@
+/*table {
+    border: 1px solid black;
+}
+
+.head:hover {}
+
+tr:hover {
+    background-color: red;
+}
+*/
+th,
+td {
+    /*border-left: 0.1em solid black;*/
+    border-bottom: 0.15em solid #000;
+    /*border-top: 0.15em solid #000;*/
+    padding-top: 0.3em;
+    padding-bottom: 0.5em;
+    /*border-right: 0.1em solid #000;*/
+    margin: 0px;
+}
