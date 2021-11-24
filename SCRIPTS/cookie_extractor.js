@@ -17,10 +17,15 @@ function getCookie(name) {
     return decodeURI(dc.substring(begin + prefix.length, end));
 }
 function redirection() {
-    var myCookie = getCookie("doom_wiki_username_");
-
-    if (myCookie == null) {
-        console.log("redirection to community home page.");
+    if (getCookie("doom_wiki_username_") == null) {
+      console.log("No cookies found. Site need Login or Registration.");
+      //window.location.replace("https://www.google.com");
+    }else{
+      if (getCookie("doom_wiki_password_") == null){
+        console.log("Username cookie found. Session expired.");
         //window.location.replace("https://www.google.com");
+      }
+      console.log("Username and Password cookies found. Redirect to community_homepage.");
+      //window.location.replace("https://www.google.com");
     }
 }
