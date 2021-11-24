@@ -358,6 +358,32 @@ LOGIN-WIDGET
   max-height: 100%;
 }
 /*------------
+USER-WIDGET
+------------*/
+#user_widget{
+  min-height:20vh;
+  min-width: 20vh;
+
+  border:1px solid black;
+  margin:0 auto auto auto;
+
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+#user_widget a{
+  height: 16vh;
+  width: 16vh;
+
+  border-radius: 50%;
+  overflow:hidden;
+  margin: 0 auto 0 auto;
+}
+#user_widget a img{
+  height: 100%;
+  width: 100%;
+}
+/*------------
 TABLES
 ------------*/
 ul.cards {
