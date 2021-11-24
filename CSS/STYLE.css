@@ -266,12 +266,12 @@ LOGIN-WIDGET
   -webkit-box-shadow: 0px 0px 11px 4px rgba(255, 255, 255, 0.69);
   box-shadow: 0px 0px 11px 4px rgba(255, 255, 255, 0.69);
 
-  height: 50vh;
+  height: 64vh;
   width: 100%;
 
   background-color: rgba(20,20,20, 0.7);
 
-  margin: 2vh auto auto auto;
+  margin: -2vh auto auto auto;
 }
 #login{
   display: flex;
@@ -295,27 +295,49 @@ LOGIN-WIDGET
 #login_widget * datafield legend{
   width: 100%;
   font-size: 2em;
+  margin-bottom: 5%;
 }
 #login_widget * datafield{
   display: flex;
   flex-direction: column;
+  width:100%;
 }
 #login_widget * label{
-  font-size: 1.5em;
+  font-size: 2em;
 }
-#login_widget * input{
-  width: 75%;
-  margin:auto;
+#login_widget * input[type=text],#login_widget * input[type=password]{
+  width: 100%;
+  margin:1% auto 3% auto;
   text-align: center;
-  font-size: 1.2em;
+  font-size: 1.7em;
+
+  color: white;
+  border:0;
+  background: transparent;
 }
 #login a{
   width: 100%;
 }
+#button_container{
+  height: 15%;
+  width: 100%;
+  margin: 3% 0 3% 0;
+}
 #login input[type=submit], #login input[type=reset]{
-  margin:1vh auto 1vh auto;
-  width: 45%;
-  color: black;
+  margin:auto;
+  height: 100%;
+  width: 30%;
+
+  color: white;
+  font-size: 1.7em;
+  background-color: rgba(0,0,0,1);
+  border: 2px solid var(--background-color);
+}
+#login input[type=submit]{
+  border-radius: 30% 0 0 30%;
+}
+#login input[type=reset]{
+  border-radius: 0 30% 30% 0;
 }
 #user_creation{
   display: flex;
