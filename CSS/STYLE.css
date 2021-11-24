@@ -240,19 +240,23 @@ LOGIN-WIDGET
 #login_wrapper{
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 70% auto;
+  background-size: 60% auto;
   width: 45%;
   height: 100%;
-  transition: width 0.3s ease-in;
   border-right: 5px dashed var(--background-color);
+}
+#login_wrapper, #user_creation_wrapper{
+  transition: width 0.3s ease-in, background-size 0.2s ease-out;
+}
+#login_wrapper:hover, #user_creation_wrapper:hover{
+  background-size: 65%;
 }
 #user_creation_wrapper{
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 70% auto;
+  background-size: 60% auto;
   width: 45%;
   height:100%;
-  transition: width 0.3s ease-in;
 }
 #login_widget{
   display: flex;
@@ -332,6 +336,9 @@ LOGIN-WIDGET
   font-size: 1.7em;
   background-color: rgba(0,0,0,1);
   border: 2px solid var(--background-color);
+}
+#login input[type=submit]:hover, #login input[type=reset]:hover{
+  background-color: rgba(255,255,255,0.2);
 }
 #login input[type=submit]{
   border-radius: 30% 0 0 30%;
