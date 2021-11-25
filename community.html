@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="it" dir="ltr">
 <head>
   <link href="CSS/STYLE.css" rel="stylesheet">
   <meta charset="utf-8">
@@ -9,10 +9,10 @@
   <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano , Angeloni Alberto"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="SCRIPTS/css_modifier.js"></script>
+  <script type="text/javascript" src="SCRIPTS/cookie_extractor.js"></script>
 </head>
 
 <body onload="redirection()">
-  <script type="text/javascript" src="SCRIPTS/cookie_extractor.js"></script>
   <header>
     <h1 id="logo">DOOM WIKI</h1>
     <nav id="main_menu">
@@ -26,37 +26,38 @@
     </nav>
   </header>
   <div class="main">
-
     <div id="login_widget">
-      <div id="login_wrapper">
+      <div id="login_wrapper" tabindex="0">
 
-        <form id="login" class="fade-in" action="community_homepage.html" method="post">
-          <datafield>
-            <legend>Utente già registrato</legend>
+        <form id="login" class="fade-in" action="community.html" method="post" autocomplete="off">
+          <datafield lang="en">
+            <legend>LOGIN</legend>
             <label for="username_login_">Username</label>
             <input id="username_login_" type="text" name="username" placeholder="Email o nome utente...">
             <label for="password_login_">Password</label>
             <input id="password_login_" type="password" name="password" placeholder="Inserisci la password...">
           </datafield>
-          <input type="submit" name="login_button" value="ACCEDI">
-          <input type="reset" name="login_reset" value="RESET">
+          <span id="button_container">
+            <input type="submit" name="login_button" value="ACCEDI">
+            <input lang="en" type="reset" name="login_reset" value="RESET">
+          </span>
           <a href="zeb_89.html">Password o Username dimenticate?</a>
         </form>
 
       </div>
 
-      <div id="user_creation_wrapper" class="">
+      <div id="user_creation_wrapper" tabindex="0">
 
-        <form id="user_creation" class="fade-in" action="user_creation.html" method="post">
-          <datafield>
-            <legend>Utente non registrato</legend>
+        <form id="user_creation" class="fade-in" action="user_creation.html" method="post" autocomplete="off">
+          <datafield lang="en">
+            <legend lang="it">REGISTRAZIONE NUOVO UTENTE</legend>
             <label for="email_u_c_">Email</label>
             <input id="email_u_c_" type="text" name="email" placeholder="Email">
             <label for="username_u_c_">Username</label>
             <input id="username_u_c_" type="text" name="username" placeholder="Nome Utente">
             <label for="password_u_c_">Password</label>
             <input id="password_u_c_" type="text" name="password" placeholder="Password">
-            <label for="password_confirm_u_c_">Conferma Password</label>
+            <label lang="it" for="password_confirm_u_c_">Conferma <span lang="en">Password</span></label>
             <input id="password_confirm_u_c_" type="text" name="password" placeholder="Conferma Password">
           </datafield>
         </form>

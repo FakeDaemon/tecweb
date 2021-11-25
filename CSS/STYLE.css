@@ -89,7 +89,21 @@ header {
     margin:auto;
     vertical-align: middle;
 }
-
+.intestazione{
+    height: 40px;
+    background: rgb(8, 8, 8) url("../ICONS/DOOMIcon.jpg") no-repeat center left ;
+    background-size: 4%;
+    text-align: center;
+    margin:auto;
+    vertical-align: middle;
+}
+.titolo{
+  height: 80px;
+  text-align: center;
+  margin:auto;
+  vertical-align: middle;
+  /* TO DO CHIEDERE AD ANGELI PER SISTEMARE POSIZIONE TITOLO*/
+}
 #main_menu ul li:hover {
   background-color: rgba(255, 255, 255, 0.6);
   font-size: 1.8em;
@@ -228,18 +242,23 @@ LOGIN-WIDGET
 #login_wrapper{
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 70% auto;
+  background-size: 60% auto;
   width: 45%;
   height: 100%;
-  transition: width 0.3s ease-in;
+  border-right: 5px dashed var(--background-color);
+}
+#login_wrapper, #user_creation_wrapper{
+  transition: width 0.3s ease-in, background-size 0.2s ease-out;
+}
+#login_wrapper:hover, #user_creation_wrapper:hover{
+  background-size: 65%;
 }
 #user_creation_wrapper{
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 70% auto;
+  background-size: 60% auto;
   width: 45%;
   height:100%;
-  transition: width 0.3s ease-in;
 }
 #login_widget{
   display: flex;
@@ -253,12 +272,12 @@ LOGIN-WIDGET
   -webkit-box-shadow: 0px 0px 11px 4px rgba(255, 255, 255, 0.69);
   box-shadow: 0px 0px 11px 4px rgba(255, 255, 255, 0.69);
 
-  height: 50vh;
+  height: 64vh;
   width: 100%;
 
   background-color: rgba(20,20,20, 0.7);
 
-  margin: 2vh auto auto auto;
+  margin: -2vh auto auto auto;
 }
 #login{
   display: flex;
@@ -282,27 +301,52 @@ LOGIN-WIDGET
 #login_widget * datafield legend{
   width: 100%;
   font-size: 2em;
+  margin-bottom: 5%;
 }
 #login_widget * datafield{
   display: flex;
   flex-direction: column;
+  width:100%;
 }
 #login_widget * label{
-  font-size: 1.5em;
+  font-size: 2em;
 }
-#login_widget * input{
-  width: 75%;
-  margin:auto;
+#login_widget * input[type=text],#login_widget * input[type=password]{
+  width: 100%;
+  margin:1% auto 3% auto;
   text-align: center;
-  font-size: 1.2em;
+  font-size: 1.7em;
+
+  color: white;
+  border:0;
+  background: transparent;
 }
 #login a{
   width: 100%;
 }
+#button_container{
+  height: 15%;
+  width: 100%;
+  margin: 3% 0 3% 0;
+}
 #login input[type=submit], #login input[type=reset]{
-  margin:1vh auto 1vh auto;
-  width: 45%;
-  color: black;
+  margin:auto;
+  height: 100%;
+  width: 30%;
+
+  color: white;
+  font-size: 1.7em;
+  background-color: rgba(0,0,0,1);
+  border: 2px solid var(--background-color);
+}
+#login input[type=submit]:hover, #login input[type=reset]:hover{
+  background-color: rgba(255,255,255,0.2);
+}
+#login input[type=submit]{
+  border-radius: 30% 0 0 30%;
+}
+#login input[type=reset]{
+  border-radius: 0 30% 30% 0;
 }
 #user_creation{
   display: flex;
@@ -314,6 +358,32 @@ LOGIN-WIDGET
   width: 100%;
   height: auto;
   max-height: 100%;
+}
+/*------------
+USER-WIDGET
+------------*/
+#user_widget{
+  min-height:20vh;
+  min-width: 20vh;
+
+  border:1px solid black;
+  margin:0 auto auto auto;
+
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+#user_widget a{
+  height: 16vh;
+  width: 16vh;
+
+  border-radius: 50%;
+  overflow:hidden;
+  margin: 0 auto 0 auto;
+}
+#user_widget a img{
+  height: 100%;
+  width: 100%;
 }
 /*------------
 TABLES

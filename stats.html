@@ -3,6 +3,7 @@
 
 <head>
     <link href="CSS/STYLE.css" rel="stylesheet">
+    <link href="CSS/STYLE_TABLE.css" rel="stylesheet">
     <meta charset="utf-8">
     <title> Home </title>
     <meta name="keywords" content="DOOM" />
@@ -24,17 +25,17 @@
         </nav>
     </header>
     <div class="main">
-        <table style="border:1px solid black;">
+        <table>
             <thead>
                 <tr>
-                    <th colspan="10">
+                    <th class="head" colspan="10">
                         <h1>Armi</h1>
                     </th>
                 </tr>
                 <tr>
-                    <th rowspan="2">Nome Arma</th>
-                    <th rowspan="2">Descrizione</th>
-                    <th colspan="8">Presente in</th>
+                    <th class="head" rowspan="2">Nome Arma</th>
+                    <th class="head" rowspan="2">Descrizione</th>
+                    <th class="head" colspan="8">Presente in</th>
                 </tr>
                 <tr>
                     <th>
@@ -46,6 +47,7 @@
                     <th>
                         Doom 3
                     </th>
+                    <th>Doom 3: "Ressurrection of evil"</th>
                     <th>
                         Doom (2016)
                     </th>
@@ -70,6 +72,7 @@
                     <th>X</th>
                     <th>X</th>
                     <th>X</th>
+                    <th>X</th>
                 </tr>
                 <tr>
                     <th>
@@ -81,6 +84,7 @@
                     <th>X</th>
                     <th>X</th>
                     <th>X</th>
+                    <th></th>
                     <th>X</th>
                     <th>X</th>
                 </tr>
@@ -91,6 +95,7 @@
                     <th>
                         Arma a lungo raggio di default. Quasi completamente inutile con avversari più forti di <span lang="en">zombieman</span> oppure <span lang="en">shotgun guy</span>
                     </th>
+                    <th>X</th>
                     <th>X</th>
                     <th>X</th>
                     <th>X</th>
@@ -109,6 +114,7 @@
                     <th>X</th>
                     <th>X</th>
                     <th>X</th>
+                    <th>X</th>
                 </tr>
                 <tr>
                     <th>
@@ -117,6 +123,7 @@
                     <th>
                         Lancia razzi esplosivi. Fa molto danno, ma si rischia di autoinfliggersi seri danni se usato a corto raggio.
                     </th>
+                    <th>X</th>
                     <th>X</th>
                     <th>X</th>
                     <th>X</th>
@@ -136,6 +143,7 @@
                     <th>X</th>
                     <th>X</th>
                     <th>X</th>
+                    <th>X</th>
                 </tr>
                 <tr>
                     <th>
@@ -149,13 +157,17 @@
                     <th>X</th>
                     <th>X</th>
                     <th>X</th>
+                    <th>X</th>
                 </tr>
                 <tr>
                     <th><span lang="en">Super Shotgun</span></th>
                     <th>Una doppietta a canne mozze che richiede molto tempo per la ricarica dei proiettili, a distanza ravvicinata risulta più letale del normale <span lang="en">Shotgun</span></th>
                     <th></th>
                     <th>X</th>
+                    <th></th>
                     <th>X</th>
+                    <th>X</th>
+                    <th></th>
                 </tr>
                 <tr>
                     <th><span lang="en">Flashlight</span></th>
@@ -163,6 +175,9 @@
                     <th></th>
                     <th></th>
                     <th>X</th>
+                    <th>X</th>
+                    <th></th>
+                    <th></th>
                 </tr>
                 <tr>
                     <th><span lang="en">Machine Gun</span></th>
@@ -170,6 +185,9 @@
                     <th></th>
                     <th></th>
                     <th>X</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
                 </tr>
                 <tr>
                     <th><span lang="en">Granades</span></th>
@@ -177,6 +195,9 @@
                     <th></th>
                     <th></th>
                     <th>X</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
                 </tr>
                 <tr>
                     <th><span lang="en">Soul Cube</span></th>
@@ -184,12 +205,315 @@
                     <th></th>
                     <th></th>
                     <th>X</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
                 </tr>
+                <tr>
+                    <th><span lang="en">Artifact</span></th>
+                    <th>Arma con utilizzo analogo al "Soul Cube"</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th>X</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <th><span lang="en">Grabber</span></th>
+                    <th>Noto anche come "<span lang="en">Ionized Plasma Levitator</span>", permette di sollevare oggetti dal terreno e scagliarli con estrema forza. Inoltre può afferrare le palle di fuoco sparate dai nemici, raggiungere oggetti altrimenti irraggiungibili e rimuovere ostacoli</th>
+                    <th></th>
+                    <!--Doom -->
+                    <th></th>
+                    <!--Doom 2-->
+                    <th></th>
+                    <!--Doom 3-->
+                    <th>X</th>
+                    <!--Doom 3 evil-->
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <th><span lang="en">Burst Rifle</span></th>
+                    <th>Fucile semiautomatico, spara 3 colpi per volta. <span lang="en">"Multiplayer Only"</span></th>
+                    <th></th>
+                    <!--Doom -->
+                    <th></th>
+                    <!--Doom 2-->
+                    <th></th>
+                    <!--Doom 3-->
+                    <th></th>
+                    <!--Doom 3 evil-->
+                    <th>X</th>
+                    <!--Doom 2016-->
+                    <th></th>
+                </tr>
+                <tr>
+                    <th><span lang="en">Frag Granade</span></th>
+                    <th>Analogo a <span lang="en">Granades</span> di "<span lang="en">Doom</span> 3", ma con design e danno differenti</th>
+                    <th></th>
+                    <!--Doom -->
+                    <th></th>
+                    <!--Doom 2-->
+                    <th></th>
+                    <!--Doom 3-->
+                    <th></th>
+                    <!--Doom 3 evil-->
+                    <th>X</th>
+                    <!--Doom 2016-->
+                    <th></th>
+                </tr>
+                <tr>
+                    <th><span lang="en">Gauss Cannon</span></th>
+                    <th>Spara una raffica di energia, maggiore è il tempo di carica maggiore è il danno della raffica</th>
+                    <th></th>
+                    <!--Doom -->
+                    <th></th>
+                    <!--Doom 2-->
+                    <th></th>
+                    <!--Doom 3-->
+                    <th></th>
+                    <!--Doom 3 evil-->
+                    <th>X</th>
+                    <!--Doom 2016-->
+                    <th></th>
+                </tr>
+                <tr>
+                    <th><span lang="en">Heavy Assault Rifle</span></th>
+                    <th>Analogo di <span lang="en">Machine Gun</span>, ma ha la possibilità di sparare missili</th>
+                    <th></th>
+                    <!--Doom -->
+                    <th></th>
+                    <!--Doom 2-->
+                    <th></th>
+                    <!--Doom 3-->
+                    <th></th>
+                    <!--Doom 3 evil-->
+                    <th>X</th>
+                    <!--Doom 2016-->
+                    <th></th>
+                </tr>
+                <tr>
+                    <th><span lang="en">Hellshot</span></th>
+                    <th>Arma semiautomatica alimentata a energia infernale. Causa danni secondari da fuoco a chi viene colpito. "<span lang="en">Multiplayer Only</span>"</th>
+                    <th></th>
+                    <!--Doom -->
+                    <th></th>
+                    <!--Doom 2-->
+                    <th></th>
+                    <!--Doom 3-->
+                    <th></th>
+                    <!--Doom 3 evil-->
+                    <th>X</th>
+                    <!--Doom 2016-->
+                    <th></th>
+                </tr>
+                <tr>
+                    <th><span lang="en">Hologram</span></th>
+                    <th>Ologramma del giocatore. Distrae gli avversari</th>
+                    <th></th>
+                    <!--Doom -->
+                    <th></th>
+                    <!--Doom 2-->
+                    <th></th>
+                    <!--Doom 3-->
+                    <th></th>
+                    <!--Doom 3 evil-->
+                    <th>X</th>
+                    <!--Doom 2016-->
+                    <th></th>
+                </tr>
+                <tr>
+                    <th><span lang="en">Kinetic Mine</span></th>
+                    <th>Mina che esplode quando un avversario è abbastanza vicino. "<span lang="en">Multiplayer Only</span>"</th>
+                    <th></th>
+                    <!--Doom -->
+                    <th></th>
+                    <!--Doom 2-->
+                    <th></th>
+                    <!--Doom 3-->
+                    <th></th>
+                    <!--Doom 3 evil-->
+                    <th>X</th>
+                    <!--Doom 2016-->
+                    <th></th>
+                </tr>
+                <tr>
+                    <th><span lang="en">Lighting Gun</span></th>
+                    <th>Arma a corto raggio che spara continui flussi di elettricità. "<span lang="en">Multiplayer Only</span>"</th>
+                    <th></th>
+                    <!--Doom -->
+                    <th></th>
+                    <!--Doom 2-->
+                    <th></th>
+                    <!--Doom 3-->
+                    <th></th>
+                    <!--Doom 3 evil-->
+                    <th>X</th>
+                    <!--Doom 2016-->
+                    <th></th>
+                </tr>
+                <tr>
+                    <th><span lang="en">Mark V Pistol</span></th>
+                    <th>Pistola ricaricabile. "<span lang="en">Multiplayer Only</span>"</th>
+                    <th></th>
+                    <!--Doom -->
+                    <th></th>
+                    <!--Doom 2-->
+                    <th></th>
+                    <!--Doom 3-->
+                    <th></th>
+                    <!--Doom 3 evil-->
+                    <th>X</th>
+                    <!--Doom 2016-->
+                    <th></th>
+                </tr>
+                <tr>
+                    <th><span lang="en">Personal Teleporter</span></th>
+                    <th>Teletrasporta il giocatore al punto di partenza. "<span lang="en">Multiplayer Only</span>"</th>
+                    <th></th>
+                    <!--Doom -->
+                    <th></th>
+                    <!--Doom 2-->
+                    <th></th>
+                    <!--Doom 3-->
+                    <th></th>
+                    <!--Doom 3 evil-->
+                    <th>X</th>
+                    <!--Doom 2016-->
+                    <th></th>
+                </tr>
+                <tr>
+                    <th><span lang="en">Reaper</span></th>
+                    <th>Rilascia 6 raffiche circolari di energia. "<span lang="en">Multiplayer Only</span>"</th>
+                    <th></th>
+                    <!--Doom -->
+                    <th></th>
+                    <!--Doom 2-->
+                    <th></th>
+                    <!--Doom 3-->
+                    <th></th>
+                    <!--Doom 3 evil-->
+                    <th>X</th>
+                    <!--Doom 2016-->
+                    <th></th>
+                </tr>
+                <tr>
+                    <th><span lang="en">Shield Wall</span></th>
+                    <th>Quando attivato, crea una barriera invalicabile dai nemici e dai proiettili</th>
+                    <th></th>
+                    <!--Doom -->
+                    <th></th>
+                    <!--Doom 2-->
+                    <th></th>
+                    <!--Doom 3-->
+                    <th></th>
+                    <!--Doom 3 evil-->
+                    <th>X</th>
+                    <!--Doom 2016-->
+                    <th></th>
+                </tr>
+                <tr>
+                    <th><span lang="en">Siphon Granade</span></th>
+                    <th>Cosa diamine è il <span lang="en">siphon</span>?</th>
+                    <th></th>
+                    <!--Doom -->
+                    <th></th>
+                    <!--Doom 2-->
+                    <th></th>
+                    <!--Doom 3-->
+                    <th></th>
+                    <!--Doom 3 evil-->
+                    <th>X</th>
+                    <!--Doom 2016-->
+                    <th></th>
+                </tr>
+                <tr>
+                    <th><span lang="en">Static Cannon</span></th>
+                    <th>Si carica coi movimenti del giocatore, rilascia tutta l'energia in un colpo solo. "<span lang="en">Multiplayer Only</span>"</th>
+                    <th></th>
+                    <!--Doom -->
+                    <th></th>
+                    <!--Doom 2-->
+                    <th></th>
+                    <!--Doom 3-->
+                    <th></th>
+                    <!--Doom 3 evil-->
+                    <th>X</th>
+                    <!--Doom 2016-->
+                    <th></th>
+                </tr>
+                <tr>
+                    <th><span lang="en">Tesla Rocket</span></th>
+                    <th>Usa scintille elettriche che attaccano tutti i nemici nel suo raggio di tiro. Rallenta muovendosi</th>
+                    <th></th>
+                    <!--Doom -->
+                    <th></th>
+                    <!--Doom 2-->
+                    <th></th>
+                    <!--Doom 3-->
+                    <th></th>
+                    <!--Doom 3 evil-->
+                    <th>X</th>
+                    <!--Doom 2016-->
+                    <th></th>
+                </tr>
+                <tr>
+                    <th><span lang="en">Thread Sensor</span></th>
+                    <th>Un dispositivo che, quando lanciato, si attacca a una superficie e rivela i nemici</th>
+                    <th></th>
+                    <!--Doom -->
+                    <th></th>
+                    <!--Doom 2-->
+                    <th></th>
+                    <!--Doom 3-->
+                    <th></th>
+                    <!--Doom 3 evil-->
+                    <th>X</th>
+                    <!--Doom 2016-->
+                    <th></th>
+                </tr>
+                <tr>
+                    <th><span lang="en">Vortex Rifle</span></th>
+                    <th>Fucile da cecchino. "<span lang="en">Multiplayer Only</span>"</th>
+                    <th></th>
+                    <!--Doom -->
+                    <th></th>
+                    <!--Doom 2-->
+                    <th></th>
+                    <!--Doom 3-->
+                    <th></th>
+                    <!--Doom 3 evil-->
+                    <th>X</th>
+                    <!--Doom 2016-->
+                    <th></th>
+                </tr>
+
             </tbody>
             <tfoot>
-
+                <tr>
+                    <th>Nome Arma</th>
+                    <th>Descrizione</th>
+                    <th>
+                        Doom
+                    </th>
+                    <th>
+                        Doom II
+                    </th>
+                    <th>
+                        Doom 3
+                    </th>
+                    <th>Doom 3: "Ressurrection of evil"</th>
+                    <th>
+                        Doom (2016)
+                    </th>
+                    <th>
+                        Doom Eternal
+                    </th>
+                </tr>
             </tfoot>
         </table>
+        <!--
         <div class="wrapper">
             <ul class="cards">
                 <li class="gunName">Nome arma</li>
@@ -212,6 +536,7 @@
         <img class="imgVadidCode" src="IMAGES/valid-xhtml10.png" alt="html valido" />
         <img class="imgVadidCode" src="IMAGES/vcss-blue.gif" alt="css valido" />
     </footer>
+    -->
 </body>
 
 </html>
