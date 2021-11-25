@@ -2,6 +2,24 @@
   --body-width: 100%;
   --background-color: rgb(50, 0, 0);
 }
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+
+::-webkit-scrollbar-track {
+  background: red;
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: var(--background-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  width:10px;
+}
 @keyframes fadeInOpacity {
 	0% {
 		opacity: 0;
@@ -10,10 +28,23 @@
 		opacity: 1;
 	}
 }
+
+@keyframes fadeOutOpacity {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 * {
   margin: 0;
   padding: 0;
   border: 0;
+}
+input[type=text]:focus, input[type=password]:focus{
+  outline-style: solid;
+  outline-color:white;
 }
 
 .blurred {
@@ -364,24 +395,96 @@ USER-WIDGET
   min-height:20vh;
   min-width: 20vh;
 
-  border:1px solid black;
-  margin:0 auto auto auto;
+  margin:-3% auto auto auto;
 
   display: flex;
   flex-flow: column;
   justify-content: space-between;
 }
-#user_widget a{
+#profile_pic{
   height: 16vh;
   width: 16vh;
 
   border-radius: 50%;
+  border: 3px solid black;
   overflow:hidden;
   margin: 0 auto 0 auto;
+
+  transition: background-image 0.2s ease-in;
 }
-#user_widget a img{
+#profile_pic img{
+  transition: opacity 0.2s ease-in;
+}
+#profile_pic img:hover, #profile_pic img:focus{
+  opacity: 0.1;
+}
+#profile_pic:hover{
+  background-image: url("../IMAGES/profile_pic_change_icon.png");
+  background-color: black;
+  background-size: 30% auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#profile_pic img{
   height: 100%;
   width: 100%;
+}
+#user_widget h2{
+  font-size: 2em;
+}
+#user_settings{
+
+}
+/*------------
+SEARCH-WIDGET
+------------*/
+#search_widget{
+  width: 100%;
+}
+#search_bar{
+  width: 40%;
+  background: transparent;
+
+  text-align: center;
+  color:white;
+  font-size: 3em;
+  margin:5% auto 5% auto;
+
+  border-bottom: 2px solid transparent;
+
+  transition: width 0.3s ease-in;
+}
+#search_bar:focus{
+  width: 90%;
+  outline: none;
+  border-bottom: 2px solid white;
+}
+#search_widget p{
+  font-size: 2em;
+  margin: 0 auto 0 auto;
+}
+#topic_list{
+  width: 90%;
+  margin: auto;
+  min-height: 30vh;
+}
+#topic_list dt, #topic_list dd{
+  opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 0.2s;
+}
+#topic_list dt{
+  width: 100%;
+  font-size: 2em;
+
+  margin: 5% auto auto auto;
+}
+#topic_list dd{
+  display: inline-block;
+  width: 20%;
+  margin:auto;
 }
 /*------------
 TABLES
