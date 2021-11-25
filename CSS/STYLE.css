@@ -9,24 +9,24 @@
 
 
 ::-webkit-scrollbar-track {
-  background: red;
+  background: var(--background-color);
 }
 
 
 ::-webkit-scrollbar-thumb {
-  background: var(--background-color);
+  background: black;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  width:10px;
+  width:5px;
 }
 @keyframes fadeInOpacity {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeOutOpacity {
@@ -111,14 +111,14 @@ header {
 }
 
 .paragrafo{
-    height: 40px;
-    background: 
-      url("../ICONS/DOOMIcon.jpg") no-repeat left,
-      linear-gradient(to right,rgb(8, 8, 8) 70%, transparent);
-    background-size: 4%, auto;
-    text-align: center;
-    margin:auto;
-    vertical-align: middle;
+  height: 40px;
+  background:
+  url("../ICONS/DOOMIcon.jpg") no-repeat left,
+  linear-gradient(to right,rgb(8, 8, 8) 70%, transparent);
+  background-size: 4%, auto;
+  text-align: center;
+  margin:auto;
+  vertical-align: middle;
 }
 
 
@@ -180,9 +180,9 @@ MAIN-CONTENT
   text-align: center;
 }
 .main img {
-    width: auto;
-    max-height: 30vh;
-    margin: auto;
+  width: auto;
+  max-height: 30vh;
+  margin: auto;
 }
 
 .main p {
@@ -256,10 +256,10 @@ LOGIN-WIDGET
 ------------*/
 .fade-in{
   opacity: 1;
-	animation-name: fadeInOpacity;
-	animation-iteration-count: 1;
-	animation-timing-function: ease-in;
-	animation-duration: 0.3s;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
 }
 #user_creation.undisplayed, #login.undisplayed{
   display: none;
@@ -388,7 +388,7 @@ LOGIN-WIDGET
 USER-WIDGET
 ------------*/
 #user_widget{
-  min-height:20vh;
+  min-height: 20vh;
   min-width: 20vh;
 
   margin:-3% auto auto auto;
@@ -428,14 +428,15 @@ USER-WIDGET
 #user_widget h2{
   font-size: 2em;
 }
-#user_settings{
-
-}
 /*------------
 SEARCH-WIDGET
 ------------*/
 #search_widget{
   width: 100%;
+}
+#search_widget h2{
+  margin-top: 5%;
+  font-size: 2.7em;
 }
 #search_bar{
   width: 40%;
@@ -443,8 +444,8 @@ SEARCH-WIDGET
 
   text-align: center;
   color:white;
-  font-size: 3em;
-  margin:5% auto 5% auto;
+  font-size: 2.5em;
+  margin:1.5% auto 1.5% auto;
 
   border-bottom: 2px solid transparent;
 
@@ -459,28 +460,55 @@ SEARCH-WIDGET
   font-size: 2em;
   margin: 0 auto 0 auto;
 }
+#topic_list.opened{
+  height: 30vh;
+  overflow: auto;
+}
 #topic_list{
-  width: 90%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  width: auto;
   margin: auto;
-  min-height: 30vh;
+
+  height: 0px;
+  overflow: hidden;
+
+  transition: height 0.3s ease-in;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+#topic_list::-webkit-scrollbar {
+    display: none;
 }
 #topic_list dt, #topic_list dd{
   opacity: 1;
-	animation-name: fadeInOpacity;
-	animation-iteration-count: 1;
-	animation-timing-function: ease-in;
-	animation-duration: 0.2s;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.2s;
 }
 #topic_list dt{
-  width: 100%;
   font-size: 2em;
-
   margin: 5% auto auto auto;
 }
 #topic_list dd{
   display: inline-block;
-  width: 20%;
   margin:auto;
+}
+#topic_list span{
+  display: flex;
+  height: 95%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin:0 1.5% 0 1.5%;
+
+  background-color: rgba(0,0,0,0.5);
+  border: 1px solid red;
+  -webkit-box-shadow: 0px 0px 11px 4px rgba(255, 255, 255, 0.69);
+  box-shadow: 0px 0px 11px 4px rgba(255, 255, 255, 0.69);
+  border-radius: 5%;
 }
 /*------------
 TABLES
