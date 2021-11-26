@@ -1,29 +1,22 @@
 var initialization = false;
 
-function search(){
+function searchv2(){
   let input = document.getElementById('search_bar').value
   input=input.toLowerCase();
 
-  let x = document.querySelectorAll("dt");
-  let y = document.querySelectorAll("dd");
+  let x = document.querySelectorAll("#topic_list > span > dt");
+  let y = document.querySelectorAll("#topic_list > span");
 
   for (i = 0; i < x.length; i++) {
     if (!x[i].innerHTML.toLowerCase().includes(input)) {
-      x[i].style.display="none";
-      index=i*4;
-      for(j=0; j<4; j++){
-        y[index+j].style.display="none";
-      }
+      y[i].style.display="none";
     }
     else {
-      x[i].style.display="inline-block";
-      index=i*4;
-      for(j=0; j<4; j++){
-        y[index+j].style.display="inline-block";
-      }
+      y[i].style.display="flex";
     }
   }
 };
+
 $(function(){
   $("#search_bar").keypress(function(e){
     var keyCode = (e.keyCode ? e.keyCode : e.which);
@@ -33,8 +26,11 @@ $(function(){
     }
   });
 });
+
 var scrolled=0;
-function scrollUpSearchBar(){
-  console.log("test");
-  $('html, body').animate({scrollTop: 300 }, 1500);
+function openList(){
+  if(!scrolled){
+    scrolled=1;
+    $("#topic_list").toggleClass("opened");
+  }
 };
