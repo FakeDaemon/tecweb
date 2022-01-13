@@ -110,7 +110,12 @@ header {
 
   transition: all 0.1s ease-in;
 }
-
+ul ul
+{
+  display:flex;
+  flex-direction: column;
+  overflow: hidden;
+}
 .paragrafo{
   height: 40px;
   background:
@@ -121,7 +126,6 @@ header {
   margin:auto;
   vertical-align: middle;
 }
-
 
 .titolo{
   height: 80px;
