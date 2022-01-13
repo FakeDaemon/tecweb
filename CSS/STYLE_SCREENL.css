@@ -1,0 +1,14 @@
+@media screen and (orientation: landscape) {
+    #main{
+        margin-left: 0;
+        border-top: 1px solid #000;
+    }
+    #main .nav{
+        float:none;
+        width: 90%;
+        font-size: 1.5em;
+    }
+    #footer{
+        width: 10%;
+    }
+}
