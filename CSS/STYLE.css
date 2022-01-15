@@ -155,8 +155,6 @@ header {
   linear-gradient(to right,rgb(8, 8, 8) 70%, transparent);
   background-size: 4%, auto;
   text-align: center;
-  margin:auto;
-  vertical-align: middle;
 }
 
 .titolo{
