@@ -196,3 +196,10 @@
     margin: auto;
     font-size: 1.5em;
   }
+  .paragrafo{
+    height: 40px;
+    background:
+    url("../ICONS/DOOMIcon.jpg") no-repeat left,
+    linear-gradient(to right,rgb(8, 8, 8) 70%, transparent);
+    background-size: 4%, auto;
+  }  
