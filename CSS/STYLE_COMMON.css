@@ -29,6 +29,7 @@
     font-family: Arial, sans-serif;
     box-sizing: border-box;
     background: var(--background-color) url("../IMAGES/DOOMbackground.png") center/cover no-repeat fixed;
+    scroll-behavior: smooth;
   }
   
   *, *:before, *:after {
