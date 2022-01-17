@@ -3,23 +3,7 @@
   --background-color: rgb(50, 0, 0);
 }
 
-::-webkit-scrollbar {
-  width: 20px;
-}
 
-
-::-webkit-scrollbar-track {
-  background: var(--background-color);
-}
-
-
-::-webkit-scrollbar-thumb {
-  background: white;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  width:5px;
-}
 @keyframes fadeInOpacity {
   0% {
     opacity: 0;

@@ -67,6 +67,28 @@
   }
 
 /*
+  SCROLLBAR
+*/
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: white;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  width:5px;
+}
+
+/*
   MAIN MENU
 */
   #container_list{
@@ -170,6 +192,7 @@
   footer {
     width: 100%;
     padding: 0.75em;
+    margin-top: 0.4em;
     background-color: rgba(10, 10, 10, 1);
   }
   
