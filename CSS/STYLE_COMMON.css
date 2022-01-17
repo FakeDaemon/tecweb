@@ -183,17 +183,18 @@
   .lista{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    margin: 1em 0 0 0;
+    align-items:flex-start;
+    margin: 1em 0 1em 4em;
     list-style-position: inside;
-    font-size: 1.15em;
+    font-size: 1.25em;
   }
 
   footer {
     width: 100%;
     padding: 0.75em;
-    margin-top: 0.4em;
+    margin: 1em 0 0 0;
     background-color: rgba(10, 10, 10, 1);
+    font-size: 1.25em;
   }
   
   #foot a:visited {color: #FAFE0B;}

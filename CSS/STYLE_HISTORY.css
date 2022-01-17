@@ -26,11 +26,12 @@
   .main p {
     width: 80%;
     margin: auto;
-    font-size: 1.5em;
+    font-size: 1.25em;
     text-align: left;
   }
   .paragrafo{
-    height: 40px;
+    padding: 0.5em;
+    margin: 1em 0 1em 0;
     background:
     url("../ICONS/DOOMIcon.jpg") no-repeat left,
     linear-gradient(to right,rgb(8, 8, 8) 70%, transparent);
