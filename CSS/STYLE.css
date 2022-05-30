@@ -137,7 +137,7 @@ header {
 }
 #nested_list ul li{
   width: 100%;
-  
+
   font-size: 1.1em;
   height: 5vh;
   overflow: hidden;
@@ -149,12 +149,18 @@ header {
   border-left:1px solid red;
 }
 .paragrafo{
-  height: 40px;
+  height: auto;
+  padding: 1% 0 1% 0;
   background:
   url("../ICONS/DOOMIcon.jpg") no-repeat left,
   linear-gradient(to right,rgb(8, 8, 8) 70%, transparent);
   background-size: 4%, auto;
   text-align: center;
+}
+.main article p{
+  margin: 1% auto 0 auto;
+  width: 90%;
+  text-align: left;
 }
 
 .titolo{
@@ -580,4 +586,3 @@ div.wrapper {
   grid-template-columns: repeat(auto-fill, 5em);
   justify-content: center;
 }
-
