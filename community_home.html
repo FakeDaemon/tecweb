@@ -1,110 +1,118 @@
 <!DOCTYPE html>
 <html lang="it" dir="ltr">
+
 <head>
-  <link href="CSS/STYLE.css" rel="stylesheet">
-  <meta charset="utf-8">
-  <title> Home </title>
-  <meta name="keywords" content="DOOM"/>
-  <meta name="description" content="DOOM Wiki"/>
-  <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano , Angeloni Alberto"/>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="SCRIPTS/css_modifier.js"></script>
-  <script type="text/javascript" src="SCRIPTS/cookie_extractor.js"></script>
-  <script type="text/javascript" src="SCRIPTS/search_scripts.js"></script>
+    <link href="CSS/STYLE.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <title> Home </title>
+    <meta name="keywords" content="DOOM" />
+    <meta name="description" content="DOOM Wiki" />
+    <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano , Angeloni Alberto" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="SCRIPTS/css_modifier.js"></script>
+    <script type="text/javascript" src="SCRIPTS/cookie_extractor.js"></script>
+    <script type="text/javascript" src="SCRIPTS/search_scripts.js"></script>
 </head>
+
 <body>
-  <header>
-    <h1 id="logo">DOOM WIKI</h1>
-    <nav id="main_menu">
-      <ul>
-        <li lang="en"><a href="index.html">HOME</a></li>
-        <li><a href="history.html">CAPITOLI</a></li>
-        <li lang="en"><a href="stats.html">STATS</a></li>
-        <li><a href="trivia.html">CURIOSITÀ</a></li>
-        <li lang="en" class="disabled">COMMUNITY</li>
-      </ul>
-    </nav>
-  </header>
-  <div class="main">
-    <div id="user_widget">
-      <a id="profile_pic" href="#"><img src="IMAGES/default_profile_pic.jpeg" alt="Immagine Profilo"></a>
-      <p id="user_name">USER_NAME</p>
-      <h3>Impostazioni utente</h3>
-      <ul id="setting">
-        <li><a href="#">Cambia <span lang="en">Password</span></a></li>
-        <li><a href="#">Cambia <span lang="en">Username</span></a></li>
-      </ul>
+    <div class="cookie-banner js-cookie-banner">
+        We use 🍪...
+        <button class="js-cookie-dismiss">Accept</button>
     </div>
+    <script type="text/javascript" src="SCRIPTS/cookie.js"></script>
+    <header>
+        <h1 id="logo">DOOM WIKI</h1>
+        <nav id="main_menu">
+            <ul>
+                <li lang="en"><a href="index.html">HOME</a></li>
+                <li><a href="history.html">CAPITOLI</a></li>
+                <li lang="en"><a href="stats.html">STATS</a></li>
+                <li><a href="trivia.html">CURIOSITÀ</a></li>
+                <li lang="en" class="disabled">COMMUNITY</li>
+            </ul>
+        </nav>
+    </header>
+    <div class="main">
+        <div id="user_widget">
+            <a id="profile_pic" href="#"><img src="IMAGES/default_profile_pic.jpeg" alt="Immagine Profilo"></a>
+            <p id="user_name">USER_NAME</p>
+            <h3>Impostazioni utente</h3>
+            <ul id="setting">
+                <li><a href="#">Cambia <span lang="en">Password</span></a></li>
+                <li><a href="#">Cambia <span lang="en">Username</span></a></li>
+            </ul>
+        </div>
 
-    <div id="search_widget">
-      <h2>CERCA</h2>
-      <input id="search_bar" type="text" name="search" placeholder="Cerca sul sito..." onkeyup="searchv2(); openList();">
-      <dl id="topic_list" class="">
-        <span>
-          <dt><a href="#" id="prova">TOPIC_NAME1</a></dt>
-          <dd>TYPE1</dd>
-          <dd>CREATION DATE1</dd>
-          <dd>LATEST CONTRIBUTION1</dd>
-          <dd>STATE1</dd>
-        </span>
-        <span>
-          <dt><a href="#" id="prova">TOPIC_NAME2</a></dt>
-          <dd>TYPE2</dd>
-          <dd>CREATION DATE2</dd>
-          <dd>LATEST CONTRIBUTION2</dd>
-          <dd>STATE2</dd>
-        </span>
-        <span>
-          <dt><a href="#" id="prova">TOPIC_NAME3</a></dt>
-          <dd>TYPE3</dd>
-          <dd>CREATION DATE3</dd>
-          <dd>LATEST CONTRIBUTION3</dd>
-          <dd>STATE3</dd>
-        </span>
-        <span>
-          <dt><a href="#" id="prova">TOPIC_NAME4</a></dt>
-          <dd>TYPE4</dd>
-          <dd>CREATION DATE4</dd>
-          <dd>LATEST CONTRIBUTION4</dd>
-          <dd>STATE4</dd>
-        </span>
-        <span>
-          <dt><a href="#" id="prova">TOPIC_NAME5</a></dt>
-          <dd>TYPE5</dd>
-          <dd>CREATION DATE5</dd>
-          <dd>LATEST CONTRIBUTION5</dd>
-          <dd>STATE5</dd>
-        </span>
-        <span>
-          <dt><a href="#" id="prova">TOPIC_NAME6</a></dt>
-          <dd>TYPE6</dd>
-          <dd>CREATION DATE6</dd>
-          <dd>LATEST CONTRIBUTION6</dd>
-          <dd>STATE6</dd>
-        </span>
-        <span>
-          <dt><a href="#" id="prova">TOPIC_NAME7</a></dt>
-          <dd>TYPE7</dd>
-          <dd>CREATION DATE7</dd>
-          <dd>LATEST CONTRIBUTION7</dd>
-          <dd>STATE7</dd>
-        </span>
-        <span>
-          <dt><a href="#" id="prova">TOPIC_NAME8</a></dt>
-          <dd>TYPE8</dd>
-          <dd>CREATION DATE8</dd>
-          <dd>LATEST CONTRIBUTION8</dd>
-          <dd>STATE8</dd>
-        </span>
-      </dl>
+        <div id="search_widget">
+            <h2>CERCA</h2>
+            <input id="search_bar" type="text" name="search" placeholder="Cerca sul sito..." onkeyup="searchv2(); openList();">
+            <dl id="topic_list" class="">
+                <span>
+                    <dt><a href="#" id="prova">TOPIC_NAME1</a></dt>
+                    <dd>TYPE1</dd>
+                    <dd>CREATION DATE1</dd>
+                    <dd>LATEST CONTRIBUTION1</dd>
+                    <dd>STATE1</dd>
+                </span>
+                <span>
+                    <dt><a href="#" id="prova">TOPIC_NAME2</a></dt>
+                    <dd>TYPE2</dd>
+                    <dd>CREATION DATE2</dd>
+                    <dd>LATEST CONTRIBUTION2</dd>
+                    <dd>STATE2</dd>
+                </span>
+                <span>
+                    <dt><a href="#" id="prova">TOPIC_NAME3</a></dt>
+                    <dd>TYPE3</dd>
+                    <dd>CREATION DATE3</dd>
+                    <dd>LATEST CONTRIBUTION3</dd>
+                    <dd>STATE3</dd>
+                </span>
+                <span>
+                    <dt><a href="#" id="prova">TOPIC_NAME4</a></dt>
+                    <dd>TYPE4</dd>
+                    <dd>CREATION DATE4</dd>
+                    <dd>LATEST CONTRIBUTION4</dd>
+                    <dd>STATE4</dd>
+                </span>
+                <span>
+                    <dt><a href="#" id="prova">TOPIC_NAME5</a></dt>
+                    <dd>TYPE5</dd>
+                    <dd>CREATION DATE5</dd>
+                    <dd>LATEST CONTRIBUTION5</dd>
+                    <dd>STATE5</dd>
+                </span>
+                <span>
+                    <dt><a href="#" id="prova">TOPIC_NAME6</a></dt>
+                    <dd>TYPE6</dd>
+                    <dd>CREATION DATE6</dd>
+                    <dd>LATEST CONTRIBUTION6</dd>
+                    <dd>STATE6</dd>
+                </span>
+                <span>
+                    <dt><a href="#" id="prova">TOPIC_NAME7</a></dt>
+                    <dd>TYPE7</dd>
+                    <dd>CREATION DATE7</dd>
+                    <dd>LATEST CONTRIBUTION7</dd>
+                    <dd>STATE7</dd>
+                </span>
+                <span>
+                    <dt><a href="#" id="prova">TOPIC_NAME8</a></dt>
+                    <dd>TYPE8</dd>
+                    <dd>CREATION DATE8</dd>
+                    <dd>LATEST CONTRIBUTION8</dd>
+                    <dd>STATE8</dd>
+                </span>
+            </dl>
+        </div>
     </div>
-  </div>
-  <div class="personal_contributes">
+    <div class="personal_contributes">
 
-  </div>
-  <footer>
-    <img class="imgVadidCode" src="IMAGES/valid-xhtml10.png" alt="html valido"/>
-    <img class="imgVadidCode" src="IMAGES/vcss-blue.gif" alt="css valido"/>
-  </footer>
+    </div>
+    <footer>
+        <img class="imgVadidCode" src="IMAGES/valid-xhtml10.png" alt="html valido" />
+        <img class="imgVadidCode" src="IMAGES/vcss-blue.gif" alt="css valido" />
+    </footer>
 </body>
+
 </html>
