@@ -2,8 +2,10 @@
 <html lang="en" dir="ltr">
 
 <head>
-    <link href="CSS/STYLE.css" rel="stylesheet">
-    <link href="CSS/STYLE_COMMON.css" rel="stylesheet">
+    <link href="CSS/STYLE_COMMON.css" rel="stylesheet" type="text/css" media="screen"/>
+    <link href="CSS/STYLE_HISTORY.css" rel="stylesheet" type="text/css" media="screen"/>
+    <link href="CSS/STYLE_SCREENL.css" rel="stylesheet" type="text/css" media="screen"/>
+    <link href="CSS/STYLE_SCREENP.css" rel="stylesheet" type="text/css" media="screen"/>
     <meta charset="utf-8">
     <title> DOOM (2016) </title>
     <meta name="keywords" content="DOOM, Fun Fact" />
@@ -23,18 +25,19 @@
             </ul>
         </nav>
     </header>
-    <nav>
-        <ul>
-            <li><a href="#Riassunto">Riassunto</a></li>
-            <li><a href="#Trama">Trama</a></li>
-            <li><a href="#Gameplay"><span lang="en">Gameplay</span></a></li>
-            <li><a href="#Release"><span lang="en">Release</span></a></li>
-            <li><a href="#Note legali">Note legali</a></li>
-        </ul>
-    </nav>
     <div class="main">
         <img src="IMAGES/doom2016.jpg" alt="copertina doom 2016">
-        <h1 class="titolo"><span lang="en">DOOM</span>(2016)</h1> 
+        <h1 class="titolo"><span lang="en">DOOM</span>(2016)</h1>
+        <div id="box">
+        <nav>
+            <ul>
+                <li><a href="#Riassunto">Riassunto</a></li>
+                <li><a href="#Trama">Trama</a></li>
+                <li><a href="#Gameplay"><span lang="en">Gameplay</span></a></li>
+                <li><a href="#Multiplayer"><span lang="en">Multiplayer</span></a></li>
+            </ul>
+        </nav>
+        </div>
         <article id="Riassunto">
             <h2 class="paragrafo">Riassunto</h2>
             <a name="Riassunto"></a>
@@ -48,6 +51,7 @@
         <article id="Trama">
             <h2 class="paragrafo">Trama</h2>
             <a name="Trama"></a>
+            <img src="IMAGES/doom_2016_inizio.jpg" alt="una delle prime scene del gioco dove recuperiamo la storica tuta del protagonista">
             <p>
                 Il gioco è ambientato su Marte in un laboratorio <abbr title="Union AereoSpace Corporation">UAC</abbr> invaso dalla forze dell'inferno. Il 
                 <span lang="en">DOOM Slayer</span> si risveglia incatenato ad un sarcofago, dopo essersi liberato e aver riottenuto la sua armatura 
@@ -84,6 +88,7 @@
         <article id="Gameplay">
             <h2 class="paragrafo">Gameplay</h2>
             <a name="Gameplay"></a>
+            <img src="IMAGES/doom_2016_gameplay.jpg" alt="una schermata del gioco">
                 <p class="history">
                     Nonostante alcune similarità a <span lang="en">DOOM</span> 3, il <span lang="en">gameplay</span> di questo <span lang="en">DOOM</span> è 
                     significativamente differente dal predecessore. Il gioco risulta più veloce, con <span lang="en">sprint, double jump</span>, il
@@ -115,17 +120,18 @@
                 hanno infatti collaborato allo sviluppo del multiplayer di <span lang="en">Halo: the Master Chief Collection, Call of Duty: Ghosts, Halo 4</span>
                 e molti altri. 
                 </p> 
-                <h3>Modalità <span lang="en">multiplayer</span>:</h3>
+                <img src="IMAGES/multiplayer_2016.png" alt="schermata per il multiplayer">
+                <h3 class="lista_titolo">Modalità <span lang="en">multiplayer</span>:</h3>
                 <ul class="lista">
                     <li><span lang="en">Team Deathmatch</span></li>
                     <li><span lang="en">Clan Arena</span></li>
                     <li><span lang="en">Freeze Tag</span></li>
                     <li>Dominio</li>
                     <li><span lang="en">Warpath</span></li>
-                    <li>raccolta di anime</li>
+                    <li>Raccolta di anime</li>
                     <li>Corsa Infernale</li>
                 </ul>
-                <h3>Demoni Giocabili</h3>
+                <h3 class="lista_titolo">Demoni Giocabili</h3>
                 <ul class="lista">
                     <li><span lang="en">Revenant</span></li>
                     <li>Barone Infernale</li>
@@ -135,7 +141,7 @@
                     <li>Cacodemone<abbr title="Downloadable Content"">DLC</abbr></li>
                     <li>Spettro<abbr title="Downloadable Content"">DLC</abbr></li>
                 </ul>
-                <h3><span lang="en">Power-ups</span></h3>
+                <h3 class="lista_titolo"><span lang="en">Power-ups</span></h3>
                 <ul class="lista">
                     <li><span lang="en">Quad Damage</span></li>
                     <li>Invisibilità</li>
@@ -143,7 +149,7 @@
                     <li>Rapidità</li>
                     <li>Invulnerabilità</li>
                 </ul>
-                <h3>Mappe Incluse nel <span lang="en">Multiplayer</span></h3>
+                <h3 class="lista_titolo">Mappe Incluse nel <span lang="en">Multiplayer</span></h3>
                 <ul class="lista">
                     <li>
                         Scavo

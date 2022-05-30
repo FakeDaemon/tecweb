@@ -132,14 +132,7 @@ header {
 #nested_list ul li:hover{
   border-left:1px solid red;
 }
-.paragrafo{
-  height: 40px;
-  background:
-  url("../ICONS/DOOMIcon.jpg") no-repeat left,
-  linear-gradient(to right,rgb(8, 8, 8) 70%, transparent);
-  background-size: 4%, auto;
-  text-align: center;
-}
+
 
 .titolo{
   height: 80px;
