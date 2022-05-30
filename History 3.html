@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-    <link href="CSS/STYLE.css" rel="stylesheet">
+    <link href="CSS/STYLE_COMMON.css" rel="stylesheet" type="text/css" media="screen"/>
+    <link href="CSS/STYLE_HISTORY.css" rel="stylesheet" type="text/css" media="screen"/>
     <link href="CSS/STYLE_SCREENL.css" rel="stylesheet" type="text/css" media="screen"/>
-    <link href="CSS/STYLE_SCREENL.css" rel="stylesheet" type="text/css" media="screen"/>
+    <link href="CSS/STYLE_SCREENP.css" rel="stylesheet" type="text/css" media="screen"/>
     <meta charset="utf-8">
     <title> DOOM 3</title>
     <meta name="keywords" content="DOOM, Fun Fact" />
@@ -14,14 +15,30 @@
     <header>
         <h1 id="logo">DOOM WIKI</h1>
         <nav id="main_menu">
-            <ul>
-                <li lang="en"><a href="index.html">HOME</a></li>
-                <li class="disabled"><span lang="en">DOOM</span> 3</li>
-                <li lang="en"><a href="stats.html">STATS</a></li>
-                <li><a href="trivia.html">CURIOSITÀ</a></li>
-                <li lang="en"><a href="community.html">COMMUNITY</a></li>
+            <ul id="container_list">
+              <li class="container_list_li" lang="en"><a href="index.html">HOME</a></li>
+              <li id="nested_list">
+                <span id="I_nested_list_span">TRAMA</span>
+                <ul id="nstd_lst">
+                  <li class="nested_list_li"><a href="history.html">&nbsp&nbsp&nbspCAPITOLO I</a></li>
+                  <li class="nested_list_li"><a href="History2.html">&nbsp&nbsp&nbspCAPITOLO II</a></li>
+                  <li class="nested_list_li"><span id="II_nested_list_span"><p>&nbsp&nbsp&nbspCAPITOLO III</p></span>></li>
+                  <li class="nested_list_li"><a href="History2016.html">&nbsp&nbsp&nbspCAPITOLO IV</a></li>
+                  <li class="nested_list_li"><a href="HistoryEternals.html">&nbsp&nbsp&nbspCAPITOLO V</a></li>
+                </ul>
+              </li>
+              <li class="container_list_li" lang="en"><a href="stats.html">STATS</a></li>
+              <li class="container_list_li"><a href="trivia.html">CURIOSITÀ</a></li>
+              <li class="container_list_li" lang="en"><a href="community.php">COMMUNITY</a></li>
             </ul>
-        </nav>
+          </nav>
+          <script type="text/javascript">
+          var trama_btn = document.getElementById("I_nested_list_span");
+          var nested_lst = document.getElementById("nstd_lst");
+          trama_btn.addEventListener('click', function(){
+            nested_lst.classList.toggle("open");
+          });
+        </script>
     </header>
 <div class="main">
     <h1><span lang="en">DOOM</span> 3</h1>
@@ -45,6 +62,7 @@
             Ha ricevuto un'opinione positiva da parte della critica per le sue atmosfere paurose e la sua grafica rivoluzionaria, ma è stato altrettanto criticato principalmente per il suo <span lang="en">gameplay</span>, che essendo più lento, alla lunga stancava, e per i suoi dettagli horror ricchi di <span lang="fra">cliché</span>.
         </p>
     </article>
+    <div id="box">
     <nav>
         <ul>
             <li><a href="#Features">Features</a></li>
@@ -53,6 +71,7 @@
             <li><a href="#Gameplay"><span lang="en">Gameplay</span></a></li>
         </ul>
     </nav>
+    </div>
     <article id="Features">
         <h2 class="paragrafo"></h2>
         <a name="Features"></a>
@@ -226,9 +245,15 @@
         </p>
     </article>
 </div>
-    <footer>
-        <img class="imgVadidCode" src="IMAGES/valid-xhtml10.png" alt="html valido" />
-        <img class="imgVadidCode" src="IMAGES/vcss-blue.gif" alt="css valido" />
-    </footer>
+<footer id="foot">
+    <p>
+      <span lang="en">&copy;Doom</span> è un marchio ragistrato <a href="https://bethesda.net/it/dashboard" target="_blank">2022 Bethesda Softworks LLC</a>,
+      a ZeniMax Media company. I marchi appartengono ai rispettivi proprietari.
+      Tutti i diritti riservati.<br>
+      <br>
+    </p>
+    <img class="imgVadidCode" src="IMAGES/valid-xhtml10.png" alt="html valido"/>
+    <img class="imgVadidCode" src="IMAGES/vcss-blue.gif" alt="css valido"/>
+</footer>
 </body>
 </html>

@@ -29,6 +29,7 @@
     font-family: Arial, sans-serif;
     box-sizing: border-box;
     background: var(--background-color) url("../IMAGES/DOOMbackground.png") center/cover no-repeat fixed;
+    scroll-behavior: smooth;
   }
   
   *, *:before, *:after {
@@ -64,6 +65,28 @@
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
   }
+
+/*
+  SCROLLBAR
+*/
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: white;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  width:5px;
+}
 
 /*
   MAIN MENU
@@ -157,10 +180,21 @@
     border-left: 1px solid gold;
   }
 
+  .lista{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    margin: 1em 0 1em 4em;
+    list-style-position: inside;
+    font-size: 1.25em;
+  }
+
   footer {
     width: 100%;
     padding: 0.75em;
+    margin: 1em 0 0 0;
     background-color: rgba(10, 10, 10, 1);
+    font-size: 1.25em;
   }
   
   #foot a:visited {color: #FAFE0B;}

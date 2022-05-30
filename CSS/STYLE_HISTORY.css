@@ -1,0 +1,55 @@
+
+
+
+
+
+
+
+
+
+
+
+.main {
+    max-width: 1024px;
+    min-height: 65vh;
+    margin: 10vh auto 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+  }
+  .main img {
+    width: auto;
+    max-height: 30vh;
+    margin: auto;
+  }
+  
+  .main p {
+    width: 80%;
+    margin: auto;
+    font-size: 1.25em;
+    text-align: left;
+  }
+  .paragrafo{
+    padding: 0.5em;
+    margin: 1em 0 1em 0;
+    background:
+    url("../ICONS/DOOMIcon.jpg") no-repeat left,
+    linear-gradient(to right,rgb(8, 8, 8) 70%, transparent);
+    background-size: 4%, auto;
+  }
+#box{
+    background-color: rgba(0, 0, 0, 0.7);
+    position: relative;
+    border: solid #000000;
+}
+#box li a{
+    color:#00FFBB;
+}  
+.main  #replace{
+    width: 200px;
+    height: 200px;
+    background-image: url("../IMAGES/doom-replace.jpg");
+}
+ .main #replace span{
+    display: none;
+}
