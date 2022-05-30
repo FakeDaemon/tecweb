@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-    <link href="CSS/STYLE.css" rel="stylesheet">
+    <link href="CSS/STYLE_HOMEPAGE.css" rel="stylesheet">
     <link href="CSS/STYLE_COMMON.css" rel="stylesheet">
     <meta charset="utf-8">
     <title> Home </title>
@@ -16,7 +16,7 @@
 
     <nav id="main_menu">
       <ul id="container_list">
-        <li class="container_list_li" lang="en"><a href="index.html">HOME</a></li>
+        <li class="container_list_li" lang="en">HOME</li>
         <li id="nested_list">
           <span id="I_nested_list_span">TRAMA</span>
           <ul id="nstd_lst">
@@ -34,11 +34,10 @@
     </nav>
   </header>
   <div class="main">
-    <p>
-      Benvenuti <span lang="en">Slayer</span>, qui troverete tutte le informazioni di cui avete bisogno riguardante il mondo di <span lang="en">DOOM</span>!.
-      Per chi comincia per la prima volta e per chi gioca da anni, troverete informazioni riguardanti i singoli giochi, tutte le armi e
-      relative descrizioni, trivia e curiosità oppure entra nella community e incontra altre persone accumunate dalla passione per questa saga videoludica leggendaria.
-    </p>
+    <p id="Welcome_Messages">BENVENUTI ALLA <strong>WIKI</strong> (non) <strong>OFFICIALE</strong> DI <strong lang:"en">DOOM</strong></p>
+    <div id="home_widget">
+      
+    </div>
   </div>
 
 <footer id="foot">
