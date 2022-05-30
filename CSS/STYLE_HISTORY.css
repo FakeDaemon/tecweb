@@ -46,8 +46,8 @@
     color:#00FFBB;
 }  
 .main  #replace{
-    width: 200px;
-    height: 200px;
+    width: 750px;
+    height: 350px;
     background-image: url("../IMAGES/doom-replace.jpg");
 }
  .main #replace span{
