@@ -22,28 +22,36 @@
     <header>
         <h1 id="logo">DOOM WIKI</h1>
         <nav id="main_menu">
-            <ul>
-                <li lang="en"><a href="index.html">HOME</a></li>
-                <li class="disabled"><span lang="en">DOOM</span>(2016)</li>
-                <li lang="en"><a href="stats.html">STATS</a></li>
-                <li><a href="trivia.html">CURIOSITÀ</a></li>
-                <li lang="en"><a href="community.html">COMMUNITY</a></li>
+            <ul id="container_list">
+                <li class="container_list_li" lang="en"><a href="index.php">HOME</a></li>
+                <li id="nested_list">
+                    <span id="I_nested_list_span">TRAMA</span>
+                    <ul id="nstd_lst">
+                        <li class="nested_list_li"><a href="history.html">&nbsp&nbsp&nbspCAPITOLO I</a></li>
+                        <li class="nested_list_li"><a href="history_2.html">&nbsp&nbsp&nbspCAPITOLO II</a></li>
+                        <li class="nested_list_li"><a href="history_3.html">&nbsp&nbsp&nbspCAPITOLO III</a></li>
+                        <li class="nested_list_li"><span id="II_nested_list_span">
+                                <p>&nbsp&nbsp&nbspCAPITOLO VI</p>
+                            </span></li>
+                        <li class="nested_list_li"><a href="HistoryEternals.html">&nbsp&nbsp&nbspCAPITOLO V</a></li>
+                    </ul>
+                </li>
+                <li class="container_list_li" lang="en"><a href="stats.html">STATS</a></li>
+                <li class="container_list_li"><a href="trivia.html">CURIOSITÀ</a></li>
+                <li class="container_list_li" lang="en"><a href="community.php">COMMUNITY</a></li>
             </ul>
         </nav>
+        <script type="text/javascript">
+            var trama_btn = document.getElementById("I_nested_list_span");
+            var nested_lst = document.getElementById("nstd_lst");
+            trama_btn.addEventListener('click', function() {
+                nested_lst.classList.toggle("open");
+            });
+        </script>
     </header>
     <div class="main">
         <img src="IMAGES/doom2016.jpg" alt="copertina doom 2016">
         <h1 class="titolo"><span lang="en">DOOM</span>(2016)</h1>
-        <div id="box">
-        <nav>
-            <ul>
-                <li><a href="#Introduzione">Introduzione</a></li>
-                <li><a href="#Trama">Trama</a></li>
-                <li><a href="#Gameplay"><span lang="en">Gameplay</span></a></li>
-                <li><a href="#Multiplayer"><span lang="en">Multiplayer</span></a></li>
-            </ul>
-        </nav>
-        </div>
         <article id="Introduzione">
             <h2 class="paragrafo">Introduzione</h2>
             <a name="Introduzione"></a>
