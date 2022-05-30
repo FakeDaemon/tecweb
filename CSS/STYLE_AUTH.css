@@ -1,0 +1,117 @@
+.main {
+  max-width: 1024px;
+  min-height: 63vh;
+  margin: 7vh auto 0 auto;
+  text-align: center;
+}
+.main > p{
+  position: relative;
+  margin: 0 auto 0 auto;
+  font-size: 2em;
+  line-height: 100px;
+  height: 100px;
+  width: 300px;
+  border:2px solid red;
+  border-radius: 15px;
+  background-color: black;
+  z-index: 1;
+}
+#auth_widget{
+  padding-top: 50px;
+  position: relative;
+  background-color: rgb(30,30,30);
+  z-index: 0;
+  top:-50px;
+  margin:0 auto 0 auto;
+  border:2px solid red;
+  border-radius:15px;
+  width: 400px;
+  height: 500px;
+
+  font-size: 1.5em;
+}
+#auth_widget label{
+  margin: 10px auto 0 auto;
+  text-align: left;
+  width: 75%;
+  height: 30px;
+  display: block;
+  position: relative;
+  font-size: 1.3em;
+  bottom: -40px;
+
+  -webkit-transition: bottom 0.2s 0s ease, font-size 0.5s 0s ease, color 0.5s 0s ease;
+  -moz-transition: bottom 0.2s 0s ease, font-size 0.5s 0s ease, color 0.5s 0s ease;
+  -o-transition: bottom 0.2s 0s ease, font-size 0.5s 0s ease, color 0.5s 0s ease;
+  transition: bottom 0.2s 0s ease, font-size 0.5s 0s ease, color 0.5s 0s ease;
+}
+#auth_widget label.up{
+  bottom: 0;
+  font-size: 1em;
+  color: grey;
+}
+#auth_widget input[type="text"]{
+  background: transparent;
+  border-bottom: 1px solid white;
+  width: 80%;
+  height: 50px;
+  display: block;
+  margin:0 auto 0 auto;
+  color:white;
+  font-size: 1em;
+  padding:10px;
+}
+input[type="checkbox"]{
+  width: 13px;
+  height: 18px;
+  font-size: 12px;
+  line-height: 12px;
+}
+#auth_widget label#radio_label{
+  margin:0;
+  position: static;
+  display: inline-block;
+  margin-top: 0;
+  height: auto;
+  line-height: 18px;
+  width: 75%;
+  font-size: 0.7em;
+  vertical-align: middle;
+}
+#auth_widget input[type="submit"], #auth_widget input[type="reset"]{
+  display: block;
+  margin:10px auto 0 auto;
+  width: 60%;
+  background-color: black;
+  border:2px solid red;
+  border-radius: 15px;
+  color:white;
+  height: 50px;
+  font-size: 1.3em;
+}
+#auth_widget input[type="reset"]{
+  font-size: 0.8em;
+  width: 40%;
+  height: 30px;
+  margin-bottom: 10px;
+}
+hr {
+    border: none;
+    border-top: 3px double red;
+    color: red;
+    overflow: visible;
+    text-align: center;
+    height: 5px;
+    width: 80%;
+    margin:10px auto 15px auto;
+}
+#auth_widget p{
+  font-size: 0.7em;
+  word-break: keep-all;
+}
+#auth_widget a{
+  color:white;
+}
+#auth_widget a:visited{
+  color: white;
+}
