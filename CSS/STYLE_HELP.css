@@ -95,3 +95,10 @@
 #auth_widget p.noJs{
   visibility: hidden;
 }
+#auth_widget p{
+  font-size: .8em;
+  width: 90%;
+  margin:auto;
+}
+#auth_widget p a{ color:white;}
+#auth_widget p a:visited{color:white;}

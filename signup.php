@@ -53,8 +53,10 @@
       <label id="password_confirm_input_label" for="password_confirm_input" class="up" required>Conferma <span lang="en">password</span></label>
       <input id="password_confirm_input" type="password">
 
-      <input id="password_visibility" type="checkbox">
-      <label id="radio_label" for="password_visibility">Mostra <span lang="en">password</span>.</label>
+      <label class="noJs" id="radio_label" for="password_visibility">
+        <input id="password_visibility" type="checkbox">
+        Mostra <span lang="en">password</span>.
+      </label>
       <input type="submit" value="ISCRIVIMI">
       <input id="reset_button" type="reset" value="PULISCI">
       <hr>
@@ -62,14 +64,14 @@
     </form>
   </div>
   <footer id="foot">
-      <p>
-        <span lang="en">&copy;Doom</span> è un marchio ragistrato <a href="https://bethesda.net/it/dashboard" target="_blank">2022 Bethesda Softworks LLC</a>,
-        a ZeniMax Media company. I marchi appartengono ai rispettivi proprietari.
-        Tutti i diritti riservati.<br>
-        <br>
-      </p>
-      <img class="imgVadidCode" src="IMAGES/valid-xhtml10.png" alt="html valido"/>
-      <img class="imgVadidCode" src="IMAGES/vcss-blue.gif" alt="css valido"/>
+    <p>
+      <span lang="en">&copy;Doom</span> è un marchio ragistrato <a href="https://bethesda.net/it/dashboard" target="_blank">2022 Bethesda Softworks LLC</a>,
+      a ZeniMax Media company. I marchi appartengono ai rispettivi proprietari.
+      Tutti i diritti riservati.<br>
+      <br>
+    </p>
+    <img class="imgVadidCode" src="IMAGES/valid-xhtml10.png" alt="html valido"/>
+    <img class="imgVadidCode" src="IMAGES/vcss-blue.gif" alt="css valido"/>
   </footer>
   <script type="text/javascript" src="SCRIPTS/signuppage.js"></script>
 </body>

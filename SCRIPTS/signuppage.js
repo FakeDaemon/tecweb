@@ -1,6 +1,7 @@
 document.getElementById("username_input_label").classList.remove("up");
 document.getElementById("email_input_label").classList.remove("up");
 document.getElementById("password_input_label").classList.remove("up");
+document.getElementById("radio_label").classList.remove("noJs");
 document.getElementById("password_confirm_input_label").classList.remove("up");
 document.getElementById("username_input").addEventListener('focus', function(){
   if(!(document.getElementById("username_input_label").classList.contains("up"))){
@@ -52,6 +53,7 @@ document.getElementById("password_visibility").addEventListener('click', functio
   if(document.getElementById("password_visibility").checked){
     document.getElementById("password_input").type = 'text';
     document.getElementById("password_confirm_input").type = 'text';
+    document.getElementById("password_input").focus();
   }else{
     document.getElementById("password_input").type = 'password';
     document.getElementById("password_confirm_input").type = 'password';

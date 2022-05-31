@@ -80,6 +80,9 @@ input[type="checkbox"]{
   font-size: 0.7em;
   vertical-align: middle;
 }
+#auth_widget label#radio_label.noJs{
+  visibility: hidden;
+}
 #auth_widget input[type="submit"], #auth_widget input[type="reset"]{
   display: block;
   margin:10px auto 0 auto;

@@ -51,6 +51,8 @@
 
       <input type="submit" value="INVIA">
       <input id="reset_button" type="reset" value="PULISCI">
+
+      <p>Problema già risolto?<br><a href="index.php">Torna alla home page!</a></p>
     </form>
 
   </div>

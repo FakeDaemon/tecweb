@@ -13,3 +13,6 @@ document.getElementById("email_input").addEventListener('focusout', function(){
 document.getElementById("text_input").addEventListener('input', function(){
     document.getElementById("message_length").textContent = document.getElementById("text_input").value.length;
 });
+document.getElementById("reset_button").addEventListener('click', function(){
+  document.getElementById("email_input_label").classList.remove("up");
+});

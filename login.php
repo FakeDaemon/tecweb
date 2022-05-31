@@ -47,12 +47,12 @@
       <label id="password_input_label" for="password_input" class="up"><span lang="en">Password</span></label>
       <input id="password_input" type="password" name="password" required>
 
-      <label id="radio_label" for="password_visibility">
+      <label id="radio_label" class="radio_label noJs" for="password_visibility">
         <input id="password_visibility" type="checkbox">
         Mostra <span lang="en">password</span>.
       </label>
 
-      <label id="radio_label" for="save_username">
+      <label class="radio_label" for="save_username">
         <input id="save_username" type="checkbox" name="SaveUsername" value="True">
         Salva username.
       </label>
