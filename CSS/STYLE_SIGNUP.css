@@ -111,12 +111,36 @@ input[type="checkbox"]{
   color: white;
 }
 hr {
-    border: none;
-    border-top: 3px double red;
-    color: red;
-    overflow: visible;
-    text-align: center;
-    height: 5px;
-    width: 80%;
-    margin:20px auto 10px auto;
+  border: none;
+  border-top: 3px double red;
+  color: red;
+  overflow: visible;
+  text-align: center;
+  height: 5px;
+  width: 80%;
+  margin:20px auto 10px auto;
+}
+p#password_hints{
+  width: 80%;
+  margin: 20px auto 0 auto;
+  text-align: left;
+}
+span.sr_only{
+  border:0 none;
+  clip:rect(0px,0px,0px,0px);
+  height:1px;
+  margin:-1px;
+  overflow:hidden;
+  padding:0;
+  position:absolute;
+  width:1px;
+}
+ul{
+  width: 70%;
+  margin:auto;
+}
+ul li{
+  width: 100%;
+  text-align: left;
+  font-size: 0.6em;
 }

@@ -40,18 +40,28 @@
   </header>
   <div class="main">
     <p>ISCRIZIONE</p>
-    <form id="auth_widget">
+    <form onsubmit="return validateForm();"id="auth_widget">
       <label id="username_input_label" for="username_input" class="up" required><span lang="en">Username</span></label>
-      <input id="username_input" type="text" name="username">
+      <input id="username_input" type="text" name="username" required>
 
       <label id="email_input_label" for="email_input" class="up" required><span lang="en">Email</span></label>
-      <input id="email_input" type="email" name="username">
+      <input id="email_input" type="email" name="username" required>
+
+      <p id="password_hints">Password: <span class="sr_only">Must be at least 8 characters. Must have at least 1 number. Must have at least 1 uppercase letter. Must have at least 1 special character.</span>
+      </p>
+          <ul aria-hidden="true">
+            <li>Must be at least 8 characters.</li>
+            <li>Must have at least 1 number.</li>
+            <li>Must have at least 1 uppercase letter.</li>
+            <li>Must have at least 1 special character.</li>
+          </ul>
+
 
       <label id="password_input_label" for="password_input" class="up" required><span lang="en">Password</span></label>
-      <input id="password_input" type="password" name="password">
+      <input id="password_input" type="password" name="password" required>
 
       <label id="password_confirm_input_label" for="password_confirm_input" class="up" required>Conferma <span lang="en">password</span></label>
-      <input id="password_confirm_input" type="password">
+      <input id="password_confirm_input" type="password" required>
 
       <label class="noJs" id="radio_label" for="password_visibility">
         <input id="password_visibility" type="checkbox">
@@ -60,7 +70,7 @@
       <input type="submit" value="ISCRIVIMI">
       <input id="reset_button" type="reset" value="PULISCI">
       <hr>
-      <p><a href="login.php">Hai già un account?</a></p>
+      <p><a href="login.php">Hai già un <span lang="en">account</span>?</a></p>
     </form>
   </div>
   <footer id="foot">

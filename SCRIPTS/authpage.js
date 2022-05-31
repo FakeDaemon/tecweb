@@ -24,6 +24,7 @@ document.getElementById("password_input").addEventListener('focusout', function(
 document.getElementById("reset_button").addEventListener('click', function(){
   document.getElementById("username_input_label").classList.remove("up");
   document.getElementById("password_input_label").classList.remove("up");
+  document.getElementById("username_input_label").focus();
 });
 document.getElementById("password_visibility").addEventListener('change', function(){
   if(document.getElementById("password_visibility").checked){

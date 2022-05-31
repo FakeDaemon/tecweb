@@ -3,7 +3,7 @@
 }
 .main {
   max-width: 1024px;
-  min-height: 63vh;
+  height: 63vh;
   margin: 7vh auto 0 auto;
   text-align: center;
 }
@@ -25,10 +25,11 @@
   background-color: rgb(30,30,30);
   z-index: 0;
   top:-50px;
-  margin:0 auto 0 auto;
+  margin:auto;
   border:2px solid red;
   border-radius:15px;
-  width: 400px;
+  width: 90vw;
+  max-width: 400px;
   padding-bottom: 20px;
   font-size: 1.5em;
 }

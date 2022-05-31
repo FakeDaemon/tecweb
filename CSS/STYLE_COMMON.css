@@ -62,7 +62,7 @@ header {
     margin: 1% auto auto auto;
     text-align: center;
     width: 100%;
-    height: 60%;
+    height: 10vh;
     color: white;
     text-indent: -9999px;
     background: transparent url("../IMAGES/Logo_doom.png") center/contain no-repeat;
@@ -78,7 +78,7 @@ header {
 */
 
 ::-webkit-scrollbar {
-    width: 20px;
+    width: 10px;
 }
 
 
