@@ -25,11 +25,11 @@
         <li id="nested_list">
           <span id="I_nested_list_span">TRAMA</span>
           <ul id="nstd_lst">
-            <li class="nested_list_li"><span id="II_nested_list_span"><p>&nbsp&nbsp&nbspCAPITOLO I</p></span></li>
-            <li class="nested_list_li"><a href="#">&nbsp&nbsp&nbspCAPITOLO II</a></li>
-            <li class="nested_list_li"><a href="#">&nbsp&nbsp&nbspCAPITOLO III</a></li>
-            <li class="nested_list_li"><a href="#">&nbsp&nbsp&nbspCAPITOLO IV</a></li>
-            <li class="nested_list_li"><a href="#">&nbsp&nbsp&nbspCAPITOLO V</a></li>
+            <li class="nested_list_li"><span id="II_nested_list_span"><a href="history.html">&nbsp&nbsp&nbspCAPITOLO I</a></span></li>
+            <li class="nested_list_li"><a href="history_2.html">&nbsp&nbsp&nbspCAPITOLO II</a></li>
+            <li class="nested_list_li"><a href="history_3.html">&nbsp&nbsp&nbspCAPITOLO III</a></li>
+            <li class="nested_list_li"><a href="history_2016.html">&nbsp&nbsp&nbspCAPITOLO IV</a></li>
+            <li class="nested_list_li"><a href="history_eternals.html">&nbsp&nbsp&nbspCAPITOLO V</a></li>
           </ul>
         </li>
         <li class="container_list_li" lang="en"><a href="stats.html">STATS</a></li>
