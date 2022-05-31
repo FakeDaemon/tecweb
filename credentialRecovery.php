@@ -2,7 +2,7 @@
 <html lang="it" dir="ltr">
 
 <head>
-  <link href="CSS/STYLE_AUTH.css" rel="stylesheet">
+  <link href="CSS/STYLE_CREDENTIALRECOVERY.css" rel="stylesheet">
   <link href="CSS/STYLE_COMMON.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron" />
   <meta charset="utf-8">
@@ -39,34 +39,20 @@
     </nav>
   </header>
   <div class="main">
-    <p>ACCESSO</p>
-    <form id="auth_widget">
-      <label id="username_input_label" for="username_input" class="up"><span lang="en">Username</span></label>
-      <input id="username_input" type="text" name="username" required>
 
-      <label id="password_input_label" for="password_input" class="up"><span lang="en">Password</span></label>
-      <input id="password_input" type="password" name="password" required>
+    <div class="main">
+      <p>RECUPERO CREDENZIALI</p>
+      <form id="auth_widget">
 
-      <label id="radio_label" for="password_visibility">
-        <input id="password_visibility" type="checkbox">
-        Mostra <span lang="en">password</span>.
-      </label>
+        <label id="email_input_label" for="email_input" class="up"><span lang="en">Email</span></label>
+        <input id="email_input" type="text" name="username" required>
 
-      <label id="radio_label" for="save_username">
-        <input id="save_username" type="checkbox" name="SaveUsername" value="True">
-        Salva username.
-      </label>
+        <p id="HelpLink"> <a href="help.php">Serve aiuto?</a> </p>
+        <input type="submit" value="INVIA LINK">
+        <input id="reset_button" type="reset" value="PULISCI">
+      </form>
+    </div>
 
-      <input type="submit" value="ACCEDI">
-      <input id="reset_button" type="reset" value="PULISCI">
-
-      <p id="HelpLink"> <a href="help.php">Serve aiuto?</a> </p>
-      <p id="credentialRecovery"> <a href="credentialRecovery.php">Credenziali dimenticate?</a> </p>
-
-      <hr>
-      <p>Non fai ancora parte della <span lang="en">community</span>?</p>
-      <a href="signup.php">Crea un nuovo <span lang="en">account</span></a>
-    </form>
   </div>
   <footer id="foot">
     <p>
@@ -78,7 +64,6 @@
     <img class="imgVadidCode" src="IMAGES/valid-xhtml10.png" alt="html valido"/>
     <img class="imgVadidCode" src="IMAGES/vcss-blue.gif" alt="css valido"/>
   </footer>
-  <script type="text/javascript" src="SCRIPTS/authpage.js"></script>
+  <script type="text/javascript" src="SCRIPTS/CredentialRecoveryPage.js"></script>
 </body>
-
 </html>

@@ -57,6 +57,8 @@
       <label id="radio_label" for="password_visibility">Mostra <span lang="en">password</span>.</label>
       <input type="submit" value="ISCRIVIMI">
       <input id="reset_button" type="reset" value="PULISCI">
+      <hr>
+      <p><a href="login.php">Hai già un account?</a></p>
     </form>
   </div>
   <footer id="foot">
