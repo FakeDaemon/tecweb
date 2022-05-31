@@ -2,7 +2,7 @@
 <html lang="it" dir="ltr">
 
 <head>
-  <link href="CSS/STYLE_AUTH.css" rel="stylesheet">
+  <link href="CSS/STYLE_HELP.css" rel="stylesheet">
   <link href="CSS/STYLE_COMMON.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron" />
   <meta charset="utf-8">
@@ -40,7 +40,18 @@
   </header>
   <div class="main">
 
-    
+    <p>METTITI IN CONTATTO</p>
+    <form id="auth_widget">
+      <label id="email_input_label" for="email_input" class="up"><span lang="en">Email</span></label>
+      <input id="email_input" type="email" name="email" required>
+
+      <label id="textarea_label" for="text_input" class="up">Il tuo messaggio</label>
+      <textarea maxlength="300" id="text_input" name="message" placeholder="Inserisci qui il tuo messaggio, descrivi il meglio possibile il tuo dubbio. Ti contatteremo il prima possibile." required></textarea>
+      <p id="message_helper" class="noJs"><span id="message_length">0</span>/300</p>
+
+      <input type="submit" value="INVIA">
+      <input id="reset_button" type="reset" value="PULISCI">
+    </form>
 
   </div>
   <footer id="foot">
@@ -53,7 +64,7 @@
     <img class="imgVadidCode" src="IMAGES/valid-xhtml10.png" alt="html valido"/>
     <img class="imgVadidCode" src="IMAGES/vcss-blue.gif" alt="css valido"/>
   </footer>
-  <script type="text/javascript" src="SCRIPTS/authpage.js"></script>
+  <script type="text/javascript" src="SCRIPTS/helppage.js"></script>
 </body>
 
 </html>
