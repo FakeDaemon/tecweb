@@ -209,18 +209,23 @@ header {
     font-size: 1.25em;
 }
 
-  #foot {
+#foot {
     height: 10vh;
     width: 100%;
     padding: 0.75em;
     background-color: rgba(10, 10, 10, 1);
     font-size: 1.25em;
-  }
+}
+
+#foot p{
+    background-color: rgba(10, 10, 10, 1);
+}
 
 .cookie-banner {
-    background-color: lightblue;
+    color: white;
+    background-color: rgba(10, 10, 10, 1);
     padding: 20px;
 }
 
 
-  #foot a:visited {color: #FAFE0B;}
+#foot a:visited {color: #FAFE0B;}

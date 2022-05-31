@@ -6,6 +6,24 @@
     flex-flow: row wrap;
     text-align: center;
   }
+
+.cookie_info{
+  max-width: 1024px;
+  min-height: 65vh;
+  margin: 10vh auto 0 auto;
+  text-align: center;
+  text-align: left;
+}
+
+.cookie_info h2{
+  background-color: rgb(50, 0, 0);
+  padding: 0.5em;
+}
+
+.cookie_info ul{
+  padding-left: 2%;
+}
+
   .main img {
     width: auto;
     max-height: 30vh;
@@ -20,12 +38,17 @@
   }
 
   .paragrafo{
+    text-align: center;
     padding: 0.5em;
     margin: 1em 0 1em 0;
     background:
     url("../ICONS/DOOMIcon.jpg") no-repeat left,
     linear-gradient(to right,rgb(8, 8, 8) 70%, transparent);
     background-size: 4%, auto;
+  }
+
+  ul, li, p{
+    background-color: rgb(50, 0, 0);
   }
 
   .lista{
