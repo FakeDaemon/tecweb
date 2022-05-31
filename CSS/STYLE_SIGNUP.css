@@ -53,7 +53,7 @@
   font-size: 0.7em;
   color: grey;
 }
-#auth_widget input[type="text"], #auth_widget input[type="password"]{
+#auth_widget input[type="text"], #auth_widget input[type="password"], #auth_widget input[type="email"]{
   background: transparent;
   border-bottom: 1px solid white;
   width: 80%;
@@ -97,24 +97,4 @@ input[type="checkbox"]{
   width: 40%;
   height: 30px;
   margin-bottom: 10px;
-}
-hr {
-    border: none;
-    border-top: 3px double red;
-    color: red;
-    overflow: visible;
-    text-align: center;
-    height: 5px;
-    width: 80%;
-    margin:20px auto 30px auto;
-}
-#auth_widget p{
-  font-size: 0.7em;
-  word-break: keep-all;
-}
-#auth_widget a{
-  color:white;
-}
-#auth_widget a:visited{
-  color: white;
 }

@@ -2,8 +2,9 @@
 <html lang="it" dir="ltr">
 
 <head>
-  <link href="CSS/STYLE_AUTH.css" rel="stylesheet">
+  <link href="CSS/STYLE_SIGNUP.css" rel="stylesheet">
   <link href="CSS/STYLE_COMMON.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron" />
   <meta charset="utf-8">
   <title> Home </title>
   <meta name="keywords" content="DOOM"/>
@@ -38,21 +39,24 @@
     </nav>
   </header>
   <div class="main">
-    <p>LOG-IN</p>
+    <p>ISCRIZIONE</p>
     <form id="auth_widget">
-      <label id="username_input_label" for="username_input" class="up">Username</label>
+      <label id="username_input_label" for="username_input" class="up" required><span lang="en">Username</span></label>
       <input id="username_input" type="text" name="username">
-      <label id="password_input_label" for="password_input" class="up">Password</label>
-      <input id="password_input" type="text" name="password">
+
+      <label id="email_input_label" for="email_input" class="up" required><span lang="en">Email</span></label>
+      <input id="email_input" type="email" name="username">
+
+      <label id="password_input_label" for="password_input" class="up" required><span lang="en">Password</span></label>
+      <input id="password_input" type="password" name="password">
+
+      <label id="password_confirm_input_label" for="password_confirm_input" class="up" required>Conferma <span lang="en">password</span></label>
+      <input id="password_confirm_input" type="password">
+
       <input id="password_visibility" type="checkbox">
-      <label id="radio_label" for="password_visibility">Mostra Password.</label>
-      <input type="submit" value="ACCEDI">
+      <label id="radio_label" for="password_visibility">Mostra <span lang="en">password</span>.</label>
+      <input type="submit" value="ISCRIVIMI">
       <input id="reset_button" type="reset" value="PULISCI">
-      <input id="save_username" type="checkbox">
-      <label id="radio_label" for="save_username">Salva username.</label>
-      <hr>
-      <p>Non fai ancora parte della <span lang="en">community</span>?</p>
-      <a href="sign-in.php">Crea un nuovo <span lang="en">account</span></a>
     </form>
   </div>
   <footer id="foot">
@@ -65,7 +69,7 @@
       <img class="imgVadidCode" src="IMAGES/valid-xhtml10.png" alt="html valido"/>
       <img class="imgVadidCode" src="IMAGES/vcss-blue.gif" alt="css valido"/>
   </footer>
-  <script type="text/javascript" src="SCRIPTS/authpage.js"></script>
+  <script type="text/javascript" src="SCRIPTS/signuppage.js"></script>
 </body>
 
 </html>
