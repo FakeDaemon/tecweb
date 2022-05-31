@@ -52,12 +52,44 @@
     color:#00FFBB;
 }  
 
-.main  #replace{
-    width: 750px;
-    height: 350px;
-    background-image: url("../IMAGES/doom-replace.jpg");
+.main  #replace1{
+    width:390px;
+    height:220px;
+    margin:auto;
+    background: var(--background-color) url("../IMAGES/logo_doom1.png") center no-repeat;
+    background-size: 90% 90%;
+    text-indent: -9999px;
+}
+.main #replace2{
+  width:390px;
+  height:220px;
+  margin:auto;
+  background: var(--background-color) url("../IMAGES/logo_doom2.png") center no-repeat;
+  background-size: 90% 90%;
+  text-indent: -9999px;
 }
 
- .main #replace span{
-    display: none;
+.main #replace3{
+  width:390px;
+  height:220px;
+  margin:auto;
+  background: var(--background-color) url("../IMAGES/Doom_3_logo2.png") center no-repeat;
+  background-size: 90% 90%; 
+  text-indent: -9999px;
+}
+.main #replace4{
+  width:390px;
+  height:220px;
+  margin:auto;
+  background: var(--background-color) url("../IMAGES/dm2016logo.png") center no-repeat;
+  background-size: 90% 90%; 
+  text-indent: -9999px;
+}
+.main #replace5{
+  width:390px;
+  height:220px;
+  margin:auto;
+  background: var(--background-color) url("../IMAGES/Doom_Eternal_logodef.png") center no-repeat;
+  background-size: 90% 90%; 
+  text-indent: -9999px;
 }
