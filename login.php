@@ -25,11 +25,11 @@
         <li id="nested_list">
           <span id="I_nested_list_span">TRAMA</span>
           <ul id="nstd_lst">
-            <li class="nested_list_li"><span id="II_nested_list_span"><p>&nbsp&nbsp&nbspCAPITOLO I</p></span></li>
-            <li class="nested_list_li"><a href="#">&nbsp&nbsp&nbspCAPITOLO II</a></li>
-            <li class="nested_list_li"><a href="#">&nbsp&nbsp&nbspCAPITOLO III</a></li>
-            <li class="nested_list_li"><a href="#">&nbsp&nbsp&nbspCAPITOLO IV</a></li>
-            <li class="nested_list_li"><a href="#">&nbsp&nbsp&nbspCAPITOLO V</a></li>
+            <li class="nested_list_li"><span id="II_nested_list_span"><a href="history.html">&nbsp&nbsp&nbspCAPITOLO I</a></span></li>
+            <li class="nested_list_li"><a href="history_2.html">&nbsp&nbsp&nbspCAPITOLO II</a></li>
+            <li class="nested_list_li"><a href="history_3.html">&nbsp&nbsp&nbspCAPITOLO III</a></li>
+            <li class="nested_list_li"><a href="history_2016.html">&nbsp&nbsp&nbspCAPITOLO IV</a></li>
+            <li class="nested_list_li"><a href="history_eternals.html">&nbsp&nbsp&nbspCAPITOLO V</a></li>
           </ul>
         </li>
         <li class="container_list_li" lang="en"><a href="stats.html">STATS</a></li>
@@ -39,7 +39,7 @@
     </nav>
   </header>
   <div class="main">
-    <p>LOG-IN</p>
+    <p>ACCESSO</p>
     <form id="auth_widget">
       <label id="username_input_label" for="username_input" class="up"><span lang="en">Username</span></label>
       <input id="username_input" type="text" name="username" required>
@@ -60,10 +60,12 @@
       <input type="submit" value="ACCEDI">
       <input id="reset_button" type="reset" value="PULISCI">
 
+      <p id="HelpLink"> <a href="help.php">Serve aiuto?</a> </p>
+      <p id="credentialRecovery"> <a href="credentialRecovery.php">Credenziali dimenticate?</a> </p>
+
       <hr>
       <p>Non fai ancora parte della <span lang="en">community</span>?</p>
       <a href="signup.php">Crea un nuovo <span lang="en">account</span></a>
-      <p> <a href="help.php">Serve aiuto?</a> </p>
     </form>
   </div>
   <footer id="foot">

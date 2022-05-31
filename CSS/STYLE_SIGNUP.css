@@ -11,8 +11,8 @@
   position: relative;
   margin: 0 auto 0 auto;
   font-size: 2em;
-  line-height: 100px;
-  height: 100px;
+  line-height: 80px;
+  height: 80px;
   width: 300px;
   border:2px solid red;
   border-radius: 15px;
@@ -29,8 +29,7 @@
   border:2px solid red;
   border-radius:15px;
   width: 400px;
-  height: 500px;
-
+  padding-bottom: 20px;
   font-size: 1.5em;
 }
 #auth_widget label{
@@ -97,4 +96,24 @@ input[type="checkbox"]{
   width: 40%;
   height: 30px;
   margin-bottom: 10px;
+}
+#auth_widget p{
+  font-size: 0.7em;
+  word-break: keep-all;
+}
+#auth_widget a{
+  color:white;
+}
+#auth_widget a:visited{
+  color: white;
+}
+hr {
+    border: none;
+    border-top: 3px double red;
+    color: red;
+    overflow: visible;
+    text-align: center;
+    height: 5px;
+    width: 80%;
+    margin:20px auto 10px auto;
 }
