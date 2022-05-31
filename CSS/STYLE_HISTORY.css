@@ -5,91 +5,95 @@
     display: flex;
     flex-flow: row wrap;
     text-align: center;
-  }
-  .main img {
+}
+
+.main img {
     width: auto;
     max-height: 30vh;
     margin: auto;
-  }
-  
-  .main p {
+}
+
+.main p {
     width: 80%;
     margin: auto;
     font-size: 1.25em;
     text-align: left;
-  }
+}
 
-  .paragrafo{
+.paragrafo {
     padding: 0.5em;
     margin: 1em 0 1em 0;
     background:
-    url("../ICONS/DOOMIcon.jpg") no-repeat left,
-    linear-gradient(to right,rgb(8, 8, 8) 70%, transparent);
+        url("../ICONS/DOOMIcon.jpg") no-repeat left,
+        linear-gradient(to right, rgb(8, 8, 8) 70%, transparent);
     background-size: 4%, auto;
-  }
+}
 
-  .lista{
+.lista {
     display: flex;
     flex-direction: column;
-    align-items:flex-start;
+    align-items: flex-start;
     margin: 1em 0 1em 4em;
     list-style-position: inside;
     font-size: 1.25em;
-  }
+}
 
-  .lista_titolo{
+.lista_titolo {
     font-size: 200%;
     padding: 1em;
-  }
+}
 
-#box{
+#box {
     background-color: rgba(0, 0, 0, 0.7);
     position: relative;
     border: solid #000000;
 }
 
-#box li a{
-    color:#00FFBB;
-}  
+#box li a {
+    color: #00FFBB;
+}
 
-.main  #replace1{
-    width:390px;
-    height:220px;
-    margin:auto;
+.main #replace1 {
+    width: 390px;
+    height: 220px;
+    margin: auto;
     background: var(--background-color) url("../IMAGES/logo_doom1.png") center no-repeat;
     background-size: 90% 90%;
     text-indent: -9999px;
 }
-.main #replace2{
-  width:390px;
-  height:220px;
-  margin:auto;
-  background: var(--background-color) url("../IMAGES/logo_doom2.png") center no-repeat;
-  background-size: 90% 90%;
-  text-indent: -9999px;
+
+.main #replace2 {
+    width: 390px;
+    height: 220px;
+    margin: auto;
+    background: var(--background-color) url("../IMAGES/logo_doom2.png") center no-repeat;
+    background-size: 90% 90%;
+    text-indent: -9999px;
 }
 
-.main #replace3{
-  width:390px;
-  height:220px;
-  margin:auto;
-  background: var(--background-color) url("../IMAGES/Doom_3_logo2.png") center no-repeat;
-  background-size: 90% 90%; 
-  text-indent: -9999px;
+.main #replace3 {
+    width: 390px;
+    height: 220px;
+    margin: auto;
+    background: var(--background-color) url("../IMAGES/Doom_3_logo_back.png") center no-repeat;
+    background-size: 90% 90%;
+    text-indent: -9999px;
 }
-.main #replace4{
-  width:390px;
-  height:220px;
-  margin:auto;
-  background: var(--background-color) url("../IMAGES/dm2016logo.png") center no-repeat;
-  background-size: 90% 90%; 
-  text-indent: -9999px;
+
+.main #replace4 {
+    width: 390px;
+    height: 220px;
+    margin: auto;
+    background: var(--background-color) url("../IMAGES/dm2016logo.png") center no-repeat;
+    background-size: 90% 90%;
+    text-indent: -9999px;
 }
-.main #replace5{
-  width:390px;
-  height:220px;
-  margin:auto;
-  background: var(--background-color) url("../IMAGES/Doom_Eternal_logodef.png") center no-repeat;
-  background-size: 90% 90%; 
-  text-indent: -9999px;
+
+.main #replace5 {
+    width: 390px;
+    height: 220px;
+    margin: auto;
+    background: var(--background-color) url("../IMAGES/Doom_Eternal_logodef.png") center no-repeat;
+    background-size: 90% 90%;
+    text-indent: -9999px;
 }
