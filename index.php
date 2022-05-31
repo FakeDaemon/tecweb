@@ -3,7 +3,7 @@
 <head>
     <link href="CSS/STYLE_HOMEPAGE.css" rel="stylesheet">
     <link href="CSS/STYLE_COMMON.css" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron" />
     <meta charset="utf-8">
     <title> Home </title>
     <meta name="keywords" content="DOOM"/>
