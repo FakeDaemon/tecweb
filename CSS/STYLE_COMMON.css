@@ -55,6 +55,7 @@ header {
     height: 20vh;
     width: 100%;
     background: linear-gradient(to bottom, #000000 50%, rgb(50, 0, 0) 90%);
+    z-index: 100;
 }
 
 #logo {
