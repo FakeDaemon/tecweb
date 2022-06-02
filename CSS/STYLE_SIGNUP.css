@@ -3,16 +3,16 @@
 }
 .main {
   max-width: 1024px;
-  min-height: 63vh;
-  margin: 7vh auto 0 auto;
+  min-height: 67.5vh;
+  margin: 2.5vh auto 0 auto;
   text-align: center;
 }
 .main > p{
   position: relative;
   margin: 0 auto 0 auto;
   font-size: 2em;
-  line-height: 80px;
-  height: 80px;
+  line-height: 70px;
+  height: 70px;
   width: 300px;
   border:2px solid red;
   border-radius: 15px;
@@ -21,10 +21,12 @@
 }
 #auth_widget{
   padding-top: 50px;
-  position: relative;
+  position: fixed;
   background-color: rgb(30,30,30);
   z-index: 0;
-  top:-50px;
+  top:24vh;
+  left: 50%;
+  transform: translateX(-50%);
   margin:0 auto 0 auto;
   border:2px solid red;
   border-radius:15px;

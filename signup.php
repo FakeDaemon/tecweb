@@ -47,13 +47,12 @@
       <label id="email_input_label" for="email_input" class="up" required><span lang="en">Email</span></label>
       <input id="email_input" type="email" name="username" required>
 
-      <p id="password_hints">Password: <span class="sr_only">Must be at least 8 characters. Must have at least 1 number. Must have at least 1 uppercase letter. Must have at least 1 special character.</span>
+      <p id="password_hints">Password: <span class="sr_only">Deve contenere almeno otto caratteri dei quali uno deve essere un numero e uno deve essere scritto in maiuscolo</span>
       </p>
           <ul aria-hidden="true">
-            <li>Must be at least 8 characters.</li>
-            <li>Must have at least 1 number.</li>
-            <li>Must have at least 1 uppercase letter.</li>
-            <li>Must have at least 1 special character.</li>
+            <li>Deve avere almeno otto caratteri;</li>
+            <li>Deve contenere almeno un numero;</li>
+            <li>Deve avere almeno una lettera maiuscola.</li>
           </ul>
 
 
