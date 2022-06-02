@@ -6,7 +6,7 @@
   <link href="CSS/STYLE_COMMON.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron" />
   <meta charset="utf-8">
-  <title> Home </title>
+  <title>Recupero Credenziali | WikiDoom</title>
   <meta name="keywords" content="DOOM"/>
   <meta name="description" content="DOOM Wiki"/>
   <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano , Angeloni Alberto"/>
@@ -44,10 +44,14 @@
       <p>RECUPERO CREDENZIALI</p>
       <form id="auth_widget">
 
+        <p>Inserisci l'<span lang="en">email</span> che hai usato per iscriverti al sito nel campo sottostante. </p>
+        <p>Riceverai tutte le istruzioni per recuperare la tua password.</p>
+        <p>Se non ricevi nessun messaggio o non ricordi la tua  <span lang="en">email</span> <a href="help.php">scrivici</a> e ti ricontatteremo.</p>
+
         <label id="email_input_label" for="email_input" class="up"><span lang="en">Email</span></label>
         <input id="email_input" type="text" name="username" required>
 
-        <p id="HelpLink"> <a href="help.php">Serve aiuto?</a> </p>
+        <a id="HelpLink" href="help.php">Serve aiuto?</a>
         <input type="submit" value="INVIA LINK">
         <input id="reset_button" type="reset" value="PULISCI">
       </form>

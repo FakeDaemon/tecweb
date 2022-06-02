@@ -121,8 +121,11 @@ hr {
 #auth_widget a:visited{
   color: white;
 }
-#HelpLink, #credentialRecovery{
+a#HelpLink, #credentialRecovery{
+  display: inline-block;
+  margin: 0 auto;
   width: 80%;
-  margin: auto;
   text-align: left;
+  color: white;
+  font-size: .7em;
 }

@@ -6,7 +6,7 @@
   <link href="CSS/STYLE_COMMON.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron" />
   <meta charset="utf-8">
-  <title> Home </title>
+  <title>Accedi | DoomWiki</title>
   <meta name="keywords" content="DOOM"/>
   <meta name="description" content="DOOM Wiki"/>
   <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano , Angeloni Alberto"/>
@@ -60,7 +60,7 @@
       <input type="submit" value="ACCEDI">
       <input id="reset_button" type="reset" value="PULISCI">
 
-      <p id="HelpLink"> <a href="help.php">Serve aiuto?</a> </p>
+      <a id="HelpLink" href="help.php">Serve aiuto?</a>
       <p id="credentialRecovery"> <a href="credentialRecovery.php">Credenziali dimenticate?</a> </p>
 
       <hr>
