@@ -119,3 +119,13 @@ form#auth_widget label input:checked + img{
   height: 50px;
   font-size: 1.3em;
 }
+#auth_widget input[type="reset"]{
+  font-size: 0.8em;
+  width: 40%;
+  height: 30px;
+  margin-bottom: 10px;
+}
+#auth_widget input[type="submit"]:hover  #auth_widget input[type="reset"]:hover,  #auth_widget input[type="reset"]:focus, #auth_widget input[type="submit"]:focus{
+  border-color: #CCAE52;
+  outline: none;
+}
