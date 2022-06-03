@@ -43,13 +43,13 @@
     <p>GESTIONE <span lang="en">ACCOUNT</span></p>
     <div id="auth_widget">
       <p>IMMAGINE PROFILO</p>
-      <a href="account-managment/profile-pic-change.php">Cambia immagine profilo.</a>
-      <a href="account-managment/profile-pic-change.php?act=rmv">Rimuovi immagine profilo.</a>
+      <a href="account-managment/change-profile-pic.php">Cambia immagine profilo.</a>
+      <a href="account-managment/remove-profile-pic.php">Rimuovi immagine profilo.</a>
 
       <p>DATI ACCOUNT</p>
-      <a href="account-managment/username-change.php">Cambia <span lang="en">username</span>.</a>
-      <a href="account-managment/password-change.php">Cambia <span lang="en">password</span>.</a>
-      <a href="account-managment/email-change.php">Cambia <span lang="en">email</span> associata all'account.</a>
+      <a href="account-managment/change-username.php">Cambia <span lang="en">username</span>.</a>
+      <a href="account-managment/change-password.php">Cambia <span lang="en">password</span>.</a>
+      <a href="account-managment/change-email.php">Cambia <span lang="en">email</span> associata all'account.</a>
 
       <hr>
 

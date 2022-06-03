@@ -95,7 +95,7 @@ header {
     flex-flow: column wrap;
     justify-content: center;
 
-    transition: all 0.1s ease-in;
+    : all 0.1s ease-in;
 }
 
 #main_menu #container_list li#nested_list {
@@ -457,54 +457,6 @@ LOGIN-WIDGET
 /*------------
 USER-WIDGET
 ------------*/
-#user_widget {
-    min-height: 20vh;
-    min-width: 20vh;
-
-    margin: -3% auto auto auto;
-
-    display: flex;
-    flex-flow: column;
-    justify-content: space-between;
-}
-
-#profile_pic {
-    height: 16vh;
-    width: 16vh;
-
-    border-radius: 50%;
-    border: 3px solid black;
-    overflow: hidden;
-    margin: 0 auto 0 auto;
-
-    transition: background-image 0.2s ease-in;
-}
-
-#profile_pic img {
-    transition: opacity 0.2s ease-in;
-}
-
-#profile_pic img:hover,
-#profile_pic img:focus {
-    opacity: 0.1;
-}
-
-#profile_pic:hover {
-    background-image: url("../IMAGES/profile_pic_change_icon.png");
-    background-color: black;
-    background-size: 30% auto;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-#profile_pic img {
-    height: 100%;
-    width: 100%;
-}
-
-#user_widget h2 {
-    font-size: 2em;
-}
 
 /*------------
 SEARCH-WIDGET
