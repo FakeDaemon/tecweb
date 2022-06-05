@@ -2,11 +2,11 @@
 <html lang="it" dir="ltr">
 
 <head>
-  <link href="CSS/STYLE_ACCOUNTMANAGMENT.css" rel="stylesheet">
-  <link href="CSS/STYLE_COMMON.css" rel="stylesheet">
+  <link href="../CSS/STYLE_ACCOUNTMANAGMENT.css" rel="stylesheet">
+  <link href="../CSS/STYLE_COMMON.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron" />
   <meta charset="utf-8">
-  <title>Gestione Account | WikiDoom</title>
+  <title>Gestione Immagine Profilo | WikiDoom</title>
   <meta name="keywords" content="DOOM"/>
   <meta name="description" content="DOOM Wiki"/>
   <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano , Angeloni Alberto"/>
@@ -39,26 +39,32 @@
     </nav>
   </header>
   <div class="main">
+    <p>SCEGLI UN IMMAGINE</p>
+    <form id="auth_widget">
 
-    <p>GESTIONE <span lang="en">ACCOUNT</span></p>
-    <div id="auth_widget">
-      <p>IMMAGINE PROFILO</p>
-      <a href="account-managment/profile-pic-change.php">Cambia immagine profilo.</a>
-      <a href="account-managment/profile-pic-change.php?act=rmv">Rimuovi immagine profilo.</a>
+      <label for="Img_1">
+        <input id="Img_1" type="radio" name="profilePic" value="Cacodemon">
+        <img src="../IMAGES/ProfilePics/Cacodemon.jpg" alt="Cacodemon Pic">
+        CacoDemon
+      </label>
 
-      <p>DATI ACCOUNT</p>
-      <a href="account-managment/username-change.php">Cambia <span lang="en">username</span>.</a>
-      <a href="account-managment/password-change.php">Cambia <span lang="en">password</span>.</a>
-      <a href="account-managment/email-change.php">Cambia <span lang="en">emails</span> associata all'account.</a>
-
-      <hr>
-
-      <a href="account-managment/log-out.php">Chiudi sessione.</a>
-      <a class="noPlease" href="account-managment/delete-account.php">Elimina account.</a>
-      <span><a class="smaller" href="help.php">Serve aiuto?</a></span>
-
-    </div>
-
+      <label for="Img_2">
+        <input id="Img_2" type="radio" name="profilePic" value="HellKnight">
+        <img src="../IMAGES/ProfilePics/HellKnight.jpg" alt="HellKnight Pic">
+        HellKnight
+      </label>
+      <label for="Img_3">
+        <input id="Img_3" type="radio" name="profilePic" value="Cherub">
+        <img src="../IMAGES/ProfilePics/Cherub.jpg" alt="Two Cherubs Monsters">
+        Cherubs
+      </label>
+      <label for="Img_4">
+        <input id="Img_4" type="radio" name="profilePic" value="Bruiser">
+        <img src="../IMAGES/ProfilePics/Bruiser.jpg" alt="Bruiser Pic">
+        Bruiser
+      </label>
+      <input type="submit" name="SubmitButton" value="Conferma">
+    </form>
   </div>
   <footer id="foot">
     <p>

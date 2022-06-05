@@ -2,8 +2,8 @@
 <html lang="it" dir="ltr">
 
 <head>
-  <link href="CSS/STYLE_ACCOUNTMANAGMENT.css" rel="stylesheet">
-  <link href="CSS/STYLE_COMMON.css" rel="stylesheet">
+  <link href="../CSS/STYLE_PASSWORDCHANGE.css" rel="stylesheet">
+  <link href="../CSS/STYLE_COMMON.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron" />
   <meta charset="utf-8">
   <title>Gestione Account | WikiDoom</title>
@@ -40,24 +40,36 @@
   </header>
   <div class="main">
 
-    <p>GESTIONE <span lang="en">ACCOUNT</span></p>
-    <div id="auth_widget">
-      <p>IMMAGINE PROFILO</p>
-      <a href="account-managment/profile-pic-change.php">Cambia immagine profilo.</a>
-      <a href="account-managment/profile-pic-change.php?act=rmv">Rimuovi immagine profilo.</a>
+    <p>CAMBIO <span lang="en">PASSWORD</span></p>
+    <form id="auth_widget">
+      <label id="OldPasswordLabel" class="up" for="LastPassword">Vecchia <span lang="en">Password</span></label>
+      <input id="LastPassword" type="password" name="OldPassword">
 
-      <p>DATI ACCOUNT</p>
-      <a href="account-managment/username-change.php">Cambia <span lang="en">username</span>.</a>
-      <a href="account-managment/password-change.php">Cambia <span lang="en">password</span>.</a>
-      <a href="account-managment/email-change.php">Cambia <span lang="en">emails</span> associata all'account.</a>
+      <p id="password_hints">Ricorda che la nuova <span lang="en">Password</span>: <span class="sr_only">Deve contenere almeno otto caratteri dei quali uno deve essere un numero e uno deve essere scritto in maiuscolo. Ovviamente deve essere diversa dalla precedente.</span>
+      </p>
+          <ul aria-hidden="true">
+            <li>Deve essere diversa dalla precedente;</li>
+            <li>Deve avere almeno otto caratteri;</li>
+            <li>Deve contenere almeno un numero;</li>
+            <li>Deve avere almeno una lettera maiuscola.</li>
+          </ul>
 
-      <hr>
+      <label id="NewPasswordLabel" class="up" for="NewPassword">Nuova <span lang="en">Password</span></label>
+      <input id="NewPassword" type="password" name="NewPassword">
 
-      <a href="account-managment/log-out.php">Chiudi sessione.</a>
-      <a class="noPlease" href="account-managment/delete-account.php">Elimina account.</a>
-      <span><a class="smaller" href="help.php">Serve aiuto?</a></span>
+      <label id="PasswordConfirmLabel" class="up" for="NewPasswordConfirm">Conferma <span lang="en">Password</span></label>
+      <input id="NewPasswordConfirm" type="password" name="NewPasswordConfirm">
 
-    </div>
+      <label class="noJs" id="radio_label" for="password_visibility">
+        <input id="password_visibility" type="checkbox">
+        Mostra <span lang="en">password</span>.
+      </label>
+
+      <input type="submit" name="SubmitButton" value="Conferma">
+      <input id="ResetButton" type="reset" value="Pulisci">
+
+      <a href="../help.php">Serve aiuto?</a>
+    </form>
 
   </div>
   <footer id="foot">
@@ -70,7 +82,7 @@
     <img class="imgVadidCode" src="IMAGES/valid-xhtml10.png" alt="html valido"/>
     <img class="imgVadidCode" src="IMAGES/vcss-blue.gif" alt="css valido"/>
   </footer>
-  <script type="text/javascript" src="SCRIPTS/helppage.js"></script>
+  <script type="text/javascript" src="../SCRIPTS/passwordchangepage.js"></script>
 </body>
 
 </html>

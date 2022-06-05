@@ -2,11 +2,11 @@
 <html lang="it" dir="ltr">
 
 <head>
-  <link href="CSS/STYLE_ACCOUNTMANAGMENT.css" rel="stylesheet">
-  <link href="CSS/STYLE_COMMON.css" rel="stylesheet">
+  <link href="../CSS/STYLE_USERNAMECHANGE.css" rel="stylesheet">
+  <link href="../CSS/STYLE_COMMON.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron" />
   <meta charset="utf-8">
-  <title>Gestione Account | WikiDoom</title>
+  <title>Cambio Username | WikiDoom</title>
   <meta name="keywords" content="DOOM"/>
   <meta name="description" content="DOOM Wiki"/>
   <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano , Angeloni Alberto"/>
@@ -40,24 +40,17 @@
   </header>
   <div class="main">
 
-    <p>GESTIONE <span lang="en">ACCOUNT</span></p>
-    <div id="auth_widget">
-      <p>IMMAGINE PROFILO</p>
-      <a href="account-managment/profile-pic-change.php">Cambia immagine profilo.</a>
-      <a href="account-managment/profile-pic-change.php?act=rmv">Rimuovi immagine profilo.</a>
+    <p>NOME UTENTE</p>
+    <form id="auth_widget">
+      <p>Nome utente attuale:</p>
+      <p>CURRENT_USERNAME</p>
+      <label id="NewUsernameLabel" for="NextUsername" class="up">Nuovo Nome Utente</label>
+      <input id="NextUsername" type="text" name="NewUsername">
 
-      <p>DATI ACCOUNT</p>
-      <a href="account-managment/username-change.php">Cambia <span lang="en">username</span>.</a>
-      <a href="account-managment/password-change.php">Cambia <span lang="en">password</span>.</a>
-      <a href="account-managment/email-change.php">Cambia <span lang="en">emails</span> associata all'account.</a>
-
-      <hr>
-
-      <a href="account-managment/log-out.php">Chiudi sessione.</a>
-      <a class="noPlease" href="account-managment/delete-account.php">Elimina account.</a>
-      <span><a class="smaller" href="help.php">Serve aiuto?</a></span>
-
-    </div>
+      <input id="ConfirmButton" type="submit" name="SubmitButton" value="Conferma">
+      <input id="ResetButton" type="reset" value="Pulisci">
+      <a href="../help.php">Serve aiuto?</a>
+    </form>
 
   </div>
   <footer id="foot">
@@ -70,7 +63,7 @@
     <img class="imgVadidCode" src="IMAGES/valid-xhtml10.png" alt="html valido"/>
     <img class="imgVadidCode" src="IMAGES/vcss-blue.gif" alt="css valido"/>
   </footer>
-  <script type="text/javascript" src="SCRIPTS/helppage.js"></script>
+  <script type="text/javascript" src="../SCRIPTS/usernamechangepage.js"></script>
 </body>
 
 </html>
