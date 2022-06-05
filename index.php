@@ -24,31 +24,16 @@
           </label>
           <input id="NestedListBtn" type="checkbox" value="Mostra Capitoli Disponibili">
             <ul id="MenuBarNestedList">
-              <li class="NestedListItem">CAPITOLO I</li>
-              <li class="NestedListItem">CAPITOLO II</li>
-              <li class="NestedListItem">CAPITOLO III</li>
-              <li class="NestedListItem">CAPITOLO IV</li>
-              <li class="NestedListItem">CAPITOLO V</li>
+              <li class="NestedListItem"><a href="history.html">CAPITOLO <abbr title="Primo">I</abbr></a></li>
+              <li class="NestedListItem"><a href="history_2.html">CAPITOLO <abbr title="Secondo">II</abbr></a></li>
+              <li class="NestedListItem"><a href="history_3.html">CAPITOLO <abbr title="Terzo">III</abbr></a></li>
+              <li class="NestedListItem"><a href="history_2016.html">CAPITOLO <abbr title="Quarto">IV</abbr></a></li>
+              <li class="NestedListItem"><a href="history_eternals.html">CAPITOLO <abbr title="Quinto">V</abbr></a></li>
             </ul>
         </li>
         <li class="MenuBarItem">STATISTICHE</li>
         <li class="MenuBarItem">CURIOSITÀ</li>
       </ul>
-      <!-- <ul id="container_list">
-        <li class="container_list_li" lang="en">HOME</li>
-        <li id="nested_list">
-          <span id="I_nested_list_span">TRAMA</span>
-          <ul id="nstd_lst">
-            <li class="nested_list_li"><span id="II_nested_list_span"><a href="history.html">&nbsp;&nbsp;&nbsp;CAPITOLO I</a></span></li>
-            <li class="nested_list_li"><a href="history_2.html">&nbsp;&nbsp;&nbsp;CAPITOLO II</a></li>
-            <li class="nested_list_li"><a href="history_3.html">&nbsp;&nbsp;&nbsp;CAPITOLO III</a></li>
-            <li class="nested_list_li"><a href="history_2016.html">&nbsp;&nbsp;&nbsp;CAPITOLO IV</a></li>
-            <li class="nested_list_li"><a href="history_eternals.html">&nbsp;&nbsp;&nbsp;CAPITOLO V</a></li>
-          </ul>
-        </li>
-        <li class="container_list_li" lang="en"><a href="stats.html">STATS</a></li>
-        <li class="container_list_li"><a href="trivia.html">CURIOSITÀ</a></li>
-      </ul> -->
       <div id="MenuUserWidget">
 
       </div>
