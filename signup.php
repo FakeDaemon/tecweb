@@ -9,13 +9,11 @@
   <title>Registrazione | WikiDoom</title>
   <meta name="keywords" content="DOOM"/>
   <meta name="description" content="DOOM Wiki"/>
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://fonts.googleapis.com/ https://fonts.gstatic.com/;">
   <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano , Angeloni Alberto"/>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="SCRIPTS/css_modifier.js"></script>
   <script type="text/javascript" src="SCRIPTS/cookie_extractor.js"></script>
 </head>
-
-<body onload="redirection()">
+<body>
   <header>
     <h1 id="logo">DOOM WIKI</h1>
     <nav id="NavBar">
@@ -50,7 +48,12 @@
   </header>
   <div class="main">
     <p>ISCRIZIONE</p>
-    <form onsubmit="return validateForm();"id="auth_widget">
+    <form id="auth_widget">
+      <p id="password_hints"><span lang="en">Username</span>: <span class="sr_only">Deve essere formato da una sola parola</span>
+      </p>
+          <ul aria-hidden="true">
+            <li>Deve essere formato da una singola parola.</li>
+          </ul>
       <label id="username_input_label" for="username_input" class="up" required><span lang="en">Username</span></label>
       <input id="username_input" type="text" name="username" required>
 
@@ -94,5 +97,4 @@
   </footer>
   <script type="text/javascript" src="SCRIPTS/signuppage.js"></script>
 </body>
-
 </html>

@@ -21,16 +21,15 @@
 }
 #auth_widget{
   padding-top: 50px;
-  position: fixed;
+  position: relative;
   background-color: rgb(30,30,30);
   z-index: 0;
-  top:24vh;
-  left: 50%;
-  transform: translateX(-50%);
-  margin:0 auto 0 auto;
+  top:-50px;
+  margin:auto;
   border:2px solid red;
   border-radius:15px;
-  width: 400px;
+  width: 90vw;
+  max-width: 400px;
   padding-bottom: 20px;
   font-size: 1.5em;
 }
@@ -141,11 +140,11 @@ span.sr_only{
   position:absolute;
   width:1px;
 }
-ul{
+#auth_widget ul{
   width: 70%;
   margin:auto;
 }
-ul li{
+#auth_widget ul li{
   width: 100%;
   text-align: left;
   font-size: 0.5em;

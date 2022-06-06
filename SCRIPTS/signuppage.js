@@ -38,15 +38,12 @@ document.getElementById("password_confirm_input").addEventListener('focus', func
     document.getElementById("password_confirm_input_label").classList.add("up");
   }
 });
-document.getElementById("password_confirm_input").addEventListener('input', function(){
-  document.getElementById("password_confirm_input").setCustomValidity("");
-});
-
 document.getElementById("password_confirm_input").addEventListener('focusout', function(){
   if(document.getElementById("password_confirm_input").value.length == 0){
     document.getElementById("password_confirm_input_label").classList.remove("up");
   }
 });
+
 document.getElementById("reset_button").addEventListener('click', function(){
   document.getElementById("username_input_label").classList.remove("up");
   document.getElementById("email_input_label").classList.remove("up");
@@ -64,14 +61,28 @@ document.getElementById("password_visibility").addEventListener('click', functio
     document.getElementById("password_confirm_input").type = 'password';
   }
 });
-function validateForm(){
+
+document.getElementById("password_confirm_input").addEventListener('input', function(){
+  document.getElementById("password_confirm_input").setCustomValidity("");
+});
+document.getElementById("password_input").addEventListener('input', function(){
+  document.getElementById("password_confirm_input").setCustomValidity("");
+});
+document.getElementById("username_input").addEventListener('input', function(){
+  document.getElementById("username_input").setCustomValidity("");
+});
+
+document.getElementById("auth_widget").addEventListener('submit', function(evt){
+  if((document.getElementById("username_input").value.split(" ")).length > 1){
+    document.getElementById("username_input").setCustomValidity("Il nome utente deve essere composto di una sola parola.");
+    document.getElementById("username_input").reportValidity();
+    evt.preventDefault();
+    return;
+  }
   if(document.getElementById("password_confirm_input").value != document.getElementById("password_input").value){
     document.getElementById("password_confirm_input").setCustomValidity("Password diverse tra loro");
     document.getElementById("password_confirm_input").reportValidity();
-    return false;
-  }else{
-    console.log("ciao");
-    document.getElementById("password_confirm_input").setCustomValidity("");
-    return true;
+    evt.preventDefault();
+    return;
   }
-};
+}, true);
