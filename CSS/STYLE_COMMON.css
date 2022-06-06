@@ -112,7 +112,7 @@ header {
 }
 #MenuBar{
   display: inline-flex;
-  width: 80%;
+  width: 75%;
   height: auto;
   list-style: none;
   flex-flow: row nowrap;
@@ -210,13 +210,45 @@ header {
   list-style: none;
 }
 #MenuUserWidget{
-  display: inline-block;
-  height: 100%;
-  width: 20%;
-  background-color: darkred;
+  display: inline-flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  height: 10vh;
+  padding: 1vh;
+  width: 25%;
   margin-left: auto;
-  background-color: rgb(20,20,20);
+  margin-bottom: auto;
+  background-color: black;
 }
+#MenuUserWidget > div{
+  display: inline-block;
+  width: 63%;
+  text-align: right;
+  margin:auto;
+}
+#MenuUserWidget > div > p{
+  display: block;
+  height: 30%;
+  width: 100%;
+  font-size: larger;
+}
+#MenuUserWidget > div > a{
+  width: 100%;
+  display: block;
+  color:white;
+  font-size: smaller;
+}
+#MenuUserWidget > img{
+  display: inline-block;
+  width: 30%;
+  border-radius: 50%;
+  border: 1px solid red;
+}
+
+
+
+
+
 
 .lista {
     display: flex;

@@ -30,18 +30,24 @@
               </label>
               <input id="NestedListBtn" type="checkbox" value="Mostra Capitoli Disponibili">
                 <ul id="MenuBarNestedList">
-                  <li class="NestedListItem CurrentLocation"><a href="history.html">CAPITOLO <abbr title="Primo">I</abbr></a></li>
-                  <li class="NestedListItem"><a href="history_2.html">CAPITOLO <abbr title="Secondo">II</abbr></a></li>
-                  <li class="NestedListItem"><a href="history_3.html">CAPITOLO <abbr title="Terzo">III</abbr></a></li>
-                  <li class="NestedListItem"><a href="history_2016.html">CAPITOLO <abbr title="Quarto">IV</abbr></a></li>
-                  <li class="NestedListItem"><a href="history_eternals.html">CAPITOLO <abbr title="Quinto">V</abbr></a></li>
+                  <li class="NestedListItem CurrentLocation"><a href="history.php">CAPITOLO <abbr title="Primo">I</abbr></a></li>
+                  <li class="NestedListItem"><a href="history_2.php">CAPITOLO <abbr title="Secondo">II</abbr></a></li>
+                  <li class="NestedListItem"><a href="history_3.php">CAPITOLO <abbr title="Terzo">III</abbr></a></li>
+                  <li class="NestedListItem"><a href="history_2016.php">CAPITOLO <abbr title="Quarto">IV</abbr></a></li>
+                  <li class="NestedListItem"><a href="history_eternals.php">CAPITOLO <abbr title="Quinto">V</abbr></a></li>
                 </ul>
             </li>
-            <li class="MenuBarItem"><a href="stats.html">STATISTICHE</a></li>
-            <li class="MenuBarItem"><a href="trivia.html">CURIOSITÀ</a></li>
+            <li class="MenuBarItem"><a href="stats.php">STATISTICHE</a></li>
+            <li class="MenuBarItem"><a href="trivia.php">CURIOSITÀ</a></li>
           </ul>
           <div id="MenuUserWidget">
-
+            <?php
+              include 'SCRIPTS/header.php';
+              if(isLogged())
+                printLoggedMenuWidget();
+              else
+                printDefaultMenuWidget();
+            ?>
           </div>
         </nav>
         <script type="text/javascript">
