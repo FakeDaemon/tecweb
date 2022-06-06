@@ -12,10 +12,9 @@
   <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano , Angeloni Alberto"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="SCRIPTS/css_modifier.js"></script>
-  <script type="text/javascript" src="SCRIPTS/cookie_extractor.js"></script>
 </head>
 
-<body onload="redirection()">
+<body>
   <header>
     <h1 id="logo">DOOM WIKI</h1>
     <nav id="NavBar">
@@ -50,9 +49,13 @@
   </header>
   <div class="main">
     <p>ACCESSO</p>
-    <form id="auth_widget">
+    <form id="auth_widget" method="POST" action="login.php">
+      <?php
+      include 'SCRIPTS/AuthPage.php';
+      PerformAuth();
+      ?>
       <label id="username_input_label" for="username_input" class="up"><span lang="en">Username</span></label>
-      <input id="username_input" type="text" name="username" required>
+      <input id="username_input" type="text" name="username"  <?php if(isset($_COOKIE['username'])) echo "value='".$_COOKIE['username']."'"; ?> required>
 
       <label id="password_input_label" for="password_input" class="up"><span lang="en">Password</span></label>
       <input id="password_input" type="password" name="password" required>

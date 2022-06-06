@@ -3,7 +3,7 @@
 }
 .main {
   max-width: 1024px;
-  height: 63vh;
+  min-height: 63vh;
   margin: 7vh auto 0 auto;
   text-align: center;
 }
@@ -120,6 +120,12 @@ hr {
 }
 #auth_widget a:visited{
   color: white;
+}
+#auth_widget p.ErrorMessage{
+  color: rgb(210, 70,70);
+  width: 80%;
+  margin:auto;
+  font-size: 1.1em;
 }
 a#HelpLink, #credentialRecovery{
   display: inline-block;

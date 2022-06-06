@@ -109,6 +109,19 @@ input[type="checkbox"]{
   font-size: 0.7em;
   word-break: keep-all;
 }
+#auth_widget p.ErrorMessage{
+  color: rgb(210, 70,70);
+  width: 80%;
+  margin:auto;
+  font-size: 1.1em;
+}
+#auth_widget a.ErrorSubMessage{
+  display: block;
+  font-size: .7em;
+  text-align: left;
+  width: 80%;
+  margin:auto;
+}
 #auth_widget a{
   color:white;
 }
@@ -125,7 +138,7 @@ hr {
   width: 80%;
   margin:20px auto 10px auto;
 }
-p#password_hints{
+p#password_hints, p#username_hints{
   width: 80%;
   margin: 20px auto 0 auto;
   text-align: left;
@@ -147,5 +160,9 @@ span.sr_only{
 #auth_widget ul li{
   width: 100%;
   text-align: left;
-  font-size: 0.5em;
+  font-size: 0.6em;
+}
+#auth_widget p#ConfirmMessage{
+  font-size: 1.5em;
+  color: #CCAE52;
 }

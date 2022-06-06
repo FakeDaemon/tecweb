@@ -1,4 +1,4 @@
-document.getElementById("username_input_label").classList.remove("up");
+if(document.getElementById("username_input").getAttribute('value').length == 0) document.getElementById("username_input_label").classList.remove("up");
 document.getElementById("password_input_label").classList.remove("up");
 document.getElementById("radio_label").classList.remove("noJs");
 document.getElementById("username_input").addEventListener('focus', function(){
