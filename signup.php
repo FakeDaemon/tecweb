@@ -80,7 +80,7 @@
         </ul>
 
 
-        <label id="password_input_label" for="password_input" class="up" required><span lang="en">Password</span> * <span class="sr_only">Campo Richiesto</span></label>
+        <label id="password_input_label" for="password_input" class="up" required><span lang="en">Password</span> *<span class="sr_only">Campo Richiesto</span></label>
         <input title="Password dell'account fase di creazione." id="password_input" type="password" name="password" required>
 
         <label id="password_confirm_input_label" for="password_confirm_input" class="up" required>Conferma <span lang="en">password</span> *<span class="sr_only">Campo Richiesto</span></label>
