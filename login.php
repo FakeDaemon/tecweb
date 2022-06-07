@@ -55,7 +55,10 @@
       PerformAuth();
       ?>
       <label id="username_input_label" for="username_input" class="up"><span lang="en">Username</span></label>
-      <input id="username_input" type="text" name="username"  <?php if(isset($_COOKIE['username'])) echo "value='".$_COOKIE['username']."'"; ?> required>
+      <input id="username_input" type="text" name="username"  <?php if(isset($_COOKIE['username']) && $_COOKIE['username']!="")
+      echo "value='".$_COOKIE['username']."'";
+      else
+      echo "value=''"?> required>
 
       <label id="password_input_label" for="password_input" class="up"><span lang="en">Password</span></label>
       <input id="password_input" type="password" name="password" required>
@@ -66,7 +69,7 @@
       </label>
 
       <label class="radio_label" for="save_username">
-        <input id="save_username" type="checkbox" name="SaveUsername" value="True">
+        <input id="save_username" type="checkbox" name="SaveUsername" <?php if(isset($_COOKIE['username']) && $_COOKIE['username']!="") echo "checked"; ?> value="True">
         Salva username.
       </label>
 

@@ -1,16 +1,18 @@
 <?php
 
   function isLogged(){
-    return False;
+    return True;
   }
 
-  function printLoggedMenuWidget(){
+  function printLoggedMenuWidget($level=0){
     //Uso il cookie con il session ID per recuperare l'username
     echo "<div>";
     echo "<p>USERNAME</p>";
-    echo "<a href='account-managment.php'>Impostazioni</a>";
+    echo "<a href='";
+    for($i=0; $i<$level; $i++) echo "../";
+    echo "account-managment.php'>Impostazioni</a>";
     echo "</div>";
-    echo "<img src='/IMAGES/ProfilePics/Default.jpg' alt='Doomguy, effettua l'accesso!'>";
+    echo "<img src='/IMAGES/ProfilePics/Default.jpg' alt='Doomguy, accedi o registrati!'>";
   }
 
   function printDefaultMenuWidget(){

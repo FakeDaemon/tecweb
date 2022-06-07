@@ -12,10 +12,9 @@
   <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano , Angeloni Alberto"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="SCRIPTS/css_modifier.js"></script>
-  <script type="text/javascript" src="SCRIPTS/cookie_extractor.js"></script>
 </head>
 
-<body onload="redirection()">
+<body>
   <header>
     <h1 id="logo">DOOM WIKI</h1>
 
@@ -81,7 +80,6 @@
     <img class="imgVadidCode" src="IMAGES/valid-xhtml10.png" alt="html valido"/>
     <img class="imgVadidCode" src="IMAGES/vcss-blue.gif" alt="css valido"/>
   </footer>
-  <script type="text/javascript" src="SCRIPTS/helppage.js"></script>
 </body>
 
 </html>

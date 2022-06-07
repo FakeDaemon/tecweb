@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="it" dir="ltr">
-
 <head>
   <link href="../CSS/STYLE_PASSWORDCHANGE.css" rel="stylesheet">
   <link href="../CSS/STYLE_COMMON.css" rel="stylesheet">
@@ -11,35 +10,37 @@
   <meta name="description" content="DOOM Wiki"/>
   <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano , Angeloni Alberto"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="SCRIPTS/css_modifier.js"></script>
-  <script type="text/javascript" src="SCRIPTS/cookie_extractor.js"></script>
 </head>
-
-<body onload="redirection()">
+<body>
   <header>
     <h1 id="logo">DOOM WIKI</h1>
-
     <nav id="NavBar">
       <ul id="MenuBar">
-        <li class="MenuBarItem" lang="en"><a href="../" lang="en">HOMEPAGE</a></li>
+        <li class="MenuBarItem" lang="en"><a href="/" lang="en">HOMEPAGE</a></li>
         <li class="MenuBarItemNestedList">
           <label id="NestedListLbl" for="NestedListBtn">
             TRAMA
           </label>
           <input id="NestedListBtn" type="checkbox" value="Mostra Capitoli Disponibili">
-            <ul id="MenuBarNestedList">
-              <li class="NestedListItem"><a href="../history.html">CAPITOLO <abbr title="Primo">I</abbr></a></li>
-              <li class="NestedListItem"><a href="../history_2.html">CAPITOLO <abbr title="Secondo">II</abbr></a></li>
-              <li class="NestedListItem"><a href="../history_3.html">CAPITOLO <abbr title="Terzo">III</abbr></a></li>
-              <li class="NestedListItem"><a href="../history_2016.html">CAPITOLO <abbr title="Quarto">IV</abbr></a></li>
-              <li class="NestedListItem"><a href="../history_eternals.html">CAPITOLO <abbr title="Quinto">V</abbr></a></li>
-            </ul>
+          <ul id="MenuBarNestedList">
+            <li class="NestedListItem"><a href="history.php">CAPITOLO <abbr title="Primo">I</abbr></a></li>
+            <li class="NestedListItem"><a href="history_2.php">CAPITOLO <abbr title="Secondo">II</abbr></a></li>
+            <li class="NestedListItem"><a href="history_3.php">CAPITOLO <abbr title="Terzo">III</abbr></a></li>
+            <li class="NestedListItem"><a href="history_2016.php">CAPITOLO <abbr title="Quarto">IV</abbr></a></li>
+            <li class="NestedListItem"><a href="history_eternals.php">CAPITOLO <abbr title="Quinto">V</abbr></a></li>
+          </ul>
         </li>
-        <li class="MenuBarItem"><a href="../stats.html">STATISTICHE</a></li>
-        <li class="MenuBarItem"><a href="../stats.html">CURIOSITÀ</a></li>
+        <li class="MenuBarItem"><a href="stats.php">STATISTICHE</a></li>
+        <li class="MenuBarItem"><a href="trivia.php">CURIOSITÀ</a></li>
       </ul>
       <div id="MenuUserWidget">
-
+        <?php
+          include '../SCRIPTS/header.php';
+          if(isLogged())
+            printLoggedMenuWidget(1);
+          else
+            printDefaultMenuWidget(1);
+        ?>
       </div>
     </nav>
   </header>
@@ -84,10 +85,10 @@
       Tutti i diritti riservati.<br>
       <br>
     </p>
-    <img class="imgVadidCode" src="IMAGES/valid-xhtml10.png" alt="html valido"/>
-    <img class="imgVadidCode" src="IMAGES/vcss-blue.gif" alt="css valido"/>
+    <img class="imgVadidCode" src="../IMAGES/valid-xhtml10.png" alt="html valido"/>
+    <img class="imgVadidCode" src="../IMAGES/vcss-blue.gif" alt="css valido"/>
   </footer>
-  <script type="text/javascript" src="../SCRIPTS/passwordchangepage.js"></script>
+  <script src="../SCRIPTS/passwordchangepage.js"></script>
 </body>
 
 </html>

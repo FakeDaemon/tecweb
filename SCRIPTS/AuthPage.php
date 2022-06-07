@@ -17,8 +17,11 @@ function chekUserPresence($username, $password){
         if(isset($_POST['SaveUsername']) && $_POST['SaveUsername'] === "True"){
           setcookie("username", $_POST['username'], time() + 60*60*24*365);
           $_COOKIE["username"]=$_POST['username'];
+        }else{
+          setcookie("username", "", time()-3600);
+          $_COOKIE["username"]="";
         }
-
+        
         //Creo cookie di sessionID
         //Modifico l'entries nel database per poter identificare l'utente durante la navigazione
 
