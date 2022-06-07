@@ -96,3 +96,10 @@ if(document.getElementById("username_input")){
     }
   }, true);
 }
+document.getElementById("email_input").addEventListener('input', function(){
+  document.getElementById("email_input").setCustomValidity("");
+})
+document.getElementById("email_input").addEventListener('invalid', function(){
+  document.getElementById("email_input").setCustomValidity("Formato email non corretto. Utilizzare una email valida.");
+  document.getElementById("email_input_label").classList.add("up");
+})

@@ -65,11 +65,11 @@
           <li>Può contenere uno o più numeri;</li>
           <li>Non deve contenere simboli.</li>
         </ul>
-        <label id="username_input_label" for="username_input" class="up" required>Username</label>
-        <input id="username_input" type="text" name="username" <?php if(isset($_POST['username'])) echo "value=".$_POST['username'];?> required>
+        <label id="username_input_label" for="username_input" class="up" required>Username *<span class="sr_only">Campo Richiesto</span></label>
+        <input id="username_input" type="text" name="username" title="Username Pubblico in uso nel sito" <?php if(isset($_POST['username'])) echo "value=".$_POST['username'];?> required>
 
-        <label id="email_input_label" for="email_input" class="up" required><span lang="en">Email</span></label>
-        <input id="email_input" type="email" name="email" <?php if(isset($_POST['email'])) echo "value=".$_POST['email'];?> required>
+        <label id="email_input_label" for="email_input" class="up" required><span lang="en">Email</span> * <span class="sr_only">Campo Richiesto</span></label>
+        <input id="email_input" title="Email univoca per la creazione dell'account" type="email" name="email" <?php if(isset($_POST['email'])) echo "value=".$_POST['email'];?> required>
 
         <p id="password_hints"><span lang="en">Password</span>: <span class="sr_only">Deve contenere almeno otto e massimo quindici caratteri dei quali uno deve essere un numero e uno deve essere scritto in maiuscolo</span>
         </p>
@@ -80,11 +80,11 @@
         </ul>
 
 
-        <label id="password_input_label" for="password_input" class="up" required><span lang="en">Password</span></label>
-        <input id="password_input" type="password" name="password" required>
+        <label id="password_input_label" for="password_input" class="up" required><span lang="en">Password</span> * <span class="sr_only">Campo Richiesto</span></label>
+        <input title="Password dell'account fase di creazione." id="password_input" type="password" name="password" required>
 
-        <label id="password_confirm_input_label" for="password_confirm_input" class="up" required>Conferma <span lang="en">password</span></label>
-        <input id="password_confirm_input" type="password" required>
+        <label id="password_confirm_input_label" for="password_confirm_input" class="up" required>Conferma <span lang="en">password</span> *<span class="sr_only">Campo Richiesto</span></label>
+        <input title="Conferma della password scritta precedentemente." id="password_confirm_input" type="password" required>
 
         <label class="noJs" id="radio_label" for="password_visibility">
           <input id="password_visibility" type="checkbox">
