@@ -1,0 +1,61 @@
+.main > *{
+  font-family: var(--font-family);
+}
+.main{
+  max-width: 1024px;
+  min-height: 65vh;
+  margin: 5vh auto 0 auto;
+  text-align: center;
+}
+.main > p{
+  font-size: 2em;
+  margin: 20px auto;
+}
+.main > h1.title{
+  padding: 25px;
+  font-weight: normal;
+  margin: 1% auto;
+  font-size: 1.7em;
+}
+.main > div.details > img{
+  display: inline-block;
+  width: 10%;
+  border-radius: 50%;
+  border: 1px solid red;
+}
+.main > div.chat{
+  width: 100%;
+}
+.main > div.chat > div.message{
+  margin: 20px auto;
+}
+.main > div.chat > div.message > div.userDetails{
+  display: inline-block;
+  width: 20%;
+  text-align: left;
+  vertical-align: top;
+}
+.main > div.chat > div.message > div.userDetails > img{
+  display: inline-block;
+  width: 30%;
+  border-radius: 50%;
+  border: 1px solid red;
+}
+.main > div.chat > div.message > div.userDetails > p{
+  text-align: left;
+}
+.main > div.chat > div.message > div.userDetails > p.messageDatestamp{
+  font-size: smaller;
+}
+.main > div.chat > div.message > p.text{
+  display: inline-block;
+  width: 70%;
+  text-align: left;
+  border: 1px solid red;
+  padding: 10px;
+  border-radius: 10px;
+  background: black;
+}
+.main > div.chat > div.message.ofUser > div.userDetails{
+  visibility: hidden;
+}

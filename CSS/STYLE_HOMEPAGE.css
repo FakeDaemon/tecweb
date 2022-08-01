@@ -1,7 +1,7 @@
 .main {
   max-width: 1024px;
   min-height: 65vh;
-  margin: 7vh auto 0 auto;
+  margin: 5vh auto 0 auto;
   text-align: center;
 }
 #Welcome_Messages{
@@ -9,6 +9,54 @@
   width: 60%;
   font-size: 3em;
   margin:0 auto 0 auto;
+  font-family: var(--font-family);
+}
+#SubMessage{
+  width: 90%;
+  max-width: 1024px;
+  font-size: 1.3em;
+  margin:auto;
+  font-family: var(--font-family);
+}
+.TopicList > *{
+  font-family: var(--font-family);
+}
+.TopicList > p{
+  padding: 25px;
+  margin: 1% auto;
+  font-family: var(--font-family);
+  font-size: 1.5em;
+  background: url(../ICONS/DOOMIcon.jpg) no-repeat left, linear-gradient(to right, rgb(8, 8, 8) 70%, transparent);
+  background-size: 4%, auto;
+}
+.TopicList > a{
+  display: block;
+  padding: 20px;
+  margin: 10px 0;
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 10px;
+  border:1px solid red;
+}
+.TopicList > a > p{
+  display: inline-block;
+  padding: 10px;
+  color: white;
+  vertical-align: middle;
+}
+.TopicList > a > p.state{
+  width: 10%;
+  min-width: 60px;
+  text-align: center;
+}
+.TopicList > a > p.title{
+  text-align:left;
+  width: 70%;
+  font-size: larger;
+}
+.TopicList > a > p.details{
+  width: 20%;
+  font-size: smaller;
+  text-align: left;
 }
 #home_widget{
   width: 100%;

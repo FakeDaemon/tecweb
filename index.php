@@ -45,9 +45,18 @@
     </nav>
   </header>
   <div class="main">
-    <p id="Welcome_Messages">BENVENUTI ALLA <strong>WIKI</strong> (non) <strong>OFFICIALE</strong> DI <strong lang="en">DOOM</strong></p>
-    <div id="home_widget">
-
+    <p id="Welcome_Messages">BENVENUTI ALLA <strong>WIKI</strong> DI <strong lang="en">DOOM</strong></p>
+    <p id="SubMessage">Un sito dedicato al gioco di <span lang="en">DOOM</span>, dove consultare informazioni dettagliate su tutti gli aspetti del gioco e dove appassionati di <span lang="en">DOOM</span> possono interagire tra di loro.</p>
+    <div class="TopicList">
+      <p>TOPIC ANCORA APERTI IN ATTESA DI UNA RISPOSTA</p>
+      <a href="questions.php?id=123"><p class="state">APERTO</p><p class="title">TITOLO DEL TOPIC</p><p class="details">Aperto da Nome_Utente in data DATA_APERTURA</p></a>
+      <a href="#">Vedi Tutti</a>
+    </div>
+    <div class="TopicList">
+      <p>ULTIME DOMANDE DELLA COMMUNITY</p>
+    </div>
+    <div class="TopicList">
+      <p><span lang="en">HOT TOPICS</span></p>
     </div>
   </div>
 
@@ -61,6 +70,6 @@
     <img class="imgVadidCode" src="IMAGES/valid-xhtml10.png" alt="html valido"/>
     <img class="imgVadidCode" src="IMAGES/vcss-blue.gif" alt="css valido"/>
   </footer>
-  <script type="text/javascript" src="SCRIPTS/common_jsv_functions.js"></script>
+  <script src="SCRIPTS/common_jsv_functions.js"></script>
 </body>
 </html>
