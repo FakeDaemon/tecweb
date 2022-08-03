@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-  <link href="CSS/STYLE_HOMEPAGE.css" rel="stylesheet">
+  <link href="CSS/STYLESEARCHRESULT.css" rel="stylesheet">
   <link href="CSS/STYLE_COMMON.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron" />
   <meta charset="utf-8">
@@ -46,7 +46,10 @@
   </header>
 
   <div class="main">
-
+    <p>Risultati della ricerca:</p>
+    <div class="SearchDeatils">
+      <p>Testo della ricerca</p>
+    </div>
   </div>
 
   <footer id="foot">
