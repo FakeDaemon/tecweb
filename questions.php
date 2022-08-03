@@ -45,14 +45,15 @@
     </nav>
   </header>
   <div class="main">
+    <p>Testo della domanda</p>
     <div class="details">
       <img src='/IMAGES/ProfilePics/Default.jpg' alt='Doomguy, accedi o registrati!'>
       <p class="username">USERNAME</p>
       <p class="postDate">Postato il 01/01/2000</p>
     </div>
-    <p>Chiede</p>
     <h1 class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</h1>
-    <p>Risposte</p>
+
+    <p>Tutte le risposte</p>
     <div class="chat">
       <div class="message">
         <div class="userDetails">
@@ -62,14 +63,6 @@
         </div>
         <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </div>
-      <div class="message">
-        <div class="userDetails">
-          <img src='/IMAGES/ProfilePics/Default.jpg' alt='Doomguy, accedi o registrati!'>
-          <p class="username">USERNAME</p>
-          <p class="messageDatestamp">Postato il 01/01/2000</p>
-        </div>
-        <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div>
       <div class="message ofUser">
         <div class="userDetails">
           <img src='/IMAGES/ProfilePics/Default.jpg' alt='Doomguy, accedi o registrati!'>
@@ -115,20 +108,43 @@
           <img src='/IMAGES/ProfilePics/Default.jpg' alt='Doomguy, accedi o registrati!'>
           <p class="username">USERNAME</p>
           <p class="messageDatestamp">Postato il 01/01/2000</p>
-        </div>
-        <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div><div class="message">
-        <div class="userDetails">
-          <span>
-            <p class="username">USERNAME</p>
-            <p class="messageDatestamp">Postato il 01/01/2000</p>
-          </span>
-          <img src='/IMAGES/ProfilePics/Default.jpg' alt='Doomguy, accedi o registrati!'>
         </div>
         <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </div>
 
     </div>
+
+    <a class="CurrentPage" id="FirstPage" href="questions.php?id=123&page=0">Prima Pagina</a>
+    <a class="CurrentPage" href="questions.php?id=123&page=0">Pagina Precedente</a>
+    <a class="CurrentPage" href="questions.php?id=123&page=0">1</a>
+    <a href="questions.php?id=123&page=0">2</a>
+    <a href="questions.php?id=123&page=0">3</a>
+    <span>...</span>
+    <a href="questions.php?id=123&page=0">Pagina Successiva</a>
+    <a id="LastPage" href="questions.php?id=123&page=0">Ultima Pagina</a>
+
+    <a id="AnswerPagelink" href="#">Fai una domanda alla community!</a>
+
+    <?php if(isLogged()) {?>
+
+      <form class="blocked" action="questions.php?id=123" method="post">
+        <label for="AnswerBox">
+          La tua risposta:
+        </label>
+        <textarea maxlength="30000" id="AnswerBox" name="AnswerBody" rows="8" cols="80"></textarea>
+        <input type="submit" value="INVIA">
+        <input type="reset" value="PULISCI">
+      </form>
+    <?php }else{ ?>
+      <form class="blocked" action="questions.php?id=123" method="post">
+        <label for="AnswerBox">
+          La tua risposta:
+        </label>
+        <a href="login.php">Per rispondere effettua l'accesso al sito!</a>
+        <input disabled type="submit" value="INVIA">
+        <input disabled type="reset" value="PULISCI">
+      </form>
+    <?php }?>
   </div>
 
   <footer id="foot">

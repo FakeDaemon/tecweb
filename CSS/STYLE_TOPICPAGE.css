@@ -1,5 +1,6 @@
 .main > *{
   font-family: var(--font-family);
+  text-align: left;
 }
 .main{
   max-width: 1024px;
@@ -7,15 +8,22 @@
   margin: 5vh auto 0 auto;
   text-align: center;
 }
-.main > p{
-  font-size: 2em;
-  margin: 20px auto;
+.main > p, .main > div.chat > p{
+  padding: 25px 50px;
+  margin: 1% auto;
+  font-family: var(--font-family);
+  font-size: 1.5em;
+  background: url(../ICONS/DOOMIcon.jpg) no-repeat left, linear-gradient(to right, rgb(8, 8, 8) 70%, transparent);
+  background-size: 4%, auto;
 }
 .main > h1.title{
   padding: 25px;
   font-weight: normal;
   margin: 1% auto;
-  font-size: 1.7em;
+  font-size: 1.5em;
+}
+.main > div.details{
+  text-align: left;
 }
 .main > div.details > img{
   display: inline-block;
@@ -30,13 +38,13 @@
   margin: 20px auto;
 }
 .main > div.chat > div.message > div.userDetails{
-  display: inline-block;
+  display: block;
   width: 20%;
   text-align: left;
   vertical-align: top;
 }
 .main > div.chat > div.message > div.userDetails > img{
-  display: inline-block;
+  display: block;
   width: 30%;
   border-radius: 50%;
   border: 1px solid red;
@@ -48,14 +56,102 @@
   font-size: smaller;
 }
 .main > div.chat > div.message > p.text{
-  display: inline-block;
-  width: 70%;
+  display: block;
+  width: 90%;
+  margin: 10px auto 0 20px;
   text-align: left;
   border: 1px solid red;
-  padding: 10px;
+  padding: 20px;
   border-radius: 10px;
   background: black;
 }
 .main > div.chat > div.message.ofUser > div.userDetails{
-  visibility: hidden;
+  margin-left: auto;
+}
+.main > div.chat > div.message.ofUser > div.userDetails > *{
+  margin-left: auto;
+  text-align: right;
+}
+.main > div.chat > div.message.ofUser > p{
+  margin: 10px 20px 0 auto;
+}
+.main > form{
+  margin: 20px 0;
+  text-align: center;
+}
+.main > form > label{
+  text-align: left;
+  display: block;
+  padding: 25px 50px;
+  margin: 1% auto;
+  font-family: var(--font-family);
+  font-size: 1.5em;
+  background: url(../ICONS/DOOMIcon.jpg) no-repeat left, linear-gradient(to right, rgb(8, 8, 8) 70%, transparent);
+  background-size: 4%, auto;
+}
+.main > form > textarea, .main > form >  a{
+  background: transparent;
+  border-bottom: 1px solid white;
+  width: 95%;
+  height: 30vh;
+  resize: vertical;
+  display: block;
+  margin:0 auto 0 auto;
+  font-family: inherit;
+  font-size: 1.3em;
+  color:white;
+  padding:10px;
+  border: 1px solid red;
+  margin-top: 10px;
+  border-radius: 15px 15px 0 15px;
+  background-color: rgba(0,0,0,0.6)
+}
+.main > form > input{
+  display: inline-block;
+  margin:30px auto 30px auto;
+  width: 60%;
+  background-color: black;
+  border:2px solid red;
+  border-radius: 15px;
+  color:white;
+  height: 50px;
+  font-size: 1.3em;
+}
+.main > form > input[type="reset"]{
+  width: 20%;
+}
+.main > a, .main > form > input{
+  transition: border-color .2s ease;
+}
+.main > form > input:disabled{
+  opacity: 0.4;
+}
+.main > a, .main > span {
+  text-align: center;
+  border-radius: 4px;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  background-color: rgba(0,0,0,0.5);
+  border: 1px solid red;
+  padding: 10px;
+}
+.main > a:hover, .main > a:focus, .main > form > input:not(.main > a, .main > form > input:disabled):focus, .main > form > input:not(.main > a, .main > form > input:disabled):hover{
+  border-color: yellow;
+  outline: none;
+}
+.main > a#FirstPage{
+  border-radius: 15px 0 0 15px;
+}
+.main > a#LastPage{
+  border-radius: 0 15px 15px 0;
+}
+.main > a.CurrentPage{
+  opacity: 0.4;
+  cursor: default;
+  pointer-events: none;
+}
+#AnswerPagelink{
+  margin: 20px 0;
+  font-size: larger;
 }
