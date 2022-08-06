@@ -1,0 +1,102 @@
+.main > *{
+  font-family: var(--font-family);
+}
+.main{
+  max-width: 1024px;
+  min-height: 65vh;
+  margin: 5vh auto 0 auto;
+  text-align: center;
+}
+.main > p{
+  text-align: left;
+  display: block;
+  padding: 25px 50px;
+  margin: 1% auto;
+  font-family: var(--font-family);
+  font-size: 1.5em;
+  background: url(../ICONS/DOOMIcon.jpg) no-repeat left, linear-gradient(to right, rgb(8, 8, 8) 70%, transparent);
+  background-size: 4%, auto;
+}
+.main > span > p{
+  font-size: 1.6em;
+  margin:50px auto;
+}
+.main form.searchBar > *{
+  font-family: var(--font-family);
+}
+.main form.searchBar{
+  display: block;
+  width: 100%;
+  margin: 50px auto;
+}
+.main form.searchBar label{
+  display: block;
+  font-size: 2em;
+  background-color:black;
+  border: 1px solid red;
+  border-radius: 10px;
+  width: 50%;
+  margin:auto;
+  position: relative;
+  bottom: -10px;
+}
+.main form.searchBar > input[type="text"]{
+  font-size: 2em;
+  color: white;
+  display: block;
+  margin: auto;
+  width: 80%;
+  padding: 1.5% 5%;
+  border: 1px solid red;
+  border-radius: 10px;
+  background: rgba(0,0,0,0.5);
+}
+.main form.searchBar > input[type="submit"], .main form.searchBar > input[type="reset"]{
+  width:15%;
+  border: 1px solid red;
+  border-radius: 10px;
+  background-color: rgb(0, 0, 0);
+  color:white;
+  margin: 10px auto;
+  height: 50px;
+  font-size: 1.5em;
+  display: inline-block;
+}
+.main form.searchBar > input[type="submit"]:hover, .main form.searchBar > input[type="reset"]:hover,
+.main form.searchBar > input[type="submit"]:focus, .main form.searchBar > input[type="reset"]:focus{
+  transition: border-color .2s ease;
+  border-color: yellow;
+  outline: none;
+}
+#AnswerPagelink, .main >  a{
+  text-align: center;
+  border-radius: 4px;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  background-color: rgba(0,0,0,0.5);
+  border: 1px solid red;
+  padding: 10px;
+  margin: 20px 0;
+  font-size: larger;
+
+  transition:border-color .3s ease;
+}
+.main > a#FirstPage{
+  border-radius: 15px 0 0 15px;
+}
+.main > a#LastPage{
+  border-radius: 0 15px 15px 0;
+}
+#AnswerPagelink:hover, #AnswerPagelink:focus, .main > a:focus, .main > a:hover{
+  outline: none;
+  border-color: yellow;
+}
+.main > a.CurrentPage{
+  opacity: 0.4;
+  cursor: default;
+  pointer-events: none;
+}
+.main > span > p > a{
+  color: var(--link-color);
+}
