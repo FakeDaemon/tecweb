@@ -1,7 +1,7 @@
 <?php
 
   function isLogged(){
-    return True;
+    return False;
   }
 
   function printLoggedMenuWidget($level=0){

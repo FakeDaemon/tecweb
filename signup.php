@@ -37,7 +37,7 @@
       </ul>
       <div id="MenuUserWidget">
         <?php
-        include 'SCRIPTS/header.php';
+        include 'SCRIPTS/.php/header.php';
         if(isLogged()) printLoggedMenuWidget();
         else printDefaultMenuWidget();
         ?>
@@ -48,7 +48,7 @@
     <p>ISCRIZIONE</p>
     <form id="auth_widget" action="signup.php" method="POST">
       <?php
-      include 'SCRIPTS/SignUpPage.php';
+      include 'SCRIPTS/.php/SignUpPage.php';
       PerformSignUp();
       if(isset($_GET["msg"]) && $_GET["msg"]=="accountCreated"){
         ?>
@@ -107,6 +107,6 @@
     <img class="imgVadidCode" src="IMAGES/valid-xhtml10.png" alt="html valido"/>
     <img class="imgVadidCode" src="IMAGES/vcss-blue.gif" alt="css valido"/>
   </footer>
-  <script type="text/javascript" src="SCRIPTS/signuppage.js"></script>
+  <script type="text/javascript" src="SCRIPTS/.js/signuppage.js"></script>
 </body>
 </html>

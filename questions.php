@@ -157,6 +157,6 @@
     <img class="imgVadidCode" src="IMAGES/valid-xhtml10.png" alt="html valido"/>
     <img class="imgVadidCode" src="IMAGES/vcss-blue.gif" alt="css valido"/>
   </footer>
-  <script src="SCRIPTS/common_jsv_functions.js"></script>
+  <script src="SCRIPTS/.js/common_jsv_functions.js"></script>
 </body>
 </html>

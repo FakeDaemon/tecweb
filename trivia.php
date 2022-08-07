@@ -43,7 +43,7 @@
           </ul>
           <div id="MenuUserWidget">
             <?php
-              include 'SCRIPTS/header.php';
+              include 'SCRIPTS/.php/header.php';
               if(isLogged())
                 printLoggedMenuWidget();
               else

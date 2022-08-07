@@ -1,13 +1,20 @@
 <?php
-define('DB_SERVER', 'localhost');
-define('DB_USERNAME', 'root');
-define('DB_PASSWORD', '');
-define('DB_NAME', 'demo');
+$err = "true";
+$ini_array = parse_ini_file('CNFG/CNFGS.ini', true);
+if($ini_array){
+  $err = "false";
+  $servername = $ini_array['Dbcredentials']['servername'];
+  $username = $ini_array['Dbcredentials']['username'];
+  $password = $ini_array['Dbcredentials']['password'];
 
-$link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
-
-if($link === false){
-    //print error page;
-    die("ERROR: Could not connect. " . mysqli_connect_error());
+  // Create connection
+  $conn = new mysqli($servername, $username, $password);
+  // Check connection
+  if ($conn->connect_error) {
+    $err = "true";
+    echo $conn->connect_error;
+    return;
+  }
+  $conn->set_charset('utf8mb4');
 }
 ?>

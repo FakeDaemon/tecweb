@@ -11,7 +11,6 @@
   <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano, Angeloni Alberto"/>
 </head>
 <body>
-  <?php include 'SCRIPTS/.php/header.php'; ?>
   <header>
     <h1 id="logo">DOOM WIKI</h1>
 
@@ -36,10 +35,11 @@
       </ul>
       <div id="MenuUserWidget">
         <?php
-          if(isLogged())
-            printLoggedMenuWidget();
-          else
-            printDefaultMenuWidget();
+        include 'SCRIPTS/.php/header.php';
+        if(isLogged())
+        printLoggedMenuWidget();
+        else
+        printDefaultMenuWidget();
         ?>
       </div>
     </nav>

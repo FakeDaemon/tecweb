@@ -41,6 +41,8 @@ function isFree($email){
   return True;
 }
 function createAccount($username, $psw, $email){
+  require 'database_connection.php';
+  var_dump($conn);
   //Esegue una query di inserimento nel database con codice TBD per email di Conferma
   //Invia una mail di conferma con link per confermare l'account TBD
   //Pagina php che vuole due parametri ad esempio nome utente e 10 caratteri della password appena creata che cambia lo stato dell'utente da NonEsistente a Verificato.
@@ -54,7 +56,7 @@ function PerformSignUp(){
           $psw = password_hash($_POST['password'], PASSWORD_ARGON2I);
           $username = $_POST['username'];
           createAccount($username, $psw, $_POST['email']);
-          header("location: signup.php?msg=accountCreated");
+          // header("location: signup.php?msg=accountCreated");
         }else printMailError();
       }
     }
