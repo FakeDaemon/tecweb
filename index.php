@@ -11,7 +11,7 @@
   <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano, Angeloni Alberto"/>
 </head>
 <body>
-  <?php include 'SCRIPTS/header.php'; ?>
+  <?php include 'SCRIPTS/.php/header.php'; ?>
   <header>
     <h1 id="logo">DOOM WIKI</h1>
 

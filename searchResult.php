@@ -13,8 +13,8 @@
 <body>
   <?php
   $GLOBALS['MorePage'] = false;
-  include 'SCRIPTS/header.php';
-  include 'SCRIPTS/SearchPageFunctions.php';
+  include 'SCRIPTS/.php/header.php';
+  include 'SCRIPTS/.php/SearchPageFunctions.php';
   ?>
   <header>
     <h1 id="logo">DOOM WIKI</h1>
