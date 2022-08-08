@@ -11,10 +11,8 @@
   <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano , Angeloni Alberto"/>
 </head>
 <body>
-  <?php include 'SCRIPTS/.php/header.php'; ?>
   <header>
     <h1 id="logo">DOOM WIKI</h1>
-
     <nav id="NavBar">
       <ul id="MenuBar">
         <li class="MenuBarItem" lang="en"><a href="/">HOMEPAGE</a></li>
@@ -128,7 +126,7 @@
 
     <a id="AnswerPagelink" href="#">Fai una domanda alla community!</a>
 
-    <?php if(isLogged()) {?>
+    <?php if($GLOBALS['logState']) {?>
 
       <form class="blocked" action="questions.php?id=123" method="post">
         <label for="AnswerBox">

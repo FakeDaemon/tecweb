@@ -13,7 +13,7 @@
 <body>
   <?php
   $GLOBALS['MorePage'] = false;
-  include 'SCRIPTS/.php/header.php';
+  $GLOBALS['logState'] = false;
   include 'SCRIPTS/.php/SearchPageFunctions.php';
   ?>
   <header>
@@ -40,7 +40,6 @@
       </ul>
       <div id="MenuUserWidget">
         <?php
-        $GLOBALS['logState'] = false;
         include 'SCRIPTS/.php/header.php';
         isLogged();
         if($GLOBALS['logState'])

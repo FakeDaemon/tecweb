@@ -15,6 +15,14 @@
 </head>
 
 <body>
+  <?php
+  include 'SCRIPTS/.php/accountManagmentScripts.php';
+  include 'SCRIPTS/.php/header.php';
+
+  $GLOBALS['logState'];
+
+  isLogged();
+  ?>
   <header>
     <h1 id="logo">DOOM WIKI</h1>
 
@@ -39,12 +47,11 @@
       </ul>
       <div id="MenuUserWidget">
         <?php
-          include 'SCRIPTS/.php/header.php';
-          isLogged();
-          if($GLOBALS['logState'])
-            printLoggedMenuWidget();
-          else
-            printDefaultMenuWidget();
+
+        if($GLOBALS['logState'])
+        printLoggedMenuWidget();
+        else
+        printDefaultMenuWidget();
         ?>
       </div>
     </nav>
@@ -64,7 +71,7 @@
 
       <hr>
 
-      <a href="account-managment/log-out.php">Chiudi sessione.</a>
+      <a href="account-managment.php?act=closeSess">Chiudi sessione.</a>
       <a class="noPlease" href="account-managment/delete-account.php">Elimina account.</a>
       <span><a class="smaller" href="help.php">Serve aiuto?</a></span>
 

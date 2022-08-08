@@ -46,7 +46,7 @@ function PerformAuth(){
       setcookie("SessionID", $SessID, time() + 60*60*24*365);
       $_COOKIE["SessionID"]=$SessID;
 
-      // header("location: /");
+      header("location: /");
       break;
       case 'noUserFound':
       case 'wrongPassword':
