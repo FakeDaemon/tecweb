@@ -35,8 +35,10 @@
       </ul>
       <div id="MenuUserWidget">
         <?php
+        $GLOBALS['logState'] = false;
         include 'SCRIPTS/.php/header.php';
-        if(isLogged())
+        isLogged();
+        if($GLOBALS['logState'])
         printLoggedMenuWidget();
         else
         printDefaultMenuWidget();

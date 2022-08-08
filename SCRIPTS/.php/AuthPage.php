@@ -4,6 +4,7 @@ function printPasswordError(){
   echo "<p class='ErrorMessage'>Credenziali errate.</p>";
   echo "</div>";
 }
+
 function checkUser($email, $password){
   require 'database_connection.php';
   $ret = "userFound";
@@ -18,9 +19,9 @@ function checkUser($email, $password){
   }else if($result->num_rows > 0){
     $user = $result->fetch_assoc();
     if(password_verify($password, $user['psw']))
-      $ret = "userFound";
+    $ret = "userFound";
     else
-      $ret = "wrongPassword";
+    $ret = "wrongPassword";
   }else{
     $ret = "noUserFound";
   }
@@ -40,7 +41,12 @@ function PerformAuth(){
     }
     switch (checkUser($_POST['email'], $_POST['password'])) {
       case 'userFound':
-      //Creo il sessionID cookie
+      $SessID = password_hash(strval(getIPAddr()).strval($_SERVER['HTTP_USER_AGENT']), PASSWORD_DEFAULT);
+
+      setcookie("SessionID", $SessID, time() + 60*60*24*365);
+      $_COOKIE["SessionID"]=$SessID;
+
+      // header("location: /");
       break;
       case 'noUserFound':
       case 'wrongPassword':
