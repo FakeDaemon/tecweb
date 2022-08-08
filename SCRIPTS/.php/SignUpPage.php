@@ -40,7 +40,7 @@ function isFree($email){
   //returna True se non è presente
   return True;
 }
-function createAccount($username, $psw, $email){
+function createAccount($username, $passw, $email){
   require 'database_connection.php';
   $ret = true;
 
@@ -48,7 +48,7 @@ function createAccount($username, $psw, $email){
 
   $stmt = $conn->prepare("INSERT INTO DoomWiki.users(user_name, psw, lst_psw_change, sign_in_date, fst_mail, role) VALUES(?, ?, ?, ?, ?, 'default');");
 
-  $stmt->bind_param("sssss", $username, $psw, $currentDate, $currentDate, $email);
+  $stmt->bind_param("sssss", $username, $passw, $currentDate, $currentDate, $email);
   $stmt->execute();
 
   if($conn->connect_error) $ret = false;

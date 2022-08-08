@@ -18,11 +18,13 @@ function checkUser($email, $password){
     $ret = "errorState";
   }else if($result->num_rows > 0){
     $user = $result->fetch_assoc();
-    if(password_verify($password, $user['psw']))
-    $ret = "userFound";
-    else
-    $ret = "wrongPassword";
+    if(password_verify($password, $user['psw'])){
+      $ret = "userFound";
+    }else{
+      $ret = "wrongPassword";
+    }
   }else{
+    echo "<p>CIAO</p>";
     $ret = "noUserFound";
   }
 
@@ -43,7 +45,7 @@ function PerformAuth(){
       case 'userFound':
       $SessID = password_hash(strval(getIPAddr()).strval($_SERVER['HTTP_USER_AGENT']), PASSWORD_DEFAULT);
 
-      setcookie("SessionID", $SessID, time() + 60*60*24*365);
+      setcookie("SessionID", $_POST['email']."_".$SessID, time() + 60*60*24*365);
       $_COOKIE["SessionID"]=$SessID;
 
       header("location: /");

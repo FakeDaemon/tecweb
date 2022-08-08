@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-  <link href="CSS/STYLE_HOMEPAGE.css" rel="stylesheet">
+  <link href="CSS/STYLE_QUESTIONEDITOR.css" rel="stylesheet">
   <link href="CSS/STYLE_COMMON.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron" />
   <meta charset="utf-8">
   <title> Home </title>
   <meta name="keywords" content="DOOM"/>
   <meta name="description" content="DOOM Wiki"/>
-  <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano, Angeloni Alberto"/>
+  <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano , Angeloni Alberto"/>
 </head>
 <body>
   <?php
-  include 'SCRIPTS/.php/indexFunctions.php';
   include 'SCRIPTS/.php/header.php';
+  include 'SCRIPTS/.php/questionEditorScripts.php';
   $GLOBALS['logState'] = false;
+  $state = createTopic();
   isLogged();
   ?>
   <header>
     <h1 id="logo">DOOM WIKI</h1>
-
     <nav id="NavBar">
       <ul id="MenuBar">
-        <li class="MenuBarItem CurrentLocation" lang="en">HOMEPAGE</li>
+        <li class="MenuBarItem" lang="en"><a href="/">HOMEPAGE</a></li>
         <li class="MenuBarItemNestedList">
           <label id="NestedListLbl" for="NestedListBtn">
             TRAMA
@@ -41,7 +41,6 @@
       </ul>
       <div id="MenuUserWidget">
         <?php
-
         if($GLOBALS['logState'])
         printLoggedMenuWidget();
         else
@@ -50,28 +49,33 @@
       </div>
     </nav>
   </header>
-  <div class="main">
-    <p id="Welcome_Messages">BENVENUTI ALLA <strong lang="en">WIKI</strong> DI <strong lang="en">DOOM</strong></p>
-    <p id="SubMessage">Un sito dedicato al gioco di <span lang="en">DOOM</span>, dove consultare informazioni dettagliate su tutti gli aspetti del gioco e dove appassionati di <span lang="en">DOOM</span> possono interagire tra di loro.</p>
-
-    <form class="searchBar" action="searchResult.php" method="get">
-      <label for="SearchBar">CERCA NEL SITO</label>
-      <input id="SearchBar" type="text" name="SearchTerms" required>
-      <input type="submit" value="CERCA">
+  <?php if($state === "okay"){?>
+    <div class="main">
+      <span>
+        <h1>Domanda inviata!</h1>
+        <p>La tua domanda è stata inviata ai nostri moderatori, non appena verrà approvata riceverai una <span lang="en">email</span> di conferma. Grazie per il tuo contributo.</p>
+        <a href="/">Continua la navigazione!</a>
+      </span>
+    </div>
+  <?php }else if($state === "error"){?>
+    <div class="main">
+      <span>
+        <h1>Errore del sistema.</h1>
+        <p>Qualcosa è andato storto durante l'invio della tua domanda. Probabilmente stiamo già lavorando per risolvere il problema, il tuo prossimo tentativo avrà sicuramente successo, magari tenta tra qualche decina di minuti.</p>
+        <a href="help.php">Segnala il problema!</a>
+        <a href="/">Continua la navigazione!</a>
+      </span>
+    </div>
+  <?php }else{ ?>
+    <form class="main" method="post" action="questionEditor.php">
+      <label for="Title">TITOLO DELLA DOMANDA</label>
+      <input id="Title" type="text" name="QuestionTitle" required>
+      <label for="Body">CORPO DELLA DOMANDA</label>
+      <textarea id="Body" name="QuestionBody" rows="8" cols="80" required></textarea>
+      <input type="submit" value="POSTA LA DOMANDA">
       <input type="reset" value="PULISCI">
     </form>
-
-    <div class="TopicList">
-      <p>ULTIME DOMANDE DELLA COMMUNITY</p>
-      <?php printLastTopics(); ?>
-      
-      <a href="#">Vedi Tutti</a>
-    </div>
-    <div class="TopicList">
-      <?php printHotTopics(); ?>
-      <p>DOMANDE PIÙ DISCUSSE</p>
-    </div>
-  </div>
+  <?php } ?>
 
   <footer id="foot">
     <p>

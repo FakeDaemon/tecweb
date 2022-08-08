@@ -14,15 +14,22 @@ function getIPAddr() {
 
 function isLogged(){
   $SessID = strval(getIPAddr()).strval($_SERVER['HTTP_USER_AGENT']);
-  if(isset($_COOKIE["SessionID"]) && password_verify($SessID, $_COOKIE["SessionID"])) {
+  if(isset($_COOKIE["SessionID"]) && password_verify($SessID, explode('_',$_COOKIE["SessionID"])[1])) {
     $GLOBALS["logState"] = true;
   }
 }
 
 function printLoggedMenuWidget($level=0){
   //Uso il cookie con il session ID per recuperare l'username
+  require 'database_connection.php';
+  $stmt = $conn->prepare("SELECT user_name FROM DoomWiki.users WHERE fst_mail = ?");
+  $stmt->bind_param('s', explode('_',$_COOKIE["SessionID"])[0]);
+  $stmt -> execute();
+  $result = $stmt -> get_result();
+  $user = $result->fetch_assoc();
+  $conn->close();
   echo "<div>";
-  echo "<p>USERNAME</p>";
+  echo "<p>".$user['user_name']."</p>";
   echo "<a href='";
   for($i=0; $i<$level; $i++) echo "../";
   echo "account-managment.php'>Impostazioni</a>";

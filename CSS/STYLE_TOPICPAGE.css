@@ -22,6 +22,12 @@
   margin: 1% auto;
   font-size: 1.5em;
 }
+.main > h2{
+  padding: 0 25px 25px 25px;
+  font-weight: normal;
+  margin: 0 auto;
+  font-size: 1.1em;
+}
 .main > div.details{
   text-align: left;
 }

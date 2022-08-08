@@ -52,7 +52,8 @@
       <p class="username">USERNAME</p>
       <p class="postDate">Postato il 01/01/2000</p>
     </div>
-    <h1 class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</h1>
+    <h1 class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h1>
+    <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h2>
 
     <p>Tutte le risposte</p>
     <div class="chat">
@@ -124,7 +125,11 @@
     <a href="questions.php?id=123&page=0">Pagina Successiva</a>
     <a id="LastPage" href="questions.php?id=123&page=0">Ultima Pagina</a>
 
-    <a id="AnswerPagelink" href="#">Fai una domanda alla community!</a>
+    <?php
+    if($GLOBALS['logState'])echo '<a id="AnswerPagelink" href="questionEditor.php">Fai una domanda alla community!</a>'; 
+    else echo '<a id="AnswerPagelink" href="login.php">Fai una domanda alla community!</a>';
+    ?>
+
 
     <?php if($GLOBALS['logState']) {?>
 
