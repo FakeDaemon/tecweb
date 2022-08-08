@@ -11,7 +11,6 @@
   <meta name="description" content="DOOM Wiki"/>
   <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano , Angeloni Alberto"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="SCRIPTS/css_modifier.js"></script>
 </head>
 
 <body>
@@ -51,12 +50,12 @@
     <p>ACCESSO</p>
     <form id="auth_widget" method="POST" action="login.php">
       <?php
-      include 'SCRIPTS/AuthPage.php';
+      include 'SCRIPTS/.php/AuthPage.php';
       PerformAuth();
       ?>
-      <label id="username_input_label" for="username_input" class="up"><span lang="en">Username</span></label>
-      <input id="username_input" type="text" name="username"  <?php if(isset($_COOKIE['username']) && $_COOKIE['username']!="")
-      echo "value='".$_COOKIE['username']."'";
+      <label id="email_input_label" for="email_input" class="up"><span lang="en">Email</span></label>
+      <input id="email_input" type="text" name="email"  <?php if(isset($_COOKIE['email']) && $_COOKIE['email']!="")
+      echo "value='".$_COOKIE['email']."'";
       else
       echo "value=''"?> required>
 
@@ -69,8 +68,8 @@
       </label>
 
       <label class="radio_label" for="save_username">
-        <input id="save_username" type="checkbox" name="SaveUsername" <?php if(isset($_COOKIE['username']) && $_COOKIE['username']!="") echo "checked"; ?> value="True">
-        Salva username.
+        <input id="save_email" type="checkbox" name="SaveEmail" <?php if(isset($_COOKIE['email']) && $_COOKIE['email']!="") echo "checked"; ?> value="True">
+        Salva email.
       </label>
 
       <input type="submit" value="ACCEDI">
@@ -94,7 +93,7 @@
     <img class="imgVadidCode" src="IMAGES/valid-xhtml10.png" alt="html valido"/>
     <img class="imgVadidCode" src="IMAGES/vcss-blue.gif" alt="css valido"/>
   </footer>
-  <script type="text/javascript" src="SCRIPTS/authpage.js"></script>
+  <script type="text/javascript" src="SCRIPTS/.js/authpage.js"></script>
 </body>
 
 </html>

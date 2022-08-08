@@ -56,6 +56,12 @@
         <p>Verificalo tramite il link che ti è stato inviato nell'indirizzo <span lang="en">email</span> inserito!</p>
         <a href="/">Torna alla home page.</a>
         <?php
+      }else if(isset($_GET["msg"]) && $_GET["msg"]=="errorOnAccountCreation"){
+        ?>
+        <p id="ConfirmMessage">Errore durante la creazione dell'account.</p>
+        <p>C'è stato un errore nei nostri sistemi durante la creazione dell'account. Probabilmente stiamo già lavorando per risolvere il problema, la prossima volta che proverai tutto funzionerà correttamente.</p>
+        <a href="/">Torna alla home page.</a>
+        <?php
       }else{
         ?>
         <p id="username_hints"><span lang="en">Username</span>: <span class="sr_only">Deve essere formato da una sola parola, può contenere uno o più numeri ma non deve contenere simboli.</span>
