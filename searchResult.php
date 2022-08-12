@@ -58,7 +58,7 @@
       <input type="submit" value="CERCA">
       <input type="reset" value="PULISCI">
     </form>
-    <a id="AnswerPagelink" href="#">Fai una domanda alla community!</a>
+    <a id="AnswerPagelink" href="questionEditor.php">Fai una domanda alla community!</a>
     <span>
       <p class="SearchTerms">"&nbsp; <?php echo $_GET["SearchTerms"];?> &nbsp;"</p>
     </span>

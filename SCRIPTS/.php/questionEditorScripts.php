@@ -1,4 +1,7 @@
 <?php
+ini_set('display_errors', '1');
+ini_set('display_startup_errors', '1');
+error_reporting(E_ALL);
 function createTopic(){
   $ret = "okay";
   if(isset($_COOKIE['SessionID']) && count(explode('_', $_COOKIE['SessionID']))===2){
@@ -12,12 +15,12 @@ function createTopic(){
         $result = $stmt->get_result();
 
         if($result->num_rows == 0){
-          $stmt = $conn->prepare("INSERT INTO DoomWiki.topics(title, description, creation_date, email) VALUES(?, ?, ?, ?, ?);");
+          $stmt = $conn->prepare("INSERT INTO DoomWiki.topics(title, description, creation_date, email) VALUES(?, ?, ?, ?);");
           $title = htmlspecialchars($_POST['QuestionTitle']);
           $description = htmlspecialchars($_POST['QuestionBody']);
           $creationDate = date("Y-m-d H:i:s");
           $email = explode('_', $_COOKIE['SessionID'])[0];
-          $stmt->bind_param("sssss", $title, $description, $creationDate, $email);
+          $stmt->bind_param("ssss", $title, $description, $creationDate, $email);
           $stmt->execute();
           if($conn->connect_error){
             $ret = "error";
