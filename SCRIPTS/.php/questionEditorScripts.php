@@ -12,12 +12,12 @@ function createTopic(){
         $result = $stmt->get_result();
 
         if($result->num_rows == 0){
-          $stmt = $conn->prepare("INSERT INTO DoomWiki.topics(title, description, creation_date, state, email) VALUES(?, ?, ?, ?, ?);");
+          $stmt = $conn->prepare("INSERT INTO DoomWiki.topics(title, description, creation_date, email) VALUES(?, ?, ?, ?, ?);");
           $title = htmlspecialchars($_POST['QuestionTitle']);
           $description = htmlspecialchars($_POST['QuestionBody']);
           $creationDate = date("Y-m-d H:i:s");
           $email = explode('_', $_COOKIE['SessionID'])[0];
-          $stmt->bind_param("sssss", $title, $description, $creationDate, $state, $email);
+          $stmt->bind_param("sssss", $title, $description, $creationDate, $email);
           $stmt->execute();
           if($conn->connect_error){
             $ret = "error";
