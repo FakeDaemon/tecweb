@@ -64,7 +64,8 @@ function PerformSignUp(){
           $psw = password_hash($_POST['password'], PASSWORD_ARGON2I);
           $username = htmlspecialchars($_POST['username']);
           if(createAccount($username, $psw, $_POST['email']))
-            header("location: signup.php?msg=accountCreated");
+            echo $psw;
+            // header("location: signup.php?msg=accountCreated");
           else
             header("location: signup.php?msg=errorOnAccountCreation");
         }else printMailError();

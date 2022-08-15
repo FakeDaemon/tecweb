@@ -24,7 +24,6 @@ function checkUser($email, $password){
       $ret = "wrongPassword";
     }
   }else{
-    echo "<p>CIAO</p>";
     $ret = "noUserFound";
   }
 

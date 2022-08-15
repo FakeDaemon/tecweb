@@ -14,10 +14,8 @@ function printResult($row){
   echo '<a href="questions.php?id='.$row['id'].'"><p class="title">'.$row['title'].'</p><p class="details">Aperto da '.$row['user_name'].' in data '.$row['creation_date'].'</p></a>';
 }
 function printSearchResult($SearchTerms){
-  //si connette al data base, fa una ricerca nel database, e printa tutti i topic il cui titolo contiene
-  //Se non c'è nessun risultato lo comunica
   require 'database_connection.php';
-  if($conn->connect_error){//errore di connessione
+  if($conn->connect_error){
 
   }else{
     $target = inputClean(htmlentities($SearchTerms));
@@ -28,8 +26,11 @@ function printSearchResult($SearchTerms){
       if($resultCount<10){
         foreach ($target as $word){
           if(strpos($row['title'], $word) !== false){
-            if($resultCount < 10) printResult($row);
-            $resultCount+=1;
+            if($resultCount < 10) {
+              printResult($row);
+              $resultCount+=1;
+              break;
+            }
           }
         }
       }
