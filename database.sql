@@ -20,3 +20,6 @@ CREATE TABLE topics(
      email varchar(256),
      FOREIGN KEY(email) REFERENCES users(fst_mail)
 );
+INSERT INTO users(fst_mail, user_name, psw, lst_psw_change, sign_in_date, scnd_mail, role, profile_pic) VALUES(
+  'root', 'SiteAdmin', '$argon2i$v=19$m=65536,t=4,p=1$bTBSMzdJallHTjRXWFUwWA$+tlyxVCKSzpRLKSeR66rcY/3NxYb1vRbcXnXDcm6e0o', '2022-01-01', '2022-01-01', NULL, 'admin', 1
+);

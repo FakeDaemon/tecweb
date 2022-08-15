@@ -45,7 +45,7 @@ function PerformAuth(){
       case 'userFound':
       $SessID = password_hash(strval(getIPAddr()).strval($_SERVER['HTTP_USER_AGENT']), PASSWORD_DEFAULT);
 
-      setcookie("SessionID", $_POST['email']."_".$SessID, time() + 60*60*24*365);
+      setcookie("SessionID", $_POST['email']."_".$SessID, time() + 60*60*2);
       $_COOKIE["SessionID"]=$SessID;
 
       header("location: /");

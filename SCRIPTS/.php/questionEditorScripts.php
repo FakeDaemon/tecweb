@@ -20,7 +20,7 @@ function createTopic(){
           $description = htmlspecialchars($_POST['QuestionBody']);
           $creationDate = date("Y-m-d H:i:s");
           $email = explode('_', $_COOKIE['SessionID'])[0];
-          $stmt->bind_param("ssss", $title, $description, $creationDate, $email);
+          $stmt->bind_param("ss ss", $title, $description, $creationDate, $email);
           $stmt->execute();
           if($conn->connect_error){
             $ret = "error";
