@@ -63,17 +63,13 @@
       <p class="SearchTerms">"&nbsp; <?php echo $_GET["SearchTerms"];?> &nbsp;"</p>
     </span>
     <p>Risultati della ricerca:</p>
-    <span>
+    <span class="TopicList">
       <?php printSearchResult($_GET["SearchTerms"]); ?>
     </span>
     <?php
     if($GLOBALS['MorePage']){ ?>
       <a class="CurrentPage" id="FirstPage" href="questions.php?id=123&page=0">Prima Pagina</a>
       <a class="CurrentPage" href="questions.php?id=123&page=0">Pagina Precedente</a>
-      <a class="CurrentPage" href="questions.php?id=123&page=0">1</a>
-      <a href="questions.php?id=123&page=0">2</a>
-      <a href="questions.php?id=123&page=0">3</a>
-      <span>...</span>
       <a href="questions.php?id=123&page=0">Pagina Successiva</a>
       <a id="LastPage" href="questions.php?id=123&page=0">Ultima Pagina</a>
     <?php } ?>

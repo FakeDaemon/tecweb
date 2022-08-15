@@ -11,6 +11,12 @@
   <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano , Angeloni Alberto"/>
 </head>
 <body>
+  <?php
+  include 'SCRIPTS/.php/header.php';
+  include 'SCRIPTS/.php/questionPageScripts.php';
+  $GLOBALS['logState'] = false;
+  isLogged();
+  ?>
   <header>
     <h1 id="logo">DOOM WIKI</h1>
     <nav id="NavBar">
@@ -34,9 +40,6 @@
       </ul>
       <div id="MenuUserWidget">
         <?php
-        $GLOBALS['logState'] = false;
-        include 'SCRIPTS/.php/header.php';
-        isLogged();
         if($GLOBALS['logState'])
         printLoggedMenuWidget();
         else
@@ -46,6 +49,7 @@
     </nav>
   </header>
   <div class="main">
+    <?php printQuestion($_GET['id'], isset($_GET['page']) ? $_GET['page'] : NULL); ?>
     <p>Testo della domanda</p>
     <div class="details">
       <img src='/IMAGES/ProfilePics/Default.jpg' alt='Doomguy, accedi o registrati!'>
@@ -126,7 +130,7 @@
     <a id="LastPage" href="questions.php?id=123&page=0">Ultima Pagina</a>
 
     <?php
-    if($GLOBALS['logState'])echo '<a id="AnswerPagelink" href="questionEditor.php">Fai una domanda alla community!</a>'; 
+    if($GLOBALS['logState'])echo '<a id="AnswerPagelink" href="questionEditor.php">Fai una domanda alla community!</a>';
     else echo '<a id="AnswerPagelink" href="login.php">Fai una domanda alla community!</a>';
     ?>
 
