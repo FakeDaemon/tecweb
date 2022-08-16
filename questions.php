@@ -16,6 +16,7 @@
   include 'SCRIPTS/.php/questionPageScripts.php';
   $GLOBALS['logState'] = false;
   isLogged();
+  sendMessage($_GET['id']);
   ?>
   <header>
     <h1 id="logo">DOOM WIKI</h1>
@@ -49,17 +50,19 @@
     </nav>
   </header>
   <div class="main">
-    <?php printQuestion($_GET['id'], isset($_GET['page']) ? $_GET['page'] : 0); ?>
-
     <?php
-    if($GLOBALS['logState'])echo '<a id="AnswerPagelink" href="questionEditor.php">Fai una domanda alla community!</a>';
-    else echo '<a id="AnswerPagelink" href="login.php">Fai una domanda alla community!</a>';
+    printQuestion($_GET['id'], isset($_GET['page']) ? $_GET['page'] : 0);
+    if($GLOBALS['logState']){
+      echo '<a id="AnswerPagelink" href="questionEditor.php">Fai una domanda alla community!</a>';
+    }else{
+      echo '<a id="AnswerPagelink" href="login.php">Fai una domanda alla community!</a>';
+    }
+    echo '<br><a id="HelpPagelink" href="help.php?topicID='.$_GET['id'].'">Qualcosa di strano? Fai una seganalazione!</a>';
     ?>
 
 
     <?php if($GLOBALS['logState']) {?>
-
-      <form class="blocked" action="questions.php?id=123" method="post">
+      <form action="questions.php?id=<?php echo $_GET['id']; ?>" method="post">
         <label for="AnswerBox">
           La tua risposta:
         </label>
@@ -68,7 +71,7 @@
         <input type="reset" value="PULISCI">
       </form>
     <?php }else{ ?>
-      <form class="blocked" action="questions.php?id=123" method="post">
+      <form class="blocked" action="questions.php?id=<?php echo $_GET['id']; ?>" method="post">
         <label for="AnswerBox">
           La tua risposta:
         </label>
@@ -89,6 +92,5 @@
     <img class="imgVadidCode" src="IMAGES/valid-xhtml10.png" alt="html valido"/>
     <img class="imgVadidCode" src="IMAGES/vcss-blue.gif" alt="css valido"/>
   </footer>
-  <script src="SCRIPTS/.js/common_jsv_functions.js"></script>
 </body>
 </html>

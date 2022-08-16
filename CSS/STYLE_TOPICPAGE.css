@@ -81,6 +81,10 @@
 .main > div.chat > div.message.ofUser > p{
   margin: 10px 20px 0 auto;
 }
+.main > div.chat > div.message.ofUser > p > a,
+.main > div.chat > div.message > p > a{
+  color:yellow;
+}
 .main > form{
   margin: 20px 0;
   text-align: center;
@@ -159,6 +163,11 @@
   pointer-events: none;
 }
 #AnswerPagelink{
-  margin: 20px 0;
+  margin: 5px auto 0 auto;
+}
+#HelpPagelink{
+  margin: 5px auto;
+}
+#AnswerPagelink, #HelpPagelink{
   font-size: larger;
 }

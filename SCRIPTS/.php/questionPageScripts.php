@@ -1,4 +1,19 @@
 <?php
+function sendMessage($QuestionID){
+  if(isset($_POST['AnswerBody']) && $GLOBALS['logState']){
+    require 'database_connection.php';
+    if($conn->connect_error){
+      //errore di connessione
+    }else{
+      $stmt = $conn->prepare("INSERT INTO DoomWiki.comments(commentBody, writeDate, topicID, email) VALUES(?, ?, ?, ?)");
+      $commentBody = $_POST['AnswerBody'];
+      $currentDate = date("Y-m-d H:i:s");
+      $stmt->bind_param("ssis", htmlentities($commentBody), $currentDate, $QuestionID, explode('_',$_COOKIE["SessionID"])[0]);
+      $stmt->execute();
+      header("location: questions.php?id=".$QuestionID);
+    }
+  }
+}
 function printQuestion($QuestionID, $PageCount){
   require 'database_connection.php';
   $stmt = $conn->prepare("SELECT * FROM DoomWiki.topics AS t JOIN DoomWiki.users AS u ON t.email = u.fst_mail WHERE t.id = ? ;");
@@ -26,11 +41,25 @@ function printQuestion($QuestionID, $PageCount){
   $stmt->execute();
   $result = $stmt->get_result();
 
+  if($PageCount > intval($result->num_rows/10)){
+    echo "<div class='message'>";
+    echo "<div class='userDetails'>";
+    echo "<img src='/IMAGES/ProfilePics/Default.jpg' alt='Doomguy, accedi o registrati!'>";
+    echo "<p class='username'>DoomWiki.it</p>";
+    echo "<p class='messageDatestamp'>In questo momento</p>";
+    echo "</div>";
+    echo "<p class='text'>Qualcuno si diverte a cambiare parametri nell'URL del sito. Dai, valà torna alla <a href='questions.php?id=".$QuestionID."'>prima pagina</a></p>";
+    echo "</div>";
+  }
+
   $commentCount = $PageCount*10;
   $a=0;
   while ($comment = $result->fetch_assoc()) {
     if($a>=$commentCount && $commentCount<10*($PageCount+1)){
-      echo "<div class='message'>";
+      echo "<div class='message";
+      if($GLOBALS['logState'] && $comment['email'] === explode('_',$_COOKIE["SessionID"])[0]) //utente loggato
+      echo " ofUser";
+      echo "'>";
       echo "<div class='userDetails'>";
       echo "<img src='/IMAGES/ProfilePics/Default.jpg' alt='Doomguy, accedi o registrati!'>";
       echo "<p class='username'>".$comment['user_name']."</p>";
@@ -44,22 +73,24 @@ function printQuestion($QuestionID, $PageCount){
   }
   echo "</div>";
 
-  if($commentCount!==0 && ($result->num_rows > 10*($PageCount+1))){
+  if($commentCount!==0 && ($result->num_rows > 10*($PageCount))){
     echo "<a class='";
     if($PageCount == 0) echo "CurrentPage";
-    else echo '';
     echo "' id='FirstPage' href='questions.php?id=".$QuestionID."'>Prima Pagina</a>";
     echo "<a class='";
     if($PageCount == 0) echo "CurrentPage";
-    else echo '';
     echo "' href='questions.php?id=".$QuestionID."&page=";
     if($PageCount == 0) echo $PageCount;
     else echo $PageCount-1;
     echo "'>Pagina Precedente</a>";
-    echo "<a href='questions.php?id=".$QuestionID."&page=";
+    echo "<a class='";
+    if($PageCount == intval($result->num_rows/10)) echo "CurrentPage";
+    echo "' href='questions.php?id=".$QuestionID."&page=";
     echo $PageCount+1;
     echo "'>Pagina Successiva</a>";
-    echo "<a id='LastPage' href='questions.php?id=".$QuestionID."'>Ultima Pagina</a>";
+    echo "<a class='";
+    if($PageCount == intval($result->num_rows/10)) echo "CurrentPage";
+    echo "' id='LastPage' href='questions.php?id=".$QuestionID."&page=".intval($result->num_rows/10)."'>Ultima Pagina</a>";
   }
 
 

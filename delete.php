@@ -1,1 +1,1 @@
-<?php echo password_hash("mod", PASSWORD_DEFAULT); ?>
+<?php echo password_hash("user1", PASSWORD_DEFAULT); ?>
