@@ -36,6 +36,12 @@
   background-color: rgba(0,0,0,0.5);
   border-radius: 10px;
   border:1px solid red;
+  transition: border-color .2s ease;
+}
+.TopicList > a:focus,
+.TopicList > a:hover{
+  border-color: yellow;
+  outline: none;
 }
 .TopicList > a > p{
   display: inline-block;
@@ -92,4 +98,51 @@
   width: 200px;
   margin: auto;
   z-index: 0;
+}
+.main form.searchBar > *{
+  font-family: var(--font-family);
+}
+.main form.searchBar{
+  display: block;
+  width: 100%;
+  margin: 50px auto;
+}
+.main form.searchBar label{
+  display: block;
+  font-size: 2em;
+  background-color:black;
+  border: 1px solid red;
+  border-radius: 10px;
+  width: 50%;
+  margin:auto;
+  position: relative;
+  bottom: -10px;
+}
+.main form.searchBar > input[type="text"]{
+  font-size: 2em;
+  color: white;
+  display: block;
+  margin: auto;
+  width: 80%;
+  padding: 3% 5%;
+  border: 1px solid red;
+  border-radius: 10px;
+  background: rgba(0,0,0,0.5);
+}
+.main form.searchBar > input[type="submit"], .main form.searchBar > input[type="reset"]{
+  width:15%;
+  border: 1px solid red;
+  border-radius: 10px;
+  background-color: rgb(0, 0, 0);
+  color:white;
+  margin: 10px auto;
+  height: 50px;
+  font-size: 1.5em;
+  display: inline-block;
+}
+.main form.searchBar > input[type="submit"]:hover, .main form.searchBar > input[type="reset"]:hover,
+.main form.searchBar > input[type="submit"]:focus, .main form.searchBar > input[type="reset"]:focus{
+  transition: border-color .2s ease;
+  border-color: yellow;
+  outline: none;
 }

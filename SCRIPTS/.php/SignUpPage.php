@@ -40,11 +40,21 @@ function isFree($email){
   //returna True se non è presente
   return True;
 }
-function createAccount($username, $psw, $email){
-  //Esegue una query di inserimento nel database con codice TBD per email di Conferma
-  //Invia una mail di conferma con link per confermare l'account TBD
-  //Pagina php che vuole due parametri ad esempio nome utente e 10 caratteri della password appena creata che cambia lo stato dell'utente da NonEsistente a Verificato.
-  // echo $username." ".$psw." ".$email;
+function createAccount($username, $passw, $email){
+  require 'database_connection.php';
+  $ret = true;
+
+  $currentDate = date('Y-m-d H:i:s');
+
+  $stmt = $conn->prepare("INSERT INTO DoomWiki.users(user_name, psw, lst_psw_change, sign_in_date, fst_mail, role) VALUES(?, ?, ?, ?, ?, 'default');");
+
+  $stmt->bind_param("sssss", $username, $passw, $currentDate, $currentDate, $email);
+  $stmt->execute();
+
+  if($conn->connect_error) $ret = false;
+
+  $conn->close;
+  return $ret;
 }
 function PerformSignUp(){
   if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['email'])){
@@ -52,9 +62,12 @@ function PerformSignUp(){
       if(isset($_POST['email'])){
         if(isFree($_POST['email'])){
           $psw = password_hash($_POST['password'], PASSWORD_ARGON2I);
-          $username = $_POST['username'];
-          createAccount($username, $psw, $_POST['email']);
-          header("location: signup.php?msg=accountCreated");
+          $username = htmlspecialchars($_POST['username']);
+          if(createAccount($username, $psw, $_POST['email']))
+            echo $psw;
+            // header("location: signup.php?msg=accountCreated");
+          else
+            header("location: signup.php?msg=errorOnAccountCreation");
         }else printMailError();
       }
     }

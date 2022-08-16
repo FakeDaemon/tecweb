@@ -11,10 +11,15 @@
   <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano , Angeloni Alberto"/>
 </head>
 <body>
-  <?php include 'SCRIPTS/header.php'; ?>
+  <?php
+  include 'SCRIPTS/.php/header.php';
+  include 'SCRIPTS/.php/questionPageScripts.php';
+  $GLOBALS['logState'] = false;
+  isLogged();
+  sendMessage($_GET['id']);
+  ?>
   <header>
     <h1 id="logo">DOOM WIKI</h1>
-
     <nav id="NavBar">
       <ul id="MenuBar">
         <li class="MenuBarItem" lang="en"><a href="/">HOMEPAGE</a></li>
@@ -36,7 +41,7 @@
       </ul>
       <div id="MenuUserWidget">
         <?php
-        if(isLogged())
+        if($GLOBALS['logState'])
         printLoggedMenuWidget();
         else
         printDefaultMenuWidget();
@@ -45,89 +50,19 @@
     </nav>
   </header>
   <div class="main">
-    <p>Testo della domanda</p>
-    <div class="details">
-      <img src='/IMAGES/ProfilePics/Default.jpg' alt='Doomguy, accedi o registrati!'>
-      <p class="username">USERNAME</p>
-      <p class="postDate">Postato il 01/01/2000</p>
-    </div>
-    <h1 class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</h1>
+    <?php
+    printQuestion($_GET['id'], isset($_GET['page']) ? $_GET['page'] : 0);
+    if($GLOBALS['logState']){
+      echo '<a id="AnswerPagelink" href="questionEditor.php">Fai una domanda alla community!</a>';
+    }else{
+      echo '<a id="AnswerPagelink" href="login.php">Fai una domanda alla community!</a>';
+    }
+    echo '<br><a id="HelpPagelink" href="help.php?topicID='.$_GET['id'].'">Qualcosa di strano? Fai una seganalazione!</a>';
+    ?>
 
-    <p>Tutte le risposte</p>
-    <div class="chat">
-      <div class="message">
-        <div class="userDetails">
-          <img src='/IMAGES/ProfilePics/Default.jpg' alt='Doomguy, accedi o registrati!'>
-          <p class="username">USERNAME</p>
-          <p class="messageDatestamp">Postato il 01/01/2000</p>
-        </div>
-        <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div>
-      <div class="message ofUser">
-        <div class="userDetails">
-          <img src='/IMAGES/ProfilePics/Default.jpg' alt='Doomguy, accedi o registrati!'>
-          <p class="username">USERNAME</p>
-          <p class="messageDatestamp">Postato il 01/01/2000</p>
-        </div>
-        <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div>
-      <div class="message ofUser">
-        <div class="userDetails">
-          <img src='/IMAGES/ProfilePics/Default.jpg' alt='Doomguy, accedi o registrati!'>
-          <p class="username">USERNAME</p>
-          <p class="messageDatestamp">Postato il 01/01/2000</p>
-        </div>
-        <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div>
-      <div class="message">
-        <div class="userDetails">
-          <img src='/IMAGES/ProfilePics/Default.jpg' alt='Doomguy, accedi o registrati!'>
-          <p class="username">USERNAME</p>
-          <p class="messageDatestamp">Postato il 01/01/2000</p>
-        </div>
-        <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div>
-      <div class="message ofUser">
-        <div class="userDetails">
-          <img src='/IMAGES/ProfilePics/Default.jpg' alt='Doomguy, accedi o registrati!'>
-          <p class="username">USERNAME</p>
-          <p class="messageDatestamp">Postato il 01/01/2000</p>
-        </div>
-        <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div>
-      <div class="message">
-        <div class="userDetails">
-          <img src='/IMAGES/ProfilePics/Default.jpg' alt='Doomguy, accedi o registrati!'>
-          <p class="username">USERNAME</p>
-          <p class="messageDatestamp">Postato il 01/01/2000</p>
-        </div>
-        <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div>
-      <div class="message">
-        <div class="userDetails">
-          <img src='/IMAGES/ProfilePics/Default.jpg' alt='Doomguy, accedi o registrati!'>
-          <p class="username">USERNAME</p>
-          <p class="messageDatestamp">Postato il 01/01/2000</p>
-        </div>
-        <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div>
 
-    </div>
-
-    <a class="CurrentPage" id="FirstPage" href="questions.php?id=123&page=0">Prima Pagina</a>
-    <a class="CurrentPage" href="questions.php?id=123&page=0">Pagina Precedente</a>
-    <a class="CurrentPage" href="questions.php?id=123&page=0">1</a>
-    <a href="questions.php?id=123&page=0">2</a>
-    <a href="questions.php?id=123&page=0">3</a>
-    <span>...</span>
-    <a href="questions.php?id=123&page=0">Pagina Successiva</a>
-    <a id="LastPage" href="questions.php?id=123&page=0">Ultima Pagina</a>
-
-    <a id="AnswerPagelink" href="#">Fai una domanda alla community!</a>
-
-    <?php if(isLogged()) {?>
-
-      <form class="blocked" action="questions.php?id=123" method="post">
+    <?php if($GLOBALS['logState']) {?>
+      <form action="questions.php?id=<?php echo $_GET['id']; ?>" method="post">
         <label for="AnswerBox">
           La tua risposta:
         </label>
@@ -136,7 +71,7 @@
         <input type="reset" value="PULISCI">
       </form>
     <?php }else{ ?>
-      <form class="blocked" action="questions.php?id=123" method="post">
+      <form class="blocked" action="questions.php?id=<?php echo $_GET['id']; ?>" method="post">
         <label for="AnswerBox">
           La tua risposta:
         </label>
@@ -157,6 +92,5 @@
     <img class="imgVadidCode" src="IMAGES/valid-xhtml10.png" alt="html valido"/>
     <img class="imgVadidCode" src="IMAGES/vcss-blue.gif" alt="css valido"/>
   </footer>
-  <script src="SCRIPTS/common_jsv_functions.js"></script>
 </body>
 </html>

@@ -24,23 +24,25 @@
           </label>
           <input id="NestedListBtn" type="checkbox" value="Mostra Capitoli Disponibili">
           <ul id="MenuBarNestedList">
-            <li class="NestedListItem"><a href="history.php">CAPITOLO <abbr title="Primo">I</abbr></a></li>
-            <li class="NestedListItem"><a href="history_2.php">CAPITOLO <abbr title="Secondo">II</abbr></a></li>
-            <li class="NestedListItem"><a href="history_3.php">CAPITOLO <abbr title="Terzo">III</abbr></a></li>
-            <li class="NestedListItem"><a href="history_2016.php">CAPITOLO <abbr title="Quarto">IV</abbr></a></li>
-            <li class="NestedListItem"><a href="history_eternals.php">CAPITOLO <abbr title="Quinto">V</abbr></a></li>
+            <li class="NestedListItem"><a href="../history.php">CAPITOLO <abbr title="Primo">I</abbr></a></li>
+            <li class="NestedListItem"><a href="../history_2.php">CAPITOLO <abbr title="Secondo">II</abbr></a></li>
+            <li class="NestedListItem"><a href="../history_3.php">CAPITOLO <abbr title="Terzo">III</abbr></a></li>
+            <li class="NestedListItem"><a href="../history_2016.php">CAPITOLO <abbr title="Quarto">IV</abbr></a></li>
+            <li class="NestedListItem"><a href="../history_eternals.php">CAPITOLO <abbr title="Quinto">V</abbr></a></li>
           </ul>
         </li>
-        <li class="MenuBarItem"><a href="stats.php">STATISTICHE</a></li>
-        <li class="MenuBarItem"><a href="trivia.php">CURIOSITÀ</a></li>
+        <li class="MenuBarItem"><a href="../stats.php">STATISTICHE</a></li>
+        <li class="MenuBarItem"><a href="../trivia.php">CURIOSITÀ</a></li>
       </ul>
       <div id="MenuUserWidget">
         <?php
-          include '../SCRIPTS/header.php';
-          if(isLogged())
-            printLoggedMenuWidget(1);
-          else
-            printDefaultMenuWidget(1);
+        $GLOBALS['logState'] = false;
+        include '../SCRIPTS/.php/header.php';
+        isLogged();
+        if($GLOBALS['logState'])
+        printLoggedMenuWidget(1);
+        else
+        printDefaultMenuWidget(1);
         ?>
       </div>
     </nav>
@@ -70,7 +72,7 @@
     <img class="imgVadidCode" src="../IMAGES/valid-xhtml10.png" alt="html valido"/>
     <img class="imgVadidCode" src="../IMAGES/vcss-blue.gif" alt="css valido"/>
   </footer>
-  <script src="../SCRIPTS/usernamechangepage.js"></script>
+  <script src="../SCRIPTS/.js/usernamechangepage.js"></script>
 </body>
 
 </html>

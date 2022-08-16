@@ -22,6 +22,12 @@
   margin: 1% auto;
   font-size: 1.5em;
 }
+.main > h2{
+  padding: 0 25px 25px 25px;
+  font-weight: normal;
+  margin: 0 auto;
+  font-size: 1.1em;
+}
 .main > div.details{
   text-align: left;
 }
@@ -75,6 +81,10 @@
 .main > div.chat > div.message.ofUser > p{
   margin: 10px 20px 0 auto;
 }
+.main > div.chat > div.message.ofUser > p > a,
+.main > div.chat > div.message > p > a{
+  color:yellow;
+}
 .main > form{
   margin: 20px 0;
   text-align: center;
@@ -106,6 +116,7 @@
   border-radius: 15px 15px 0 15px;
   background-color: rgba(0,0,0,0.6)
 }
+
 .main > form > input{
   display: inline-block;
   margin:30px auto 30px auto;
@@ -152,6 +163,11 @@
   pointer-events: none;
 }
 #AnswerPagelink{
-  margin: 20px 0;
+  margin: 5px auto 0 auto;
+}
+#HelpPagelink{
+  margin: 5px auto;
+}
+#AnswerPagelink, #HelpPagelink{
   font-size: larger;
 }

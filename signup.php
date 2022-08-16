@@ -37,9 +37,13 @@
       </ul>
       <div id="MenuUserWidget">
         <?php
-        include 'SCRIPTS/header.php';
-        if(isLogged()) printLoggedMenuWidget();
-        else printDefaultMenuWidget();
+        $GLOBALS['logState'] = false;
+        include 'SCRIPTS/.php/header.php';
+        isLogged();
+        if($GLOBALS['logState'])
+        printLoggedMenuWidget();
+        else
+        printDefaultMenuWidget();
         ?>
       </div>
     </nav>
@@ -48,12 +52,18 @@
     <p>ISCRIZIONE</p>
     <form id="auth_widget" action="signup.php" method="POST">
       <?php
-      include 'SCRIPTS/SignUpPage.php';
+      include 'SCRIPTS/.php/SignUpPage.php';
       PerformSignUp();
       if(isset($_GET["msg"]) && $_GET["msg"]=="accountCreated"){
         ?>
         <p id="ConfirmMessage"><span lang="en">Account</span> creato!</p>
         <p>Verificalo tramite il link che ti è stato inviato nell'indirizzo <span lang="en">email</span> inserito!</p>
+        <a href="/">Torna alla home page.</a>
+        <?php
+      }else if(isset($_GET["msg"]) && $_GET["msg"]=="errorOnAccountCreation"){
+        ?>
+        <p id="ConfirmMessage">Errore durante la creazione dell'account.</p>
+        <p>C'è stato un errore nei nostri sistemi durante la creazione dell'account. Probabilmente stiamo già lavorando per risolvere il problema, la prossima volta che proverai tutto funzionerà correttamente.</p>
         <a href="/">Torna alla home page.</a>
         <?php
       }else{
@@ -107,6 +117,6 @@
     <img class="imgVadidCode" src="IMAGES/valid-xhtml10.png" alt="html valido"/>
     <img class="imgVadidCode" src="IMAGES/vcss-blue.gif" alt="css valido"/>
   </footer>
-  <script type="text/javascript" src="SCRIPTS/signuppage.js"></script>
+  <script type="text/javascript" src="SCRIPTS/.js/signuppage.js"></script>
 </body>
 </html>
