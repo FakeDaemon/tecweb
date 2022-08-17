@@ -11,7 +11,8 @@ CREATE TABLE users(
   sign_in_date date NOT NULL,
   scnd_mail varchar(256),
   role ENUM('admin', 'mod', 'default'),
-  profile_pic int DEFAULT '0'
+  profile_pic int DEFAULT '0',
+  SessID varchar(256)
 );
 CREATE TABLE topics(
   id int AUTO_INCREMENT PRIMARY KEY,

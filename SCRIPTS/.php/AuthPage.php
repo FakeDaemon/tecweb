@@ -42,9 +42,16 @@ function PerformAuth(){
     }
     switch (checkUser($_POST['email'], $_POST['password'])) {
       case 'userFound':
-      $SessID = password_hash(strval(getIPAddr()).strval($_SERVER['HTTP_USER_AGENT']), PASSWORD_DEFAULT);
+      $SessID = bin2hex(random_bytes(64));
 
-      setcookie("SessionID", $_POST['email']."_".$SessID, time() + 60*60*2);
+      require "database_connection.php";
+      $stmt = $conn->prepare("UPDATE DoomWiki.users SET SessID = ? WHERE fst_mail= ?;");
+      $stmt->bind_param("ss", $SessID, $_POST['email']);
+      $stmt->execute();
+      $result = $stmt -> get_result();
+      $conn->close();
+
+      setcookie("SessionID", $SessID, time() + 60*60*2);
       $_COOKIE["SessionID"]=$SessID;
 
       header("location: /");

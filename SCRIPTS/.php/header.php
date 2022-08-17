@@ -13,9 +13,27 @@ function getIPAddr() {
 }
 
 function isLogged(){
-  $SessID = strval(getIPAddr()).strval($_SERVER['HTTP_USER_AGENT']);
-  if(isset($_COOKIE["SessionID"]) && password_verify($SessID, explode('_',$_COOKIE["SessionID"])[1])) {
-    $GLOBALS["logState"] = true;
+  if(isset($_COOKIE["SessionID"])){
+    require 'database_connection.php';
+    $stmt = $conn->prepare("SELECT user_name FROM DoomWiki.users WHERE SessID = ?;");
+    $stmt->bind_param("s", $_COOKIE["SessionID"]);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    if($result->num_rows > 1){
+      // echo "Very, very, very rare error";
+     $stmt = $conn->query("UPDATE DoomWiki.users SET SessID = NULL WHERE SessId = ?;");
+      $stmt->bind_param("s", $_COOKIE["SessionID"]);
+      $stmt->execute();
+      return NULL;
+    }else if($result->num_rows === 1){
+      $user = $result->fetch_assoc();
+      return $user['user_name'];
+    }else{
+
+      return NULL;
+    }
+  }else{
+    return NULL;
   }
 }
 
@@ -46,4 +64,19 @@ function printDefaultMenuWidget(){
   echo "<img src='/IMAGES/ProfilePics/Default.jpg' alt='Doomguy, effettua l'accesso!'>";
 }
 
-?>
+function random_str(
+  int $length = 64,
+  string $keyspace = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+  ): string {
+    if ($length < 1) {
+      throw new \RangeException("Length must be a positive integer");
+    }
+    $pieces = [];
+    $max = mb_strlen($keyspace, '8bit') - 1;
+    for ($i = 0; $i < $length; ++$i) {
+      $pieces []= $keyspace[random_int(0, $max)];
+    }
+    return implode('', $pieces);
+  }
+
+  ?>

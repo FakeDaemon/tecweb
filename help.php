@@ -15,7 +15,15 @@
   <script type="text/javascript" src="SCRIPTS/cookie_extractor.js"></script>
 </head>
 
-<body onload="redirection()">
+<body>
+  <?php
+    include 'SCRIPTS/.php/header.php';
+    $user_name = isLogged();
+    if($user_name!==NULL)
+    printLoggedMenuWidget();
+    else
+    printDefaultMenuWidget();
+   ?>
   <header>
     <h1 id="logo">DOOM WIKI</h1>
 
@@ -40,13 +48,6 @@
       </ul>
       <div id="MenuUserWidget">
         <?php
-        $GLOBALS['logState'] = false;
-        include 'SCRIPTS/.php/header.php';
-        isLogged();
-        if($GLOBALS['logState'])
-        printLoggedMenuWidget();
-        else
-        printDefaultMenuWidget();
         ?>
       </div>
     </nav>

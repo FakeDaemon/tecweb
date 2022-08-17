@@ -12,10 +12,37 @@
 </head>
 <body>
   <?php
+  require 'SCRIPTS/.php/database_connection.php';
   include 'SCRIPTS/.php/indexFunctions.php';
   include 'SCRIPTS/.php/header.php';
-  $GLOBALS['logState'] = false;
-  isLogged();
+  class User{
+    public function __construct($conn) {
+      if(isset($_COOKIE["SessionID"])){
+        $stmt = $conn->prepare("SELECT user_name, profile_pic FROM DoomWiki.users WHERE SessID = ?;");
+        $stmt->bind_param("s", $_COOKIE["SessionID"]);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        if($result->num_rows > 1){
+          $stmt = $conn->query("UPDATE DoomWiki.users SET SessID = NULL WHERE SessId = ?;");
+          $stmt->bind_param("s", $_COOKIE["SessionID"]);
+          $stmt->execute();
+        }else if($result->num_rows === 1){
+          $user = $result->fetch_assoc();
+          $this->user_name=$user['user_name'];
+          $this->profile_pic=$user['profile_pic'];
+        }
+      }else{
+        $this->user_name = NULL;
+        $this->profile_pic = NULL;
+      }
+    }
+    public function isLogged(){
+      if($this->user_name==NULL) return false;
+      return true;
+    }
+  }
+
+  $user = new User($conn);
   ?>
   <header>
     <h1 id="logo">DOOM WIKI</h1>
@@ -41,11 +68,19 @@
       </ul>
       <div id="MenuUserWidget">
         <?php
+        echo "<div>";
+        if($user->isLogged()) echo "<p>".$user->user_name."</p>";
+        else echo "<p>OSPITE</p>";
+        echo "<a href='";
+        if($user->isLogged()) echo "account-managment.php'>Impostazioni</a>";
+        else {
+          echo "<a href='signup.php'>Registrati</a>";
+          echo "<a href='login.php'>Entra</a>";
+        }
+        echo "</div>";
+        if($user->isLogged()) echo "<img src='/IMAGES/ProfilePics/ProfilePicN".$user->profile_pic.".jpg' alt='Doomguy, accedi o registrati!'>";
+        else echo "<img src='/IMAGES/ProfilePics/Default.jpg' alt='Doomguy, accedi o registrati!'>";
 
-        if($GLOBALS['logState'])
-        printLoggedMenuWidget();
-        else
-        printDefaultMenuWidget();
         ?>
       </div>
     </nav>
@@ -64,7 +99,7 @@
     <div class="TopicList">
       <p>ULTIME DOMANDE DELLA COMMUNITY</p>
       <?php printLastTopics(); ?>
-      
+
       <a href="#">Vedi Tutti</a>
     </div>
     <div class="TopicList">
