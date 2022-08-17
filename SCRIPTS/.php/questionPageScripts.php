@@ -1,4 +1,19 @@
 <?php
+function sendMessage($QuestionID){
+  if(isset($_POST['AnswerBody']) && $GLOBALS['logState']){
+    require 'database_connection.php';
+    if($conn->connect_error){
+      //errore di connessione
+    }else{
+      $stmt = $conn->prepare("INSERT INTO DoomWiki.comments(commentBody, writeDate, topicID, email) VALUES(?, ?, ?, ?)");
+      $commentBody = $_POST['AnswerBody'];
+      $currentDate = date("Y-m-d H:i:s");
+      $stmt->bind_param("ssis", htmlentities($commentBody), $currentDate, $QuestionID, explode('_',$_COOKIE["SessionID"])[0]);
+      $stmt->execute();
+      header("location: questions.php?id=".$QuestionID);
+    }
+  }
+}
 function printQuestion($QuestionID, $PageCount){
   require 'database_connection.php';
   $stmt = $conn->prepare("SELECT * FROM DoomWiki.topics AS t JOIN DoomWiki.users AS u ON t.email = u.fst_mail WHERE t.id = ? ;");
