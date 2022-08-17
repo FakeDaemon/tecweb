@@ -13,35 +13,9 @@
 <body>
   <?php
   require 'SCRIPTS/.php/database_connection.php';
-  include 'SCRIPTS/.php/indexFunctions.php';
+  include 'SCRIPTS/.php/user.php';
   include 'SCRIPTS/.php/header.php';
-  class User{
-    public function __construct($conn) {
-      if(isset($_COOKIE["SessionID"])){
-        $stmt = $conn->prepare("SELECT user_name, profile_pic FROM DoomWiki.users WHERE SessID = ?;");
-        $stmt->bind_param("s", $_COOKIE["SessionID"]);
-        $stmt->execute();
-        $result = $stmt->get_result();
-        if($result->num_rows > 1){
-          $stmt = $conn->query("UPDATE DoomWiki.users SET SessID = NULL WHERE SessId = ?;");
-          $stmt->bind_param("s", $_COOKIE["SessionID"]);
-          $stmt->execute();
-        }else if($result->num_rows === 1){
-          $user = $result->fetch_assoc();
-          $this->user_name=$user['user_name'];
-          $this->profile_pic=$user['profile_pic'];
-        }
-      }else{
-        $this->user_name = NULL;
-        $this->profile_pic = NULL;
-      }
-    }
-    public function isLogged(){
-      if($this->user_name==NULL) return false;
-      return true;
-    }
-  }
-
+  
   $user = new User($conn);
   ?>
   <header>
@@ -80,7 +54,6 @@
         echo "</div>";
         if($user->isLogged()) echo "<img src='/IMAGES/ProfilePics/ProfilePicN".$user->profile_pic.".jpg' alt='Doomguy, accedi o registrati!'>";
         else echo "<img src='/IMAGES/ProfilePics/Default.jpg' alt='Doomguy, accedi o registrati!'>";
-
         ?>
       </div>
     </nav>
@@ -98,12 +71,23 @@
 
     <div class="TopicList">
       <p>ULTIME DOMANDE DELLA COMMUNITY</p>
-      <?php printLastTopics(); ?>
+      <?php
+      $result = $conn->query("SELECT * FROM DoomWiki.topics JOIN DoomWiki.users ON email = fst_mail ORDER BY creation_date LIMIT 10;");
+      while($row = $result->fetch_assoc()){
+        echo '<a href="questions.php?id='.$row['id'].'"><p class="title">'.$row['title'].'</p><p class="details">Aperto da '.$row['user_name'].' in data '.$row['creation_date'].'</p></a>';
+      }
+      ?>
 
       <a href="#">Vedi Tutti</a>
     </div>
     <div class="TopicList">
-      <?php printHotTopics(); ?>
+      <?php
+      require 'database_connection.php';
+      $result = $conn->query("SELECT * FROM DoomWiki.topics JOIN DoomWiki.users ON email = fst_mail ORDER BY creation_date LIMIT 10;");
+      while($row = $result->fetch_assoc()){
+        echo '<a href="questions.php?id='.$row['id'].'"><p class="title">'.$row['title'].'</p><p class="details">Aperto da '.$row['user_name'].' in data '.$row['creation_date'].'</p></a>';
+      }
+      ?>
       <p>DOMANDE PIÙ DISCUSSE</p>
     </div>
   </div>
