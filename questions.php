@@ -17,6 +17,20 @@
   include 'SCRIPTS/.php/user.php';
 
   $user = new User($conn);
+
+  if(isset($_POST['AnswerBody']) && $user->isLogged()){
+    if($conn->connect_error){
+      //errore di connessione
+    }else{
+      $stmt = $conn->prepare("INSERT INTO DoomWiki.comments(commentBody, writeDate, topicID, email) VALUES(?, ?, ?, ?)");
+      $commentBody = $_POST['AnswerBody'];
+      $currentDate = date("Y-m-d H:i:s");
+      $stmt->bind_param("ssis", htmlentities($commentBody), $currentDate, $_GET['id'], $user->email);
+      $stmt->execute();
+      header("location: questions.php?id=".$_GET['id']);
+    }
+  }
+
   ?>
   <header>
     <h1 id="logo">DOOM WIKI</h1>
@@ -60,7 +74,67 @@
   </header>
   <div class="main">
     <?php
-    printQuestion($_GET['id'], isset($_GET['page']) ? $_GET['page'] : 0);
+    $stmt = $conn->prepare("SELECT * FROM DoomWiki.topics AS t JOIN DoomWiki.users AS u ON t.email = u.fst_mail WHERE t.id = ? ;");
+    $stmt->bind_param("i", $_GET['id']);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $topic = $result->fetch_assoc();
+
+    echo "<p>Testo della domanda</p>";
+
+    echo "<div class='details'>";
+    echo "<img src='/IMAGES/ProfilePics/Default.jpg' alt='Doomguy, accedi o registrati!'>";
+    echo "<p class='username'>".$topic['user_name']."</p>";
+    echo "<p class='postDate'>Postato il ".$topic['creation_date']."</p>";
+    echo "</div>";
+
+    echo "<h1 class='title'>".$topic['title']."</h1>";
+    echo "<h2>".$topic['description']."</h2>";
+
+    echo "<p>Tutte le risposte</p>";
+    echo "<div class='chat'>";
+
+    $stmt = $conn->prepare("SELECT * FROM DoomWiki.topics AS t JOIN DoomWiki.comments AS c ON t.id = c.topicID JOIN DoomWiki.users AS u ON u.fst_mail=c.email WHERE t.id = ? ;");
+    $stmt->bind_param("i", $_GET['id']);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    $commentCount = $_GET['page']*10;
+    $a=0;
+    while ($comment = $result->fetch_assoc()) {
+      echo "ciao";
+      if($a>=$commentCount && $commentCount<10*($_GET['page']+1)){
+        echo "<div class='message'>";
+        echo "<div class='userDetails'>";
+        echo "<img src='/IMAGES/ProfilePics/ProfilePicN".$comment['profile_pic'].".jpg' alt='Doomguy, accedi o registrati!'>";
+        echo "<p class='username'>".$comment['user_name']."</p>";
+        echo "<p class='messageDatestamp'>Postato il ".$comment['writeDate']."</p>";
+        echo "</div>";
+        echo "<p class='text'>".$comment['commentBody']."</p>";
+        echo "</div>";
+        $commentCount++;
+      }
+      $a++;
+    }
+    echo "</div>";
+
+    if($commentCount!==0 && ($result->num_rows > 10*($_GET['page']+1))){
+      echo "<a class='";
+      if($_GET['page'] == 0) echo "CurrentPage";
+      else echo '';
+      echo "' id='FirstPage' href='questions.php?id=".$QuestionID."'>Prima Pagina</a>";
+      echo "<a class='";
+      if($_GET['page'] == 0) echo "CurrentPage";
+      else echo '';
+      echo "' href='questions.php?id=".$QuestionID."&page=";
+      if($_GET['page'] == 0) echo $_GET['page'];
+      else echo $_GET['page']-1;
+      echo "'>Pagina Precedente</a>";
+      echo "<a href='questions.php?id=".$QuestionID."&page=";
+      echo $_GET['page']+1;
+      echo "'>Pagina Successiva</a>";
+      echo "<a id='LastPage' href='questions.php?id=".$QuestionID."'>Ultima Pagina</a>";
+    }
     if($GLOBALS['logState']){
       echo '<a id="AnswerPagelink" href="questionEditor.php">Fai una domanda alla community!</a>';
     }else{
