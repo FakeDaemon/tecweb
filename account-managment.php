@@ -16,12 +16,10 @@
 
 <body>
   <?php
-  include 'SCRIPTS/.php/accountManagmentScripts.php';
-  include 'SCRIPTS/.php/header.php';
+  require 'SCRIPTS/.php/database_connection.php';
+  include 'SCRIPTS/.php/user.php';
 
-  $GLOBALS['logState'];
-
-  isLogged();
+  $user = new User($conn);
   ?>
   <header>
     <h1 id="logo">DOOM WIKI</h1>
@@ -46,12 +44,20 @@
         <li class="MenuBarItem"><a href="trivia.php">CURIOSITÀ</a></li>
       </ul>
       <div id="MenuUserWidget">
+        <div>
         <?php
-
-        if($GLOBALS['logState'])
-        printLoggedMenuWidget();
-        else
-        printDefaultMenuWidget();
+        if($user->isLogged()) echo "<p>".$user->user_name."</p>";
+        else echo "<p>OSPITE</p>";
+        if($user->isLogged()) echo "<a href='account-managment.php'>Impostazioni</a>";
+        else {
+          echo "<a href='signup.php'>Registrati</a>";
+          echo "<a href='login.php'>Entra</a>";
+        }
+        ?>
+        </div>
+        <?php
+        if($user->isLogged()) echo "<img src='/IMAGES/ProfilePics/ProfilePicN".$user->profile_pic.".jpg' alt='Doomguy, accedi o registrati!'>";
+        else echo "<img src='/IMAGES/ProfilePics/ProfilePicN1.jpg' alt='Doomguy, accedi o registrati!'>";
         ?>
       </div>
     </nav>

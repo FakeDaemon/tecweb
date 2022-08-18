@@ -14,8 +14,7 @@
   <?php
   require 'SCRIPTS/.php/database_connection.php';
   include 'SCRIPTS/.php/user.php';
-  include 'SCRIPTS/.php/header.php';
-  
+
   $user = new User($conn);
   ?>
   <header>
@@ -41,19 +40,20 @@
         <li class="MenuBarItem"><a href="trivia.php">CURIOSITÀ</a></li>
       </ul>
       <div id="MenuUserWidget">
+        <div>
         <?php
-        echo "<div>";
         if($user->isLogged()) echo "<p>".$user->user_name."</p>";
         else echo "<p>OSPITE</p>";
-        echo "<a href='";
-        if($user->isLogged()) echo "account-managment.php'>Impostazioni</a>";
+        if($user->isLogged()) echo "<a href='account-managment.php'>Impostazioni</a>";
         else {
           echo "<a href='signup.php'>Registrati</a>";
           echo "<a href='login.php'>Entra</a>";
         }
-        echo "</div>";
+        ?>
+        </div>
+        <?php
         if($user->isLogged()) echo "<img src='/IMAGES/ProfilePics/ProfilePicN".$user->profile_pic.".jpg' alt='Doomguy, accedi o registrati!'>";
-        else echo "<img src='/IMAGES/ProfilePics/Default.jpg' alt='Doomguy, accedi o registrati!'>";
+        else echo "<img src='/IMAGES/ProfilePics/ProfilePicN1.jpg' alt='Doomguy, accedi o registrati!'>";
         ?>
       </div>
     </nav>
@@ -77,18 +77,17 @@
         echo '<a href="questions.php?id='.$row['id'].'"><p class="title">'.$row['title'].'</p><p class="details">Aperto da '.$row['user_name'].' in data '.$row['creation_date'].'</p></a>';
       }
       ?>
-
-      <a href="#">Vedi Tutti</a>
+      <a href="questions.php?id=Latest">Vedi Tutti</a>
     </div>
     <div class="TopicList">
+      <p>DOMANDE PIÙ DISCUSSE</p>
       <?php
-      require 'database_connection.php';
-      $result = $conn->query("SELECT * FROM DoomWiki.topics JOIN DoomWiki.users ON email = fst_mail ORDER BY creation_date LIMIT 10;");
+      $result = $conn->query("SELECT t.id, u.user_name, t.title, t.creation_date,COUNT(c.id) AS CommentsCount FROM DoomWiki.topics AS t JOIN DoomWiki.users AS u ON t.email = u.fst_mail LEFT OUTER JOIN DoomWiki.comments AS c ON c.topicID=t.id GROUP BY t.id ORDER BY CommentsCount DESC;");
       while($row = $result->fetch_assoc()){
         echo '<a href="questions.php?id='.$row['id'].'"><p class="title">'.$row['title'].'</p><p class="details">Aperto da '.$row['user_name'].' in data '.$row['creation_date'].'</p></a>';
       }
       ?>
-      <p>DOMANDE PIÙ DISCUSSE</p>
+      <a href="questions.php?id=Comments">Vedi Tutti</a>
     </div>
   </div>
 

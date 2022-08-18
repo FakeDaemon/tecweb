@@ -11,7 +11,12 @@
   <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano , Angeloni Alberto"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
-<body onload="redirection()">
+<body>
+  <?php
+  require 'SCRIPTS/.php/database_connection.php';
+  include 'SCRIPTS/.php/user.php';
+
+  $user = new User($conn); ?>
   <header>
     <h1 id="logo">DOOM WIKI</h1>
 
@@ -36,13 +41,18 @@
       </ul>
       <div id="MenuUserWidget">
         <?php
-        $GLOBALS['logState'] = false;
-        include '../SCRIPTS/.php/header.php';
-        isLogged();
-        if($GLOBALS['logState'])
-        printLoggedMenuWidget(1);
-        else
-        printDefaultMenuWidget(1);
+        if($user->isLogged()) echo "<p>".$user->user_name."</p>";
+        else echo "<p>OSPITE</p>";
+        if($user->isLogged()) echo "<a href='account-managment.php'>Impostazioni</a>";
+        else {
+          echo "<a href='signup.php'>Registrati</a>";
+          echo "<a href='login.php'>Entra</a>";
+        }
+        ?>
+        </div>
+        <?php
+        if($user->isLogged()) echo "<img src='/IMAGES/ProfilePics/ProfilePicN".$user->profile_pic.".jpg' alt='Doomguy, accedi o registrati!'>";
+        else echo "<img src='/IMAGES/ProfilePics/ProfilePicN1.jpg' alt='Doomguy, accedi o registrati!'>";
         ?>
       </div>
     </nav>

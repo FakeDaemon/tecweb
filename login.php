@@ -14,6 +14,53 @@
 </head>
 
 <body>
+  <?php
+  require 'SCRIPTS/.php/database_connection.php';
+  include 'SCRIPTS/.php/user.php';
+
+  $user = new User($conn);
+  if($user->isLogged()) header("location: account-managment.php");
+
+  if(isset($_POST['email']) && isset($_POST['password']) && !empty($_POST['password']) && !empty($_POST['email'])){
+    if(isset($_POST['SaveEmail']) && $_POST['SaveEmail'] === "True"){
+      setcookie("email", $_POST['email'], time() + 60*60*24*365);
+      $_COOKIE["email"]=$_POST['email'];
+    }else{
+      setcookie("email", "", time()-3600);
+      $_COOKIE["email"]="";
+    }
+
+
+    $ret = "userFound";
+    $stmt = $conn->prepare("SELECT psw FROM DoomWiki.users WHERE fst_mail = ?");
+    $stmt->bind_param("s", $_POST['email']);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if($conn->connect_error){
+      $ret = "errorState";
+    }else if($result->num_rows > 0){
+      $row = $result->fetch_assoc();
+      if(password_verify($_POST['password'], $row['psw'])){
+          $SessID = bin2hex(random_bytes(64));
+          $stmt = $conn->prepare("UPDATE DoomWiki.users SET SessID = ? WHERE fst_mail= ?;");
+          $stmt->bind_param("ss", $SessID, $_POST['email']);
+          $stmt->execute();
+          $result = $stmt -> get_result();
+
+          setcookie("SessionID", $SessID, time() + 60*60*2);
+          $_COOKIE["SessionID"]=$SessID;
+
+          $conn->close();
+          header("location: /");
+      }else{
+        $ret = "wrongPassword";
+      }
+    }else{
+      $ret = "noUserFound";
+    }
+  }
+   ?>
   <header>
     <h1 id="logo">DOOM WIKI</h1>
     <nav id="NavBar">
@@ -36,14 +83,20 @@
         <li class="MenuBarItem"><a href="stats.php">CURIOSITÀ</a></li>
       </ul>
       <div id="MenuUserWidget">
+        <div>
         <?php
-        $GLOBALS['logState'] = false;
-        include 'SCRIPTS/.php/header.php';
-        isLogged();
-        if($GLOBALS['logState'])
-        printLoggedMenuWidget();
-        else
-        printDefaultMenuWidget();
+        if($user->isLogged()) echo "<p>".$user->user_name."</p>";
+        else echo "<p>OSPITE</p>";
+        if($user->isLogged()) echo "<a href='account-managment.php'>Impostazioni</a>";
+        else {
+          echo "<a href='signup.php'>Registrati</a>";
+          echo "<a href='login.php'>Entra</a>";
+        }
+        ?>
+        </div>
+        <?php
+        if($user->isLogged()) echo "<img src='/IMAGES/ProfilePics/ProfilePicN".$user->profile_pic.".jpg' alt='Doomguy, accedi o registrati!'>";
+        else echo "<img src='/IMAGES/ProfilePics/ProfilePicN1.jpg' alt='Doomguy, accedi o registrati!'>";
         ?>
       </div>
     </nav>
@@ -52,8 +105,51 @@
     <p>ACCESSO</p>
     <form id="auth_widget" method="POST" action="login.php">
       <?php
-      include 'SCRIPTS/.php/AuthPage.php';
-      PerformAuth();
+      if(isset($_POST['email']) && isset($_POST['password']) && !empty($_POST['password']) && !empty($_POST['email'])){
+        if(isset($_POST['SaveEmail']) && $_POST['SaveEmail'] === "True"){
+          setcookie("email", $_POST['email'], time() + 60*60*24*365);
+          $_COOKIE["email"]=$_POST['email'];
+        }else{
+          setcookie("email", "", time()-3600);
+          $_COOKIE["email"]="";
+        }
+
+        $ret = "userFound";
+        $stmt = $conn->prepare("SELECT psw FROM DoomWiki.users WHERE fst_mail = ?");
+        $stmt->bind_param("s", $_POST['email']);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        if($conn->connect_error){
+          $ret = "errorState";
+        }else if($result->num_rows > 0){
+          $row = $result->fetch_assoc();
+          if(password_verify($_POST['password'], $row['psw'])){
+            $ret = "userFound";
+          }else{
+            $ret = "wrongPassword";
+          }
+        }else{
+          $ret = "noUserFound";
+        }
+
+        switch ($ret) {
+          case 'noUserFound':
+          case 'wrongPassword':
+          echo "<div class='ErrorBox'>";
+          echo "<p class='ErrorMessage'><span lang='en'>Credenziali non corrette.</p>";
+          echo "</div>";
+          break;
+          case 'errorState':
+          echo "<div class='ErrorBox'>";
+          echo "<p class='ErrorMessage'>Errore nel sistema durante l'accesso.</p>";
+          echo "</div>";
+          break;
+          default:
+          // code...
+          break;
+        }
+      }
       ?>
       <label id="email_input_label" for="email_input" class="up"><span lang="en">Email</span></label>
       <input id="email_input" type="text" name="email"  <?php if(isset($_COOKIE['email']) && $_COOKIE['email']!="")
@@ -96,6 +192,7 @@
     <img class="imgVadidCode" src="IMAGES/vcss-blue.gif" alt="css valido"/>
   </footer>
   <script type="text/javascript" src="SCRIPTS/.js/authpage.js"></script>
+  <?php $conn->close(); ?>
 </body>
 
 </html>
