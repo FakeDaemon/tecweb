@@ -70,7 +70,7 @@
     ?>
 
 
-    <?php if($GLOBALS['logState']) {?>
+    <?php if($user->isLogged()) {?>
       <form action="questions.php?id=<?php echo $_GET['id']; ?>" method="post">
         <label for="AnswerBox">
           La tua risposta:
