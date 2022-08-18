@@ -13,6 +13,7 @@
 <body>
   <?php
   require 'SCRIPTS/.php/database_connection.php';
+  require 'SCRIPTS/.php/questionPageScripts.php';
   include 'SCRIPTS/.php/user.php';
 
   $user = new User($conn);
