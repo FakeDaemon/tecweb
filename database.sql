@@ -21,6 +21,8 @@ CREATE TABLE topics(
   creation_date date NOT NULL,
   email varchar(256),
   FOREIGN KEY(email) REFERENCES users(fst_mail)
+  ON DELETE SET NULL
+  ON UPDATE CASCADE
 );
 CREATE TABLE comments(
   id int AUTO_INCREMENT PRIMARY KEY,
@@ -28,8 +30,12 @@ CREATE TABLE comments(
   writeDate date,
   topicID int,
   email varchar(256),
-  FOREIGN KEY(email) REFERENCES users(fst_mail),
+  FOREIGN KEY(email) REFERENCES users(fst_mail)
+  ON DELETE SET NULL
+  ON UPDATE CASCADE,
   FOREIGN KEY(topicID) REFERENCES topics(id)
+  ON DELETE SET NULL
+  ON UPDATE CASCADE
 );
 INSERT INTO users(fst_mail, user_name, psw, lst_psw_change, sign_in_date, scnd_mail, role, profile_pic) VALUES(
   'admin', 'admin', '$2y$10$YaRydub8fwN9YdFI2cm5f.Q19YUURLZroxRVrs69Fx7EedSvvTGYe', '2022-01-01', '2022-01-01', NULL, 'admin', 1

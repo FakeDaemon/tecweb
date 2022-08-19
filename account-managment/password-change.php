@@ -13,10 +13,11 @@
 </head>
 <body>
   <?php
-  require 'SCRIPTS/.php/database_connection.php';
-  include 'SCRIPTS/.php/user.php';
+  require '../SCRIPTS/.php/database_connection.php';
+  include '../SCRIPTS/.php/user.php';
 
   $user = new User($conn);
+  if(!$user->isLogged()) header("location: ../login.php");
    ?>
   <header>
     <h1 id="logo">DOOM WIKI</h1>

@@ -20,6 +20,17 @@
   include 'SCRIPTS/.php/user.php';
 
   $user = new User($conn);
+
+  if(!$user->isLogged()) header("location: login.php");
+
+  if(isset($_GET['act']) && $_GET['act']=='closeSess'){
+    $stmt = $conn->prepare("UPDATE DoomWiki.users SET SessID = NULL WHERE fst_mail = ?");
+    $stmt->bind_param("s", $user->email);
+    $stmt->execute();
+    setcookie("SessionID", "", time() + 60*60*24*365);
+    $_COOKIE["SessionID"]="";
+    header("location: /");
+  }
   ?>
   <header>
     <h1 id="logo">DOOM WIKI</h1>
