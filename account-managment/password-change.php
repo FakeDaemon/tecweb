@@ -9,15 +9,35 @@
   <meta name="keywords" content="DOOM"/>
   <meta name="description" content="DOOM Wiki"/>
   <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano , Angeloni Alberto"/>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
   <?php
+  $level=1;
   require '../SCRIPTS/.php/database_connection.php';
   include '../SCRIPTS/.php/user.php';
 
   $user = new User($conn);
+  $GLOBALS['wrongPass'] = false;
+  $GLOBALS['inputDifferent'] = false;
+
   if(!$user->isLogged()) header("location: ../login.php");
+
+  if(isset($_POST['OldPassword']) && isset($_POST['NewPassword']) && isset($_POST['NewPasswordConfirm'])){
+    if(password_verify($_POST['OldPassword'], $user->password)){
+      if($_POST['NewPassword'] == $_POST['NewPasswordConfirm']){
+        $stmt = $conn->prepare("UPDATE DoomWiki.users SET psw = ?, lst_psw_change = ? WHERE SessID = ?");
+        $currentDate = date('Y-m-d H:i:s');
+        // $psw=password_hash($_POST['NewPassword'], PASSWORD_DEFAULT);
+        $psw=$_POST['NewPassword'];
+        $stmt->bind_param("sss", $psw, $currentDate, $_COOKIE['SessionID']);
+        $stmt->execute();
+      }else{
+        $GLOBALS['inputDifferent'] = true;
+      }
+    }else{
+      $GLOBALS['wrongPass'] = true;
+    }
+  }
    ?>
   <header>
     <h1 id="logo">DOOM WIKI</h1>
@@ -41,6 +61,7 @@
         <li class="MenuBarItem"><a href="../trivia.php">CURIOSITÀ</a></li>
       </ul>
       <div id="MenuUserWidget">
+        <div>
         <?php
         if($user->isLogged()) echo "<p>".$user->user_name."</p>";
         else echo "<p>OSPITE</p>";
@@ -61,9 +82,18 @@
   <div class="main">
 
     <p>CAMBIO <span lang="en">PASSWORD</span></p>
-    <form id="auth_widget">
+    <form id="auth_widget" action="password-change.php" method="POST">
+      <?php
+      if($GLOBALS['wrongPass']){
+        echo "<p class='ErrorMessage'><span lang='en'>Password</span> non corretta.</p>";
+        echo "<a class='ErrorMessage' href='credentialRecovery.php'><span lang='en'>Password</span> dimenticata?</a>";
+      }
+      if($GLOBALS['inputDifferent']){
+        echo "<p class='ErrorMessage'><span lang='en'>Password</span> non corrispondenti.</p>";
+      }
+      ?>
       <label id="OldPasswordLabel" class="up" for="LastPassword">Vecchia <span lang="en">Password</span></label>
-      <input id="LastPassword" type="password" name="OldPassword">
+      <input id="LastPassword" type="password" name="OldPassword" required>
 
       <p id="password_hints">Ricorda che la nuova <span lang="en">Password</span>: <span class="sr_only">Deve contenere almeno otto caratteri dei quali uno deve essere un numero e uno deve essere scritto in maiuscolo. Ovviamente deve essere diversa dalla precedente.</span>
       </p>
@@ -75,10 +105,10 @@
           </ul>
 
       <label id="NewPasswordLabel" class="up" for="NewPassword">Nuova <span lang="en">Password</span></label>
-      <input id="NewPassword" type="password" name="NewPassword">
+      <input id="NewPassword" type="password" name="NewPassword" required>
 
       <label id="PasswordConfirmLabel" class="up" for="NewPasswordConfirm">Conferma <span lang="en">Password</span></label>
-      <input id="NewPasswordConfirm" type="password" name="NewPasswordConfirm">
+      <input id="NewPasswordConfirm" type="password" name="NewPasswordConfirm" required>
 
       <label class="noJs" id="radio_label" for="password_visibility">
         <input id="password_visibility" type="checkbox">
