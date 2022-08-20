@@ -102,7 +102,6 @@
     $commentCount = $_GET['page']*10;
     $a=0;
     while ($comment = $result->fetch_assoc()) {
-      echo "ciao";
       if($a>=$commentCount && $commentCount<10*($_GET['page']+1)){
         echo "<div class='message'>";
         echo "<div class='userDetails'>";
