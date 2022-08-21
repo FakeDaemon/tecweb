@@ -83,7 +83,7 @@
     echo "<p>Testo della domanda</p>";
 
     echo "<div class='details'>";
-    echo "<img src='/IMAGES/ProfilePics/Default.jpg' alt='Doomguy, accedi o registrati!'>";
+    echo "<img src='/IMAGES/ProfilePics/ProfilePicN".$topic['profile_pic'].".jpg' alt=''>";
     echo "<p class='username'>".$topic['user_name']."</p>";
     echo "<p class='postDate'>Postato il ".$topic['creation_date']."</p>";
     echo "</div>";
