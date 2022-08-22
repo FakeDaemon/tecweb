@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="it" dir="ltr">
 <head>
-  <link href="../CSS/STYLE_ACCOUNTMANAGMENT.css" rel="stylesheet">
+  <link href="../CSS/STYLE_PROFILEPICCHANGE.css" rel="stylesheet">
   <link href="../CSS/STYLE_COMMON.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron" />
   <meta charset="utf-8">
@@ -103,6 +103,11 @@
         <input id="Img_5" type="radio" name="profilePic" value="5" <?php if ($user->profile_pic == 5) echo "checked"; ?>>
         <img src="../IMAGES/ProfilePics/ProfilePicN5.jpg" alt="Bruiser Pic">
         Bruiser
+      </label>
+      <label for="Img_6">
+        <input id="Img_6" type="radio" name="profilePic" value="6" <?php if ($user->profile_pic == 5) echo "checked"; ?>>
+        <img src="../IMAGES/ProfilePics/ProfilePicN6.jpg" alt="Spider Mastermind">
+        Spider Mastermind
       </label>
       <input type="submit" name="SubmitButton" value="Conferma">
     </form>
