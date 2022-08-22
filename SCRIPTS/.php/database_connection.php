@@ -1,6 +1,11 @@
 <?php
-$err = "true";
-$ini_array = parse_ini_file('CNFG/CNFGS.ini', true);
+$ini_url = 'CNFG/CNFGS.ini';
+if($level){
+  for ($i=0; $i < $level; $i++) {
+    $ini_url = '../'.$ini_url;
+  }
+}
+$ini_array = parse_ini_file($ini_url, true);
 if($ini_array){
   $err = "false";
   $servername = $ini_array['Dbcredentials']['servername'];

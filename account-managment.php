@@ -20,6 +20,17 @@
   include 'SCRIPTS/.php/user.php';
 
   $user = new User($conn);
+
+  if(!$user->isLogged()) header("location: login.php");
+
+  if(isset($_GET['act']) && $_GET['act']=='closeSess'){
+    $stmt = $conn->prepare("UPDATE DoomWiki.users SET SessID = NULL WHERE fst_mail = ?");
+    $stmt->bind_param("s", $user->email);
+    $stmt->execute();
+    setcookie("SessionID", "", time() + 60*60*24*365);
+    $_COOKIE["SessionID"]="";
+    header("location: /");
+  }
   ?>
   <header>
     <h1 id="logo">DOOM WIKI</h1>
@@ -66,6 +77,11 @@
 
     <p>GESTIONE <span lang="en">ACCOUNT</span></p>
     <div id="auth_widget">
+      <?php
+      if(isset($_GET['msg']) && $_GET['msg']=="Success"){
+          echo "<p class='status'>Modifiche effettuate con successo!</p>";
+      }
+      ?>
       <p>IMMAGINE PROFILO</p>
       <a href="account-managment/profile-pic-change.php">Cambia immagine profilo.</a>
       <a href="account-managment/profile-pic-change.php?act=rmv">Rimuovi immagine profilo.</a>
@@ -73,7 +89,7 @@
       <p>DATI ACCOUNT</p>
       <a href="account-managment/username-change.php">Cambia <span lang="en">username</span>.</a>
       <a href="account-managment/password-change.php">Cambia <span lang="en">password</span>.</a>
-      <a href="account-managment/email-change.php">Cambia <span lang="en">emails</span> associata all'account.</a>
+      <a href="account-managment/email-change.php">Cambia <span lang="en">emails</span> associate all'account.</a>
 
       <hr>
 

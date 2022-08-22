@@ -74,7 +74,7 @@
   </header>
   <div class="main">
     <?php
-    $stmt = $conn->prepare("SELECT * FROM DoomWiki.topics AS t JOIN DoomWiki.users AS u ON t.email = u.fst_mail WHERE t.id = ? ;");
+    $stmt = $conn->prepare("SELECT * FROM DoomWiki.topics AS t LEFT OUTER JOIN DoomWiki.users AS u ON t.email = u.fst_mail WHERE t.id = ? ;");
     $stmt->bind_param("i", $_GET['id']);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -83,8 +83,13 @@
     echo "<p>Testo della domanda</p>";
 
     echo "<div class='details'>";
-    echo "<img src='/IMAGES/ProfilePics/Default.jpg' alt='Doomguy, accedi o registrati!'>";
+<<<<<<< HEAD
+    echo "<img src='/IMAGES/ProfilePics/ProfilePicN".$topic['profile_pic'].".jpg' alt=''>";
     echo "<p class='username'>".$topic['user_name']."</p>";
+=======
+    echo "<img src='/IMAGES/ProfilePics/ProfilePicN".($topic['profile_pic']!=NULL ? $topic['profile_pic'] : 1).".jpg' alt=''>";
+    echo "<p class='username'>".($topic['user_name']!=NULL ? $topic['user_name'] : "utente eliminato")."</p>";
+>>>>>>> feature/accounnt-managmentCoding
     echo "<p class='postDate'>Postato il ".$topic['creation_date']."</p>";
     echo "</div>";
 
@@ -94,7 +99,7 @@
     echo "<p>Tutte le risposte</p>";
     echo "<div class='chat'>";
 
-    $stmt = $conn->prepare("SELECT * FROM DoomWiki.topics AS t JOIN DoomWiki.comments AS c ON t.id = c.topicID JOIN DoomWiki.users AS u ON u.fst_mail=c.email WHERE t.id = ? ;");
+    $stmt = $conn->prepare("SELECT * FROM DoomWiki.topics AS t JOIN DoomWiki.comments AS c ON t.id = c.topicID LEFT OUTER JOIN DoomWiki.users AS u ON u.fst_mail=c.email WHERE t.id = ? ;");
     $stmt->bind_param("i", $_GET['id']);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -103,10 +108,10 @@
     $a=0;
     while ($comment = $result->fetch_assoc()) {
       if($a>=$commentCount && $commentCount<10*($_GET['page']+1)){
-        echo "<div class='message'>";
+        echo "<div class='message".($comment["SessID"] === $_COOKIE['SessionID'] ? " ofUser" : "")."'>";
         echo "<div class='userDetails'>";
-        echo "<img src='/IMAGES/ProfilePics/ProfilePicN".$comment['profile_pic'].".jpg' alt='Doomguy, accedi o registrati!'>";
-        echo "<p class='username'>".$comment['user_name']."</p>";
+        echo "<img src='/IMAGES/ProfilePics/ProfilePicN".($comment['profile_pic']!=NULL ? $comment['profile_pic'] : 1).".jpg' alt='Doomguy, accedi o registrati!'>";
+        echo "<p class='username'>".($comment['user_name']!=NULL ? $comment['user_name'] : "utente eliminato")."</p>";
         echo "<p class='messageDatestamp'>Postato il ".$comment['writeDate']."</p>";
         echo "</div>";
         echo "<p class='text'>".$comment['commentBody']."</p>";
