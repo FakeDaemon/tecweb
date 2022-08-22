@@ -2,7 +2,7 @@
 class User{
   public function __construct($conn) {
     if(isset($_COOKIE["SessionID"])){
-      $stmt = $conn->prepare("SELECT fst_mail, scnd_mail, user_name, profile_pic, psw FROM DoomWiki.users WHERE SessID = ?;");
+      $stmt = $conn->prepare("SELECT fst_mail, scnd_mail, user_name, profile_pic, psw, role FROM DoomWiki.users WHERE SessID = ?;");
       $stmt->bind_param("s", $_COOKIE["SessionID"]);
       $stmt->execute();
       $result = $stmt->get_result();
@@ -17,10 +17,19 @@ class User{
         $this->email=$user['fst_mail'];
         $this->secondaryEmail=$user['scnd_mail'];
         $this->password=$user['psw'];
+        $this->role=$user['role'];
       }
     }else{
       $this->user_name = NULL;
     }
+  }
+  public function isSuperUser(){
+    if($this->role==='admin' || $this->role==='mod') return true;
+    return false;
+  }
+  public function isAdmin(){
+    if($this->role==='admin') return true;
+    return false;
   }
   public function isLogged(){
     if($this->user_name==NULL) return false;

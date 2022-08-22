@@ -1,0 +1,72 @@
+.main *{
+  font-family: 'Orbitron';
+}
+.main {
+  max-width: 1024px;
+  min-height: 63vh;
+  margin: 7vh auto 0 auto;
+  text-align: center;
+}
+.main > p{
+  position: relative;
+  margin: 10px auto 0 auto;
+  padding:3px;
+  font-size: 2em;
+  line-height: 40px;
+  height: 86px;
+  width: 300px;
+  border:2px solid red;
+  border-radius: 15px;
+  background-color: black;
+  z-index: 1;
+}
+#auth_widget{
+  padding-top: 50px;
+  position: relative;
+  background-color: rgb(30,30,30);
+  z-index: 0;
+  top:-50px;
+  margin:auto;
+  border:2px solid red;
+  border-radius:15px;
+  width: 90vw;
+  max-width: 400px;
+  padding-bottom: 20px;
+  font-size: 1.5em;
+}
+#auth_widget p{
+  color:#CCAE52;
+  margin-top: 10px;
+}
+#auth_widget a.noPlease{
+  color:red;
+}
+#auth_widget > a, #auth_widget > span > a{
+  text-decoration: none;
+  display: inline-block;
+  text-align: left;
+  width: 80%;
+  margin:5px auto;
+  font-size: 0.7em;
+  color:white;
+
+}
+#auth_widget > span > a{
+  text-decoration: underline;
+}
+#auth_widget > a::after {
+  content: '';
+  width: 0px;
+  margin: auto;
+  height: 1px;
+  display: block;
+  background: lightblue;
+  transition: 300ms;
+}
+
+#auth_widget >  a:hover::after {
+  width: 100%;
+}
+#auth_widget a:visited{
+  color:white;
+}
