@@ -1,0 +1,121 @@
+.main *{
+  font-family: 'Orbitron';
+}
+.main {
+  max-width: 1024px;
+  min-height: 63vh;
+  margin: 7vh auto 0 auto;
+  text-align: center;
+}
+.main > p{
+  position: relative;
+  margin: 10px auto 0 auto;
+  padding:3px;
+  font-size: 2em;
+  line-height: 40px;
+  height: 86px;
+  width: 300px;
+  border:2px solid red;
+  border-radius: 15px;
+  background-color: black;
+  z-index: 1;
+}
+#auth_widget{
+  padding-top: 50px;
+  position: relative;
+  background-color: rgb(30,30,30);
+  z-index: 0;
+  top:-50px;
+  margin:auto;
+  border:2px solid red;
+  border-radius:15px;
+  width: 90vw;
+  max-width: 400px;
+  padding-bottom: 20px;
+  font-size: 1.5em;
+}
+#auth_widget > p{
+  color:#CCAE52;
+  margin-top: 10px;
+  padding: 10px;
+}
+#auth_widget > p.ErrorMessage{
+  color:red;
+}
+#auth_widget label.up{
+  bottom: 0;
+  font-size: 0.7em;
+  color: grey;
+}
+#auth_widget > a{
+  display: inline-block;
+  color:white;
+  font-size: .7em;
+  text-align: left;
+  width: 80%;
+  margin: auto;
+}
+#auth_widget input[type="password"], #auth_widget input[type="text"]{
+  background: transparent;
+  border-bottom: 1px solid white;
+  width: 80%;
+  height: 30px;
+  display: block;
+  margin:0 auto 0 auto;
+  color:white;
+  font-size: 0.9em;
+  padding:10px;
+}
+#auth_widget label{
+  margin: 10px auto 0 auto;
+  text-align: left;
+  width: 75%;
+  height: 28px;
+  display: block;
+  position: relative;
+  font-size: 1em;
+  bottom: -20px;
+
+  -webkit-transition: bottom 0.2s 0s ease, font-size 0.5s 0s ease, color 0.5s 0s ease;
+  -moz-transition: bottom 0.2s 0s ease, font-size 0.5s 0s ease, color 0.5s 0s ease;
+  -o-transition: bottom 0.2s 0s ease, font-size 0.5s 0s ease, color 0.5s 0s ease;
+  transition: bottom 0.2s 0s ease, font-size 0.5s 0s ease, color 0.5s 0s ease;
+}
+#auth_widget label#radio_label{
+  margin:0;
+  position: static;
+  display: inline-block;
+  margin-top: 0;
+  height: auto;
+  line-height: 18px;
+  width: 75%;
+  font-size: 0.7em;
+  vertical-align: middle;
+}
+#auth_widget input[type="submit"], #auth_widget input[type="reset"]{
+  display: block;
+  margin:10px auto 0 auto;
+  width: 50%;
+  background-color: black;
+  border:2px solid red;
+  border-radius: 15px;
+  color:white;
+  height: 50px;
+  font-size: 1.3em;
+
+  -webkit-transition: border-color 0.2s 0s ease;
+  -moz-transition: border-color 0.2s 0s ease;
+  -o-transition: border-color 0.2s 0s ease;
+  transition: border-color 0.2s 0s ease;
+}
+#auth_widget input[type="reset"]{
+  font-size: 0.8em;
+  width: 40%;
+  height: 30px;
+  margin-bottom: 20px;
+}
+#auth_widget input[type="submit"]:hover,  #auth_widget input[type="reset"]:hover,
+#auth_widget input[type="reset"]:focus, #auth_widget input[type="submit"]:focus{
+  border-color: #CCAE52;
+  outline: none;
+}

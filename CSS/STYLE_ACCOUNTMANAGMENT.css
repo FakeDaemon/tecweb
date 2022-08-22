@@ -70,6 +70,9 @@
 #auth_widget a:visited{
   color:white;
 }
+#auth_widget a.noPlease:visited{
+  color:red;
+}
 hr {
   border: none;
   border-top: 3px double red;

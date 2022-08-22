@@ -77,4 +77,14 @@ form#auth_widget label input:checked + img{
   color:white;
   height: 50px;
   font-size: 1.3em;
+
+  -webkit-transition: border-color 0.2s 0s ease;
+  -moz-transition: border-color 0.2s 0s ease;
+  -o-transition: border-color 0.2s 0s ease;
+  transition: border-color 0.2s 0s ease;
+}
+#auth_widget input[type="submit"]:hover,  #auth_widget input[type="reset"]:hover,
+#auth_widget input[type="reset"]:focus, #auth_widget input[type="submit"]:focus{
+  border-color: #CCAE52;
+  outline: none;
 }

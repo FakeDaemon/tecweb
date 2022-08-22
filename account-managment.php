@@ -89,7 +89,7 @@
       <p>DATI ACCOUNT</p>
       <a href="account-managment/username-change.php">Cambia <span lang="en">username</span>.</a>
       <a href="account-managment/password-change.php">Cambia <span lang="en">password</span>.</a>
-      <a href="account-managment/email-change.php">Cambia <span lang="en">emails</span> associata all'account.</a>
+      <a href="account-managment/email-change.php">Cambia <span lang="en">emails</span> associate all'account.</a>
 
       <hr>
 
