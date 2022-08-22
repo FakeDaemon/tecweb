@@ -15,8 +15,8 @@
 <body>
   <?php
   $level=1;
-  require 'SCRIPTS/.php/database_connection.php';
-  include 'SCRIPTS/.php/user.php';
+  require '../SCRIPTS/.php/database_connection.php';
+  include '../SCRIPTS/.php/user.php';
 
   $user = new User($conn);
   if(!$user->isLogged() || !$user->isSuperUser()) header("location: account-managment.php");
