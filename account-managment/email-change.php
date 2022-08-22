@@ -18,22 +18,24 @@
   $user = new User($conn);
   if(!$user->isLogged()) header("location: ../login.php");
   $GLOBALS['wrongPass'] = false;
-  if(password_verify($_POST['Password'], $user->password)){
-    if(isset($_POST['FirstEmail']) || isset($_POST['SecondEmail'])){
-      if($_POST['SecondEmail']!=="" && $_POST['FirstEmail'] != $user->email){
-        $stmt = $conn->prepare("UPDATE DoomWiki.users SET fst_mail = ? WHERE SessID = ?");
-        $stmt->bind_param("ss", ($_POST['FirstEmail']), $_COOKIE['SessionID']);
-        $stmt->execute();
-      }
-      if($_POST['SecondEmail']!=="" && $_POST['SecondEmail'] != $user->secondaryEmail){
+  if(isset($_POST['Password']) && $_POST['Password']!=""){
+    if(password_verify($_POST['Password'], $user->password)){
+      if(isset($_POST['FirstEmail']) || isset($_POST['SecondEmail'])){
+        if($_POST['FirstEmail']!="" && $_POST['FirstEmail'] != $user->email){
+          $stmt = $conn->prepare("UPDATE DoomWiki.users SET fst_mail = ? WHERE SessID = ?");
+          $stmt->bind_param("ss", ($_POST['FirstEmail']), $_COOKIE['SessionID']);
+          $stmt->execute();
+        }
+        if($_POST['SecondEmail']!=="" && $_POST['SecondEmail'] != $user->secondaryEmail){
           $stmt = $conn->prepare("UPDATE DoomWiki.users SET scnd_mail = ? WHERE SessID = ?");
           $stmt->bind_param("ss", ($_POST['SecondEmail']), $_COOKIE['SessionID']);
           $stmt->execute();
+        }
+        header("location: ../account-managment.php?msg=Success");
       }
-      header("location: ../account-managment.php?msg=Success");
+    }else{
+      $GLOBALS['wrongPass'] = true;
     }
-  }else{
-    $GLOBALS['wrongPass'] = true;
   }
   ?>
   <header>
@@ -59,15 +61,15 @@
       </ul>
       <div id="MenuUserWidget">
         <div>
-        <?php
-        if($user->isLogged()) echo "<p>".$user->user_name."</p>";
-        else echo "<p>OSPITE</p>";
-        if($user->isLogged()) echo "<a href='account-managment.php'>Impostazioni</a>";
-        else {
-          echo "<a href='signup.php'>Registrati</a>";
-          echo "<a href='login.php'>Entra</a>";
-        }
-        ?>
+          <?php
+          if($user->isLogged()) echo "<p>".$user->user_name."</p>";
+          else echo "<p>OSPITE</p>";
+          if($user->isLogged()) echo "<a href='account-managment.php'>Impostazioni</a>";
+          else {
+            echo "<a href='signup.php'>Registrati</a>";
+            echo "<a href='login.php'>Entra</a>";
+          }
+          ?>
         </div>
         <?php
         if($user->isLogged()) echo "<img src='/IMAGES/ProfilePics/ProfilePicN".$user->profile_pic.".jpg' alt='Doomguy, accedi o registrati!'>";
@@ -88,21 +90,21 @@
       <p>Scrivi il nuovo o i nuovi indirizzi e clicca o premi su <a href="#ConfirmButton">Conferma</a> per cambiare le corrispettive informazioni.</p>
       <label for="PrimaryMail"><span lang="en">Email</span> Principale</label>
       <?php
-        if(isset($_POST['FirstEmail']) && $_POST['FirstEmail']!==''){
-          echo '<input id="PrimaryMail" type="email" name="FirstEmail" value="'.$_POST['FirstEmail'].'"';
-        }else{
-          echo '<input id="PrimaryMail" type="email" name="FirstEmail" placeholder="'.$user->email.'"';
-        }
-       ?>
+      if(isset($_POST['FirstEmail']) && $_POST['FirstEmail']!==''){
+        echo '<input id="PrimaryMail" type="email" name="FirstEmail" value="'.$_POST['FirstEmail'].'"';
+      }else{
+        echo '<input id="PrimaryMail" type="email" name="FirstEmail" placeholder="'.$user->email.'"';
+      }
+      ?>
       <input id="PrimaryMail" type="email" name="FirstEmail" placeholder="<?php echo $user->email; ?>">
       <label for="SecondaryMail"><span lang="en">Email</span> Secondaria</label>
       <?php
-        if(isset($_POST['SecondEmail']) && $_POST['SecondEmail']!==''){
-          echo '<input id="SecondaryMail" type="email" name="SecondEmail" value='.$_POST['SecondEmail'].'>';
-        }else{
-          echo '<input id="SecondaryMail" type="email" name="SecondEmail" placeholder='.$user->secondaryEmail.'>';
-        }
-       ?>
+      if(isset($_POST['SecondEmail']) && $_POST['SecondEmail']!==''){
+        echo '<input id="SecondaryMail" type="email" name="SecondEmail" value='.$_POST['SecondEmail'].'>';
+      }else{
+        echo '<input id="SecondaryMail" type="email" name="SecondEmail" placeholder='.$user->secondaryEmail.'>';
+      }
+      ?>
       <label for="Password"><span lang="en">Password</span></label>
       <input id="Password" type="password" name="Password" required>
       <label id="radio_label" for="password_visibility">

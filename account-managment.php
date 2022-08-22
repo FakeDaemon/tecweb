@@ -77,6 +77,11 @@
 
     <p>GESTIONE <span lang="en">ACCOUNT</span></p>
     <div id="auth_widget">
+      <?php
+      if(isset($_GET['msg']) && $_GET['msg']=="Success"){
+          echo "<p class='status'>Modifiche effettuate con successo!</p>";
+      }
+      ?>
       <p>IMMAGINE PROFILO</p>
       <a href="account-managment/profile-pic-change.php">Cambia immagine profilo.</a>
       <a href="account-managment/profile-pic-change.php?act=rmv">Rimuovi immagine profilo.</a>

@@ -27,10 +27,10 @@
       if($_POST['NewPassword'] == $_POST['NewPasswordConfirm']){
         $stmt = $conn->prepare("UPDATE DoomWiki.users SET psw = ?, lst_psw_change = ? WHERE SessID = ?");
         $currentDate = date('Y-m-d H:i:s');
-        // $psw=password_hash($_POST['NewPassword'], PASSWORD_DEFAULT);
-        $psw=$_POST['NewPassword'];
+        $psw=password_hash($_POST['NewPassword'], PASSWORD_DEFAULT);
         $stmt->bind_param("sss", $psw, $currentDate, $_COOKIE['SessionID']);
         $stmt->execute();
+        header("location: ../account-managment.php?msg=Success");
       }else{
         $GLOBALS['inputDifferent'] = true;
       }
@@ -84,13 +84,10 @@
     <p>CAMBIO <span lang="en">PASSWORD</span></p>
     <form id="auth_widget" action="password-change.php" method="POST">
       <?php
-      if($GLOBALS['wrongPass']){
-        echo "<p class='ErrorMessage'><span lang='en'>Password</span> non corretta.</p>";
-        echo "<a class='ErrorMessage' href='credentialRecovery.php'><span lang='en'>Password</span> dimenticata?</a>";
-      }
-      if($GLOBALS['inputDifferent']){
+      if($GLOBALS['wrongPass'])
+        echo "<p class='ErrorMessage'>Vecchia <span lang='en'>password</span> non corretta.</p>";
+      if($GLOBALS['inputDifferent'])
         echo "<p class='ErrorMessage'><span lang='en'>Password</span> non corrispondenti.</p>";
-      }
       ?>
       <label id="OldPasswordLabel" class="up" for="LastPassword">Vecchia <span lang="en">Password</span></label>
       <input id="LastPassword" type="password" name="OldPassword" required>
@@ -119,6 +116,7 @@
       <input id="ResetButton" type="reset" value="Pulisci">
 
       <a href="../help.php">Serve aiuto?</a>
+      <a class='ErrorMessage' href='credentialRecovery.php'><span lang='en'>Password</span> dimenticata?</a>
     </form>
 
   </div>
