@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="it" dir="ltr">
 <head>
-  <link href="../CSS/STYLE_EMAILCHANGE.css" rel="stylesheet">
+  <link href="../CSS/STYLE_ACCOUNTDELETE.css" rel="stylesheet">
   <link href="../CSS/STYLE_COMMON.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron" />
   <meta charset="utf-8">
-  <title>Gestione Mails | WikiDoom</title>
+  <title>Elimina Account | WikiDoom</title>
   <meta name="keywords" content="DOOM"/>
   <meta name="description" content="DOOM Wiki"/>
   <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano , Angeloni Alberto"/>
@@ -15,27 +15,25 @@
   $level=1;
   require '../SCRIPTS/.php/database_connection.php';
   include '../SCRIPTS/.php/user.php';
+
   $user = new User($conn);
+
   if(!$user->isLogged()) header("location: ../login.php");
+
   $GLOBALS['wrongPass'] = false;
   if(isset($_POST['Password']) && $_POST['Password']!=""){
     if(password_verify($_POST['Password'], $user->password)){
-      if(isset($_POST['FirstEmail']) || isset($_POST['SecondEmail'])){
-        if($_POST['FirstEmail']!="" && $_POST['FirstEmail'] != $user->email){
-          $stmt = $conn->prepare("UPDATE DoomWiki.users SET fst_mail = ? WHERE SessID = ?");
-          $stmt->bind_param("ss", ($_POST['FirstEmail']), $_COOKIE['SessionID']);
-          $stmt->execute();
-        }
-        if($_POST['SecondEmail']!=="" && $_POST['SecondEmail'] != $user->secondaryEmail){
-          $stmt = $conn->prepare("UPDATE DoomWiki.users SET scnd_mail = ? WHERE SessID = ?");
-          $stmt->bind_param("ss", ($_POST['SecondEmail']), $_COOKIE['SessionID']);
-          $stmt->execute();
-        }
-        header("location: ../account-managment.php?msg=Success");
-      }
-    }else{
-      $GLOBALS['wrongPass'] = true;
-    }
+      header("location: delete-account.php?lastChance");
+    }else $GLOBALS['wrongPass'] = true;
+  }
+  if(isset($_POST['action']) && $_POST['action']=="Conferma"){
+    $stmt = $conn->prepare("DELETE FROM DoomWiki.users WHERE SessID = ?");
+    $stmt->bind_param("s", $_COOKIE['SessionID']);
+    $stmt->execute();
+    var_dump($conn);
+    setcookie("SessionID", "", time() + 60*60*24*365);
+    $_COOKIE["SessionID"]="";
+    header("location: /");
   }
   ?>
   <header>
@@ -64,7 +62,7 @@
           <?php
           if($user->isLogged()) echo "<p>".$user->user_name."</p>";
           else echo "<p>OSPITE</p>";
-          if($user->isLogged()) echo "<a href='account-managment.php'>Impostazioni</a>";
+          if($user->isLogged()) echo "<a href='../account-managment.php'>Impostazioni</a>";
           else {
             echo "<a href='signup.php'>Registrati</a>";
             echo "<a href='login.php'>Entra</a>";
@@ -80,40 +78,39 @@
   </header>
   <div class="main">
 
-    <p>GESTIONE <span lang="en">EMAILS</span></p>
-    <form id="auth_widget" action="email-change.php" method="POST">
-      <?php if($GLOBALS['wrongPass']){
-        echo "<p class='ErrorMessage'><span lang='en'>Password</span> non corretta.</p>";
-        echo "<a class='ErrorMessage' href='credentialRecovery.php'><span lang='en'>Password</span> dimenticata?</p>";
-      }
-      ?>
-      <p>Scrivi il nuovo o i nuovi indirizzi e clicca o premi su <a href="#ConfirmButton">Conferma</a> per cambiare le corrispettive informazioni.</p>
-      <label for="PrimaryMail"><span lang="en">Email</span> Principale</label>
+    <p>CAMBIO <span lang="en">PASSWORD</span></p>
+    <form id="auth_widget" action="delete-account.php" method="POST">
       <?php
-      if(isset($_POST['FirstEmail']) && $_POST['FirstEmail']!==''){
-        echo '<input id="PrimaryMail" type="email" name="FirstEmail" value="'.$_POST['FirstEmail'].'"';
+      if($GLOBALS['wrongPass'])
+      echo "<p class='ErrorMessage'><span lang='en'>Password</span> non corretta.</p>";
+
+      if(!isset($_GET['lastChance'])){?>
+        <p>STAI PER ELIMINARE L'INTERO ACCOUNT.</p>
+        <p>Se sei certo della tua scelta inserisci la tua <span lang="en">password</span> e conferma la tua scelta.</p>
+
+        <label id="Password" class="up" for="PasswordInput">Vecchia <span lang="en">Password</span></label>
+        <input id="PasswordInput" type="password" name="Password" required>
+
+        <label class="noJs" id="radio_label" for="password_visibility">
+          <input id="password_visibility" type="checkbox">
+          Mostra <span lang="en">password</span>.
+        </label>
+
+        <input id="SubmitButton" type="submit" value="Conferma">
+        <input id="ResetButton" type="reset" value="Pulisci">
+        <a href="../help.php">Serve aiuto?</a>
+        <a class='ErrorMessage' href='credentialRecovery.php'><span lang='en'>Password</span> dimenticata?</a>
+        <?php
       }else{
-        echo '<input id="PrimaryMail" type="email" name="FirstEmail" placeholder="'.$user->email.'"';
+        ?>
+          <p>Sei sicuro della tua scelta?</p>
+          <input id="SubmitButton" type="submit" name="action" value="Conferma">
+          <a href="../help.php">Serve aiuto?</a>
+        <?php
       }
       ?>
-      <input id="PrimaryMail" type="email" name="FirstEmail" placeholder="<?php echo $user->email; ?>">
-      <label for="SecondaryMail"><span lang="en">Email</span> Secondaria</label>
-      <?php
-      if(isset($_POST['SecondEmail']) && $_POST['SecondEmail']!==''){
-        echo '<input id="SecondaryMail" type="email" name="SecondEmail" value='.$_POST['SecondEmail'].'>';
-      }else{
-        echo '<input id="SecondaryMail" type="email" name="SecondEmail" placeholder='.$user->secondaryEmail.'>';
-      }
-      ?>
-      <label for="Password"><span lang="en">Password</span></label>
-      <input id="Password" type="password" name="Password" required>
-      <label id="radio_label" for="password_visibility">
-        <input id="password_visibility" type="checkbox">
-        Mostra <span lang="en">password</span>.
-      </label>
-      <input id="ConfirmButton" type="submit" value="Conferma">
-      <input type="reset" value="Pulisci">
-      <a href="../help.php">Serve aiuto?</a>
+
+
     </form>
 
   </div>
@@ -127,6 +124,7 @@
     <img class="imgVadidCode" src="../IMAGES/valid-xhtml10.png" alt="html valido"/>
     <img class="imgVadidCode" src="../IMAGES/vcss-blue.gif" alt="css valido"/>
   </footer>
-  <script src="../SCRIPTS/.js/emailChange.js"></script>
+  <script src="../SCRIPTS/.js/passwordchangepage.js"></script>
 </body>
+
 </html>
