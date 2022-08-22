@@ -103,7 +103,7 @@
     $a=0;
     while ($comment = $result->fetch_assoc()) {
       if($a>=$commentCount && $commentCount<10*($_GET['page']+1)){
-        echo "<div class='message'>";
+        echo "<div class='message".($comment["SessID"] === $_COOKIE['SessionID'] ? " ofUser" : "")."'>";
         echo "<div class='userDetails'>";
         echo "<img src='/IMAGES/ProfilePics/ProfilePicN".($comment['profile_pic']!=NULL ? $comment['profile_pic'] : 1).".jpg' alt='Doomguy, accedi o registrati!'>";
         echo "<p class='username'>".($comment['user_name']!=NULL ? $comment['user_name'] : "utente eliminato")."</p>";
