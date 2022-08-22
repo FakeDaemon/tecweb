@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="it" dir="ltr">
 <head>
-  <link href="CSS/STYLE_SITEMANAGMENT.css" rel="stylesheet">
-  <link href="CSS/STYLE_COMMON.css" rel="stylesheet">
+  <link href="../CSS/STYLE_SITEMANAGMENT.css" rel="stylesheet">
+  <link href="../CSS/STYLE_COMMON.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron" />
   <meta charset="utf-8">
   <title>Gestione Sito | DoomWiki</title>
@@ -14,6 +14,7 @@
 
 <body>
   <?php
+  $level=1;
   require 'SCRIPTS/.php/database_connection.php';
   include 'SCRIPTS/.php/user.php';
 
@@ -46,7 +47,7 @@
           <?php
           if($user->isLogged()) echo "<p>".$user->user_name."</p>";
           else echo "<p>OSPITE</p>";
-          if($user->isLogged()) echo "<a href='account-managment.php'>Impostazioni</a>";
+          if($user->isLogged()) echo "<a href='../account-managment.php'>Impostazioni</a>";
           else {
             echo "<a href='signup.php'>Registrati</a>";
             echo "<a href='login.php'>Entra</a>";
