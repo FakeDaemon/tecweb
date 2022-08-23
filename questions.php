@@ -83,13 +83,8 @@
     echo "<p>Testo della domanda</p>";
 
     echo "<div class='details'>";
-<<<<<<< HEAD
-    echo "<img src='/IMAGES/ProfilePics/ProfilePicN".$topic['profile_pic'].".jpg' alt=''>";
-    echo "<p class='username'>".$topic['user_name']."</p>";
-=======
     echo "<img src='/IMAGES/ProfilePics/ProfilePicN".($topic['profile_pic']!=NULL ? $topic['profile_pic'] : 1).".jpg' alt=''>";
     echo "<p class='username'>".($topic['user_name']!=NULL ? $topic['user_name'] : "utente eliminato")."</p>";
->>>>>>> feature/accounnt-managmentCoding
     echo "<p class='postDate'>Postato il ".$topic['creation_date']."</p>";
     echo "</div>";
 

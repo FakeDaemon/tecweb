@@ -1,7 +1,7 @@
 <?php
 class User{
-  public function __construct($conn) {
-    if(isset($_COOKIE["SessionID"])){
+  public function __construct($conn=NULL) {
+    if(isset($conn) && isset($_COOKIE["SessionID"])){
       $stmt = $conn->prepare("SELECT fst_mail, scnd_mail, user_name, profile_pic, psw, role FROM DoomWiki.users WHERE SessID = ?;");
       $stmt->bind_param("s", $_COOKIE["SessionID"]);
       $stmt->execute();
@@ -23,6 +23,13 @@ class User{
       $this->user_name = NULL;
     }
   }
+  public static function createMod($email, $user_name, $propic){
+    $ret = new User();
+    $ret->email = $email;
+    $ret->user_name = $user_name;
+    $ret->profile_pic = $propic;
+    return $ret;
+  }
   public function isSuperUser(){
     if($this->role==='admin' || $this->role==='mod') return true;
     return false;
@@ -32,7 +39,7 @@ class User{
     return false;
   }
   public function isLogged(){
-    if($this->user_name==NULL) return false;
+    if($this->role==NULL) return false;
     return true;
   }
 }

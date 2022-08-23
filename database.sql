@@ -3,6 +3,8 @@ CREATE DATABASE DoomWiki;
 USE DoomWiki;
 DROP TABLE IF EXISTS topics;
 DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS blackList;
+DROP TABLE IF EXISTS comments;
 CREATE TABLE users(
   fst_mail varchar(256) PRIMARY KEY,
   user_name varchar(256) NOT NULL,
@@ -13,6 +15,11 @@ CREATE TABLE users(
   role ENUM('admin', 'mod', 'default'),
   profile_pic int DEFAULT '0',
   SessID varchar(256)
+);
+CREATE TABLE blackList(
+  fst_mail varchar(256) PRIMARY KEY,
+  ban_date date,
+  ban_reason text
 );
 CREATE TABLE topics(
   id int AUTO_INCREMENT PRIMARY KEY,
@@ -42,6 +49,15 @@ INSERT INTO users(fst_mail, user_name, psw, lst_psw_change, sign_in_date, scnd_m
 );
 INSERT INTO users(fst_mail, user_name, psw, lst_psw_change, sign_in_date, scnd_mail, role, profile_pic) VALUES(
   'mod', 'mod', '$2y$10$EyDf08P9xwprGAFxgdz5J.WCDmK4jIubQ6JqoPVKrpF0d7VOOez56', '2022-01-01', '2022-01-01', NULL, 'mod', 1
+);
+INSERT INTO users(fst_mail, user_name, psw, lst_psw_change, sign_in_date, scnd_mail, role, profile_pic) VALUES(
+  'mod1', 'mod', '$2y$10$EyDf08P9xwprGAFxgdz5J.WCDmK4jIubQ6JqoPVKrpF0d7VOOez56', '2022-01-01', '2022-01-01', NULL, 'mod', 1
+);
+INSERT INTO users(fst_mail, user_name, psw, lst_psw_change, sign_in_date, scnd_mail, role, profile_pic) VALUES(
+  'mod2', 'mod', '$2y$10$EyDf08P9xwprGAFxgdz5J.WCDmK4jIubQ6JqoPVKrpF0d7VOOez56', '2022-01-01', '2022-01-01', NULL, 'mod', 1
+);
+INSERT INTO users(fst_mail, user_name, psw, lst_psw_change, sign_in_date, scnd_mail, role, profile_pic) VALUES(
+  'mod3', 'mod', '$2y$10$EyDf08P9xwprGAFxgdz5J.WCDmK4jIubQ6JqoPVKrpF0d7VOOez56', '2022-01-01', '2022-01-01', NULL, 'mod', 1
 );
 INSERT INTO users(fst_mail, user_name, psw, lst_psw_change, sign_in_date, scnd_mail, role, profile_pic) VALUES(
   'user', 'user', '$2y$10$YaRydub8fwN9YdFI2cm5f.Q19YUURLZroxRVrs69Fx7EedSvvTGYe', '2022-01-01', '2022-01-01', NULL, 'default', 1

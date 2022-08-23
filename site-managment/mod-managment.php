@@ -19,7 +19,31 @@
   include '../SCRIPTS/.php/user.php';
 
   $user = new User($conn);
-  if(!$user->isLogged() || !$user->isSuperUser()) header("location: account-managment.php");
+  if(!$user->isLogged() || !$user->isAdmin()) header("location: ../login.php");
+
+  $result=$conn->query("SELECT fst_mail, user_name, profile_pic FROM DoomWiki.users WHERE ROLE = 'mod'");
+  $modsList = array();
+  while($row = $result->fetch_assoc()){
+    $mod = user::createMod($row['fst_mail'], $row['user_name'], $row['profile_pic']);
+    array_push($modsList, $mod);
+  }
+  $GLOBALS["ModNameFound"]=false;
+  if(isset($_POST['action'])){
+    foreach ($modsList as $mod) {
+      if($mod->email === $_POST['ModName']){
+        $GLOBALS["ModNameFound"]=true;
+        break;
+      }
+    }
+    if($GLOBALS["ModNameFound"]){
+      if($_POST['action']=="Ban"){
+        $stmt = $conn->prepare("DELETE FROM DoomWiki.users WHERE fst_mail = ?; INSERT INTO DoomWiki.blackList(fst_mail, ban_date) VALUES(?, ?)");
+        $currentDate = date("Y-m-d H:i:s");
+        $stmt->bind_param("ssis", htmlentities($commentBody), $currentDate, $_GET['id'], $user->email);
+        $stmt->execute();
+      }
+    }
+  }
   ?>
   <header>
     <h1 id="logo">DOOM WIKI</h1>
@@ -62,6 +86,30 @@
     </nav>
   </header>
   <div class="main">
+    <p>GESTIONE MODDERS</p>
+    <form id="auth_widget" action="mod-managment.php" method="post">
+      <label class="up" for="searchBar">Cerca Mod</label>
+      <input list="browsers" id="searchBar" type="text" name="ModName" required>
+      <textarea maxlength="300" id="text_input" name="message" placeholder="Motivo del ban o della destituzione dal ruolo di mod." required></textarea>
+      <input type="submit" name="action" value="Ban">
+      <input type="submit" name="action" value="Togli privilegi">
+      <datalist id="browsers">
+        <?php
+        foreach ($modsList as $mod) {
+          echo '<option value="'.$mod->email.'"></option>';
+        }
+        ?>
+      </datalist>
+      <p><span lang="en">Mods</span> attuali</p>
+      <p class="small">(nome utente - email)</p>
+      <ul>
+        <?php
+        foreach ($modsList as $mod) {
+          echo '<li><img src="/IMAGES/ProfilePics/ProfilePicN'.($mod->profile_pic).'.jpg" alt=""><span><span class="user_name">'.($mod->user_name).'</span><span class="email">'.($mod->email).'</span></span></li>';
+        }
+        ?>
+      </ul>
+    </form>
   </div>
   <footer id="foot">
     <p>

@@ -35,11 +35,17 @@
   font-size: 1.5em;
 }
 #auth_widget p{
+  width: 80%;
+  text-align: center;
   color:#CCAE52;
-  margin-top: 10px;
+  margin: auto;
 }
 #auth_widget a.noPlease{
   color:red;
+}
+#auth_widget p.small{
+  font-size: small;
+  color: white;
 }
 #auth_widget > a, #auth_widget > span > a{
   text-decoration: none;
@@ -69,4 +75,113 @@
 }
 #auth_widget a:visited{
   color:white;
+}
+#auth_widget label{
+  margin: 10px auto 0 auto;
+  text-align: left;
+  width: 75%;
+  height: 28px;
+  display: block;
+  position: relative;
+  font-size: 1em;
+  bottom: -20px;
+
+  -webkit-transition: bottom 0.2s 0s ease, font-size 0.5s 0s ease, color 0.5s 0s ease;
+  -moz-transition: bottom 0.2s 0s ease, font-size 0.5s 0s ease, color 0.5s 0s ease;
+  -o-transition: bottom 0.2s 0s ease, font-size 0.5s 0s ease, color 0.5s 0s ease;
+  transition: bottom 0.2s 0s ease, font-size 0.5s 0s ease, color 0.5s 0s ease;
+}
+#auth_widget label.up{
+  bottom: 0;
+  font-size: 0.7em;
+  color: grey;
+}
+#auth_widget input[type="text"], #auth_widget input[type="password"]{
+  background: transparent;
+  border-bottom: 1px solid white;
+  width: 80%;
+  height: 30px;
+  display: block;
+  margin:0 auto 0 auto;
+  color:white;
+  font-size: 0.9em;
+  padding:10px;
+}
+#auth_widget input[type="submit"], #auth_widget input[type="reset"]{
+  display: inline-block;
+  margin:10px auto;
+  padding: 0 10px;
+  background-color: black;
+  border:2px solid red;
+  border-radius: 15px;
+  color:white;
+  height: 50px;
+  font-size: 0.8em;
+
+  -webkit-transition: border-color 0.3s 0s ease;
+  -moz-transition: border-color 0.3s 0s ease;
+  -o-transition: border-color 0.3s 0s ease;
+  transition: border-color 0.3s 0s ease;
+}
+#auth_widget input[type="submit"]:hover, #auth_widget input[type="reset"]:hover,  #auth_widget input[type="reset"]:focus, #auth_widget input[type="submit"]:focus{
+  border-color: #CCAE52;
+  outline: none;
+}
+#auth_widget > ul{
+  width: 80%;
+  margin: 10px auto;
+}
+#auth_widget > ul > li{
+  display: inline-flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  width: 90%;
+  border: 1px solid red;
+  border-radius: 10px;
+  margin: 1%;
+  padding: 10px;
+  list-style: none;
+  text-align: left;
+  background-color: rgba(0,0,0,0.4);
+}
+#auth_widget > ul > li > img{
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  border: 1px solid red;
+  border-radius: 50%;
+}
+#auth_widget > ul > li > span > span{
+  display: block;
+  width: 50%;
+  margin: auto;
+}
+#auth_widget > ul > li > span > span.email{
+  font-size: small;
+}
+#auth_widget > ul > li > span > span.user_name{
+}
+#auth_widget input[type="email"], #auth_widget textarea{
+  background: transparent;
+  border-bottom: 1px solid white;
+  width: 80%;
+  height: 30px;
+  display: block;
+  margin:0 auto 0 auto;
+  color:white;
+  font-size: 0.9em;
+  padding:10px;
+}
+#auth_widget textarea{
+  font-size:0.8em;
+  height: 200px;
+  resize:vertical;
+}
+#auth_widget textarea::-webkit-scrollbar {
+    width: 5px;
+}
+
+#auth_widget textarea::placeholder{
+  color:grey;
 }
