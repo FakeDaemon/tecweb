@@ -27,8 +27,8 @@
     $mod = user::createMod($row['fst_mail'], $row['user_name'], $row['profile_pic']);
     array_push($modsList, $mod);
   }
-  $GLOBALS["ModNameFound"]=false;
   if(isset($_POST['action'])){
+    $GLOBALS["ModNameFound"]=false;
     foreach ($modsList as $mod) {
       if($mod->email === $_POST['ModName']){
         $GLOBALS["ModNameFound"]=true;
@@ -37,10 +37,20 @@
     }
     if($GLOBALS["ModNameFound"]){
       if($_POST['action']=="Ban"){
-        $stmt = $conn->prepare("DELETE FROM DoomWiki.users WHERE fst_mail = ?; INSERT INTO DoomWiki.blackList(fst_mail, ban_date) VALUES(?, ?)");
+        $stmt = $conn->prepare("DELETE FROM DoomWiki.users WHERE fst_mail = ?;");
+        $stmt2 = $conn->prepare("INSERT INTO DoomWiki.blackList(fst_mail, ban_date) VALUES(?, ?);");
         $currentDate = date("Y-m-d H:i:s");
-        $stmt->bind_param("ssis", htmlentities($commentBody), $currentDate, $_GET['id'], $user->email);
+        $stmt->bind_param("s", $_POST['ModName']);
+        $stmt2->bind_param("ss", $_POST['ModName'], $currentDate);
         $stmt->execute();
+        $stmt2->execute();
+        header("location: mod-managment.php?success");
+      }else if($_POST['action']=="Togli privilegi"){
+        $stmt = $conn->prepare("UPDATE DoomWiki.users SET role='default', SessId=NULL WHERE fst_mail=?");
+        $stmt->bind_param("s", $_POST['ModName']);
+        $stmt->execute();
+        var_dump($conn);
+        header("location: mod-managment.php?success");
       }
     }
   }
@@ -88,8 +98,13 @@
   <div class="main">
     <p>GESTIONE MODDERS</p>
     <form id="auth_widget" action="mod-managment.php" method="post">
-      <label class="up" for="searchBar">Cerca Mod</label>
+      <?php
+      if(isset($GLOBALS['ModNameFound']) && !$GLOBALS['ModNameFound']) echo "<p>Nessun utente trovato.</p>";
+      if(isset($_GET['success'])) echo "<p>Modifiche effettuate con successo.</p>";
+      ?>
+      <label id="searchBarLabel" class="up" for="searchBar">Cerca Mod per <span>email</span>.</label>
       <input list="browsers" id="searchBar" type="text" name="ModName" required>
+      <label class="up" for="text_input">Motivo del ban</label>
       <textarea maxlength="300" id="text_input" name="message" placeholder="Motivo del ban o della destituzione dal ruolo di mod." required></textarea>
       <input type="submit" name="action" value="Ban">
       <input type="submit" name="action" value="Togli privilegi">
@@ -121,7 +136,7 @@
     <img class="imgVadidCode" src="IMAGES/valid-xhtml10.png" alt="html valido"/>
     <img class="imgVadidCode" src="IMAGES/vcss-blue.gif" alt="css valido"/>
   </footer>
-  <script type="text/javascript" src="SCRIPTS/.js/authpage.js"></script>
+  <script type="text/javascript" src="../SCRIPTS/.js/mod-managment.js"></script>
   <?php $conn->close(); ?>
 </body>
 

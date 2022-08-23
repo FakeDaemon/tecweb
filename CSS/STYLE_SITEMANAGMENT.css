@@ -94,7 +94,7 @@
 #auth_widget label.up{
   bottom: 0;
   font-size: 0.7em;
-  color: grey;
+  color: lightgrey;
 }
 #auth_widget input[type="text"], #auth_widget input[type="password"]{
   background: transparent;
