@@ -20,11 +20,13 @@
   include 'SCRIPTS/.php/user.php';
 
   $user = new User($conn);
-   ?>
+  if (!(array_key_exists('cookieconsent', $_COOKIE) && $_COOKIE['cookieconsent'] === 'dismissed')) {
+    ?>
     <div class="cookie-banner js-cookie-banner">
         We use 🍪...
         <button class="js-cookie-dismiss">Accept</button>
     </div>
+  <?php } ?>
     <script type="text/javascript" src="SCRIPTS/cookie.js"></script>
     <header>
         <h1 id="logo">DOOM WIKI</h1>
