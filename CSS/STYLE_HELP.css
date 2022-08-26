@@ -19,6 +19,26 @@
   background-color: black;
   z-index: 1;
 }
+.main > div.result{
+  position: relative;
+  margin: 0 auto 0 auto;
+  width: 400px;
+  border:2px solid red;
+  border-radius: 15px;
+  background-color: black;
+  z-index: 1;
+  padding: 15px;
+}
+.main > div > p.success{
+  font-size: x-large;
+}
+.main > div > p.success{
+  font-size: x-large;
+  color: red;
+}
+.main > div > p.subTitle{
+  font-size: normal;
+}
 #auth_widget{
   padding-top: 50px;
   position: relative;

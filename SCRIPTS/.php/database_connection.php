@@ -1,6 +1,6 @@
 <?php
 $ini_url = 'CNFG/CNFGS.ini';
-if($level){
+if(isset($level)){
   for ($i=0; $i < $level; $i++) {
     $ini_url = '../'.$ini_url;
   }
