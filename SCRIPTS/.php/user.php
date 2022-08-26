@@ -31,15 +31,15 @@ class User{
     return $ret;
   }
   public function isSuperUser(){
-    if($this->role==='admin' || $this->role==='mod') return true;
+    if($this->role=='admin' || $this->role=='mod') return true;
     return false;
   }
   public function isAdmin(){
-    if($this->role==='admin') return true;
+    if($this->role=='admin') return true;
     return false;
   }
   public function isLogged(){
-    if(isset($this->role)) return true;
+    if($this->user_name!=NULL) return true;
     return false;
   }
 }
