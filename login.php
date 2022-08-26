@@ -57,7 +57,15 @@
         $ret = "wrongPassword";
       }
     }else{
-      $ret = "noUserFound";
+      $stmt = $conn->prepare("SELECT * FROM DoomWiki.blackList WHERE fst_mail = ?");
+      $stmt->bind_param("s", $_POST['email']);
+      $stmt->execute();
+      $result = $stmt -> get_result();
+      if($result->num_rows>0){
+        $ret="YouHaveBeenBanned";
+      }else{
+        $ret = "noUserFound";
+      }
     }
   }
    ?>
@@ -105,34 +113,6 @@
     <p>ACCESSO</p>
     <form id="auth_widget" method="POST" action="login.php">
       <?php
-      if(isset($_POST['email']) && isset($_POST['password']) && !empty($_POST['password']) && !empty($_POST['email'])){
-        if(isset($_POST['SaveEmail']) && $_POST['SaveEmail'] === "True"){
-          setcookie("email", $_POST['email'], time() + 60*60*24*365);
-          $_COOKIE["email"]=$_POST['email'];
-        }else{
-          setcookie("email", "", time()-3600);
-          $_COOKIE["email"]="";
-        }
-
-        $ret = "userFound";
-        $stmt = $conn->prepare("SELECT psw FROM DoomWiki.users WHERE fst_mail = ?");
-        $stmt->bind_param("s", $_POST['email']);
-        $stmt->execute();
-        $result = $stmt->get_result();
-
-        if($conn->connect_error){
-          $ret = "errorState";
-        }else if($result->num_rows > 0){
-          $row = $result->fetch_assoc();
-          if(password_verify($_POST['password'], $row['psw'])){
-            $ret = "userFound";
-          }else{
-            $ret = "wrongPassword";
-          }
-        }else{
-          $ret = "noUserFound";
-        }
-
         switch ($ret) {
           case 'noUserFound':
           case 'wrongPassword':
@@ -145,11 +125,21 @@
           echo "<p class='ErrorMessage'>Errore nel sistema durante l'accesso.</p>";
           echo "</div>";
           break;
+          case 'YouHaveBeenBanned':
+          $stmt = $conn->prepare("SELECT * FROM DoomWiki.blackList WHERE fst_mail = ?");
+          $stmt->bind_param("s", $_POST['email']);
+          $stmt->execute();
+          $result = $stmt -> get_result();
+          $row=$result->fetch_assoc();
+          echo "<div class='ErrorBox'>";
+          echo "<p class='ErrorMessage'>Sei stato bannato dal sito nel giorno<br><small>".$row['ban_date']."</small>.</p>";
+          echo "<p class='ErrorMessage'>Motivo:<br><small>".$row['ban_reason']."</small>.</p>";
+          echo "</div>";
+          break;
           default:
           // code...
           break;
         }
-      }
       ?>
       <label id="email_input_label" for="email_input" class="up"><span lang="en">Email</span></label>
       <input id="email_input" type="text" name="email"  <?php if(isset($_COOKIE['email']) && $_COOKIE['email']!="")
