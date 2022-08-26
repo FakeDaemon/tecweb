@@ -23,7 +23,7 @@ class User{
       $this->user_name = NULL;
     }
   }
-  public static function createMod($email, $user_name, $propic){
+  public static function createUser($email, $user_name, $propic){
     $ret = new User();
     $ret->email = $email;
     $ret->user_name = $user_name;
@@ -39,8 +39,8 @@ class User{
     return false;
   }
   public function isLogged(){
-    if($this->role==NULL) return false;
-    return true;
+    if(isset($this->role)) return true;
+    return false;
   }
 }
 ?>

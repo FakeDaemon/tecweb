@@ -5,6 +5,7 @@ DROP TABLE IF EXISTS topics;
 DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS blackList;
 DROP TABLE IF EXISTS comments;
+DROP TABLE IF EXISTS helpRequests;
 CREATE TABLE users(
   fst_mail varchar(256) PRIMARY KEY,
   user_name varchar(256) NOT NULL,
@@ -43,6 +44,13 @@ CREATE TABLE comments(
   FOREIGN KEY(topicID) REFERENCES topics(id)
   ON DELETE SET NULL
   ON UPDATE CASCADE
+);
+CREATE TABLE helpRequests(
+  id int AUTO_INCREMENT PRIMARY KEY,
+  requestBody text NOT NULL,
+  requestDate date NOT NULL,
+  requestEmail varchar(256) NOT NULL,
+  requestState ENUM('Pending', 'WorkingOn') DEFAULT 'Pending'
 );
 INSERT INTO users(fst_mail, user_name, psw, lst_psw_change, sign_in_date, scnd_mail, role, profile_pic) VALUES(
   'admin', 'admin', '$2y$10$YaRydub8fwN9YdFI2cm5f.Q19YUURLZroxRVrs69Fx7EedSvvTGYe', '2022-01-01', '2022-01-01', NULL, 'admin', 1

@@ -24,30 +24,30 @@
   $result=$conn->query("SELECT fst_mail, user_name, profile_pic FROM DoomWiki.users WHERE ROLE = 'mod'");
   $modsList = array();
   while($row = $result->fetch_assoc()){
-    $mod = user::createMod($row['fst_mail'], $row['user_name'], $row['profile_pic']);
+    $mod = user::createUser($row['fst_mail'], $row['user_name'], $row['profile_pic']);
     array_push($modsList, $mod);
   }
   if(isset($_POST['action'])){
-    $GLOBALS["ModNameFound"]=false;
+    $GLOBALS["ModEmailFound"]=false;
     foreach ($modsList as $mod) {
-      if($mod->email === $_POST['ModName']){
-        $GLOBALS["ModNameFound"]=true;
+      if($mod->email === $_POST['ModEmail']){
+        $GLOBALS["ModEmailFound"]=true;
         break;
       }
     }
-    if($GLOBALS["ModNameFound"]){
+    if($GLOBALS["ModEmailFound"]){
       if($_POST['action']=="Ban"){
         $stmt = $conn->prepare("DELETE FROM DoomWiki.users WHERE fst_mail = ?;");
-        $stmt2 = $conn->prepare("INSERT INTO DoomWiki.blackList(fst_mail, ban_date) VALUES(?, ?);");
+        $stmt2 = $conn->prepare("INSERT INTO DoomWiki.blackList(fst_mail, ban_date, ban_reason) VALUES(?, ?, ?);");
         $currentDate = date("Y-m-d H:i:s");
-        $stmt->bind_param("s", $_POST['ModName']);
-        $stmt2->bind_param("ss", $_POST['ModName'], $currentDate);
+        $stmt->bind_param("s", $_POST['ModEmail']);
+        $stmt2->bind_param("sss", $_POST['ModEmail'], $currentDate, htmlentities($_POST['message']));
         $stmt->execute();
         $stmt2->execute();
         header("location: mod-managment.php?success");
       }else if($_POST['action']=="Togli privilegi"){
         $stmt = $conn->prepare("UPDATE DoomWiki.users SET role='default', SessId=NULL WHERE fst_mail=?");
-        $stmt->bind_param("s", $_POST['ModName']);
+        $stmt->bind_param("s", $_POST['ModEmail']);
         $stmt->execute();
         var_dump($conn);
         header("location: mod-managment.php?success");
@@ -99,11 +99,11 @@
     <p>GESTIONE MODDERS</p>
     <form id="auth_widget" action="mod-managment.php" method="post">
       <?php
-      if(isset($GLOBALS['ModNameFound']) && !$GLOBALS['ModNameFound']) echo "<p>Nessun utente trovato.</p>";
+      if(isset($GLOBALS['ModEmailFound']) && !$GLOBALS['ModEmailFound']) echo "<p>Nessun utente trovato.</p>";
       if(isset($_GET['success'])) echo "<p>Modifiche effettuate con successo.</p>";
       ?>
       <label id="searchBarLabel" class="up" for="searchBar">Cerca Mod per <span>email</span>.</label>
-      <input list="browsers" id="searchBar" type="text" name="ModName" required>
+      <input list="browsers" id="searchBar" type="text" name="ModEmail">
       <label class="up" for="text_input">Motivo del ban</label>
       <textarea maxlength="300" id="text_input" name="message" placeholder="Motivo del ban o della destituzione dal ruolo di mod." required></textarea>
       <input type="submit" name="action" value="Ban">

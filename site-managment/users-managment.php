@@ -19,7 +19,41 @@
   include '../SCRIPTS/.php/user.php';
 
   $user = new User($conn);
-  if(!$user->isLogged() || !$user->isSuperUser()) header("location: account-managment.php");
+  if(!$user->isLogged() || !$user->isSuperUser()) echo "redirect";
+
+  $result=$conn->query("SELECT fst_mail, user_name, profile_pic FROM DoomWiki.users WHERE ROLE = 'default'");
+  $usersList = array();
+
+  while($row = $result->fetch_assoc()){
+    $temp_user = user::createUser($row['fst_mail'], $row['user_name'], $row['profile_pic']);
+    array_push($usersList, $temp_user);
+  }
+  if(isset($_POST['action'])){
+    $GLOBALS["UserEmailFound"]=false;
+    foreach ($usersList as $user) {
+      if($user->email === $_POST['UserEmail']){
+        $GLOBALS["UserEmailFound"]=true;
+        break;
+      }
+    }
+    if($GLOBALS["UserEmailFound"]){
+      if($_POST['action']=="Ban"){
+        $stmt = $conn->prepare("DELETE FROM DoomWiki.users WHERE fst_mail = ?;");
+        $stmt2 = $conn->prepare("INSERT INTO DoomWiki.blackList(fst_mail, ban_date, ban_reason) VALUES(?, ?, ?);");
+        $currentDate = date("Y-m-d H:i:s");
+        $stmt->bind_param("s", $_POST['UserEmail']);
+        $stmt2->bind_param("sss", $_POST['UserEmail'], $currentDate, htmlentities($_POST['message']));
+        $stmt->execute();
+        $stmt2->execute();
+        header("location: users-managment.php?success");
+      }else if($_POST['action']=="Rendi Mod"){
+        $stmt = $conn->prepare("UPDATE DoomWiki.users SET role='mod' WHERE fst_mail=?");
+        $stmt->bind_param("s", $_POST['UserEmail']);
+        $stmt->execute();
+        header("location: users-managment.php?success");
+      }
+    }
+  }
   ?>
   <header>
     <h1 id="logo">DOOM WIKI</h1>
@@ -62,6 +96,26 @@
     </nav>
   </header>
   <div class="main">
+    <p>GESTIONE MODDERS</p>
+    <form id="auth_widget" action="users-managment.php" method="post">
+      <?php
+      if(isset($GLOBALS['UserEmailFound']) && !$GLOBALS['UserEmailFound']) echo "<p>Nessun utente trovato.</p>";
+      if(isset($_GET['success'])) echo "<p>Modifiche effettuate con successo.</p>";
+      ?>
+      <label id="searchBarLabel" class="up" for="searchBar">Cerca utente per <span>email</span>.</label>
+      <input list="browsers" id="searchBar" type="text" name="UserEmail" required>
+      <label class="up" for="text_input">Ragione</label>
+      <textarea maxlength="300" id="text_input" name="message" placeholder="Motivo della promozione a mod o del ban dal sito."></textarea>
+      <input type="submit" name="action" value="Ban">
+      <input type="submit" name="action" value="Rendi Mod">
+      <datalist id="browsers">
+        <?php
+        foreach ($usersList as $user) {
+          echo '<option value="'.$user->email.'"></option>';
+        }
+        ?>
+      </datalist>
+    </form>
   </div>
   <footer id="foot">
     <p>

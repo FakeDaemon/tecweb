@@ -21,6 +21,17 @@
   include 'SCRIPTS/.php/user.php';
 
   $user = new User($conn);
+  if(isset($_POST['email']) && isset($_POST['message'])){
+    if($_POST['message'] != "" && strlen($_POST['message'])>5){
+      $stmt = $conn->prepare("INSERT INTO DoomWiki.helpRequests(requestBody, requestDate, requestEmail) VALUES (? , ? , ?);");
+      $currentDate = date("Y-m-d H:i:s");
+      $stmt->bind_param("sss", htmlentities($_POST['message']), $currentDate, $_POST['email']);
+      $stmt->execute();
+      header('location: help.php?Success');
+    }else{
+      header('location: help.php?WrongFormat');
+    }
+  }
    ?>
   <header>
     <h1 id="logo">DOOM WIKI</h1>
@@ -65,20 +76,55 @@
   </header>
   <div class="main">
 
-    <p>METTITI IN CONTATTO</p>
-    <form id="auth_widget">
-      <label id="email_input_label" for="email_input" class="up"><span lang="en">Email</span></label>
-      <input id="email_input" type="email" name="email" required>
+    <?php
+    if(isset($_GET['Success']) && $_GET['Success']==''){
+      ?>
+      <div class="result">
+        <p class="success">Richiesta inviata con successo.</p>
+        <p class="subTitle">La tua richiesta è stata inoltrata al nostro team di moderatori, riceverai una risposta sulla mail che hai fornito il prima possibile</p>
+      </div>
+      <?php
+    }else if(isset($_GET['WrongFormat']) && $_GET['ErrWrongFormator']==''){
+      ?>
+      <p>METTITI IN CONTATTO</p>
+      <form id="auth_widget" action="help.php" method="post">
+        <label id="email_input_label" for="email_input" class="up"><span lang="en">Email</span></label>
+        <input id="email_input" type="email" name="email" required>
 
-      <label id="textarea_label" for="text_input" class="up">Il tuo messaggio</label>
-      <textarea maxlength="300" id="text_input" name="message" placeholder="Inserisci qui il tuo messaggio, descrivi il meglio possibile il tuo dubbio. Ti contatteremo il prima possibile." required></textarea>
-      <p id="message_helper" class="noJs"><span id="message_length">0</span>/300</p>
+        <label id="textarea_label" for="text_input" class="up">Il tuo messaggio</label>
+        <textarea maxlength="300" id="text_input" name="message" placeholder="Inserisci qui il tuo messaggio, descrivi il meglio possibile il tuo dubbio. Ti contatteremo il prima possibile." required></textarea>
+        <p id="message_helper" class="noJs"><span id="message_length">0</span>/300</p>
 
-      <input type="submit" value="INVIA">
-      <input id="reset_button" type="reset" value="PULISCI">
+        <input type="submit" value="INVIA">
+        <input id="reset_button" type="reset" value="PULISCI">
 
-      <p>Problema già risolto?<br><a href="index.php">Torna alla home page!</a></p>
-    </form>
+        <p>Problema già risolto?<br><a href="index.php">Torna alla home page!</a></p>
+      </form>
+      <div class="result">
+        <p class="error">Errore durante l'invio della richiesta.</p>
+        <p class="subTitle">C'è stato un errore nell'invio della richiesta, stiamo già lavorando per risolvere il problema, riprova tra qualche minuto.</p>
+        <a href="/"></a>
+      </div>
+      <?php
+    }else{
+      ?>
+      <p>METTITI IN CONTATTO</p>
+      <form id="auth_widget" action="help.php" method="post">
+        <label id="email_input_label" for="email_input" class="up"><span lang="en">Email</span></label>
+        <input id="email_input" type="email" name="email" required>
+
+        <label id="textarea_label" for="text_input" class="up">Il tuo messaggio</label>
+        <textarea maxlength="300" id="text_input" name="message" placeholder="Inserisci qui il tuo messaggio, descrivi il meglio possibile il tuo dubbio. Ti contatteremo il prima possibile." required></textarea>
+        <p id="message_helper" class="noJs"><span id="message_length">0</span>/300</p>
+
+        <input type="submit" value="INVIA">
+        <input id="reset_button" type="reset" value="PULISCI">
+
+        <p>Problema già risolto?<br><a href="index.php">Torna alla home page!</a></p>
+      </form>
+      <?php
+    }
+     ?>
 
   </div>
   <footer id="foot">
