@@ -19,6 +19,7 @@
   include '../SCRIPTS/.php/user.php';
 
   $user = new User($conn);
+  
   if(!$user->isLogged() || !$user->isAdmin()) header("location: ../login.php");
 
   $result=$conn->query("SELECT fst_mail, user_name, profile_pic FROM DoomWiki.users WHERE ROLE = 'mod'");

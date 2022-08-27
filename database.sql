@@ -27,6 +27,9 @@ CREATE TABLE topics(
   title varchar(256) NOT NULL,
   description text,
   creation_date date NOT NULL,
+  state ENUM('Pending', 'Approved', 'Rejected') DEFAULT 'Pending',
+  rejectReason text,
+  modified_date date DEFAULT NULL,
   email varchar(256),
   FOREIGN KEY(email) REFERENCES users(fst_mail)
   ON DELETE SET NULL

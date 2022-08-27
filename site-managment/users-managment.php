@@ -19,7 +19,8 @@
   include '../SCRIPTS/.php/user.php';
 
   $user = new User($conn);
-  if(!$user->isLogged() || !$user->isSuperUser()) echo "redirect";
+  if(!$user->isLogged()) header("location: ../login.php"); 
+  if(!$user->isSuperUser()) header("location: ../error.html");
 
   $result=$conn->query("SELECT fst_mail, user_name, profile_pic FROM DoomWiki.users WHERE ROLE = 'default'");
   $usersList = array();
@@ -97,7 +98,7 @@
   </header>
   <div class="main">
     <p>GESTIONE MODDERS</p>
-    <form id="auth_widget" action="users-managment.php" method="post">
+    <form id="auth_widget" action="users-managment.php" method="get">
       <?php
       if(isset($GLOBALS['UserEmailFound']) && !$GLOBALS['UserEmailFound']) echo "<p>Nessun utente trovato.</p>";
       if(isset($_GET['success'])) echo "<p>Modifiche effettuate con successo.</p>";
@@ -105,7 +106,7 @@
       <label id="searchBarLabel" class="up" for="searchBar">Cerca utente per <span>email</span>.</label>
       <input list="browsers" id="searchBar" type="text" name="UserEmail" required>
       <label class="up" for="text_input">Ragione</label>
-      <textarea maxlength="300" id="text_input" name="message" placeholder="Motivo della promozione a mod o del ban dal sito."></textarea>
+      <textarea maxlength="300" id="text_input" name="message" placeholder="Scrivi un motivo della promozione a moderatore o del ban dal sito."></textarea>
       <input type="submit" name="action" value="Ban">
       <input type="submit" name="action" value="Rendi Mod">
       <datalist id="browsers">

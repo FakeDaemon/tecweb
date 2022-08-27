@@ -30,20 +30,51 @@
   border:2px solid red;
   border-radius:15px;
   width: 90vw;
-  max-width: 400px;
+  max-width: 500px;
   padding-bottom: 20px;
   font-size: 1.5em;
 }
-#auth_widget p{
+#auth_widget > p{
   width: 80%;
   text-align: center;
   color:#CCAE52;
   margin: auto;
 }
+#auth_widget > form > fieldset{
+  border: 2px solid red;
+  border-radius: 10px;
+  margin: 20px auto;
+  padding: 10px;
+  width: 95%;
+}
+#auth_widget > form > fieldset.RejectForm{
+  border: 0;
+}
+#auth_widget > form > fieldset.RejectForm > label,
+#auth_widget > form > fieldset.RejectForm > textarea{
+ width: 100%;
+}
+#auth_widget > form > fieldset > legend{
+  color:#CCAE52;
+}
+#auth_widget > form > fieldset > p{
+  margin: 10px auto;
+  text-align: left;
+  font-size: 0.7em;
+}
+#auth_widget > p.alert{
+  color: greenyellow;
+  font-size: xx-large;
+  margin: 15px auto;
+}
+#auth_widget > form > fieldset > p.details{
+  font-size: 0.6em;
+  margin-bottom: 0;
+}
 #auth_widget a.noPlease{
   color:red;
 }
-#auth_widget p.small{
+#auth_widget > p.small{
   font-size: small;
   color: white;
 }
@@ -159,8 +190,6 @@
 }
 #auth_widget > ul > li > span > span.email{
   font-size: small;
-}
-#auth_widget > ul > li > span > span.user_name{
 }
 #auth_widget input[type="email"], #auth_widget textarea{
   background: transparent;
