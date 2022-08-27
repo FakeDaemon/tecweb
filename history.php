@@ -74,6 +74,16 @@
     </header>
     <div class="main">
         <h1 id="replace1" lang="en">DOOM</h1>
+        <div id="box">
+            <nav>
+                <ul>
+                    <li><a href="#Trama">Trama</a></li>
+                    <li><a href="#Gameplay"><span lang="en">Gameplay</a></span></li>
+                    <li><a href="#Rilascio">Rilascio</a></li>
+                    <li><a href="#NoteL"><span lang="en">Note Legali</span></a></li>
+                </ul>
+            </nav>
+        </div>
         <article id="Riassunto">
             <h2 class="paragrafo">Un breve riassunto della saga</h2>
             <a name="Riassunto"></a>
@@ -174,7 +184,7 @@
         </article>
         <article id="Release">
             <h2 class="paragrafo"><span lang="en">Release</span></h2>
-            <a name="Release"><span lang="en"></a>
+            <a name="Rilascio"><span lang="en"></a>
             <p class="history">
                 Il primo episodio distribuito in modalità <span lang="en">shareware</span>, era essenzialmente una demo del gioco che consentiva una facile portabilità,
                 e all'epoca lo si trovava in moltissimi modi:
@@ -205,7 +215,7 @@
             </p>
         </article>
         <img src="IMAGES/motosega.jpg" alt="immagine raffigurante la celebre motosega in azione">
-        <article id="Note legali">
+        <article id="NoteL">
             <h2 class="paragrafo">Note Legali</h2>
             <a name="Note legali"></a>
             <p>
