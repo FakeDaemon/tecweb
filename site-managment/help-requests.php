@@ -19,6 +19,7 @@
 
   $user = new User($conn);
   if(!$user->isLogged() || !$user->isSuperUser()) header("location: account-managment.php");
+
   ?>
   <header>
     <h1 id="logo">DOOM WIKI</h1>
@@ -61,6 +62,17 @@
     </nav>
   </header>
   <div class="main">
+
+  <p>RICHIESTE IN ATTESA</p>
+  <form id="auth_widget" action="users-managment.php" method="get">
+      <label id="searchBarLabel" class="up" for="searchBar">Cerca utente per <span>email</span>.</label>
+      <input list="browsers" id="searchBar" type="text" name="UserEmail" required>
+      <label class="up" for="text_input">Ragione</label>
+      <textarea maxlength="300" id="text_input" name="message" placeholder="Scrivi un motivo della promozione a moderatore o del ban dal sito."></textarea>
+      <input type="submit" name="action" value="Ban">
+      <input type="submit" name="action" value="Rendi Mod">
+    </form>
+
   </div>
   <footer id="foot">
     <p>
