@@ -61,29 +61,32 @@
         <article id="Riassunto">
             <h2 class="paragrafo">Termini d’uso</h2>
             <p>
-                L'utilizzo del seguente sito web implica per l'utente la conoscenza delle seguenti condizioni.<br/>
-                Il materiale contenuto nel sito web è protetto da copyright.<br/>
+                L'utilizzo del seguente sito <span lang="en">web</span> implica per l'utente la conoscenza delle seguenti condizioni.<br/>
+                Il materiale contenuto nel sito <span lang="en">web</span> è protetto da <span lang="en">copyright</span>.<br/>
                 Nessuna responsabilità viene assunta in relazione sia al contenuto di quanto pubblicato su questo sito
                 ed all'uso che terzi ne potranno fare, sia per le eventuali contaminazioni derivanti dall'accesso, dall'interconnessione,
                 dallo scarico di materiale e programmi informatici da questo sito.<br/>
-                La informiamo che ai sensi dell’art. 13 Regolamento UE n. 2016/679 (in seguito, “GDPR”) che i Suoi dati personali, previa
-                esplicita ed espressa manifestazione del consenso mediante la selezione della casella pertinente, saranno trattati con le
+                La informiamo che ai sensi dell’<abbr title="articolo">art.</abbr> 13 Regolamento <abbr title="Unione Europea numero">UE n.</abbr>
+                2016/679 (in seguito, <abbr lang="en" title="General data protection regulation">“GDPR”</abbr>) che i Suoi dati personali, previa esplicita
+                ed espressa manifestazione del consenso mediante la selezione della casella pertinente, saranno trattati con le
                 modalità e per le finalità che seguono.<br/>
             </p>
             <h2 class="paragrafo">Oggetto del trattamento</h2>
             <p>
                 Il Titolare può trattare i Dati personali che: l’utente fornisce volontariamente (ad esempio, le informazioni fornite in sede di registrazione);
                 vengono raccolti dal Titolare automaticamente (quando accede ai Servizi, possiamo raccogliere alcune informazioni direttamente dal tuo dispositivo,
-                ricorrendo all’utilizzo di cookie e altre tecnologie analoghe per analizzare la Sua interazione con i Servizi; per ulteriori informazioni
-                sulle tipologie di cookie e tecnologie analoghe di cui ci avvaliamo, le ragioni e le rispettive modalità di controllo, verifichi
-                la nostra Cookie Policy).
+                ricorrendo all’utilizzo di <span lang="en">cookie</span> e altre tecnologie analoghe per analizzare la Sua interazione con i Servizi;
+                per ulteriori informazioni sulle tipologie di <span lang="en">cookie</span> e tecnologie analoghe di cui ci avvaliamo, le ragioni e le
+                rispettive modalità di controllo, verifichi la nostra <span lang="en">Cookie Policy</span>).</br>
 
-                I Suoi Dati personali sono trattati, indipendentemente dal Suo consenso esplicito ed espresso art. 6 lett. b), e) GDPR) per le seguenti finalità:
-                conclusione ed esecuzione dei contratti per la fornitura dei Servizi del Titolare;
-                risposta alle Sue richieste nell’ambito dell’esecuzione dei contratti per la fornitura dei Servizi del Titolare;
-                adempimento agli obblighi previsti dalla legge, da un regolamento, dalla normativa comunitaria o da un ordine dell’Autorità;
-                esercizio di attività che afferiscono a un legittimo interesse del Titolare.
-
+                I Suoi Dati personali sono trattati, indipendentemente dal Suo consenso esplicito ed espresso <abbr title="articolo">art.</abbr> 6
+                <abbr title="lettera">lett.</abbr> b), e) <abbr lang="en" title="General data protection regulation">“GDPR”</abbr>) per le seguenti finalità:
+            </p>
+                <ul class="lista">
+                <li>adempimento agli obblighi previsti dalla legge, da un regolamento, dalla normativa comunitaria o da un ordine dell’Autorità;</li>
+                <li>esercizio di attività che afferiscono a un legittimo interesse del Titolare.</li>
+                </ul>
+            <p>
                 Il conferimento dei Dati per le finalità appena menzionate ha natura obbligatoria ai fini della fornitura dei Servizi offerti dal Titolare.
                 In difetto, non saremo in grado di stipulare il contratto di fornitura dei Servizi e/o di garantire la corretta fornitura dei Servizi
                 e/o adempiere agli obblighi gravanti sul Titolare del trattamento in esecuzione del contratto di fornitura dei Servizi.
@@ -96,28 +99,34 @@
                 procedimento legale) o potremmo dover elaborare e condividere con altri soggetti tali Dati, all’esito di un giudizio di bilanciamento
                 che ci imponga di ottemperare a un obbligo che risulti prevalente rispetto al Suo interesse di protezione dei Dati.
 
-                Qualora ti chiedessimo di fornire Dati personali per ottemperare a un obbligo giuridico o in esecuzione di un contratto di fornitura
-                stipulato con Lei, Le illustreremo quali di tali Dati sia obbligatorio fornire o meno e Le daremo conto anche delle possibili
-                conseguenze di un rifiuto di comunicazione (ad esempio, la mancata fruizione dei Servizi).
-
                 Parimenti, ove raccogliessimo e utilizzassimo i Dati fondandoci su interessi legittimi (nostri o di terzi), Le daremo conto di
                 quali interessi legittimi si tratta nel caso concreto.
 
-                Solo previo un Suo specifico e distinto consenso (art. 7 GDPR), per le seguenti finalità di marketing:
-                inviarLe via e-mail, posta e/o sms e/o contatti telefonici, newsletter, comunicazioni commerciali e/o materiale pubblicitario su prodotti
-                o servizi offerti dal Titolare e rilevazione del grado di soddisfazione sulla qualità dei servizi;
-                inviarLe via e-mail, posta e/o sms e/o contatti telefonici comunicazioni commerciali e/o promozionali di soggetti terzi.
-
+                Solo previo un Suo specifico e distinto consenso (<abbr title="articolo">art.</abbr> 7
+                <abbr lang="en" title="General data protection regulation">“GDPR”</abbr>), per le seguenti finalità di marketing:
+            </p>
+                <ul class="lista">
+                <li>
+                    inviarLe via <span lang="en">e-mail</span>, posta e/o <abbr title="S M S">sms</abbr> e/o contatti telefonici,
+                    <span lang="en">newsletter</span>, comunicazioni commerciali e/o materiale pubblicitario su prodotti o servizi
+                    offerti dal Titolare e rilevazione del grado di soddisfazione sulla qualità dei servizi;
+                </li>
+                <li>
+                    inviarLe via <span lang="en">e-mail</span>, posta e/o sms e/o contatti telefonici comunicazioni commerciali e/o promozionali di soggetti
+                    terzi.
+                </li>
+              </ul>
+            <p>
                 Il conferimento dei dati per le finalità appena menzionate ha invece natura facoltativa. Può quindi decidere di non conferire alcun
                 dato o di negare successivamente la possibilità di trattare dati già forniti: in tal caso, non potrà ricevere newsletter,
                 comunicazioni commerciali e materiale pubblicitario inerenti ai Servizi offerti dal Titolare. Continuerà comunque ad avere diritto
-                ai Servizi per i quali non è necessario il suo esplicito ed espresso consenso.
-
-                Le segnaliamo che se è già un nostro cliente, potremo inviarLe comunicazioni commerciali relative a servizi e prodotti del Titolare
-                analoghi a quelli di cui ha già usufruito, salvo Suo dissenso.
+                ai Servizi per i quali non è necessario il suo esplicito ed espresso consenso.</br>
 
                 Qualora avesse necessità di ulteriori informazioni sulla base giuridica e/o sulle finalità del trattamento dei Suoi Dati, ci contatti
-                al seguente indirizzo: onoranzeformentin@gmail.com.
+                al seguente indirizzo: DoomWiki@gmail.com.</br>
+            </p>
+            <h2 class="paragrafo">Modalità di trattamento e comunicazione dei Dati personali</h2>
+            <p>
                 Modalità di trattamento e comunicazione dei Dati personali
 
                 Il trattamento dei Suoi dati personali è realizzato per mezzo delle operazioni indicate all’art. 4 n. 2 GDPR e precisamente:
@@ -258,7 +267,7 @@
                 trattamento (anonimizzazione) o proporre reclamo all'Autorità Garante per la Protezione dei Dati, qualora ritenesse siano stati violati
                 i suoi diritti.
             </p>
-            
+
         </article>
     </div>
     <footer id="foot">
