@@ -14,7 +14,9 @@
 
 <body>
     <div class="cookie-banner js-cookie-banner">
-        We use 🍪...
+        IL nostro sito utilizza dei <span lang="en">cookie</span> per personalizzare
+        il contenuto e analizzare il traffico di rete.
+         <a href=cookie_informativa.html>Leggi di più riguardo ai <span lang="en">cookie</span></a> 
         <button class="js-cookie-dismiss">Accept</button>
     </div>
     <script type="text/javascript" src="SCRIPTS/cookie.js"></script>
