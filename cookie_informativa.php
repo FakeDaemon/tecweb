@@ -89,7 +89,7 @@
             <p>
                 Il conferimento dei Dati per le finalità appena menzionate ha natura obbligatoria ai fini della fornitura dei Servizi offerti dal Titolare.
                 In difetto, non saremo in grado di stipulare il contratto di fornitura dei Servizi e/o di garantire la corretta fornitura dei Servizi
-                e/o adempiere agli obblighi gravanti sul Titolare del trattamento in esecuzione del contratto di fornitura dei Servizi.
+                e/o adempiere agli obblighi gravanti sul Titolare del trattamento in esecuzione del contratto di fornitura dei Servizi.</br>
 
                 In particolare, la base giuridica per il trattamento dei Suoi Dati personali risiede nello specifico contesto in cui vengono raccolti.
                 La ragione principale per cui i Dati personali vengono da Noi raccolti e utilizzati risiede nell’esecuzione del contratto di fornitura
@@ -97,10 +97,10 @@
                 Titolare, salvo che tale interesse non sia in conflitto con gli interessi di protezione dei Suoi Dati o con i Suoi diritti e libertà
                 fondamentali). In taluni casi, potremmo avere un obbligo giuridico di raccolta dei Suoi Dati personali (ad esempio, nell’ambito di un
                 procedimento legale) o potremmo dover elaborare e condividere con altri soggetti tali Dati, all’esito di un giudizio di bilanciamento
-                che ci imponga di ottemperare a un obbligo che risulti prevalente rispetto al Suo interesse di protezione dei Dati.
+                che ci imponga di ottemperare a un obbligo che risulti prevalente rispetto al Suo interesse di protezione dei Dati.</br>
 
                 Parimenti, ove raccogliessimo e utilizzassimo i Dati fondandoci su interessi legittimi (nostri o di terzi), Le daremo conto di
-                quali interessi legittimi si tratta nel caso concreto.
+                quali interessi legittimi si tratta nel caso concreto.</br>
 
                 Solo previo un Suo specifico e distinto consenso (<abbr title="articolo">art.</abbr> 7
                 <abbr lang="en" title="General data protection regulation">“GDPR”</abbr>), per le seguenti finalità di marketing:
@@ -127,28 +127,35 @@
             </p>
             <h2 class="paragrafo">Modalità di trattamento e comunicazione dei Dati personali</h2>
             <p>
-                Modalità di trattamento e comunicazione dei Dati personali
-
-                Il trattamento dei Suoi dati personali è realizzato per mezzo delle operazioni indicate all’art. 4 n. 2 GDPR e precisamente:
+                Il trattamento dei Suoi dati personali è realizzato per mezzo delle operazioni indicate all’<abbr title="articolo">art.</abbr>
+                4 <abbr title="numero">n.</abbr> 2 <abbr title="General data protection regulation">GDPR</abbr> e precisamente:
                 raccolta, registrazione, organizzazione, conservazione, consultazione, elaborazione, modificazione, selezione, estrazione,
                 raffronto, utilizzo, interconnessione, blocco, comunicazione, cancellazione e distruzione dei dati. I Suoi dati personali sono sottoposti
-                a trattamento sia cartaceo che elettronico e/o automatizzato.
+                a trattamento elettronico automatizzato.</br>
 
                 I Dati personali saranno trattati da Noi e da soggetti (interni ed esterni) specificamente autorizzati dal Titolare del trattamento ai
-                sensi dell’art. 4 n. 10 del Regolamento UE 2016/679 e operanti sotto la supervisione di quest’ultimo, nel rispetto delle istruzioni
-                ricevute e dei vincoli contrattuali tra questi intercorrenti. A titolo meramente esemplificativo, i Dati potranno essere trattati/comunicati
-                da/a:
-                dipendenti e collaboratori del Titolare, nella loro qualità di incaricati e/o responsabili del trattamento e/o amministratori di sistema;
-                società e/o professionisti che svolgono attività esterna per conto del Titolare, nella loro qualità di responsabili del trattamento;
-                consulenti incaricati della tenuta della gestione contabile per conto del Titolare del trattamento;
-                legali ai quali il Titolare ha conferito apposito mandato professionale.
+                sensi dell’<abbr title="articolo">art.</abbr> 4 <abbr title="numero">n.</abbr> 10 del Regolamento <abbr title="Unione Europea">UE</abbr>
+                2016/679 e operanti sotto la supervisione di quest’ultimo, nel rispetto delle istruzioni ricevute e dei vincoli contrattuali tra questi
+                intercorrenti. A titolo meramente esemplificativo, i Dati potranno essere trattati/comunicati da/a:
+            </p>
 
-                I Dati di cui al punto n. 1 (Oggetto del trattamento) possono essere comunicati a soggetti specificamente autorizzati dal
-                Titolare del trattamento ai sensi dell’art. 4 n. 10 del Regolamento UE 2016/679, esclusivamente alle finalità di cui al
-                punto n. 2 (Finalità e base giuridica del trattamento dei Dati personali) e con le modalità di cui al presente punto n. 3
-                (Modalità di trattamento e comunicazione dei Dati personali).
+            <ul class="lista">
+              <li> dipendenti e collaboratori del Titolare, nella loro qualità di incaricati e/o responsabili del trattamento e/o amministratori di
+                 sistema
+              </li>
+              <li>
+                società e/o professionisti che svolgono attività esterna per conto del Titolare, nella loro qualità di responsabili del trattamento
+              </li>
+              <li>
+                consulenti incaricati della tenuta della gestione contabile per conto del Titolare del trattamento
+              </li>
+              <li>
+                legali ai quali il Titolare ha conferito apposito mandato professionale
+              </li>
+            </ul>
 
-                I Dati personali vengono trattati dal Titolare avvalendosi di server ubicati in territorio UE.
+            <p>
+                I Dati personali vengono trattati dal Titolare avvalendosi di server ubicati in territorio <abbr title="Unione Europea">UE</abbr>.</br>
 
                 Resta in ogni caso inteso che il Titolare, ove si rendesse necessario, avrà facoltà di spostare i server di riferimento anche
                 in territori extra-UE. In tal caso, il Titolare assicura sin d’ora che il trasferimento dei dati extra-UE avverrà in conformità
