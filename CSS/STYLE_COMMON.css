@@ -251,6 +251,7 @@ transition: transform 0.2s 0s ease;
   margin:auto;
 }
 #MenuUserWidget > div > p{
+  background-color: black;
   display: block;
   height: 30%;
   width: 100%;
@@ -269,12 +270,12 @@ transition: transform 0.2s 0s ease;
   border: 1px solid red;
 }
 
-
-
-
-
+p {
+  background-color: rgb(50, 0, 0);
+}
 
 .lista {
+    background-color: rgb(50, 0, 0);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
