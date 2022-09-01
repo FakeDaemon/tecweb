@@ -158,123 +158,94 @@
                 I Dati personali vengono trattati dal Titolare avvalendosi di server ubicati in territorio <abbr title="Unione Europea">UE</abbr>.</br>
 
                 Resta in ogni caso inteso che il Titolare, ove si rendesse necessario, avrà facoltà di spostare i server di riferimento anche
-                in territori extra-UE. In tal caso, il Titolare assicura sin d’ora che il trasferimento dei dati extra-UE avverrà in conformità
-                alle disposizioni di legge applicabili, previa stipula delle clausole contrattuali standard previste dalla Commissione Europea.
+                in territori extra-<abbr title="Unione Europea">UE</abbr>. In tal caso, il Titolare assicura sin d’ora che il trasferimento dei
+                dati extra-<abbr title="Unione Europea">UE</abbr> avverrà in conformità alle disposizioni di legge applicabili, previa stipula
+                delle clausole contrattuali standard previste dalla Commissione Europea.</br>
 
                 Il Titolare tratterà i dati personali per il tempo necessario per adempiere alle finalità di cui sopra e comunque per non oltre
-                12 mesi dalla cessazione del rapporto per le Finalità del trattamento e per non oltre 12 mesi dalla raccolta dei dati per le
-                Finalità di marketing.
-                Diritti dell’interessato
-
-                Nella Sua qualità di interessato, ha i diritti di cui all’artt. 15-21 GDPR e precisamente i diritti di:
-                ottenere dal Titolare la conferma se sia o meno in corso un trattamento di Dati personali; in tal caso, ha diritto ad ottenerne
-                l’accesso limitatamente a quelli che La riguardano e avrà diritto di ricevere dal Titolare la loro relativa comunicazione in forma intelligibile;
-                ottenere l’indicazione:
-                a) dell’origine dei dati personali;
-                b) delle finalità e modalità del trattamento;
-                c) della logica applicata in caso di trattamento effettuato con l’ausilio di strumenti elettronici;
-                d) degli estremi identificativi del titolare, dei responsabili e del rappresentante designato ai sensi dell’art. 3, comma 1, GDPR;
-                e) dei soggetti o delle categorie di soggetti ai quali i dati personali possono essere comunicati o che possono venirne a conoscenza
-                in qualità di rappresentanti designati nel territorio dello Stato, di responsabili o incaricati;
-                ottenere:
-                a) l’aggiornamento, la rettificazione ovvero, quando vi ha interesse, l’integrazione dei dati;
-                b) la cancellazione, la trasformazione in forma anonima o il blocco dei dati trattati in violazione di legge, compresi
-                quelli di cui non è necessaria la conservazione in relazione agli scopi per i quali i dati sono stati raccolti o successivamente trattati;
-                c) l’attestazione che le operazioni di cui alle lettere a) e b) sono state portate a conoscenza, anche per quanto riguarda il loro contenuto,
-                di coloro ai quali i dati sono stati comunicati o diffusi, eccettuato il caso in cui tale adempimento si riveli impossibile o comporti un
-                impiego di mezzi manifestamente sproporzionato rispetto al diritto tutelato;
-                chiedere al Titolare la limitazione del trattamento alle condizioni e per le finalità di cui all’art. 18 GDPR;
-                proporre reclamo a un’Autorità di vigilanza;
-                ricevere, in formato strutturato, di uso comune e leggibile da dispositivo automatico, i Dati personali che La riguardano forniti al
-                Titolare e trasmetterli ad altro titolare ai sensi e alle condizioni dell’art. 20 GDPR (c.d. portabilità dei dati);
-                opporsi, in tutto o in parte: a) per motivi legittimi al trattamento dei dati personali che La riguardano, ancorché pertinenti allo scopo
-                della raccolta; b) al trattamento di dati personali che La riguardano a fini di invio di materiale pubblicitario o di vendita diretta o per
-                il compimento di ricerche di mercato o di comunicazione commerciale, mediante l’uso di sistemi automatizzati di chiamata senza l’intervento
-                di un operatore mediante e-mail e/o mediante modalità di marketing tradizionali mediante telefono e/o posta cartacea. Si fa presente che il
-                diritto di opposizione dell’interessato, esposto al precedente punto b), per finalità di marketing diretto mediante modalità automatizzate
-                si estende a quelle tradizionali e che comunque resta salva la possibilità per l’interessato di esercitare il diritto di opposizione anche
-                solo in parte. Pertanto, l’interessato può decidere di ricevere solo comunicazioni mediante modalità tradizionali ovvero solo comunicazioni
-                automatizzate oppure nessuna delle due tipologie di comunicazione.
-
-                Modalità di esercizio dei diritti
-
-                Potrà in qualsiasi momento esercitare i diritti inviando un’e-mail a onoranzeformentin@gmail.com.
-
-                Titolare, responsabile e incaricati
-
-                Il Titolare del trattamento è Onoranze Funebri Formentin Nicola, con sede legale in Sede Conselve: Via Vittorio Emanuele II, 85, 35026 Conselve PD, P.IVA 04577980289.
-
-                L’elenco aggiornato dei responsabili e degli incaricati al trattamento è custodito presso la sede legale del Titolare del trattamento.
-
-                Informativa sui cookies
-
-                Questo sito utilizza cookie, anche di terze parti, per migliorarne l’esperienza di navigazione e consentire a chi naviga di usufruire dei nostri servizi online e di visualizzare pubblicità in linea con le proprie preferenze. I cookies utilizzati in questo sito rientrano nelle categorie descritte di seguito.
-
-                Cookie tecnici
-                Quei cookie strettamente necessari per permettere:
-
-                la navigazione e fruizione del sito web (permettendo, ad esempio, di realizzare un acquisto o autenticarsi per accedere ad aree
-                riservate, “cookie di navigazione o di sessione”);
-                la raccolta di informazioni, in forma aggregata, sul numero degli utenti e su come questi visitano il sito stesso (“cookie analytics”);
-                la navigazione in funzione di una serie di criteri selezionati (ad esempio, la lingua, i prodotti selezionati per l'acquisto,
-                “cookie di funzionalità”) al fine di migliorare il servizio reso allo stesso.
-
-                Cookie di profilazione di terze parti
-                Tali cookie sono installati da soggetti diversi da Onoranze Funebri Formentin Nicola e l'installazione degli stessi richiede il tuo consenso.
-
-                Ti riportiamo quindi di seguito i link alle informative privacy delle terze parti dove potrai esprimere il tuo consenso
-                all'installazione di tali cookie evidenziando che, laddove non effettuassi alcuna scelta e decidessi di proseguire comunque
-                con la navigazione all'interno del presente sito web, acconsentirai all'uso di tali cookie.
-
-                Google Analytics
-                Il presente sito web utilizza cookie di terze parti appartenenti a Google Inc. per la raccolta dei dati di navigazione degli utenti.
-                I dati così raccolti vengono unicamente impiegati con lo scopo di generare report statistici all'interno dello strumento di analisi
-                Google Analytics.
-
-                Può essere effettuata anche una profilazione demografica degli utenti, estraendo dati statisticamente rilevanti tra cui fascia di età,
-                sesso, categorie di interesse.
-
-                Maggiori informazioni sul trattamento dei dati da parte di Google Inc. possono essere reperite al seguente indirizzo:
-                http://www.google.com/analytics/learn/privacy.html
-
-                Per disattivare Google Analytics per la pubblicità display o per personalizzare i tipi di annunci visualizzati, è possibile
-                accedere all'indirizzo: https://www.google.it/settings/ads
-
-                Per disattivare completamente la raccolta dei dati statistici da parte di Google Analytics è possibile installare il
-                componente aggiuntivo per browser, gratuitamente scaricabile dall'indirizzo: https://tools.google.com/dlpage/gaoptout/
-
-                http://www.google.com/intl/it/policies/technologies/types/
-                https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage
-
-                Bing
-                https://privacy.microsoft.com/it-it/privacystatement/
-
-                Facebook
-                https://www.facebook.com/help/cookies/?ref=sitefooter
-                https://fbcdn-dragon-a.akamaihd.net/hphotos-ak-xpa1/t39.2365-6/851576_193932070769264_1415834022_n.pdf
-
-                In aggiunta a quanto sopra esposto, potrai comunque impostare il tuo browser in maniera da rifiutare automaticamente la
-                ricezione dei cookie attivando l'apposita opzione: il mancato utilizzo dei cookie tecnici, tuttavia, potrebbe comportare difficoltà
-                nell'interazione con il presente sito.
-
-                Le impostazioni per gestire o disattivare i cookie possono variare a seconda del browser internet utilizzato, pertanto, per
-                avere maggiori informazioni sulle modalità con le quali compiere tali operazioni, suggeriamo all’Utente di consultare il manuale del
-                proprio dispositivo o la funzione “Aiuto” o “Help” del proprio browser internet.
-
-                Di seguito si indicano agli Utenti i link che spiegano come gestire o disabilitare i cookie per i browser internet più diffusi:
-
-                Internet Explorer: http://windows.microsoft.com/it-IT/internet-explorer/delete-manage-cookies
-                Google Chrome: https://support.google.com/chrome/answer/95647
-                Mozilla Firefox: http://support.mozilla.org/it/kb/Gestione%20dei%20cookie
-                Opera: https://help.opera.com/en/latest/web-preferences/#cookies
-                Safari: https://support.apple.com/it-it/guide/safari/sfri11471/mac
-
-                Ai sensi degli artt. 15-22 del GDPR, l'utente ha il diritto di richiedere, scrivendo all'indirizzo del titolare del presente sito,
-                l'accesso ai suoi dati personali, la rettifica o la cancellazione degli stessi o anche semplicemente la limitazione del loro
-                trattamento (anonimizzazione) o proporre reclamo all'Autorità Garante per la Protezione dei Dati, qualora ritenesse siano stati violati
-                i suoi diritti.
+                 12 mesi dalla raccolta dei dati per le Finalità di marketing.</br>
             </p>
-
+            <h2 class="paragrafo">Diritti dell’interessato</h2>
+            <p>
+                Nella Sua qualità di interessato, ha i diritti di cui all’<abbr title="articoli">artt.</abbr> 15-21
+                <abbr title="General data protection regulation">GDPR</abbr> e precisamente i diritti di:
+            </p>
+            <ul class="lista">
+              <li>
+                ottenere dal Titolare la conferma se sia o meno in corso un trattamento di Dati personali, in tal caso, ha diritto ad ottenerne
+                l’accesso limitatamente a quelli che La riguardano e avrà diritto di ricevere dal Titolare la loro relativa comunicazione in forma intelligibile
+              </li>
+              <li>
+                ottenere l’indicazione:
+              </li>
+                <ol>
+                   <li>dell’origine dei dati personali</li>
+                   <li>delle finalità e modalità del trattamento</li>
+                   <li>della logica applicata in caso di trattamento effettuato con l’ausilio di strumenti elettronici</li>
+                   <li>degli estremi identificativi del titolare, dei responsabili e del rappresentante designato ai sensi dell’
+                       <abbr title="articolo">art.</abbr> 3, comma 1, <abbr title="General data protection regulation">GDPR</abbr></li>
+                   <li>dei soggetti o delle categorie di soggetti ai quali i dati personali possono essere comunicati o che possono venirne a conoscenza
+                       in qualità di rappresentanti designati nel territorio dello Stato, di responsabili o incaricati</li>
+                </ol>
+              <li>
+                ottenere:
+              </li>
+                <ol>
+                   <li>l’aggiornamento, la rettificazione ovvero, quando vi ha interesse, l’integrazione dei dati</li>
+                   <li>la cancellazione, la trasformazione in forma anonima o il blocco dei dati trattati in violazione di legge, compresi
+                       quelli di cui non è necessaria la conservazione in relazione agli scopi per i quali i dati sono stati raccolti o
+                       successivamente trattati</li>
+                   <li>l’attestazione che le operazioni di cui ai punti 1) e 2) sono state portate a conoscenza, anche per quanto riguarda il loro contenuto,
+                       di coloro ai quali i dati sono stati comunicati o diffusi, eccettuato il caso in cui tale adempimento si riveli impossibile o comporti
+                       un impiego di mezzi manifestamente sproporzionato rispetto al diritto tutelato</li>
+                   <li>chiedere al Titolare la limitazione del trattamento alle condizioni e per le finalità di cui all’<abbr title="articolo">art.</abbr>
+                       18 <abbr title="General data protection regulation">GDPR</abbr></li>
+                   <li>proporre reclamo a un’Autorità di vigilanza</li>
+                   <li>ricevere, in formato strutturato, di uso comune e leggibile da dispositivo automatico, i Dati personali che La riguardano forniti al
+                       Titolare e trasmetterli ad altro titolare ai sensi e alle condizioni dell’<abbr title="articolo">art.</abbr> 20
+                       <abbr title="General data protection regulation">GDPR</abbr></li>
+                </ol>
+              <li>
+                opporsi, in tutto o in parte:
+              </li>
+                 <ol>
+                    <li>per motivi legittimi al trattamento dei dati personali che La riguardano, ancorché pertinenti allo scopo
+                        della raccolta</li>
+                    <li>al trattamento di dati personali che La riguardano a fini di invio di materiale pubblicitario o di vendita diretta o per
+                        il compimento di ricerche di mercato o di comunicazione commerciale, mediante l’uso di sistemi automatizzati di chiamata
+                        senza l’intervento di un operatore mediante <span lang="en">e-mail</span> e/o mediante modalità di <span lang="en">marketing</span>
+                        tradizionali mediante telefono e/o posta cartacea</li>
+                 </ol>
+              </ul>
+              <p>
+                Si fa presente che il diritto di opposizione dell’interessato, esposto al precedente punto 2), per finalità di <span lang="en">marketing</span>
+                diretto mediante modalità automatizzate si estende a quelle tradizionali e che comunque resta salva la possibilità per l’interessato di
+                esercitare il diritto di opposizione anche solo in parte. Pertanto, l’interessato può decidere di ricevere solo comunicazioni mediante
+                modalità tradizionali ovvero solo comunicazioni automatizzate oppure nessuna delle due tipologie di comunicazione.
+              </p>
+              <h2 class="paragrafo">Modalità di esercizio dei diritti</h2>
+              <p>
+                Potrà in qualsiasi momento esercitare i diritti inviando un’<span lang="en">e-mail</span> a DoomWiki@gmail.com
+              </p>
+              <h2 class="paragrafo">Informativa sui <span lang="en">cookie</span></h2>
+              <p>
+                Questo sito utilizza <span lang="en">cookie</span>, anche di terze parti, per migliorarne l’esperienza di navigazione e consentire a
+                chi naviga di usufruire dei nostri servizi <span lang="en">online</span> e di visualizzare pubblicità in linea con le proprie preferenze.
+                I <span lang="en">cookie</span> utilizzati in questo sito rientrano nelle categorie descritte di seguito.
+              </p>
+              <dl class="lista">
+                <dt><h3><span lang="en">Cookie</span> tecnici</h3></dt>
+                  <dd>Quei cookie strettamente necessari per permettere:
+                    <ul>
+                      <li>la navigazione e fruizione del sito <span lang="en">web</span> (permettendo, ad esempio, di realizzare un acquisto o autenticarsi
+                          per accedere ad aree riservate, “<span lang="en">cookie</span> di navigazione o di sessione”)</li>
+                      <li>la raccolta di informazioni, in forma aggregata, sul numero degli utenti e su come questi visitano il sito stesso
+                          (“<span lang="en">cookie analytics</span>”)</li>
+                      <li>la navigazione in funzione di una serie di criteri selezionati (ad esempio, la lingua, i prodotti selezionati per l'acquisto,
+                          “<span lang="en">cookie</span> di funzionalità”) al fine di migliorare il servizio reso allo stesso</li>
+                    </ul>
+                  </dd>
+              </dl>
         </article>
     </div>
     <footer id="foot">
