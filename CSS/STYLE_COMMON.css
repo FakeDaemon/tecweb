@@ -57,6 +57,12 @@ header {
     z-index: 100;
 }
 
+p { background-color: rgb(50, 0, 0); }
+
+a:visited {color: #FAFE0B;}
+
+a{color: #2DFDFF;}
+
 #logo {
     display: inline-block;
     margin: 1% auto auto auto;
@@ -270,10 +276,6 @@ transition: transform 0.2s 0s ease;
   border: 1px solid red;
 }
 
-p {
-  background-color: rgb(50, 0, 0);
-}
-
 .lista {
     background-color: rgb(50, 0, 0);
     display: flex;
@@ -321,9 +323,3 @@ footer > img {
     padding: 0.8em;
     background-color: white;
 }
-
-
-
-
-  a:visited {color: #FAFE0B;}
-  a{color: #2DFDFF;}
