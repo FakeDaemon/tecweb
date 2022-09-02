@@ -19,6 +19,7 @@
   include 'SCRIPTS/.php/user.php';
 
   $user = new User($conn);
+  if(!true){ /*TRUE -> controllo se esiste $_COOKIE['nomedelcookie']*/
    ?>
    <div class="cookie-banner js-cookie-banner">
        <p>
@@ -26,8 +27,9 @@
            il contenuto e analizzare il traffico di rete.</br>
            <a href=cookie_informativa.php>Leggi di più riguardo ai <span lang="en">cookie</span></a></br>
        </p>
-       <button class="js-cookie-dismiss">Accetta</button>
+       <input type="submit" name="CookieAction" value="Accetta">
    </div>
+   <?php }?>
    <script type="text/javascript" src="SCRIPTS/cookie.js"></script>
 
     <header>
