@@ -3,6 +3,7 @@
     --background-color: rgb(50, 0, 0);
     --font-family: 'orbitron';
     --link-color: gold;
+    --menu-height: 100px;
 }
 
 @keyframes fadeInOpacity {
@@ -104,7 +105,7 @@ header {
 #NavBar{
   background-color: rgb(20,20,20);
   width: 90%;
-  height: auto;
+  min-height: var(--menu-height);
   max-width: 1024px;
   margin:auto;
   display: flex;
@@ -115,7 +116,6 @@ header {
   padding: 0;
   display: inline-flex;
   width: 75%;
-  height: auto;
   list-style: none;
   flex-flow: row nowrap;
   align-items:center;
@@ -124,7 +124,7 @@ header {
 #MenuBar .MenuBarItem{
   display: inline-block;
   width: 25%;
-  line-height: 10vh;
+  line-height: var(--menu-height);
   margin:0 auto auto auto;
   text-align: center;
   font-size: 1.5em;
@@ -153,8 +153,8 @@ header {
 #MenuBar .MenuBarItemNestedList label{
   display: inline-block;
   text-align: center;
-  height: 10vh;
-  line-height: 10vh;
+  height: 100px;
+  line-height: var(--menu-height);
   width: 100%;
   font-size: 1.5em;
   cursor: pointer;
@@ -237,7 +237,7 @@ transition: transform 0.2s 0s ease;
   display: inline-flex;
   flex-flow: row nowrap;
   align-items: center;
-  height: 10vh;
+  height: var(--menu-height);
   padding: 1vh;
   width: 25%;
   margin-left: auto;
