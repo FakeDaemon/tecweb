@@ -107,7 +107,7 @@
             </p>
                 <ul class="lista">
                 <li>
-                    inviarLe via <span lang="en">e-mail</span>, posta e/o <abbr title="S M S">sms</abbr> e/o contatti telefonici,
+                    inviarLe via <span lang="en">e-mail</span>, posta e/o messaggio e/o contatti telefonici,
                     <span lang="en">newsletter</span>, comunicazioni commerciali e/o materiale pubblicitario su prodotti o servizi
                     offerti dal Titolare e rilevazione del grado di soddisfazione sulla qualità dei servizi;
                 </li>

@@ -14,10 +14,12 @@
 
 <body>
     <div class="cookie-banner js-cookie-banner">
-        IL nostro sito utilizza dei <span lang="en">cookie</span> per personalizzare
-        il contenuto e analizzare il traffico di rete.
-         <a href=cookie_informativa.html>Leggi di più riguardo ai <span lang="en">cookie</span></a> 
-        <button class="js-cookie-dismiss">Accept</button>
+        <p>
+            Il nostro sito utilizza dei <span lang="en">cookie</span> per personalizzare
+            il contenuto e analizzare il traffico di rete.</br>
+            <a href=cookie_informativa.html>Leggi di più riguardo ai <span lang="en">cookie</span></a></br>
+        </p>
+        <button class="js-cookie-dismiss">Accetta</button>
     </div>
     <script type="text/javascript" src="SCRIPTS/cookie.js"></script>
     <header>
