@@ -14,62 +14,70 @@
 </head>
 
 <body>
-  <?php
-  require 'SCRIPTS/.php/database_connection.php';
-  include 'SCRIPTS/.php/user.php';
+    <?php
+    //controlli se c'è $_POST['CookieAction'] (isset())
+    //controlli se $_POST['CookieAction']='Accetta'
+    //{
+    //setCookie('nomedelcookie', 'valoredelcookie', 'scandenza in secondi (60*60*24*365)')
+    //$_COOKIE['nomedelcookie'] = 'valoredelcookie';
+    //header('location : history.php');
+    //}
+    require 'SCRIPTS/.php/database_connection.php';
+    include 'SCRIPTS/.php/user.php';
 
-  $user = new User($conn);
-  if(!true){ /*TRUE -> controllo se esiste $_COOKIE['nomedelcookie']*/
-   ?>
-   <div class="cookie-banner js-cookie-banner">
-       <p>
-           Il nostro sito utilizza dei <span lang="en">cookie</span> per personalizzare
-           il contenuto e analizzare il traffico di rete.</br>
-           <a href=cookie_informativa.php>Leggi di più riguardo ai <span lang="en">cookie</span></a></br>
-       </p>
-       <input type="submit" name="CookieAction" value="Accetta">
-   </div>
-   <?php }?>
-   <script type="text/javascript" src="SCRIPTS/cookie.js"></script>
+    $user = new User($conn);
+    if (true) { /*TRUE -> controllo se esiste $_COOKIE['nomedelcookie']*/
+    ?>
+        <form class="cookie-banner" action="history.php" method="post">
+            <p>
+                Il nostro sito utilizza dei <span lang="en">cookie</span> per personalizzare
+                il contenuto e analizzare il traffico di rete.</br>
+                <a href=cookie_informativa.php>Leggi di più riguardo ai <span lang="en">cookie</span></a></br>
+            </p>
+            <input type="submit" name="CookieAction" value="Accetta">
+        </form>
+    <?php
+    }
+    ?>
 
     <header>
         <h1 id="logo">DOOM WIKI</h1>
         <nav id="NavBar">
-          <ul id="MenuBar">
-            <li class="MenuBarItem" lang="en"><a href="/" lang="en">HOMEPAGE</a></li>
-            <li class="MenuBarItemNestedList">
-              <label id="NestedListLbl" for="NestedListBtn">
-                TRAMA
-              </label>
-              <input id="NestedListBtn" type="checkbox" value="Mostra Capitoli Disponibili">
-                <ul id="MenuBarNestedList">
-                  <li class="NestedListItem CurrentLocation"><a href="history.php">CAPITOLO <abbr title="Primo">I</abbr></a></li>
-                  <li class="NestedListItem"><a href="history_2.php">CAPITOLO <abbr title="Secondo">II</abbr></a></li>
-                  <li class="NestedListItem"><a href="history_3.php">CAPITOLO <abbr title="Terzo">III</abbr></a></li>
-                  <li class="NestedListItem"><a href="history_2016.php">CAPITOLO <abbr title="Quarto">IV</abbr></a></li>
-                  <li class="NestedListItem"><a href="history_eternals.php">CAPITOLO <abbr title="Quinto">V</abbr></a></li>
-                </ul>
-            </li>
-            <li class="MenuBarItem"><a href="stats.php">STATISTICHE</a></li>
-            <li class="MenuBarItem"><a href="trivia.php">CURIOSITÀ</a></li>
-          </ul>
-          <div id="MenuUserWidget">
-            <div>
-            <?php
-            if($user->isLogged()) echo "<p>".$user->user_name."</p>";
-            else echo "<p>OSPITE</p>";
-            if($user->isLogged()) echo "<a href='account-managment.php'>Impostazioni</a>";
-            else {
-              echo "<a href='signup.php'>Registrati</a>";
-              echo "<a href='login.php'>Entra</a>";
-            }
-            ?>
+            <ul id="MenuBar">
+                <li class="MenuBarItem" lang="en"><a href="/" lang="en">HOMEPAGE</a></li>
+                <li class="MenuBarItemNestedList">
+                    <label id="NestedListLbl" for="NestedListBtn">
+                        TRAMA
+                    </label>
+                    <input id="NestedListBtn" type="checkbox" value="Mostra Capitoli Disponibili">
+                    <ul id="MenuBarNestedList">
+                        <li class="NestedListItem CurrentLocation"><a href="history.php">CAPITOLO <abbr title="Primo">I</abbr></a></li>
+                        <li class="NestedListItem"><a href="history_2.php">CAPITOLO <abbr title="Secondo">II</abbr></a></li>
+                        <li class="NestedListItem"><a href="history_3.php">CAPITOLO <abbr title="Terzo">III</abbr></a></li>
+                        <li class="NestedListItem"><a href="history_2016.php">CAPITOLO <abbr title="Quarto">IV</abbr></a></li>
+                        <li class="NestedListItem"><a href="history_eternals.php">CAPITOLO <abbr title="Quinto">V</abbr></a></li>
+                    </ul>
+                </li>
+                <li class="MenuBarItem"><a href="stats.php">STATISTICHE</a></li>
+                <li class="MenuBarItem"><a href="trivia.php">CURIOSITÀ</a></li>
+            </ul>
+            <div id="MenuUserWidget">
+                <div>
+                    <?php
+                    if ($user->isLogged()) echo "<p>" . $user->user_name . "</p>";
+                    else echo "<p>OSPITE</p>";
+                    if ($user->isLogged()) echo "<a href='account-managment.php'>Impostazioni</a>";
+                    else {
+                        echo "<a href='signup.php'>Registrati</a>";
+                        echo "<a href='login.php'>Entra</a>";
+                    }
+                    ?>
+                </div>
+                <?php
+                if ($user->isLogged()) echo "<img src='/IMAGES/ProfilePics/ProfilePicN" . $user->profile_pic . ".jpg' alt='Doomguy, accedi o registrati!'>";
+                else echo "<img src='/IMAGES/ProfilePics/ProfilePicN1.jpg' alt='Doomguy, accedi o registrati!'>";
+                ?>
             </div>
-            <?php
-            if($user->isLogged()) echo "<img src='/IMAGES/ProfilePics/ProfilePicN".$user->profile_pic.".jpg' alt='Doomguy, accedi o registrati!'>";
-            else echo "<img src='/IMAGES/ProfilePics/ProfilePicN1.jpg' alt='Doomguy, accedi o registrati!'>";
-            ?>
-          </div>
         </nav>
         <script type="text/javascript">
             var trama_btn = document.getElementById("I_nested_list_span");
