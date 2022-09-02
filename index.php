@@ -44,8 +44,10 @@
         <?php
         if($user->isLogged()) echo "<p>".$user->user_name."</p>";
         else echo "<p>OSPITE</p>";
-        if($user->isLogged()) echo "<a href='account-managment.php'>Impostazioni</a>";
-        else {
+        if($user->isLogged()){
+          if($user->isSuperUser()) echo "<a href='siteManager.php'>Gestione Sito</a>";
+          echo "<a href='account-managment.php'>Impostazioni</a>";
+        }else {
           echo "<a href='signup.php'>Registrati</a>";
           echo "<a href='login.php'>Entra</a>";
         }
@@ -72,9 +74,9 @@
     <div class="TopicList">
       <p>ULTIME DOMANDE DELLA COMMUNITY</p>
       <?php
-      $result = $conn->query("SELECT * FROM DoomWiki.topics JOIN DoomWiki.users ON email = fst_mail ORDER BY creation_date LIMIT 10;");
+      $result = $conn->query("SELECT * FROM DoomWiki.topics LEFT OUTER JOIN DoomWiki.users ON email = fst_mail ORDER BY creation_date LIMIT 10;");
       while($row = $result->fetch_assoc()){
-        echo '<a href="questions.php?id='.$row['id'].'"><p class="title">'.$row['title'].'</p><p class="details">Aperto da '.$row['user_name'].' in data '.$row['creation_date'].'</p></a>';
+        echo '<a href="questions.php?id='.$row['id'].'"><p class="title">'.$row['title'].'</p><p class="details">Aperto da '.($row['user_name']!=NULL ? $row['user_name'] : "utente eliminato").' in data '.$row['creation_date'].'</p></a>';
       }
       ?>
       <a href="questions.php?id=Latest">Vedi Tutti</a>
@@ -82,9 +84,9 @@
     <div class="TopicList">
       <p>DOMANDE PIÙ DISCUSSE</p>
       <?php
-      $result = $conn->query("SELECT t.id, u.user_name, t.title, t.creation_date,COUNT(c.id) AS CommentsCount FROM DoomWiki.topics AS t JOIN DoomWiki.users AS u ON t.email = u.fst_mail LEFT OUTER JOIN DoomWiki.comments AS c ON c.topicID=t.id GROUP BY t.id ORDER BY CommentsCount DESC;");
+      $result = $conn->query("SELECT t.id, u.user_name, t.title, t.creation_date,COUNT(c.id) AS CommentsCount FROM DoomWiki.topics AS t LEFT OUTER JOIN DoomWiki.users AS u ON t.email = u.fst_mail LEFT OUTER JOIN DoomWiki.comments AS c ON c.topicID=t.id GROUP BY t.id ORDER BY CommentsCount DESC;");
       while($row = $result->fetch_assoc()){
-        echo '<a href="questions.php?id='.$row['id'].'"><p class="title">'.$row['title'].'</p><p class="details">Aperto da '.$row['user_name'].' in data '.$row['creation_date'].'</p></a>';
+        echo '<a href="questions.php?id='.$row['id'].'"><p class="title">'.$row['title'].'</p><p class="details">Aperto da '.($row['user_name']!=NULL ? $row['user_name'] : "utente eliminato").' in data '.$row['creation_date'].'</p></a>';
       }
       ?>
       <a href="questions.php?id=Comments">Vedi Tutti</a>

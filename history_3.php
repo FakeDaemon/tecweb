@@ -87,6 +87,16 @@
     </header>
     <div class="main">
         <h1 id="replace3" lang="en">DOOM 3</h1>
+        <div id="box">
+            <nav>
+                <ul>
+                    <li><a href="#Features">Features</a></li>
+                    <li><a href="#Sviluppo">Sviluppo</a></li>
+                    <li><a href="#Trama">Trama</a></li>
+                    <li><a href="#Gameplay"><span lang="en">Gameplay</span></a></li>
+                </ul>
+            </nav>
+        </div>
         <article id="Riassunto">
             <h2 class="paragrafo">Riassunto</h2>
             <p class="history">
@@ -106,16 +116,6 @@
                 Ha ricevuto un'opinione positiva da parte della critica per le sue atmosfere paurose e la sua grafica rivoluzionaria, ma è stato altrettanto criticato principalmente per il suo <span lang="en">gameplay</span>, che essendo più lento, alla lunga stancava, e per i suoi dettagli horror ricchi di <span lang="fra">cliché</span>.
             </p>
         </article>
-        <div id="box">
-            <nav>
-                <ul>
-                    <li><a href="#Features">Features</a></li>
-                    <li><a href="#Sviluppo">Sviluppo</a></li>
-                    <li><a href="#Trama">Trama</a></li>
-                    <li><a href="#Gameplay"><span lang="en">Gameplay</span></a></li>
-                </ul>
-            </nav>
-        </div>
         <article id="Features">
             <h2 class="paragrafo"></h2>
             <a name="Features"></a>

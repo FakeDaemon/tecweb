@@ -21,11 +21,13 @@
   include 'SCRIPTS/.php/user.php';
 
   $user = new User($conn);
-   ?>
+  if (!(array_key_exists('cookieconsent', $_COOKIE) && $_COOKIE['cookieconsent'] === 'dismissed')) {
+    ?>
     <div class="cookie-banner js-cookie-banner">
         We use 🍪...
         <button class="js-cookie-dismiss">Accept</button>
     </div>
+  <?php } ?>
     <script type="text/javascript" src="SCRIPTS/cookie.js"></script>
 =======
   <div class="cookie-banner js-cookie-banner">
@@ -87,6 +89,16 @@
     </header>
     <div class="main">
         <h1 id="replace2" lang="en">DOOM 2</h1>
+        <div id="box">
+            <nav>
+                <ul>
+                    <li><a href="#Trama">Trama</a></li>
+                    <li><a href="#Gameplay"><span lang="en">Gameplay</a></span></li>
+                    <li><a href="#Rilascio">Rilascio</a></li>
+                    <li><a href="#NoteL"><span lang="en">Note Legali</span></a></li>
+                </ul>
+            </nav>
+        </div>
         <article id="Riassunto">
             <h2 class="paragrafo">Riassunto</h2>
             <a name="Riassunto"></a>
@@ -167,7 +179,7 @@
         </article>
         <article id="Release">
             <h2 class="paragrafo">Release</h2>
-            <a name="Release"></a>
+            <a name="Rilascio"></a>
             <p class="history">
                 <span lang="en">Doom</span><abbr title="Secondo">II</abbr>, ha venduto circa due milioni di copie una volta immesso sul mercato, diventando così il prodotto più venduto per la <span lang="en">Software House</span>
                 <span lang="en">id Software</span> fino al 2012, quando, viene battuto dal gioco <span lang="en">Rage</span>.
@@ -191,7 +203,7 @@
         </article>
         <article id="Note Legali">
             <h2 class="paragrafo">Note Legali</h2>
-            <a name="Note Legali"></a>
+            <a name="NoteL"></a>
             <p class="history">
                 In accordo con la legge tedesca <span lang="dec">"Strafgesetzbuch"</span> 86a, <cite>"l'utilizzo di simbologie incostituzioniali è poibito al di fuori di determinati contesti quali,
                     ricerca, insegnamento e altro"</cite>.

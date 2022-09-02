@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html lang="it" dir="ltr">
-
 <head>
-  <link href="CSS/STYLE_ACCOUNTMANAGMENT.css" rel="stylesheet">
+  <link href="CSS/STYLE_SITEMANAGMENT.css" rel="stylesheet">
   <link href="CSS/STYLE_COMMON.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron" />
   <meta charset="utf-8">
-  <title>Gestione Account | WikiDoom</title>
+  <title>Gestione Sito | DoomWiki</title>
   <meta name="keywords" content="DOOM"/>
   <meta name="description" content="DOOM Wiki"/>
   <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano , Angeloni Alberto"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="SCRIPTS/css_modifier.js"></script>
 </head>
 
 <body>
@@ -20,21 +18,10 @@
   include 'SCRIPTS/.php/user.php';
 
   $user = new User($conn);
-
-  if(!$user->isLogged()) header("location: login.php");
-
-  if(isset($_GET['act']) && $_GET['act']=='closeSess'){
-    $stmt = $conn->prepare("UPDATE DoomWiki.users SET SessID = NULL WHERE fst_mail = ?");
-    $stmt->bind_param("s", $user->email);
-    $stmt->execute();
-    setcookie("SessionID", "", time() + 60*60*24*365);
-    $_COOKIE["SessionID"]="";
-    header("location: /");
-  }
+  if(!$user->isLogged() || !$user->isSuperUser()) header("location: account-managment.php");
   ?>
   <header>
     <h1 id="logo">DOOM WIKI</h1>
-
     <nav id="NavBar">
       <ul id="MenuBar">
         <li class="MenuBarItem" lang="en"><a href="/" lang="en">HOMEPAGE</a></li>
@@ -52,19 +39,19 @@
           </ul>
         </li>
         <li class="MenuBarItem"><a href="stats.php">STATISTICHE</a></li>
-        <li class="MenuBarItem"><a href="trivia.php">CURIOSITÀ</a></li>
+        <li class="MenuBarItem"><a href="stats.php">CURIOSITÀ</a></li>
       </ul>
       <div id="MenuUserWidget">
         <div>
-        <?php
-        if($user->isLogged()) echo "<p>".$user->user_name."</p>";
-        else echo "<p>OSPITE</p>";
-        if($user->isLogged()) echo "<a href='account-managment.php'>Impostazioni</a>";
-        else {
-          echo "<a href='signup.php'>Registrati</a>";
-          echo "<a href='login.php'>Entra</a>";
-        }
-        ?>
+          <?php
+          if($user->isLogged()) echo "<p>".$user->user_name."</p>";
+          else echo "<p>OSPITE</p>";
+          if($user->isLogged()) echo "<a href='account-managment.php'>Impostazioni</a>";
+          else {
+            echo "<a href='signup.php'>Registrati</a>";
+            echo "<a href='login.php'>Entra</a>";
+          }
+          ?>
         </div>
         <?php
         if($user->isLogged()) echo "<img src='/IMAGES/ProfilePics/ProfilePicN".$user->profile_pic.".jpg' alt='Doomguy, accedi o registrati!'>";
@@ -74,31 +61,16 @@
     </nav>
   </header>
   <div class="main">
+    <p>GESTIONE<br>SITO</p>
+    <form id="auth_widget" method="POST" action="login.php">
+      <p>GESTIONE UTENTI</p>
+      <?php if($user->isAdmin()) echo '<a href="site-managment/mod-managment.php">Gestione <span lang="en">modders</span>.</a>';?>
+      <a href="site-managment/users-managment.php">Gestione utenti.</a>
 
-    <p>GESTIONE <span lang="en">ACCOUNT</span></p>
-    <div id="auth_widget">
-      <?php
-      if(isset($_GET['msg']) && $_GET['msg']=="Success"){
-          echo "<p class='status'>Modifiche effettuate con successo!</p>";
-      }
-      ?>
-      <p>IMMAGINE PROFILO</p>
-      <a href="account-managment/profile-pic-change.php">Cambia immagine profilo.</a>
-      <a href="account-managment/profile-pic-change.php?act=rmv">Rimuovi immagine profilo.</a>
-
-      <p>DATI ACCOUNT</p>
-      <a href="account-managment/username-change.php">Cambia <span lang="en">username</span>.</a>
-      <a href="account-managment/password-change.php">Cambia <span lang="en">password</span>.</a>
-      <a href="account-managment/email-change.php">Cambia <span lang="en">emails</span> associate all'account.</a>
-
-      <hr>
-
-      <a href="account-managment.php?act=closeSess">Chiudi sessione.</a>
-      <a class="noPlease" href="account-managment/delete-account.php">Elimina account.</a>
-      <span><a class="smaller" href="help.php">Serve aiuto?</a></span>
-
-    </div>
-
+      <p>GESTIONE SITO</p>
+      <a href="site-managment/help-requests.php">Richieste di aiuto.</a>
+      <a href="site-managment/topic-managment.php">Gestione domande.</a>
+    </form>
   </div>
   <footer id="foot">
     <p>
@@ -110,6 +82,8 @@
     <img class="imgVadidCode" src="IMAGES/valid-xhtml10.png" alt="html valido"/>
     <img class="imgVadidCode" src="IMAGES/vcss-blue.gif" alt="css valido"/>
   </footer>
+  <script type="text/javascript" src="SCRIPTS/.js/authpage.js"></script>
+  <?php $conn->close(); ?>
 </body>
 
 </html>
