@@ -53,7 +53,7 @@ header {
     left: 0;
     height: 20vh;
     width: 100%;
-    background: linear-gradient(to bottom, #000000 50%, rgb(50, 0, 0) 90%);
+    background: linear-gradient(to bottom, #000000 59%, transparent 90%);
     z-index: 100;
 }
 
@@ -292,9 +292,23 @@ footer {
   }
 
 .cookie-banner {
-    background-color: lightblue;
-    padding: 20px;
+    background-color: black;
+    padding: 2em;
 }
+
+.cookie-banner p{
+    background-color: black;
+    color: white;
+    line-height: 1.8;
+}
+
+.cookie-banner button{
+    margin-top: 1em;
+    padding: 0.8em;
+    background-color: white;
+}
+
+
 
 
   #foot a:visited {color: #FAFE0B;}
