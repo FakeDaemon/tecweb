@@ -27,7 +27,6 @@
 
 * {
     margin: 0;
-    padding: 0;
     border: 0;
 }
 
@@ -54,7 +53,7 @@ header {
     left: 0;
     height: 20vh;
     width: 100%;
-    background: linear-gradient(to bottom, #000000 50%, rgb(50, 0, 0) 90%);
+    background: linear-gradient(to bottom, #000000 59%, transparent 90%);
     z-index: 100;
 }
 
@@ -113,6 +112,7 @@ header {
   align-items:  center;
 }
 #MenuBar{
+  padding: 0;
   display: inline-flex;
   width: 75%;
   height: auto;
@@ -251,6 +251,7 @@ transition: transform 0.2s 0s ease;
   margin:auto;
 }
 #MenuUserWidget > div > p{
+  background-color: black;
   display: block;
   height: 30%;
   width: 100%;
@@ -269,12 +270,12 @@ transition: transform 0.2s 0s ease;
   border: 1px solid red;
 }
 
-
-
-
-
+p {
+  background-color: rgb(50, 0, 0);
+}
 
 .lista {
+    background-color: rgb(50, 0, 0);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -302,10 +303,24 @@ footer > img {
 }
 
 .cookie-banner {
-    background-color: lightblue;
-    padding: 20px;
+    background-color: black;
+    padding: 2em;
+}
+
+.cookie-banner p{
+    background-color: black;
+    color: white;
+    line-height: 1.8;
+}
+
+.cookie-banner button{
+    margin-top: 1em;
+    padding: 0.8em;
+    background-color: white;
 }
 
 
+
+
   a:visited {color: #FAFE0B;}
-  a:default {color: #2DFDFF;}
+  a{color: #2DFDFF;}

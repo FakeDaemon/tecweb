@@ -38,14 +38,6 @@
   border:1px solid red;
   transition: border-color .2s ease;
 }
-/*
-.TopicList > a:default {
-  color: #2DFDFF;
-}
-*/
-.TopicList > a:visited{
-  color: #FAFE0B;
-}
 
 .TopicList > a:focus,
 .TopicList > a:hover{
@@ -53,6 +45,7 @@
   outline: none;
 }
 .TopicList > a > p{
+  background-color: transparent;
   display: inline-block;
   padding: 10px;
   color: white;

@@ -21,11 +21,15 @@
 
   $user = new User($conn);
    ?>
-    <div class="cookie-banner js-cookie-banner">
-        We use 🍪...
-        <button class="js-cookie-dismiss">Accept</button>
-    </div>
-    <script type="text/javascript" src="SCRIPTS/cookie.js"></script>
+   <div class="cookie-banner js-cookie-banner">
+       <p>
+           Il nostro sito utilizza dei <span lang="en">cookie</span> per personalizzare
+           il contenuto e analizzare il traffico di rete.</br>
+           <a href=cookie_informativa.html>Leggi di più riguardo ai <span lang="en">cookie</span></a></br>
+       </p>
+       <button class="js-cookie-dismiss">Accetta</button>
+   </div>
+   <script type="text/javascript" src="SCRIPTS/cookie.js"></script>
     <header>
         <h1 id="logo">DOOM WIKI</h1>
         <nav id="NavBar">

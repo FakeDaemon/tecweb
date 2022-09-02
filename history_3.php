@@ -21,11 +21,15 @@
 
   $user = new User($conn);
    ?>
-    <div class="cookie-banner js-cookie-banner">
-        We use 🍪...
-        <button class="js-cookie-dismiss">Accept</button>
-    </div>
-    <script type="text/javascript" src="SCRIPTS/cookie.js"></script>
+   <div class="cookie-banner js-cookie-banner">
+       <p>
+           Il nostro sito utilizza dei <span lang="en">cookie</span> per personalizzare
+           il contenuto e analizzare il traffico di rete.</br>
+           <a href=cookie_informativa.html>Leggi di più riguardo ai <span lang="en">cookie</span></a></br>
+       </p>
+       <button class="js-cookie-dismiss">Accetta</button>
+   </div>
+   <script type="text/javascript" src="SCRIPTS/cookie.js"></script>
     <header>
         <h1 id="logo">DOOM WIKI</h1>
         <nav id="NavBar">
@@ -75,16 +79,6 @@
     </header>
     <div class="main">
         <h1 id="replace3" lang="en">DOOM 3</h1>
-        <div id="box">
-            <nav>
-                <ul>
-                    <li><a href="#Features">Features</a></li>
-                    <li><a href="#Sviluppo">Sviluppo</a></li>
-                    <li><a href="#Trama">Trama</a></li>
-                    <li><a href="#Gameplay"><span lang="en">Gameplay</span></a></li>
-                </ul>
-            </nav>
-        </div>
         <article id="Riassunto">
             <h2 class="paragrafo">Riassunto</h2>
             <p class="history">
@@ -104,6 +98,16 @@
                 Ha ricevuto un'opinione positiva da parte della critica per le sue atmosfere paurose e la sua grafica rivoluzionaria, ma è stato altrettanto criticato principalmente per il suo <span lang="en">gameplay</span>, che essendo più lento, alla lunga stancava, e per i suoi dettagli horror ricchi di <span lang="fra">cliché</span>.
             </p>
         </article>
+        <div id="box">
+            <nav>
+                <ul>
+                    <li><a href="#Features">Features</a></li>
+                    <li><a href="#Sviluppo">Sviluppo</a></li>
+                    <li><a href="#Trama">Trama</a></li>
+                    <li><a href="#Gameplay"><span lang="en">Gameplay</span></a></li>
+                </ul>
+            </nav>
+        </div>
         <article id="Features">
             <h2 class="paragrafo"></h2>
             <a name="Features"></a>
