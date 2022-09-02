@@ -38,14 +38,6 @@
   border:1px solid red;
   transition: border-color .2s ease;
 }
-/*
-.TopicList > a:default {
-  color: #2DFDFF;
-}
-*/
-.TopicList > a:visited{
-  color: #FAFE0B;
-}
 
 .TopicList > a:focus,
 .TopicList > a:hover{
