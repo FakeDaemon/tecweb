@@ -52,8 +52,9 @@ CREATE TABLE helpRequests(
   id int AUTO_INCREMENT PRIMARY KEY,
   requestBody text NOT NULL,
   requestDate date NOT NULL,
+  requestMod varchar(256) DEFAULT NULL,
   requestEmail varchar(256) NOT NULL,
-  requestState ENUM('Pending', 'WorkingOn') DEFAULT 'Pending'
+  requestState ENUM('Pending', 'WorkingOn', 'Resolved') DEFAULT 'Pending'
 );
 INSERT INTO users(fst_mail, user_name, psw, lst_psw_change, sign_in_date, scnd_mail, role, profile_pic) VALUES(
   'admin', 'admin', '$2y$10$YaRydub8fwN9YdFI2cm5f.Q19YUURLZroxRVrs69Fx7EedSvvTGYe', '2022-01-01', '2022-01-01', NULL, 'admin', 1

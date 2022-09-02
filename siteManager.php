@@ -68,7 +68,8 @@
       <a href="site-managment/users-managment.php">Gestione utenti.</a>
 
       <p>GESTIONE SITO</p>
-      <a href="site-managment/help-requests.php">Richieste di aiuto.</a>
+      <a href="site-managment/help-requests.php">Richieste di aiuto in attesa.</a>
+      <a href="site-managment/help-requests.php?WorkingOn">Mie richieste.</a>
       <a href="site-managment/topic-managment.php">Gestione domande.</a>
     </form>
   </div>
