@@ -308,12 +308,20 @@ footer > img {
 }
 
 .cookie-banner {
-    background-color: black;
+    font-size: x-large;
+    border: 1px solid red;
+    border-radius: 15px;
+    position: fixed;
+    bottom: 20px;
+    left: 5%;
+    z-index: 200;
+    width: 90%;
+    background-color: rgba(0,0,0,0.95);
     padding: 2em;
 }
 
 .cookie-banner p{
-    background-color: black;
+    background-color: transparent;
     color: white;
     line-height: 1.8;
 }
