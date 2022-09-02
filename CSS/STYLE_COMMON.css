@@ -58,6 +58,12 @@ header {
     z-index: 100;
 }
 
+p { background-color: rgb(50, 0, 0); }
+
+a:visited {color: #FAFE0B;}
+
+a{color: #2DFDFF;}
+
 #logo {
     display: inline-block;
     margin: 1% auto auto auto;
@@ -270,10 +276,6 @@ transition: transform 0.2s 0s ease;
   border: 1px solid red;
 }
 
-p {
-  background-color: rgb(50, 0, 0);
-}
-
 .lista {
     background-color: rgb(50, 0, 0);
     display: flex;
@@ -306,12 +308,20 @@ footer > img {
 }
 
 .cookie-banner {
-    background-color: black;
+    font-size: x-large;
+    border: 1px solid red;
+    border-radius: 15px;
+    position: fixed;
+    bottom: 20px;
+    left: 5%;
+    z-index: 200;
+    width: 90%;
+    background-color: rgba(0,0,0,0.95);
     padding: 2em;
 }
 
 .cookie-banner p{
-    background-color: black;
+    background-color: transparent;
     color: white;
     line-height: 1.8;
 }
@@ -321,9 +331,3 @@ footer > img {
     padding: 0.8em;
     background-color: white;
 }
-
-
-
-
-  a:visited {color: #FAFE0B;}
-  a{color: #2DFDFF;}
