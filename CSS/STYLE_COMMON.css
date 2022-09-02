@@ -296,6 +296,10 @@ footer {
     margin-top: 3em;
 }
 
+footer > p {
+    background-color: #0A0A0A;
+}
+
 footer > img {
   align-items: right;
   padding-left: 6em;
