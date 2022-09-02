@@ -14,29 +14,22 @@
 </head>
 
 <body>
-<<<<<<< HEAD
   <?php
   require 'SCRIPTS/.php/database_connection.php';
   include 'SCRIPTS/.php/user.php';
 
   $user = new User($conn);
    ?>
-    <div class="cookie-banner js-cookie-banner">
-        We use 🍪...
-        <button class="js-cookie-dismiss">Accept</button>
-    </div>
-    <script type="text/javascript" src="SCRIPTS/cookie.js"></script>
-=======
-  <div class="cookie-banner js-cookie-banner">
-      <p>
-          Il nostro sito utilizza dei <span lang="en">cookie</span> per personalizzare
-          il contenuto e analizzare il traffico di rete.</br>
-          <a href=cookie_informativa.html>Leggi di più riguardo ai <span lang="en">cookie</span></a></br>
-      </p>
-      <button class="js-cookie-dismiss">Accetta</button>
-  </div>
-  <script type="text/javascript" src="SCRIPTS/cookie.js"></script>
->>>>>>> 29-roba-varia
+   <div class="cookie-banner js-cookie-banner">
+       <p>
+           Il nostro sito utilizza dei <span lang="en">cookie</span> per personalizzare
+           il contenuto e analizzare il traffico di rete.</br>
+           <a href=cookie_informativa.html>Leggi di più riguardo ai <span lang="en">cookie</span></a></br>
+       </p>
+       <button class="js-cookie-dismiss">Accetta</button>
+   </div>
+   <script type="text/javascript" src="SCRIPTS/cookie.js"></script>
+    
     <header>
         <h1 id="logo">DOOM WIKI</h1>
         <nav id="NavBar">
@@ -86,16 +79,6 @@
     </header>
     <div class="main">
         <h1 id="replace1" lang="en">DOOM</h1>
-        <div id="box">
-            <nav>
-                <ul>
-                    <li><a href="#Trama">Trama</a></li>
-                    <li><a href="#Gameplay"><span lang="en">Gameplay</a></span></li>
-                    <li><a href="#Rilascio">Rilascio</a></li>
-                    <li><a href="#NoteL"><span lang="en">Note Legali</span></a></li>
-                </ul>
-            </nav>
-        </div>
         <article id="Riassunto">
             <h2 class="paragrafo">Un breve riassunto della saga</h2>
             <a name="Riassunto"></a>
@@ -196,7 +179,7 @@
         </article>
         <article id="Release">
             <h2 class="paragrafo"><span lang="en">Release</span></h2>
-            <a name="Rilascio"><span lang="en"></a>
+            <a name="Release"><span lang="en"></a>
             <p class="history">
                 Il primo episodio distribuito in modalità <span lang="en">shareware</span>, era essenzialmente una demo del gioco che consentiva una facile portabilità,
                 e all'epoca lo si trovava in moltissimi modi:
@@ -227,7 +210,7 @@
             </p>
         </article>
         <img src="IMAGES/motosega.jpg" alt="immagine raffigurante la celebre motosega in azione">
-        <article id="NoteL">
+        <article id="Note legali">
             <h2 class="paragrafo">Note Legali</h2>
             <a name="Note legali"></a>
             <p>
