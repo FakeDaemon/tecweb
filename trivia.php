@@ -181,8 +181,8 @@
                     contiene una stanza segreta con il logo dei "<span lang="en">Nine Inch Nails</span>"
             </p>
         </article>
-        <img id="FunFact" src="images/NIN_reference.jpg" alt="Stanza con il logo dei Nine Inch Nails" />
-        <img id="FunFact" src="images/ThyFleshConsumed.png" alt="Elenco dei livelli di 'Thy Flesh Consumed'" />
+        <img id="FunFact" src="IMAGES/NIN_reference.jpg" alt="Stanza con il logo dei Nine Inch Nails" />
+        <img id="FunFact" src="IMAGES/ThyFleshConsumed.png" alt="Elenco dei livelli di 'Thy Flesh Consumed'" />
 
         <article>
             <h2 class="paragrafo" lang="en">Did you know?</h2>
