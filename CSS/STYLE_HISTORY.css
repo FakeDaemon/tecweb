@@ -46,9 +46,18 @@
 
 .npc {
   width:auto;
-  height:5em;
+  height:7em;
   margin: auto;
-  padding-left: 10em;
+}
+
+.npc_name{
+  font-size: 1em;
+}
+
+#Gameplay > .npc_table{
+  margin: auto;
+  padding-top: 2em;
+  padding-bottom: 2em;
 }
 
 #box {

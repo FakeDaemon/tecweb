@@ -151,7 +151,7 @@
                 Vengono inclusi nuovi nemici quali:
             </p>
             <img src="IMAGES/supershotgun.png" alt="immagine raffigurante la nuova arma">
-            <table>
+            <table class="npc_table">
               <thead>
                 <tr>
                   <th colspan="2">
@@ -165,31 +165,31 @@
               </thead>
               <tbody>
                 <tr>
-                  <th><span lang="en">Heavy Weapon Dude (Chaingunner)</span></th>
+                  <th class="npc_name"><span lang="en">Heavy Weapon Dude (Chaingunner)</span></th>
                   <th><img class="npc" src="IMAGES/HWD.png" alt="Tizio col mitragliatore pesante"></th>
                 </tr>
                 <tr>
-                  <th><span lang="en">Hell Knight</span></th>
+                  <th class="npc_name"><span lang="en">Hell Knight</span></th>
                   <th><img class="npc" src="IMAGES/Hellknight.png" alt=""></th>
                 </tr>
                 <tr>
-                  <th><span lang="en">Mancubus</span></th>
+                  <th class="npc_name"><span lang="en">Mancubus</span></th>
                   <th><img class="npc" src="IMAGES/Macunbus.png" alt=""></th>
                 </tr>
                 <tr>
-                  <th><span lang="en">Revenant</span></th>
+                  <th class="npc_name"><span lang="en">Revenant</span></th>
                   <th><img class="npc" src="IMAGES/Revenant.png" alt=""></th>
                 </tr>
                 <tr>
-                  <th><span lang="en">Arachnotron</span></th>
+                  <th class="npc_name"><span lang="en">Arachnotron</span></th>
                   <th><img class="npc" src="IMAGES/Spiderdemon.png" alt=""></th>
                 </tr>
                 <tr>
-                  <th><span lang="en">Pain Elemental</span></th>
+                  <th class="npc_name"><span lang="en">Pain Elemental</span></th>
                   <th><img class="npc" src="IMAGES/Pain-Element.png" alt=""></th>
                 </tr>
                 <tr>
-                  <th><span lang="en">Archvile</span></th>
+                  <th class="npc_name"><span lang="en">Archvile</span></th>
                   <th><img class="npc" src="IMAGES/Archvile.png" alt=""></th>
                 </tr>
               </tbody>
