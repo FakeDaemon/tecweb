@@ -197,7 +197,7 @@
             <p class="history">
                 In accordo con la legge tedesca <span lang="dec">"Strafgesetzbuch"</span> 86a, <cite>"l'utilizzo di simbologie incostituzioniali è poibito al di fuori di determinati contesti quali,
                     ricerca, insegnamento e altro"</cite>.
-                Poichè in due livelli segreti chiamati <span lang="dec">"<strong>Wolfenstein<strong>"</span> e <span lang="dec">"<strong>Grosse</strong>"</span>, appaiono simbologie filo-naziste quali svastiche e soldati <abbr lang="dec" title="Schutzstaffel">SS</abbr>,
+                Poichè in due livelli segreti chiamati <span lang="dec">"<strong>Wolfenstein</strong>"</span> e <span lang="dec">"<strong>Grosse</strong>"</span>, appaiono simbologie filo-naziste quali svastiche e soldati <abbr lang="dec" title="Schutzstaffel">SS</abbr>,
                 la versione tedesca di <span lang="en">Doom</span><abbr title="Secondo">II</abbr> non contiene tali livelli, evitando così che il prodotto possa diventare il soggetto di procedure legali per le quali esso potrebbe
                 venire ristretto o addirittura bandito dal commercio.
                 Questo imponeva che fosse proibita la vendita, noleggio o scambio del gioco tra gli appassionati, rendendo quasi illegale anche solo il possesso del gioco stesso.
