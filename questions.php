@@ -109,7 +109,7 @@
         echo "<p class='username'>".($comment['user_name']!=NULL ? $comment['user_name'] : "utente eliminato")."</p>";
         echo "<p class='messageDatestamp'>Postato il ".$comment['writeDate']."</p>";
         echo "</div>";
-        echo "<p class='text'>".$comment['commentBody']."</p>";
+        echo "<p class='text'>".$comment['commentBody'].($comment["SessID"] === $_COOKIE['SessionID'] ? "<br><br><a href='answerChange.php?".$comment['id']."'>Modifica risposta</a>" : "")."</p>";
         echo "</div>";
         $commentCount++;
       }

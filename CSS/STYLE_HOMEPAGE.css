@@ -21,6 +21,10 @@
 .TopicList > *{
   font-family: var(--font-family);
 }
+.TopicList > p.subTitle{
+  background-color: transparent;
+  background-image: none;
+}
 .TopicList > p{
   padding: 25px;
   margin: 1% auto;

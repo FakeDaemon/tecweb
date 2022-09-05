@@ -98,7 +98,7 @@
   </header>
   <div class="main">
     <p>GESTIONE MODDERS</p>
-    <form id="auth_widget" action="users-managment.php" method="get">
+    <form id="auth_widget" action="users-managment.php" method="post">
       <?php
       if(isset($GLOBALS['UserEmailFound']) && !$GLOBALS['UserEmailFound']) echo "<p>Nessun utente trovato.</p>";
       if(isset($_GET['success'])) echo "<p>Modifiche effettuate con successo.</p>";
