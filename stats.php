@@ -72,7 +72,7 @@
         <table class>
             <thead>
                 <tr>
-                    <th class="head" colspan="10">
+                    <th class="head" colspan="3">
                         <h1>Armi</h1>
                     </th>
                 </tr>
