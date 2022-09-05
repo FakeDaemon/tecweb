@@ -138,15 +138,49 @@
                 Vengono inclusi nuovi nemici quali:
             </p>
             <img src="IMAGES/supershotgun.png" alt="immagine raffigurante la nuova arma">
-            <ul>
-                <li><span lang="en">Heavy Weapon Dude (Chaingunner)</span>;<img src="IMAGES/HWD.png" alt=""></li>
-                <li><span lang="en">Hell Knight</span>;<img src="IMAGES/Hellknight.png" alt=""></li>
-                <li><span lang="en">Mancubus</span>;<img src="IMAGES/Macunbus.png" alt=""></li>
-                <li><span lang="en">Revenant</span>;<img src="IMAGES/Revenant.png" alt=""></li>
-                <li><span lang="en">Arachnotron</span>;<img src="IMAGES/Spiderdemon.png" alt=""></li>
-                <li><span lang="en">Pain Elemental</span>;<img src="IMAGES/Pain-Element.png" alt=""></li>
-                <li><span lang="en">Archvile</span>;<img src="IMAGES/Archvile.png" alt=""></li>
-            </ul>
+            <table>
+              <thead>
+                <tr>
+                  <th colspan="2">
+                    <h1>NPC</h1>
+                  </th>
+                </tr>
+                <tr>
+                  <th>Nome</th>
+                  <th>Foto</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th><span lang="en">Heavy Weapon Dude (Chaingunner)</span></th>
+                  <th><img class="npc" src="IMAGES/HWD.png" alt="Tizio col mitragliatore pesante"></th>
+                </tr>
+                <tr>
+                  <th><span lang="en">Hell Knight</span></th>
+                  <th><img class="npc" src="IMAGES/Hellknight.png" alt=""></th>
+                </tr>
+                <tr>
+                  <th><span lang="en">Mancubus</span></th>
+                  <th><img class="npc" src="IMAGES/Macunbus.png" alt=""></th>
+                </tr>
+                <tr>
+                  <th><span lang="en">Revenant</span></th>
+                  <th><img class="npc" src="IMAGES/Revenant.png" alt=""></th>
+                </tr>
+                <tr>
+                  <th><span lang="en">Arachnotron</span></th>
+                  <th><img class="npc" src="IMAGES/Spiderdemon.png" alt=""></th>
+                </tr>
+                <tr>
+                  <th><span lang="en">Pain Elemental</span></th>
+                  <th><img class="npc" src="IMAGES/Pain-Element.png" alt=""></th>
+                </tr>
+                <tr>
+                  <th><span lang="en">Archvile</span></th>
+                  <th><img class="npc" src="IMAGES/Archvile.png" alt=""></th>
+                </tr>
+              </tbody>
+            </table>
             <p class="history">
                 Essendo più vario ed innovativo rispetto al primo capitolo, l'introduzione di questa serie di nemici ha cambiato notevolmente le meccaniche del <span lang="en">gameplay</span> relativo alla modalità <span lang="en">single player</span>.
                 Alcuni <span lang="en">Eater Egg</span> vengono ripresi dal gioco <span lang="en">cult</span> di <span lang="en">id Software</span> <span lang="de">Wolfenstein <abbr title="3 dimensioni">3D</span></span>,

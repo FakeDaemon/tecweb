@@ -69,7 +69,7 @@
         </nav>
     </header>
     <div class="main">
-        <table class>
+        <table>
             <thead>
                 <tr>
                     <th class="head" colspan="3">
