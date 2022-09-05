@@ -79,16 +79,6 @@
     </header>
     <div class="main">
         <h1 id="replace2" lang="en">DOOM 2</h1>
-        <div id="box">
-            <nav>
-                <ul>
-                    <li><a href="#Features">Features</a></li>
-                    <li><a href="#Sviluppo">Sviluppo</a></li>
-                    <li><a href="#Trama">Trama</a></li>
-                    <li><a href="#Gameplay"><span lang="en">Gameplay</span></a></li>
-                </ul>
-            </nav>
-        </div>
         <article id="Riassunto">
             <h2 class="paragrafo">Riassunto</h2>
             <a name="Riassunto"></a>

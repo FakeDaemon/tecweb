@@ -89,16 +89,6 @@
     </header>
     <div class="main">
         <h1 id="replace1" lang="en">DOOM</h1>
-        <div id="box">
-            <nav>
-                <ul>
-                    <li><a href="#Trama">Trama</a></li>
-                    <li><a href="#Gameplay"><span lang="en">Gameplay</span></a></li>
-                    <li><a href="#Release"><span lang="en">Release</span></a></li>
-                    <li><a href="#Note legali">Note Legali</a></li>
-                </ul>
-            </nav>
-        </div>
         <article id="Riassunto">
             <h2 class="paragrafo">Un breve riassunto della saga</h2>
             <a name="Riassunto"></a>
