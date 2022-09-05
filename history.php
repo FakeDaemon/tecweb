@@ -15,18 +15,21 @@
 
 <body>
     <?php
-    //controlli se c'è $_POST['CookieAction'] (isset())
-    //controlli se $_POST['CookieAction']='Accetta'
-    //{
-    //setCookie('nomedelcookie', 'valoredelcookie', 'scandenza in secondi (60*60*24*365)')
-    //$_COOKIE['nomedelcookie'] = 'valoredelcookie';
-    //header('location : history.php');
-    //}
-    require 'SCRIPTS/.php/database_connection.php';
-    include 'SCRIPTS/.php/user.php';
-
-    $user = new User($conn);
-    if (true) { /*TRUE -> controllo se esiste $_COOKIE['nomedelcookie']*/
+      require 'SCRIPTS/.php/database_connection.php';
+      include 'SCRIPTS/.php/user.php';
+      $user = new User($conn);
+      if(isset($_POST['CookieAccepted']) &&
+         $_POST['CookieAccepted']=='Accetta')
+      {
+        setCookie('CookieAccepted', 'Accetta',
+        'time() + (86400 * 30)');
+        $_COOKIE['CookieAccepted'] = 'Accetta';
+        header('location : history.php');
+      }
+      if( !(isset($_COOKIE['CookieAccepted'])) ||
+          !($_COOKIE['CookieAccepted']=='Accetta')
+        )
+      {
     ?>
         <form class="cookie-banner" action="history.php" method="post">
             <p>
@@ -34,12 +37,11 @@
                 il contenuto e analizzare il traffico di rete.</br>
                 <a href=cookie_informativa.php>Leggi di più riguardo ai <span lang="en">cookie</span></a></br>
             </p>
-            <input type="submit" name="CookieAction" value="Accetta">
+            <input type="submit" name="CookieAccepted" value="Accetta">
         </form>
     <?php
     }
     ?>
-
     <header>
         <h1 id="logo">DOOM WIKI</h1>
         <nav id="NavBar">
