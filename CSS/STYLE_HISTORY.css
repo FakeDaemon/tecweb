@@ -44,6 +44,19 @@
     padding: 1em;
 }
 
+thead{
+  background-color: #A40000;
+}
+
+.tab_title{
+  font-size: 2.5em;
+}
+
+.tab_subtitle{
+  font-size: 1.5em;
+  background-color: #A40000;
+}
+
 .npc {
   width:auto;
   height:7em;
@@ -51,14 +64,27 @@
 }
 
 .npc_name{
-  font-size: 1em;
+  font-size: 1.1em;
 }
 
 #Gameplay > .npc_table{
   margin: auto;
-  padding-top: 2em;
-  padding-bottom: 2em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  width: 80%;
+  background-color: #750027;
+  border-collapse: collapse;
+  color: white;
 }
+
+tbody > tr:nth-child(even) {background-color: #660025;}
+
+tbody > tr:hover {
+  background-color: red;
+  color: white;
+}
+
+
 
 #box {
     background-color: rgba(0, 0, 0, 0.7);

@@ -155,10 +155,10 @@
               <thead>
                 <tr>
                   <th colspan="2">
-                    <h1>NPC</h1>
+                    <h1 class="tab_title">NPC</h1>
                   </th>
                 </tr>
-                <tr>
+                <tr class="tab_subtitle">
                   <th>Nome</th>
                   <th>Foto</th>
                 </tr>
