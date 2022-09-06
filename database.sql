@@ -41,6 +41,7 @@ CREATE TABLE comments(
   writeDate date,
   topicID int,
   email varchar(256),
+  state enum('Default', 'Modified', 'Deleted') DEFAULT 'Default',
   FOREIGN KEY(email) REFERENCES users(fst_mail)
   ON DELETE SET NULL
   ON UPDATE CASCADE,

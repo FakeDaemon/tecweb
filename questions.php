@@ -103,13 +103,17 @@
     $a=0;
     while ($comment = $result->fetch_assoc()) {
       if($a>=$commentCount && $commentCount<10*($_GET['page']+1)){
-        echo "<div class='message".($comment["SessID"] === $_COOKIE['SessionID'] ? " ofUser" : "")."'>";
+        echo "<div class='message".($comment["email"] === $user->email ? " ofUser" : "")."'>";
         echo "<div class='userDetails'>";
         echo "<img src='/IMAGES/ProfilePics/ProfilePicN".($comment['profile_pic']!=NULL ? $comment['profile_pic'] : 1).".jpg' alt='Doomguy, accedi o registrati!'>";
         echo "<p class='username'>".($comment['user_name']!=NULL ? $comment['user_name'] : "utente eliminato")."</p>";
         echo "<p class='messageDatestamp'>Postato il ".$comment['writeDate']."</p>";
         echo "</div>";
-        echo "<p class='text'>".$comment['commentBody'].($comment["SessID"] === $_COOKIE['SessionID'] ? "<br><br><a href='answerChange.php?".$comment['id']."'>Modifica risposta</a>" : "")."</p>";
+        if($comment['state'] === 'Deleted'){
+          echo "<p class='text'><span>Il commento è stato eliminato</span></p>";
+        }else{
+          echo "<p class='text'>".($comment['state'] === 'Modified' ? "<span>ATTENZIONE: il commento è stato modificato.</span><br><br>" : "").$comment['commentBody'].($comment["email"] === $user->email ? "<br><br><a href='answerChange.php?cid=".$comment['id']."&tid=".$_GET['id']."&page=".($_GET['page']!==NULL ? $_GET['page'] : "0")."'>Gestisci risposta</a>" : "")."</p>";
+        }
         echo "</div>";
         $commentCount++;
       }
@@ -148,7 +152,7 @@
         <label for="AnswerBox">
           La tua risposta:
         </label>
-        <textarea maxlength="30000" id="AnswerBox" name="AnswerBody" rows="8" cols="80"></textarea>
+        <textarea required maxlength="30000" id="AnswerBox" name="AnswerBody" rows="8" cols="80"></textarea>
         <input type="submit" value="INVIA">
         <input type="reset" value="PULISCI">
       </form>

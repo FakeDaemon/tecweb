@@ -89,7 +89,7 @@
   resize:none;
 }
 #auth_widget textarea::-webkit-scrollbar {
-    width: 5px;
+  width: 5px;
 }
 
 #auth_widget textarea::placeholder{
