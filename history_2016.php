@@ -191,9 +191,9 @@
                 <li>Barone Infernale</li>
                 <li><span lang="en">Mancubus</span></li>
                 <li>Predatore</li>
-                <li>Raccoglitore<abbr title="Downloadable Content"">DLC</abbr></li>
-                    <li>Cacodemone<abbr title=" Downloadable Content"">DLC</abbr></li>
-                <li>Spettro<abbr title="Downloadable Content"">DLC</abbr></li>
+                <li>Raccoglitore<abbr title="Downloadable Content">DLC</abbr></li>
+                    <li>Cacodemone<abbr title=" Downloadable Content">DLC</abbr></li>
+                <li>Spettro<abbr title="Downloadable Content">DLC</abbr></li>
                 </ul>
                 <h3 class=" lista_titolo"><span lang="en">Power-ups</span></h3>
                         <ul class="lista">
