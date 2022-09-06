@@ -23,7 +23,7 @@
        $_POST['CookieAccepted']=='Accetta')
     {
       setCookie('CookieAccepted', 'Accetta',
-      'time() + (86400 * 30)');
+      time() + (86400 * 30));
       $_COOKIE['CookieAccepted'] = 'Accetta';
       header('location : history_2.php');
     }
