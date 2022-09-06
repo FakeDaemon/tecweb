@@ -37,16 +37,18 @@
     max-width: 600px;
     padding-bottom: 20px;
     font-size: 1.5em;
+    text-align: left;
 }
 
 .main>form p {
-    width: 95%;
+    width: 80%;
     color: white;
     background: transparent;
     margin: 10px auto;
 }
 
 .main>form p.subParagraph {
+    margin: 30px auto 0 auto;
     font-style: italic;
 }
 
@@ -58,7 +60,7 @@
 .main>form label {
     margin: 10px auto 0 auto;
     text-align: left;
-    width: 75%;
+    width: 80%;
     height: 28px;
     display: block;
     position: relative;
@@ -73,8 +75,8 @@
 
 .main>form label.up {
     bottom: 0;
-    font-size: 0.7em;
-    color: grey;
+    font-size: 0.8em;
+    color: white;
 }
 
 .main>form>textarea {
@@ -83,7 +85,7 @@
     width: 80%;
     height: 30px;
     display: block;
-    margin: 0 auto 0 auto;
+    margin: 0 auto 20px auto;
     color: white;
     font-size: 0.9em;
     padding: 10px;
@@ -111,7 +113,38 @@
     height: 30px;
     margin-bottom: 10px;
 }
-.main>.commentList>div>*{
+.main>form>hr{
+    border: 1px solid grey;
+    width: 80%;
+    margin: 35px auto;
+}
+.main>form>p.error{
+    color: red;
+    margin: 30px auto;
+}
+.main>form>p.instructions{
+    text-align: left;
+    width: 80%;
+    letter-spacing: 1px;
+    margin: auto;
+    font-size: 0.65em;
+}
+.main>form>div{
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid red;
+    border-radius: 10px;
+    background-color: rgb(0,0,0,.7);
+  }
+  .main>form>div>p.title{
+    font-size: .8em;
+    color: #CCAE52;
+  }
+  .main>form>div>p.description{
+    font-size: .7em;
+  }
+.main>.commentList>*{
     background-color: transparent;
 }
 .main>.commentList>div{
@@ -129,6 +162,15 @@
 .main>.commentList>div>p.answerDate{
     font-size: 0.7em;
 }
+.main>.commentList>p.HCentered{
+    text-align: center;;
+}
+.main>.commentList>a{
+    display: block;
+    width: 85%;
+    margin: auto;
+}
+.main>.commentList>p,
 .main>.commentList>div>p.answerBody{
     text-align: left;
     width: 90%;
