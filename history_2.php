@@ -16,20 +16,33 @@
 
 <body>
   <?php
-  require 'SCRIPTS/.php/database_connection.php';
-  include 'SCRIPTS/.php/user.php';
-
-  $user = new User($conn);
-   ?>
-   <div class="cookie-banner js-cookie-banner">
-       <p>
-           Il nostro sito utilizza dei <span lang="en">cookie</span> per personalizzare
-           il contenuto e analizzare il traffico di rete.</br>
-           <a href=cookie_informativa.php>Leggi di più riguardo ai <span lang="en">cookie</span></a></br>
-       </p>
-       <button class="js-cookie-dismiss">Accetta</button>
-   </div>
-   <script type="text/javascript" src="SCRIPTS/cookie.js"></script>
+    require 'SCRIPTS/.php/database_connection.php';
+    include 'SCRIPTS/.php/user.php';
+    $user = new User($conn);
+    if(isset($_POST['CookieAccepted']) &&
+       $_POST['CookieAccepted']=='Accetta')
+    {
+      setCookie('CookieAccepted', 'Accetta',
+      'time() + (86400 * 30)');
+      $_COOKIE['CookieAccepted'] = 'Accetta';
+      header('location : history_2.php');
+    }
+    if( !(isset($_COOKIE['CookieAccepted'])) ||
+        !($_COOKIE['CookieAccepted']=='Accetta')
+      )
+    {
+  ?>
+      <form class="cookie-banner" action="history_2.php" method="post">
+          <p>
+              Il nostro sito utilizza dei <span lang="en">cookie</span> per personalizzare
+              il contenuto e analizzare il traffico di rete.</br>
+              <a href=cookie_informativa.php>Leggi di più riguardo ai <span lang="en">cookie</span></a></br>
+          </p>
+          <input type="submit" name="CookieAccepted" value="Accetta">
+      </form>
+  <?php
+  }
+  ?>
     <header>
         <h1 id="logo">DOOM WIKI</h1>
         <nav id="NavBar">
@@ -138,15 +151,49 @@
                 Vengono inclusi nuovi nemici quali:
             </p>
             <img src="IMAGES/supershotgun.png" alt="immagine raffigurante la nuova arma">
-            <ul>
-                <li><span lang="en">Heavy Weapon Dude (Chaingunner)</span>;<img src="IMAGES/HWD.png" alt=""></li>
-                <li><span lang="en">Hell Knight</span>;<img src="IMAGES/Hellknight.png" alt=""></li>
-                <li><span lang="en">Mancubus</span>;<img src="IMAGES/Macunbus.png" alt=""></li>
-                <li><span lang="en">Revenant</span>;<img src="IMAGES/Revenant.png" alt=""></li>
-                <li><span lang="en">Arachnotron</span>;<img src="IMAGES/Spiderdemon.png" alt=""></li>
-                <li><span lang="en">Pain Elemental</span>;<img src="IMAGES/Pain-Element.png" alt=""></li>
-                <li><span lang="en">Archvile</span>;<img src="IMAGES/Archvile.png" alt=""></li>
-            </ul>
+            <table class="npc_table">
+              <thead>
+                <tr>
+                  <th colspan="2">
+                    <h1 class="tab_title">NPC</h1>
+                  </th>
+                </tr>
+                <tr class="tab_subtitle">
+                  <th>Nome</th>
+                  <th>Foto</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th class="npc_name"><span lang="en">Heavy Weapon Dude (Chaingunner)</span></th>
+                  <th><img class="npc" src="IMAGES/HWD.png" alt="Tizio col mitragliatore pesante"></th>
+                </tr>
+                <tr>
+                  <th class="npc_name"><span lang="en">Hell Knight</span></th>
+                  <th><img class="npc" src="IMAGES/Hellknight.png" alt="Cavaliere infernale"></th>
+                </tr>
+                <tr>
+                  <th class="npc_name"><span lang="en">Mancubus</span></th>
+                  <th><img class="npc" src="IMAGES/Macunbus.png" alt="Grosso mostro spara laser"></th>
+                </tr>
+                <tr>
+                  <th class="npc_name"><span lang="en">Revenant</span></th>
+                  <th><img class="npc" src="IMAGES/Revenant.png" alt="Scheletro"></th>
+                </tr>
+                <tr>
+                  <th class="npc_name"><span lang="en">Arachnotron</span></th>
+                  <th><img class="npc" src="IMAGES/Spiderdemon.png" alt="Ragno meccanico"></th>
+                </tr>
+                <tr>
+                  <th class="npc_name"><span lang="en">Pain Elemental</span></th>
+                  <th><img class="npc" src="IMAGES/Pain-Element.png" alt="Essere volante spara fuoco"></th>
+                </tr>
+                <tr>
+                  <th class="npc_name"><span lang="en">Archvile</span></th>
+                  <th><img class="npc" src="IMAGES/Archvile.png" alt="Alto sacerdote demoniaco infernale"></th>
+                </tr>
+              </tbody>
+            </table>
             <p class="history">
                 Essendo più vario ed innovativo rispetto al primo capitolo, l'introduzione di questa serie di nemici ha cambiato notevolmente le meccaniche del <span lang="en">gameplay</span> relativo alla modalità <span lang="en">single player</span>.
                 Alcuni <span lang="en">Eater Egg</span> vengono ripresi dal gioco <span lang="en">cult</span> di <span lang="en">id Software</span> <span lang="de">Wolfenstein <abbr title="3 dimensioni">3D</span></span>,

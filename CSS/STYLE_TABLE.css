@@ -6,17 +6,20 @@ table, td, th {
 table {
   border-collapse: collapse;
   width: 100%;
-  background-color: white;
-  color: black;
+  background-color: #750027;
+  color: white;
 }
 
 th, td {
   padding: 15px;
 }
 
-tr:nth-child(even) {background-color: #f2f2f2;}
+.head {
+  background-color: #A40000;
+}
 
-/*da modificare*/
+tr:nth-child(even) {background-color: #660025;}
+
 tr:hover {
     background-color: red;
     color: white;

@@ -16,20 +16,33 @@
 
 <body>
   <?php
-  require 'SCRIPTS/.php/database_connection.php';
-  include 'SCRIPTS/.php/user.php';
-
-  $user = new User($conn);
-   ?>
-   <div class="cookie-banner js-cookie-banner">
-       <p>
-           Il nostro sito utilizza dei <span lang="en">cookie</span> per personalizzare
-           il contenuto e analizzare il traffico di rete.</br>
-           <a href=cookie_informativa.php>Leggi di più riguardo ai <span lang="en">cookie</span></a></br>
-       </p>
-       <button class="js-cookie-dismiss">Accetta</button>
-   </div>
-   <script type="text/javascript" src="SCRIPTS/cookie.js"></script>
+    require 'SCRIPTS/.php/database_connection.php';
+    include 'SCRIPTS/.php/user.php';
+    $user = new User($conn);
+    if(isset($_POST['CookieAccepted']) &&
+       $_POST['CookieAccepted']=='Accetta')
+    {
+      setCookie('CookieAccepted', 'Accetta',
+      'time() + (86400 * 30)');
+      $_COOKIE['CookieAccepted'] = 'Accetta';
+      header('location : history_2016.php');
+    }
+    if( !(isset($_COOKIE['CookieAccepted'])) ||
+        !($_COOKIE['CookieAccepted']=='Accetta')
+      )
+    {
+  ?>
+      <form class="cookie-banner" action="history_2016.php" method="post">
+          <p>
+              Il nostro sito utilizza dei <span lang="en">cookie</span> per personalizzare
+              il contenuto e analizzare il traffico di rete.</br>
+              <a href=cookie_informativa.php>Leggi di più riguardo ai <span lang="en">cookie</span></a></br>
+          </p>
+          <input type="submit" name="CookieAccepted" value="Accetta">
+      </form>
+  <?php
+  }
+  ?>
     <header>
         <h1 id="logo">DOOM WIKI</h1>
         <nav id="NavBar">
@@ -178,9 +191,9 @@
                 <li>Barone Infernale</li>
                 <li><span lang="en">Mancubus</span></li>
                 <li>Predatore</li>
-                <li>Raccoglitore<abbr title="Downloadable Content"">DLC</abbr></li>
-                    <li>Cacodemone<abbr title=" Downloadable Content"">DLC</abbr></li>
-                <li>Spettro<abbr title="Downloadable Content"">DLC</abbr></li>
+                <li>Raccoglitore<abbr title="Downloadable Content">DLC</abbr></li>
+                    <li>Cacodemone<abbr title=" Downloadable Content">DLC</abbr></li>
+                <li>Spettro<abbr title="Downloadable Content">DLC</abbr></li>
                 </ul>
                 <h3 class=" lista_titolo"><span lang="en">Power-ups</span></h3>
                         <ul class="lista">

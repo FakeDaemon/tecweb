@@ -16,20 +16,33 @@
 
 <body>
   <?php
-  require 'SCRIPTS/.php/database_connection.php';
-  include 'SCRIPTS/.php/user.php';
-
-  $user = new User($conn);
-   ?>
-   <div class="cookie-banner js-cookie-banner">
-       <p>
-           Il nostro sito utilizza dei <span lang="en">cookie</span> per personalizzare
-           il contenuto e analizzare il traffico di rete.</br>
-           <a href=cookie_informativa.php>Leggi di più riguardo ai <span lang="en">cookie</span></a></br>
-       </p>
-       <button class="js-cookie-dismiss">Accetta</button>
-   </div>
-   <script type="text/javascript" src="SCRIPTS/cookie.js"></script>
+    require 'SCRIPTS/.php/database_connection.php';
+    include 'SCRIPTS/.php/user.php';
+    $user = new User($conn);
+    if(isset($_POST['CookieAccepted']) &&
+       $_POST['CookieAccepted']=='Accetta')
+    {
+      setCookie('CookieAccepted', 'Accetta',
+      'time() + (86400 * 30)');
+      $_COOKIE['CookieAccepted'] = 'Accetta';
+      header('location : trivia.php');
+    }
+    if( !(isset($_COOKIE['CookieAccepted'])) ||
+        !($_COOKIE['CookieAccepted']=='Accetta')
+      )
+    {
+  ?>
+      <form class="cookie-banner" action="trivia.php" method="post">
+          <p>
+              Il nostro sito utilizza dei <span lang="en">cookie</span> per personalizzare
+              il contenuto e analizzare il traffico di rete.</br>
+              <a href=cookie_informativa.php>Leggi di più riguardo ai <span lang="en">cookie</span></a></br>
+          </p>
+          <input type="submit" name="CookieAccepted" value="Accetta">
+      </form>
+  <?php
+  }
+  ?>
     <header>
         <h1 id="logo">DOOM WIKI</h1>
         <nav id="NavBar">
@@ -168,8 +181,8 @@
                     contiene una stanza segreta con il logo dei "<span lang="en">Nine Inch Nails</span>"
             </p>
         </article>
-        <img id="FunFact" src="images/NIN_reference.jpg" alt="Stanza con il logo dei Nine Inch Nails" />
-        <img id="FunFact" src="images/ThyFleshConsumed.png" alt="Elenco dei livelli di 'Thy Flesh Consumed'" />
+        <img id="FunFact" src="IMAGES/NIN_reference.jpg" alt="Stanza con il logo dei Nine Inch Nails" />
+        <img id="FunFact" src="IMAGES/ThyFleshConsumed.png" alt="Elenco dei livelli di 'Thy Flesh Consumed'" />
 
         <article>
             <h2 class="paragrafo" lang="en">Did you know?</h2>
