@@ -186,24 +186,50 @@
                 <li>Corsa Infernale</li>
             </ul>
             <table class="npc_table">
-              <thead>
-
+              <thead class="npc_head">
+                <tr>
+                  <th colspan="2">
+                    <h1 class="tab_title">Demoni Giocabili</h1>
+                  </th>
+                </tr>
+                <tr class="tab_subtitle">
+                  <th>Nome</th>
+                  <th>Foto</th>
+                </tr>
               </thead>
               <tbody>
-
+                <tr>
+                  <th class="npc_name"><span lang="en">Baron</span></th>
+                  <th><img class="npc" src="IMAGES/baron2016.png" alt="Demone rosso cornuto"></th>
+                </tr>
+                <tr>
+                  <th class="npc_name"><span lang="en">Mancubus</span></th>
+                  <th><img class="npc" src="IMAGES/mancubus2016.webp" alt="Grosso mostro spara laser"></th>
+                </tr>
+                <tr>
+                  <th class="npc_name"><span lang="en">Revenant</span></th>
+                  <th><img class="npc" src="IMAGES/revenant2016.webp" alt="Scheletro"></th>
+                </tr>
+                <tr>
+                  <th class="npc_name"><span lang="en">Preator</span></th>
+                  <th><img class="npc" src="IMAGES/predator2016.png" alt="Particolare suit"></th>
+                </tr>
+                <tr>
+                  <th class="npc_name"><span lang="en">Cacodemon (<abbr title="Downloadable Content">DLC</abbr>)</span></th>
+                  <th><img class="npc" src="IMAGES/cacodemon2016.webp" alt="Mostro tondo volante spara fuoco"></th>
+                </tr>
+                <tr>
+                  <th class="npc_name"><span lang="en">Harvester (<abbr title="Downloadable Content">DLC</abbr>)</span></th>
+                  <th><img class="npc" src="IMAGES/harvester2016.webp" alt=""></th>
+                </tr>
+                <tr>
+                  <th class="npc_name"><span lang="en">Spectre (<abbr title="Downloadable Content">DLC</abbr>)</span></th>
+                  <th><img class="npc" src="IMAGES/spectre2016.webp" alt="Alto sacerdote demoniaco infernale"></th>
+                </tr>
               </tbody>
             </table>
-            <h3 class="lista_titolo">Demoni Giocabili</h3>
-            <ul class="lista">
-                <li><span lang="en">Revenant</span></li>
-                <li>Barone Infernale</li>
-                <li><span lang="en">Mancubus</span></li>
-                <li>Predatore</li>
-                <li>Raccoglitore<abbr title="Downloadable Content">DLC</abbr></li>
-                    <li>Cacodemone<abbr title=" Downloadable Content">DLC</abbr></li>
-                <li>Spettro<abbr title="Downloadable Content">DLC</abbr></li>
-                </ul>
-                <h3 class=" lista_titolo"><span lang="en">Power-ups</span></h3>
+
+            <h3 class=" lista_titolo"><span lang="en">Power-ups</span></h3>
                         <ul class="lista">
                             <li><span lang="en">Quad Damage</span></li>
                             <li>Invisibilità</li>
