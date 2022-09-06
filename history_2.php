@@ -170,27 +170,27 @@
                 </tr>
                 <tr>
                   <th class="npc_name"><span lang="en">Hell Knight</span></th>
-                  <th><img class="npc" src="IMAGES/Hellknight.png" alt=""></th>
+                  <th><img class="npc" src="IMAGES/Hellknight.png" alt="Cavaliere infernale"></th>
                 </tr>
                 <tr>
                   <th class="npc_name"><span lang="en">Mancubus</span></th>
-                  <th><img class="npc" src="IMAGES/Macunbus.png" alt=""></th>
+                  <th><img class="npc" src="IMAGES/Macunbus.png" alt="Grosso mostro spara laser"></th>
                 </tr>
                 <tr>
                   <th class="npc_name"><span lang="en">Revenant</span></th>
-                  <th><img class="npc" src="IMAGES/Revenant.png" alt=""></th>
+                  <th><img class="npc" src="IMAGES/Revenant.png" alt="Scheletro"></th>
                 </tr>
                 <tr>
                   <th class="npc_name"><span lang="en">Arachnotron</span></th>
-                  <th><img class="npc" src="IMAGES/Spiderdemon.png" alt=""></th>
+                  <th><img class="npc" src="IMAGES/Spiderdemon.png" alt="Ragno meccanico"></th>
                 </tr>
                 <tr>
                   <th class="npc_name"><span lang="en">Pain Elemental</span></th>
-                  <th><img class="npc" src="IMAGES/Pain-Element.png" alt=""></th>
+                  <th><img class="npc" src="IMAGES/Pain-Element.png" alt="Essere volante spara fuoco"></th>
                 </tr>
                 <tr>
                   <th class="npc_name"><span lang="en">Archvile</span></th>
-                  <th><img class="npc" src="IMAGES/Archvile.png" alt=""></th>
+                  <th><img class="npc" src="IMAGES/Archvile.png" alt="Alto sacerdote demoniaco infernale"></th>
                 </tr>
               </tbody>
             </table>
