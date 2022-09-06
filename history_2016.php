@@ -185,6 +185,14 @@
                 <li>Raccolta di anime</li>
                 <li>Corsa Infernale</li>
             </ul>
+            <table class="npc_table">
+              <thead>
+
+              </thead>
+              <tbody>
+
+              </tbody>
+            </table>
             <h3 class="lista_titolo">Demoni Giocabili</h3>
             <ul class="lista">
                 <li><span lang="en">Revenant</span></li>
