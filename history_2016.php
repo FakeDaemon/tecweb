@@ -220,7 +220,7 @@
                 </tr>
                 <tr>
                   <th class="npc_name"><span lang="en">Harvester (<abbr title="Downloadable Content">DLC</abbr>)</span></th>
-                  <th><img class="npc" src="IMAGES/harvester2016.webp" alt=""></th>
+                  <th><img class="npc" src="IMAGES/harvester2016.webp" alt="Agile mostriciattolo cornuto"></th>
                 </tr>
                 <tr>
                   <th class="npc_name"><span lang="en">Spectre (<abbr title="Downloadable Content">DLC</abbr>)</span></th>
