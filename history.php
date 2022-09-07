@@ -15,21 +15,25 @@
 
 <body>
     <?php
-      require 'SCRIPTS/.php/database_connection.php';
-      include 'SCRIPTS/.php/user.php';
-      $user = new User($conn);
-      if(isset($_POST['CookieAccepted']) &&
-         $_POST['CookieAccepted']=='Accetta')
-      {
-        setCookie('CookieAccepted', 'Accetta',
-        'time() + (86400 * 30)');
+    require 'SCRIPTS/.php/database_connection.php';
+    include 'SCRIPTS/.php/user.php';
+    $user = new User($conn);
+    if (
+        isset($_POST['CookieAccepted']) &&
+        $_POST['CookieAccepted'] == 'Accetta'
+    ) {
+        setCookie(
+            'CookieAccepted',
+            'Accetta',
+            'time() + (86400 * 30)'
+        );
         $_COOKIE['CookieAccepted'] = 'Accetta';
         header('location : history.php');
-      }
-      if( !(isset($_COOKIE['CookieAccepted'])) ||
-          !($_COOKIE['CookieAccepted']=='Accetta')
-        )
-      {
+    }
+    if (
+        !(isset($_COOKIE['CookieAccepted'])) ||
+        !($_COOKIE['CookieAccepted'] == 'Accetta')
+    ) {
     ?>
         <form class="cookie-banner" action="history.php" method="post">
             <p>
@@ -68,8 +72,10 @@
                     <?php
                     if ($user->isLogged()) echo "<p>" . $user->user_name . "</p>";
                     else echo "<p>OSPITE</p>";
-                    if ($user->isLogged()) echo "<a href='account-managment.php'>Impostazioni</a>";
-                    else {
+                    if ($user->isLogged()) {
+                        if ($user->isSuperUser()) echo "<a href='siteManager.php'>Gestione Sito</a>";
+                        echo "<a href='account-managment.php'>Impostazioni</a>";
+                    } else {
                         echo "<a href='signup.php'>Registrati</a>";
                         echo "<a href='login.php'>Entra</a>";
                     }

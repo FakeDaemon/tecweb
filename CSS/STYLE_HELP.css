@@ -72,7 +72,7 @@
   font-size: 0.7em;
   color: white;
 }
-#auth_widget input[type="email"], #auth_widget textarea{
+#auth_widget input[type="text"], #auth_widget textarea{
   background: transparent;
   border-bottom: 1px solid white;
   width: 80%;

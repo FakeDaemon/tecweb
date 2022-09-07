@@ -46,11 +46,11 @@
             if (isset($_POST['cid'])) {
                 $GLOBALS['error'] = checkInput($_POST['newComment']);
                 if (!$GLOBALS['error']) {
-                    if(strlen($_POST['newComment']) > 0){
+                    if (strlen($_POST['newComment']) > 0) {
                         $stmt = $conn->prepare("UPDATE DoomWiki.comments SET commentBody = ?, state = 'Modified' WHERE id = ?");
                         $stmt->bind_param("si", $_POST['newComment'], $_POST['cid']);
                         $stmt->execute();
-                    }else{
+                    } else {
                         $stmt = $conn->prepare("UPDATE DoomWiki.comments SET commentBody = ?, state = 'Deleted' WHERE id = ?");
                         $stmt->bind_param("si", $_POST['newComment'], $_POST['cid']);
                         $stmt->execute();
@@ -90,8 +90,10 @@
                     <?php
                     if ($user->isLogged()) echo "<p>" . $user->user_name . "</p>";
                     else echo "<p>OSPITE</p>";
-                    if ($user->isLogged()) echo "<a href='account-managment.php'>Impostazioni</a>";
-                    else {
+                    if ($user->isLogged()) {
+                        if ($user->isSuperUser()) echo "<a href='siteManager.php'>Gestione Sito</a>";
+                        echo "<a href='account-managment.php'>Impostazioni</a>";
+                    } else {
                         echo "<a href='signup.php'>Registrati</a>";
                         echo "<a href='login.php'>Entra</a>";
                     }
@@ -113,8 +115,8 @@
                 <div class="commentList">
                     <p>Hai eliminato questa risposta, non puoi più modificarla.
                     <p>
-                        <p><a href="answerChange.php">Controlla tutte le tue risposte</a></p>
-                        <p><a href="/">Torna alla home page</a></p>
+                    <p><a href="answerChange.php">Controlla tutte le tue risposte</a></p>
+                    <p><a href="/">Torna alla home page</a></p>
                 </div>
             </div>
         <?php
@@ -166,7 +168,7 @@
                     <p class="HCentered">Non hai ancora risposto a nessuna domanda. Che aspetti!</p>
                 <?php
                 }
-                if(isset($_GET['UserSettings'])) echo "<a href='account-managment.php'>Torna alle impostazioni.</a>";
+                if (isset($_GET['UserSettings'])) echo "<a href='account-managment.php'>Torna alle impostazioni.</a>";
                 ?>
             </div>
         </div>

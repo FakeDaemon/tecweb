@@ -15,72 +15,78 @@
 </head>
 
 <body>
-  <?php
+    <?php
     require 'SCRIPTS/.php/database_connection.php';
     include 'SCRIPTS/.php/user.php';
     $user = new User($conn);
-    if(isset($_POST['CookieAccepted']) &&
-       $_POST['CookieAccepted']=='Accetta')
-    {
-      setCookie('CookieAccepted', 'Accetta',
-      'time() + (86400 * 30)');
-      $_COOKIE['CookieAccepted'] = 'Accetta';
-      header('location : history_2016.php');
+    if (
+        isset($_POST['CookieAccepted']) &&
+        $_POST['CookieAccepted'] == 'Accetta'
+    ) {
+        setCookie(
+            'CookieAccepted',
+            'Accetta',
+            'time() + (86400 * 30)'
+        );
+        $_COOKIE['CookieAccepted'] = 'Accetta';
+        header('location : history_2016.php');
     }
-    if( !(isset($_COOKIE['CookieAccepted'])) ||
-        !($_COOKIE['CookieAccepted']=='Accetta')
-      )
-    {
-  ?>
-      <form class="cookie-banner" action="history_2016.php" method="post">
-          <p>
-              Il nostro sito utilizza dei <span lang="en">cookie</span> per personalizzare
-              il contenuto e analizzare il traffico di rete.</br>
-              <a href=cookie_informativa.php>Leggi di più riguardo ai <span lang="en">cookie</span></a></br>
-          </p>
-          <input type="submit" name="CookieAccepted" value="Accetta">
-      </form>
-  <?php
-  }
-  ?>
+    if (
+        !(isset($_COOKIE['CookieAccepted'])) ||
+        !($_COOKIE['CookieAccepted'] == 'Accetta')
+    ) {
+    ?>
+        <form class="cookie-banner" action="history_2016.php" method="post">
+            <p>
+                Il nostro sito utilizza dei <span lang="en">cookie</span> per personalizzare
+                il contenuto e analizzare il traffico di rete.</br>
+                <a href=cookie_informativa.php>Leggi di più riguardo ai <span lang="en">cookie</span></a></br>
+            </p>
+            <input type="submit" name="CookieAccepted" value="Accetta">
+        </form>
+    <?php
+    }
+    ?>
     <header>
         <h1 id="logo">DOOM WIKI</h1>
         <nav id="NavBar">
-          <ul id="MenuBar">
-            <li class="MenuBarItem" lang="en"><a href="/" lang="en">HOMEPAGE</a></li>
-            <li class="MenuBarItemNestedList">
-              <label id="NestedListLbl" for="NestedListBtn">
-                TRAMA
-              </label>
-              <input id="NestedListBtn" type="checkbox" value="Mostra Capitoli Disponibili">
-                <ul id="MenuBarNestedList">
-                  <li class="NestedListItem"><a href="history.php">CAPITOLO <abbr title="Primo">I</abbr></a></li>
-                  <li class="NestedListItem"><a href="history_2.php">CAPITOLO <abbr title="Secondo">II</abbr></a></li>
-                  <li class="NestedListItem"><a href="history_3.php">CAPITOLO <abbr title="Terzo">III</abbr></a></li>
-                  <li class="NestedListItem CurrentLocation"><a href="history_2016.php">CAPITOLO <abbr title="Quarto">IV</abbr></a></li>
-                  <li class="NestedListItem"><a href="history_eternals.php">CAPITOLO <abbr title="Quinto">V</abbr></a></li>
-                </ul>
-            </li>
-            <li class="MenuBarItem"><a href="stats.php">STATISTICHE</a></li>
-            <li class="MenuBarItem"><a href="trivia.php">CURIOSITÀ</a></li>
-          </ul>
-          <div id="MenuUserWidget">
-            <div>
-            <?php
-            if($user->isLogged()) echo "<p>".$user->user_name."</p>";
-            else echo "<p>OSPITE</p>";
-            if($user->isLogged()) echo "<a href='account-managment.php'>Impostazioni</a>";
-            else {
-              echo "<a href='signup.php'>Registrati</a>";
-              echo "<a href='login.php'>Entra</a>";
-            }
-            ?>
+            <ul id="MenuBar">
+                <li class="MenuBarItem" lang="en"><a href="/" lang="en">HOMEPAGE</a></li>
+                <li class="MenuBarItemNestedList">
+                    <label id="NestedListLbl" for="NestedListBtn">
+                        TRAMA
+                    </label>
+                    <input id="NestedListBtn" type="checkbox" value="Mostra Capitoli Disponibili">
+                    <ul id="MenuBarNestedList">
+                        <li class="NestedListItem"><a href="history.php">CAPITOLO <abbr title="Primo">I</abbr></a></li>
+                        <li class="NestedListItem"><a href="history_2.php">CAPITOLO <abbr title="Secondo">II</abbr></a></li>
+                        <li class="NestedListItem"><a href="history_3.php">CAPITOLO <abbr title="Terzo">III</abbr></a></li>
+                        <li class="NestedListItem CurrentLocation"><a href="history_2016.php">CAPITOLO <abbr title="Quarto">IV</abbr></a></li>
+                        <li class="NestedListItem"><a href="history_eternals.php">CAPITOLO <abbr title="Quinto">V</abbr></a></li>
+                    </ul>
+                </li>
+                <li class="MenuBarItem"><a href="stats.php">STATISTICHE</a></li>
+                <li class="MenuBarItem"><a href="trivia.php">CURIOSITÀ</a></li>
+            </ul>
+            <div id="MenuUserWidget">
+                <div>
+                    <?php
+                    if ($user->isLogged()) echo "<p>" . $user->user_name . "</p>";
+                    else echo "<p>OSPITE</p>";
+                    if ($user->isLogged()) {
+                        if ($user->isSuperUser()) echo "<a href='siteManager.php'>Gestione Sito</a>";
+                        echo "<a href='account-managment.php'>Impostazioni</a>";
+                    } else {
+                        echo "<a href='signup.php'>Registrati</a>";
+                        echo "<a href='login.php'>Entra</a>";
+                    }
+                    ?>
+                </div>
+                <?php
+                if ($user->isLogged()) echo "<img src='/IMAGES/ProfilePics/ProfilePicN" . $user->profile_pic . ".jpg' alt='Doomguy, accedi o registrati!'>";
+                else echo "<img src='/IMAGES/ProfilePics/ProfilePicN1.jpg' alt='Doomguy, accedi o registrati!'>";
+                ?>
             </div>
-            <?php
-            if($user->isLogged()) echo "<img src='/IMAGES/ProfilePics/ProfilePicN".$user->profile_pic.".jpg' alt='Doomguy, accedi o registrati!'>";
-            else echo "<img src='/IMAGES/ProfilePics/ProfilePicN1.jpg' alt='Doomguy, accedi o registrati!'>";
-            ?>
-          </div>
         </nav>
         <script type="text/javascript">
             var trama_btn = document.getElementById("I_nested_list_span");
@@ -192,57 +198,57 @@
                 <li><span lang="en">Mancubus</span></li>
                 <li>Predatore</li>
                 <li>Raccoglitore<abbr title="Downloadable Content">DLC</abbr></li>
-                    <li>Cacodemone<abbr title=" Downloadable Content">DLC</abbr></li>
+                <li>Cacodemone<abbr title=" Downloadable Content">DLC</abbr></li>
                 <li>Spettro<abbr title="Downloadable Content">DLC</abbr></li>
-                </ul>
-                <h3 class=" lista_titolo"><span lang="en">Power-ups</span></h3>
-                        <ul class="lista">
-                            <li><span lang="en">Quad Damage</span></li>
-                            <li>Invisibilità</li>
-                            <li>Rigenerazione</li>
-                            <li>Rapidità</li>
-                            <li>Invulnerabilità</li>
-                        </ul>
-                        <h3 class="lista_titolo">Mappe Incluse nel <span lang="en">Multiplayer</span></h3>
-                        <ul class="lista">
-                            <li>
-                                Scavo
-                                Un modesto avamposto minatorio dello <abbr title="Union AereoSpace Corporation">UAC</abbr>
-                            </li>
-                            <li>
-                                Inferno
-                                Una mappa infernale con molti interni e esterni, piena di piattaforme, abissi e piattaforme di teletrasporto
-                            </li>
-                            <li>
-                                Abisso
-                                Un enorme mappa sotto la calotta ghiacchiata di Marte.
-                            </li>
-                            <li>
-                                Tritarifiuti
-                                Questa piccola mappa si trova nell'impianto di smaltimento rifiuti del complesso residenziale
-                                <abbr title="Union AereoSpace Corporation">UAC</abbr>
-                            </li>
-                            <li>
-                                Elica
-                                Luogo di sperimentazione sui demoni per la creazione e sviluppo di armi
-                            </li>
-                            <li>
-                                Perdizione
-                                Un'antica arena popolata da sfortunate anime agonizzanti
-                            </li>
-                            <li>
-                                Sacrilego
-                                Ambientata all'inferno questa mappa offre linee di tiro pulite
-                            </li>
-                            <li>
-                                Calura
-                                Una struttura industriale <abbr title="Union AereoSpace Corporation">UAC</abbr> con muri luccicanti
-                            </li>
-                            <li>
-                                <span lang="en">Beneath</span>
-                                Prima di essere teletrasportato sulla Terra, le energie dell'Inferno vengono ammassate in queste caverne
-                            </li>
-                        </ul>
+            </ul>
+            <h3 class=" lista_titolo"><span lang="en">Power-ups</span></h3>
+            <ul class="lista">
+                <li><span lang="en">Quad Damage</span></li>
+                <li>Invisibilità</li>
+                <li>Rigenerazione</li>
+                <li>Rapidità</li>
+                <li>Invulnerabilità</li>
+            </ul>
+            <h3 class="lista_titolo">Mappe Incluse nel <span lang="en">Multiplayer</span></h3>
+            <ul class="lista">
+                <li>
+                    Scavo
+                    Un modesto avamposto minatorio dello <abbr title="Union AereoSpace Corporation">UAC</abbr>
+                </li>
+                <li>
+                    Inferno
+                    Una mappa infernale con molti interni e esterni, piena di piattaforme, abissi e piattaforme di teletrasporto
+                </li>
+                <li>
+                    Abisso
+                    Un enorme mappa sotto la calotta ghiacchiata di Marte.
+                </li>
+                <li>
+                    Tritarifiuti
+                    Questa piccola mappa si trova nell'impianto di smaltimento rifiuti del complesso residenziale
+                    <abbr title="Union AereoSpace Corporation">UAC</abbr>
+                </li>
+                <li>
+                    Elica
+                    Luogo di sperimentazione sui demoni per la creazione e sviluppo di armi
+                </li>
+                <li>
+                    Perdizione
+                    Un'antica arena popolata da sfortunate anime agonizzanti
+                </li>
+                <li>
+                    Sacrilego
+                    Ambientata all'inferno questa mappa offre linee di tiro pulite
+                </li>
+                <li>
+                    Calura
+                    Una struttura industriale <abbr title="Union AereoSpace Corporation">UAC</abbr> con muri luccicanti
+                </li>
+                <li>
+                    <span lang="en">Beneath</span>
+                    Prima di essere teletrasportato sulla Terra, le energie dell'Inferno vengono ammassate in queste caverne
+                </li>
+            </ul>
         </article>
     </div>
     <footer id="foot">
