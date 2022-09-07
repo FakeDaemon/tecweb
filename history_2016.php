@@ -229,7 +229,7 @@
               </tbody>
             </table>
 
-            <h3 class=" lista_titolo"><span lang="en">Power-ups</span></h3>
+            <h3 class="lista_titolo"><span lang="en">Power-ups</span></h3>
                         <ul class="lista">
                             <li><span lang="en">Quad Damage</span></li>
                             <li>Invisibilità</li>
@@ -239,8 +239,7 @@
                         </ul>
                         <h3 class="lista_titolo">Mappe Incluse nel <span lang="en">Multiplayer</span></h3>
                         <ul class="lista">
-                            <li>
-                                Scavo
+                            <li>Scavo
                                 Un modesto avamposto minatorio dello <abbr title="Union AereoSpace Corporation">UAC</abbr>
                             </li>
                             <li>
@@ -277,6 +276,10 @@
                                 Prima di essere teletrasportato sulla Terra, le energie dell'Inferno vengono ammassate in queste caverne
                             </li>
                         </ul>
+                        <dl class="">
+                          <dt>Scavo</dt>
+                          <dd>Un modesto avamposto minatorio dello <abbr title="Union AereoSpace Corporation">UAC</abbr></dd>
+                        </dl>
         </article>
     </div>
     <footer id="foot">
