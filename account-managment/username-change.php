@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="it" dir="ltr">
-
 <head>
   <link href="../CSS/STYLE_USERNAMECHANGE.css" rel="stylesheet">
   <link href="../CSS/STYLE_COMMON.css" rel="stylesheet">
@@ -11,16 +10,14 @@
   <meta name="description" content="DOOM Wiki" />
   <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano , Angeloni Alberto" />
 </head>
-
 <body>
   <?php
   require '../SCRIPTS/.php/database_connection.php';
   include '../SCRIPTS/.php/user.php';
-
+  if (!(isset($_COOKIE['CookieAccepted'])) || !($_COOKIE['CookieAccepted'] == 'Accetta')) {header("location: ../cookie_informativa.php");}
   $user = new User($conn); ?>
   <header>
     <h1 id="logo">DOOM WIKI</h1>
-
     <nav id="NavBar">
       <ul id="MenuBar">
         <li class="MenuBarItem" lang="en"><a href="/" lang="en">HOMEPAGE</a></li>
@@ -62,19 +59,16 @@
     </nav>
   </header>
   <div class="main">
-
     <p>NOME UTENTE</p>
     <form id="auth_widget">
       <p>Nome utente attuale:</p>
       <p>CURRENT_USERNAME</p>
       <label id="NewUsernameLabel" for="NextUsername" class="up">Nuovo Nome Utente</label>
       <input id="NextUsername" type="text" name="NewUsername">
-
       <input id="ConfirmButton" type="submit" name="SubmitButton" value="Conferma">
       <input id="ResetButton" type="reset" value="Pulisci">
       <a href="../help.php">Serve aiuto?</a>
     </form>
-
   </div>
   <footer>
     <p>

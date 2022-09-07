@@ -7,9 +7,9 @@
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron" />
   <meta charset="utf-8">
   <title>Recupero Credenziali | WikiDoom</title>
-  <meta name="keywords" content="DOOM"/>
-  <meta name="description" content="DOOM Wiki"/>
-  <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano , Angeloni Alberto"/>
+  <meta name="keywords" content="DOOM" />
+  <meta name="description" content="DOOM Wiki" />
+  <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano , Angeloni Alberto" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="SCRIPTS/css_modifier.js"></script>
   <script type="text/javascript" src="SCRIPTS/cookie_extractor.js"></script>
@@ -21,7 +21,24 @@
   include 'SCRIPTS/.php/user.php';
 
   $user = new User($conn);
-   ?>
+  if (isset($_POST['CookieAccepted']) && $_POST['CookieAccepted'] == 'Accetta') {
+    setCookie('CookieAccepted', 'Accetta', time() + (86400 * 30));
+    $_COOKIE['CookieAccepted'] = 'Accetta';
+    header('location : credentialRecovery.php');
+  }
+  if (!(isset($_COOKIE['CookieAccepted'])) || !($_COOKIE['CookieAccepted'] == 'Accetta')) {
+  ?>
+    <form class="cookie-banner" action="credentialRecovery.php" method="post">
+      <p>
+        Il nostro sito utilizza dei <span lang="en">cookie</span> per personalizzare
+        il contenuto e analizzare il traffico di rete.</br>
+        <a href=cookie_informativa.php>Leggi di più riguardo ai <span lang="en">cookie</span></a></br>
+      </p>
+      <input type="submit" name="CookieAccepted" value="Accetta">
+    </form>
+  <?php
+  }
+  ?>
   <header>
     <h1 id="logo">DOOM WIKI</h1>
 
@@ -73,7 +90,7 @@
 
         <p>Inserisci l'<span lang="en">email</span> che hai usato per iscriverti al sito nel campo sottostante. </p>
         <p>Riceverai tutte le istruzioni per recuperare la tua password.</p>
-        <p>Se non ricevi nessun messaggio o non ricordi la tua  <span lang="en">email</span> <a href="help.php">scrivici</a> e ti ricontatteremo.</p>
+        <p>Se non ricevi nessun messaggio o non ricordi la tua <span lang="en">email</span> <a href="help.php">scrivici</a> e ti ricontatteremo.</p>
 
         <label id="email_input_label" for="email_input" class="up"><span lang="en">Email</span></label>
         <input id="email_input" type="text" name="username" required>
@@ -92,9 +109,10 @@
       Tutti i diritti riservati.<br>
       <br>
     </p>
-    <img class="imgVadidCode" src="IMAGES/valid-xhtml10.png" alt="html valido"/>
-    <img class="imgVadidCode" src="IMAGES/vcss-blue.gif" alt="css valido"/>
+    <img class="imgVadidCode" src="IMAGES/valid-xhtml10.png" alt="html valido" />
+    <img class="imgVadidCode" src="IMAGES/vcss-blue.gif" alt="css valido" />
   </footer>
   <script type="text/javascript" src="SCRIPTS/CredentialRecoveryPage.js"></script>
 </body>
+
 </html>
