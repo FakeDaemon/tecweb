@@ -236,56 +236,35 @@
             </table>
 
             <h3 class="lista_titolo"><span lang="en">Power-ups</span></h3>
-                        <ul class="lista">
-                            <li><span lang="en">Quad Damage</span></li>
-                            <li>Invisibilità</li>
-                            <li>Rigenerazione</li>
-                            <li>Rapidità</li>
-                            <li>Invulnerabilità</li>
-                        </ul>
-                        <h3 class="lista_titolo">Mappe Incluse nel <span lang="en">Multiplayer</span></h3>
-                        <ul class="lista">
-                            <li>Scavo
-                                Un modesto avamposto minatorio dello <abbr title="Union AereoSpace Corporation">UAC</abbr>
-                            </li>
-                            <li>
-                                Inferno
-                                Una mappa infernale con molti interni e esterni, piena di piattaforme, abissi e piattaforme di teletrasporto
-                            </li>
-                            <li>
-                                Abisso
-                                Un enorme mappa sotto la calotta ghiacchiata di Marte.
-                            </li>
-                            <li>
-                                Tritarifiuti
-                                Questa piccola mappa si trova nell'impianto di smaltimento rifiuti del complesso residenziale
-                                <abbr title="Union AereoSpace Corporation">UAC</abbr>
-                            </li>
-                            <li>
-                                Elica
-                                Luogo di sperimentazione sui demoni per la creazione e sviluppo di armi
-                            </li>
-                            <li>
-                                Perdizione
-                                Un'antica arena popolata da sfortunate anime agonizzanti
-                            </li>
-                            <li>
-                                Sacrilego
-                                Ambientata all'inferno questa mappa offre linee di tiro pulite
-                            </li>
-                            <li>
-                                Calura
-                                Una struttura industriale <abbr title="Union AereoSpace Corporation">UAC</abbr> con muri luccicanti
-                            </li>
-                            <li>
-                                <span lang="en">Beneath</span>
-                                Prima di essere teletrasportato sulla Terra, le energie dell'Inferno vengono ammassate in queste caverne
-                            </li>
-                        </ul>
-                        <dl class="">
-                          <dt>Scavo</dt>
-                          <dd>Un modesto avamposto minatorio dello <abbr title="Union AereoSpace Corporation">UAC</abbr></dd>
-                        </dl>
+              <ul class="lista">
+                  <li><span lang="en">Quad Damage</span></li>
+                  <li>Invisibilità</li>
+                  <li>Rigenerazione</li>
+                  <li>Rapidità</li>
+                  <li>Invulnerabilità</li>
+              </ul>
+              <h3 class="lista_titolo">Mappe Incluse nel <span lang="en">Multiplayer</span></h3>
+              <dl class="mappe">
+                <dt>Scavo</dt>
+                <dd>Un modesto avamposto minatorio dello <abbr title="Union AereoSpace Corporation">UAC</abbr></dd>
+                <dt>Inferno</dt>
+                <dd>Una mappa infernale con molti interni e esterni, piena di piattaforme, abissi e piattaforme di teletrasporto</dd>
+                <dt>Abisso</dt>
+                <dd>Un enorme mappa sotto la calotta ghiacchiata di Marte.</dd>
+                <dt>Tritarifiuti</dt>
+                <dd>Questa piccola mappa si trova nell'impianto di smaltimento rifiuti del complesso residenziale
+                <abbr title="Union AereoSpace Corporation">UAC</abbr></dd>
+                <dt>Elica</dt>
+                <dd>Luogo di sperimentazione sui demoni per la creazione e sviluppo di armi</dd>
+                <dt>Perdizione</dt>
+                <dd>Un'antica arena popolata da sfortunate anime agonizzanti</dd>
+                <dt>Sacrilego</dt>
+                <dd>Ambientata all'inferno questa mappa offre linee di tiro pulite</dd>
+                <dt>Calura</dt>
+                <dd>Una struttura industriale <abbr title="Union AereoSpace Corporation">UAC</abbr> con muri luccicanti</dd>
+                <dt lang="en">Beneath</dt>
+                <dd>Prima di essere teletrasportato sulla Terra, le energie dell'Inferno vengono ammassate in queste caverne</dd>
+              </dl>
         </article>
     </div>
     <footer id="foot">
