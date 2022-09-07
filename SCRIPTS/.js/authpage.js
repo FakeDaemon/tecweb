@@ -34,3 +34,38 @@ document.getElementById("password_visibility").addEventListener('change', functi
     document.getElementById("password_input").type = 'password';
   }
 });
+
+/* FORM-VALIDATION */
+document.getElementById("password_input").addEventListener('input', function () {
+  document.getElementById("password_input").setCustomValidity("");
+});
+document.getElementById("email_input").addEventListener('input', function () {
+  document.getElementById("email_input").setCustomValidity("");
+});
+document.querySelector("form").addEventListener('submit', function (evt) {
+  console.log("okay");
+  if (document.getElementById("email_input")) {
+    if (document.getElementById("email_input").value.length == 0) {
+      document.getElementById("email_input").setCustomValidity("Inserisci una email.");
+      document.getElementById("email_input").reportValidity();
+      evt.preventDefault();
+      return;
+    }
+  }
+  if (document.getElementById("password_input")) {
+    if (document.getElementById("password_input").value.length == 0) {
+      document.getElementById("password_input").setCustomValidity("Inserisci una password.");
+      document.getElementById("password_input").reportValidity();
+      evt.preventDefault();
+      return;
+    }else{
+      const specialChars = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      if (!specialChars.test(document.getElementById("email_input").value)) {
+      document.getElementById("email_input").setCustomValidity("Formato email non valido!");
+      document.getElementById("email_input").reportValidity();
+      evt.preventDefault();
+      return;
+    }
+    }
+  }
+});

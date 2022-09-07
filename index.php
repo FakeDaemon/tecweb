@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
   <link href="CSS/STYLE_HOMEPAGE.css" rel="stylesheet">
   <link href="CSS/STYLE_COMMON.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron" />
   <meta charset="utf-8">
   <title> Home </title>
-  <meta name="keywords" content="DOOM"/>
-  <meta name="description" content="DOOM Wiki"/>
-  <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano, Angeloni Alberto"/>
+  <meta name="keywords" content="DOOM" />
+  <meta name="description" content="DOOM Wiki" />
+  <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano, Angeloni Alberto" />
 </head>
+
 <body>
   <?php
   require 'SCRIPTS/.php/database_connection.php';
@@ -41,20 +43,20 @@
       </ul>
       <div id="MenuUserWidget">
         <div>
-        <?php
-        if($user->isLogged()) echo "<p>".$user->user_name."</p>";
-        else echo "<p>OSPITE</p>";
-        if($user->isLogged()){
-          if($user->isSuperUser()) echo "<a href='siteManager.php'>Gestione Sito</a>";
-          echo "<a href='account-managment.php'>Impostazioni</a>";
-        }else {
-          echo "<a href='signup.php'>Registrati</a>";
-          echo "<a href='login.php'>Entra</a>";
-        }
-        ?>
+          <?php
+          if ($user->isLogged()) echo "<p>" . $user->user_name . "</p>";
+          else echo "<p>OSPITE</p>";
+          if ($user->isLogged()) {
+            if ($user->isSuperUser()) echo "<a href='siteManager.php'>Gestione Sito</a>";
+            echo "<a href='account-managment.php'>Impostazioni</a>";
+          } else {
+            echo "<a href='signup.php'>Registrati</a>";
+            echo "<a href='login.php'>Entra</a>";
+          }
+          ?>
         </div>
         <?php
-        if($user->isLogged()) echo "<img src='/IMAGES/ProfilePics/ProfilePicN".$user->profile_pic.".jpg' alt='Doomguy, accedi o registrati!'>";
+        if ($user->isLogged()) echo "<img src='/IMAGES/ProfilePics/ProfilePicN" . $user->profile_pic . ".jpg' alt='Doomguy, accedi o registrati!'>";
         else echo "<img src='/IMAGES/ProfilePics/ProfilePicN1.jpg' alt='Doomguy, accedi o registrati!'>";
         ?>
       </div>
@@ -75,21 +77,21 @@
       <p>ULTIME DOMANDE DELLA COMMUNITY</p>
       <?php
       $result = $conn->query("SELECT * FROM DoomWiki.topics LEFT OUTER JOIN DoomWiki.users ON email = fst_mail WHERE state='Approved' ORDER BY creation_date LIMIT 10;");
-      if($result->num_rows > 0){
-        while($row = $result->fetch_assoc()){
-        echo '<a href="questions.php?id='.$row['id'].'"><p class="title">'.$row['title'].'</p><p class="details">Aperto da '.($row['user_name']!=NULL ? $row['user_name'] : "utente eliminato").' in data '.$row['creation_date'].'</p></a>';
-      }
-      echo '<a href="questions.php?id=Latest">Vedi Tutti</a>';
-      echo '</div>';
-      echo '<div class="TopicList">';
-      $result = $conn->query("SELECT t.id, u.user_name, t.title, t.creation_date,COUNT(c.id) AS CommentsCount FROM DoomWiki.topics AS t LEFT OUTER JOIN DoomWiki.users AS u ON t.email = u.fst_mail LEFT OUTER JOIN DoomWiki.comments AS c ON c.topicID=t.id WHERE t.state='Approved' GROUP BY t.id ORDER BY CommentsCount DESC;");        
-      while($row = $result->fetch_assoc()){
-          echo '<a href="questions.php?id='.$row['id'].'"><p class="title">'.$row['title'].'</p><p class="details">Aperto da '.($row['user_name']!=NULL ? $row['user_name'] : "utente eliminato").' in data '.$row['creation_date'].'</p></a>';
+      if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+          echo '<a href="questions.php?id=' . $row['id'] . '"><p class="title">' . $row['title'] . '</p><p class="details">Aperto da ' . ($row['user_name'] != NULL ? $row['user_name'] : "utente eliminato") . ' in data ' . $row['creation_date'] . '</p></a>';
+        }
+        echo '<a href="questions.php?id=Latest">Vedi Tutti</a>';
+        echo '</div>';
+        echo '<div class="TopicList">';
+        $result = $conn->query("SELECT t.id, u.user_name, t.title, t.creation_date,COUNT(c.id) AS CommentsCount FROM DoomWiki.topics AS t LEFT OUTER JOIN DoomWiki.users AS u ON t.email = u.fst_mail LEFT OUTER JOIN DoomWiki.comments AS c ON c.topicID=t.id WHERE t.state='Approved' GROUP BY t.id ORDER BY CommentsCount DESC;");
+        while ($row = $result->fetch_assoc()) {
+          echo '<a href="questions.php?id=' . $row['id'] . '"><p class="title">' . $row['title'] . '</p><p class="details">Aperto da ' . ($row['user_name'] != NULL ? $row['user_name'] : "utente eliminato") . ' in data ' . $row['creation_date'] . '</p></a>';
         }
         echo '<a href="questions.php?id=Comments">Vedi Tutti</a>';
-      }else{
-      echo '<p class="subTitle">Nessuno ha ancora chiesto nulla. <a href="questionEditor.php">Chiedi</a> qualcosa per primo!</p>';
-    }
+      } else {
+        echo '<p class="subTitle">Nessuno ha ancora chiesto nulla. <a href="questionEditor.php">Chiedi</a> qualcosa per primo!</p>';
+      }
       ?>
     </div>
   </div>
@@ -101,8 +103,9 @@
       Tutti i diritti riservati.<br>
       <br>
     </p>
-    <img class="imgVadidCode" src="IMAGES/valid-xhtml10.png" alt="html valido"/>
-    <img class="imgVadidCode" src="IMAGES/vcss-blue.gif" alt="css valido"/>
+    <img class="imgVadidCode" src="IMAGES/valid-xhtml10.png" alt="html valido" />
+    <img class="imgVadidCode" src="IMAGES/vcss-blue.gif" alt="css valido" />
   </footer>
 </body>
+
 </html>

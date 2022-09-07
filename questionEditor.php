@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
   <link href="CSS/STYLE_QUESTIONEDITOR.css" rel="stylesheet">
   <link href="CSS/STYLE_COMMON.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron" />
   <meta charset="utf-8">
   <title> Home </title>
-  <meta name="keywords" content="DOOM"/>
-  <meta name="description" content="DOOM Wiki"/>
-  <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano , Angeloni Alberto"/>
+  <meta name="keywords" content="DOOM" />
+  <meta name="description" content="DOOM Wiki" />
+  <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano , Angeloni Alberto" />
 </head>
+
 <body>
   <?php
   require 'SCRIPTS/.php/database_connection.php';
@@ -40,24 +42,26 @@
       </ul>
       <div id="MenuUserWidget">
         <div>
-        <?php
-        if($user->isLogged()) echo "<p>".$user->user_name."</p>";
-        else echo "<p>OSPITE</p>";
-        if($user->isLogged()) echo "<a href='account-managment.php'>Impostazioni</a>";
-        else {
-          echo "<a href='signup.php'>Registrati</a>";
-          echo "<a href='login.php'>Entra</a>";
-        }
-        ?>
+          <?php
+          if ($user->isLogged()) echo "<p>" . $user->user_name . "</p>";
+          else echo "<p>OSPITE</p>";
+          if ($user->isLogged()) {
+            if ($user->isSuperUser()) echo "<a href='siteManager.php'>Gestione Sito</a>";
+            echo "<a href='account-managment.php'>Impostazioni</a>";
+          } else {
+            echo "<a href='signup.php'>Registrati</a>";
+            echo "<a href='login.php'>Entra</a>";
+          }
+          ?>
         </div>
         <?php
-        if($user->isLogged()) echo "<img src='/IMAGES/ProfilePics/ProfilePicN".$user->profile_pic.".jpg' alt='Doomguy, accedi o registrati!'>";
+        if ($user->isLogged()) echo "<img src='/IMAGES/ProfilePics/ProfilePicN" . $user->profile_pic . ".jpg' alt='Doomguy, accedi o registrati!'>";
         else echo "<img src='/IMAGES/ProfilePics/ProfilePicN1.jpg' alt='Doomguy, accedi o registrati!'>";
         ?>
       </div>
     </nav>
   </header>
-  <?php if($state === "okay"){?>
+  <?php if ($state === "okay") { ?>
     <div class="main">
       <span>
         <h1>Domanda inviata!</h1>
@@ -65,7 +69,7 @@
         <a href="/">Continua la navigazione!</a>
       </span>
     </div>
-  <?php }else if($state === "error"){?>
+  <?php } else if ($state === "error") { ?>
     <div class="main">
       <span>
         <h1>Errore del sistema.</h1>
@@ -74,7 +78,7 @@
         <a href="/">Continua la navigazione!</a>
       </span>
     </div>
-  <?php }else{ ?>
+  <?php } else { ?>
     <form class="main" method="post" action="questionEditor.php">
       <label for="Title">TITOLO DELLA DOMANDA</label>
       <input id="Title" type="text" name="QuestionTitle" required>
@@ -92,8 +96,9 @@
       Tutti i diritti riservati.<br>
       <br>
     </p>
-    <img class="imgVadidCode" src="IMAGES/valid-xhtml10.png" alt="html valido"/>
-    <img class="imgVadidCode" src="IMAGES/vcss-blue.gif" alt="css valido"/>
+    <img class="imgVadidCode" src="IMAGES/valid-xhtml10.png" alt="html valido" />
+    <img class="imgVadidCode" src="IMAGES/vcss-blue.gif" alt="css valido" />
   </footer>
 </body>
+
 </html>
