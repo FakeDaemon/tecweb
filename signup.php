@@ -18,6 +18,24 @@
   require 'SCRIPTS/.php/database_connection.php';
   include 'SCRIPTS/.php/user.php';
   $user = new User($conn);
+
+  if (isset($_POST['CookieAccepted']) && $_POST['CookieAccepted'] == 'Accetta') {
+    setCookie('CookieAccepted', 'Accetta', time() + (86400 * 30));
+    $_COOKIE['CookieAccepted'] = 'Accetta';
+    header('location : signup.php');
+  }
+  if (!(isset($_COOKIE['CookieAccepted'])) || !($_COOKIE['CookieAccepted'] == 'Accetta')) {
+  ?>
+    <form class="cookie-banner" action="signup.php" method="post">
+      <p>
+        Il nostro sito utilizza dei <span lang="en">cookie</span> per personalizzare
+        il contenuto e analizzare il traffico di rete.</br>
+        <a href=cookie_informativa.php>Leggi di più riguardo ai <span lang="en">cookie</span></a></br>
+      </p>
+      <input type="submit" name="CookieAccepted" value="Accetta">
+    </form>
+  <?php
+  }
   if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['email'])) {
     if (preg_match('/^[A-Za-z0-9]*$/', $_POST['username']) && preg_match('/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])[a-zA-Z0-9]{8,15}$/', $_POST['password']) && $_POST['password'] === $_POST['passwordConfirm']) {
       $stmt = $conn->prepare("SELECT Fst_mail FROM DoomWiki.users WHERE fst_mail = ?");

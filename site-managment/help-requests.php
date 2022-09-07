@@ -17,10 +17,9 @@
   $level = 1;
   require '../SCRIPTS/.php/database_connection.php';
   include '../SCRIPTS/.php/user.php';
-
+  if (!(isset($_COOKIE['CookieAccepted'])) || !($_COOKIE['CookieAccepted'] == 'Accetta')) {header("location: ../cookie_informativa.php");}
   $user = new User($conn);
   if (!$user->isLogged() || !$user->isSuperUser()) header("location: ../account-managment.php");
-
   if (isset($_POST['helpRequestID']) && isset($_POST['act'])) {
     if ($_POST['act'] == 'Gestisci') {
       $stmt = $conn->prepare("UPDATE DoomWiki.helpRequests SET requestMod=?, requestState = 'WorkingOn' WHERE id=?");

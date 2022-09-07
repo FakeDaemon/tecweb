@@ -18,11 +18,9 @@
   $level = 1;
   require '../SCRIPTS/.php/database_connection.php';
   include '../SCRIPTS/.php/user.php';
-
   $user = new User($conn);
-
+  if (!(isset($_COOKIE['CookieAccepted'])) || !($_COOKIE['CookieAccepted'] == 'Accetta')) {header("location: ../cookie_informativa.php");}
   if (!$user->isLogged() || !$user->isAdmin()) header("location: ../login.php");
-
   $result = $conn->query("SELECT fst_mail, user_name, profile_pic FROM DoomWiki.users WHERE ROLE = 'mod'");
   $modsList = array();
   while ($row = $result->fetch_assoc()) {

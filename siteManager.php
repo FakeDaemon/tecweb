@@ -20,6 +20,23 @@
 
   $user = new User($conn);
   if (!$user->isLogged() || !$user->isSuperUser()) header("location: account-managment.php");
+  if (isset($_POST['CookieAccepted']) && $_POST['CookieAccepted'] == 'Accetta') {
+    setCookie('CookieAccepted', 'Accetta', time() + (86400 * 30));
+    $_COOKIE['CookieAccepted'] = 'Accetta';
+    header('location : siteManager.php');
+  }
+  if (!(isset($_COOKIE['CookieAccepted'])) || !($_COOKIE['CookieAccepted'] == 'Accetta')) {
+  ?>
+    <form class="cookie-banner" action="siteManager.php" method="post">
+      <p>
+        Il nostro sito utilizza dei <span lang="en">cookie</span> per personalizzare
+        il contenuto e analizzare il traffico di rete.</br>
+        <a href=cookie_informativa.php>Leggi di più riguardo ai <span lang="en">cookie</span></a></br>
+      </p>
+      <input type="submit" name="CookieAccepted" value="Accetta">
+    </form>
+  <?php
+  }
   ?>
   <header>
     <h1 id="logo">DOOM WIKI</h1>

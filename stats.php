@@ -17,22 +17,12 @@
     require 'SCRIPTS/.php/database_connection.php';
     include 'SCRIPTS/.php/user.php';
     $user = new User($conn);
-    if (
-        isset($_POST['CookieAccepted']) &&
-        $_POST['CookieAccepted'] == 'Accetta'
-    ) {
-        setCookie(
-            'CookieAccepted',
-            'Accetta',
-            'time() + (86400 * 30)'
-        );
+    if (isset($_POST['CookieAccepted']) && $_POST['CookieAccepted'] == 'Accetta') {
+        setCookie('CookieAccepted', 'Accetta', time() + (86400 * 30));
         $_COOKIE['CookieAccepted'] = 'Accetta';
         header('location : stats.php');
     }
-    if (
-        !(isset($_COOKIE['CookieAccepted'])) ||
-        !($_COOKIE['CookieAccepted'] == 'Accetta')
-    ) {
+    if (!(isset($_COOKIE['CookieAccepted'])) || !($_COOKIE['CookieAccepted'] == 'Accetta')) {
     ?>
         <form class="cookie-banner" action="stats.php" method="post">
             <p>
