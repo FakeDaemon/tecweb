@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="it" dir="ltr">
-
 <head>
   <link href="../CSS/STYLE_USERNAMECHANGE.css" rel="stylesheet">
   <link href="../CSS/STYLE_COMMON.css" rel="stylesheet">
@@ -11,7 +10,6 @@
   <meta name="description" content="DOOM Wiki" />
   <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano , Angeloni Alberto" />
 </head>
-
 <body>
   <?php
   require '../SCRIPTS/.php/database_connection.php';
