@@ -1,7 +1,18 @@
-table, td, th {
-    border: 2px solid black;
-    text-align: center;
-  }
+table,
+td,
+th {
+  border: 2px solid black;
+  text-align: center;
+}
+
+caption {
+  display: table-caption;
+  text-align: center;
+  font-size: 2em;
+  background-color: #a40000;
+  font-weight: bold;
+  border-collapse: collapse;
+}
 
 table {
   border-collapse: collapse;
@@ -10,21 +21,23 @@ table {
   color: white;
 }
 
-th, td {
+th,
+td {
   padding: 15px;
 }
 
 .head {
-  background-color: #A40000;
+  background-color: #a40000;
 }
 
-tr:nth-child(even) {background-color: #660025;}
+tr:nth-child(even) {
+  background-color: #660025;
+}
 
 tr:hover {
-    background-color: red;
-    color: white;
-
-  }
-.emphasis{
+  background-color: red;
+  color: white;
+}
+.emphasis {
   font-weight: bold;
 }

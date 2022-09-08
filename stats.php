@@ -78,13 +78,10 @@
         </nav>
     </header>
     <div class="main">
+
         <table>
+            <caption>Armi</caption>
             <thead>
-                <tr>
-                    <th class="head" colspan="3">
-                        <h1>Armi</h1>
-                    </th>
-                </tr>
                 <tr>
                     <th class="head">Nome Arma</th>
                     <th class="head">Descrizione</th>
