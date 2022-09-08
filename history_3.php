@@ -123,8 +123,8 @@
                 Altre caratteristiche importanti del motore di Doom 3 sono l'evidenziazione dettagliata delle <span lang="en">texture</span>,
                 la gestione realistica della fisica degli oggetti, una colonna sonora ambientale e suono multicanale.
             </p>
+            <img src="IMAGES/doom3-hell.jpg" alt="ambientazione infernale">
         </article>
-        <img src="IMAGES/doom3-hell.jpg" alt="ambientazione infernale">
         <article id="Sviluppo">
             <h2 class="paragrafo">Sviluppo</h2>
             <a name="Sviluppo"></a>
