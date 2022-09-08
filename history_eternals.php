@@ -90,7 +90,6 @@
         <h1 id="replace5" lang="en">DOOM ETERNALS</h1>
         <article id="Introduzione">
             <h2 class="paragrafo">Introduzione</h2>
-            <a name="Introduzione"></a>
             <p>
                 <span lang="en">Doom Eternal</span> è il <span lang="en">sequel</span> del <span lang="en">reboot</span> del 2016. Il gioco è uscito il 19 Marzo 2020
                 per <span lang="en">PlayStation</span> 4, <span lang="en">Xbox One</span>, <abbr title="Personal Computer">PC</abbr> e
@@ -101,7 +100,6 @@
         </article>
         <article id="Trama">
             <h2 class="paragrafo">Trama</h2>
-            <a name="Trama"></a>
             <p>
                 Un pò di tempo dopo gli eventi di <span lang="en">Doom</span> (2016), la Terra è stata invasa da forze demoniache che hanno spazzato via il 60% della
                 popolazione grazie alla corrotta <span lang="en">Union Aerospace Corporation</span>. Gli ultimi umani rimasti sono fuggiti dal pianeta o si sono uniti
@@ -151,7 +149,6 @@
         </article>
         <article id="Gameplay">
             <h2 class="paragrafo">Gameplay</h2>
-            <a name="Gameplay"></a>
             <h3 class="lista_titolo" lang="en">Singleplayer:</h3>
             <p>
                 Una nuova meccanica di gioco è la possibilità di invadere la partita di un altro giocatore, grazie a una meccanica chiamata "invasione".
@@ -177,7 +174,6 @@
         </article>
         <article id="Livelli">
             <h2 class="paragrafo">Livelli</h2>
-            <a name="Livelli"></a>
             <ul class="lista">
                 <li>
                     Inferno in terra
@@ -236,8 +232,7 @@
         <p>
             <span lang="en">&copy;Doom</span> è un marchio ragistrato <a href="https://bethesda.net/it/dashboard" target="_blank">2022 Bethesda Softworks LLC</a>,
             a ZeniMax Media company. I marchi appartengono ai rispettivi proprietari.
-            Tutti i diritti riservati.<br>
-            <br>
+            Tutti i diritti riservati.
         </p>
         <img class="imgVadidCode" src="IMAGES/valid-xhtml10.png" alt="html valido" />
         <img class="imgVadidCode" src="IMAGES/vcss-blue.gif" alt="css valido" />

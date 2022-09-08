@@ -90,7 +90,6 @@
         <h1 id="replace4" lang="en">DOOM 2016</h1>
         <article id="Introduzione">
             <h2 class="paragrafo">Introduzione</h2>
-            <a name="Introduzione"></a>
             <p>
                 <span lang="en">DOOM</span> (conosciuto come <span lang="en">DOOM</span> 4 durante lo sviluppo) è un <span lang="en">soft reboot</span>
                 del <span lang="fr">franchise</span> di <span lang="en">DOOM</span> prodotto da <span lang="en">Id Software</span> e pubblicato da
@@ -100,7 +99,6 @@
         </article>
         <article id="Trama">
             <h2 class="paragrafo">Trama</h2>
-            <a name="Trama"></a>
             <img src="IMAGES/doom_2016_inizio.jpg" alt="una delle prime scene del gioco dove recuperiamo la storica tuta del protagonista">
             <p>
                 Il gioco è ambientato su Marte in un laboratorio <abbr title="Union AereoSpace Corporation">UAC</abbr> invaso dalla forze dell'inferno. Il
@@ -137,7 +135,6 @@
         </article>
         <article id="Gameplay">
             <h2 class="paragrafo">Gameplay</h2>
-            <a name="Gameplay"></a>
             <img src="IMAGES/doom_2016_gameplay.jpg" alt="una schermata del gioco">
             <p class="history">
                 Nonostante alcune similarità a <span lang="en">DOOM</span> 3, il <span lang="en">gameplay</span> di questo <span lang="en">DOOM</span> è
@@ -163,7 +160,6 @@
         </article>
         <article id="Multiplayer">
             <h2 class="paragrafo">Multiplayer</h2>
-            <a name="Multiplayer"></a>
             <p>
                 <span lang="en">Id Software</span> ha collaborato con lo studio <span lang="en">Certain Affinity</span> in modo da sviluppare una sezione
                 <span lang="en">multiplayer</span>. Non è la prima volta che questo studio viene chiamato per sviluppare questo tipo di sezioni di gioco:
@@ -261,8 +257,7 @@
         <p>
             <span lang="en">&copy;Doom</span> è un marchio ragistrato <a href="https://bethesda.net/it/dashboard" target="_blank">2022 Bethesda Softworks LLC</a>,
             a ZeniMax Media company. I marchi appartengono ai rispettivi proprietari.
-            Tutti i diritti riservati.<br>
-            <br>
+            Tutti i diritti riservati.
         </p>
         <img class="imgVadidCode" src="IMAGES/valid-xhtml10.png" alt="html valido" />
         <img class="imgVadidCode" src="IMAGES/vcss-blue.gif" alt="css valido" />

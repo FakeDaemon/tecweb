@@ -86,7 +86,7 @@
   </header>
   <div class="main">
     <h1 id="replace1" lang="en">DOOM</h1>
-    <article id="Riassunto">
+    <article>
       <h2 class="paragrafo">Termini d’uso</h2>
       <p>
         L'utilizzo del seguente sito <span lang="en">web</span> implica per l'utente la conoscenza delle seguenti condizioni.<br />
@@ -99,6 +99,8 @@
         ed espressa manifestazione del consenso mediante la selezione della casella pertinente, saranno trattati con le
         modalità e per le finalità che seguono.<br />
       </p>
+    </article>
+    <article>
       <h2 class="paragrafo">Oggetto del trattamento</h2>
       <p>
         Il Titolare può trattare i Dati personali che: l’utente fornisce volontariamente (ad esempio, le informazioni fornite in sede di registrazione);
@@ -153,6 +155,8 @@
         Qualora avesse necessità di ulteriori informazioni sulla base giuridica e/o sulle finalità del trattamento dei Suoi Dati, ci contatti
         al seguente indirizzo: DoomWiki@gmail.com.</br>
       </p>
+    </article>
+    <article>
       <h2 class="paragrafo">Modalità di trattamento e comunicazione dei Dati personali</h2>
       <p>
         Il trattamento dei Suoi dati personali è realizzato per mezzo delle operazioni indicate all’<abbr title="articolo">art.</abbr>
