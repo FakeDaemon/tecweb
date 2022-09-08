@@ -99,8 +99,8 @@
       }
       ?>
       <p>I TUOI CONTRIBUTI</p>
+      <a href="questions.php?User">Le tue domande</a>
       <a href="answerChange.php?UserSettings">Le tue risposte</a>
-      <a href="questionChange.php">Le tue domande</a>
 
       <p>IMMAGINE PROFILO</p>
       <a href="account-managment/profile-pic-change.php">Cambia immagine profilo.</a>

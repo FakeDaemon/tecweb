@@ -1,13 +1,22 @@
+html>body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .main>* {
   font-family: var(--font-family);
   text-align: left;
 }
 
 .main {
+  margin-top: 40px;
   max-width: 1024px;
-  min-height: 65vh;
-  margin: 5vh auto 0 auto;
   text-align: center;
+  width: 90%;
 }
 
 .main>p,
@@ -213,4 +222,50 @@
 #AnswerPagelink,
 #HelpPagelink {
   font-size: larger;
+}
+
+.main>div.TList {
+  border: 1px solid red;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+  margin: 100px auto 0 auto;
+  padding: 0 25px 25px 25px;
+  background-color: rgba(30, 30, 30);
+}
+
+.main>div.TList>p {
+  position: relative;
+  top: -45px;
+  margin: 0 auto 0 auto;
+  font-size: 2em;
+  line-height: 45px;
+  height: 90px;
+  width: 300px;
+  border: 2px solid red;
+  border-radius: 15px;
+  background-color: black;
+  z-index: 1;
+  text-align: center;
+}
+
+.main>div>div.TListItem {
+  border: 1px solid red;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 0 0 20px 0;
+}
+
+.main>div>.TListItem>p.title {
+  color: #CCAE52;
+  font-size: 1.4em;
+  text-align: center;
+}
+
+.main>div>.TListItem>p.description {
+  margin: 15px 0;
+}
+
+.main>div>div.TListItem>p.date {
+  font-size: .7em;
 }
