@@ -68,7 +68,7 @@ dl {
   padding: 1em;
 }
 
-.npc_head {
+table.npc_table > thead.npc_head {
   background-color: #a40000;
 }
 

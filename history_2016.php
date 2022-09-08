@@ -183,9 +183,9 @@
             </ul>
             <table class="npc_table">
               <thead class="npc_head">
-                <tr>
+                <tr class="tab_title">
                   <th colspan="2">
-                    <h1 class="tab_title">Demoni Giocabili</h1>
+                    Demoni Giocabili
                   </th>
                 </tr>
                 <tr class="tab_subtitle">

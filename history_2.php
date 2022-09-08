@@ -140,10 +140,10 @@
       </p>
       <img src="IMAGES/supershotgun.png" alt="immagine raffigurante la nuova arma">
       <table class="npc_table">
-        <thead>
-          <tr>
+        <thead class="npc_head">
+          <tr class="tab_title">
             <th colspan="2">
-              <h1 class="tab_title">NPC</h1>
+              NPC
             </th>
           </tr>
           <tr class="tab_subtitle">
