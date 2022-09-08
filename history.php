@@ -27,8 +27,8 @@
         <form class="cookie-banner" action="history.php" method="post">
             <p>
                 Il nostro sito utilizza dei <span lang="en">cookie</span> per personalizzare
-                il contenuto e analizzare il traffico di rete.</br>
-                <a href=cookie_informativa.php>Leggi di più riguardo ai <span lang="en">cookie</span></a></br>
+                il contenuto e analizzare il traffico di rete.
+                <a href=cookie_informativa.php>Leggi di più riguardo ai <span lang="en">cookie</span></a>
             </p>
             <input type="submit" name="CookieAccepted" value="Accetta">
         </form>
@@ -200,10 +200,14 @@
                 non ha acquistato la questa versione, sono state vendute oltre un milione di copie e questa popolarità ha aiutato le vendite dei giochi successivi
                 della serie <span lang="en">Doom</span>, che non sono stati rilasciati come <span lang="en">shareware</span>. L'originale Doom alla fine ha ricevuto
                 anche un rilascio al dettaglio, quando fu venduto in una versione espansa chiamata <span lang="en">The Ultimate Doom</span>, (aggiungendo un quarto
-                episodio).<br>
+                episodio).
+            </p>
+            <p>
                 Doom è stato anche ampiamente elogiato dalla stampa videoludica, nel 1994 è stato nominato gioco dell'anno sia da "<span lang="en">PC Gamer</span>"
                 che da "<span lang="en">Computer Gaming World</span>". Ha ricevuto il premio per l'eccellenza tecnica da "<span lang="en">PC Magazine</span>" e il premio
-                <span lang="en">Best Action Adventure Game</span> dall'<span lang="en">Academy of Interactive Arts & Sciences</span>.<br>
+                <span lang="en">Best Action Adventure Game</span> dall'<span lang="en">Academy of Interactive Arts & Sciences</span>.
+            </p>
+            <p>
                 Oltre alla natura elettrizzante della campagna <span lang="en">single player</span>, la modalità <span lang="en">deathmatch</span> è stata un fattore importante per la popolarità del gioco.
                 <span lang="en">Doom</span> non era il primo a portare un <span lang="en">gameplay</span> dove i giocatori si ritrovavano uno contro uno, vedi:
                 <span lang="en">(MIDI Maze, su Atari ST, ne aveva una nel 1987)</span>, ma ridefini il concetto di arena <span lang="en">multiplayer</span>,
@@ -238,8 +242,7 @@
         <p>
             <span lang="en">&copy;Doom</span> è un marchio ragistrato <a href="https://bethesda.net/it/dashboard" target="_blank">2022 Bethesda Softworks LLC</a>,
             a ZeniMax Media company. I marchi appartengono ai rispettivi proprietari.
-            Tutti i diritti riservati.<br>
-            <br>
+            Tutti i diritti riservati.
         </p>
         <img class="imgVadidCode" src="IMAGES/valid-xhtml10.png" alt="html valido" />
         <img class="imgVadidCode" src="IMAGES/vcss-blue.gif" alt="css valido" />
