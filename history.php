@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="it" dir="ltr">
 
 <head>
     <link href="CSS/STYLE_COMMON.css" rel="stylesheet" type="text/css" media="screen" />
@@ -197,7 +197,7 @@
         </article>
         <article id="Release">
             <h2 class="paragrafo"><span lang="en">Release</span></h2>
-            <a name="Release"><span lang="en"></a>
+            <a name="Release"></a>
             <p class="history">
                 Il primo episodio distribuito in modalità <span lang="en">shareware</span>, era essenzialmente una demo del gioco che consentiva una facile portabilità,
                 e all'epoca lo si trovava in moltissimi modi:
@@ -205,7 +205,7 @@
             <ul class="lista">
                 <li><span lang="en">floppy disk</span>;</li>
                 <li>navigando su<span lang="en">Internet</span>;</li>
-                <li><abbr lang="en" title="Compact Disk ">CD-ROM;</li>
+                <li><abbr lang="en" title="Compact Disk ">CD-ROM;</abbr></li>
             </ul>
             <p class="history">
                 Incoraggiando così giocatori e venditori al dettaglio a diffondere il gioco quanto più possibile. Si sitma che nel 1995 la distribuzione
@@ -228,9 +228,9 @@
             </p>
         </article>
         <img src="IMAGES/motosega.jpg" alt="immagine raffigurante la celebre motosega in azione">
-        <article id="Note legali">
+        <article id="Notelegali">
             <h2 class="paragrafo">Note Legali</h2>
-            <a name="Note legali"></a>
+            <a name="Notelegali"></a>
             <p>
                 <span lang="en">Doom</span> era e rimane un prodotto controverso dato l'alto tasso di violenza, <span lang="en">gore</span> e immaginari riferimenti
                 satanici. E' stato più volte criticato da organizzazioni cristiane per le sue sfumature diaboliche, (anche se alcuni <span lang="en">fan</span>
