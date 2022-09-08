@@ -1,200 +1,331 @@
 :root {
     --body-width: 100%;
-    --background-color: rgb(50, 0, 0);
-  }
-  @keyframes fadeInOpacity {
+    --background-color: #320000;
+    --font-family: 'orbitron';
+    --link-color: gold;
+    --menu-height: 100px;
+}
+
+@keyframes fadeInOpacity {
     0% {
-      opacity: 0;
+        opacity: 0;
     }
+
     100% {
-      opacity: 1;
+        opacity: 1;
     }
-  }
-  
-  @keyframes fadeOutOpacity {
+}
+
+@keyframes fadeOutOpacity {
     0% {
-      opacity: 1;
+        opacity: 1;
     }
+
     100% {
-      opacity: 0;
+        opacity: 0;
     }
-  }
-  * {
+}
+
+* {
     margin: 0;
-    padding: 0;
     border: 0;
-  }
-  html {
-    height: 100vh;
+}
+
+html {
     font-family: Arial, sans-serif;
     box-sizing: border-box;
     background: var(--background-color) url("../IMAGES/DOOMbackground.png") center/cover no-repeat fixed;
     scroll-behavior: smooth;
   }
-  
+
   *, *:before, *:after {
     box-sizing: inherit;
-  }
-  body {
+}
+
+body {
     max-width: 100%;
-    height: 100vh;
     margin: auto;
     color: white;
-  }
-  
-  header {
+}
+
+header {
     position: sticky;
     top: 0;
     left: 0;
-    height: 20vh;
+    height: 200px;
     width: 100%;
-    background: linear-gradient(to bottom, #000000 50%, rgb(50, 0, 0) 90%);
-  }
-  #logo {
+    background: linear-gradient(to bottom, #000000 59%, transparent 90%);
+    z-index: 100;
+}
+
+a:visited {color: #FAFE0B;}
+
+a{color: #2DFDFF;}
+
+#logo {
     display: inline-block;
     margin: 1% auto auto auto;
     text-align: center;
     width: 100%;
-    height: 60%;
+    height: 100px;
     color: white;
     text-indent: -9999px;
     background: transparent url("../IMAGES/Logo_doom.png") center/contain no-repeat;
-  }
-  
-  .blurred {
+}
+
+.blurred {
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
-  }
+}
 
 /*
   SCROLLBAR
 */
 
 ::-webkit-scrollbar {
-  width: 20px;
+    width: 10px;
 }
 
 
 ::-webkit-scrollbar-track {
-  background: black;
+    background: black;
 }
 
 
 ::-webkit-scrollbar-thumb {
-  background: white;
+    background: white;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  width:5px;
+    width: 5px;
 }
 
 /*
   MAIN MENU
 */
-  #container_list{
-    display: flex;
-    flex-flow: row nowrap;
-    height: auto;
-    /* background-color: black; */
+#NavBar *{
+  font-family:'Orbitron';
+}
+#NavBar{
+  background-color: rgb(20,20,20);
+  width: 90%;
+  min-height: var(--menu-height);
+  max-width: 1024px;
+  margin:auto;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items:  center;
+}
+#MenuBar{
+  padding: 0;
+  display: inline-flex;
+  width: 75%;
+  list-style: none;
+  flex-flow: row nowrap;
+  align-items:center;
+  background-color: rgb(20,20,20);
+}
+#MenuBar .MenuBarItem{
+  display: inline-block;
+  width: 25%;
+  line-height: var(--menu-height);
+  margin:0 auto auto auto;
+  text-align: center;
+  font-size: 1.5em;
+  cursor: pointer;
+  background-color: black;
+}
+#MenuBar .MenuBarItem a{
+  display: inline-block;
+  color:white;
+  height: 100%;
+  text-decoration: none;
+}
+#MenuBar .MenuBarItem:hover, #MenuBar .MenuBarItemNestedList label:hover{
+  background-color: rgb(30,30,30);
+}
+#MenuBar .CurrentLocation,#MenuBarNestedList li.CurrentLocation{
+  color: grey;
+  pointer-events: none;
+}
+#MenuBar .MenuBarItemNestedList{
+  display: inline-flex;
+  height: auto;
+  width: 25%;
+  flex-flow: column nowrap;
+}
+#MenuBar .MenuBarItemNestedList label{
+  display: inline-block;
+  text-align: center;
+  height: 100px;
+  line-height: var(--menu-height);
+  width: 100%;
+  font-size: 1.5em;
+  cursor: pointer;
+  pointer-events: all;
+  background-color: black;
+
+}
+#MenuBar .MenuBarItemNestedList input{
+  height: 0px;
+  /* overflow: hidden; */
+  visibility:  hidden;
+}
+#MenuBar .MenuBarItemNestedList input::after{
+  content:"";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  position: relative;
+  top:-55px;
+  right: -28px;
+  color:white;
+  visibility: visible;
+  cursor: pointer;
+  background-image: url('../ICONS/right-arrow.png');
+  background-position: center;
+  background-size: contain;
+
+  -webkit-transition: transform 0.2s 0s ease;
+-moz-transition: transform 0.2s 0s ease;
+-o-transition: transform 0.2s 0s ease;
+transition: transform 0.2s 0s ease;
+}
+#MenuBar .MenuBarItemNestedList input:checked::after{
+  transform: rotateY(0deg) rotate(80deg);
+}
+#MenuBarNestedList{
+  display: inline-block;
+  background-color: black;
+  height: 0px;
+  overflow: hidden;
+  transition: height .2s ease;
+  background-color: rgb(20,20,20);
+}
+#MenuBarNestedList li{
+  display: inline-block;
+  width: 100%;
+  margin: 5px;
+  height: 30px;
+}
+#MenuBarNestedList li::after,#MenuBarNestedList li a::after{
+    content: '';
+    width: 0px;
     margin: auto;
-    max-width: 1024px;
-    overflow: visible;
-  
-    /* -webkit-box-shadow: 0px 0px 11px 4px rgba(255, 255, 255, 0.69);
-    box-shadow: 0px 0px 11px 4px rgba(255, 255, 255, 0.69); */
-  
-    list-style: none;
-  }
-
-  #container_list li.container_list_li{
-    height: 10vh;
-    width: 20%;
-    background-color: black;
-  
-    text-align: center;
-    font-size: 1.8em;
-  }
-  #container_list li.container_list_li a{
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-  
-    height: 100%;
-    width: 100%;
-  }
-  #container_list li.container_list_li a:hover{
-    background-color: rgb(40,40,40);
-  }
-  #nested_list{
-    width: 20%;
-  }
-  #I_nested_list_span{
-    height: 10vh;
-  
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-  
-    background-color: black;
-  
-    font-size: 1.8em;
-    text-align: center;
-  }
-  #I_nested_list_span:hover{
-    background-color: rgb(40,40,40);
-  }
-  #nested_list ul{
-    list-style: none;
-    height: 0vh;
-    overflow: hidden;
-  
-    transition: height 0.3s  ease-out;
-  }
-  #nested_list ul.open{
-    height: 25vh;
-  }
-  #nested_list li.nested_list_li, #II_nested_list_span{
+    height: 1px;
     display: block;
-    height: 5vh;
-    background-color: rgb(20,20,20);
-  }
-  #nested_list li.nested_list_li a, #II_nested_list_span p{
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-  
-    width: 100%;
-    height: 100%;
-  
-    border-left: 1px solid transparent;
-  
-    font-size: 1.4em;
-    text-decoration: none;
-    color:white;
-  
-    transition: border-left 0.3s ease;
-  }
-  #nested_list li.nested_list_li a:hover, #II_nested_list_span p:hover{
-    border-left: 1px solid gold;
-  }
+    background: lightblue;
+    transition: 300ms;
+}
+#MenuBarNestedList a:focus{
+  outline-width: 0px;
+}
+#MenuBarNestedList li a:hover::after,#MenuBarNestedList li a:focus::after{
+  width: 100%;
+}
+#MenuBarNestedList li a{
+  display: inline-block;
+  color: inherit;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  line-height: 30px;
+}
+#MenuBar .MenuBarItemNestedList input:checked + #MenuBarNestedList{
+  height: 200px;
+  width: 100%;
+  display: inline-block;
+  list-style: none;
+}
+#MenuUserWidget{
+  display: inline-flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  height: var(--menu-height);
+  padding: 1vh;
+  width: 25%;
+  margin-left: auto;
+  margin-bottom: auto;
+  background-color: black;
+}
+#MenuUserWidget > div{
+  display: inline-block;
+  width: 63%;
+  text-align: right;
+  margin:auto;
+}
+#MenuUserWidget > div > p{
+  background-color: black;
+  display: block;
+  height: 30%;
+  width: 100%;
+  font-size: larger;
+}
+#MenuUserWidget > div > a{
+  width: 100%;
+  display: block;
+  color:white;
+  font-size: smaller;
+}
+#MenuUserWidget > img{
+  display: inline-block;
+  width: 30%;
+  border-radius: 50%;
+  border: 1px solid red;
+}
 
-  .lista{
+.lista {
+    background-color: rgb(50, 0, 0);
     display: flex;
     flex-direction: column;
-    align-items:flex-start;
+    align-items: flex-start;
     margin: 1em 0 1em 4em;
     list-style-position: inside;
     font-size: 1.25em;
-  }
-
-  footer {
+}
+footer {
     width: 100%;
     padding: 0.75em;
-    margin: 1em 0 0 0;
     background-color: rgba(10, 10, 10, 1);
-    font-size: 1.25em;
-  }
-  
-  #foot a:visited {color: #FAFE0B;}
+    font-size: 0.9em;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    display: block;
+    margin-top: 3em;
+}
+
+footer > p {
+    background-color: #0A0A0A;
+}
+
+footer > img {
+  align-items: right;
+  padding-left: 6em;
+  padding-right: 6em;
+}
+
+.cookie-banner{
+    font-size: x-large;
+    border: 1px solid red;
+    border-radius: 15px;
+    position: fixed;
+    bottom: 20px;
+    left: 5%;
+    z-index: 200;
+    width: 90%;
+    background-color: rgba(0,0,0,0.95);
+    padding: 2em;
+}
+
+.cookie-banner p{
+    background-color: transparent;
+    color: white;
+    line-height: 1.8;
+}
+
+.cookie-banner button{
+    margin-top: 1em;
+    padding: 0.8em;
+    background-color: white;
+}

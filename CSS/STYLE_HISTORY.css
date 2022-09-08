@@ -1,55 +1,174 @@
-
-
-
-
-
-
-
-
-
-
-
 .main {
-    max-width: 1024px;
-    min-height: 65vh;
-    margin: 10vh auto 0 auto;
-    display: flex;
-    flex-flow: row wrap;
-    text-align: center;
-  }
-  .main img {
-    width: auto;
-    max-height: 30vh;
-    margin: auto;
-  }
-  
-  .main p {
-    width: 80%;
-    margin: auto;
-    font-size: 1.25em;
-    text-align: left;
-  }
-  .paragrafo{
-    padding: 0.5em;
-    margin: 1em 0 1em 0;
-    background:
-    url("../ICONS/DOOMIcon.jpg") no-repeat left,
-    linear-gradient(to right,rgb(8, 8, 8) 70%, transparent);
-    background-size: 4%, auto;
-  }
-#box{
-    background-color: rgba(0, 0, 0, 0.7);
-    position: relative;
-    border: solid #000000;
+  max-width: 1024px;
+  min-height: 65vh;
+  margin: 10vh auto 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
 }
-#box li a{
-    color:#00FFBB;
-}  
-.main  #replace{
-    width: 200px;
-    height: 200px;
-    background-image: url("../IMAGES/doom-replace.jpg");
+
+.main > article > img {
+  width: auto;
+  height: auto;
+  max-height: 40vh;
+  max-width: 70vw;
+  margin: 50px auto;
 }
- .main #replace span{
-    display: none;
+
+.main > article > p {
+  width: 90%;
+  margin: auto;
+  padding: 30px;
+  font-size: 1.25em;
+  text-align: left;
+  border: 1px solid red;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.paragrafo {
+  position: relative;
+  bottom: -8px;
+  padding: 0.7em;
+  font-size: 1.5em;
+  margin: 1em 0 0.5em 0;
+  background: url("../ICONS/DOOMIcon.jpg") no-repeat left,
+    linear-gradient(to right, rgb(8, 8, 8) 80%, transparent);
+  background-size: 4%, auto;
+}
+
+.lista {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 1em 0 1em 4em;
+  list-style-position: inside;
+  font-size: 1.25em;
+  text-align: left;
+}
+
+dl > dt {
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+dl > dd {
+  margin-bottom: 0.5em;
+}
+
+dl {
+  width: 80%;
+  text-align: left;
+  margin: auto;
+  font-size: 1.15em;
+}
+
+.lista_titolo {
+  font-size: 200%;
+  padding: 1em;
+}
+
+table.npc_table > thead.npc_head {
+  background-color: #a40000;
+}
+
+.tab_subtitle {
+  font-size: 1.5em;
+  background-color: #a40000;
+}
+
+.npc {
+  width: auto;
+  height: 7em;
+  margin: auto;
+}
+
+.npc_name {
+  font-size: 1.1em;
+}
+
+.npc_table {
+  margin: auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  width: 80%;
+  background-color: #750027;
+  border-collapse: collapse;
+  color: white;
+}
+
+tbody > tr:nth-child(even) {
+  background-color: #660025;
+}
+
+tbody > tr:hover {
+  background-color: red;
+  color: white;
+}
+
+#box {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: relative;
+  border: solid #000000;
+}
+
+#box li a {
+  color: #00ffbb;
+}
+
+.main #replace1 {
+  width: 390px;
+  height: 220px;
+  margin: auto;
+  background: var(--background-color) url("../IMAGES/logo_doom1.png") center
+    no-repeat;
+  background-size: 90% 90%;
+  text-indent: -9999px;
+}
+
+.main #replace2 {
+  width: 390px;
+  height: 220px;
+  margin: auto;
+  background: var(--background-color) url("../IMAGES/logo_doom2.png") center
+    no-repeat;
+  background-size: 90% 90%;
+  text-indent: -9999px;
+}
+
+.main #replace3 {
+  width: 390px;
+  height: 220px;
+  margin: auto;
+  background: var(--background-color) url("../IMAGES/Doom_3_logo2.jpg") center
+    no-repeat;
+  background-size: 90% 90%;
+  text-indent: -9999px;
+}
+
+.main #replace4 {
+  width: 390px;
+  height: 220px;
+  margin: auto;
+  background: var(--background-color) url("../IMAGES/dm2016logo.png") center
+    no-repeat;
+  background-size: 90% 90%;
+  text-indent: -9999px;
+}
+
+.main #replace5 {
+  width: 390px;
+  height: 220px;
+  margin: auto;
+  background: var(--background-color) url("../IMAGES/Doom_Eternal_logodef.png")
+    center no-repeat;
+  background-size: 90% 90%;
+  text-indent: -9999px;
+}
+caption.tab_title {
+  display: table-caption;
+  text-align: center;
+  font-size: 2em;
+  background-color: #a40000;
+  font-weight: bold;
 }

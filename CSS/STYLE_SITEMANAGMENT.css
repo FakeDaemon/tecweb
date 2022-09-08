@@ -1,0 +1,216 @@
+.main *{
+  font-family: 'Orbitron';
+}
+.main {
+  max-width: 1024px;
+  min-height: 63vh;
+  margin: 7vh auto 0 auto;
+  text-align: center;
+}
+.main > p{
+  position: relative;
+  margin: 10px auto 0 auto;
+  padding:3px;
+  font-size: 2em;
+  line-height: 40px;
+  height: 86px;
+  width: 300px;
+  border:2px solid red;
+  border-radius: 15px;
+  background-color: black;
+  z-index: 1;
+}
+#auth_widget{
+  padding-top: 50px;
+  position: relative;
+  background-color: rgb(30,30,30);
+  z-index: 0;
+  top:-50px;
+  margin:auto;
+  border:2px solid red;
+  border-radius:15px;
+  width: 90vw;
+  max-width: 500px;
+  padding-bottom: 20px;
+  font-size: 1.5em;
+}
+#auth_widget > p{
+  width: 80%;
+  text-align: center;
+  color:#CCAE52;
+  margin: auto;
+}
+#auth_widget > form > fieldset{
+  border: 2px solid red;
+  border-radius: 10px;
+  margin: 20px auto;
+  padding: 10px;
+  width: 95%;
+}
+#auth_widget > form > fieldset.RejectForm{
+  border: 0;
+}
+#auth_widget > form > fieldset.RejectForm > label,
+#auth_widget > form > fieldset.RejectForm > textarea{
+ width: 100%;
+}
+#auth_widget > form > fieldset > legend{
+  color:#CCAE52;
+}
+#auth_widget > form > fieldset > p{
+  margin: 10px auto;
+  text-align: left;
+  font-size: 0.7em;
+}
+#auth_widget > p.alert{
+  color: greenyellow;
+  font-size: xx-large;
+  margin: 15px auto;
+}
+#auth_widget > form > fieldset > p.details{
+  font-size: 0.6em;
+  margin-bottom: 0;
+}
+#auth_widget a.noPlease{
+  color:red;
+}
+#auth_widget > p.small{
+  font-size: small;
+  color: white;
+}
+#auth_widget > a, #auth_widget > span > a{
+  text-decoration: none;
+  display: inline-block;
+  text-align: left;
+  width: 80%;
+  margin:5px auto;
+  font-size: 0.7em;
+  color:white;
+
+}
+#auth_widget > span > a{
+  text-decoration: underline;
+}
+#auth_widget > a::after {
+  content: '';
+  width: 0px;
+  margin: auto;
+  height: 1px;
+  display: block;
+  background: lightblue;
+  transition: 300ms;
+}
+
+#auth_widget >  a:hover::after {
+  width: 100%;
+}
+#auth_widget a:visited{
+  color:white;
+}
+#auth_widget label{
+  margin: 10px auto 0 auto;
+  text-align: left;
+  width: 75%;
+  height: 28px;
+  display: block;
+  position: relative;
+  font-size: 1em;
+  bottom: -20px;
+
+  -webkit-transition: bottom 0.2s 0s ease, font-size 0.5s 0s ease, color 0.5s 0s ease;
+  -moz-transition: bottom 0.2s 0s ease, font-size 0.5s 0s ease, color 0.5s 0s ease;
+  -o-transition: bottom 0.2s 0s ease, font-size 0.5s 0s ease, color 0.5s 0s ease;
+  transition: bottom 0.2s 0s ease, font-size 0.5s 0s ease, color 0.5s 0s ease;
+}
+#auth_widget label.up{
+  bottom: 0;
+  font-size: 0.7em;
+  color: lightgrey;
+}
+#auth_widget input[type="text"], #auth_widget input[type="password"]{
+  background: transparent;
+  border-bottom: 1px solid white;
+  width: 80%;
+  height: 30px;
+  display: block;
+  margin:0 auto 0 auto;
+  color:white;
+  font-size: 0.9em;
+  padding:10px;
+}
+#auth_widget input[type="submit"], #auth_widget input[type="reset"]{
+  display: inline-block;
+  margin:10px auto;
+  padding: 0 10px;
+  background-color: black;
+  border:2px solid red;
+  border-radius: 15px;
+  color:white;
+  height: 50px;
+  font-size: 0.8em;
+
+  -webkit-transition: border-color 0.3s 0s ease;
+  -moz-transition: border-color 0.3s 0s ease;
+  -o-transition: border-color 0.3s 0s ease;
+  transition: border-color 0.3s 0s ease;
+}
+#auth_widget input[type="submit"]:hover, #auth_widget input[type="reset"]:hover,  #auth_widget input[type="reset"]:focus, #auth_widget input[type="submit"]:focus{
+  border-color: #CCAE52;
+  outline: none;
+}
+#auth_widget > ul{
+  width: 80%;
+  margin: 10px auto;
+}
+#auth_widget > ul > li{
+  display: inline-flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  width: 90%;
+  border: 1px solid red;
+  border-radius: 10px;
+  margin: 1%;
+  padding: 10px;
+  list-style: none;
+  text-align: left;
+  background-color: rgba(0,0,0,0.4);
+}
+#auth_widget > ul > li > img{
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  border: 1px solid red;
+  border-radius: 50%;
+}
+#auth_widget > ul > li > span > span{
+  display: block;
+  width: 50%;
+  margin: auto;
+}
+#auth_widget > ul > li > span > span.email{
+  font-size: small;
+}
+#auth_widget input[type="email"], #auth_widget textarea{
+  background: transparent;
+  border-bottom: 1px solid white;
+  width: 80%;
+  height: 30px;
+  display: block;
+  margin:0 auto 0 auto;
+  color:white;
+  font-size: 0.9em;
+  padding:10px;
+}
+#auth_widget textarea{
+  font-size:0.8em;
+  height: 200px;
+  resize:vertical;
+}
+#auth_widget textarea::-webkit-scrollbar {
+    width: 5px;
+}
+
+#auth_widget textarea::placeholder{
+  color:grey;
+}

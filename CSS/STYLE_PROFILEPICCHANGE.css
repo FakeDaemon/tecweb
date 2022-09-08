@@ -1,0 +1,90 @@
+.main *{
+  font-family: 'Orbitron';
+}
+.main {
+  max-width: 1024px;
+  min-height: 63vh;
+  margin: 7vh auto 0 auto;
+  text-align: center;
+}
+.main > p{
+  position: relative;
+  margin: 10px auto 0 auto;
+  padding:3px;
+  font-size: 2em;
+  line-height: 40px;
+  height: 86px;
+  width: 300px;
+  border:2px solid red;
+  border-radius: 15px;
+  background-color: black;
+  z-index: 1;
+}
+#auth_widget{
+  padding-top: 50px;
+  position: relative;
+  background-color: rgb(30,30,30);
+  z-index: 0;
+  top:-50px;
+  margin:auto;
+  border:2px solid red;
+  border-radius:15px;
+  width: 90vw;
+  max-width: 400px;
+  padding-bottom: 20px;
+  font-size: 1.5em;
+}
+#auth_widget p{
+  color:#CCAE52;
+  margin-top: 10px;
+}
+form#auth_widget{
+  max-width: 600px;
+}
+form#auth_widget label{
+  display: inline-flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  width: 30%;
+}
+form#auth_widget label input{
+  height: 1px;
+  visibility: hidden;
+}
+form#auth_widget label img{
+  border: 2px solid black;
+  width: 80%;
+  border-radius: 50%;
+  filter: brightness(50%);
+
+  -webkit-transition: border-color 0.2s 0s ease, filter  0.2s 0s ease;
+  -moz-transition: border-color 0.2s 0s ease, filter  0.2s 0s ease;
+  -o-transition: border-color 0.2s 0s ease, filter  0.2s 0s ease;
+  transition: border-color 0.2s 0s ease, filter  0.2s 0s ease;
+}
+form#auth_widget label input:checked + img{
+  border: 2px solid #CCAE52;
+  filter: brightness(100%);
+}
+#auth_widget input[type="submit"], #auth_widget input[type="reset"]{
+  display: block;
+  margin:10px auto 0 auto;
+  width: 50%;
+  background-color: black;
+  border:2px solid red;
+  border-radius: 15px;
+  color:white;
+  height: 50px;
+  font-size: 1.3em;
+
+  -webkit-transition: border-color 0.2s 0s ease;
+  -moz-transition: border-color 0.2s 0s ease;
+  -o-transition: border-color 0.2s 0s ease;
+  transition: border-color 0.2s 0s ease;
+}
+#auth_widget input[type="submit"]:hover,  #auth_widget input[type="reset"]:hover,
+#auth_widget input[type="reset"]:focus, #auth_widget input[type="submit"]:focus{
+  border-color: #CCAE52;
+  outline: none;
+}

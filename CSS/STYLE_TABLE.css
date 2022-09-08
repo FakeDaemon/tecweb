@@ -1,37 +1,30 @@
-/*table {
-    border: 1px solid black;
-}
-
-.head:hover {}
-
-tr:hover {
-    background-color: red;
-}
-*/
 table, td, th {
     border: 2px solid black;
     text-align: center;
   }
 
-  table {
-    border-collapse: collapse;
-    width: 100%;
-    background-color: white;
-    color: black;
+table {
+  border-collapse: collapse;
+  width: 100%;
+  background-color: #750027;
+  color: white;
+}
+
+th, td {
+  padding: 15px;
+}
+
+.head {
+  background-color: #A40000;
+}
+
+tr:nth-child(even) {background-color: #660025;}
+
+tr:hover {
+    background-color: red;
+    color: white;
+
   }
-
-  th, td {
-    padding: 15px;
-  }
-
-  tr:nth-child(even) {background-color: #f2f2f2;}
-
-/*da modificare*/
-  tr:hover {
-      background-color: red;
-      color: white;
-
-    }
 .emphasis{
   font-weight: bold;
 }

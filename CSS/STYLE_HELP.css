@@ -1,0 +1,124 @@
+.main *{
+  font-family: 'Orbitron';
+}
+.main {
+  max-width: 1024px;
+  min-height: 63vh;
+  margin: 7vh auto 0 auto;
+  text-align: center;
+}
+.main > p{
+  position: relative;
+  margin: 0 auto 0 auto;
+  font-size: 2em;
+  line-height: 45px;
+  height: 90px;
+  width: 300px;
+  border:2px solid red;
+  border-radius: 15px;
+  background-color: black;
+  z-index: 1;
+}
+.main > div.result{
+  position: relative;
+  margin: 0 auto 0 auto;
+  width: 400px;
+  border:2px solid red;
+  border-radius: 15px;
+  background-color: black;
+  z-index: 1;
+  padding: 15px;
+}
+.main > div > p.success{
+  font-size: x-large;
+}
+.main > div > p.success{
+  font-size: x-large;
+  color: red;
+}
+.main > div > p.subTitle{
+  font-size: normal;
+}
+#auth_widget{
+  padding-top: 50px;
+  position: relative;
+  background-color: rgb(30,30,30);
+  z-index: 0;
+  top:-50px;
+  margin:auto;
+  border:2px solid red;
+  border-radius:15px;
+  width: 400px;
+  padding-bottom: 20px;
+  font-size: 1.5em;
+}
+#auth_widget label{
+  margin: 10px auto 0 auto;
+  text-align: left;
+  width: 75%;
+  height: 28px;
+  display: block;
+  position: relative;
+  font-size: 1em;
+  bottom: -20px;
+
+  -webkit-transition: bottom 0.2s 0s ease, font-size 0.5s 0s ease, color 0.5s 0s ease;
+  -moz-transition: bottom 0.2s 0s ease, font-size 0.5s 0s ease, color 0.5s 0s ease;
+  -o-transition: bottom 0.2s 0s ease, font-size 0.5s 0s ease, color 0.5s 0s ease;
+  transition: bottom 0.2s 0s ease, font-size 0.5s 0s ease, color 0.5s 0s ease;
+}
+#auth_widget label.up{
+  bottom: 0;
+  font-size: 0.7em;
+  color: white;
+}
+#auth_widget input[type="text"], #auth_widget textarea{
+  background: transparent;
+  border-bottom: 1px solid white;
+  width: 80%;
+  height: 30px;
+  display: block;
+  margin:0 auto 0 auto;
+  color:white;
+  font-size: 0.9em;
+  padding:10px;
+}
+#auth_widget textarea{
+  font-size:0.8em;
+  height: 200px;
+  resize:none;
+}
+#auth_widget textarea::-webkit-scrollbar {
+  width: 5px;
+}
+
+#auth_widget textarea::placeholder{
+  color:grey;
+}
+#auth_widget input[type="submit"], #auth_widget input[type="reset"]{
+  display: block;
+  margin:10px auto 0 auto;
+  width: 60%;
+  background-color: black;
+  border:2px solid red;
+  border-radius: 15px;
+  color:white;
+  height: 50px;
+  font-size: 1.3em;
+}
+#auth_widget input[type="reset"]{
+  font-size: 0.8em;
+  width: 40%;
+  height: 30px;
+  margin-bottom: 10px;
+}
+#auth_widget p.noJs{
+  visibility: hidden;
+}
+#auth_widget p{
+  font-size: .8em;
+  width: 90%;
+  margin:auto;
+}
+#auth_widget p a{ color:white;}
+#auth_widget p a:visited{color:white;}
