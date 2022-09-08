@@ -98,7 +98,7 @@
     </header>
     <div class="main">
         <h1 id="replace3" lang="en">DOOM 3</h1>
-        <article id="Riassunto">
+        <article>
             <h2 class="paragrafo">Riassunto</h2>
             <p class="history">
                 <span lang="en"><strong>Doom</strong></span> 3 è un videogioco sparatutto in prima persona (<abbr lang="en" title="First Person Shooter">FPS</abbr>), del genere
@@ -117,7 +117,7 @@
                 Ha ricevuto un'opinione positiva da parte della critica per le sue atmosfere paurose e la sua grafica rivoluzionaria, ma è stato altrettanto criticato principalmente per il suo <span lang="en">gameplay</span>, che essendo più lento, alla lunga stancava, e per i suoi dettagli horror ricchi di <span lang="fra">cliché</span>.
             </p>
         </article>
-        <article id="Features">
+        <article>
             <h2 class="paragrafo"></h2>
             <p class="history">
                 In accordo con <span lang="en">John Carmack</span> capo del reparto e sviluppatore del motore grafico del gioco, il tripudio di caratteristiche in <span lang="en">Doom</span> 3 sono:
@@ -134,7 +134,7 @@
             </p>
         </article>
         <img src="IMAGES/doom3-hell.jpg" alt="ambientazione infernale">
-        <article id="Sviluppo">
+        <article>
             <h2 class="paragrafo">Sviluppo</h2>
             <p class="history">
                 Nel Giugno del 2000, <span lang="en">John Carmack</span> ha annunciato che stava lavorando ad un <span lang="en">remake</span> di <span lang="en">Doom</span> con la tecnologia di nuova generazione.
@@ -154,7 +154,7 @@
                 In accordo con alcuni commenti di <span lang="en">John Carmack</span>, lo sviluppo ha subito dei ritardi, in quanto originariamente l'uscita era pianificata in concomitanza di altri giochi epocali quali <span lang="en">Half-Life</span> e <span lang="en">Halo 2</span>, ma nessuno di questi tre riuscì a rispettare tale scadenza.
             </p>
         </article>
-        <article id="Trama">
+        <article>
             <h2 class="paragrafo">Trama</h2>
             <p class="history">
                 Prima degli eventi del gioco, il progetto originale dell'<abbr lang="en" title="Union Aerospace Corporation">UAC</abbr>, era quello di esplorare il
@@ -265,7 +265,7 @@
             </p>
             <img src="IMAGES/cyberdemon.png" alt="boss finale del gioco">
         </article>
-        <article id="Gameplay">
+        <article>
             <h2 class="paragrafo"></h2>
             <p class="history">
                 Il <span lang="en">gameplay</span> di <span lang="en">Doom</span> 3 non è così frenetico come quello dei precedenti capitoli, tutto il gioco
@@ -291,8 +291,7 @@
         <p>
             <span lang="en">&copy;Doom</span> è un marchio ragistrato <a href="https://bethesda.net/it/dashboard" target="_blank">2022 Bethesda Softworks LLC</a>,
             a ZeniMax Media company. I marchi appartengono ai rispettivi proprietari.
-            Tutti i diritti riservati.<br>
-            <br>
+            Tutti i diritti riservati.
         </p>
         <img class="imgVadidCode" src="IMAGES/valid-xhtml10.png" alt="html valido" />
         <img class="imgVadidCode" src="IMAGES/vcss-blue.gif" alt="css valido" />

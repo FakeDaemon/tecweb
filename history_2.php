@@ -80,14 +80,14 @@
   </header>
   <div class="main">
     <h1 id="replace2" lang="en">DOOM 2</h1>
-    <article id="Riassunto">
+    <article>
       <h2 class="paragrafo">Riassunto</h2>
       <p>
         <span lang="en">Doom</span> 2 (anche conosciuto come <span lang="en">Doom 2 Hell On Earth</span>) è il sequel del grande classico
         <a href="history.html"><span lang="en">Doom</span></a>, è stato rilasciato il 30 Settembre 1984.
       </p>
     </article>
-    <article id="Trama">
+    <article>
       <h2 class="paragrafo">Trama</h2>
       <p class="history">
         Il giocatore ancora una volta entra nei panni del <span lang="en">Marine</span> solitario, un eroe senza nome, che, è stato l'unico sopravvissuto dopo gli eventi
@@ -114,7 +114,7 @@
       </p>
       <img src="IMAGES/chaingun.jpg" alt="immagine di gioco con mitragliatore">
     </article>
-    <article id="Gameplay">
+    <article>
       <h2 class="paragrafo">Gameplay</h2>
       <p class="history">
         <span lang="en">Doom</span> <abbr title="due">II</abbr> non è un gioco drammaticamente differente rispetto al suo predecessore.
@@ -189,7 +189,7 @@
         <span lang="en">Doom</span> 2 richiede una quantità leggermente maggiore di risorse hardware rispetto al suo predecessore, poichè ha livelli più grandi e un maggior numero di nemici in essi,ma con i processori attuali il gioco gira tranquillamente su quasi tutti i computer.
       </p>
     </article>
-    <article id="Release">
+    <article>
       <h2 class="paragrafo">Release</h2>
       <p class="history">
         <span lang="en">Doom</span><abbr title="Secondo">II</abbr>, ha venduto circa due milioni di copie una volta immesso sul mercato, diventando così il prodotto più venduto per la <span lang="en">Software House</span>
@@ -212,7 +212,7 @@
         <span lang="en">Doom</span><abbr title="Secondo">II</abbr> è stato poi rilasciato nuovamente nell'edizione <span lang="en">Doom 3 BFG</span>, dove ogni riferimento nazista è stato modificato nei livelli 31 e 32.
       </p>
     </article>
-    <article id="NoteLegali">
+    <article>
       <h2 class="paragrafo">Note Legali</h2>
       <p class="history">
         In accordo con la legge tedesca <span lang="dec">"Strafgesetzbuch"</span> 86a, <cite>"l'utilizzo di simbologie incostituzioniali è poibito al di fuori di determinati contesti quali,
@@ -245,8 +245,7 @@
     <p>
       <span lang="en">&copy;Doom</span> è un marchio ragistrato <a href="https://bethesda.net/it/dashboard" target="_blank">2022 Bethesda Softworks LLC</a>,
       a ZeniMax Media company. I marchi appartengono ai rispettivi proprietari.
-      Tutti i diritti riservati.<br>
-      <br>
+      Tutti i diritti riservati.
     </p>
     <img class="imgVadidCode" src="IMAGES/valid-xhtml10.png" alt="html valido" />
     <img class="imgVadidCode" src="IMAGES/vcss-blue.gif" alt="css valido" />
