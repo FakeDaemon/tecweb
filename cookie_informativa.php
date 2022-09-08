@@ -194,59 +194,57 @@
         12 mesi dalla raccolta dei dati per le Finalità di marketing.</br>
       </p>
       <h2 class="paragrafo">Diritti dell’interessato</h2>
-      <p>
-        Nella Sua qualità di interessato, ha i diritti di cui all’<abbr title="articoli">artt.</abbr> 15-21
-        <abbr title="General data protection regulation">GDPR</abbr> e precisamente i diritti di:
-      </p>
-      <ul class="lista">
-        <li>
-          ottenere dal Titolare la conferma se sia o meno in corso un trattamento di Dati personali, in tal caso, ha diritto ad ottenerne
+      <dl>
+        <dt class="informativa">
+          Nella Sua qualità di interessato, ha i diritti di cui all’<abbr title="articoli">artt.</abbr> 15-21
+          <abbr title="General data protection regulation">GDPR</abbr> e precisamente i diritti di:
+        </dt>
+        <dd>
+          Ottenere dal Titolare la conferma se sia o meno in corso un trattamento di Dati personali, in tal caso, ha diritto ad ottenerne
           l’accesso limitatamente a quelli che La riguardano e avrà diritto di ricevere dal Titolare la loro relativa comunicazione in forma intelligibile
-        </li>
-        <li>
-          ottenere l’indicazione:
-        </li>
-        <ol>
-          <li>dell’origine dei dati personali</li>
-          <li>delle finalità e modalità del trattamento</li>
-          <li>della logica applicata in caso di trattamento effettuato con l’ausilio di strumenti elettronici</li>
-          <li>degli estremi identificativi del titolare, dei responsabili e del rappresentante designato ai sensi dell’
-            <abbr title="articolo">art.</abbr> 3, comma 1, <abbr title="General data protection regulation">GDPR</abbr>
-          </li>
-          <li>dei soggetti o delle categorie di soggetti ai quali i dati personali possono essere comunicati o che possono venirne a conoscenza
-            in qualità di rappresentanti designati nel territorio dello Stato, di responsabili o incaricati</li>
-        </ol>
-        <li>
-          ottenere:
-        </li>
-        <ol>
-          <li>l’aggiornamento, la rettificazione ovvero, quando vi ha interesse, l’integrazione dei dati</li>
-          <li>la cancellazione, la trasformazione in forma anonima o il blocco dei dati trattati in violazione di legge, compresi
-            quelli di cui non è necessaria la conservazione in relazione agli scopi per i quali i dati sono stati raccolti o
-            successivamente trattati</li>
-          <li>l’attestazione che le operazioni di cui ai punti 1) e 2) sono state portate a conoscenza, anche per quanto riguarda il loro contenuto,
-            di coloro ai quali i dati sono stati comunicati o diffusi, eccettuato il caso in cui tale adempimento si riveli impossibile o comporti
-            un impiego di mezzi manifestamente sproporzionato rispetto al diritto tutelato</li>
-          <li>chiedere al Titolare la limitazione del trattamento alle condizioni e per le finalità di cui all’<abbr title="articolo">art.</abbr>
-            18 <abbr title="General data protection regulation">GDPR</abbr></li>
-          <li>proporre reclamo a un’Autorità di vigilanza</li>
-          <li>ricevere, in formato strutturato, di uso comune e leggibile da dispositivo automatico, i Dati personali che La riguardano forniti al
-            Titolare e trasmetterli ad altro titolare ai sensi e alle condizioni dell’<abbr title="articolo">art.</abbr> 20
-            <abbr title="General data protection regulation">GDPR</abbr>
-          </li>
-        </ol>
-        <li>
-          opporsi, in tutto o in parte:
-        </li>
-        <ol>
-          <li>per motivi legittimi al trattamento dei dati personali che La riguardano, ancorché pertinenti allo scopo
-            della raccolta</li>
-          <li>al trattamento di dati personali che La riguardano a fini di invio di materiale pubblicitario o di vendita diretta o per
-            il compimento di ricerche di mercato o di comunicazione commerciale, mediante l’uso di sistemi automatizzati di chiamata
-            senza l’intervento di un operatore mediante <span lang="en">e-mail</span> e/o mediante modalità di <span lang="en">marketing</span>
-            tradizionali mediante telefono e/o posta cartacea</li>
-        </ol>
-      </ul>
+        </dd>
+        <dd>Ottenere l'indicazione:
+          <ol>
+            <li>dell’origine dei dati personali</li>
+            <li>delle finalità e modalità del trattamento</li>
+            <li>della logica applicata in caso di trattamento effettuato con l’ausilio di strumenti elettronici</li>
+            <li>degli estremi identificativi del titolare, dei responsabili e del rappresentante designato ai sensi dell’
+              <abbr title="articolo">art.</abbr> 3, comma 1, <abbr title="General data protection regulation">GDPR</abbr>
+            </li>
+            <li>dei soggetti o delle categorie di soggetti ai quali i dati personali possono essere comunicati o che possono venirne a conoscenza
+              in qualità di rappresentanti designati nel territorio dello Stato, di responsabili o incaricati</li>
+          </ol>
+        </dd>
+        <dd>Ottenere:
+          <ol>
+            <li>l’aggiornamento, la rettificazione ovvero, quando vi ha interesse, l’integrazione dei dati</li>
+            <li>la cancellazione, la trasformazione in forma anonima o il blocco dei dati trattati in violazione di legge, compresi
+              quelli di cui non è necessaria la conservazione in relazione agli scopi per i quali i dati sono stati raccolti o
+              successivamente trattati</li>
+            <li>l’attestazione che le operazioni di cui ai punti 1) e 2) sono state portate a conoscenza, anche per quanto riguarda il loro contenuto,
+              di coloro ai quali i dati sono stati comunicati o diffusi, eccettuato il caso in cui tale adempimento si riveli impossibile o comporti
+              un impiego di mezzi manifestamente sproporzionato rispetto al diritto tutelato</li>
+            <li>chiedere al Titolare la limitazione del trattamento alle condizioni e per le finalità di cui all’<abbr title="articolo">art.</abbr>
+              18 <abbr title="General data protection regulation">GDPR</abbr></li>
+            <li>proporre reclamo a un’Autorità di vigilanza</li>
+            <li>ricevere, in formato strutturato, di uso comune e leggibile da dispositivo automatico, i Dati personali che La riguardano forniti al
+              Titolare e trasmetterli ad altro titolare ai sensi e alle condizioni dell’<abbr title="articolo">art.</abbr> 20
+              <abbr title="General data protection regulation">GDPR</abbr>
+            </li>
+          </ol>
+        </dd>
+        <dd>
+          Opporsi, in tutto o in parte:
+          <ol>
+            <li>per motivi legittimi al trattamento dei dati personali che La riguardano, ancorché pertinenti allo scopo
+              della raccolta</li>
+            <li>al trattamento di dati personali che La riguardano a fini di invio di materiale pubblicitario o di vendita diretta o per
+              il compimento di ricerche di mercato o di comunicazione commerciale, mediante l’uso di sistemi automatizzati di chiamata
+              senza l’intervento di un operatore mediante <span lang="en">e-mail</span> e/o mediante modalità di <span lang="en">marketing</span>
+              tradizionali mediante telefono e/o posta cartacea</li>
+          </ol>
+        </dd>
+      </dl>
       <p>
         Si fa presente che il diritto di opposizione dell’interessato, esposto al precedente punto 2), per finalità di <span lang="en">marketing</span>
         diretto mediante modalità automatizzate si estende a quelle tradizionali e che comunque resta salva la possibilità per l’interessato di

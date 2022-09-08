@@ -37,6 +37,18 @@
   background-size: 4%, auto;
 }
 
+.main > article > dl > .informativa {
+  margin: auto;
+  padding: 30px;
+  font-size: 1.15em;
+  font-weight: normal;
+  text-align: left;
+  border: 1px solid red;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 0.5em;
+}
+
 .lista {
   display: flex;
   flex-direction: column;
@@ -66,6 +78,14 @@ dl {
 .lista_titolo {
   font-size: 200%;
   padding: 1em;
+}
+
+caption.tab_title {
+  display: table-caption;
+  text-align: center;
+  font-size: 2em;
+  background-color: #a40000;
+  font-weight: bold;
 }
 
 table.npc_table > thead.npc_head {
@@ -164,11 +184,4 @@ tbody > tr:hover {
     center no-repeat;
   background-size: 90% 90%;
   text-indent: -9999px;
-}
-caption.tab_title {
-  display: table-caption;
-  text-align: center;
-  font-size: 2em;
-  background-color: #a40000;
-  font-weight: bold;
 }
