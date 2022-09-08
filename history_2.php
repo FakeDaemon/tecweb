@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="it" dir="ltr">
 
 <head>
   <link href="CSS/STYLE_COMMON.css" rel="stylesheet" type="text/css" media="screen" />
@@ -77,14 +77,6 @@
         else echo "<img src='/IMAGES/ProfilePics/ProfilePicN1.jpg' alt='Doomguy, accedi o registrati!'>";
         ?>
       </div>
-    </nav>
-    <script type="text/javascript">
-      var trama_btn = document.getElementById("I_nested_list_span");
-      var nested_lst = document.getElementById("nstd_lst");
-      trama_btn.addEventListener('click', function() {
-        nested_lst.classList.toggle("open");
-      });
-    </script>
   </header>
   <div class="main">
     <h1 id="replace2" lang="en">DOOM 2</h1>

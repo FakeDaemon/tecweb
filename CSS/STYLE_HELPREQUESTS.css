@@ -44,6 +44,7 @@
     margin: 20px auto;
     padding: 10px;
     width: 95%;
+    background-color: rgba(0, 0, 0, .6);
 }
 
 #auth_widget>form>fieldset.RejectForm {
@@ -63,6 +64,7 @@
     margin: 10px auto;
     text-align: left;
     font-size: 0.7em;
+    word-break: break-all;
 }
 
 #auth_widget>p.alert {
@@ -96,34 +98,42 @@
     color: white;
 
 }
-#auth_widget input[type="text"], #auth_widget input[type="password"]{
+
+#auth_widget input[type="text"],
+#auth_widget input[type="password"] {
     background: transparent;
     border-bottom: 1px solid white;
     width: 80%;
     height: 30px;
     display: block;
-    margin:0 auto 0 auto;
-    color:white;
+    margin: 0 auto 0 auto;
+    color: white;
     font-size: 0.9em;
-    padding:10px;
-  }
-  #auth_widget input[type="submit"], #auth_widget input[type="reset"]{
+    padding: 10px;
+}
+
+#auth_widget input[type="submit"],
+#auth_widget input[type="reset"] {
     display: inline-block;
-    margin:10px auto;
+    margin: 10px auto;
     padding: 0 10px;
     background-color: black;
-    border:2px solid red;
+    border: 2px solid red;
     border-radius: 15px;
-    color:white;
+    color: white;
     height: 50px;
     font-size: 0.8em;
-  
+
     -webkit-transition: border-color 0.3s 0s ease;
     -moz-transition: border-color 0.3s 0s ease;
     -o-transition: border-color 0.3s 0s ease;
     transition: border-color 0.3s 0s ease;
-  }
-  #auth_widget input[type="submit"]:hover, #auth_widget input[type="reset"]:hover,  #auth_widget input[type="reset"]:focus, #auth_widget input[type="submit"]:focus{
+}
+
+#auth_widget input[type="submit"]:hover,
+#auth_widget input[type="reset"]:hover,
+#auth_widget input[type="reset"]:focus,
+#auth_widget input[type="submit"]:focus {
     border-color: #CCAE52;
     outline: none;
-  }
+}

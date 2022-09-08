@@ -147,8 +147,8 @@
                 molto presto, così il giocatore si rende conto di essere l'unico sopravvissuto. Essendo impossibilitato a pilotare l'astronave per il ritorno, poichè
                 irreversibilmente danneggiata, l'unica via di fuga è combattere attraverso i vari complessi della base lunare.
             </p>
+            <img src="IMAGES/final_battle.jpg" alt="scena di copertina di un annuncio riguardo doom 2016">
         </article>
-        <img src="IMAGES/final_battle.jpg" alt="scena di copertina di un annuncio riguardo doom 2016">
         <article id="Gameplay">
             <h2 class="paragrafo"><span lang="en">Gameplay</span></h2>
             <a name="Gameplay"></a>
@@ -216,8 +216,8 @@
                 distribuzione, <span lang="en">Doom</span> ha aperto la strada verso la <span lang="en">community</span> videoludica mondiale odierna, dove le
                 <span lang="en">Software House</span> hanno una grossa attenzione mediatica, e solo in Italia hanno un fatturato di circa 2,2 miliardi di euro.
             </p>
+            <img src="IMAGES/motosega.jpg" alt="immagine raffigurante la celebre motosega in azione">
         </article>
-        <img src="IMAGES/motosega.jpg" alt="immagine raffigurante la celebre motosega in azione">
         <article id="Note legali">
             <h2 class="paragrafo">Note Legali</h2>
             <a name="Note legali"></a>
@@ -235,8 +235,8 @@
                 <span lang="en">id Software</span> ha sostenuto il fatto che le dinamiche e grafice crude del gioco sono state sorpassate di gran lunga dagli
                 sparatutto odierni e di conseguenza la violenza rappresentata ha un impatto minore.
             </p>
+            <img src="IMAGES/doom-cover.jpeg" alt="scena di una battaglia tra il marine e le orde demoniache">
         </article>
-        <img src="IMAGES/doom-cover.jpeg" alt="scena di una battaglia tra il marine e le orde demoniache">
     </div>
     <footer id="foot">
         <p>
