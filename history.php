@@ -86,7 +86,7 @@
     </header>
     <div class="main">
         <h1 id="replace1" lang="en">DOOM</h1>
-        <article id="Riassunto">
+        <article>
             <h2 class="paragrafo">Un breve riassunto della saga</h2>
             <p class="history">
                 <span lang="en">Doom </span>(ufficialmente scritto come <span lang="en">DOOM</span> e occasionalmente <span lang="en"> DooM </span> dai fan)
@@ -128,7 +128,7 @@
             </p>
             <img src="IMAGES/DOOM_cover.jpg" alt="Copertina gioco originale">
         </article>
-        <article id="Trama">
+        <article>
             <h2 class="paragrafo">Trama</h2>
             <p class="history">
                 <span lang="en">Doom</span> ha una trama semplice che avanza nel corso del gioco principalmente attraverso
@@ -146,7 +146,7 @@
             </p>
             <img src="IMAGES/final_battle.jpg" alt="scena di copertina di un annuncio riguardo doom 2016">
         </article>
-        <article id="Gameplay">
+        <article>
             <h2 class="paragrafo"><span lang="en">Gameplay</span></h2>
             <p class="history">
                 <span lang="en">Doom</span> è uno sparatutto in prima persona, con un'impostazione di sfondo che mescola fantascienza e <span lang="en">horror</span>
@@ -181,7 +181,7 @@
             </p>
             <img src="IMAGES/doom-slayer.jpg" alt="immagine raffigurante il protagonista del gioco">
         </article>
-        <article id="Release">
+        <article>
             <h2 class="paragrafo"><span lang="en">Release</span></h2>
             <a name="Release"></a>
             <p class="history">
@@ -218,7 +218,7 @@
             </p>
             <img src="IMAGES/motosega.jpg" alt="immagine raffigurante la celebre motosega in azione">
         </article>
-        <article id="Note legali">
+        <article>
             <h2 class="paragrafo">Note Legali</h2>
             <a name="Notelegali"></a>
             <p>
