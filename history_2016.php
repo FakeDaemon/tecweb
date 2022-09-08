@@ -182,12 +182,8 @@
                 <li>Corsa Infernale</li>
             </ul>
             <table class="npc_table">
+              <caption class="tab_title">Demoni Giocabili</caption>
               <thead class="npc_head">
-                <tr class="tab_title">
-                  <th colspan="2">
-                    Demoni Giocabili
-                  </th>
-                </tr>
                 <tr class="tab_subtitle">
                   <th>Nome</th>
                   <th>Foto</th>
