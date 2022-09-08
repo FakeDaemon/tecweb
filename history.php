@@ -175,7 +175,7 @@
                 diventato un prototipo per i futuri sparatutto. Il giocatore inizia armato solamente di una pistola e un tirapugni in caso finisse le munizioni,
                 ma la maggior parte delle armi disponibili gioco potranno essere raccolte o scovate tramite i segreti, come la motosega,
                 un fucile da caccia, una mitragliatrice, un lanciarazzi, una pistola al plasma e il potentissimo BFG9000. Per informazioni più dettagliate,
-                ti invitiamo a cliccare sul seguente <a href="stats.html">link</a> per la sezione dedicata alle armi.
+                ti invitiamo a cliccare sul seguente <a href="stats.php">link</a> per la sezione dedicata alle armi.
                 Oltre tutto questo, <span lang="en">Doom</span> ci permette di aquisire diversi <span lang="en">powerups</span> nel corso del gioco quali: uno zaino
                 (raddoppia la quantità di munizioni trasportabili), armature, kit medici e strani manufatti alieni che rendono il giocatore invisibile, oppure faranno
                 salire il suo livello di salute/armatura oltre i limiti canonici.
