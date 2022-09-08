@@ -23,7 +23,7 @@
   text-align: left;
   border: 1px solid red;
   border-radius: 15px;
-  background-color: rgba(0,0,0,.5);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .paragrafo {
@@ -70,10 +70,6 @@ dl {
 
 table.npc_table > thead.npc_head {
   background-color: #a40000;
-}
-
-.tab_title {
-  font-size: 2.5em;
 }
 
 .tab_subtitle {
@@ -169,7 +165,10 @@ tbody > tr:hover {
   background-size: 90% 90%;
   text-indent: -9999px;
 }
-caption {
+caption.tab_title {
   display: table-caption;
   text-align: center;
+  font-size: 2em;
+  background-color: #a40000;
+  font-weight: bold;
 }
