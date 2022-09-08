@@ -18,22 +18,12 @@
     require 'SCRIPTS/.php/database_connection.php';
     include 'SCRIPTS/.php/user.php';
     $user = new User($conn);
-    if (
-        isset($_POST['CookieAccepted']) &&
-        $_POST['CookieAccepted'] == 'Accetta'
-    ) {
-        setCookie(
-            'CookieAccepted',
-            'Accetta',
-            'time() + (86400 * 30)'
-        );
+    if (isset($_POST['CookieAccepted']) && $_POST['CookieAccepted'] == 'Accetta') {
+        setCookie('CookieAccepted', 'Accetta', time() + (86400 * 30));
         $_COOKIE['CookieAccepted'] = 'Accetta';
         header('location : history.php');
     }
-    if (
-        !(isset($_COOKIE['CookieAccepted'])) ||
-        !($_COOKIE['CookieAccepted'] == 'Accetta')
-    ) {
+    if (!(isset($_COOKIE['CookieAccepted'])) || !($_COOKIE['CookieAccepted'] == 'Accetta')) {
     ?>
         <form class="cookie-banner" action="history.php" method="post">
             <p>
@@ -99,7 +89,6 @@
         <h1 id="replace1" lang="en">DOOM</h1>
         <article id="Riassunto">
             <h2 class="paragrafo">Un breve riassunto della saga</h2>
-            <a name="Riassunto"></a>
             <p class="history">
                 <span lang="en">Doom </span>(ufficialmente scritto come <span lang="en">DOOM</span> e occasionalmente <span lang="en"> DooM </span> dai fan)
                 è il primo videogioco rilasciato della serie e viene considerato uno dei giochi che hanno consolidato il genere
@@ -142,7 +131,6 @@
         </article>
         <article id="Trama">
             <h2 class="paragrafo">Trama</h2>
-            <a name="Trama"></a>
             <p class="history">
                 <span lang="en">Doom</span> ha una trama semplice che avanza nel corso del gioco principalmente attraverso
                 messaggi mostrati tra un livello e l'altro. Il giocatore prende le parti di un <span lang="en">marine</span>, "uno dei più tosti del pianeta Terra,
@@ -157,11 +145,10 @@
                 molto presto, così il giocatore si rende conto di essere l'unico sopravvissuto. Essendo impossibilitato a pilotare l'astronave per il ritorno, poichè
                 irreversibilmente danneggiata, l'unica via di fuga è combattere attraverso i vari complessi della base lunare.
             </p>
+            <img src="IMAGES/final_battle.jpg" alt="scena di copertina di un annuncio riguardo doom 2016">
         </article>
-        <img src="IMAGES/final_battle.jpg" alt="scena di copertina di un annuncio riguardo doom 2016">
         <article id="Gameplay">
             <h2 class="paragrafo"><span lang="en">Gameplay</span></h2>
-            <a name="Gameplay"></a>
             <p class="history">
                 <span lang="en">Doom</span> è uno sparatutto in prima persona, con un'impostazione di sfondo che mescola fantascienza e <span lang="en">horror</span>
                 (nello stile <span lang="en">weird menace</span>); il gioco si compone di tre episodi, ognuno dei quali si svolge in un luogo generico e
@@ -226,9 +213,9 @@
                 distribuzione, <span lang="en">Doom</span> ha aperto la strada verso la <span lang="en">community</span> videoludica mondiale odierna, dove le
                 <span lang="en">Software House</span> hanno una grossa attenzione mediatica, e solo in Italia hanno un fatturato di circa 2,2 miliardi di euro.
             </p>
+            <img src="IMAGES/motosega.jpg" alt="immagine raffigurante la celebre motosega in azione">
         </article>
-        <img src="IMAGES/motosega.jpg" alt="immagine raffigurante la celebre motosega in azione">
-        <article id="Notelegali">
+        <article id="Note legali">
             <h2 class="paragrafo">Note Legali</h2>
             <a name="Notelegali"></a>
             <p>
@@ -245,8 +232,8 @@
                 <span lang="en">id Software</span> ha sostenuto il fatto che le dinamiche e grafice crude del gioco sono state sorpassate di gran lunga dagli
                 sparatutto odierni e di conseguenza la violenza rappresentata ha un impatto minore.
             </p>
+            <img src="IMAGES/doom-cover.jpeg" alt="scena di una battaglia tra il marine e le orde demoniache">
         </article>
-        <img src="IMAGES/doom-cover.jpeg" alt="scena di una battaglia tra il marine e le orde demoniache">
     </div>
     <footer id="foot">
         <p>

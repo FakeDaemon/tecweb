@@ -19,22 +19,12 @@
     require 'SCRIPTS/.php/database_connection.php';
     include 'SCRIPTS/.php/user.php';
     $user = new User($conn);
-    if (
-        isset($_POST['CookieAccepted']) &&
-        $_POST['CookieAccepted'] == 'Accetta'
-    ) {
-        setCookie(
-            'CookieAccepted',
-            'Accetta',
-            'time() + (86400 * 30)'
-        );
+    if (isset($_POST['CookieAccepted']) && $_POST['CookieAccepted'] == 'Accetta') {
+        setCookie('CookieAccepted','Accetta',time() + (86400 * 30));
         $_COOKIE['CookieAccepted'] = 'Accetta';
         header('location : history_3.php');
     }
-    if (
-        !(isset($_COOKIE['CookieAccepted'])) ||
-        !($_COOKIE['CookieAccepted'] == 'Accetta')
-    ) {
+    if (!(isset($_COOKIE['CookieAccepted'])) || !($_COOKIE['CookieAccepted'] == 'Accetta')) {
     ?>
         <form class="cookie-banner" action="history_3.php" method="post">
             <p>
@@ -133,8 +123,8 @@
                 Altre caratteristiche importanti del motore di Doom 3 sono l'evidenziazione dettagliata delle <span lang="en">texture</span>,
                 la gestione realistica della fisica degli oggetti, una colonna sonora ambientale e suono multicanale.
             </p>
+            <img src="IMAGES/doom3-hell.jpg" alt="ambientazione infernale">
         </article>
-        <img src="IMAGES/doom3-hell.jpg" alt="ambientazione infernale">
         <article id="Sviluppo">
             <h2 class="paragrafo">Sviluppo</h2>
             <a name="Sviluppo"></a>

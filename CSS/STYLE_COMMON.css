@@ -58,8 +58,6 @@ header {
     z-index: 100;
 }
 
-p { background-color: rgb(50, 0, 0); }
-
 a:visited {color: #FAFE0B;}
 
 a{color: #2DFDFF;}

@@ -19,22 +19,12 @@
   require 'SCRIPTS/.php/database_connection.php';
   include 'SCRIPTS/.php/user.php';
   $user = new User($conn);
-  if (
-    isset($_POST['CookieAccepted']) &&
-    $_POST['CookieAccepted'] == 'Accetta'
-  ) {
-    setCookie(
-      'CookieAccepted',
-      'Accetta',
-      time() + (86400 * 30)
-    );
+  if (isset($_POST['CookieAccepted']) && $_POST['CookieAccepted'] == 'Accetta') {
+    setCookie('CookieAccepted', 'Accetta', time() + (86400 * 30));
     $_COOKIE['CookieAccepted'] = 'Accetta';
     header('location : history_2.php');
   }
-  if (
-    !(isset($_COOKIE['CookieAccepted'])) ||
-    !($_COOKIE['CookieAccepted'] == 'Accetta')
-  ) {
+  if (!(isset($_COOKIE['CookieAccepted'])) || !($_COOKIE['CookieAccepted'] == 'Accetta')) {
   ?>
     <form class="cookie-banner" action="history_2.php" method="post">
       <p>
@@ -87,14 +77,6 @@
         else echo "<img src='/IMAGES/ProfilePics/ProfilePicN1.jpg' alt='Doomguy, accedi o registrati!'>";
         ?>
       </div>
-    </nav>
-    <script type="text/javascript">
-      var trama_btn = document.getElementById("I_nested_list_span");
-      var nested_lst = document.getElementById("nstd_lst");
-      trama_btn.addEventListener('click', function() {
-        nested_lst.classList.toggle("open");
-      });
-    </script>
   </header>
   <div class="main">
     <h1 id="replace2" lang="en">DOOM 2</h1>
