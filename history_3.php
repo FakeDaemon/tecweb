@@ -39,8 +39,8 @@
         <form class="cookie-banner" action="history_3.php" method="post">
             <p>
                 Il nostro sito utilizza dei <span lang="en">cookie</span> per personalizzare
-                il contenuto e analizzare il traffico di rete.</br>
-                <a href=cookie_informativa.php>Leggi di più riguardo ai <span lang="en">cookie</span></a></br>
+                il contenuto e analizzare il traffico di rete.
+                <a href=cookie_informativa.php>Leggi di più riguardo ai <span lang="en">cookie</span></a>
             </p>
             <input type="submit" name="CookieAccepted" value="Accetta">
         </form>

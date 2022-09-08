@@ -29,8 +29,8 @@
         <form class="cookie-banner" action="history_eternals.php" method="post">
             <p>
                 Il nostro sito utilizza dei <span lang="en">cookie</span> per personalizzare
-                il contenuto e analizzare il traffico di rete.</br>
-                <a href=cookie_informativa.php>Leggi di più riguardo ai <span lang="en">cookie</span></a></br>
+                il contenuto e analizzare il traffico di rete.
+                <a href=cookie_informativa.php>Leggi di più riguardo ai <span lang="en">cookie</span></a>
             </p>
             <input type="submit" name="CookieAccepted" value="Accetta">
         </form>
@@ -88,9 +88,8 @@
     </header>
     <div class="main">
         <h1 id="replace5" lang="en">DOOM ETERNALS</h1>
-        <article id="Introduzione">
+        <article>
             <h2 class="paragrafo">Introduzione</h2>
-            <a name="Introduzione"></a>
             <p>
                 <span lang="en">Doom Eternal</span> è il <span lang="en">sequel</span> del <span lang="en">reboot</span> del 2016. Il gioco è uscito il 19 Marzo 2020
                 per <span lang="en">PlayStation</span> 4, <span lang="en">Xbox One</span>, <abbr title="Personal Computer">PC</abbr> e
@@ -99,9 +98,8 @@
                 18 Marzo 2021. Il gioco è stato chiamato <span lang="en">Doom Eternal</span> per evitare di creare confusione con <span lang="en">Doom</span> 2 del 1984
             </p>
         </article>
-        <article id="Trama">
+        <article>
             <h2 class="paragrafo">Trama</h2>
-            <a name="Trama"></a>
             <p>
                 Un pò di tempo dopo gli eventi di <span lang="en">Doom</span> (2016), la Terra è stata invasa da forze demoniache che hanno spazzato via il 60% della
                 popolazione grazie alla corrotta <span lang="en">Union Aerospace Corporation</span>. Gli ultimi umani rimasti sono fuggiti dal pianeta o si sono uniti
@@ -149,9 +147,8 @@
                 Dopo un intensa battaglia <span lang="en">Slayer</span> uccide l'Icona del Peccato fermando quindi anche l'invasione infernale della Terra.
             </p>
         </article>
-        <article id="Gameplay">
+        <article>
             <h2 class="paragrafo">Gameplay</h2>
-            <a name="Gameplay"></a>
             <h3 class="lista_titolo" lang="en">Singleplayer:</h3>
             <p>
                 Una nuova meccanica di gioco è la possibilità di invadere la partita di un altro giocatore, grazie a una meccanica chiamata "invasione".
@@ -175,9 +172,8 @@
                 <span lang="en">DOOM</span> vengono riproposte anche in questo capitolo.
             </p>
         </article>
-        <article id="Livelli">
+        <article>
             <h2 class="paragrafo">Livelli</h2>
-            <a name="Livelli"></a>
             <ul class="lista">
                 <li>
                     Inferno in terra
@@ -236,8 +232,7 @@
         <p>
             <span lang="en">&copy;Doom</span> è un marchio ragistrato <a href="https://bethesda.net/it/dashboard" target="_blank">2022 Bethesda Softworks LLC</a>,
             a ZeniMax Media company. I marchi appartengono ai rispettivi proprietari.
-            Tutti i diritti riservati.<br>
-            <br>
+            Tutti i diritti riservati.
         </p>
         <img class="imgVadidCode" src="IMAGES/valid-xhtml10.png" alt="html valido" />
         <img class="imgVadidCode" src="IMAGES/vcss-blue.gif" alt="css valido" />
