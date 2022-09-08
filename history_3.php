@@ -114,7 +114,7 @@
                 Un film di <span lang="en">Doom</span> vagamente basato sul franchise, è stato rilasciato circa sei mesi dopo, il 21 ottobre 2005.
 
                 <span lang="en">Doom</span> 3 si concentra su un <span lang="en">gameplay</span> più lento e metodico rispetto al <span lang="en">"run and gun"</span> dei suoi predecessori.
-                Ha ricevuto un'opinione positiva da parte della critica per le sue atmosfere paurose e la sua grafica rivoluzionaria, ma è stato altrettanto criticato principalmente per il suo <span lang="en">gameplay</span>, che essendo più lento, alla lunga stancava, e per i suoi dettagli horror ricchi di <span lang="fr">cliché</span>.
+                Ha ricevuto un'opinione positiva da parte della critica per le sue atmosfere paurose e la sua grafica rivoluzionaria, ma è stato altrettanto criticato principalmente per il suo <span lang="en">gameplay</span>, che essendo più lento, alla lunga stancava, e per i suoi dettagli horror ricchi di <span lang="fra">cliché</span>.
             </p>
         </article>
         <article id="Features">
