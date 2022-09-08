@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="it" dir="ltr">
 
 <head>
     <link href="CSS/STYLE_COMMON.css" rel="stylesheet" type="text/css" media="screen" />
@@ -89,7 +89,6 @@
         <h1 id="replace1" lang="en">DOOM</h1>
         <article id="Riassunto">
             <h2 class="paragrafo">Un breve riassunto della saga</h2>
-            <a name="Riassunto"></a>
             <p class="history">
                 <span lang="en">Doom </span>(ufficialmente scritto come <span lang="en">DOOM</span> e occasionalmente <span lang="en"> DooM </span> dai fan)
                 è il primo videogioco rilasciato della serie e viene considerato uno dei giochi che hanno consolidato il genere
@@ -132,7 +131,6 @@
         </article>
         <article id="Trama">
             <h2 class="paragrafo">Trama</h2>
-            <a name="Trama"></a>
             <p class="history">
                 <span lang="en">Doom</span> ha una trama semplice che avanza nel corso del gioco principalmente attraverso
                 messaggi mostrati tra un livello e l'altro. Il giocatore prende le parti di un <span lang="en">marine</span>, "uno dei più tosti del pianeta Terra,
@@ -151,7 +149,6 @@
         </article>
         <article id="Gameplay">
             <h2 class="paragrafo"><span lang="en">Gameplay</span></h2>
-            <a name="Gameplay"></a>
             <p class="history">
                 <span lang="en">Doom</span> è uno sparatutto in prima persona, con un'impostazione di sfondo che mescola fantascienza e <span lang="en">horror</span>
                 (nello stile <span lang="en">weird menace</span>); il gioco si compone di tre episodi, ognuno dei quali si svolge in un luogo generico e
@@ -187,7 +184,7 @@
         </article>
         <article id="Release">
             <h2 class="paragrafo"><span lang="en">Release</span></h2>
-            <a name="Release"><span lang="en"></a>
+            <a name="Release"></a>
             <p class="history">
                 Il primo episodio distribuito in modalità <span lang="en">shareware</span>, era essenzialmente una demo del gioco che consentiva una facile portabilità,
                 e all'epoca lo si trovava in moltissimi modi:
@@ -195,7 +192,7 @@
             <ul class="lista">
                 <li><span lang="en">floppy disk</span>;</li>
                 <li>navigando su<span lang="en">Internet</span>;</li>
-                <li><abbr lang="en" title="Compact Disk ">CD-ROM;</li>
+                <li><abbr lang="en" title="Compact Disk ">CD-ROM;</abbr></li>
             </ul>
             <p class="history">
                 Incoraggiando così giocatori e venditori al dettaglio a diffondere il gioco quanto più possibile. Si sitma che nel 1995 la distribuzione
@@ -220,7 +217,7 @@
         </article>
         <article id="Note legali">
             <h2 class="paragrafo">Note Legali</h2>
-            <a name="Note legali"></a>
+            <a name="Notelegali"></a>
             <p>
                 <span lang="en">Doom</span> era e rimane un prodotto controverso dato l'alto tasso di violenza, <span lang="en">gore</span> e immaginari riferimenti
                 satanici. E' stato più volte criticato da organizzazioni cristiane per le sue sfumature diaboliche, (anche se alcuni <span lang="en">fan</span>

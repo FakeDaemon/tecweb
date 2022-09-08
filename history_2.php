@@ -140,10 +140,10 @@
       </p>
       <img src="IMAGES/supershotgun.png" alt="immagine raffigurante la nuova arma">
       <table class="npc_table">
-        <thead class="npc_head">
-          <tr class="tab_title">
+        <caption>NPC</caption>
+        <thead>
+          <tr>
             <th colspan="2">
-              NPC
             </th>
           </tr>
           <tr class="tab_subtitle">
@@ -184,7 +184,7 @@
       </table>
       <p class="history">
         Essendo più vario ed innovativo rispetto al primo capitolo, l'introduzione di questa serie di nemici ha cambiato notevolmente le meccaniche del <span lang="en">gameplay</span> relativo alla modalità <span lang="en">single player</span>.
-        Alcuni <span lang="en">Eater Egg</span> vengono ripresi dal gioco <span lang="en">cult</span> di <span lang="en">id Software</span> <span lang="de">Wolfenstein <abbr title="3 dimensioni">3D</span></span>,
+        Alcuni <span lang="en">Eater Egg</span> vengono ripresi dal gioco <span lang="en">cult</span> di <span lang="en">id Software</span> <span lang="de">Wolfenstein</span> <abbr title="3 dimensioni">3D</abbr>,
         in due livelli segreti i nemici avranno le sembianze della guardia tedesca classica del gioco, tornando indietro nel tempo con il design e la musica.
         L'unica arma che viene aggiunta è il <span lang="en">super shotgun</span> (una doppietta a canne mozze).
         Viene aggiunto inoltre un altro <span lang="en">powerup</span> la megasfera: intrisa di potere demoniaco porta al massimo la salute del giocatore e aumenta il livello di corazza al 200%.
@@ -206,8 +206,8 @@
         ma è stato ritenuto deludente in alcune sue aree, le lamentele più ricevute riguardano la mancanza di nuove e importanti funzionalità e il <span lang="en">level design</span> troppo omogeneo, alle volte quasi squallido,
         specialmente se messo a confronto di giochi usciti poco dopo quali <span lang="en">Duke Nukem <abbr title="3 dimensioni">3D</abbr></span> e <span lang="en">Star Wars : Dark Forces</span>.
       </p>
-      <img lang="en" src="IMAGES/star wars.jpg" alt="Scena di gioco di star wars dark forces">
-      <img lang="en" src="IMAGES/duke nuke,.jpg" alt="Scena di gioco di duke nukem">
+      <img lang="en" src="IMAGES/starwars.jpg" alt="Scena di gioco di star wars dark forces">
+      <img lang="en" src="IMAGES/dukenuke.jpg" alt="Scena di gioco di duke nukem">
       <p class="history">
         Diversamente dal capitolo principale, il sequel non ha avuto versioni demo o condivise, è stato direttamente venduto al dettaglio.
         <span lang="en">Doom</span><abbr title="Secondo">II</abbr> era quindi anche conosciuto come la versione commerciale del gioco, mentre la versione registrata era disponibile solo per corrispondenza.
@@ -216,9 +216,9 @@
         <span lang="en">Doom</span><abbr title="Secondo">II</abbr> è stato poi rilasciato nuovamente nell'edizione <span lang="en">Doom 3 BFG</span>, dove ogni riferimento nazista è stato modificato nei livelli 31 e 32.
       </p>
     </article>
-    <article id="Note Legali">
+    <article id="NoteLegali">
       <h2 class="paragrafo">Note Legali</h2>
-      <a name="Note Legali"></a>
+      <a name="NoteLegali"></a>
       <p class="history">
         In accordo con la legge tedesca <span lang="dec">"Strafgesetzbuch"</span> 86a, <cite>"l'utilizzo di simbologie incostituzioniali è poibito al di fuori di determinati contesti quali,
           ricerca, insegnamento e altro"</cite>.
