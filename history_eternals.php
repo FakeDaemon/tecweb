@@ -88,7 +88,7 @@
     </header>
     <div class="main">
         <h1 id="replace5" lang="en">DOOM ETERNALS</h1>
-        <article id="Introduzione">
+        <article>
             <h2 class="paragrafo">Introduzione</h2>
             <p>
                 <span lang="en">Doom Eternal</span> è il <span lang="en">sequel</span> del <span lang="en">reboot</span> del 2016. Il gioco è uscito il 19 Marzo 2020
@@ -98,7 +98,7 @@
                 18 Marzo 2021. Il gioco è stato chiamato <span lang="en">Doom Eternal</span> per evitare di creare confusione con <span lang="en">Doom</span> 2 del 1984
             </p>
         </article>
-        <article id="Trama">
+        <article>
             <h2 class="paragrafo">Trama</h2>
             <p>
                 Un pò di tempo dopo gli eventi di <span lang="en">Doom</span> (2016), la Terra è stata invasa da forze demoniache che hanno spazzato via il 60% della
@@ -147,7 +147,7 @@
                 Dopo un intensa battaglia <span lang="en">Slayer</span> uccide l'Icona del Peccato fermando quindi anche l'invasione infernale della Terra.
             </p>
         </article>
-        <article id="Gameplay">
+        <article>
             <h2 class="paragrafo">Gameplay</h2>
             <h3 class="lista_titolo" lang="en">Singleplayer:</h3>
             <p>
@@ -172,7 +172,7 @@
                 <span lang="en">DOOM</span> vengono riproposte anche in questo capitolo.
             </p>
         </article>
-        <article id="Livelli">
+        <article>
             <h2 class="paragrafo">Livelli</h2>
             <ul class="lista">
                 <li>

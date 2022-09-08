@@ -88,7 +88,7 @@
     </header>
     <div class="main">
         <h1 id="replace4" lang="en">DOOM 2016</h1>
-        <article id="Introduzione">
+        <article>
             <h2 class="paragrafo">Introduzione</h2>
             <p>
                 <span lang="en">DOOM</span> (conosciuto come <span lang="en">DOOM</span> 4 durante lo sviluppo) è un <span lang="en">soft reboot</span>
@@ -97,7 +97,7 @@
                     PC</abbr>, <abbr title="PlayStation4">PS4</abbr>, <span lang="en">Xbox One</span> e <span lang="en">Nintendo Switch</span> il 10 Novembre 2017
             </p>
         </article>
-        <article id="Trama">
+        <article>
             <h2 class="paragrafo">Trama</h2>
             <img src="IMAGES/doom_2016_inizio.jpg" alt="una delle prime scene del gioco dove recuperiamo la storica tuta del protagonista">
             <p>
@@ -133,7 +133,7 @@
                 ma preoccupato delle sue interferenze, ci trasporta in una <span lang="en">location</span> sconosciuta.
             </p>
         </article>
-        <article id="Gameplay">
+        <article>
             <h2 class="paragrafo">Gameplay</h2>
             <img src="IMAGES/doom_2016_gameplay.jpg" alt="una schermata del gioco">
             <p class="history">
@@ -158,7 +158,7 @@
                 al giocatore.
             </p>
         </article>
-        <article id="Multiplayer">
+        <article>
             <h2 class="paragrafo">Multiplayer</h2>
             <p>
                 <span lang="en">Id Software</span> ha collaborato con lo studio <span lang="en">Certain Affinity</span> in modo da sviluppare una sezione
