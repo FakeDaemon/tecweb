@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="it" dir="ltr">
 
 <head>
     <link href="CSS/STYLE_COMMON.css" rel="stylesheet" type="text/css" media="screen" />
@@ -19,12 +19,22 @@
     require 'SCRIPTS/.php/database_connection.php';
     include 'SCRIPTS/.php/user.php';
     $user = new User($conn);
-    if (isset($_POST['CookieAccepted']) && $_POST['CookieAccepted'] == 'Accetta') {
-        setCookie('CookieAccepted','Accetta',time() + (86400 * 30));
+    if (
+        isset($_POST['CookieAccepted']) &&
+        $_POST['CookieAccepted'] == 'Accetta'
+    ) {
+        setCookie(
+            'CookieAccepted',
+            'Accetta',
+            'time() + (86400 * 30)'
+        );
         $_COOKIE['CookieAccepted'] = 'Accetta';
         header('location : history_3.php');
     }
-    if (!(isset($_COOKIE['CookieAccepted'])) || !($_COOKIE['CookieAccepted'] == 'Accetta')) {
+    if (
+        !(isset($_COOKIE['CookieAccepted'])) ||
+        !($_COOKIE['CookieAccepted'] == 'Accetta')
+    ) {
     ?>
         <form class="cookie-banner" action="history_3.php" method="post">
             <p>
@@ -104,7 +114,7 @@
                 Un film di <span lang="en">Doom</span> vagamente basato sul franchise, è stato rilasciato circa sei mesi dopo, il 21 ottobre 2005.
 
                 <span lang="en">Doom</span> 3 si concentra su un <span lang="en">gameplay</span> più lento e metodico rispetto al <span lang="en">"run and gun"</span> dei suoi predecessori.
-                Ha ricevuto un'opinione positiva da parte della critica per le sue atmosfere paurose e la sua grafica rivoluzionaria, ma è stato altrettanto criticato principalmente per il suo <span lang="en">gameplay</span>, che essendo più lento, alla lunga stancava, e per i suoi dettagli horror ricchi di <span lang="fra">cliché</span>.
+                Ha ricevuto un'opinione positiva da parte della critica per le sue atmosfere paurose e la sua grafica rivoluzionaria, ma è stato altrettanto criticato principalmente per il suo <span lang="en">gameplay</span>, che essendo più lento, alla lunga stancava, e per i suoi dettagli horror ricchi di <span lang="fr">cliché</span>.
             </p>
         </article>
         <article id="Features">
@@ -123,8 +133,8 @@
                 Altre caratteristiche importanti del motore di Doom 3 sono l'evidenziazione dettagliata delle <span lang="en">texture</span>,
                 la gestione realistica della fisica degli oggetti, una colonna sonora ambientale e suono multicanale.
             </p>
-            <img src="IMAGES/doom3-hell.jpg" alt="ambientazione infernale">
         </article>
+        <img src="IMAGES/doom3-hell.jpg" alt="ambientazione infernale">
         <article id="Sviluppo">
             <h2 class="paragrafo">Sviluppo</h2>
             <a name="Sviluppo"></a>
