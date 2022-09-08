@@ -26,8 +26,8 @@
     <form class="cookie-banner" action="cookie_informativa.php" method="post">
       <p>
         Il nostro sito utilizza dei <span lang="en">cookie</span> per personalizzare
-        il contenuto e analizzare il traffico di rete.</br>
-        <a href=cookie_informativa.php>Leggi di più riguardo ai <span lang="en">cookie</span></a></br>
+        il contenuto e analizzare il traffico di rete.
+        <a href=cookie_informativa.php>Leggi di più riguardo ai <span lang="en">cookie</span></a>
       </p>
       <input type="submit" name="CookieAccepted" value="Accetta">
     </form>
@@ -89,15 +89,21 @@
     <article>
       <h2 class="paragrafo">Termini d’uso</h2>
       <p>
-        L'utilizzo del seguente sito <span lang="en">web</span> implica per l'utente la conoscenza delle seguenti condizioni.<br />
-        Il materiale contenuto nel sito <span lang="en">web</span> è protetto da <span lang="en">copyright</span>.<br />
+        L'utilizzo del seguente sito <span lang="en">web</span> implica per l'utente la conoscenza delle seguenti condizioni.
+      </p>
+      <p>
+        Il materiale contenuto nel sito <span lang="en">web</span> è protetto da <span lang="en">copyright</span>.
+      </p>
+      <p>
         Nessuna responsabilità viene assunta in relazione sia al contenuto di quanto pubblicato su questo sito
         ed all'uso che terzi ne potranno fare, sia per le eventuali contaminazioni derivanti dall'accesso, dall'interconnessione,
-        dallo scarico di materiale e programmi informatici da questo sito.<br />
+        dallo scarico di materiale e programmi informatici da questo sito.
+      </p>
+      <p>
         La informiamo che ai sensi dell’<abbr title="articolo">art.</abbr> 13 Regolamento <abbr title="Unione Europea numero">UE n.</abbr>
         2016/679 (in seguito, <abbr lang="en" title="General data protection regulation">“GDPR”</abbr>) che i Suoi dati personali, previa esplicita
         ed espressa manifestazione del consenso mediante la selezione della casella pertinente, saranno trattati con le
-        modalità e per le finalità che seguono.<br />
+        modalità e per le finalità che seguono.
       </p>
     </article>
     <article>
@@ -107,8 +113,8 @@
         vengono raccolti dal Titolare automaticamente (quando accede ai Servizi, possiamo raccogliere alcune informazioni direttamente dal tuo dispositivo,
         ricorrendo all’utilizzo di <span lang="en">cookie</span> e altre tecnologie analoghe per analizzare la Sua interazione con i Servizi;
         per ulteriori informazioni sulle tipologie di <span lang="en">cookie</span> e tecnologie analoghe di cui ci avvaliamo, le ragioni e le
-        rispettive modalità di controllo, verifichi la nostra <span lang="en">Cookie Policy</span>).</br>
-
+        rispettive modalità di controllo, verifichi la nostra <span lang="en">Cookie Policy</span>).
+      </p>
         I Suoi Dati personali sono trattati, indipendentemente dal Suo consenso esplicito ed espresso <abbr title="articolo">art.</abbr> 6
         <abbr title="lettera">lett.</abbr> b), e) <abbr lang="en" title="General data protection regulation">“GDPR”</abbr>) per le seguenti finalità:
       </p>
@@ -119,19 +125,22 @@
       <p>
         Il conferimento dei Dati per le finalità appena menzionate ha natura obbligatoria ai fini della fornitura dei Servizi offerti dal Titolare.
         In difetto, non saremo in grado di stipulare il contratto di fornitura dei Servizi e/o di garantire la corretta fornitura dei Servizi
-        e/o adempiere agli obblighi gravanti sul Titolare del trattamento in esecuzione del contratto di fornitura dei Servizi.</br>
-
+        e/o adempiere agli obblighi gravanti sul Titolare del trattamento in esecuzione del contratto di fornitura dei Servizi.
+      </p>
+      <p>
         In particolare, la base giuridica per il trattamento dei Suoi Dati personali risiede nello specifico contesto in cui vengono raccolti.
         La ragione principale per cui i Dati personali vengono da Noi raccolti e utilizzati risiede nell’esecuzione del contratto di fornitura
         dei Servizi del Titolare. Tuttavia, utilizzeremo i Suoi Dati personali anche laddove tale attività rientri nell’interesse legittimo del
         Titolare, salvo che tale interesse non sia in conflitto con gli interessi di protezione dei Suoi Dati o con i Suoi diritti e libertà
         fondamentali). In taluni casi, potremmo avere un obbligo giuridico di raccolta dei Suoi Dati personali (ad esempio, nell’ambito di un
         procedimento legale) o potremmo dover elaborare e condividere con altri soggetti tali Dati, all’esito di un giudizio di bilanciamento
-        che ci imponga di ottemperare a un obbligo che risulti prevalente rispetto al Suo interesse di protezione dei Dati.</br>
-
+        che ci imponga di ottemperare a un obbligo che risulti prevalente rispetto al Suo interesse di protezione dei Dati.
+      </p>
+      <p>
         Parimenti, ove raccogliessimo e utilizzassimo i Dati fondandoci su interessi legittimi (nostri o di terzi), Le daremo conto di
-        quali interessi legittimi si tratta nel caso concreto.</br>
-
+        quali interessi legittimi si tratta nel caso concreto.
+      </p>
+      <p>
         Solo previo un Suo specifico e distinto consenso (<abbr title="articolo">art.</abbr> 7
         <abbr lang="en" title="General data protection regulation">“GDPR”</abbr>), per le seguenti finalità di marketing:
       </p>
@@ -150,10 +159,11 @@
         Il conferimento dei dati per le finalità appena menzionate ha invece natura facoltativa. Può quindi decidere di non conferire alcun
         dato o di negare successivamente la possibilità di trattare dati già forniti: in tal caso, non potrà ricevere newsletter,
         comunicazioni commerciali e materiale pubblicitario inerenti ai Servizi offerti dal Titolare. Continuerà comunque ad avere diritto
-        ai Servizi per i quali non è necessario il suo esplicito ed espresso consenso.</br>
-
+        ai Servizi per i quali non è necessario il suo esplicito ed espresso consenso.
+      </p>
+      <p>
         Qualora avesse necessità di ulteriori informazioni sulla base giuridica e/o sulle finalità del trattamento dei Suoi Dati, ci contatti
-        al seguente indirizzo: DoomWiki@gmail.com.</br>
+        al seguente indirizzo: DoomWiki@gmail.com.
       </p>
     </article>
     <article>
@@ -163,8 +173,9 @@
         4 <abbr title="numero">n.</abbr> 2 <abbr title="General data protection regulation">GDPR</abbr> e precisamente:
         raccolta, registrazione, organizzazione, conservazione, consultazione, elaborazione, modificazione, selezione, estrazione,
         raffronto, utilizzo, interconnessione, blocco, comunicazione, cancellazione e distruzione dei dati. I Suoi dati personali sono sottoposti
-        a trattamento elettronico automatizzato.</br>
-
+        a trattamento elettronico automatizzato.
+      </p>
+      <p>
         I Dati personali saranno trattati da Noi e da soggetti (interni ed esterni) specificamente autorizzati dal Titolare del trattamento ai
         sensi dell’<abbr title="articolo">art.</abbr> 4 <abbr title="numero">n.</abbr> 10 del Regolamento <abbr title="Unione Europea">UE</abbr>
         2016/679 e operanti sotto la supervisione di quest’ultimo, nel rispetto delle istruzioni ricevute e dei vincoli contrattuali tra questi
@@ -187,15 +198,17 @@
       </ul>
 
       <p>
-        I Dati personali vengono trattati dal Titolare avvalendosi di server ubicati in territorio <abbr title="Unione Europea">UE</abbr>.</br>
-
+        I Dati personali vengono trattati dal Titolare avvalendosi di server ubicati in territorio <abbr title="Unione Europea">UE</abbr>.
+      </p>
+      <p>
         Resta in ogni caso inteso che il Titolare, ove si rendesse necessario, avrà facoltà di spostare i server di riferimento anche
         in territori extra-<abbr title="Unione Europea">UE</abbr>. In tal caso, il Titolare assicura sin d’ora che il trasferimento dei
         dati extra-<abbr title="Unione Europea">UE</abbr> avverrà in conformità alle disposizioni di legge applicabili, previa stipula
-        delle clausole contrattuali standard previste dalla Commissione Europea.</br>
-
+        delle clausole contrattuali standard previste dalla Commissione Europea.
+     </p>
+     <p>
         Il Titolare tratterà i dati personali per il tempo necessario per adempiere alle finalità di cui sopra e comunque per non oltre
-        12 mesi dalla raccolta dei dati per le Finalità di marketing.</br>
+        12 mesi dalla raccolta dei dati per le Finalità di marketing.
       </p>
       <h2 class="paragrafo">Diritti dell’interessato</h2>
       <p>
@@ -288,8 +301,7 @@
     <p>
       <span lang="en">&copy;Doom</span> è un marchio ragistrato <a href="https://bethesda.net/it/dashboard" target="_blank">2022 Bethesda Softworks LLC</a>,
       a ZeniMax Media company. I marchi appartengono ai rispettivi proprietari.
-      Tutti i diritti riservati.<br>
-      <br>
+      Tutti i diritti riservati.
     </p>
     <img class="imgVadidCode" src="IMAGES/valid-xhtml10.png" alt="html valido" />
     <img class="imgVadidCode" src="IMAGES/vcss-blue.gif" alt="css valido" />
