@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-
 <head>
   <link href="CSS/STYLE_HOMEPAGE.css" rel="stylesheet">
   <link href="CSS/STYLE_COMMON.css" rel="stylesheet">
@@ -11,12 +10,10 @@
   <meta name="description" content="DOOM Wiki" />
   <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano, Angeloni Alberto" />
 </head>
-
 <body>
   <?php
   require 'SCRIPTS/.php/database_connection.php';
   include 'SCRIPTS/.php/user.php';
-
   $user = new User($conn);
   if (isset($_POST['CookieAccepted']) && $_POST['CookieAccepted'] == 'Accetta') {
     setCookie('CookieAccepted', 'Accetta', time() + (86400 * 30));
@@ -38,7 +35,6 @@
   ?>
   <header>
     <h1 id="logo">DOOM WIKI</h1>
-
     <nav id="NavBar">
       <ul id="MenuBar">
         <li class="MenuBarItem CurrentLocation" lang="en">HOMEPAGE</li>
@@ -82,14 +78,12 @@
   <div class="main">
     <p id="Welcome_Messages">BENVENUTI ALLA <strong lang="en">WIKI</strong> DI <strong lang="en">DOOM</strong></p>
     <p id="SubMessage">Un sito dedicato al gioco di <span lang="en">DOOM</span>, dove consultare informazioni dettagliate su tutti gli aspetti del gioco e dove appassionati di <span lang="en">DOOM</span> possono interagire tra di loro.</p>
-
     <form class="searchBar" action="searchResult.php" method="get">
       <label for="SearchBar">CERCA NEL SITO</label>
       <input id="SearchBar" type="text" name="SearchTerms" required>
       <input type="submit" value="CERCA">
       <input type="reset" value="PULISCI">
     </form>
-
     <div class="TopicList">
       <p>ULTIME DOMANDE DELLA COMMUNITY</p>
       <?php
@@ -98,21 +92,21 @@
         while ($row = $result->fetch_assoc()) {
           echo '<a href="questions.php?id=' . $row['id'] . '"><p class="title">' . $row['title'] . '</p><p class="details">Aperto da ' . ($row['user_name'] != NULL ? $row['user_name'] : "utente eliminato") . ' in data ' . $row['creation_date'] . '</p></a>';
         }
-        echo '<a href="questions.php?id=Latest">Vedi Tutti</a>';
+        echo '<a href="questions.php?Latest">Vedi Tutti</a>';
         echo '</div>';
         echo '<div class="TopicList">';
+        echo '<p>ULTIME DOMANDE DELLA COMMUNITY</p>';
         $result = $conn->query("SELECT t.id, u.user_name, t.title, t.creation_date,COUNT(c.id) AS CommentsCount FROM DoomWiki.topics AS t LEFT OUTER JOIN DoomWiki.users AS u ON t.email = u.fst_mail LEFT OUTER JOIN DoomWiki.comments AS c ON c.topicID=t.id WHERE t.state='Approved' GROUP BY t.id ORDER BY CommentsCount DESC;");
         while ($row = $result->fetch_assoc()) {
           echo '<a href="questions.php?id=' . $row['id'] . '"><p class="title">' . $row['title'] . '</p><p class="details">Aperto da ' . ($row['user_name'] != NULL ? $row['user_name'] : "utente eliminato") . ' in data ' . $row['creation_date'] . '</p></a>';
         }
-        echo '<a href="questions.php?id=Comments">Vedi Tutti</a>';
+        echo '<a href="questions.php?Comments">Vedi Tutti</a>';
       } else {
         echo '<p class="subTitle">Nessuno ha ancora chiesto nulla. <a href="questionEditor.php">Chiedi</a> qualcosa per primo!</p>';
       }
       ?>
     </div>
   </div>
-
   <footer id="foot">
     <p>
       <span lang="en">&copy;Doom</span> è un marchio ragistrato <a href="https://bethesda.net/it/dashboard" target="_blank">2022 Bethesda Softworks LLC</a>,
@@ -124,5 +118,4 @@
     <img class="imgVadidCode" src="IMAGES/vcss-blue.gif" alt="css valido" />
   </footer>
 </body>
-
 </html>

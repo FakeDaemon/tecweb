@@ -10,8 +10,8 @@ CREATE TABLE users(
   fst_mail varchar(256) PRIMARY KEY,
   user_name varchar(256) NOT NULL,
   psw varchar(256) NOT NULL,
-  lst_psw_change date NOT NULL,
-  sign_in_date date NOT NULL,
+  lst_psw_change datetime NOT NULL,
+  sign_in_date datetime NOT NULL,
   scnd_mail varchar(256),
   role ENUM('admin', 'mod', 'default') DEFAULT 'default',
   profile_pic int DEFAULT '0',
@@ -19,17 +19,17 @@ CREATE TABLE users(
 );
 CREATE TABLE blackList(
   fst_mail varchar(256) PRIMARY KEY,
-  ban_date date,
+  ban_date datetime,
   ban_reason text
 );
 CREATE TABLE topics(
   id int AUTO_INCREMENT PRIMARY KEY,
   title varchar(256) NOT NULL,
   description text,
-  creation_date date NOT NULL,
+  creation_date datetime NOT NULL,
   state ENUM('Pending', 'Approved', 'Rejected') DEFAULT 'Pending',
   rejectReason text,
-  modified_date date DEFAULT NULL,
+  modified_date datetime DEFAULT NULL,
   email varchar(256),
   FOREIGN KEY(email) REFERENCES users(fst_mail)
   ON DELETE SET NULL
@@ -38,7 +38,7 @@ CREATE TABLE topics(
 CREATE TABLE comments(
   id int AUTO_INCREMENT PRIMARY KEY,
   commentBody text,
-  writeDate date,
+  writeDate datetime,
   topicID int,
   email varchar(256),
   state enum('Default', 'Modified', 'Deleted') DEFAULT 'Default',
@@ -52,7 +52,7 @@ CREATE TABLE comments(
 CREATE TABLE helpRequests(
   id int AUTO_INCREMENT PRIMARY KEY,
   requestBody text NOT NULL,
-  requestDate date NOT NULL,
+  requestDate datetime NOT NULL,
   requestMod varchar(256) DEFAULT NULL,
   requestEmail varchar(256) NOT NULL,
   requestState ENUM('Pending', 'WorkingOn', 'Resolved') DEFAULT 'Pending'

@@ -18,6 +18,9 @@
   include 'SCRIPTS/.php/user.php';
 
   $user = new User($conn);
+  if (!$user->isLogged()) {
+    header("location:login.php?QE");
+  }
 
   if (isset($_POST['CookieAccepted']) && $_POST['CookieAccepted'] == 'Accetta') {
     setCookie('CookieAccepted', 'Accetta', time() + (86400 * 30));
@@ -35,6 +38,28 @@
       <input type="submit" name="CookieAccepted" value="Accetta">
     </form>
   <?php
+  }
+
+  if (isset($_POST['QuestionTitle']) && isset($_POST['QuestionBody'])) {
+    $stmt = $conn->prepare("SELECT * FROM DoomWiki.topics WHERE title = ?");
+    $stmt->bind_param("s", $_POST['QuestionTitle']);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    if ($result->num_rows == 0) {
+      $stmt = $conn->prepare("INSERT INTO DoomWiki.topics(title, description, creation_date, email) VALUES(?, ?, ?, ? );");
+      $title = htmlspecialchars($_POST['QuestionTitle']);
+      $description = htmlspecialchars($_POST['QuestionBody']);
+      $creationDate = date("Y-m-d H:i:s");
+      $stmt->bind_param("ssss", $title, $description, $creationDate, $user->email);
+      $stmt->execute();
+      if ($conn->connect_error) {
+        header("location: questionEditor.php?Error");
+      }
+      header("location: questionEditor.php?Success");
+    } else {
+      $row = $result->fetch_assoc();
+      header("location:questionEditor?Duplicate=" . $row['id']);
+    }
   }
 
   ?>
@@ -80,21 +105,31 @@
       </div>
     </nav>
   </header>
-  <?php if ($state === "okay") { ?>
+
+  <?php if (isset($_GET['Success'])) { ?>
     <div class="main">
       <span>
         <h1>Domanda inviata!</h1>
-        <p>La tua domanda è stata inviata ai nostri moderatori, non appena verrà approvata riceverai una <span lang="en">email</span> di conferma. Grazie per il tuo contributo.</p>
-        <a href="/">Continua la navigazione!</a>
+        <p>La tua domanda è stata inviata ai nostri moderatori, verifica il suo stato nella <a href="questions.php?User">pagina dedicata</a>.Nel frattempo ti ringraziamo per il tuo contributo.</p>
+        <a href="/">Torna alla <span lang="en">home page</span>!</a>
       </span>
     </div>
-  <?php } else if ($state === "error") { ?>
+  <?php } else if (isset($_GET['Error'])) { ?>
     <div class="main">
       <span>
         <h1>Errore del sistema.</h1>
-        <p>Qualcosa è andato storto durante l'invio della tua domanda. Probabilmente stiamo già lavorando per risolvere il problema, il tuo prossimo tentativo avrà sicuramente successo, magari tenta tra qualche decina di minuti.</p>
+        <p>Qualcosa è andato storto durante l'invio della tua domanda. Probabilmente stiamo già lavorando per risolvere il problema, il tuo prossimo tentativo avrà sicuramente successo, magari tenta tra qualche minuto.</p>
         <a href="help.php">Segnala il problema!</a>
-        <a href="/">Continua la navigazione!</a>
+        <a href="/">Torna alla <span lang="en">home page</span>!</a>
+      </span>
+    </div>
+  <?php } else if (isset($_GET['Duplicate'])) { ?>
+    <div class="main">
+      <span>
+        <h1>Domanda duplicata.</h1>
+        <p>Ci risulta cha la tua domanda è già stata chiesta in <a href="questions.php?id=<?php echo $_GET['Duplicate']; ?>">questa pagina</a></p>
+        <a href="/">Torna alla <span lang="en">home page</span>!</a>
+        <a href="help.php">Segnala un problema.</a>
       </span>
     </div>
   <?php } else { ?>
