@@ -82,7 +82,6 @@
     <h1 id="replace2" lang="en">DOOM 2</h1>
     <article id="Riassunto">
       <h2 class="paragrafo">Riassunto</h2>
-      <a name="Riassunto"></a>
       <p>
         <span lang="en">Doom</span> 2 (anche conosciuto come <span lang="en">Doom 2 Hell On Earth</span>) è il sequel del grande classico
         <a href="history.html"><span lang="en">Doom</span></a>, è stato rilasciato il 30 Settembre 1984.
@@ -90,7 +89,6 @@
     </article>
     <article id="Trama">
       <h2 class="paragrafo">Trama</h2>
-      <a name="Trama"></a>
       <p class="history">
         Il giocatore ancora una volta entra nei panni del <span lang="en">Marine</span> solitario, un eroe senza nome, che, è stato l'unico sopravvissuto dopo gli eventi
         accaduti su Marte di <span lang="en">Doom</span>.
@@ -118,7 +116,6 @@
     </article>
     <article id="Gameplay">
       <h2 class="paragrafo">Gameplay</h2>
-      <a name="Gameplay"></a>
       <p class="history">
         <span lang="en">Doom</span> <abbr title="due">II</abbr> non è un gioco drammaticamente differente rispetto al suo predecessore.
         Non ci sono state importanti migliorie tecnologiche ne grafiche;
@@ -194,7 +191,6 @@
     </article>
     <article id="Release">
       <h2 class="paragrafo">Release</h2>
-      <a name="Release"></a>
       <p class="history">
         <span lang="en">Doom</span><abbr title="Secondo">II</abbr>, ha venduto circa due milioni di copie una volta immesso sul mercato, diventando così il prodotto più venduto per la <span lang="en">Software House</span>
         <span lang="en">id Software</span> fino al 2012, quando, viene battuto dal gioco <span lang="en">Rage</span>.
@@ -218,7 +214,6 @@
     </article>
     <article id="NoteLegali">
       <h2 class="paragrafo">Note Legali</h2>
-      <a name="NoteLegali"></a>
       <p class="history">
         In accordo con la legge tedesca <span lang="dec">"Strafgesetzbuch"</span> 86a, <cite>"l'utilizzo di simbologie incostituzioniali è poibito al di fuori di determinati contesti quali,
           ricerca, insegnamento e altro"</cite>.

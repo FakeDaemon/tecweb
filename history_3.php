@@ -119,7 +119,6 @@
         </article>
         <article id="Features">
             <h2 class="paragrafo"></h2>
-            <a name="Features"></a>
             <p class="history">
                 In accordo con <span lang="en">John Carmack</span> capo del reparto e sviluppatore del motore grafico del gioco, il tripudio di caratteristiche in <span lang="en">Doom</span> 3 sono:
                 effetti di luce e ombra unificati, animazioni complesse e <span lang="en">scripting</span> in tempo reale, e una illuminazione delle aree <span lang="en">pixel</span> per <span lang="en">pixel</span> dinamica.
@@ -137,7 +136,6 @@
         <img src="IMAGES/doom3-hell.jpg" alt="ambientazione infernale">
         <article id="Sviluppo">
             <h2 class="paragrafo">Sviluppo</h2>
-            <a name="Sviluppo"></a>
             <p class="history">
                 Nel Giugno del 2000, <span lang="en">John Carmack</span> ha annunciato che stava lavorando ad un <span lang="en">remake</span> di <span lang="en">Doom</span> con la tecnologia di nuova generazione.
                 Questo piano si è rivelato senza il consenso di <span lang="en">id Software</span>.
@@ -158,7 +156,6 @@
         </article>
         <article id="Trama">
             <h2 class="paragrafo">Trama</h2>
-            <a name="Trama"></a>
             <p class="history">
                 Prima degli eventi del gioco, il progetto originale dell'<abbr lang="en" title="Union Aerospace Corporation">UAC</abbr>, era quello di esplorare il
                 pianeta rosso per trasformarlo in un <span lang="en">habitat</span> ospitale per i terrestri, viene così creato un dispositivo denominato <span lang="en">Hydrocon</span>,
