@@ -306,8 +306,8 @@ footer > img {
 }
 
 .cookie-banner{
-    font-size: x-large;
-    border: 1px solid red;
+    font-size: large;
+    border: 0.01em solid red;
     border-radius: 15px;
     position: fixed;
     bottom: 20px;

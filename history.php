@@ -28,8 +28,9 @@
             <p>
                 Il nostro sito utilizza dei <span lang="en">cookie</span> per personalizzare
                 il contenuto e analizzare il traffico di rete.
-                <a href=cookie_informativa.php>Leggi di più riguardo ai <span lang="en">cookie</span></a>
             </p>
+            <a href=cookie_informativa.php>Leggi di più riguardo ai <span lang="en">cookie</span></a>
+            <hr>
             <input type="submit" name="CookieAccepted" value="Accetta">
         </form>
     <?php
@@ -190,7 +191,7 @@
             </p>
             <ul class="lista">
                 <li><span lang="en">floppy disk</span>;</li>
-                <li>navigando su<span lang="en">Internet</span>;</li>
+                <li>navigando su <span lang="en">Internet</span>;</li>
                 <li><abbr lang="en" title="Compact Disk ">CD-ROM;</abbr></li>
             </ul>
             <p class="history">
