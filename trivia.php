@@ -84,6 +84,7 @@
     <div class="main">
         <article>
             <h2 class="paragrafo" lang="en">Did you know?</h2>
+            <section>
             <p>
                 Sapevi che secondo le stime <span lang="en">DOOM</span> è il <span lang="en">software</span> più installato del 1995?
                 A quanto pare il gioco era installato su più <span lang="en">pc</span> di <span lang="en">Windows</span> 95.
@@ -93,11 +94,13 @@
                 di gioco. Il 13 ottobre 1995 la <span lang="en">Microsoft</span> presento un video promozionale di
                 <span lang="en">Windows</span> 95 con Bill Gates sovrapposto al gioco.
             </p>
+            <img id="FunFact" src="IMAGES/Win95promo.jpg" alt="Bill Gates nella promo di Windows 95" />
+          </section>
         </article>
-        <img id="FunFact" src="IMAGES/Win95promo.jpg" alt="Bill Gates nella promo di Windows 95" />
 
         <article>
             <h2 class="paragrafo" lang="en">Did you know?</h2>
+            <section>
             <p>
                 Inizialmente <span lang="en">Id Software</span> voleva creare un gioco basato sul film "<span lang="en">Alien</span>",
                 la <span lang="en">software house</span> cominciò anche a contrattare con la <span lang="en">Twenty Century Fox</span>
@@ -108,50 +111,62 @@
                 battuta del film "Il Colore Dei Soldi" dove Tom Cruise si presenta ad una partita di biliardo con una stecca personalizzata
                 in una custodia, quando gli viene chiesto cosa ci sia dentro lui risponde -"<span lang="en">Doom</span>".
             </p>
+            <img id="FunFact" src="IMAGES/Alien.jpg" alt="Poster del film Alien" />
+            <img id="FunFact" src="IMAGES/EvilDead.jpg" alt="Poster del film Evil Dead" />
+            </section>
         </article>
-        <img id="FunFact" src="IMAGES/Alien.jpg" alt="Poster del film Alien" />
-        <img id="FunFact" src="IMAGES/EvilDead.jpg" alt="Poster del film Evil Dead" />
 
         <article>
             <h2 class="paragrafo" lang="en">Did you know?</h2>
+            <section>
             <p>
                 L'idea di usare i demoni come nemici venne ad alcuni sviluppatori dopo aver giocato una campagna di
                 <span lang="en">Dundeons and Dragons</span> dove alla fine si apre un portale che permise un'invasione demoniaca.
                 Il <span lang="en">cacodemon</span> di <span lang="en">DOOM</span> è ispirato al classico mostro di <span lang="en">Dungeons and Dragons "Beholder"</span>,
                 il suo <span lang="en">design</span> trae ispirazione da un altro mostro di <span lang="en">D&D</span>, il terrore astrale
             </p>
+            <img id="FunFact" src="IMAGES/cacodemon.jpg" alt="classico nemico di DOOM" />
+            <img id="FunFact" src="IMAGES/Beholder.png" alt="Beholder da Dungeons & Dragons" />
+            <img id="FunFact" src="IMAGES/Astral_dreadnought.png" alt="Terrore Astrale da Dungeons & Dragons" />
+          </section>
         </article>
-        <img id="FunFact" src="IMAGES/cacodemon.jpg" alt="classico nemico di DOOM" />
-        <img id="FunFact" src="IMAGES/Beholder.png" alt="Beholder da Dungeons & Dragons" />
-        <img id="FunFact" src="IMAGES/Astral_dreadnought.png" alt="Terrore Astrale da Dungeons & Dragons" />
 
         <article>
             <h2 class="paragrafo" lang="en">Did you know?</h2>
+            <section>
             <p>
                 Il direttore creativo Tom Hall aveva originariamente creato una trama molto elaborata per il gioco, e scrisse un
                 documento chiamato <span lang="en">DOOM Bible</span> contenente il <span lang="en">design</span> del gioco.
+            </p>
+            <p>
                 La trama originale avrebbe dovuto aver luogo su un pianeta alieno chiamato Tei Tenga che sarebbe stato invaso da
                 creature provenienti dall'inferno, ci sarebbero inoltre dovuti essere 5 personaggi giocabili caratterizzati da abilità
                 peculiari. La storia comprendeva originariamente l'andare e tornare dall'inferno con la possibile distruzione del pianeta,
                 infine il protagonista sarebbe stato ritenuto responsabile dell'accaduto su Tei Tenga e mandato in prigione.
+              </p>
+              <p>
                 John Carmack (co-fondatore di<span lang="en">Id Software</span>) non approvo una storia così dettagliata e la
                 <span lang="en">DOOM Bible</span> venne per lo più ignorata nella versione finale. Carmack spiegò la sua posizione riguardo
                 la narrazzione nei videogiochi nel 2003 dicendo: "la storia nei videogiochi e come la storia dei film porno. Ci si aspetta
                 che ci sia, ma non è così importante".
+              </p>
+              <p>
                 Alcuni elementi del documento vennero mantenutinella versione finale del gioco, come il laboratorio militare sul pianeta alieno,
                 l'andare e tornare dall'inferno e le versioni modificate di alcune armi e alcuni mostri presentati in origine nella <span lang="en">DOOM Bible</span>.
                 Alla fine Tom Hall portò con sè alcuni elementi della <span lang="en">DOOM Bible</span> dop aver lasciato <span lang="en">Id Software</span>
                 per lavorare con la <span lang="en">software house "3D Realms"</span>. Lo sparatutto in prima persona "<span lang="en">Rise of the Triad</span>"
                 presenta i personaggi originariamente descritti nella <span lang="en">DOOM Bible</span> e nel simulatore di volo "<span lang="en">Terminal Velocity</span>"
-                si può trovare un pianeta chiamato Tei Tenga
+                si può trovare un pianeta chiamato Tei Tenga.
             </p>
+            <img id="FunFact" src="IMAGES/DOOMBible.jpg" alt="Copertina della DOOM Bible" />
+            <img id="FunFact" src="IMAGES/RiseoftheTriad.jpg" alt="Copertina di Rise of the Triad" />
+            <img id="FunFact" src="IMAGES/TerminalVelocity.jpg" alt="Copertina di Terminal Velocity" />
+          </section>
         </article>
-        <img id="FunFact" src="IMAGES/DOOMBible.jpg" alt="Copertina della DOOM Bible" />
-        <img id="FunFact" src="IMAGES/RiseoftheTriad.jpg" alt="Copertina di Rise of the Triad" />
-        <img id="FunFact" src="IMAGES/TerminalVelocity.jpg" alt="Copertina di Terminal Velocity" />
 
         <article>
             <h2 class="paragrafo" lang="en">Did you know?</h2>
+            <section>
             <p>
                 La saga di <span lang="en">DOOM</span> contiente tantissimi segreti e <span lang="en">easter eggs</span>, nelle prime versioni della mappa "<span lang="en">
                     command control</span>" il giocatore poteva trovare una stanza con un enorme svastica nazista sul pavimento e sul soffitto, questa doveva essere una
@@ -160,29 +175,35 @@
                 "<span lang="en">Escape from Wolfenstein</span>" che presenta come nemici i soldati nazisti del gioco, ma presenta anche un riferimento ad un altro gioco
                 di <span lang="en">Id Software: "Commander Keen"</span>
             </p>
+            <img id="FunFact" src="IMAGES/Wolfenstein-New-Order-3D-Easter-Egg.jpg" alt="Livello ispirato a Wolfenstein 3d" />
+            <img id="FunFact" src="IMAGES/Map32_commander_keen.png" alt="Citazione al gioco Commander Keen" />
+          </section>
         </article>
-        <img id="FunFact" src="IMAGES/Wolfenstein-New-Order-3D-Easter-Egg.jpg" alt="Livello ispirato a Wolfenstein 3d" />
-        <img id="FunFact" src="IMAGES/Map32_commander_keen.png" alt="Citazione al gioco Commander Keen" />
 
         <article>
             <h2 class="paragrafo" lang="en">Did you know?</h2>
+            <section>
             <p>
                 Il nome dei livelli e alcune musiche di <span lang="en">DOOM</span> hanno origini interessanti, il primo episodio del primo
                 <span lang="en">DOOM, "Knee-Deep in the Dead"</span> fu uno dei pochi titoli della <span lang="en">DOOM Bible</span> che finirono nel gioco, mentre il
                 quarto e ultimo episodio di <span lang="en">Ultimate DOOM</span> chiamato <span lang="en">Thy Flesh Consumed</span> prendo il nome da un passaggio della
-                Bibbia di re Giacomo, proverbi 5:11, che cita "<span lang="en">and thou mourn at the last, when thy flesh and thy body are consumed<span>".</span>
-                    Molti livelli di <span lang="en">Thy Flesh Consumed</span> prendono il nome da passi della Bibbia, e il ventunesimo livello di <span lang="en">DOOM</span>
-                    <abbr>II</abbr> si chiama Nirvana e vi si può trovare un fucile a pompa. Questo è probabilmente un riferimento alla <span lang="en">band</span>
-                    "Nirvana" il cui cantante Curt Cobain si suicidò con un fucile lo stesso anno del lancio di <span lang="en">DOOM</span><abbr>II</abbr>. Un altro
-                    riferimento a <span lang="en">band</span> all'interno del gioco si può trovare nel primo livello di <span lang="en">Thy Flesh Consumed, Hell Beneath</span>
-                    contiene una stanza segreta con il logo dei "<span lang="en">Nine Inch Nails</span>"
+                Bibbia di re Giacomo, proverbi 5:11, che cita "<span lang="en">and thou mourn at the last, when thy flesh and thy body are consumed</span>".
             </p>
+            <p>
+                Molti livelli di <span lang="en">Thy Flesh Consumed</span> prendono il nome da passi della Bibbia, e il ventunesimo livello di <span lang="en">DOOM</span>
+                <abbr>II</abbr> si chiama Nirvana e vi si può trovare un fucile a pompa. Questo è probabilmente un riferimento alla <span lang="en">band</span>
+                "Nirvana" il cui cantante Curt Cobain si suicidò con un fucile lo stesso anno del lancio di <span lang="en">DOOM</span><abbr>II</abbr>. Un altro
+                riferimento a <span lang="en">band</span> all'interno del gioco si può trovare nel primo livello di <span lang="en">Thy Flesh Consumed, Hell Beneath</span>
+                contiene una stanza segreta con il logo dei "<span lang="en">Nine Inch Nails</span>"
+            </p>
+            <img id="FunFact" src="IMAGES/NIN_reference.jpg" alt="Stanza con il logo dei Nine Inch Nails" />
+            <img id="FunFact" src="IMAGES/ThyFleshConsumed.png" alt="Elenco dei livelli di 'Thy Flesh Consumed'" />
+          </section>
         </article>
-        <img id="FunFact" src="IMAGES/NIN_reference.jpg" alt="Stanza con il logo dei Nine Inch Nails" />
-        <img id="FunFact" src="IMAGES/ThyFleshConsumed.png" alt="Elenco dei livelli di 'Thy Flesh Consumed'" />
 
         <article>
             <h2 class="paragrafo" lang="en">Did you know?</h2>
+            <section>
             <p>
                 La colonna sonora di <span lang="en">DOOM</span><abbr>II</abbr> contiene molte tracce influenzate da <span lang="en">band rock</span> ed
                 <span lang="en">heavy metal</span>. La traccia "<span lang="en">Bye Bye American Pie</span>" contiene un <span lang="en">sample</span> della canzone
@@ -192,21 +213,25 @@
                 "<span lang="en">Stone Temple Pilots</span>". La traccia "<span lang="en">The Demon's Dead</span>" usa la melodia di apertura di
                 "<span lang="en">After All(The Dead)</span>" dei <span lang="en">Black Sabbath</span>
             </p>
+            <img id="FunFact" src="IMAGES/SouthOfHeaven.jpg" alt="Copertina dell'album South of Heaven degli Slayers" />
+            <img id="FunFact" src="IMAGES/Thembones.jpeg" alt="Copertina del singolo Them Bones degli Alice in Chains " />
+            <img id="FunFact" src="IMAGES/dehumanizer.jpg" alt="Copertina di Dehumanizer, album dei Black Sabbath contenente il singolo After All" />
+          </section>
         </article>
-        <img id="FunFact" src="IMAGES/SouthOfHeaven.jpg" alt="Copertina dell'album South of Heaven degli Slayers" />
-        <img id="FunFact" src="IMAGES/Thembones.jpeg" alt="Copertina del singolo Them Bones degli Alice in Chains " />
-        <img id="FunFact" src="IMAGES/dehumanizer.jpg" alt="Copertina di Dehumanizer, album dei Black Sabbath contenente il singolo After All" />
 
         <article>
             <h2 class="paragrafo" lang="en">Did you know?</h2>
+            <section>
             <p>
                 Durante lo sviluppo di <span lang="en">DOOM</span> <abbr>III</abbr> <span lang="en">Id Software</span> ha sparpagliato molti riferimenti alla serie, in qualunque
                 momento se il giocatore inserisce un trucco dei vecchi <span lang="en">DOOM</span> appare una scritta che recita: "la tua memoria funziona bene!"
             </p>
+          </section>
         </article>
 
         <article>
             <h2 class="paragrafo" lang="en">Did you know?</h2>
+            <section>
             <p>
                 All'inizio del gioco si può trovare un cabinato del gioco <span lang="en">Super Turbo Turkey Puncher 3</span>; questo finto cabinato contiene grafiche
                 ispirate a quelle del primo capitolo della serie e ad altri giochi di <span lang="en">Capcom</span> come <span lang="en">Street Fighter</span>
@@ -214,10 +239,10 @@
                 la faccia del <span lang="en">DOOM Guy</span> del primo gioco con un'espressione scioccata che si poteva vedere raramente per via di un
                 <span lang="en">pug</span>
             </p>
+            <img id="FunFact" src="IMAGES/Super_Turkey.jpg" alt="Super Turbo Turkey Puncher 3" />
+            <img id="FunFact" src="IMAGES/Gamehog.jpg" alt="Copertina della finta rivista 'GameHOG'" />
+          </section>
         </article>
-        <img id="FunFact" src="IMAGES/Super_Turkey.jpg" alt="Super Turbo Turkey Puncher 3" />
-        <img id="FunFact" src="IMAGES/Gamehog.jpg" alt="Copertina della finta rivista 'GameHOG'" />
-
     </div>
 
     <footer id="foot">
