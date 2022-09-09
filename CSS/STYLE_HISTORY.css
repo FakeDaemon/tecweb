@@ -7,7 +7,18 @@
   text-align: center;
 }
 
-.main > article > img {
+.main > article {
+  width: 100%;
+}
+
+.main > article > section {
+  border: 1px solid red;
+  border-radius: 15px;
+  background-color: rgba(0,0,0,0.8);
+  padding: 0.8em;
+}
+
+.main > article > section > img {
   width: auto;
   height: auto;
   max-height: 40vh;
@@ -15,15 +26,12 @@
   margin: 50px auto;
 }
 
-.main > article > p {
+.main > article > section > p {
   width: 90%;
   margin: auto;
-  padding: 30px;
+  padding: 0.5em;
   font-size: 1.25em;
   text-align: left;
-  border: 1px solid red;
-  border-radius: 15px;
-  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .paragrafo {
@@ -184,4 +192,9 @@ tbody > tr:hover {
     center no-repeat;
   background-size: 90% 90%;
   text-indent: -9999px;
+}
+
+caption {
+  display: table-caption;
+  text-align: center;
 }

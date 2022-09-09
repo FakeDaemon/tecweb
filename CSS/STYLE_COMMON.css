@@ -314,17 +314,17 @@ footer > img {
   padding-right: 6em;
 }
 
-.cookie-banner {
-  font-size: x-large;
-  border: 1px solid red;
-  border-radius: 15px;
-  position: fixed;
-  bottom: 20px;
-  left: 5%;
-  z-index: 200;
-  width: 90%;
-  background-color: rgba(0, 0, 0, 0.95);
-  padding: 2em;
+.cookie-banner{
+    font-size: large;
+    border: 0.01em solid red;
+    border-radius: 15px;
+    position: fixed;
+    bottom: 20px;
+    left: 5%;
+    z-index: 200;
+    width: 90%;
+    background-color: rgba(0,0,0,0.95);
+    padding: 2em;
 }
 
 .cookie-banner p {
