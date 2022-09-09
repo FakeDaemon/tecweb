@@ -89,7 +89,8 @@
         <h1 id="replace1" lang="en">DOOM</h1>
         <article>
             <h2 class="paragrafo">Un breve riassunto della saga</h2>
-            <p class="history">
+            <section>
+            <p>
                 <span lang="en">Doom </span>(ufficialmente scritto come <span lang="en">DOOM</span> e occasionalmente <span lang="en"> DooM </span> dai fan)
                 è il primo videogioco rilasciato della serie e viene considerato uno dei giochi che hanno consolidato il genere
                 <abbr lang="en" title="First Person Shooter">FPS</abbr>. Con una trama stile horror fantascientifica il gioco ha introdotto per la prima
@@ -105,7 +106,7 @@
                 in quanto ogni giocatore poteva aggiungere codice, organizzandolo in archivi di file conosciuti come <abbr lang="en" title="Where's All the Data?">"WADs"</abbr>.
             </p>
             <img src="IMAGES/demonepo.jpg" alt="Raffigurazione di un demone presente in doom 2016">
-            <p class="history">
+            <p>
                 Negli anni 90' infatti, ogni gioco <abbr title="First Person Shooter">FPS</abbr>, veniva ricondotto immediatamente al genere <span lang="en">Doom</span>, divenuto poi
                 <span lang="en">"Doom</span> clone" con accezione dispregiativa. Le sue grafiche e meccaniche violente, associate ad un immaginario quasi satanico,
                 hanno reso il gioco soggetto di alcune controversie legali. Il franchise di <span lang="en">Doom</span> ha
@@ -128,10 +129,12 @@
                 di <span lang="en">Doom</span> (2016).
             </p>
             <img src="IMAGES/DOOM_cover.jpg" alt="Copertina gioco originale">
+          </section>
         </article>
         <article>
             <h2 class="paragrafo">Trama</h2>
-            <p class="history">
+            <section>
+            <p>
                 <span lang="en">Doom</span> ha una trama semplice che avanza nel corso del gioco principalmente attraverso
                 messaggi mostrati tra un livello e l'altro. Il giocatore prende le parti di un <span lang="en">marine</span>, "uno dei più tosti del pianeta Terra,
                 addestrato per l'azione", che è stato deportato su Marte dopo aver assalito un ufficiale che aveva impartito l'ordine di fare fuoco su alcuni civili.
@@ -146,10 +149,12 @@
                 irreversibilmente danneggiata, l'unica via di fuga è combattere attraverso i vari complessi della base lunare.
             </p>
             <img src="IMAGES/final_battle.jpg" alt="scena di copertina di un annuncio riguardo doom 2016">
+          </section>
         </article>
         <article>
             <h2 class="paragrafo"><span lang="en">Gameplay</span></h2>
-            <p class="history">
+            <section>
+            <p>
                 <span lang="en">Doom</span> è uno sparatutto in prima persona, con un'impostazione di sfondo che mescola fantascienza e <span lang="en">horror</span>
                 (nello stile <span lang="en">weird menace</span>); il gioco si compone di tre episodi, ognuno dei quali si svolge in un luogo generico e
                 viene giocato separatamente. L'obiettivo primario di ogni livello è semplice: localizzare l'uscita che conduce alla prossima area di gioco,
@@ -162,7 +167,7 @@
                 secondari, per esempio mostrando la percentuale di creature uccise nel livello, o il numero di segreti svelati.
             </p>
             <img src="IMAGES/gameplay.jpg" alt="Scena di gioco dove si vede la famosa pistola al plasma">
-            <p class="history">
+            <p>
                 A parte la modalità <span lang="en">single-player</span> <span lang="en">Doom</span> supporta due modalità <span lang="en">multiplayer</span>,
                 giocabili quando si è all'interno di una rete: una modalità cooperativa, dove un <span lang="en">team</span> di due fino a quattro giocatori,
                 fanno squadra per affrontare le legioni infernali, e una modalità <span lang="en">deathmatch</span> dove lo stesso numero di giocatori combattono
@@ -181,11 +186,12 @@
                 salire il suo livello di salute/armatura oltre i limiti canonici.
             </p>
             <img src="IMAGES/doom-slayer.jpg" alt="immagine raffigurante il protagonista del gioco">
+          </section>
         </article>
         <article>
             <h2 class="paragrafo"><span lang="en">Release</span></h2>
-            <a name="Release"></a>
-            <p class="history">
+            <section>
+            <p>
                 Il primo episodio distribuito in modalità <span lang="en">shareware</span>, era essenzialmente una demo del gioco che consentiva una facile portabilità,
                 e all'epoca lo si trovava in moltissimi modi:
             </p>
@@ -194,7 +200,7 @@
                 <li>navigando su <span lang="en">Internet</span>;</li>
                 <li><abbr lang="en" title="Compact Disk ">CD-ROM;</abbr></li>
             </ul>
-            <p class="history">
+            <p>
                 Incoraggiando così giocatori e venditori al dettaglio a diffondere il gioco quanto più possibile. Si sitma che nel 1995 la distribuzione
                 <span lang="en">shareware</span> di <span lang="en">Doom</span> fosse installata su più di 10 milioni di computer. La versione registrata di
                 <span lang="en">Doom</span>, contenente tutti e tre gli episodi, era solo disponibile solo con ordini postali, anche se la maggior parte degli utenti
@@ -218,10 +224,11 @@
                 <span lang="en">Software House</span> hanno una grossa attenzione mediatica, e solo in Italia hanno un fatturato di circa 2,2 miliardi di euro.
             </p>
             <img src="IMAGES/motosega.jpg" alt="immagine raffigurante la celebre motosega in azione">
+          </section>
         </article>
         <article>
             <h2 class="paragrafo">Note Legali</h2>
-            <a name="Notelegali"></a>
+            <section>
             <p>
                 <span lang="en">Doom</span> era e rimane un prodotto controverso dato l'alto tasso di violenza, <span lang="en">gore</span> e immaginari riferimenti
                 satanici. E' stato più volte criticato da organizzazioni cristiane per le sue sfumature diaboliche, (anche se alcuni <span lang="en">fan</span>
@@ -237,6 +244,7 @@
                 sparatutto odierni e di conseguenza la violenza rappresentata ha un impatto minore.
             </p>
             <img src="IMAGES/doom-cover.jpeg" alt="scena di una battaglia tra il marine e le orde demoniache">
+          </section>
         </article>
     </div>
     <footer id="foot">

@@ -88,6 +88,7 @@
     <h1 id="replace1" lang="en">DOOM</h1>
     <article>
       <h2 class="paragrafo">Termini d’uso</h2>
+      <section>
       <p>
         L'utilizzo del seguente sito <span lang="en">web</span> implica per l'utente la conoscenza delle seguenti condizioni.
       </p>
@@ -105,9 +106,11 @@
         ed espressa manifestazione del consenso mediante la selezione della casella pertinente, saranno trattati con le
         modalità e per le finalità che seguono.
       </p>
+      </section>
     </article>
     <article>
       <h2 class="paragrafo">Oggetto del trattamento</h2>
+      <section>
       <p>
         Il Titolare può trattare i Dati personali che: l’utente fornisce volontariamente (ad esempio, le informazioni fornite in sede di registrazione);
         vengono raccolti dal Titolare automaticamente (quando accede ai Servizi, possiamo raccogliere alcune informazioni direttamente dal tuo dispositivo,
@@ -115,6 +118,7 @@
         per ulteriori informazioni sulle tipologie di <span lang="en">cookie</span> e tecnologie analoghe di cui ci avvaliamo, le ragioni e le
         rispettive modalità di controllo, verifichi la nostra <span lang="en">Cookie Policy</span>).
       </p>
+      <p>
         I Suoi Dati personali sono trattati, indipendentemente dal Suo consenso esplicito ed espresso <abbr title="articolo">art.</abbr> 6
         <abbr title="lettera">lett.</abbr> b), e) <abbr lang="en" title="General data protection regulation">“GDPR”</abbr>) per le seguenti finalità:
       </p>
@@ -165,9 +169,11 @@
         Qualora avesse necessità di ulteriori informazioni sulla base giuridica e/o sulle finalità del trattamento dei Suoi Dati, ci contatti
         al seguente indirizzo: DoomWiki@gmail.com.
       </p>
+      </section>
     </article>
     <article>
       <h2 class="paragrafo">Modalità di trattamento e comunicazione dei Dati personali</h2>
+      <section>
       <p>
         Il trattamento dei Suoi dati personali è realizzato per mezzo delle operazioni indicate all’<abbr title="articolo">art.</abbr>
         4 <abbr title="numero">n.</abbr> 2 <abbr title="General data protection regulation">GDPR</abbr> e precisamente:
@@ -210,7 +216,11 @@
         Il Titolare tratterà i dati personali per il tempo necessario per adempiere alle finalità di cui sopra e comunque per non oltre
         12 mesi dalla raccolta dei dati per le Finalità di marketing.
       </p>
+     </section>
+     </article>
+     <article>
       <h2 class="paragrafo">Diritti dell’interessato</h2>
+      <section>
       <p>
         Nella Sua qualità di interessato, ha i diritti di cui all’<abbr title="articoli">artt.</abbr> 15-21
         <abbr title="General data protection regulation">GDPR</abbr> e precisamente i diritti di:
@@ -270,11 +280,19 @@
         esercitare il diritto di opposizione anche solo in parte. Pertanto, l’interessato può decidere di ricevere solo comunicazioni mediante
         modalità tradizionali ovvero solo comunicazioni automatizzate oppure nessuna delle due tipologie di comunicazione.
       </p>
+      </section>
+    </article>
+    <article>
       <h2 class="paragrafo">Modalità di esercizio dei diritti</h2>
+      <section>
       <p>
         Potrà in qualsiasi momento esercitare i diritti inviando un’<span lang="en">e-mail</span> a DoomWiki@gmail.com
       </p>
+      </section>
+    </article>
+    <article>
       <h2 class="paragrafo">Informativa sui <span lang="en">cookie</span></h2>
+      <section>
       <p>
         Questo sito utilizza <span lang="en">cookie</span>, anche di terze parti, per migliorarne l’esperienza di navigazione e consentire a
         chi naviga di usufruire dei nostri servizi <span lang="en">online</span> e di visualizzare pubblicità in linea con le proprie preferenze.
@@ -295,6 +313,7 @@
           </ul>
         </dd>
       </dl>
+      </section>
     </article>
   </div>
   <footer id="foot">

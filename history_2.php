@@ -82,30 +82,37 @@
     <h1 id="replace2" lang="en">DOOM 2</h1>
     <article>
       <h2 class="paragrafo">Riassunto</h2>
+      <section>
       <p>
         <span lang="en">Doom</span> 2 (anche conosciuto come <span lang="en">Doom 2 Hell On Earth</span>) è il sequel del grande classico
         <a href="history.html"><span lang="en">Doom</span></a>, è stato rilasciato il 30 Settembre 1984.
       </p>
+     </section>
     </article>
     <article>
       <h2 class="paragrafo">Trama</h2>
-      <p class="history">
+      <section>
+      <p>
         Il giocatore ancora una volta entra nei panni del <span lang="en">Marine</span> solitario, un eroe senza nome, che, è stato l'unico sopravvissuto dopo gli eventi
         accaduti su Marte di <span lang="en">Doom</span>.
         Fa così ritorno verso la Terra quando si accorge di un'inesorabile verità...scopre infatti che la Terra è stata invasa (era stato fatto intendere nel finale di del gioco precedente).
-
+      </p>
+      <p>
         Con tutte le maggiori metropoli terrestri ridotte in cumuli di rovine, i rimanenti <span lang="en">leader</span> della Terra stanno progettando un piano di evacuazione mondiale,
         per salvare i sopravvissuti della terra tramite l'uso di navicelle spaziali.
         Purtroppo però, lo spazioporto è l'unica via di fuga per le navi, che è controllato da una legione armata di demoni.
         Tutto quel che resta dell'esercito mette in atto un assalto disperato ma vengono decimati....solo il giocatore rimane in vita.
-
+      </p>
+      <p>
         Il <span lang="en">marine</span> riesce così ad entrare nel porto stellare infestato, uccidendo ogni demone che incontra sulla propria strada,
         e uccide tutta la legione da solo, l'umanità riesce così a mettere in azione il piano e fuggire....ma il nostro <span lang="en">Marine</span> ha qualcos'altro in mente.
-
+      </p>
+      <p>
         Si viene a scoprire infatti che la sorgente dell'invasione infernale è proprio la città natale del nostro giocatore, torna così a combattere,
         e distrugge la sorgente dell'invasione e tutte le creature a sua protezione.
         Trova però anche un altro portale diretto all'inferno.
-
+      </p>
+      <p>
         Per chiuderlo, il nostro eroe dovrà rientrare all'inferno e stoppare l'invasione.
         Dopo aver percorso la sua superficie contorta,
         il Marine riesce ad affrontare l'Icona del Peccato (<span lang="en">Icon of Sin</span> nella lingua originale), un gigantesco demone, e lo uccide.
@@ -113,22 +120,28 @@
         e il portale per la Terra viene così sigillato.
       </p>
       <img src="IMAGES/chaingun.jpg" alt="immagine di gioco con mitragliatore">
+    </section>
     </article>
     <article>
       <h2 class="paragrafo">Gameplay</h2>
-      <p class="history">
+      <section>
+      <p>
         <span lang="en">Doom</span> <abbr title="due">II</abbr> non è un gioco drammaticamente differente rispetto al suo predecessore.
         Non ci sono state importanti migliorie tecnologiche ne grafiche;
         il <span lang="en">gameplay</span> consiste sempre nel navigare attraverso livelli non lineari, trovando le chiavi per aprire alle aree successive, uccidendo più mostri possibile.
-
+      </p>
+      <p>
         Rispetto al suo precedessore, il gioco prende luogo in una singola sequenza di livelli collegati, con brevi messaggi testuali tra un livello e l'altro, mentre in <span lang="en">Doom</span> i livelli erano racchiusi in 3 grandi episodi
         e un quarto episodio <span lang="en">bonus</span> contenente un interludio testuale dopo aver battuto l'ottavo livello di ogni episodio.
         Durante il tempo d'attesa tra un livello e l'altro in <span lang="en"> Doom</span> 2, viene visualizzata una semplice immagine di background, mentre in <span lang="en">Doom</span> veniva visualizzata una mappa.
         Un'altra differenza sta nel fatto che il giocatore può tenere le armi che trova in un livello anche negli altri invece che partire da zero ad ogni nuovo livello
         a meno che non muoia ovviamente, cosa che non era supportata dal suo predecessore.
-
+      </p>
+      <p>
         Questo <span lang="en">Level Desing</span> è solo vagamente basato sulle aree nelle quali il giocatore è obbligato ad andare, esistono infatti un sacco di stanze segrete
         e di <span lang="en">Easter Egg</span>.
+      </p>
+      <p>
         I primi tre livelli sono ambientati all'interno del porto stellare, successivamente si passerà a delle aree cittadine in rovina finchè si cerca la sorgente dell'invasione,
         i livelli hanno un <span lang="en">look</span> urbano somigliante a delle località terrestri.
         Verso la fine del gioco, l' inferno emerge nella sua vera forma, e nei livelli finali entra in scena con un aspetto da incubo, molto simile all'inferno di Dante
@@ -179,19 +192,23 @@
           </tr>
         </tbody>
       </table>
-      <p class="history">
+      <p>
         Essendo più vario ed innovativo rispetto al primo capitolo, l'introduzione di questa serie di nemici ha cambiato notevolmente le meccaniche del <span lang="en">gameplay</span> relativo alla modalità <span lang="en">single player</span>.
         Alcuni <span lang="en">Eater Egg</span> vengono ripresi dal gioco <span lang="en">cult</span> di <span lang="en">id Software</span> <span lang="de">Wolfenstein</span> <abbr title="3 dimensioni">3D</abbr>,
         in due livelli segreti i nemici avranno le sembianze della guardia tedesca classica del gioco, tornando indietro nel tempo con il design e la musica.
         L'unica arma che viene aggiunta è il <span lang="en">super shotgun</span> (una doppietta a canne mozze).
+      </p>
+      <p>
         Viene aggiunto inoltre un altro <span lang="en">powerup</span> la megasfera: intrisa di potere demoniaco porta al massimo la salute del giocatore e aumenta il livello di corazza al 200%.
         Alcune aggiunte sono ovviamente decorative quali lampade e pezzi mutilati di vari umanodi e demoni, altre quali i barili esplosivi sono interattive in quanto una volta che il giocatore sparerà ad uno di questi barili, esploderà causando seri danni nell'area circostante.
         <span lang="en">Doom</span> 2 richiede una quantità leggermente maggiore di risorse hardware rispetto al suo predecessore, poichè ha livelli più grandi e un maggior numero di nemici in essi,ma con i processori attuali il gioco gira tranquillamente su quasi tutti i computer.
       </p>
+    </section>
     </article>
     <article>
       <h2 class="paragrafo">Release</h2>
-      <p class="history">
+      <section>
+      <p>
         <span lang="en">Doom</span><abbr title="Secondo">II</abbr>, ha venduto circa due milioni di copie una volta immesso sul mercato, diventando così il prodotto più venduto per la <span lang="en">Software House</span>
         <span lang="en">id Software</span> fino al 2012, quando, viene battuto dal gioco <span lang="en">Rage</span>.
         Sono stati elogiati dalla critica i suoi nuovi e vari nemici e il suo design innovativo della mappa, che mirava a essere più non lineare rispetto al suo predecessore.
@@ -211,9 +228,11 @@
         il classico <span lang="en">Mac</span>, <span lang="en">PlayStation</span>, <span lang="en">Sega Saturn</span>, <span lang="en">Game Boy Advance</span> e <span lang="en">Xbox</span>.
         <span lang="en">Doom</span><abbr title="Secondo">II</abbr> è stato poi rilasciato nuovamente nell'edizione <span lang="en">Doom 3 BFG</span>, dove ogni riferimento nazista è stato modificato nei livelli 31 e 32.
       </p>
+    </section>
     </article>
     <article>
       <h2 class="paragrafo">Note Legali</h2>
+      <section>
       <p class="history">
         In accordo con la legge tedesca <span lang="dec">"Strafgesetzbuch"</span> 86a, <cite>"l'utilizzo di simbologie incostituzioniali è poibito al di fuori di determinati contesti quali,
           ricerca, insegnamento e altro"</cite>.
@@ -221,24 +240,29 @@
         la versione tedesca di <span lang="en">Doom</span><abbr title="Secondo">II</abbr> non contiene tali livelli, evitando così che il prodotto possa diventare il soggetto di procedure legali per le quali esso potrebbe
         venire ristretto o addirittura bandito dal commercio.
         Questo imponeva che fosse proibita la vendita, noleggio o scambio del gioco tra gli appassionati, rendendo quasi illegale anche solo il possesso del gioco stesso.
-
+      </p>
+      <p>
         Il 31 Dicember 1994, il gioco venne messo nell'<span lang="dec">Index of the Bundesprüfstelle für jugendgefährdende Schriften</span>, che significa che il gioco non può essere pubblicizzato,
         venduto o noleggiato e anche solamente dato a soggetti minori.
         Questa restrizione verrà applicata a tutte le versioni del gioco tranne quella per la <span lang="en">console Game Boy Advance</span>.
-
+      </p>
+      <p>
         La versione tedesca è leggermente inferiore rispetto a quella standard in termini di dimensione, come risultato della somma dei contenuti rimossi.
         Esistono però vari trucchi o <span lang="en"><strong>"cheats"</strong></span> che permettono di sbloccare i livelli segreti di ogni mappa, in questa versione, non appena il giocatore prova ad utilizzare tali trucchi,
         il gioco si arresta improvvisamente poichè il codice riguardante i livelli segreti è ancora presente nel sorgente, solamente non viene visualizzato nell'interfaccia grafica.
-
+      </p>
+      <p>
         A seguito di un appello di <span lang="en">Bethesda Softworks</span> (ora proprietaria di <span lang="en">ID Software</span>)<span lang="en"> Doom</span> e <span lang="en">Doom</span><abbr title="Secondo">II</abbr> sono stati presi
         dall'<span lang="dec">Index of Bundesprüfstelle für jugendgefährende Medien</span> <abbr lang="dec" title="Bundesprüfstelle für jugendgefährende Medien">(BPjM)</abbr>.
         La restrizione sui due giochi è scaduta il 31 agosto 2011 a seguito di una riunione del <abbr lang="dec" title="Bundesprüfstelle für jugendgefährende Medien">BPjM</abbr>.
         La decisione si basava principalmente sul fatto che nel contesto dei videogiochi moderni, la violenza rappresentata in <span lang="en">Doom</span> e
         <span lang="en">Doom</span><abbr title="Secondo">II</abbr> non può essere descritta come realistica in più la sua grafica pixelata lo rende più cartone animato in natura.
         Questo non includeva la versione di <span lang="en">Doom</span><abbr title="Secondo">II</abbr> contenente i due livelli <span lang="dec">Wolfenstein</span> con le sue svastiche e soldati <abbr lang="dec" title="Schutzstaffel">SS</abbr>.
-
+      </p>
+      <p>
         Nel 2019, <span lang="en">Doom</span><abbr title="Secondo">II</abbr> è stato rimosso da tale indice assieme a <span lang="dec">Wolfenstein</span><abbr title="3 dimensioni">3D</abbr>, e sono disponibili in Germania senza alcuna restrizione.
       </p>
+    </section>
     </article>
   </div>
   <footer id="foot">
