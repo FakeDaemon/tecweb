@@ -56,7 +56,7 @@ thead > th {
   font-size: 1.3em;
 }
 
-thead > tr:nth-child(2) {
+thead > tr:nth-child(1) {
   opacity: 0%;
   position: absolute;
 }

@@ -143,10 +143,6 @@
       <table class="npc_table">
         <caption class="tab_title">NPC</caption>
         <thead>
-          <tr>
-            <th colspan="2">
-            </th>
-          </tr>
           <tr class="tab_subtitle">
             <th>Nome</th>
             <th>Foto</th>
