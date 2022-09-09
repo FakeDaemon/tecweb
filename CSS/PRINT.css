@@ -9,11 +9,14 @@ a:after {
   content: " [" attr(href) "] ";
 }
 
-header > h1 {
+header > #logo {
   opacity: 100%;
   position: relative;
   margin: auto;
   color: black;
+  font-size: 5em;
+  text-indent: 0px;
+  display: inline;
 }
 
 h1 {
@@ -49,6 +52,10 @@ table {
 
 caption {
   font-size: 1.4em;
+  font-weight: bold;
+  opacity: 100%;
+  display: table-caption;
+  color: black;
 }
 
 thead > tr,
