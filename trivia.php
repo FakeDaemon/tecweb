@@ -237,7 +237,7 @@
                 ispirate a quelle del primo capitolo della serie e ad altri giochi di <span lang="en">Capcom</span> come <span lang="en">Street Fighter</span>
                 <span lang="el">Alpha</span>. In giro per la base si possono trovare riviste chiamate <span lang="en">Game HOG</span>, che presenta sulla copertina
                 la faccia del <span lang="en">DOOM Guy</span> del primo gioco con un'espressione scioccata che si poteva vedere raramente per via di un
-                <span lang="en">pug</span>
+                <span lang="en">bug</span>
             </p>
             <img id="FunFact" src="IMAGES/Super_Turkey.jpg" alt="Super Turbo Turkey Puncher 3" />
             <img id="FunFact" src="IMAGES/Gamehog.jpg" alt="Copertina della finta rivista 'GameHOG'" />
