@@ -262,8 +262,8 @@
             a ZeniMax Media company. I marchi appartengono ai rispettivi proprietari.
             Tutti i diritti riservati.
         </p>
-        <img class="imgVadidCode" src="IMAGES/valid-xhtml10.png" alt="html valido" />
-        <img class="imgVadidCode" src="IMAGES/vcss-blue.gif" alt="css valido" />
+        <img src="IMAGES/valid-xhtml10.png" alt="html valido" />
+        <img src="IMAGES/vcss-blue.gif" alt="css valido" />
     </footer>
 </body>
 

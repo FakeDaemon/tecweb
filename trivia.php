@@ -2,7 +2,6 @@
 <html lang="en" dir="ltr">
 
 <head>
-    <link href="CSS/STYLE.css" rel="stylesheet">
     <link href="CSS/STYLE_COMMON.css" rel="stylesheet">
     <link href="CSS/STYLE_HISTORY.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron" />
@@ -111,8 +110,8 @@
                 battuta del film "Il Colore Dei Soldi" dove Tom Cruise si presenta ad una partita di biliardo con una stecca personalizzata
                 in una custodia, quando gli viene chiesto cosa ci sia dentro lui risponde -"<span lang="en">Doom</span>".
             </p>
-            <img id="FunFact" src="IMAGES/Alien.jpg" alt="Poster del film Alien" />
-            <img id="FunFact" src="IMAGES/EvilDead.jpg" alt="Poster del film Evil Dead" />
+            <img src="IMAGES/Alien.jpg" alt="Poster del film Alien" />
+            <img src="IMAGES/EvilDead.jpg" alt="Poster del film Evil Dead" />
             </section>
         </article>
 
@@ -125,9 +124,9 @@
                 Il <span lang="en">cacodemon</span> di <span lang="en">DOOM</span> è ispirato al classico mostro di <span lang="en">Dungeons and Dragons "Beholder"</span>,
                 il suo <span lang="en">design</span> trae ispirazione da un altro mostro di <span lang="en">D&D</span>, il terrore astrale
             </p>
-            <img id="FunFact" src="IMAGES/cacodemon.jpg" alt="classico nemico di DOOM" />
-            <img id="FunFact" src="IMAGES/Beholder.png" alt="Beholder da Dungeons & Dragons" />
-            <img id="FunFact" src="IMAGES/Astral_dreadnought.png" alt="Terrore Astrale da Dungeons & Dragons" />
+            <img src="IMAGES/cacodemon.jpg" alt="classico nemico di DOOM" />
+            <img src="IMAGES/Beholder.png" alt="Beholder da Dungeons & Dragons" />
+            <img src="IMAGES/Astral_dreadnought.png" alt="Terrore Astrale da Dungeons & Dragons" />
           </section>
         </article>
 
@@ -158,9 +157,9 @@
                 presenta i personaggi originariamente descritti nella <span lang="en">DOOM Bible</span> e nel simulatore di volo "<span lang="en">Terminal Velocity</span>"
                 si può trovare un pianeta chiamato Tei Tenga.
             </p>
-            <img id="FunFact" src="IMAGES/DOOMBible.jpg" alt="Copertina della DOOM Bible" />
-            <img id="FunFact" src="IMAGES/RiseoftheTriad.jpg" alt="Copertina di Rise of the Triad" />
-            <img id="FunFact" src="IMAGES/TerminalVelocity.jpg" alt="Copertina di Terminal Velocity" />
+            <img src="IMAGES/DOOMBible.jpg" alt="Copertina della DOOM Bible" />
+            <img src="IMAGES/RiseoftheTriad.jpg" alt="Copertina di Rise of the Triad" />
+            <img src="IMAGES/TerminalVelocity.jpg" alt="Copertina di Terminal Velocity" />
           </section>
         </article>
 
@@ -175,8 +174,8 @@
                 "<span lang="en">Escape from Wolfenstein</span>" che presenta come nemici i soldati nazisti del gioco, ma presenta anche un riferimento ad un altro gioco
                 di <span lang="en">Id Software: "Commander Keen"</span>
             </p>
-            <img id="FunFact" src="IMAGES/Wolfenstein-New-Order-3D-Easter-Egg.jpg" alt="Livello ispirato a Wolfenstein 3d" />
-            <img id="FunFact" src="IMAGES/Map32_commander_keen.png" alt="Citazione al gioco Commander Keen" />
+            <img src="IMAGES/Wolfenstein-New-Order-3D-Easter-Egg.jpg" alt="Livello ispirato a Wolfenstein 3d" />
+            <img src="IMAGES/Map32_commander_keen.png" alt="Citazione al gioco Commander Keen" />
           </section>
         </article>
 
@@ -196,8 +195,8 @@
                 riferimento a <span lang="en">band</span> all'interno del gioco si può trovare nel primo livello di <span lang="en">Thy Flesh Consumed, Hell Beneath</span>
                 contiene una stanza segreta con il logo dei "<span lang="en">Nine Inch Nails</span>"
             </p>
-            <img id="FunFact" src="IMAGES/NIN_reference.jpg" alt="Stanza con il logo dei Nine Inch Nails" />
-            <img id="FunFact" src="IMAGES/ThyFleshConsumed.png" alt="Elenco dei livelli di 'Thy Flesh Consumed'" />
+            <img src="IMAGES/NIN_reference.jpg" alt="Stanza con il logo dei Nine Inch Nails" />
+            <img src="IMAGES/ThyFleshConsumed.png" alt="Elenco dei livelli di 'Thy Flesh Consumed'" />
           </section>
         </article>
 
@@ -213,9 +212,9 @@
                 "<span lang="en">Stone Temple Pilots</span>". La traccia "<span lang="en">The Demon's Dead</span>" usa la melodia di apertura di
                 "<span lang="en">After All(The Dead)</span>" dei <span lang="en">Black Sabbath</span>
             </p>
-            <img id="FunFact" src="IMAGES/SouthOfHeaven.jpg" alt="Copertina dell'album South of Heaven degli Slayers" />
-            <img id="FunFact" src="IMAGES/Thembones.jpeg" alt="Copertina del singolo Them Bones degli Alice in Chains " />
-            <img id="FunFact" src="IMAGES/dehumanizer.jpg" alt="Copertina di Dehumanizer, album dei Black Sabbath contenente il singolo After All" />
+            <img src="IMAGES/SouthOfHeaven.jpg" alt="Copertina dell'album South of Heaven degli Slayers" />
+            <img src="IMAGES/Thembones.jpeg" alt="Copertina del singolo Them Bones degli Alice in Chains " />
+            <img src="IMAGES/dehumanizer.jpg" alt="Copertina di Dehumanizer, album dei Black Sabbath contenente il singolo After All" />
           </section>
         </article>
 
@@ -239,8 +238,8 @@
                 la faccia del <span lang="en">DOOM Guy</span> del primo gioco con un'espressione scioccata che si poteva vedere raramente per via di un
                 <span lang="en">bug</span>
             </p>
-            <img id="FunFact" src="IMAGES/Super_Turkey.jpg" alt="Super Turbo Turkey Puncher 3" />
-            <img id="FunFact" src="IMAGES/Gamehog.jpg" alt="Copertina della finta rivista 'GameHOG'" />
+            <img src="IMAGES/Super_Turkey.jpg" alt="Super Turbo Turkey Puncher 3" />
+            <img src="IMAGES/Gamehog.jpg" alt="Copertina della finta rivista 'GameHOG'" />
           </section>
         </article>
     </div>

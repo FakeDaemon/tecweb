@@ -306,25 +306,27 @@ footer {
 
 footer > p {
   background-color: #0a0a0a;
+  font-size: 1.2em;
 }
 
 footer > img {
   align-items: right;
   padding-left: 6em;
   padding-right: 6em;
+  margin-top: 0.75em;
 }
 
-.cookie-banner{
-    font-size: large;
-    border: 0.01em solid red;
-    border-radius: 15px;
-    position: fixed;
-    bottom: 20px;
-    left: 5%;
-    z-index: 200;
-    width: 90%;
-    background-color: rgba(0,0,0,0.95);
-    padding: 2em;
+.cookie-banner {
+  font-size: large;
+  border: 0.01em solid red;
+  border-radius: 15px;
+  position: fixed;
+  bottom: 20px;
+  left: 5%;
+  z-index: 200;
+  width: 90%;
+  background-color: rgba(0, 0, 0, 0.95);
+  padding: 2em;
 }
 
 .cookie-banner p {

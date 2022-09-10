@@ -14,13 +14,13 @@
 .main > article > section {
   border: 1px solid red;
   border-radius: 15px;
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0, 0, 0, 0.8);
   padding: 0.8em;
 }
 
 .main > article > section > img {
   width: auto;
-  height: auto;
+  height: 20em;
   max-height: 40vh;
   max-width: 70vw;
   margin: 50px auto;
@@ -84,7 +84,7 @@ dl {
 }
 
 .lista_titolo {
-  font-size: 200%;
+  font-size: 150%;
   padding: 1em;
 }
 
