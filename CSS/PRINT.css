@@ -5,6 +5,18 @@ img {
   position: absolute;
 }
 
+.main > * {
+  font-family: "Times New Roman", Times, serif;
+}
+
+a {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
 a:after {
   content: " [" attr(href) "] ";
 }
@@ -73,4 +85,9 @@ th {
   color: black;
   background-color: transparent;
   font-size: 1em;
+}
+
+footer > p {
+  font-size: 1em;
+  color: black;
 }
