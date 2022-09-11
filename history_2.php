@@ -4,8 +4,6 @@
 <head>
   <link href="CSS/STYLE_COMMON.css" rel="stylesheet" type="text/css" media="screen" />
   <link href="CSS/STYLE_HISTORY.css" rel="stylesheet" type="text/css" media="screen" />
-  <link href="CSS/STYLE_SCREENL.css" rel="stylesheet" type="text/css" media="screen" />
-  <link href="CSS/STYLE_SCREENP.css" rel="stylesheet" type="text/css" media="screen" />
   <link href="CSS/PRINT.css" rel="stylesheet" type="text/css" media="print" />
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron" />
   <meta charset="utf-8">

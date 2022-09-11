@@ -11,7 +11,6 @@
   <meta name="description" content="DOOM Wiki" />
   <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano, Angeloni Alberto" />
 </head>
-
 <body>
   <?php
   require 'SCRIPTS/.php/database_connection.php';
