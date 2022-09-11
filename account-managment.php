@@ -7,8 +7,9 @@
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron" />
   <meta charset="utf-8">
   <title>Gestione Account | WikiDoom</title>
-  <meta name="keywords" content="DOOM" />
-  <meta name="description" content="DOOM Wiki" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="keywords" content="DOOM, account, support, profile" />
+  <meta name="description" content="Pagina di gestione account" />
   <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano , Angeloni Alberto" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="SCRIPTS/css_modifier.js"></script>

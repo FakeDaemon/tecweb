@@ -8,8 +8,9 @@
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron" />
   <meta charset="utf-8">
   <title>DOOM</title>
-  <meta name="keywords" content="DOOM, Fun Fact" />
-  <meta name="description" content="DOOM Wiki" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="keywords" content="DOOM, cookie, info, privacy" />
+  <meta name="description" content="Pagina riguardante l'informativa cookie" />
   <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano , Angeloni Alberto" />
 </head>
 <body>
@@ -47,7 +48,7 @@
           </label>
           <input id="NestedListBtn" type="checkbox" value="Mostra Capitoli Disponibili">
           <ul id="MenuBarNestedList">
-            <li class="NestedListItem CurrentLocation"><a href="history.php">CAPITOLO <abbr title="Primo">I</abbr></a></li>
+            <li class="NestedListItem"><a href="history.php">CAPITOLO <abbr title="Secondo">I</abbr></a></li>
             <li class="NestedListItem"><a href="history_2.php">CAPITOLO <abbr title="Secondo">II</abbr></a></li>
             <li class="NestedListItem"><a href="history_3.php">CAPITOLO <abbr title="Terzo">III</abbr></a></li>
             <li class="NestedListItem"><a href="history_2016.php">CAPITOLO <abbr title="Quarto">IV</abbr></a></li>
