@@ -4,7 +4,7 @@
 <head>
   <link href="CSS/STYLE_TOPICPAGE.css" rel="stylesheet">
   <link href="CSS/STYLE_COMMON.css" rel="stylesheet">
-  <link href="CSS/PRINT_HOME.css" rel="stylesheet" type="text/css" media="print" />
+  <link href="CSS/PRINT_QUESTIONS.css" rel="stylesheet" type="text/css" media="print" />
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron" />
   <meta charset="utf-8">
   <title> Home </title>
