@@ -4,11 +4,13 @@
     <link href="CSS/STYLE.css" rel="stylesheet">
     <link href="CSS/STYLE_COMMON.css" rel="stylesheet">
     <link href="CSS/STYLE_TABLE.css" rel="stylesheet">
+    <link href="CSS/PRINT_STATS.css" rel="stylesheet" type="text/css" media="print" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron" />
     <meta charset="utf-8">
     <title> Home </title>
-    <meta name="keywords" content="DOOM" />
-    <meta name="description" content="DOOM Wiki" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="keywords" content="DOOM, stats, weapons" />
+    <meta name="description" content="Pagina riguardante le statistiche di gioco" />
     <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano , Angeloni Alberto" />
 </head>
 
@@ -27,8 +29,8 @@
         <form class="cookie-banner" action="stats.php" method="post">
             <p>
                 Il nostro sito utilizza dei <span lang="en">cookie</span> per personalizzare
-                il contenuto e analizzare il traffico di rete.</br>
-                <a href=cookie_informativa.php>Leggi di più riguardo ai <span lang="en">cookie</span></a></br>
+                il contenuto e analizzare il traffico di rete.
+                <a href=cookie_informativa.php>Leggi di più riguardo ai <span lang="en">cookie</span></a>
             </p>
             <input type="submit" name="CookieAccepted" value="Accetta">
         </form>
@@ -81,13 +83,10 @@
         </nav>
     </header>
     <div class="main">
+
         <table>
+            <caption>Armi</caption>
             <thead>
-                <tr>
-                    <th class="head" colspan="3">
-                        <h1>Armi</h1>
-                    </th>
-                </tr>
                 <tr>
                     <th class="head">Nome Arma</th>
                     <th class="head">Descrizione</th>
@@ -310,8 +309,7 @@
         <p>
             <span lang="en">&copy;Doom</span> è un marchio ragistrato <a href="https://bethesda.net/it/dashboard" target="_blank">2022 Bethesda Softworks LLC</a>,
             a ZeniMax Media company. I marchi appartengono ai rispettivi proprietari.
-            Tutti i diritti riservati.<br>
-            <br>
+            Tutti i diritti riservati.
         </p>
         <img class="imgVadidCode" src="IMAGES/valid-xhtml10.png" alt="html valido" />
         <img class="imgVadidCode" src="IMAGES/vcss-blue.gif" alt="css valido" />

@@ -1,3 +1,5 @@
+
+
 .main {
   max-width: 1024px;
   min-height: 65vh;
@@ -7,23 +9,31 @@
   text-align: center;
 }
 
-.main > article > img {
+.main > article {
+  width: 100%;
+}
+
+.main > article > section {
+  border: 1px solid red;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 0.8em;
+}
+
+.main > article > section > img {
   width: auto;
-  height: auto;
+  height: 20em;
   max-height: 40vh;
   max-width: 70vw;
   margin: 50px auto;
 }
 
-.main > article > p {
+.main > article > section > p {
   width: 90%;
   margin: auto;
-  padding: 30px;
+  padding: 0.5em;
   font-size: 1.25em;
   text-align: left;
-  border: 1px solid red;
-  border-radius: 15px;
-  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .paragrafo {
@@ -37,18 +47,20 @@
   background-size: 4%, auto;
 }
 
-.lista {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin: 1em 0 1em 4em;
-  list-style-position: inside;
-  font-size: 1.25em;
+.main > article > dl > .informativa {
+  margin: auto;
+  padding: 30px;
+  font-size: 1.15em;
+  font-weight: normal;
   text-align: left;
+  border: 1px solid red;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 0.5em;
 }
 
 dl > dt {
-  font-size: 1.25em;
+  font-size: 1.15em;
   font-weight: bold;
 }
 
@@ -64,8 +76,16 @@ dl {
 }
 
 .lista_titolo {
-  font-size: 200%;
+  font-size: 150%;
   padding: 1em;
+}
+
+caption.tab_title {
+  display: table-caption;
+  text-align: center;
+  font-size: 2em;
+  background-color: #a40000;
+  font-weight: bold;
 }
 
 table.npc_table > thead.npc_head {
@@ -165,10 +185,33 @@ tbody > tr:hover {
   background-size: 90% 90%;
   text-indent: -9999px;
 }
-caption.tab_title {
-  display: table-caption;
-  text-align: center;
-  font-size: 2em;
-  background-color: #a40000;
-  font-weight: bold;
+
+@media screen and (max-width:992px){
+  .paragrafo {
+    background: linear-gradient(to right, rgb(8, 8, 8) 70%, transparent) no-repeat;
+    background-size: auto;
+  }
+
+  .main > article > section {
+    border: none;
+    border-radius: 0px;
+  }
+}
+
+@media screen and (max-width:600px) {
+  .paragrafo {
+    font-size: 1em;
+  }
+
+  dl > dt {
+    font-size: 1em;
+  }
+
+  dl {
+    font-size: 0.8em;
+  }
+
+  .main > article > section > p {
+    font-size: 0.8em;
+  }
 }

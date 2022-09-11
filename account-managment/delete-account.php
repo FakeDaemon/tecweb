@@ -125,8 +125,7 @@
     <p>
       <span lang="en">&copy;Doom</span> è un marchio ragistrato <a href="https://bethesda.net/it/dashboard" target="_blank">2022 Bethesda Softworks LLC</a>,
       a ZeniMax Media company. I marchi appartengono ai rispettivi proprietari.
-      Tutti i diritti riservati.<br>
-      <br>
+      Tutti i diritti riservati.
     </p>
     <img class="imgVadidCode" src="../IMAGES/valid-xhtml10.png" alt="html valido" />
     <img class="imgVadidCode" src="../IMAGES/vcss-blue.gif" alt="css valido" />

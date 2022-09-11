@@ -7,18 +7,18 @@
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron" />
   <meta charset="utf-8">
   <title> Home </title>
-  <meta name="keywords" content="DOOM" />
-  <meta name="description" content="DOOM Wiki" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="keywords" content="DOOM, search, result" />
+  <meta name="description" content="Pagina che mostra i risultati di una ricerca" />
   <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano, Angeloni Alberto" />
 </head>
-
 <body>
   <?php
   require 'SCRIPTS/.php/database_connection.php';
   include 'SCRIPTS/.php/user.php';
 
   $user = new User($conn);
-  
+
   if (isset($_POST['CookieAccepted']) && $_POST['CookieAccepted'] == 'Accetta') {
     setCookie('CookieAccepted', 'Accetta', time() + (86400 * 30));
     $_COOKIE['CookieAccepted'] = 'Accetta';
@@ -29,8 +29,8 @@
     <form class="cookie-banner" action="searchResult.php" method="post">
       <p>
         Il nostro sito utilizza dei <span lang="en">cookie</span> per personalizzare
-        il contenuto e analizzare il traffico di rete.</br>
-        <a href=cookie_informativa.php>Leggi di più riguardo ai <span lang="en">cookie</span></a></br>
+        il contenuto e analizzare il traffico di rete.
+        <a href=cookie_informativa.php>Leggi di più riguardo ai <span lang="en">cookie</span></a>
       </p>
       <input type="submit" name="CookieAccepted" value="Accetta">
     </form>
@@ -113,8 +113,6 @@
       <span lang="en">&copy;Doom</span> è un marchio ragistrato <a href="https://bethesda.net/it/dashboard" target="_blank">2022 Bethesda Softworks LLC</a>,
       a ZeniMax Media company. I marchi appartengono ai rispettivi proprietari.
       Tutti i diritti riservati.
-      <br>
-      <br>
     </p>
     <img class="imgVadidCode" src="IMAGES/valid-xhtml10.png" alt="html valido" />
     <img class="imgVadidCode" src="IMAGES/vcss-blue.gif" alt="css valido" />

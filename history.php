@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="it" dir="ltr">
-
 <head>
     <link href="CSS/STYLE_COMMON.css" rel="stylesheet" type="text/css" media="screen" />
     <link href="CSS/STYLE_HISTORY.css" rel="stylesheet" type="text/css" media="screen" />
-    <link href="CSS/STYLE_HOME.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="CSS/PRINT.css" rel="stylesheet" type="text/css" media="print" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta charset="utf-8">
     <title>DOOM</title>
-    <meta name="keywords" content="DOOM, Fun Fact" />
-    <meta name="description" content="DOOM Wiki" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="keywords" content="DOOM, wiki, trama, gameplay, release, fun fact" />
+    <meta name="description" content="Pagina riguardante il primo capitolo" />
     <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano , Angeloni Alberto" />
 </head>
 
@@ -29,9 +29,10 @@
         <form class="cookie-banner" action="history.php" method="post">
             <p>
                 Il nostro sito utilizza dei <span lang="en">cookie</span> per personalizzare
-                il contenuto e analizzare il traffico di rete.</br>
-                <a href=cookie_informativa.php>Leggi di più riguardo ai <span lang="en">cookie</span></a></br>
+                il contenuto e analizzare il traffico di rete.
             </p>
+            <a href=cookie_informativa.php>Leggi di più riguardo ai <span lang="en">cookie</span></a>
+            <hr>
             <input type="submit" name="CookieAccepted" value="Accetta">
         </form>
     <?php
@@ -91,9 +92,10 @@
     </header>
     <div class="main">
         <h1 id="replace1" lang="en">DOOM</h1>
-        <article id="Riassunto">
+        <article>
             <h2 class="paragrafo">Un breve riassunto della saga</h2>
-            <p class="history">
+            <section>
+            <p>
                 <span lang="en">Doom </span>(ufficialmente scritto come <span lang="en">DOOM</span> e occasionalmente <span lang="en"> DooM </span> dai fan)
                 è il primo videogioco rilasciato della serie e viene considerato uno dei giochi che hanno consolidato il genere
                 <abbr lang="en" title="First Person Shooter">FPS</abbr>. Con una trama stile horror fantascientifica il gioco ha introdotto per la prima
@@ -109,7 +111,7 @@
                 in quanto ogni giocatore poteva aggiungere codice, organizzandolo in archivi di file conosciuti come <abbr lang="en" title="Where's All the Data?">"WADs"</abbr>.
             </p>
             <img src="IMAGES/demonepo.jpg" alt="Raffigurazione di un demone presente in doom 2016">
-            <p class="history">
+            <p>
                 Negli anni 90' infatti, ogni gioco <abbr title="First Person Shooter">FPS</abbr>, veniva ricondotto immediatamente al genere <span lang="en">Doom</span>, divenuto poi
                 <span lang="en">"Doom</span> clone" con accezione dispregiativa. Le sue grafiche e meccaniche violente, associate ad un immaginario quasi satanico,
                 hanno reso il gioco soggetto di alcune controversie legali. Il franchise di <span lang="en">Doom</span> ha
@@ -132,10 +134,12 @@
                 di <span lang="en">Doom</span> (2016).
             </p>
             <img src="IMAGES/DOOM_cover.jpg" alt="Copertina gioco originale">
+          </section>
         </article>
-        <article id="Trama">
+        <article>
             <h2 class="paragrafo">Trama</h2>
-            <p class="history">
+            <section>
+            <p>
                 <span lang="en">Doom</span> ha una trama semplice che avanza nel corso del gioco principalmente attraverso
                 messaggi mostrati tra un livello e l'altro. Il giocatore prende le parti di un <span lang="en">marine</span>, "uno dei più tosti del pianeta Terra,
                 addestrato per l'azione", che è stato deportato su Marte dopo aver assalito un ufficiale che aveva impartito l'ordine di fare fuoco su alcuni civili.
@@ -150,10 +154,12 @@
                 irreversibilmente danneggiata, l'unica via di fuga è combattere attraverso i vari complessi della base lunare.
             </p>
             <img src="IMAGES/final_battle.jpg" alt="scena di copertina di un annuncio riguardo doom 2016">
+          </section>
         </article>
-        <article id="Gameplay">
+        <article>
             <h2 class="paragrafo"><span lang="en">Gameplay</span></h2>
-            <p class="history">
+            <section>
+            <p>
                 <span lang="en">Doom</span> è uno sparatutto in prima persona, con un'impostazione di sfondo che mescola fantascienza e <span lang="en">horror</span>
                 (nello stile <span lang="en">weird menace</span>); il gioco si compone di tre episodi, ognuno dei quali si svolge in un luogo generico e
                 viene giocato separatamente. L'obiettivo primario di ogni livello è semplice: localizzare l'uscita che conduce alla prossima area di gioco,
@@ -166,7 +172,7 @@
                 secondari, per esempio mostrando la percentuale di creature uccise nel livello, o il numero di segreti svelati.
             </p>
             <img src="IMAGES/gameplay.jpg" alt="Scena di gioco dove si vede la famosa pistola al plasma">
-            <p class="history">
+            <p>
                 A parte la modalità <span lang="en">single-player</span> <span lang="en">Doom</span> supporta due modalità <span lang="en">multiplayer</span>,
                 giocabili quando si è all'interno di una rete: una modalità cooperativa, dove un <span lang="en">team</span> di due fino a quattro giocatori,
                 fanno squadra per affrontare le legioni infernali, e una modalità <span lang="en">deathmatch</span> dove lo stesso numero di giocatori combattono
@@ -185,30 +191,35 @@
                 salire il suo livello di salute/armatura oltre i limiti canonici.
             </p>
             <img src="IMAGES/doom-slayer.jpg" alt="immagine raffigurante il protagonista del gioco">
+          </section>
         </article>
-        <article id="Release">
+        <article>
             <h2 class="paragrafo"><span lang="en">Release</span></h2>
-            <a name="Release"></a>
-            <p class="history">
+            <section>
+            <p>
                 Il primo episodio distribuito in modalità <span lang="en">shareware</span>, era essenzialmente una demo del gioco che consentiva una facile portabilità,
                 e all'epoca lo si trovava in moltissimi modi:
             </p>
             <ul class="lista">
                 <li><span lang="en">floppy disk</span>;</li>
-                <li>navigando su<span lang="en">Internet</span>;</li>
+                <li>navigando su <span lang="en">Internet</span>;</li>
                 <li><abbr lang="en" title="Compact Disk ">CD-ROM;</abbr></li>
             </ul>
-            <p class="history">
+            <p>
                 Incoraggiando così giocatori e venditori al dettaglio a diffondere il gioco quanto più possibile. Si sitma che nel 1995 la distribuzione
                 <span lang="en">shareware</span> di <span lang="en">Doom</span> fosse installata su più di 10 milioni di computer. La versione registrata di
                 <span lang="en">Doom</span>, contenente tutti e tre gli episodi, era solo disponibile solo con ordini postali, anche se la maggior parte degli utenti
                 non ha acquistato la questa versione, sono state vendute oltre un milione di copie e questa popolarità ha aiutato le vendite dei giochi successivi
                 della serie <span lang="en">Doom</span>, che non sono stati rilasciati come <span lang="en">shareware</span>. L'originale Doom alla fine ha ricevuto
                 anche un rilascio al dettaglio, quando fu venduto in una versione espansa chiamata <span lang="en">The Ultimate Doom</span>, (aggiungendo un quarto
-                episodio).<br>
+                episodio).
+            </p>
+            <p>
                 Doom è stato anche ampiamente elogiato dalla stampa videoludica, nel 1994 è stato nominato gioco dell'anno sia da "<span lang="en">PC Gamer</span>"
                 che da "<span lang="en">Computer Gaming World</span>". Ha ricevuto il premio per l'eccellenza tecnica da "<span lang="en">PC Magazine</span>" e il premio
-                <span lang="en">Best Action Adventure Game</span> dall'<span lang="en">Academy of Interactive Arts & Sciences</span>.<br>
+                <span lang="en">Best Action Adventure Game</span> dall'<span lang="en">Academy of Interactive Arts & Sciences</span>.
+            </p>
+            <p>
                 Oltre alla natura elettrizzante della campagna <span lang="en">single player</span>, la modalità <span lang="en">deathmatch</span> è stata un fattore importante per la popolarità del gioco.
                 <span lang="en">Doom</span> non era il primo a portare un <span lang="en">gameplay</span> dove i giocatori si ritrovavano uno contro uno, vedi:
                 <span lang="en">(MIDI Maze, su Atari ST, ne aveva una nel 1987)</span>, ma ridefini il concetto di arena <span lang="en">multiplayer</span>,
@@ -218,10 +229,11 @@
                 <span lang="en">Software House</span> hanno una grossa attenzione mediatica, e solo in Italia hanno un fatturato di circa 2,2 miliardi di euro.
             </p>
             <img src="IMAGES/motosega.jpg" alt="immagine raffigurante la celebre motosega in azione">
+          </section>
         </article>
-        <article id="Note legali">
+        <article>
             <h2 class="paragrafo">Note Legali</h2>
-            <a name="Notelegali"></a>
+            <section>
             <p>
                 <span lang="en">Doom</span> era e rimane un prodotto controverso dato l'alto tasso di violenza, <span lang="en">gore</span> e immaginari riferimenti
                 satanici. E' stato più volte criticato da organizzazioni cristiane per le sue sfumature diaboliche, (anche se alcuni <span lang="en">fan</span>
@@ -237,14 +249,14 @@
                 sparatutto odierni e di conseguenza la violenza rappresentata ha un impatto minore.
             </p>
             <img src="IMAGES/doom-cover.jpeg" alt="scena di una battaglia tra il marine e le orde demoniache">
+          </section>
         </article>
     </div>
     <footer id="foot">
         <p>
             <span lang="en">&copy;Doom</span> è un marchio ragistrato <a href="https://bethesda.net/it/dashboard" target="_blank">2022 Bethesda Softworks LLC</a>,
             a ZeniMax Media company. I marchi appartengono ai rispettivi proprietari.
-            Tutti i diritti riservati.<br>
-            <br>
+            Tutti i diritti riservati.
         </p>
         <img class="imgVadidCode" src="IMAGES/valid-xhtml10.png" alt="html valido" />
         <img class="imgVadidCode" src="IMAGES/vcss-blue.gif" alt="css valido" />

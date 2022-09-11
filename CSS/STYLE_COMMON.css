@@ -93,11 +93,9 @@ a {
   width: 10px;
 }
 
-
 ::-webkit-scrollbar-track {
   background: black;
 }
-
 
 ::-webkit-scrollbar-thumb {
   background: white;
@@ -181,7 +179,6 @@ a {
   cursor: pointer;
   pointer-events: all;
   background-color: black;
-
 }
 
 #MenuBar .MenuBarItemNestedList input {
@@ -263,7 +260,7 @@ a {
   display: inline-block;
   width: 63%;
   text-align: right;
-  margin: auto;
+  margin:  auto;
 }
 
 #MenuUserWidget>div>p {
@@ -297,6 +294,7 @@ a {
   font-size: 1.25em;
 }
 
+
 footer {
   width: 100%;
   padding: 0.75em;
@@ -317,6 +315,7 @@ footer>img {
   align-items: right;
   padding-left: 6em;
   padding-right: 6em;
+  margin-top: 0.75em;
 }
 
 .cookie-banner {

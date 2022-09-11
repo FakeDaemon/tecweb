@@ -4,12 +4,14 @@
 <head>
   <link href="CSS/STYLE_HOMEPAGE.css" rel="stylesheet">
   <link href="CSS/STYLE_COMMON.css" rel="stylesheet">
+  <link href="CSS/PRINT_HOME.css" rel="stylesheet" type="text/css" media="print" />
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <meta charset="utf-8">
   <title> Home </title>
-  <meta name="keywords" content="DOOM" />
-  <meta name="description" content="DOOM Wiki" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="keywords" content="DOOM, home, community" />
+  <meta name="description" content="Homepage della wiki" />
   <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano, Angeloni Alberto" />
 </head>
 
@@ -28,8 +30,8 @@
     <form class="cookie-banner" action="index.php" method="post">
       <p>
         Il nostro sito utilizza dei <span lang="en">cookie</span> per personalizzare
-        il contenuto e analizzare il traffico di rete.</br>
-        <a href=cookie_informativa.php>Leggi di più riguardo ai <span lang="en">cookie</span></a></br>
+        il contenuto e analizzare il traffico di rete.
+        <a href=cookie_informativa.php>Leggi di più riguardo ai <span lang="en">cookie</span></a>
       </p>
       <input type="submit" name="CookieAccepted" value="Accetta">
     </form>
@@ -118,8 +120,7 @@
     <p>
       <span lang="en">&copy;Doom</span> è un marchio ragistrato <a href="https://bethesda.net/it/dashboard" target="_blank">2022 Bethesda Softworks LLC</a>,
       a ZeniMax Media company. I marchi appartengono ai rispettivi proprietari.
-      Tutti i diritti riservati.<br>
-      <br>
+      Tutti i diritti riservati.
     </p>
     <img class="imgVadidCode" src="IMAGES/valid-xhtml10.png" alt="html valido" />
     <img class="imgVadidCode" src="IMAGES/vcss-blue.gif" alt="css valido" />
