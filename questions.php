@@ -21,7 +21,7 @@
   include 'SCRIPTS/.php/user.php';
   $user = new User($conn);
   if (isset($_GET['User']) && !$user->isLogged()) header("location:login.php");
-  if (count($_GET) > 1 || (count($_GET) > 0 && !(isset($_GET['id']) || isset($_GET['User']) || isset($_GET['Latest']) || isset($_GET['Comment'])))) header("location:questions.php");
+  if (count($_GET) > 1 || (count($_GET) > 0 && !(isset($_GET['id']) || isset($_GET['User']) || isset($_GET['Latest']) || isset($_GET['Comments'])))) header("location:questions.php");
   if (isset($_POST['CookieAccepted']) && $_POST['CookieAccepted'] == 'Accetta') {
     setCookie('CookieAccepted', 'Accetta', time() + (86400 * 30));
     $_COOKIE['CookieAccepted'] = 'Accetta';
@@ -53,7 +53,10 @@
   }
   ?>
   <header>
-    <h1 id="logo">DOOM WIKI</h1>
+  <h1 id="logo">DOOM WIKI</h1>
+    <label id="BurgherButtonLabel" for="BurgherButton">
+      Menu
+    </label>
     <nav id="NavBar">
       <ul id="MenuBar">
         <li class="MenuBarItem" lang="en"><a href="/">HOMEPAGE</a></li>
@@ -240,7 +243,7 @@
       $result = $stmt->get_result();
     ?>
       <p>Ulitime domande degli utenti</p>
-      <div>
+      <div class="TPList">
     <?php
       if ($result->num_rows === 0) {
         ?>
@@ -249,6 +252,23 @@
       } else {
         while ($row = $result->fetch_assoc()) {
           echo '<a href="questions.php?id=' . $row['id'] . '"><p class="title">' . $row['title'] . '</p><p class="details">Aperto da ' . ($row['user_name'] != NULL ? $row['user_name'] : "utente eliminato") . ' in data ' . $row['creation_date'] . '</p></a>';
+        }
+      }
+    }else if (isset($_GET['Comments']) && $_GET['Comments'] === "") {
+      $stmt = $conn->prepare("SELECT t.id, u.user_name, t.title, t.creation_date,COUNT(c.id) AS CommentsCount FROM DoomWiki.topics AS t LEFT OUTER JOIN DoomWiki.users AS u ON t.email = u.fst_mail LEFT OUTER JOIN DoomWiki.comments AS c ON c.topicID=t.id WHERE t.state='Approved' GROUP BY t.id ORDER BY CommentsCount DESC;");
+      $stmt->execute();
+      $result = $stmt->get_result();
+    ?>
+      <p>Ulitime domande degli utenti</p>
+      <div class="TPList">
+    <?php
+      if ($result->num_rows === 0) {
+        ?>
+          <p>Nessuna domanda ancora registrata.</p>
+          <?php
+      } else {
+        while ($row = $result->fetch_assoc()) {
+          echo '<a href="questions.php?id=' . $row['id'] . '"><p class="title">' . $row['title'] . '</p><p class="details">Aperto da ' . ($row['user_name'] != NULL ? $row['user_name'] : "utente eliminato") . ' in data ' . $row['creation_date'] . '</p><p>Numero risposte : ' . $row['CommentsCount'] . '</p></a>';
         }
       }
     }
