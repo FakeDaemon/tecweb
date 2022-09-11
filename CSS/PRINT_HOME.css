@@ -1,0 +1,149 @@
+header,
+form,
+img {
+  opacity: 0%;
+  position: absolute;
+}
+
+.TopicList > * {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.TopicList > p {
+  font-family: "Times New Roman", Times, serif;
+}
+
+a {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+a:after {
+  content: " [" attr(href) "] ";
+}
+
+.TopicList > a {
+  border: none;
+  background-color: transparent;
+  padding: 0em;
+  color: black;
+}
+
+.TopicList > a > p.title {
+  border: none;
+  background-color: transparent;
+  padding: 0em;
+  color: black;
+}
+
+.TopicList > a > p.details {
+  border: none;
+  background-color: transparent;
+  padding: 1em;
+  color: black;
+}
+
+.TopicList > a:nth-last-child(1):after {
+  content: " [" attr(href) "] ";
+  text-decoration: none;
+}
+
+.TopicList > a:after {
+  content: "";
+}
+
+header > #logo {
+  opacity: 100%;
+  position: relative;
+  margin: auto;
+  color: black;
+  font-size: 5em;
+  text-indent: 0px;
+  display: inline;
+}
+
+.main > #Welcome_Messages {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.main > #SubMessage {
+  text-align: center;
+  font-size: 1em;
+  font-family: "Times New Roman", Times, serif;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin: auto;
+  color: black;
+}
+
+h2 {
+  font-size: 1.5em;
+  color: black;
+}
+
+h3 {
+  font-size: 1.35em;
+  color: black;
+}
+
+p {
+  color: black;
+  font-size: 1em;
+  margin-bottom: 0.5em;
+  text-align: justify;
+  background-color: transparent;
+}
+
+.TopicList > p.title {
+  color: black;
+  background-color: transparent;
+  font-size: 1em;
+  margin-bottom: 0.5em;
+  text-align: justify;
+}
+
+table {
+  border-style: solid;
+  border-width: 0.1em;
+  background-color: transparent;
+  text-align: center;
+  margin: auto;
+}
+
+caption {
+  font-size: 1.4em;
+  font-weight: bold;
+  opacity: 100%;
+  display: table-caption;
+  color: black;
+}
+
+thead > tr,
+thead > th {
+  font-size: 1.3em;
+}
+
+thead > tr:nth-child(1) {
+  opacity: 0%;
+  position: absolute;
+}
+
+tr,
+th {
+  color: black;
+  background-color: transparent;
+  font-size: 1em;
+}
+
+footer > p {
+  font-size: 1em;
+  color: black;
+}
