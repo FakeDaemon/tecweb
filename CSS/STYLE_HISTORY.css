@@ -1,3 +1,5 @@
+
+
 .main {
   max-width: 1024px;
   min-height: 65vh;
@@ -57,18 +59,8 @@
   margin-bottom: 0.5em;
 }
 
-.lista {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin: 1em 0 1em 4em;
-  list-style-position: inside;
-  font-size: 1.25em;
-  text-align: left;
-}
-
 dl > dt {
-  font-size: 1.25em;
+  font-size: 1.15em;
   font-weight: bold;
 }
 
@@ -192,4 +184,34 @@ tbody > tr:hover {
     center no-repeat;
   background-size: 90% 90%;
   text-indent: -9999px;
+}
+
+@media screen and (max-width:992px){
+  .paragrafo {
+    background: linear-gradient(to right, rgb(8, 8, 8) 70%, transparent) no-repeat;
+    background-size: auto;
+  }
+
+  .main > article > section {
+    border: none;
+    border-radius: 0px;
+  }
+}
+
+@media screen and (max-width:600px) {
+  .paragrafo {
+    font-size: 1em;
+  }
+
+  dl > dt {
+    font-size: 1em;
+  }
+
+  dl {
+    font-size: 0.8em;
+  }
+
+  .main > article > section > p {
+    font-size: 0.8em;
+  }
 }
