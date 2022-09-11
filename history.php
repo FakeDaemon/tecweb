@@ -5,6 +5,7 @@
     <link href="CSS/STYLE_HISTORY.css" rel="stylesheet" type="text/css" media="screen" />
     <link href="CSS/PRINT.css" rel="stylesheet" type="text/css" media="print" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta charset="utf-8">
     <title>DOOM</title>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -38,7 +39,10 @@
     }
     ?>
     <header>
-        <h1 id="logo">DOOM WIKI</h1>
+    <h1 id="logo">DOOM WIKI</h1>
+    <label id="BurgherButtonLabel" for="BurgherButton">
+      Menu
+    </label>
         <nav id="NavBar">
             <ul id="MenuBar">
                 <li class="MenuBarItem" lang="en"><a href="/" lang="en">HOMEPAGE</a></li>
