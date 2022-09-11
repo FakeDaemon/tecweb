@@ -17,7 +17,10 @@
   if (!(isset($_COOKIE['CookieAccepted'])) || !($_COOKIE['CookieAccepted'] == 'Accetta')) {header("location: ../cookie_informativa.php");}
   $user = new User($conn); ?>
   <header>
-    <h1 id="logo">DOOM WIKI</h1>
+  <h1 id="logo">DOOM WIKI</h1>
+    <label id="BurgherButtonLabel" for="BurgherButton">
+      Menu
+    </label>
     <nav id="NavBar">
       <ul id="MenuBar">
         <li class="MenuBarItem" lang="en"><a href="/" lang="en">HOMEPAGE</a></li>

@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
   <link href="CSS/STYLE_HOMEPAGE.css" rel="stylesheet">
   <link href="CSS/STYLE_COMMON.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <meta charset="utf-8">
   <title> Home </title>
   <meta name="keywords" content="DOOM" />
   <meta name="description" content="DOOM Wiki" />
   <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano, Angeloni Alberto" />
 </head>
+
 <body>
   <?php
   require 'SCRIPTS/.php/database_connection.php';
@@ -35,7 +38,11 @@
   ?>
   <header>
     <h1 id="logo">DOOM WIKI</h1>
-    <nav id="NavBar">
+    <label id="BurgherButtonLabel" for="BurgherButton">
+      Menu
+    </label>
+    <input type="checkbox" id="BurgherButton" aria-hidden="true" aria-label="Apri il menu">
+    <nav role="navigation" aria-label="Menu principale" id="NavBar">
       <ul id="MenuBar">
         <li class="MenuBarItem CurrentLocation" lang="en">HOMEPAGE</li>
         <li class="MenuBarItemNestedList">
@@ -118,4 +125,5 @@
     <img class="imgVadidCode" src="IMAGES/vcss-blue.gif" alt="css valido" />
   </footer>
 </body>
+
 </html>

@@ -18,6 +18,10 @@
   margin:auto;
   font-family: var(--font-family);
 }
+.TopicList{
+  width: 85%;
+  margin: auto;
+}
 .TopicList > *{
   font-family: var(--font-family);
 }
@@ -151,4 +155,10 @@
   transition: border-color .2s ease;
   border-color: yellow;
   outline: none;
+}
+
+@media screen and (max-width: 550px) {
+  #Welcome_Messages{
+    font-size: 1.7em;
+  }
 }

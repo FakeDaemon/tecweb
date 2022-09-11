@@ -13,7 +13,7 @@ html>body {
 }
 
 .main {
-  margin-top: 40px;
+  margin: 40px auto auto auto;
   max-width: 1024px;
   text-align: center;
   width: 90%;
@@ -268,4 +268,46 @@ html>body {
 
 .main>div>div.TListItem>p.date {
   font-size: .7em;
+}
+
+.main>div.TPList>a {
+  display: block;
+  padding: 20px;
+  margin: 10px 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  border: 1px solid red;
+  transition: border-color .2s ease;
+}
+
+.main>div.TPList>a>p {
+  background-color: transparent;
+  display: inline-block;
+  padding: 10px;
+  color: white;
+  vertical-align: middle;
+}
+
+.main>div.TPList>a>p.state {
+  width: 10%;
+  min-width: 60px;
+  text-align: center;
+}
+
+.main>div.TPList>a>p.title {
+  text-align: left;
+  width: 70%;
+  font-size: larger;
+}
+
+.main>div.TPList>a>p.details {
+  width: 20%;
+  font-size: smaller;
+  text-align: left;
+}
+
+.main>div.TPList>a:focus,
+.main>div.TPList>a:hover {
+  border-color: yellow;
+  outline: none;
 }
