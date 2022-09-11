@@ -8,8 +8,9 @@
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron" />
   <meta charset="utf-8">
   <title>DOOM</title>
-  <meta name="keywords" content="DOOM, Fun Fact" />
-  <meta name="description" content="DOOM Wiki" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="keywords" content="DOOM, cookie, info, privacy" />
+  <meta name="description" content="Pagina riguardante l'informativa cookie" />
   <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano , Angeloni Alberto" />
 </head>
 <body>

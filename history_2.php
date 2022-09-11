@@ -4,14 +4,13 @@
 <head>
   <link href="CSS/STYLE_COMMON.css" rel="stylesheet" type="text/css" media="screen" />
   <link href="CSS/STYLE_HISTORY.css" rel="stylesheet" type="text/css" media="screen" />
-  <link href="CSS/STYLE_SCREENL.css" rel="stylesheet" type="text/css" media="screen" />
-  <link href="CSS/STYLE_SCREENP.css" rel="stylesheet" type="text/css" media="screen" />
   <link href="CSS/PRINT.css" rel="stylesheet" type="text/css" media="print" />
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron" />
   <meta charset="utf-8">
   <title> DOOM 2 </title>
-  <meta name="keywords" content="DOOM, Fun Fact" />
-  <meta name="description" content="DOOM Wiki" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="keywords" content="DOOM, wiki, doom 2, trama, gameplay, release, fun fact" />
+  <meta name="description" content="Pagina riguardante il secondo capitolo" />
   <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano , Angeloni Alberto" />
 </head>
 
