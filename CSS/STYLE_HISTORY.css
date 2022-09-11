@@ -20,12 +20,24 @@
   padding: 0.8em;
 }
 
+.trivia_img{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.main > article > section > .trivia_img > img  {
+  width: 14em;
+  height: auto;
+  max-height: 40vh;
+  margin: 1em 1em;
+}
+
 .main > article > section > img {
   width: auto;
-  height: 20em;
-  max-height: 40vh;
+  height: 15em;
   max-width: 70vw;
-  margin: 50px auto;
+  margin: 1em auto;
 }
 
 .main > article > section > p {
