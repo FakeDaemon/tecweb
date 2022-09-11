@@ -1,25 +1,4 @@
 
-/*@media  screen and (max-width: 600px) {
-  .paragrafo {
-    font-size: 1em;
-    background-color: : linear-gradient(to right, rgb(8, 8, 8) 80%, transparent);
-  }
-
-  .main > article > section > p {
-    font-size: 0.6em;
-  }
-}
-
-@media screen and (max-width:922px){
-  .paragrafo {
-    background-size: 6%, auto;
-  }
-
-  .main > article > section {
-    border: none;
-  }
-}*/
-
 
 .main {
   max-width: 1024px;
@@ -80,18 +59,8 @@
   margin-bottom: 0.5em;
 }
 
-.lista {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin: 1em 0 1em 4em;
-  list-style-position: inside;
-  font-size: 1.25em;
-  text-align: left;
-}
-
 dl > dt {
-  font-size: 1.25em;
+  font-size: 1.15em;
   font-weight: bold;
 }
 
@@ -219,22 +188,30 @@ tbody > tr:hover {
 
 @media screen and (max-width:992px){
   .paragrafo {
-    background-size: 6%, auto;
+    background: linear-gradient(to right, rgb(8, 8, 8) 70%, transparent) no-repeat;
+    background-size: auto;
   }
 
   .main > article > section {
     border: none;
+    border-radius: 0px;
   }
 }
 
 @media screen and (max-width:600px) {
   .paragrafo {
     font-size: 1em;
-    background: linear-gradient(to right, rgb(8, 8, 8) 80%, transparent) no-repeat;
-    background-size: auto;
+  }
+
+  dl > dt {
+    font-size: 1em;
+  }
+
+  dl {
+    font-size: 0.8em;
   }
 
   .main > article > section > p {
-    font-size: 0.6em;
+    font-size: 0.8em;
   }
 }
