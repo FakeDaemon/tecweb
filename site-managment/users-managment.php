@@ -109,7 +109,7 @@
     </nav>
   </header>
   <div class="main">
-    <p>GESTIONE MODDERS</p>
+    <p>GESTIONE UTENTI</p>
     <form id="auth_widget" action="users-managment.php" method="post" novalidate>
       <?php
       if (isset($GLOBALS['emailWrongFormat']) && $GLOBALS['emailWrongFormat']) echo "<p>Formato <span lang='en'>email</span> non valido.</p>";

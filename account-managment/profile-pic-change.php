@@ -118,6 +118,7 @@
         Spider Mastermind
       </label>
       <input type="submit" name="SubmitButton" value="Conferma">
+      <a href="../account-managment.php">Torna alle impostazioni.</a>
     </form>
   </div>
   <footer id="foot">

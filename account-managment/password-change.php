@@ -125,6 +125,7 @@
       <input type="submit" name="SubmitButton" value="Conferma">
       <input id="ResetButton" type="reset" value="Pulisci">
 
+      <a href="../account-managment.php">Torna alle impostazioni.</a>
       <a href="../help.php">Serve aiuto?</a>
       <a class='ErrorMessage' href='credentialRecovery.php'><span lang='en'>Password</span> dimenticata?</a>
     </form>

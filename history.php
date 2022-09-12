@@ -80,7 +80,7 @@
                     </ul>
                 </li>
                 <li class="MenuBarItem"><a href="stats.php">STATISTICHE</a></li>
-                <li class="MenuBarItem"><a href="trivia.php">CURIOSITÀ</a></li>
+                <li class="MenuBarItem"><a href="trivia.php">CURIOSIT&Agrave;</a></li>
             </ul>
             <div id="MenuUserWidget">
                 <div>
@@ -110,16 +110,16 @@
             <section>
             <p>
                 <span lang="en">Doom </span>(ufficialmente scritto come <span lang="en">DOOM</span> e occasionalmente <span lang="en"> DooM </span> dai fan)
-                è il primo videogioco rilasciato della serie e viene considerato uno dei giochi che hanno consolidato il genere
+                &egrave; il primo videogioco rilasciato della serie e viene considerato uno dei giochi che hanno consolidato il genere
                 <abbr lang="en" title="First Person Shooter">FPS</abbr>. Con una trama stile horror fantascientifica il gioco ha introdotto per la prima
                 volta le modalità cooperativa e <span lang="en">deathmatch</span> (battaglia a squadre) dandogli il senso che conosciamo oggi e incentivando modifiche
-                al gioco stesso da parte dei <span lang="en">fan</span>. Inizialmente è stato rilasciato nel Dicembre del 1993, quando una copia condivisa è stata caricata
+                al gioco stesso da parte dei <span lang="en">fan</span>. Inizialmente &egrave; stato rilasciato nel Dicembre del 1993, quando una copia condivisa &egrave; stata caricata
                 in un server <abbr lang="en" title="File Transfer Protocol">FTP</abbr> dell'università del <span lang="en">Wisconsin</span>. La versione ultimata di <span lang="en">Doom</span>, ovvero
                 un aggiornamento di quella originale che comprendeva un quarto episodio, fu rilasciata nel 1995 e venduta al dettaglio. In <span lang="en">Doom</span>,
                 il giocatore veste i panni di un <span lang="en">marine</span> spaziale senza nome, chiamato anche <span lang="en">Doomguy</span> dalla community
                 prima di essere rinominato nei capitoli successivi <span lang="en">"Doom Slayer"</span>, che dovrà affrontare orde di invasori venuti dall'inferno. Si stima che <span lang="en">Doom</span> sia stato giocato da 15-20 milioni di
                 pesone nei due anni seguenti al suo rilascio, rendendo popolare la modalità di gioco, creando un vero e proprio fenomeno di sottocultura videoludica.
-                <span lang="en">Doom</span> è stato il pioniere nell'utilizzo di una immersiva interfaccia grafica <abbr title="3 dimensioni">3D</abbr>, ha implementato la
+                <span lang="en">Doom</span> &egrave; stato il pioniere nell'utilizzo di una immersiva interfaccia grafica <abbr title="3 dimensioni">3D</abbr>, ha implementato la
                 modalità <span lang="en">multiplayer</span> e supportato gli utenti che potevano avere una propria versione <span lang="en">"custom"</span> del gioco,
                 in quanto ogni giocatore poteva aggiungere codice, organizzandolo in archivi di file conosciuti come <abbr lang="en" title="Where's All the Data?">"WADs"</abbr>.
             </p>
@@ -130,20 +130,20 @@
                 hanno reso il gioco soggetto di alcune controversie legali. Il franchise di <span lang="en">Doom</span> ha
                 continuato ad esistere negli anni, grazie al rilascio di <span lang="en">Doom</span> <abbr title="Secondo">II</abbr>: <span lang="en">Hell on Earth</span>
                 (1994) con numerose espansioni, includendo <span lang="en">Master Levels for Doom</span> <abbr title="Secondo">II</abbr>, e <span lang="en">Final Doom</span>
-                (1996). Originariamente il gioco è stato sviluppato in <span lang="en"><abbr title="">DOS</abbr></span>, i giochi della serie, negli anni hanno
-                poi subito operazioni di <span lang="en">"porting"</span> verso altre piattaforme. Una volta che il codice sorgente è stato reso pubblico nel 1997,
-                sono comparse numerose versioni, poichè i fan hanno cominciato a trasportare il codice su un numero illimitato di dispositivi. La serie ha iniziato a
+                (1996). Originariamente il gioco &egrave; stato sviluppato in <span lang="en"><abbr title="Disk Operating System">DOS</abbr></span>, i giochi della serie, negli anni hanno
+                poi subito operazioni di <span lang="en">"porting"</span> verso altre piattaforme. Una volta che il codice sorgente &egrave; stato reso pubblico nel 1997,
+                sono comparse numerose versioni, poich&egrave; i fan hanno cominciato a trasportare il codice su un numero illimitato di dispositivi. La serie ha iniziato a
                 far perdere interesse nel momento in cui la tecnologia del motore grafico ha iniziato ad essere ritenuta obsoleta a partire
                 dalla seconda metà degli anni 90', anche se i fan hanno continuato a produrre archivi di codice <span lang="en"><abbr lang="en" title="Where's All the Data?"> (WADs)</abbr></span>,
                 <span lang="en">speedruns</span> (sfide per finire il gioco nel minor tempo possibile), e modifiche al codice sorgente originale. La serie attirò
                 nuovamente l'attenzione della community videoludica nel 2004, con il rilascio di <span lang="en">Doom</span> 3 che integrava una
                 nuova interfaccia grafica chiamata <span lang="en">id Tech</span> 4, che modernizzava la telecamera di gioco rendendola simile a quella di una
-                moderna telecamera. Nel 2016 poi, è stato sviluppato un <span lang="en">reboot</span>
+                moderna telecamera. Nel 2016 poi, &egrave; stato sviluppato un <span lang="en">reboot</span>
                 della saga, semplicemente denominato <span lang="en">Doom</span>, che consiste in un riadattamento (non proprio fedelissimo) dei due giochi originali,
-                con un comparto grafico interamente sviluppato ad hoc, tale adattamento è stato pubblicato dalla <span lang="en">software House Bethesda</span>.
-                Nel 2019 poi, è uscito nelle sale cinematografiche <span lang="en">Doom: Annihilation</span>, un film che riprende le tematiche dell'universo del
+                con un comparto grafico interamente sviluppato ad hoc, tale adattamento &egrave; stato pubblicato dalla <span lang="en">software house Bethesda</span>.
+                Nel 2019 poi, &egrave; uscito nelle sale cinematografiche <span lang="en">Doom: Annihilation</span>, un film che riprende le tematiche dell'universo del
                 videogioco.
-                A Marzo 2020, è stato rilasciato <span lang="en">Doom Eternal</span>, il <span lang="en">sequel</span>
+                A Marzo 2020, &egrave; stato rilasciato <span lang="en">Doom Eternal</span>, il <span lang="en">sequel</span>
                 di <span lang="en">Doom</span> (2016).
             </p>
             <img src="IMAGES/DOOM_cover.jpg" alt="Copertina gioco originale">
@@ -155,16 +155,16 @@
             <p>
                 <span lang="en">Doom</span> ha una trama semplice che avanza nel corso del gioco principalmente attraverso
                 messaggi mostrati tra un livello e l'altro. Il giocatore prende le parti di un <span lang="en">marine</span>, "uno dei più tosti del pianeta Terra,
-                addestrato per l'azione", che è stato deportato su Marte dopo aver assalito un ufficiale che aveva impartito l'ordine di fare fuoco su alcuni civili.
+                addestrato per l'azione", che &egrave; stato deportato su Marte dopo aver assalito un ufficiale che aveva impartito l'ordine di fare fuoco su alcuni civili.
                 In questo luogo, il nostro <span lang="en">marine</span> lavora per la <span lang="en">Union Aerospace Corporation</span> <abbr title="Union Aerospace Corporation">(UAC)</abbr>,
                 un conglomerato multiplanetario militare, che effettua esperimenti segreti sui viaggi interdimensionali. Di recente il teletrasporto da loro inventato,
-                ha mostrato segni di anomalie e instabilità, ma le ricerche continano senza sosta, quando all'improvviso qualcosa va storto e alcune creature infernali,
+                ha mostrato segni di anomalie e instabilità, ma le ricerche continuano senza sosta, quando all'improvviso qualcosa va storto e alcune creature infernali,
                 spuntano dai teletrasporti nei pianeti <span lang="en">Phobos and Deimos</span>. Dalla base interessata parte subito un'azione difensiva, volta a
                 bloccare l'invasione sul nascere, ma la base verrà presto conquistata dai mostri, tutto il personale rimasto ucciso viene traformato in
-                <span lang="en">zombie</span>. Un distaccamento militare da Marte parte verso <span lang="en">Phobos</span> per indagare sull'incidente.Il giocatore
-                ha la missione di rendere sicuro il perimetro, affinchè la squadra d'assalto possa trasportare le armi pesanti all'interno. La connessione radio cede
-                molto presto, così il giocatore si rende conto di essere l'unico sopravvissuto. Essendo impossibilitato a pilotare l'astronave per il ritorno, poichè
-                irreversibilmente danneggiata, l'unica via di fuga è combattere attraverso i vari complessi della base lunare.
+                <span lang="en">zombie</span>. Un distaccamento militare da Marte parte verso <span lang="en">Phobos</span> per indagare sull'incidente. Il giocatore
+                ha la missione di rendere sicuro il perimetro, affinch&egrave; la squadra d'assalto possa trasportare le armi pesanti all'interno. La connessione radio cede
+                molto presto, così il giocatore si rende conto di essere l'unico sopravvissuto. Essendo impossibilitato a pilotare l'astronave per il ritorno, poich&egrave;
+                irreversibilmente danneggiata, l'unica via di fuga &egrave; combattere attraverso i vari complessi della base lunare.
             </p>
             <img src="IMAGES/final_battle.jpg" alt="scena di copertina di un annuncio riguardo doom 2016">
           </section>
@@ -173,13 +173,13 @@
             <h2 class="paragrafo"><span lang="en">Gameplay</span></h2>
             <section>
             <p>
-                <span lang="en">Doom</span> è uno sparatutto in prima persona, con un'impostazione di sfondo che mescola fantascienza e <span lang="en">horror</span>
+                <span lang="en">Doom</span> &egrave; uno sparatutto in prima persona, con un'impostazione di sfondo che mescola fantascienza e <span lang="en">horror</span>
                 (nello stile <span lang="en">weird menace</span>); il gioco si compone di tre episodi, ognuno dei quali si svolge in un luogo generico e
-                viene giocato separatamente. L'obiettivo primario di ogni livello è semplice: localizzare l'uscita che conduce alla prossima area di gioco,
+                viene giocato separatamente. L'obiettivo primario di ogni livello &egrave; semplice: localizzare l'uscita che conduce alla prossima area di gioco,
                 (contrassegnata da una scritta <span lang="en">EXIT</span> rossa), ovviamente sopravvivendo a tutti i pericoli che incontreremo nel nostro percorso.
                 Tra gli ostacoli troveremo mostri, barili di rifiuti radioattivi, soffitti che scendono per schiacciare il giocatore e porte bloccate per le quali
                 avremo bisogno di una chiave, o di attivare uno <span lang="en">switch</span> che dovrà essere localizzato. I livelli solitamente sono labirintici
-                (la minimappa è un aiuto cruciale per poterli navigare), oltretutto, in ogni livello sono presenti stanze segrete in abbondanza che contengono
+                (la minimappa &egrave; un aiuto cruciale per poterli navigare), oltretutto, in ogni livello sono presenti stanze segrete in abbondanza che contengono
                 <span lang="en">powerups</span> come premio per chi esplora completamente il livello in questione. Una schermata di conteggio alla fine di ogni
                 livello, (trane per l'ultimo livello di ogni episodio che descrive parte della trama) aiuta il giocatore per collezionare tutti gli obiettivi
                 secondari, per esempio mostrando la percentuale di creature uccise nel livello, o il numero di segreti svelati.
@@ -187,14 +187,14 @@
             <img src="IMAGES/gameplay.jpg" alt="Scena di gioco dove si vede la famosa pistola al plasma">
             <p>
                 A parte la modalità <span lang="en">single-player</span> <span lang="en">Doom</span> supporta due modalità <span lang="en">multiplayer</span>,
-                giocabili quando si è all'interno di una rete: una modalità cooperativa, dove un <span lang="en">team</span> di due fino a quattro giocatori,
+                giocabili quando si &egrave; all'interno di una rete: una modalità cooperativa, dove un <span lang="en">team</span> di due fino a quattro giocatori,
                 fanno squadra per affrontare le legioni infernali, e una modalità <span lang="en">deathmatch</span> dove lo stesso numero di giocatori combattono
                 tra di loro. I mostri nemici sono l'elemento di <span lang="en">gameplay</span> predominante in <span lang="en">Doom</span>. Ci sono 10 tipologie
                 di mostri, inclusi umani impossessati come demoni dai livelli di forza differenti, i quali vanno dai più deboli, ma onnipresenti,
                 <span lang="en">Imps</span> fino ai rossi fluttuanti Cacodemoni e i boss, i quali tendono a sopravvivere a colpi multipli
                 anche se il giocatore usa tutte le armi più potenti in suo possesso. I mostri generalmente possiedono una <abbr title="Intelligenza artificiale"><span lang="en">IA</span></abbr>
                 molto semplice, e quindi nella maggior parte dei casi, dovranno essere in sovrannumero per poter sconfiggere il giocatore, anche se alle volte,
-                la superiorità numerica comporta delle lotte interne fra mostri. L'arsenale di armi messe a disposizione al giocatore era distintivo nel 1993 ed è
+                la superiorità numerica comporta delle lotte interne fra mostri. L'arsenale di armi messe a disposizione al giocatore era distintivo nel 1993 ed &egrave;
                 diventato un prototipo per i futuri sparatutto. Il giocatore inizia armato solamente di una pistola e un tirapugni in caso finisse le munizioni,
                 ma la maggior parte delle armi disponibili gioco potranno essere raccolte o scovate tramite i segreti, come la motosega,
                 un fucile da caccia, una mitragliatrice, un lanciarazzi, una pistola al plasma e il potentissimo BFG9000. Per informazioni più dettagliate,
@@ -219,27 +219,27 @@
                 <li><abbr lang="en" title="Compact Disk ">CD-ROM;</abbr></li>
             </ul>
             <p>
-                Incoraggiando così giocatori e venditori al dettaglio a diffondere il gioco quanto più possibile. Si sitma che nel 1995 la distribuzione
+                Incoraggiando così giocatori e venditori al dettaglio a diffondere il gioco quanto più possibile. Si stima che nel 1995 la distribuzione
                 <span lang="en">shareware</span> di <span lang="en">Doom</span> fosse installata su più di 10 milioni di computer. La versione registrata di
                 <span lang="en">Doom</span>, contenente tutti e tre gli episodi, era solo disponibile solo con ordini postali, anche se la maggior parte degli utenti
-                non ha acquistato la questa versione, sono state vendute oltre un milione di copie e questa popolarità ha aiutato le vendite dei giochi successivi
+                non ha acquistato questa versione, sono state vendute oltre un milione di copie e questa popolarità ha aiutato le vendite dei giochi successivi
                 della serie <span lang="en">Doom</span>, che non sono stati rilasciati come <span lang="en">shareware</span>. L'originale Doom alla fine ha ricevuto
                 anche un rilascio al dettaglio, quando fu venduto in una versione espansa chiamata <span lang="en">The Ultimate Doom</span>, (aggiungendo un quarto
                 episodio).
             </p>
             <p>
-                Doom è stato anche ampiamente elogiato dalla stampa videoludica, nel 1994 è stato nominato gioco dell'anno sia da "<span lang="en">PC Gamer</span>"
+                Doom &egrave; stato anche ampiamente elogiato dalla stampa videoludica, nel 1994 &egrave; stato nominato gioco dell'anno sia da "<span lang="en">PC Gamer</span>"
                 che da "<span lang="en">Computer Gaming World</span>". Ha ricevuto il premio per l'eccellenza tecnica da "<span lang="en">PC Magazine</span>" e il premio
                 <span lang="en">Best Action Adventure Game</span> dall'<span lang="en">Academy of Interactive Arts & Sciences</span>.
             </p>
             <p>
-                Oltre alla natura elettrizzante della campagna <span lang="en">single player</span>, la modalità <span lang="en">deathmatch</span> è stata un fattore importante per la popolarità del gioco.
+                Oltre alla natura elettrizzante della campagna <span lang="en">single player</span>, la modalità <span lang="en">deathmatch</span> &egrave; stata un fattore importante per la popolarità del gioco.
                 <span lang="en">Doom</span> non era il primo a portare un <span lang="en">gameplay</span> dove i giocatori si ritrovavano uno contro uno, vedi:
-                <span lang="en">(MIDI Maze, su Atari ST, ne aveva una nel 1987)</span>, ma ridefini il concetto di arena <span lang="en">multiplayer</span>,
-                nel mondo del <span lang="en">gaming</span>. E' stato il primo a utilizzare le connessioni Ethernet, e la combinazione di violenza e sangue combattendo
-                contro i propri amici ha reso la modalità talmente popolare, da arrivare a coniare il termine <span lang="en">"deathmatching</span>. Grazie alla sua ampia
+                <span lang="en">(MIDI Maze</span>, su <span lang="en">Atari ST</span>, ne aveva una nel 1987), ma ridefin&iacute;, il concetto di arena <span lang="en">multiplayer</span>,
+                nel mondo del <span lang="en">gaming</span>. &Eacute; stato il primo ad utilizzare le connessioni Ethernet, e la combinazione di violenza e sangue combattendo
+                contro i propri amici ha reso la modalità talmente popolare, da arrivare a coniare il termine <span lang="en">"deathmatching"</span>. Grazie alla sua ampia
                 distribuzione, <span lang="en">Doom</span> ha aperto la strada verso la <span lang="en">community</span> videoludica mondiale odierna, dove le
-                <span lang="en">Software House</span> hanno una grossa attenzione mediatica, e solo in Italia hanno un fatturato di circa 2,2 miliardi di euro.
+                <span lang="en">software house</span> hanno una grossa attenzione mediatica, e solo in Italia hanno un fatturato di circa 2,2 miliardi di euro.
             </p>
             <img src="IMAGES/motosega.jpg" alt="immagine raffigurante la celebre motosega in azione">
           </section>
@@ -253,11 +253,11 @@
                 piuttosto religiosi lo difendono in quanto anti-satanico), e ha stimolato la paura verso la realtà virtuale, anche se nella sua forma più arretrata,
                 in quanto potrebbe essere usata per simulare uccisioni in maniera molto dettagliata; nel 1994 tutto questo ha portato a dei tentativi, poi falliti,
                 da parte di un senatore dello stato di <span lang="en">Washington</span>, Phil Talmadge, di introdurre una licenza obbligatoria per
-                usare tecnologie di realtà virtuale. Il gioco è finito sulle prime pagine nuovamente nel 1999, quando è stato collegato al tristemente famoso massacro
-                del liceo <span lang="en">Columbine.</span><span lang="en">Doom</span> ha ricevuto il <span lang="en">ban</span> da parte della
+                usare tecnologie di realt&aacute; virtuale. Il gioco &eacute; finito sulle prime pagine nuovamente nel 1999, quando &egrave; stato collegato al tristemente noto massacro
+                del liceo <span lang="en">Columbine. </span><span lang="en">Doom</span> ha ricevuto il <span lang="en">ban</span> da parte della
                 <span lang="de">Bundesprüfstelle für jugendgefährdende Schriften</span>, ovvero un' agenzia tedesca per il controllo di contenuti multimediali dannosi
-                per i minori, ciò comporta il fatto che il gioco non possa essere pubblicizzato, venduto, noleggiato e nemmeno regalato a persone minorenni. Questo
-                <span lang="en">ban</span> è stato revocato il 31 Agosto 2011, quando <span lang="en">Bethesda Softworks</span>, l'odierno proprietario di
+                per i minori, ci&oacute; comporta il fatto che il gioco non possa essere pubblicizzato, venduto, noleggiato e nemmeno regalato a persone minorenni. Questo
+                <span lang="en">ban</span> &egrave; stato revocato il 31 Agosto 2011, quando <span lang="en">Bethesda Softworks</span>, l'odierno proprietario di
                 <span lang="en">id Software</span> ha sostenuto il fatto che le dinamiche e grafice crude del gioco sono state sorpassate di gran lunga dagli
                 sparatutto odierni e di conseguenza la violenza rappresentata ha un impatto minore.
             </p>
