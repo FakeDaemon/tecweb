@@ -94,22 +94,25 @@
       <input type="reset" value="PULISCI">
     </form>
     <a id="AnswerPagelink" href="questionEditor.php">Fai una domanda alla community!</a>
-    <span>
-      <p class="SearchTerms">"&nbsp; <?php echo $_GET["SearchTerms"]; ?> &nbsp;"</p>
-    </span>
-    <p>Risultati della ricerca:</p>
-    <span class="TopicList">
+    <?php
+    if (strlen($_GET['SearchTerms']) > 0) {
+    ?>
+      <span>
+        <p class="SearchTerms">"&nbsp; <?php echo $_GET["SearchTerms"]; ?> &nbsp;"</p>
+      </span>
+      <p>Risultati della ricerca:</p>
+      <span class="TopicList">
       <?php
       $target = keywordsExtraxtor($_GET['SearchTerms']);
       $sql = "SELECT * FROM DoomWiki.topics JOIN DoomWiki.users ON fst_mail = email WHERE state='Approved'";
       $result = $conn->query($sql);
       $resultCount = 0;
       while ($row = $result->fetch_assoc()) {
-        if ($resultCount < 10) {
+        if ($resultCount < 20) {
           foreach ($target as $word) {
             if (strpos($row['title'], $word) !== false) {
-              if ($resultCount < 10) {
-                echo '<a href="questions.php?id='.$row['id'].'"><p class="title">'.$row['title'].'</p><p class="details">Aperto da '.$row['user_name'].' in data '.$row['creation_date'].'</p></a>';
+              if ($resultCount < 20) {
+                echo '<a href="questions.php?id=' . $row['id'] . '"><p class="title">' . $row['title'] . '</p><p class="details">Aperto da ' . $row['user_name'] . ' in data ' . $row['creation_date'] . '</p></a>';
                 $resultCount += 1;
                 break;
               }
@@ -120,18 +123,18 @@
       if ($resultCount === 0) { //Nessun risultato
         echo "<p>Nessuno ha ancora chiesto quello che hai cercato.<a href='QuestionPage.php'>Chiedi alla community!</a></p> ";
       }
-      if ($resultCount === 10) { //Più pagine
-        $GLOBALS['MorePage'] = true;
-      }
+    } else {
+      echo "<span><p>Richerca non valida, sei un testa di cazzo, preferirei morire bruciato che avere un figlio come te. Comunque effettua una nuova ricerca <a href='#SearchBar'>qui</a>.</p><span>";
+    }
       ?>
-    </span>
-    <?php
-    if ($GLOBALS['MorePage']) { ?>
-      <a class="CurrentPage" id="FirstPage" href="questions.php?id=123&page=0">Prima Pagina</a>
-      <a class="CurrentPage" href="questions.php?id=123&page=0">Pagina Precedente</a>
-      <a href="questions.php?id=123&page=0">Pagina Successiva</a>
-      <a id="LastPage" href="questions.php?id=123&page=0">Ultima Pagina</a>
-    <?php } ?>
+      </span>
+      <?php
+      if ($GLOBALS['MorePage']) { ?>
+        <a class="CurrentPage" id="FirstPage" href="questions.php?id=123&page=0">Prima Pagina</a>
+        <a class="CurrentPage" href="questions.php?id=123&page=0">Pagina Precedente</a>
+        <a href="questions.php?id=123&page=0">Pagina Successiva</a>
+        <a id="LastPage" href="questions.php?id=123&page=0">Ultima Pagina</a>
+      <?php } ?>
   </div>
 
   <footer id="foot">

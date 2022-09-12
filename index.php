@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="it" dir="ltr">
 
 <head>
   <link href="CSS/STYLE_HOMEPAGE.css" rel="stylesheet">
@@ -87,7 +87,7 @@
   <div class="main">
     <p id="Welcome_Messages">BENVENUTI ALLA <strong lang="en">WIKI</strong> DI <strong lang="en">DOOM</strong></p>
     <p id="SubMessage">Un sito dedicato al gioco di <span lang="en">DOOM</span>, dove consultare informazioni dettagliate su tutti gli aspetti del gioco e dove appassionati di <span lang="en">DOOM</span> possono interagire tra di loro.</p>
-    <form class="searchBar" action="searchResult.php" method="get">
+    <form class="searchBar" id="searchBar" action="searchResult.php" method="get" novalidate>
       <label for="SearchBar">CERCA NEL SITO</label>
       <input id="SearchBar" type="text" name="SearchTerms" required>
       <input type="submit" value="CERCA">
@@ -128,6 +128,7 @@
     <img class="imgVadidCode" src="IMAGES/valid-xhtml10.png" alt="html valido" />
     <img class="imgVadidCode" src="IMAGES/vcss-blue.gif" alt="css valido" />
   </footer>
+  <script src="SCRIPTS/.js/indexScripts.js"></script>
 </body>
 
 </html>
