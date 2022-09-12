@@ -53,8 +53,6 @@
 }
 
 .paragrafo {
-  position: relative;
-  bottom: -8px;
   padding: 0.7em;
   font-size: 1.5em;
   margin: 1em 0 0.5em 0;

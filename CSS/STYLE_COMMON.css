@@ -320,16 +320,17 @@ footer>img {
 }
 
 .cookie-banner {
-  font-size: x-large;
+  font-size: large;
   border: 1px solid red;
   border-radius: 15px;
   position: fixed;
   bottom: 20px;
-  left: 5%;
+  left: 50%;
+  transform: translate(-50%);
   z-index: 200;
-  width: 90%;
+  width: 60%;
   background-color: rgba(0, 0, 0, 0.95);
-  padding: 2em;
+  padding: 1em;
 }
 
 .cookie-banner p {
@@ -399,6 +400,10 @@ footer>img {
     font-size: 0.8em;
   }
 
+  .cookie-banner {
+    font-size: medium;
+  }
+  
   footer > p {
     font-size: 0.8em;
   }
