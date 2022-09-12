@@ -1,6 +1,5 @@
-table,
-td,
-th {
+
+table, td, th {
   border: 2px solid black;
   text-align: center;
 }
@@ -24,8 +23,7 @@ table {
   margin-top: calc(var(--menu-height) / 2);
 }
 
-th,
-td {
+th, td {
   padding: 15px;
 }
 
@@ -43,4 +41,19 @@ tr:hover {
 }
 .emphasis {
   font-weight: bold;
+}
+
+@media screen and (max-width:600px){
+  caption{
+    font-size: 1.2em;
+  }
+
+  .head{
+    font-size: 1em;
+  }
+
+  th{
+    font-size: 0.8em;
+  }
+
 }
