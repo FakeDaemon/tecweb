@@ -7,11 +7,12 @@ img {
 
 .main > * {
   font-family: "Times New Roman", Times, serif;
+  break-inside: avoid;
 }
 
 .main > p {
   font-family: "Times New Roman", Times, serif;
-  font-size: 1.5em;
+  font-size: 17pt;
   text-align: center;
   color: black;
   background-color: transparent;
@@ -21,16 +22,17 @@ img {
 .main > .details > p.postDate {
   text-align: center;
   color: #000000;
+  font-size: 16pt;
 }
 
 h1.title {
-  font-size: 1.5em;
+  font-size: 17pt;
   color: black;
   background-color: transparent;
 }
 
 h2 {
-  font-size: 1.2em;
+  font-size: 14pt;
   color: black;
   background-color: transparent;
 }
@@ -58,12 +60,12 @@ header > #logo {
   position: relative;
   margin: auto;
   color: black;
-  font-size: 5em;
+  font-size: 20pt;
   text-indent: 0px;
   display: inline;
 }
 
 footer > p {
-  font-size: 1em;
+  font-size: 12pt;
   color: black;
 }
