@@ -48,11 +48,13 @@ header > #logo {
   border: none;
   margin: 0;
   padding: 0;
+  break-inside: avoid;
 }
 
 .main > article {
   margin: 0;
   padding: 0;
+  break-inside: avoid;
 }
 
 .main > article > section > p {
@@ -62,6 +64,7 @@ header > #logo {
   font-family: "Times New Roman", Times, serif;
   border: none;
   margin: none;
+  break-inside: avoid-page;
 }
 
 footer > p {
