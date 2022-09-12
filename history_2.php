@@ -78,9 +78,10 @@
         </div>
         <?php
         if ($user->isLogged()) echo "<img src='IMAGES/ProfilePics/ProfilePicN" . $user->profile_pic . ".jpg' alt='Doomguy, accedi o registrati!'>";
-        else echo "<img src='IMAGES/ProfilePics/ProfilePicN1.jpg' alt='Doomguy, accedi o registrati!'>";
+        else echo "<img src='IMAGES/ProfilePics/ProfilePicN1.jpg' alt='Doomguy, accedi o registrati!'/>";
         ?>
       </div>
+        </nav>
   </header>
   <div class="main">
     <h1 id="replace2" lang="en">DOOM 2</h1>
