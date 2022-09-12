@@ -7,10 +7,10 @@
     <link href="CSS/PRINT.css" rel="stylesheet" type="text/css" media="print" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron" />
     <meta charset="utf-8">
-    <title> <span lang="en">DOOM</span> 3 | <span lang="en">DoomWiki</span></title>
+    <title> DOOM 3 | DoomWiki</title>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta name="keywords" content="DOOM WIKI, doom 3, riassunto, features, sviluppo, trama, gameplay" />
-    <meta name="description" content="Pagina riguardante il terzo capitolo" />
+    <meta name="description" content="DOOM 3, Tutte le informazioni sul gioco" />
     <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano , Angeloni Alberto" />
 </head>
 
