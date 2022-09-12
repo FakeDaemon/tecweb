@@ -395,8 +395,8 @@ footer>img {
 @media screen and (max-width: 600px) {
   .lista {
     font-size: 0.8em;
-}
-}
+  }
+
 
   footer > p {
     font-size: 0.8em;
