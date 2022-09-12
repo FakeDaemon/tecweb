@@ -172,7 +172,7 @@ a {
 #MenuBar .MenuBarItemNestedList label {
   display: inline-block;
   text-align: center;
-  height: 100px;
+  height: var(--menu-height);
   line-height: var(--menu-height);
   width: 100%;
   font-size: 1.5em;
@@ -260,7 +260,7 @@ a {
   display: inline-block;
   width: 63%;
   text-align: right;
-  margin:  auto;
+  margin: auto;
 }
 
 #MenuUserWidget>div>p {
@@ -349,12 +349,20 @@ footer>img {
 }
 
 @media screen and (max-width: 1110px) {
-  #MenuBar .MenuBarItem {
-    font-size: 1em;
+  :root{
+    --menu-height: 70px;
   }
 
-  #MenuBar .MenuBarItemNestedList label {
+  #MenuBar .MenuBarItem,
+  #MenuBar .MenuBarItemNestedList label{
     font-size: 1em;
+  }
+  #MenuBar .MenuBarItemNestedList input:checked+#MenuBarNestedList{
+    padding: 0;
+  }
+
+  #MenuBarNestedList li a {
+    font-size: .7em;
   }
 
   #MenuUserWidget>div>a {
@@ -363,6 +371,15 @@ footer>img {
 
   #MenuUserWidget>div>p {
     font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 750px) {
+
+  #MenuBar .MenuBarItem,
+  #MenuBar .MenuBarItemNestedList label,
+  #MenuBarNestedList li a {
+    font-size: .7em;
   }
 }
 
@@ -418,11 +435,13 @@ footer>img {
     text-indent: 20px;
     width: 100%;
   }
-  #MenuBar .MenuBarItem a{
+
+  #MenuBar .MenuBarItem a {
     width: 100%;
     display: block;
   }
-  #MenuBarNestedList li a{
+
+  #MenuBarNestedList li a {
     text-align: left;
     text-indent: 40px;
   }
@@ -432,11 +451,12 @@ footer>img {
     flex-direction: row-reverse;
     width: 100%;
   }
-  
-  #MenuUserWidget>div{
+
+  #MenuUserWidget>div {
     text-align: left;
     margin: 0 auto 0 10px;
   }
+
   #MenuBar .MenuBarItemNestedList {
     width: 100%;
   }
@@ -449,7 +469,7 @@ footer>img {
 }
 
 @media screen and (max-width:360px) {
-  #logo{
+  #logo {
     background-size: 30%;
   }
 }
