@@ -81,8 +81,8 @@
             ?>
           </div>
           <?php
-          if ($user->isLogged()) echo "<img src='..IMAGES/ProfilePics/ProfilePicN" . $user->profile_pic . ".jpg' alt='Doomguy, accedi o registrati!'>";
-          else echo "<img src='..IMAGES/ProfilePics/ProfilePicN1.jpg' alt='Doomguy, accedi o registrati!'>";
+          if ($user->isLogged()) echo "<img src='..//IMAGES/ProfilePics/ProfilePicN" . $user->profile_pic . ".jpg' alt='Doomguy, accedi o registrati!'>";
+          else echo "<img src='../IMAGES/ProfilePics/ProfilePicN1.jpg' alt='Doomguy, accedi o registrati!'>";
           ?>
         </div>
     </nav>
@@ -136,8 +136,8 @@
     <p>
       L'informativa sui <span lang="en">cookie</span> è consultabile all'indirizzo <a href="cookie_informativa.php">Cookie-information</a>
     </p>
-    <img class="imgVadidCode" src="..IMAGES/valid-xhtml10.png" alt="html valido" />
-    <img class="imgVadidCode" src="..IMAGES/vcss-blue.gif" alt="css valido" />
+    <img class="imgVadidCode" src="../IMAGES/valid-xhtml10.png" alt="html valido" />
+    <img class="imgVadidCode" src="../IMAGES/vcss-blue.gif" alt="css valido" />
   </footer>
   <script src="../SCRIPTS/.js/passwordchangepage.js"></script>
 </body>
