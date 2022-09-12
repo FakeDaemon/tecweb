@@ -18,16 +18,16 @@
   $level = 1;
   require '../SCRIPTS/.php/database_connection.php';
   include '../SCRIPTS/.php/user.php';
-  if (!(isset($_COOKIE['CookieAccepted'])) || !($_COOKIE['CookieAccepted'] == 'Accetta')) {header("location: ../cookie_informativa.php");}
+  if (!(isset($_COOKIE['CookieAccepted'])) || !($_COOKIE['CookieAccepted'] == 'Accetta')) {header("location:../cookie_informativa.php");}
   $user = new User($conn);
-  if (!$user->isLogged() || !$user->isSuperUser()) header("location: account-managment.php");
+  if (!$user->isLogged() || !$user->isSuperUser()) header("location:../account-managment.php");
   if (isset($_POST['act'])) {
     if ($_POST['act'] == "Accetta") {
       $stmt = $conn->prepare("UPDATE DoomWiki.topics SET state='Approved', modified_date=? WHERE id=?");
       $currentDate = date("Y-m-d H:i:s");
       $stmt->bind_param("ss", $currentDate, $_POST['reviewID']);
       $stmt->execute();
-      header("location: topic-managment.php?success");
+      header("location:topic-managment.php?success");
     } else if ($_POST['act'] == "Rifiuta") {
       $GLOBALS['RejectAction'] = true;
     } else if ($_POST['act'] == "Conferma") {
@@ -36,9 +36,9 @@
       var_dump($_POST);
       $stmt->bind_param("sss", $currentDate, $_POST['rejectReason'], $_POST['reviewID']);
       $stmt->execute();
-      header("location: topic-managment.php?success");
+      header("location:topic-managment.php?success");
     } else {
-      header("location: topic-managment.php?Error");
+      header("location:topic-managment.php?Error");
     }
   }
   ?>
@@ -49,22 +49,22 @@
     </label>
     <nav id="NavBar">
       <ul id="MenuBar">
-        <li class="MenuBarItem" lang="en"><a href="index.php" lang="en">HOMEPAGE</a></li>
+        <li class="MenuBarItem" lang="en"><a href="../index.php" lang="en">HOMEPAGE</a></li>
         <li class="MenuBarItemNestedList">
           <label id="NestedListLbl" for="NestedListBtn">
             TRAMA
           </label>
           <input id="NestedListBtn" type="checkbox" value="Mostra Capitoli Disponibili">
           <ul id="MenuBarNestedList">
-            <li class="NestedListItem"><a href="history.php">CAPITOLO <abbr title="Primo">I</abbr></a></li>
-            <li class="NestedListItem"><a href="history_2.php">CAPITOLO <abbr title="Secondo">II</abbr></a></li>
-            <li class="NestedListItem"><a href="history_3.php">CAPITOLO <abbr title="Terzo">III</abbr></a></li>
-            <li class="NestedListItem"><a href="history_2016.php">CAPITOLO <abbr title="Quarto">IV</abbr></a></li>
-            <li class="NestedListItem"><a href="history_eternals.php">CAPITOLO <abbr title="Quinto">V</abbr></a></li>
+            <li class="NestedListItem"><a href="../history.php">CAPITOLO <abbr title="Primo">I</abbr></a></li>
+            <li class="NestedListItem"><a href="../history_2.php">CAPITOLO <abbr title="Secondo">II</abbr></a></li>
+            <li class="NestedListItem"><a href="../history_3.php">CAPITOLO <abbr title="Terzo">III</abbr></a></li>
+            <li class="NestedListItem"><a href="../history_2016.php">CAPITOLO <abbr title="Quarto">IV</abbr></a></li>
+            <li class="NestedListItem"><a href="../history_eternals.php">CAPITOLO <abbr title="Quinto">V</abbr></a></li>
           </ul>
         </li>
-        <li class="MenuBarItem"><a href="stats.php">STATISTICHE</a></li>
-        <li class="MenuBarItem"><a href="stats.php">CURIOSITÀ</a></li>
+        <li class="MenuBarItem"><a href="../stats.php">STATISTICHE</a></li>
+        <li class="MenuBarItem"><a href="../trivia.php">CURIOSITÀ</a></li>
       </ul>
       <div id="MenuUserWidget">
         <div>
@@ -140,6 +140,9 @@
       <span lang="en">&copy;Doom</span> è un marchio ragistrato <a href="https://bethesda.net/it/dashboard" target="_blank">2022 Bethesda Softworks LLC</a>,
       a ZeniMax Media company. I marchi appartengono ai rispettivi proprietari.
       Tutti i diritti riservati.
+    </p>
+    <p>
+      L'informativa sui <span lang="en">cookie</span> è consultabile all'indirizzo <a href="cookie_informativa.php">Cookie-information</a>
     </p>
     <img class="imgVadidCode" src="IMAGES/valid-xhtml10.png" alt="html valido" />
     <img class="imgVadidCode" src="IMAGES/vcss-blue.gif" alt="css valido" />

@@ -19,8 +19,8 @@
   require '../SCRIPTS/.php/database_connection.php';
   include '../SCRIPTS/.php/user.php';
   $user = new User($conn);
-  if (!(isset($_COOKIE['CookieAccepted'])) || !($_COOKIE['CookieAccepted'] == 'Accetta')) {header("location: ../cookie_informativa.php");}
-  if (!$user->isLogged() || !$user->isAdmin()) header("location: ../login.php");
+  if (!(isset($_COOKIE['CookieAccepted'])) || !($_COOKIE['CookieAccepted'] == 'Accetta')) {header("location:../cookie_informativa.php");}
+  if (!$user->isLogged() || !$user->isAdmin()) header("location:../login.php");
   $result = $conn->query("SELECT fst_mail, user_name, profile_pic FROM DoomWiki.users WHERE ROLE = 'mod'");
   $modsList = array();
   while ($row = $result->fetch_assoc()) {
@@ -47,13 +47,13 @@
           $stmt2->bind_param("sss", $_POST['ModEmail'], $currentDate, htmlentities($_POST['message']));
           $stmt->execute();
           $stmt2->execute();
-          header("location: mod-managment.php?success");
+          header("location:mod-managment.php?success");
         } else if ($_POST['action'] == "Togli privilegi") {
           $stmt = $conn->prepare("UPDATE DoomWiki.users SET role='default', SessId=NULL WHERE fst_mail=?");
           $stmt->bind_param("s", $_POST['ModEmail']);
           $stmt->execute();
           var_dump($conn);
-          header("location: mod-managment.php?success");
+          header("location:mod-managment.php?success");
         }
       }
     }
@@ -66,22 +66,22 @@
     </label>
     <nav id="NavBar">
       <ul id="MenuBar">
-        <li class="MenuBarItem" lang="en"><a href="index.php" lang="en">HOMEPAGE</a></li>
+        <li class="MenuBarItem" lang="en"><a href="../index.php" lang="en">HOMEPAGE</a></li>
         <li class="MenuBarItemNestedList">
           <label id="NestedListLbl" for="NestedListBtn">
             TRAMA
           </label>
           <input id="NestedListBtn" type="checkbox" value="Mostra Capitoli Disponibili">
           <ul id="MenuBarNestedList">
-            <li class="NestedListItem"><a href="history.php">CAPITOLO <abbr title="Primo">I</abbr></a></li>
-            <li class="NestedListItem"><a href="history_2.php">CAPITOLO <abbr title="Secondo">II</abbr></a></li>
-            <li class="NestedListItem"><a href="history_3.php">CAPITOLO <abbr title="Terzo">III</abbr></a></li>
-            <li class="NestedListItem"><a href="history_2016.php">CAPITOLO <abbr title="Quarto">IV</abbr></a></li>
-            <li class="NestedListItem"><a href="history_eternals.php">CAPITOLO <abbr title="Quinto">V</abbr></a></li>
+            <li class="NestedListItem"><a href="../history.php">CAPITOLO <abbr title="Primo">I</abbr></a></li>
+            <li class="NestedListItem"><a href="../history_2.php">CAPITOLO <abbr title="Secondo">II</abbr></a></li>
+            <li class="NestedListItem"><a href="../history_3.php">CAPITOLO <abbr title="Terzo">III</abbr></a></li>
+            <li class="NestedListItem"><a href="../history_2016.php">CAPITOLO <abbr title="Quarto">IV</abbr></a></li>
+            <li class="NestedListItem"><a href="../history_eternals.php">CAPITOLO <abbr title="Quinto">V</abbr></a></li>
           </ul>
         </li>
-        <li class="MenuBarItem"><a href="stats.php">STATISTICHE</a></li>
-        <li class="MenuBarItem"><a href="stats.php">CURIOSITÀ</a></li>
+        <li class="MenuBarItem"><a href="../stats.php">STATISTICHE</a></li>
+        <li class="MenuBarItem"><a href="../trivia.php">CURIOSITÀ</a></li>
       </ul>
       <div id="MenuUserWidget">
         <div>
@@ -141,6 +141,9 @@
       <span lang="en">&copy;Doom</span> è un marchio ragistrato <a href="https://bethesda.net/it/dashboard" target="_blank">2022 Bethesda Softworks LLC</a>,
       a ZeniMax Media company. I marchi appartengono ai rispettivi proprietari.
       Tutti i diritti riservati.
+    </p>
+    <p>
+      L'informativa sui <span lang="en">cookie</span> è consultabile all'indirizzo <a href="cookie_informativa.php">Cookie-information</a>
     </p>
     <img class="imgVadidCode" src="IMAGES/valid-xhtml10.png" alt="html valido" />
     <img class="imgVadidCode" src="IMAGES/vcss-blue.gif" alt="css valido" />

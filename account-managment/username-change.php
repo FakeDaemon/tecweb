@@ -14,7 +14,7 @@
   <?php
   require '../SCRIPTS/.php/database_connection.php';
   include '../SCRIPTS/.php/user.php';
-  if (!(isset($_COOKIE['CookieAccepted'])) || !($_COOKIE['CookieAccepted'] == 'Accetta')) {header("location: ../cookie_informativa.php");}
+  if (!(isset($_COOKIE['CookieAccepted'])) || !($_COOKIE['CookieAccepted'] == 'Accetta')) {header("location:../cookie_informativa.php");}
   $user = new User($conn); ?>
   <header>
   <h1 id="logo">DOOM WIKI</h1>
@@ -23,7 +23,7 @@
     </label>
     <nav id="NavBar">
       <ul id="MenuBar">
-        <li class="MenuBarItem" lang="en"><a href="index.php" lang="en">HOMEPAGE</a></li>
+        <li class="MenuBarItem" lang="en"><a href="../index.php" lang="en">HOMEPAGE</a></li>
         <li class="MenuBarItemNestedList">
           <label id="NestedListLbl" for="NestedListBtn">
             TRAMA
@@ -78,6 +78,9 @@
       <span lang="en">&copy;Doom</span> è un marchio ragistrato <a href="https://bethesda.net/it/dashboard" target="_blank">2022 Bethesda Softworks LLC</a>,
       a ZeniMax Media company. I marchi appartengono ai rispettivi proprietari.
       Tutti i diritti riservati.
+    </p>
+    <p>
+      L'informativa sui <span lang="en">cookie</span> è consultabile all'indirizzo <a href="cookie_informativa.php">Cookie-information</a>
     </p>
     <img class="imgVadidCode" src="..IMAGES/valid-xhtml10.png" alt="html valido" />
     <img class="imgVadidCode" src="..IMAGES/vcss-blue.gif" alt="css valido" />

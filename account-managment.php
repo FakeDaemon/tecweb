@@ -23,7 +23,7 @@
   if (isset($_POST['CookieAccepted']) && $_POST['CookieAccepted'] == 'Accetta') {
     setCookie('CookieAccepted', 'Accetta', time() + (86400 * 30));
     $_COOKIE['CookieAccepted'] = 'Accetta';
-    header('location : account-managment.php');
+    header('location:account-managment.php');
   }
   if (!(isset($_COOKIE['CookieAccepted'])) || !($_COOKIE['CookieAccepted'] == 'Accetta')) {
   ?>
@@ -37,14 +37,14 @@
     </form>
   <?php
   }
-  if (!$user->isLogged()) header("location: login.php");
+  if (!$user->isLogged()) header("location:login.php");
   if (isset($_GET['act']) && $_GET['act'] == 'closeSess') {
     $stmt = $conn->prepare("UPDATE DoomWiki.users SET SessID = NULL WHERE fst_mail = ?");
     $stmt->bind_param("s", $user->email);
     $stmt->execute();
     setcookie("SessionID", "", time() + 60 * 60 * 24 * 365);
     $_COOKIE["SessionID"] = "";
-    header("location: /");
+    header("location:index.php");
   }
   ?>
   <header>
@@ -128,6 +128,9 @@
       <span lang="en">&copy;Doom</span> è un marchio ragistrato <a href="https://bethesda.net/it/dashboard" target="_blank">2022 Bethesda Softworks LLC</a>,
       a ZeniMax Media company. I marchi appartengono ai rispettivi proprietari.
       Tutti i diritti riservati.
+    </p>
+    <p>
+      L'informativa sui <span lang="en">cookie</span> è consultabile all'indirizzo <a href="cookie_informativa.php">Cookie-information</a>
     </p>
     <img class="imgVadidCode" src="IMAGES/valid-xhtml10.png" alt="html valido" />
     <img class="imgVadidCode" src="IMAGES/vcss-blue.gif" alt="css valido" />

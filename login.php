@@ -21,7 +21,7 @@
   if (isset($_POST['CookieAccepted']) && $_POST['CookieAccepted'] == 'Accetta') {
     setCookie('CookieAccepted', 'Accetta', time() + (86400 * 30));
     $_COOKIE['CookieAccepted'] = 'Accetta';
-    header('location : login.php');
+    header('location:login.php');
   }
   if (!(isset($_COOKIE['CookieAccepted'])) || !($_COOKIE['CookieAccepted'] == 'Accetta')) {
   ?>
@@ -35,7 +35,7 @@
     </form>
   <?php
   }
-  if ($user->isLogged()) header("location: account-managment.php");
+  if ($user->isLogged()) header("location:account-managment.php");
   if (isset($_POST['email']) && isset($_POST['password']) && !empty($_POST['password']) && !empty($_POST['email'])) {
     if (!preg_match("/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/", $_POST['email'])) {
       $ret = "emailWrongFormat";
@@ -67,7 +67,7 @@
           $_COOKIE["SessionID"] = $SessID;
 
           $conn->close();
-          header("location: index.php");
+          header("location:index.php");
         } else {
           $ret = "wrongPassword";
         }
@@ -201,6 +201,9 @@
       <span lang="en">&copy;Doom</span> è un marchio ragistrato <a href="https://bethesda.net/it/dashboard" target="_blank">2022 Bethesda Softworks LLC</a>,
       a ZeniMax Media company. I marchi appartengono ai rispettivi proprietari.
       Tutti i diritti riservati.
+    </p>
+    <p>
+      L'informativa sui <span lang="en">cookie</span> è consultabile all'indirizzo <a href="cookie_informativa.php">Cookie-information</a>
     </p>
     <img class="imgVadidCode" src="IMAGES/valid-xhtml10.png" alt="html valido" />
     <img class="imgVadidCode" src="IMAGES/vcss-blue.gif" alt="css valido" />

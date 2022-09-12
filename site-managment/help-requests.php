@@ -17,9 +17,9 @@
   $level = 1;
   require '../SCRIPTS/.php/database_connection.php';
   include '../SCRIPTS/.php/user.php';
-  if (!(isset($_COOKIE['CookieAccepted'])) || !($_COOKIE['CookieAccepted'] == 'Accetta')) {header("location: ../cookie_informativa.php");}
+  if (!(isset($_COOKIE['CookieAccepted'])) || !($_COOKIE['CookieAccepted'] == 'Accetta')) {header("location:../cookie_informativa.php");}
   $user = new User($conn);
-  if (!$user->isLogged() || !$user->isSuperUser()) header("location: ../account-managment.php");
+  if (!$user->isLogged() || !$user->isSuperUser()) header("location:../account-managment.php");
   if (isset($_POST['helpRequestID']) && isset($_POST['act'])) {
     if ($_POST['act'] == 'Gestisci') {
       $stmt = $conn->prepare("UPDATE DoomWiki.helpRequests SET requestMod=?, requestState = 'WorkingOn' WHERE id=?");
@@ -27,9 +27,9 @@
       $stmt->execute();
       $result = $stmt->get_result();
       if ($result->affected_row > 0) {
-        header("location : help-requests.php?Success");
+        header("location:help-requests.php?Success");
       } else {
-        header("location : help-requests.php?Fail");
+        header("location:help-requests.php?Fail");
       }
     } else if ($_POST['act'] == 'Risolvi') {
       $stmt = $conn->prepare("UPDATE DoomWiki.helpRequests SET requestState = 'Resolved' WHERE requestMod=? AND id=?");
@@ -37,9 +37,9 @@
       $stmt->execute();
       $result = $stmt->get_result();
       if ($result->affected_row > 0) {
-        header("location : help-requests.php?Success");
+        header("location:help-requests.php?Success");
       } else {
-        header("location : help-requests.php?Fail");
+        header("location:help-requests.php?Fail");
       }
     }
   }
@@ -52,22 +52,22 @@
     </label>
     <nav id="NavBar">
       <ul id="MenuBar">
-        <li class="MenuBarItem" lang="en"><a href="index.php" lang="en">HOMEPAGE</a></li>
+        <li class="MenuBarItem" lang="en"><a href="../index.php" lang="en">HOMEPAGE</a></li>
         <li class="MenuBarItemNestedList">
           <label id="NestedListLbl" for="NestedListBtn">
             TRAMA
           </label>
           <input id="NestedListBtn" type="checkbox" value="Mostra Capitoli Disponibili">
           <ul id="MenuBarNestedList">
-            <li class="NestedListItem"><a href="history.php">CAPITOLO <abbr title="Primo">I</abbr></a></li>
-            <li class="NestedListItem"><a href="history_2.php">CAPITOLO <abbr title="Secondo">II</abbr></a></li>
-            <li class="NestedListItem"><a href="history_3.php">CAPITOLO <abbr title="Terzo">III</abbr></a></li>
-            <li class="NestedListItem"><a href="history_2016.php">CAPITOLO <abbr title="Quarto">IV</abbr></a></li>
-            <li class="NestedListItem"><a href="history_eternals.php">CAPITOLO <abbr title="Quinto">V</abbr></a></li>
+            <li class="NestedListItem"><a href="../history.php">CAPITOLO <abbr title="Primo">I</abbr></a></li>
+            <li class="NestedListItem"><a href="../history_2.php">CAPITOLO <abbr title="Secondo">II</abbr></a></li>
+            <li class="NestedListItem"><a href="../history_3.php">CAPITOLO <abbr title="Terzo">III</abbr></a></li>
+            <li class="NestedListItem"><a href="../history_2016.php">CAPITOLO <abbr title="Quarto">IV</abbr></a></li>
+            <li class="NestedListItem"><a href="../history_eternals.php">CAPITOLO <abbr title="Quinto">V</abbr></a></li>
           </ul>
         </li>
-        <li class="MenuBarItem"><a href="stats.php">STATISTICHE</a></li>
-        <li class="MenuBarItem"><a href="stats.php">CURIOSITÀ</a></li>
+        <li class="MenuBarItem"><a href="../stats.php">STATISTICHE</a></li>
+        <li class="MenuBarItem"><a href="../trivia.php">CURIOSITÀ</a></li>
       </ul>
       <div id="MenuUserWidget">
         <div>
@@ -150,6 +150,9 @@
       <span lang="en">&copy;Doom</span> è un marchio ragistrato <a href="https://bethesda.net/it/dashboard" target="_blank">2022 Bethesda Softworks LLC</a>,
       a ZeniMax Media company. I marchi appartengono ai rispettivi proprietari.
       Tutti i diritti riservati.
+    </p>
+    <p>
+      L'informativa sui <span lang="en">cookie</span> è consultabile all'indirizzo <a href="cookie_informativa.php">Cookie-information</a>
     </p>
     <img class="imgVadidCode" src="IMAGES/valid-xhtml10.png" alt="html valido" />
     <img class="imgVadidCode" src="IMAGES/vcss-blue.gif" alt="css valido" />
