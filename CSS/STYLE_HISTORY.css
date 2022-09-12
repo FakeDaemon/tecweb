@@ -218,6 +218,12 @@ tbody > tr:hover {
     border: none;
     border-radius: 0px;
   }
+
+  .main > article > section > .trivia_img > img  {
+    width: auto;
+    max-width: 30vw;
+    max-height: 20vh;
+  }
 }
 
 @media screen and (max-width:600px) {
@@ -274,6 +280,10 @@ tbody > tr:hover {
 
   .main > article > section > img {
     height: 10em;
+  }
+
+  .main > article > section > .trivia_img > img  {
+    max-height: 15vh;
   }
 
   .tab_subtitle{
