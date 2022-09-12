@@ -290,25 +290,64 @@ a {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 1em 0 1em 4em;
+  margin-left: 20px;
   list-style-position: inside;
   font-size: 1.25em;
 }
 
 
 footer {
+  font-family: "Orbitron";
   width: 100%;
-  padding: 0.75em;
+  padding: 40px;
   background-color: rgba(10, 10, 10, 1);
-  text-align: center;
-  bottom: 0;
-  left: 0;
-  display: block;
   margin-top: 3em;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+footer .screen-reader-only {
+  position: absolute;
+  width: 1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  white-space: nowrap;
 }
 
-footer>p {
-  background-color: #0A0A0A;
+footer > div#SiteMap{
+  width: 40%;
+  max-width: 512px;
+  border-left: 2px solid red;
+  border-radius: 10px;
+  padding-left: 20px;
+}
+
+footer > div#SiteMap > p{
+  font-size: large;
+}
+
+footer > div#SiteMap >  ul{
+  list-style: none;
+}
+
+footer>div#siteInfo{
+  width: 40%;
+  max-width: 512px;
+}
+footer>div#siteInfo>p{
+  width: 80%;
+  margin: auto;
+}
+footer>div#siteInfo>h1{
+  width: 80%;
+  margin: auto;
+  text-indent: -9999px;
+  height: 60px;
+  background-image: url('../IMAGES/Logo_doom.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 footer>img {
@@ -320,16 +359,17 @@ footer>img {
 }
 
 .cookie-banner {
-  font-size: x-large;
+  font-size: large;
   border: 1px solid red;
   border-radius: 15px;
   position: fixed;
   bottom: 20px;
-  left: 5%;
+  left: 50%;
+  transform: translate(-50%);
   z-index: 200;
-  width: 90%;
+  width: 60%;
   background-color: rgba(0, 0, 0, 0.95);
-  padding: 2em;
+  padding: 1em;
 }
 
 .cookie-banner p {
@@ -399,8 +439,25 @@ footer>img {
     font-size: 0.8em;
   }
 
+  .cookie-banner {
+    font-size: medium;
+  }
+  
   footer > p {
     font-size: 0.8em;
+  }
+  footer > div#SiteMap{
+    display: none;
+  }
+  footer > div#siteInfo{
+    width: 95%;
+    text-align: center;
+  }
+  .main form.searchBar label{
+    font-size: 1.5em;
+  }
+  .main form.searchBar > input[type="text"]{
+    font-size: 1.3em;
   }
 
   footer > img {
@@ -494,7 +551,16 @@ footer>img {
 }
 
 @media screen and (max-width:360px) {
+  .lista{
+    margin:10px;
+    padding: 0;
+    list-style: none;
+    font-size: .6em;
+  }
   #logo {
     background-size: 30%;
+  }
+  footer>div#siteInfo{
+    font-size: .8em;
   }
 }

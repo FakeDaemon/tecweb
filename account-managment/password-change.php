@@ -17,7 +17,9 @@
   $level = 1;
   require '../SCRIPTS/.php/database_connection.php';
   include '../SCRIPTS/.php/user.php';
-  if (!(isset($_COOKIE['CookieAccepted'])) || !($_COOKIE['CookieAccepted'] == 'Accetta')) {header("location:../cookie_informativa.php");}
+  if (!(isset($_COOKIE['CookieAccepted'])) || !($_COOKIE['CookieAccepted'] == 'Accetta')) {
+    header("location:../cookie_informativa.php");
+  }
   $user = new User($conn);
   $GLOBALS['wrongPass'] = false;
   $GLOBALS['inputDifferent'] = false;
@@ -42,10 +44,11 @@
   }
   ?>
   <header>
-  <h1 id="logo">DOOM WIKI</h1>
+    <h1 id="logo">DOOM WIKI</h1>
     <label id="BurgherButtonLabel" for="BurgherButton">
       Menu
     </label>
+    <input type="checkbox" id="BurgherButton" aria-hidden="true" aria-label="Apri il menu">
     <nav id="NavBar">
       <ul id="MenuBar">
         <li class="MenuBarItem" lang="en"><a href="../index.php" lang="en">HOMEPAGE</a></li>
@@ -66,25 +69,24 @@
         <li class="MenuBarItem"><a href="../trivia.php">CURIOSITÀ</a></li>
       </ul>
       <div id="MenuUserWidget">
-        <div id="MenuUserWidget">
-          <div>
-            <?php
-            if ($user->isLogged()) echo "<p>" . $user->user_name . "</p>";
-            else echo "<p>OSPITE</p>";
-            if ($user->isLogged()) {
-              if ($user->isSuperUser()) echo "<a href='../siteManager.php'>Gestione Sito</a>";
-              echo "<a href='../account-managment.php'>Impostazioni</a>";
-            } else {
-              echo "<a href='../signup.php'>Registrati</a>";
-              echo "<a href='../login.php'>Entra</a>";
-            }
-            ?>
-          </div>
+        <div>
           <?php
-          if ($user->isLogged()) echo "<img src='..IMAGES/ProfilePics/ProfilePicN" . $user->profile_pic . ".jpg' alt='Doomguy, accedi o registrati!'>";
-          else echo "<img src='..IMAGES/ProfilePics/ProfilePicN1.jpg' alt='Doomguy, accedi o registrati!'>";
+          if ($user->isLogged()) echo "<p>" . $user->user_name . "</p>";
+          else echo "<p>OSPITE</p>";
+          if ($user->isLogged()) {
+            if ($user->isSuperUser()) echo "<a href='../siteManager.php'>Gestione Sito</a>";
+            echo "<a href='../account-managment.php'>Impostazioni</a>";
+          } else {
+            echo "<a href='../signup.php'>Registrati</a>";
+            echo "<a href='../login.php'>Entra</a>";
+          }
           ?>
         </div>
+        <?php
+        if ($user->isLogged()) echo "<img src='..//IMAGES/ProfilePics/ProfilePicN" . $user->profile_pic . ".jpg' alt='Doomguy, accedi o registrati!'>";
+        else echo "<img src='../IMAGES/ProfilePics/ProfilePicN1.jpg' alt='Doomguy, accedi o registrati!'>";
+        ?>
+      </div>
     </nav>
   </header>
   <div class="main">
@@ -123,21 +125,52 @@
       <input type="submit" name="SubmitButton" value="Conferma">
       <input id="ResetButton" type="reset" value="Pulisci">
 
+      <a href="../account-managment.php">Torna alle impostazioni.</a>
       <a href="../help.php">Serve aiuto?</a>
       <a class='ErrorMessage' href='credentialRecovery.php'><span lang='en'>Password</span> dimenticata?</a>
     </form>
 
   </div>
   <footer id="foot">
-    <p>
-      <span lang="en">&copy;Doom</span> è un marchio ragistrato <a href="https://bethesda.net/it/dashboard" target="_blank">2022 Bethesda Softworks LLC</a>,
-      a ZeniMax Media company. I marchi appartengono ai rispettivi proprietari.
-    </p>
-    <p>
-      L'informativa sui <span lang="en">cookie</span> è consultabile all'indirizzo <a href="cookie_informativa.php">Cookie-information</a>
-    </p>
-    <img class="imgVadidCode" src="..IMAGES/valid-xhtml10.png" alt="html valido" />
-    <img class="imgVadidCode" src="..IMAGES/vcss-blue.gif" alt="css valido" />
+
+    <div id="siteInfo">
+      <h1>Doom Wiki</h1>
+      <p>DoomWiki è sviluppato da appassionati e ammiratori del videogioco.</p>
+      <p><span lang="en">&copy;Doom</span> è un marchio ragistrato <a href="https://bethesda.net/it/dashboard" target="_blank">2022 Bethesda Softworks LLC<span class="screen-reader-only">(apre una nuova finestra)</span></a>,
+        un'azienda <span lang="en">ZeniMax Media</span>. I marchi appartengono ai rispettivi proprietari. Tutti i diritti riservati.</p>
+    </div>
+
+    <div id="SiteMap">
+      <p>Mappa del sito</p>
+      <ul>
+        <li lang="en"><a href="index.php">Homepage</a></li>
+        <li>Trama
+          <ul>
+            <li lang="en"><a href="../history.php">Doom <abbr title="Primo">I</abbr></a></li>
+            <li lang="en"><a href="../history_2.php">Doom <abbr title="Secondo">II</abbr></a></li>
+            <li lang="en"><a href="../history_3.php">Doom <abbr title="Terzo">III</abbr></a></li>
+            <li lang="en"><a href="../history_2016.php">Doom <abbr title="Quarto">IV</abbr></a></li>
+            <li lang="en"><a href="../history_eternals.php">Doom <abbr title="Quinto">V</abbr> (Doom eternal)</a></li>
+          </ul>
+        </li>
+        <li><a href="../stats.php">Statistiche</a></li>
+        <li><a href="../trivia.php">Curiosità</a></li>
+        <li><a href="../signup.php">Registrazione</a> (nuovo utente)</li>
+        <li><a href="../signup.php">Accesso</a> (utente già registrato)</li>
+        <li><a href="../account-managment.php">Impostazioni profilo (utente gia resitrato)</a>
+          <ul>
+            <li><a href="../account-managment/email-change.php">Cambio <span lang="en">email</span></a></li>
+            <li><a href="../account-managment/password-change.php">Cambio <span lang="en">password</span></a></li>
+            <li><a href="../account-managment/profile-pic-change.php">Cambio immagine-profilo</a></li>
+            <li><a href="../account-managment/username-change.php">Cambio nome utente</a></li>
+            <li><a href="../account-managment/delete-account.php">Eliminazione profilo</a></li>
+          </ul>
+        </li>
+        <li><a href="../help.php">Modulo assistenza</a></li>
+        <li><a href="../cookie_informativa.php">Informativa <span lang="en">cookie</span></a></li>
+      </ul>
+    </div>
+
   </footer>
   <script src="../SCRIPTS/.js/passwordchangepage.js"></script>
 </body>
