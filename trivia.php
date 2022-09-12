@@ -6,7 +6,7 @@
     <link href="CSS/PRINT_TRIVIA.css" rel="stylesheet" type="text/css" media="print" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron" />
     <meta charset="utf-8">
-    <title> Fun Fact </title>
+    <title> <span lang="en">Fun Fact</span> | <span lang="en">DoomWiki</span></title>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta name="keywords" content="DOOM, curiosità, trivia" />
     <meta name="description" content="Pagina riguardante le curiosità generali" />

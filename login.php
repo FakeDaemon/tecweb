@@ -6,9 +6,9 @@
   <link href="CSS/STYLE_COMMON.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron" />
   <meta charset="utf-8">
-  <title>Accedi | DoomWiki</title>
+  <title>Accedi | <span lang="en">DoomWiki</span></title>
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <meta name="keywords" content="DOOM, login, user" />
+  <meta name="keywords" content="DOOM WIKI, login, user" />
   <meta name="description" content="Pagina riguardante il login dell'utente" />
   <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano , Angeloni Alberto" />
 </head>

@@ -6,9 +6,9 @@
   <link href="CSS/STYLE_COMMON.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron" />
   <meta charset="utf-8">
-  <title>Registrazione | WikiDoom</title>
+  <title>Registrazione | <span lang="en">DoomWiki</span></title>
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <meta name="keywords" content="DOOM, sign up, user" />
+  <meta name="keywords" content="DOOM WIKI, sign up, user" />
   <meta name="description" content="Pagina che permette la registrazione di un utente" />
   <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://fonts.googleapis.com/ https://fonts.gstatic.com/;">
   <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano , Angeloni Alberto" />

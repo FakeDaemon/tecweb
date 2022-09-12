@@ -7,9 +7,9 @@
   <link href="CSS/PRINT_QUESTIONS.css" rel="stylesheet" type="text/css" media="print" />
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron" />
   <meta charset="utf-8">
-  <title> Home </title>
+  <title> Domande | <span lang="en">DoomWiki</span> </title>
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <meta name="keywords" content="DOOM, question, topic" />
+  <meta name="keywords" content="DOOM WIKI, domanda, utenti, topic" />
   <meta name="description" content="Pagina riguardante le domande poste dagli utenti" />
   <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano , Angeloni Alberto" />
 </head>

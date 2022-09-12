@@ -8,9 +8,9 @@
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <meta charset="utf-8">
-  <title> Home </title>
+  <title> <span lang="en">Home</span> | <span lang="en">DoomWiki</span> </title>
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <meta name="keywords" content="DOOM, home, community" />
+  <meta name="keywords" content="DOOM WIKI, benvenuti, community" />
   <meta name="description" content="Homepage della wiki" />
   <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano, Angeloni Alberto" />
 </head>

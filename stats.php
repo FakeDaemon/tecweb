@@ -6,9 +6,9 @@
     <link href="CSS/PRINT_STATS.css" rel="stylesheet" type="text/css" media="print" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron" />
     <meta charset="utf-8">
-    <title> Home </title>
+    <title> Armi | <span lang="en">DoomWiki</span> </title>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <meta name="keywords" content="DOOM, stats, weapons" />
+    <meta name="keywords" content="DOOM WIKI, armi, descrizione" />
     <meta name="description" content="Pagina riguardante le statistiche di gioco" />
     <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano , Angeloni Alberto" />
 </head>
