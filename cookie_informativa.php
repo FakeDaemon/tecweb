@@ -21,7 +21,7 @@
   if (isset($_POST['CookieAccepted']) && $_POST['CookieAccepted'] == 'Accetta') {
     setCookie('CookieAccepted', 'Accetta', time() + (86400 * 30));
     $_COOKIE['CookieAccepted'] = 'Accetta';
-    header('location : cookie_informativa.php');
+    header('location:cookie_informativa.php');
   }
   if (!(isset($_COOKIE['CookieAccepted'])) || !($_COOKIE['CookieAccepted'] == 'Accetta')) {
   ?>
@@ -90,7 +90,7 @@
     </script>
   </header>
   <div class="main">
-    <h1 id="replace1" lang="en">DOOM</h1>
+    <h1 id="replace6" lang="en">DOOM Wiki</h1>
     <article>
       <h2 class="paragrafo">Termini d’uso</h2>
       <section>

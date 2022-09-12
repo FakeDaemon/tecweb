@@ -23,7 +23,7 @@
   if (isset($_POST['CookieAccepted']) && $_POST['CookieAccepted'] == 'Accetta') {
     setCookie('CookieAccepted', 'Accetta', time() + (86400 * 30));
     $_COOKIE['CookieAccepted'] = 'Accetta';
-    header('location : signup.php');
+    header('location:signup.php');
   }
   if (!(isset($_COOKIE['CookieAccepted'])) || !($_COOKIE['CookieAccepted'] == 'Accetta')) {
   ?>
@@ -51,9 +51,9 @@
         $stmt->bind_param("sssss", $username, $passw, $currentDate, $currentDate, $_POST['email']);
         $stmt->execute();
         if ($stmt->affected_rows > 0)
-          header("location: signup.php?msg=accountCreated");
+          header("location:signup.php?msg=accountCreated");
         else
-          header("location: signup.php?msg=errorOnAccountCreation");
+          header("location:signup.php?msg=errorOnAccountCreation");
       } else {
         $GLOBALS['AlreadySigned'] = true;
       }
@@ -179,6 +179,9 @@
       <span lang="en">&copy;Doom</span> è un marchio ragistrato <a href="https://bethesda.net/it/dashboard" target="_blank">2022 Bethesda Softworks LLC</a>,
       a ZeniMax Media company. I marchi appartengono ai rispettivi proprietari.
       Tutti i diritti riservati.
+    </p>
+    <p>
+      L'informativa sui <span lang="en">cookie</span> è consultabile all'indirizzo <a href="cookie_informativa.php">Cookie-information</a>
     </p>
     <img class="imgVadidCode" src="IMAGES/valid-xhtml10.png" alt="html valido" />
     <img class="imgVadidCode" src="IMAGES/vcss-blue.gif" alt="css valido" />

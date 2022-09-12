@@ -25,7 +25,7 @@
   if (isset($_POST['CookieAccepted']) && $_POST['CookieAccepted'] == 'Accetta') {
     setCookie('CookieAccepted', 'Accetta', time() + (86400 * 30));
     $_COOKIE['CookieAccepted'] = 'Accetta';
-    header('location : questions.php');
+    header('location:questions.php');
   }
   if (!(isset($_COOKIE['CookieAccepted'])) || !($_COOKIE['CookieAccepted'] == 'Accetta')) {
   ?>
@@ -48,7 +48,7 @@
       $currentDate = date("Y-m-d H:i:s");
       $stmt->bind_param("ssis", htmlentities($commentBody), $currentDate, $_GET['id'], $user->email);
       $stmt->execute();
-      header("location: questions.php?id=" . $_GET['id']);
+      header("location:questions.php?id=" . $_GET['id']);
     }
   }
   ?>
@@ -286,15 +286,18 @@
       </div>
 
 
-      <footer id="foot">
-        <p>
-          <span lang="en">&copy;Doom</span> è un marchio ragistrato <a href="https://bethesda.net/it/dashboard" target="_blank">2022 Bethesda Softworks LLC</a>,
-          a ZeniMax Media company. I marchi appartengono ai rispettivi proprietari.
-          Tutti i diritti riservati.
-        </p>
-        <img class="imgVadidCode" src="IMAGES/valid-xhtml10.png" alt="html valido" />
-        <img class="imgVadidCode" src="IMAGES/vcss-blue.gif" alt="css valido" />
-      </footer>
+  <footer id="foot">
+    <p>
+      <span lang="en">&copy;Doom</span> è un marchio ragistrato <a href="https://bethesda.net/it/dashboard" target="_blank">2022 Bethesda Softworks LLC</a>,
+      a ZeniMax Media company. I marchi appartengono ai rispettivi proprietari.
+      Tutti i diritti riservati.
+    </p>
+    <p>
+      L'informativa sui <span lang="en">cookie</span> è consultabile all'indirizzo <a href="cookie_informativa.php">Cookie-information</a>
+    </p>
+    <img class="imgVadidCode" src="IMAGES/valid-xhtml10.png" alt="html valido" />
+    <img class="imgVadidCode" src="IMAGES/vcss-blue.gif" alt="css valido" />
+  </footer>
 </body>
 
 </html>

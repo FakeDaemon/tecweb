@@ -1,7 +1,6 @@
 <html lang="en" dir="ltr">
 
 <head>
-    <link href="CSS/STYLE.css" rel="stylesheet">
     <link href="CSS/STYLE_COMMON.css" rel="stylesheet">
     <link href="CSS/STYLE_TABLE.css" rel="stylesheet">
     <link href="CSS/PRINT_STATS.css" rel="stylesheet" type="text/css" media="print" />
@@ -22,7 +21,7 @@
     if (isset($_POST['CookieAccepted']) && $_POST['CookieAccepted'] == 'Accetta') {
         setCookie('CookieAccepted', 'Accetta', time() + (86400 * 30));
         $_COOKIE['CookieAccepted'] = 'Accetta';
-        header('location : stats.php');
+        header('location:stats.php');
     }
     if (!(isset($_COOKIE['CookieAccepted'])) || !($_COOKIE['CookieAccepted'] == 'Accetta')) {
     ?>
@@ -76,8 +75,8 @@
                     ?>
                 </div>
                 <?php
-                if ($user->isLogged()) echo "<img src='/IMAGES/ProfilePics/ProfilePicN" . $user->profile_pic . ".jpg' alt='Doomguy, accedi o registrati!'>";
-                else echo "<img src='/IMAGES/ProfilePics/ProfilePicN1.jpg' alt='Doomguy, accedi o registrati!'>";
+                if ($user->isLogged()) echo "<img src='IMAGES/ProfilePics/ProfilePicN" . $user->profile_pic . ".jpg' alt='Doomguy, accedi o registrati!'>";
+                else echo "<img src='IMAGES/ProfilePics/ProfilePicN1.jpg' alt='Doomguy, accedi o registrati!'>";
                 ?>
             </div>
         </nav>
@@ -310,6 +309,7 @@
             <span lang="en">&copy;Doom</span> è un marchio ragistrato <a href="https://bethesda.net/it/dashboard" target="_blank">2022 Bethesda Softworks LLC</a>,
             a ZeniMax Media company. I marchi appartengono ai rispettivi proprietari.
             Tutti i diritti riservati.
+            L'informativa sui <span lang="en">cookie</span> è consultabile all'indirizzo <a href="cookie_informativa.php">Cookie-information</a>
         </p>
         <img class="imgVadidCode" src="IMAGES/valid-xhtml10.png" alt="html valido" />
         <img class="imgVadidCode" src="IMAGES/vcss-blue.gif" alt="css valido" />
