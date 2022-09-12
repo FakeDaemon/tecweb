@@ -124,7 +124,7 @@
         echo "<p>Nessuno ha ancora chiesto quello che hai cercato.<a href='QuestionPage.php'>Chiedi alla community!</a></p> ";
       }
     } else {
-      echo "<span><p>Richerca non valida, sei un testa di cazzo, preferirei morire bruciato che avere un figlio come te. Comunque effettua una nuova ricerca <a href='#SearchBar'>qui</a>.</p><span>";
+      echo "<span><p>Richerca non valida. Riprova o prova ad usare altri termini usando l'<a href='#SearchBar'>area di testo</a>.</p><span>";
     }
       ?>
       </span>
