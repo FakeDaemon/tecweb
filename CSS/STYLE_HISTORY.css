@@ -9,6 +9,10 @@
   text-align: center;
 }
 
+.trivia_title{
+  margin: 1vh auto 0 auto;
+}
+
 .main > article {
   width: 100%;
 }
@@ -209,6 +213,11 @@ tbody > tr:hover {
 }
 
 @media screen and (max-width:992px){
+
+  .trivia_title{
+    margin: unset;
+  }
+
   .paragrafo {
     background: linear-gradient(to right, rgb(8, 8, 8) 70%, transparent) no-repeat;
     background-size: auto;
