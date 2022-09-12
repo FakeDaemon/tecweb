@@ -44,7 +44,7 @@
       Menu
     </label>
     <input type="checkbox" id="BurgherButton" aria-hidden="true" aria-label="Apri il menu">
-    <nav role="navigation" aria-label="Menu principale" id="NavBar">
+    <nav aria-label="Menu principale" id="NavBar">
       <ul id="MenuBar">
         <li class="MenuBarItem CurrentLocation" lang="en">HOMEPAGE</li>
         <li class="MenuBarItemNestedList">
