@@ -53,7 +53,7 @@
   }
   ?>
   <header>
-  <h1 id="logo">DOOM WIKI</h1>
+    <h1 id="logo">DOOM WIKI</h1>
     <label id="BurgherButtonLabel" for="BurgherButton">
       Menu
     </label>
@@ -127,23 +127,32 @@
 
       $commentCount = $_GET['page'] * 10;
       $a = 0;
-      while ($comment = $result->fetch_assoc()) {
-        if ($a >= $commentCount && $commentCount < 10 * ($_GET['page'] + 1)) {
-          echo "<div class='message" . ($comment["email"] === $user->email ? " ofUser" : "") . "'>";
-          echo "<div class='userDetails'>";
-          echo "<img src='IMAGES/ProfilePics/ProfilePicN" . ($comment['profile_pic'] != NULL ? $comment['profile_pic'] : 1) . ".jpg' alt='Doomguy, accedi o registrati!'>";
-          echo "<p class='username'>" . ($comment['user_name'] != NULL ? $comment['user_name'] : "utente eliminato") . "</p>";
-          echo "<p class='messageDatestamp'>Postato il " . $comment['writeDate'] . "</p>";
-          echo "</div>";
-          if ($comment['state'] === 'Deleted') {
-            echo "<p class='text'><span>Il commento è stato eliminato</span></p>";
-          } else {
-            echo "<p class='text'>" . ($comment['state'] === 'Modified' ? "<span>ATTENZIONE: il commento è stato modificato.</span><br><br>" : "") . $comment['commentBody'] . ($comment["email"] === $user->email ? "<br><br><a href='answerChange.php?cid=" . $comment['id'] . "&tid=" . $_GET['id'] . "&page=" . ($_GET['page'] !== NULL ? $_GET['page'] : "0") . "'>Gestisci risposta</a>" : "") . "</p>";
+      if ($result->num_rows > $commentCount) {
+        while ($comment = $result->fetch_assoc()) {
+          if ($a >= $commentCount && $commentCount < 10 * ($_GET['page'] + 1)) {
+            echo "<div class='message" . ($comment["email"] === $user->email ? " ofUser" : "") . "'>";
+            echo "<div class='userDetails'>";
+            echo "<img src='/IMAGES/ProfilePics/ProfilePicN" . ($comment['profile_pic'] != NULL ? $comment['profile_pic'] : 1) . ".jpg' alt='Doomguy, accedi o registrati!'>";
+            echo "<p class='username'>" . ($comment['user_name'] != NULL ? $comment['user_name'] : "utente eliminato") . "</p>";
+            echo "<p class='messageDatestamp'>Postato il " . $comment['writeDate'] . "</p>";
+            echo "</div>";
+            if ($comment['state'] === 'Deleted') {
+              echo "<p class='text'><span>Il commento è stato eliminato</span></p>";
+            } else {
+              echo "<p class='text'>" . ($comment['state'] === 'Modified' ? "<span>ATTENZIONE: il commento è stato modificato.</span><br><br>" : "") . $comment['commentBody'] . ($comment["email"] === $user->email ? "<br><br><a href='answerChange.php?cid=" . $comment['id'] . "&tid=" . $_GET['id'] . "&page=" . ($_GET['page'] !== NULL ? $_GET['page'] : "0") . "'>Gestisci risposta</a>" : "") . "</p>";
+            }
+            echo "</div>";
+            $commentCount++;
           }
-          echo "</div>";
-          $commentCount++;
         }
-        $a++;
+      } else {
+        echo "<div class='message'>";
+        echo "<div class='userDetails'>";
+        echo "<img src='/IMAGES/ProfilePics/ProfilePicN" . ($comment['profile_pic'] != NULL ? $comment['profile_pic'] : 1) . ".jpg' alt='DoomWiki Avatar.'>";
+        echo "<p class='username'>DoomWiki</p>";
+        echo "</div>";
+        echo "<p class='text'>Nessuno ha ancora risposto alla domanda.</p>";
+        echo "</div>";
       }
       echo "</div>";
 
@@ -244,37 +253,37 @@
     ?>
       <p>Ulitime domande degli utenti</p>
       <div class="TPList">
-    <?php
-      if ($result->num_rows === 0) {
+        <?php
+        if ($result->num_rows === 0) {
         ?>
           <p>Nessuna domanda ancora registrata.</p>
-          <?php
-      } else {
-        while ($row = $result->fetch_assoc()) {
-          echo '<a href="questions.php?id=' . $row['id'] . '"><p class="title">' . $row['title'] . '</p><p class="details">Aperto da ' . ($row['user_name'] != NULL ? $row['user_name'] : "utente eliminato") . ' in data ' . $row['creation_date'] . '</p></a>';
+        <?php
+        } else {
+          while ($row = $result->fetch_assoc()) {
+            echo '<a href="questions.php?id=' . $row['id'] . '"><p class="title">' . $row['title'] . '</p><p class="details">Aperto da ' . ($row['user_name'] != NULL ? $row['user_name'] : "utente eliminato") . ' in data ' . $row['creation_date'] . '</p></a>';
+          }
         }
-      }
-    }else if (isset($_GET['Comments']) && $_GET['Comments'] === "") {
-      $stmt = $conn->prepare("SELECT t.id, u.user_name, t.title, t.creation_date,COUNT(c.id) AS CommentsCount FROM DoomWiki.topics AS t LEFT OUTER JOIN DoomWiki.users AS u ON t.email = u.fst_mail LEFT OUTER JOIN DoomWiki.comments AS c ON c.topicID=t.id WHERE t.state='Approved' GROUP BY t.id ORDER BY CommentsCount DESC;");
-      $stmt->execute();
-      $result = $stmt->get_result();
-    ?>
-      <p>Ulitime domande degli utenti</p>
-      <div class="TPList">
-    <?php
-      if ($result->num_rows === 0) {
+      } else if (isset($_GET['Comments']) && $_GET['Comments'] === "") {
+        $stmt = $conn->prepare("SELECT t.id, u.user_name, t.title, t.creation_date,COUNT(c.id) AS CommentsCount FROM DoomWiki.topics AS t LEFT OUTER JOIN DoomWiki.users AS u ON t.email = u.fst_mail LEFT OUTER JOIN DoomWiki.comments AS c ON c.topicID=t.id WHERE t.state='Approved' GROUP BY t.id ORDER BY CommentsCount DESC;");
+        $stmt->execute();
+        $result = $stmt->get_result();
         ?>
-          <p>Nessuna domanda ancora registrata.</p>
+        <p>Ulitime domande degli utenti</p>
+        <div class="TPList">
           <?php
-      } else {
-        while ($row = $result->fetch_assoc()) {
-          echo '<a href="questions.php?id=' . $row['id'] . '"><p class="title">' . $row['title'] . '</p><p class="details">Aperto da ' . ($row['user_name'] != NULL ? $row['user_name'] : "utente eliminato") . ' in data ' . $row['creation_date'] . '</p><p>Numero risposte : ' . $row['CommentsCount'] . '</p></a>';
+          if ($result->num_rows === 0) {
+          ?>
+            <p>Nessuna domanda ancora registrata.</p>
+        <?php
+          } else {
+            while ($row = $result->fetch_assoc()) {
+              echo '<a href="questions.php?id=' . $row['id'] . '"><p class="title">' . $row['title'] . '</p><p class="details">Aperto da ' . ($row['user_name'] != NULL ? $row['user_name'] : "utente eliminato") . ' in data ' . $row['creation_date'] . '</p><p>Numero risposte : ' . $row['CommentsCount'] . '</p></a>';
+            }
+          }
         }
-      }
-    }
-    ?>
-    </div>
-  </div>
+        ?>
+        </div>
+      </div>
 
 
   <footer id="foot">

@@ -7,6 +7,7 @@ img {
 
 .TopicList > * {
   font-family: "Times New Roman", Times, serif;
+  break-inside: avoid;
 }
 
 .TopicList > p {
@@ -28,21 +29,21 @@ a:after {
 .TopicList > a {
   border: none;
   background-color: transparent;
-  padding: 0em;
+  padding: 0;
   color: black;
 }
 
 .TopicList > a > p.title {
   border: none;
   background-color: transparent;
-  padding: 0em;
+  padding: 0;
   color: black;
 }
 
 .TopicList > a > p.details {
   border: none;
   background-color: transparent;
-  padding: 1em;
+  padding: 1cm;
   color: black;
 }
 
@@ -60,44 +61,44 @@ header > #logo {
   position: relative;
   margin: auto;
   color: black;
-  font-size: 5em;
+  font-size: 20pt;
   text-indent: 0px;
   display: inline;
 }
 
 .main > #Welcome_Messages {
   text-align: center;
-  font-size: 1.5em;
+  font-size: 18pt;
   font-weight: bold;
   font-family: "Times New Roman", Times, serif;
 }
 
 .main > #SubMessage {
   text-align: center;
-  font-size: 1em;
+  font-size: 12pt;
   font-family: "Times New Roman", Times, serif;
 }
 
 h1 {
-  font-size: 2.5em;
+  font-size: 20pt;
   margin: auto;
   color: black;
 }
 
 h2 {
-  font-size: 1.5em;
+  font-size: 18pt;
   color: black;
 }
 
 h3 {
-  font-size: 1.35em;
+  font-size: 16pt;
   color: black;
 }
 
 p {
   color: black;
-  font-size: 1em;
-  margin-bottom: 0.5em;
+  font-size: 12pt;
+  margin-bottom: 0.5cm;
   text-align: justify;
   background-color: transparent;
 }
@@ -105,21 +106,21 @@ p {
 .TopicList > p.title {
   color: black;
   background-color: transparent;
-  font-size: 1em;
-  margin-bottom: 0.5em;
+  font-size: 12pt;
+  margin-bottom: 0.5cm;
   text-align: justify;
 }
 
 table {
   border-style: solid;
-  border-width: 0.1em;
+  border-width: 0.1cm;
   background-color: transparent;
   text-align: center;
   margin: auto;
 }
 
 caption {
-  font-size: 1.4em;
+  font-size: 18pt;
   font-weight: bold;
   opacity: 100%;
   display: table-caption;
@@ -128,7 +129,7 @@ caption {
 
 thead > tr,
 thead > th {
-  font-size: 1.3em;
+  font-size: 16pt;
 }
 
 thead > tr:nth-child(1) {
@@ -140,10 +141,10 @@ tr,
 th {
   color: black;
   background-color: transparent;
-  font-size: 1em;
+  font-size: 12pt;
 }
 
 footer > p {
-  font-size: 1em;
+  font-size: 12pt;
   color: black;
 }
