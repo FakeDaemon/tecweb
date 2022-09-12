@@ -26,7 +26,7 @@
   if (isset($_POST['CookieAccepted']) && $_POST['CookieAccepted'] == 'Accetta') {
     setCookie('CookieAccepted', 'Accetta', time() + (86400 * 30));
     $_COOKIE['CookieAccepted'] = 'Accetta';
-    header('location : questionEditor.php');
+    header('location:questionEditor.php');
   }
   if (!(isset($_COOKIE['CookieAccepted'])) || !($_COOKIE['CookieAccepted'] == 'Accetta')) {
   ?>
@@ -54,9 +54,9 @@
       $stmt->bind_param("ssss", $title, $description, $creationDate, $user->email);
       $stmt->execute();
       if ($conn->connect_error) {
-        header("location: questionEditor.php?Error");
+        header("location:questionEditor.php?Error");
       }
-      header("location: questionEditor.php?Success");
+      header("location:questionEditor.php?Success");
     } else {
       $row = $result->fetch_assoc();
       header("location:questionEditor?Duplicate=" . $row['id']);

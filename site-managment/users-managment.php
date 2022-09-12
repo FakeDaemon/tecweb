@@ -20,9 +20,9 @@
   include '../SCRIPTS/.php/user.php';
 
   $user = new User($conn);
-  if (!(isset($_COOKIE['CookieAccepted'])) || !($_COOKIE['CookieAccepted'] == 'Accetta')) {header("location: ../cookie_informativa.php");}
-  if (!$user->isLogged()) header("location: ../login.php");
-  if (!$user->isSuperUser()) header("location: ../error.html");
+  if (!(isset($_COOKIE['CookieAccepted'])) || !($_COOKIE['CookieAccepted'] == 'Accetta')) {header("location:../cookie_informativa.php");}
+  if (!$user->isLogged()) header("location:../login.php");
+  if (!$user->isSuperUser()) header("location:../error.html");
 
   $result = $conn->query("SELECT fst_mail, user_name, profile_pic FROM DoomWiki.users WHERE ROLE = 'default'");
   $usersList = array();
@@ -51,12 +51,12 @@
           $stmt2->bind_param("sss", $_POST['UserEmail'], $currentDate, htmlentities($_POST['message']));
           $stmt->execute();
           $stmt2->execute();
-          header("location: users-managment.php?success");
+          header("location:users-managment.php?success");
         } else if ($_POST['action'] == "Rendi Mod") {
           $stmt = $conn->prepare("UPDATE DoomWiki.users SET role='mod' WHERE fst_mail=?");
           $stmt->bind_param("s", $_POST['UserEmail']);
           $stmt->execute();
-          header("location: users-managment.php?success");
+          header("location:users-managment.php?success");
         }
       }
     }

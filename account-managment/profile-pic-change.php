@@ -18,21 +18,21 @@
   $level = 1;
   require '../SCRIPTS/.php/database_connection.php';
   include '../SCRIPTS/.php/user.php';
-  if (!(isset($_COOKIE['CookieAccepted'])) || !($_COOKIE['CookieAccepted'] == 'Accetta')) {header("location: ../cookie_informativa.php");}
+  if (!(isset($_COOKIE['CookieAccepted'])) || !($_COOKIE['CookieAccepted'] == 'Accetta')) {header("location:../cookie_informativa.php");}
   $user = new User($conn);
-  if (!$user->isLogged()) header("location: ../login.php");
+  if (!$user->isLogged()) header("location:../login.php");
   if (isset($_GET['act']) && $_GET['act'] == "rmv") {
     $stmt = $conn->prepare("UPDATE DoomWiki.users SET profile_pic = ? WHERE SessID = ?");
     $profile_pic = 1;
     $stmt->bind_param("is", $profile_pic, $_COOKIE['SessionID']);
     $stmt->execute();
-    header("location: ../account-managment.php?msg=Success");
+    header("location:../account-managment.php?msg=Success");
   }
   if (isset($_POST['profilePic'])) {
     $stmt = $conn->prepare("UPDATE DoomWiki.users SET profile_pic = ? WHERE SessID = ?");
     $stmt->bind_param("is", $_POST['profilePic'], $_COOKIE['SessionID']);
     $stmt->execute();
-    header("location: ../account-managment.php?msg=Success");
+    header("location:../account-managment.php?msg=Success");
   }
   ?>
   <header>

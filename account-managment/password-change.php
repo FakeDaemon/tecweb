@@ -17,12 +17,12 @@
   $level = 1;
   require '../SCRIPTS/.php/database_connection.php';
   include '../SCRIPTS/.php/user.php';
-  if (!(isset($_COOKIE['CookieAccepted'])) || !($_COOKIE['CookieAccepted'] == 'Accetta')) {header("location: ../cookie_informativa.php");}
+  if (!(isset($_COOKIE['CookieAccepted'])) || !($_COOKIE['CookieAccepted'] == 'Accetta')) {header("location:../cookie_informativa.php");}
   $user = new User($conn);
   $GLOBALS['wrongPass'] = false;
   $GLOBALS['inputDifferent'] = false;
 
-  if (!$user->isLogged()) header("location: ../login.php");
+  if (!$user->isLogged()) header("location:../login.php");
 
   if (isset($_POST['OldPassword']) && isset($_POST['NewPassword']) && isset($_POST['NewPasswordConfirm'])) {
     if (password_verify($_POST['OldPassword'], $user->password)) {
@@ -32,7 +32,7 @@
         $psw = password_hash($_POST['NewPassword'], PASSWORD_DEFAULT);
         $stmt->bind_param("sss", $psw, $currentDate, $_COOKIE['SessionID']);
         $stmt->execute();
-        header("location: ../account-managment.php?msg=Success");
+        header("location:../account-managment.php?msg=Success");
       } else {
         $GLOBALS['inputDifferent'] = true;
       }

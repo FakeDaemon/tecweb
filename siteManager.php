@@ -20,11 +20,11 @@
   include 'SCRIPTS/.php/user.php';
 
   $user = new User($conn);
-  if (!$user->isLogged() || !$user->isSuperUser()) header("location: account-managment.php");
+  if (!$user->isLogged() || !$user->isSuperUser()) header("location:account-managment.php");
   if (isset($_POST['CookieAccepted']) && $_POST['CookieAccepted'] == 'Accetta') {
     setCookie('CookieAccepted', 'Accetta', time() + (86400 * 30));
     $_COOKIE['CookieAccepted'] = 'Accetta';
-    header('location : siteManager.php');
+    header('location:siteManager.php');
   }
   if (!(isset($_COOKIE['CookieAccepted'])) || !($_COOKIE['CookieAccepted'] == 'Accetta')) {
   ?>

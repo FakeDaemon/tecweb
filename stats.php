@@ -22,7 +22,7 @@
     if (isset($_POST['CookieAccepted']) && $_POST['CookieAccepted'] == 'Accetta') {
         setCookie('CookieAccepted', 'Accetta', time() + (86400 * 30));
         $_COOKIE['CookieAccepted'] = 'Accetta';
-        header('location : stats.php');
+        header('location:stats.php');
     }
     if (!(isset($_COOKIE['CookieAccepted'])) || !($_COOKIE['CookieAccepted'] == 'Accetta')) {
     ?>

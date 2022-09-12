@@ -23,7 +23,7 @@
   if (isset($_POST['CookieAccepted']) && $_POST['CookieAccepted'] == 'Accetta') {
     setCookie('CookieAccepted', 'Accetta', time() + (86400 * 30));
     $_COOKIE['CookieAccepted'] = 'Accetta';
-    header('location : account-managment.php');
+    header('location:account-managment.php');
   }
   if (!(isset($_COOKIE['CookieAccepted'])) || !($_COOKIE['CookieAccepted'] == 'Accetta')) {
   ?>
@@ -37,14 +37,14 @@
     </form>
   <?php
   }
-  if (!$user->isLogged()) header("location: login.php");
+  if (!$user->isLogged()) header("location:login.php");
   if (isset($_GET['act']) && $_GET['act'] == 'closeSess') {
     $stmt = $conn->prepare("UPDATE DoomWiki.users SET SessID = NULL WHERE fst_mail = ?");
     $stmt->bind_param("s", $user->email);
     $stmt->execute();
     setcookie("SessionID", "", time() + 60 * 60 * 24 * 365);
     $_COOKIE["SessionID"] = "";
-    header("location: /");
+    header("location:index.php");
   }
   ?>
   <header>

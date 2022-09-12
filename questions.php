@@ -25,7 +25,7 @@
   if (isset($_POST['CookieAccepted']) && $_POST['CookieAccepted'] == 'Accetta') {
     setCookie('CookieAccepted', 'Accetta', time() + (86400 * 30));
     $_COOKIE['CookieAccepted'] = 'Accetta';
-    header('location : questions.php');
+    header('location:questions.php');
   }
   if (!(isset($_COOKIE['CookieAccepted'])) || !($_COOKIE['CookieAccepted'] == 'Accetta')) {
   ?>
@@ -48,7 +48,7 @@
       $currentDate = date("Y-m-d H:i:s");
       $stmt->bind_param("ssis", htmlentities($commentBody), $currentDate, $_GET['id'], $user->email);
       $stmt->execute();
-      header("location: questions.php?id=" . $_GET['id']);
+      header("location:questions.php?id=" . $_GET['id']);
     }
   }
   ?>

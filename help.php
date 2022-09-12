@@ -22,7 +22,7 @@
   if (isset($_POST['CookieAccepted']) && $_POST['CookieAccepted'] == 'Accetta') {
     setCookie('CookieAccepted', 'Accetta', time() + (86400 * 30));
     $_COOKIE['CookieAccepted'] = 'Accetta';
-    header('location : help.php');
+    header('location:help.php');
   }
   if (!(isset($_COOKIE['CookieAccepted'])) || !($_COOKIE['CookieAccepted'] == 'Accetta')) {
   ?>
@@ -45,7 +45,7 @@
         $currentDate = date("Y-m-d H:i:s");
         $stmt->bind_param("sss", htmlentities($_POST['message']), $currentDate, $_POST['email']);
         $stmt->execute();
-        header('location: help.php?Success');
+        header('location:help.php?Success');
       }else{
         $GLOBALS["messageWrongFormat"] = true;
       }

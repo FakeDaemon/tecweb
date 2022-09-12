@@ -18,16 +18,16 @@
   $level = 1;
   require '../SCRIPTS/.php/database_connection.php';
   include '../SCRIPTS/.php/user.php';
-  if (!(isset($_COOKIE['CookieAccepted'])) || !($_COOKIE['CookieAccepted'] == 'Accetta')) {header("location: ../cookie_informativa.php");}
+  if (!(isset($_COOKIE['CookieAccepted'])) || !($_COOKIE['CookieAccepted'] == 'Accetta')) {header("location:../cookie_informativa.php");}
   $user = new User($conn);
-  if (!$user->isLogged() || !$user->isSuperUser()) header("location: account-managment.php");
+  if (!$user->isLogged() || !$user->isSuperUser()) header("location:../account-managment.php");
   if (isset($_POST['act'])) {
     if ($_POST['act'] == "Accetta") {
       $stmt = $conn->prepare("UPDATE DoomWiki.topics SET state='Approved', modified_date=? WHERE id=?");
       $currentDate = date("Y-m-d H:i:s");
       $stmt->bind_param("ss", $currentDate, $_POST['reviewID']);
       $stmt->execute();
-      header("location: topic-managment.php?success");
+      header("location:topic-managment.php?success");
     } else if ($_POST['act'] == "Rifiuta") {
       $GLOBALS['RejectAction'] = true;
     } else if ($_POST['act'] == "Conferma") {
@@ -36,9 +36,9 @@
       var_dump($_POST);
       $stmt->bind_param("sss", $currentDate, $_POST['rejectReason'], $_POST['reviewID']);
       $stmt->execute();
-      header("location: topic-managment.php?success");
+      header("location:topic-managment.php?success");
     } else {
-      header("location: topic-managment.php?Error");
+      header("location:topic-managment.php?Error");
     }
   }
   ?>

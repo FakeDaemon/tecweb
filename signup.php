@@ -23,7 +23,7 @@
   if (isset($_POST['CookieAccepted']) && $_POST['CookieAccepted'] == 'Accetta') {
     setCookie('CookieAccepted', 'Accetta', time() + (86400 * 30));
     $_COOKIE['CookieAccepted'] = 'Accetta';
-    header('location : signup.php');
+    header('location:signup.php');
   }
   if (!(isset($_COOKIE['CookieAccepted'])) || !($_COOKIE['CookieAccepted'] == 'Accetta')) {
   ?>
@@ -51,9 +51,9 @@
         $stmt->bind_param("sssss", $username, $passw, $currentDate, $currentDate, $_POST['email']);
         $stmt->execute();
         if ($stmt->affected_rows > 0)
-          header("location: signup.php?msg=accountCreated");
+          header("location:signup.php?msg=accountCreated");
         else
-          header("location: signup.php?msg=errorOnAccountCreation");
+          header("location:signup.php?msg=errorOnAccountCreation");
       } else {
         $GLOBALS['AlreadySigned'] = true;
       }

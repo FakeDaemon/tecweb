@@ -17,9 +17,9 @@
   $level = 1;
   require '../SCRIPTS/.php/database_connection.php';
   include '../SCRIPTS/.php/user.php';
-  if (!(isset($_COOKIE['CookieAccepted'])) || !($_COOKIE['CookieAccepted'] == 'Accetta')) {header("location: ../cookie_informativa.php");}
+  if (!(isset($_COOKIE['CookieAccepted'])) || !($_COOKIE['CookieAccepted'] == 'Accetta')) {header("location:../cookie_informativa.php");}
   $user = new User($conn);
-  if (!$user->isLogged() || !$user->isSuperUser()) header("location: ../account-managment.php");
+  if (!$user->isLogged() || !$user->isSuperUser()) header("location:../account-managment.php");
   if (isset($_POST['helpRequestID']) && isset($_POST['act'])) {
     if ($_POST['act'] == 'Gestisci') {
       $stmt = $conn->prepare("UPDATE DoomWiki.helpRequests SET requestMod=?, requestState = 'WorkingOn' WHERE id=?");
@@ -27,9 +27,9 @@
       $stmt->execute();
       $result = $stmt->get_result();
       if ($result->affected_row > 0) {
-        header("location : help-requests.php?Success");
+        header("location:help-requests.php?Success");
       } else {
-        header("location : help-requests.php?Fail");
+        header("location:help-requests.php?Fail");
       }
     } else if ($_POST['act'] == 'Risolvi') {
       $stmt = $conn->prepare("UPDATE DoomWiki.helpRequests SET requestState = 'Resolved' WHERE requestMod=? AND id=?");
@@ -37,9 +37,9 @@
       $stmt->execute();
       $result = $stmt->get_result();
       if ($result->affected_row > 0) {
-        header("location : help-requests.php?Success");
+        header("location:help-requests.php?Success");
       } else {
-        header("location : help-requests.php?Fail");
+        header("location:help-requests.php?Fail");
       }
     }
   }

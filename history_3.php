@@ -29,7 +29,7 @@
             'time() + (86400 * 30)'
         );
         $_COOKIE['CookieAccepted'] = 'Accetta';
-        header('location : history_3.php');
+        header('location:history_3.php');
     }
     if (
         !(isset($_COOKIE['CookieAccepted'])) ||

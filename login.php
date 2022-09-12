@@ -21,7 +21,7 @@
   if (isset($_POST['CookieAccepted']) && $_POST['CookieAccepted'] == 'Accetta') {
     setCookie('CookieAccepted', 'Accetta', time() + (86400 * 30));
     $_COOKIE['CookieAccepted'] = 'Accetta';
-    header('location : login.php');
+    header('location:login.php');
   }
   if (!(isset($_COOKIE['CookieAccepted'])) || !($_COOKIE['CookieAccepted'] == 'Accetta')) {
   ?>
@@ -35,7 +35,7 @@
     </form>
   <?php
   }
-  if ($user->isLogged()) header("location: account-managment.php");
+  if ($user->isLogged()) header("location:account-managment.php");
   if (isset($_POST['email']) && isset($_POST['password']) && !empty($_POST['password']) && !empty($_POST['email'])) {
     if (!preg_match("/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/", $_POST['email'])) {
       $ret = "emailWrongFormat";
@@ -67,7 +67,7 @@
           $_COOKIE["SessionID"] = $SessID;
 
           $conn->close();
-          header("location: index.php");
+          header("location:index.php");
         } else {
           $ret = "wrongPassword";
         }

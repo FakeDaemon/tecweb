@@ -17,9 +17,9 @@
   $level = 1;
   require '../SCRIPTS/.php/database_connection.php';
   include '../SCRIPTS/.php/user.php';
-  if (!(isset($_COOKIE['CookieAccepted'])) || !($_COOKIE['CookieAccepted'] == 'Accetta')) {header("location: ../cookie_informativa.php");}
+  if (!(isset($_COOKIE['CookieAccepted'])) || !($_COOKIE['CookieAccepted'] == 'Accetta')) {header("location:../cookie_informativa.php");}
   $user = new User($conn);
-  if (!$user->isLogged()) header("location: ../login.php");
+  if (!$user->isLogged()) header("location:../login.php");
   $GLOBALS['wrongPass'] = false;
   if (isset($_POST['Password']) && $_POST['Password'] != "") {
     if (password_verify($_POST['Password'], $user->password)) {
@@ -34,7 +34,7 @@
           $stmt->bind_param("ss", ($_POST['SecondEmail']), $_COOKIE['SessionID']);
           $stmt->execute();
         }
-        header("location: ../account-managment.php?msg=Success");
+        header("location:../account-managment.php?msg=Success");
       }
     } else {
       $GLOBALS['wrongPass'] = true;
