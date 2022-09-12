@@ -110,7 +110,7 @@
       if (isset($_POST['SecondEmail']) && $_POST['SecondEmail'] !== '') {
         echo '<input id="SecondaryMail" type="email" name="SecondEmail" value=' . $_POST['SecondEmail'] . '>';
       } else {
-        echo '<input id="SecondaryMail" type="email" name="SecondEmail" placeholder=' . $user->secondaryEmail . '>';
+        echo '<input id="SecondaryMail" type="email" name="SecondEmail" '. ($user->secondaryEmail!==NULL ? ('placeholder=' . $user->secondaryEmail) : ''). '>';
       }
       ?>
       <label for="Password"><span lang="en">Password</span></label>
