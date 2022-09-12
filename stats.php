@@ -87,219 +87,219 @@
             <caption>Armi</caption>
             <thead>
                 <tr>
-                    <th class="head">Nome Arma</th>
-                    <th class="head">Descrizione</th>
-                    <th class="head">Presente in</th>
+                    <th scope="col" class="head">Nome Arma</th>
+                    <th scope="col" class="head">Descrizione</th>
+                    <th scope="col" class="head">Presente in</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <th>
+                    <th scope="row">
                         <span lang="en">Fists</span>
                     </th>
-                    <th>
+                    <td>
                         Arma base per attacchi ravvicinati. Munizioni infinite, crea danno quanto un colpo di <span lang="en">Pistol</span>; normalmente usate come ultima spiaggia oppure in modalità berserk.
-                    </th>
-                    <th>DOOM, DOOM2, DOOM3, DOOM(2016), DOOM Eternal</th>
+                    </td>
+                    <td>DOOM, DOOM2, DOOM3, DOOM(2016), DOOM Eternal</td>
                 </tr>
                 <tr>
-                    <th>
+                    <th scope="row">
                         <span lang="en">Chainsaw</span>
                     </th>
-                    <th>
+                    <td>
                         Fa lo stesso danno dei <span lang="en">Fists</span> ma 4 volte più veloce
-                    </th>
-                    <th>DOOM, DOOM2, DOOM3, DOOM(2016), DOOM Eternal</th>
+                    </td>
+                    <td>DOOM, DOOM2, DOOM3, DOOM(2016), DOOM Eternal</td>
                 </tr>
                 <tr>
-                    <th>
+                    <th scope="row">
                         <span lang="en">Pistol</span>
                     </th>
-                    <th>
+                    <td>
                         Arma a lungo raggio di default. Quasi completamente inutile con avversari più forti di <span lang="en">zombieman</span> oppure <span lang="en">shotgun guy</span>
-                    </th>
-                    <th>DOOM, DOOM2, DOOM3, DOOM(2016), DOOM Eternal</th>
+                    </td>
+                    <td>DOOM, DOOM2, DOOM3, DOOM(2016), DOOM Eternal</td>
                 </tr>
                 <tr>
-                    <th>
+                    <th scope="row">
                         <span lang="en">Chaingun</span>
                     </th>
-                    <th>
+                    <td>
                         Molto utile contro le folle di piccoli mostri o singoli mostri grossi. Ha un <span lang="en"> rate of fire</span> molto alto e si rischia spesso di esaurire le munizioni
-                    </th>
-                    <th>DOOM, DOOM2, DOOM3, DOOM(2016), DOOM Eternal</th>
+                    </td>
+                    <td>DOOM, DOOM2, DOOM3, DOOM(2016), DOOM Eternal</td>
                 </tr>
                 <tr>
-                    <th>
+                    <th scope="row">
                         <span lang="en">Rocket launcher</span>
                     </th>
-                    <th>
+                    <td>
                         Lancia razzi esplosivi. Fa molto danno, ma si rischia di autoinfliggersi seri danni se usato a corto raggio.
-                    </th>
-                    <th>DOOM, DOOM2, DOOM3, DOOM(2016), DOOM Eternal</th>
+                    </td>
+                    <td>DOOM, DOOM2, DOOM3, DOOM(2016), DOOM Eternal</td>
                 </tr>
                 <tr>
-                    <th>
+                    <th scope="row">
                         <span lang="en">Plasma gun</span>
 
                     </th>
-                    <th>
+                    <td>
                         Spara impulsi di plasma blu ad elevata velocità. Se usato appropriatamente può demolire facilmente un gruppo di nemici
-                    </th>
-                    <th>DOOM, DOOM2, DOOM3, DOOM(2016), DOOM Eternal</th>
+                    </td>
+                    <td>DOOM, DOOM2, DOOM3, DOOM(2016), DOOM Eternal</td>
                 <tr>
-                    <th>
+                    <th scope="row">
                         <abbr lang="en" title="Big Fucking Gun 9000">BFG9000</abbr>
                     </th>
-                    <th>
+                    <td>
                         <span lang="en">The "Big Fucking Gun"</span>, piuttosto controintuitivo il suo utilizzo, soprattutto per un giocatore alle prime armi. In compenso elimina quasi tutti i nemici in un singolo colpo.
-                    </th>
-                    <th>DOOM, DOOM2, DOOM3, DOOM3("<span lang="en">Ressurrection of evil</span>") DOOM(2016), DOOM Eternal</th>
+                    </td>
+                    <td>DOOM, DOOM2, DOOM3, DOOM3("<span lang="en">Ressurrection of evil</span>") DOOM(2016), DOOM Eternal</td>
                 </tr>
                 <tr>
-                    <th><span lang="en">Super Shotgun</span></th>
-                    <th>Una doppietta a canne mozze che richiede molto tempo per la ricarica dei proiettili, a distanza ravvicinata risulta più letale del normale <span lang="en">Shotgun</span></th>
-                    <th>DOOM2, DOOM3("<span lang="en">Ressurrection of evil</span>"), DOOM(2016), DOOM Eternal</th>
+                    <th scope="row"><span lang="en">Super Shotgun</span></th>
+                    <td>Una doppietta a canne mozze che richiede molto tempo per la ricarica dei proiettili, a distanza ravvicinata risulta più letale del normale <span lang="en">Shotgun</span></td>
+                    <td>DOOM2, DOOM3("<span lang="en">Ressurrection of evil</span>"), DOOM(2016), DOOM Eternal</td>
                 </tr>
                 <tr>
-                    <th><span lang="en">Flashlight</span></th>
-                    <th>Di per sè non è un'arma ma fa il doppio del danno dei pugni. Ma il raggio di azione è ridotto</th>
-                    <th>DOOM3, DOOM3("<span lang="en">Ressurrection of evil</span>")</th>
+                    <th scope="row"><span lang="en">Flashlight</span></th>
+                    <td>Di per sè non è un'arma ma fa il doppio del danno dei pugni. Ma il raggio di azione è ridotto</td>
+                    <td>DOOM3, DOOM3("<span lang="en">Ressurrection of evil</span>")</td>
                 </tr>
                 <tr>
-                    <th><span lang="en">Machine Gun</span></th>
-                    <th>Simile alla <span lang="en">Chaingun</span>, meno potente ma con mira più accurata</th>
-                    <th>DOOM3</th>
+                    <th scope="row"><span lang="en">Machine Gun</span></th>
+                    <td>Simile alla <span lang="en">Chaingun</span>, meno potente ma con mira più accurata</td>
+                    <td>DOOM3</td>
                 </tr>
                 <tr>
-                    <th><span lang="en">Granades</span></th>
-                    <th>Granate a frammentazione, esplodono dopo un tempo fisso</th>
-                    <th>DOOM3</th>
+                    <th scope="row"><span lang="en">Granades</span></th>
+                    <td>Granate a frammentazione, esplodono dopo un tempo fisso</td>
+                    <td>DOOM3</td>
                 </tr>
                 <tr>
-                    <th><span lang="en">Soul Cube</span></th>
-                    <th>Quest'arma la si può caricare ammazzando mostri, colpisce sempre il nemico lo termina con un singolo colpo (ad eccezione dei boss Sabaoth e Cyberdemon). Inoltre può essere usata per recuperare punti vita</th>
-                    <th>DOOM3</th>
+                    <th scope="row"><span lang="en">Soul Cube</span></th>
+                    <td>Quest'arma la si può caricare ammazzando mostri, colpisce sempre il nemico lo termina con un singolo colpo (ad eccezione dei boss Sabaoth e Cyberdemon). Inoltre può essere usata per recuperare punti vita</td>
+                    <td>DOOM3</td>
                 </tr>
                 <tr>
-                    <th><span lang="en">Artifact</span></th>
-                    <th>Arma con utilizzo analogo al "Soul Cube"</th>
-                    <th>DOOM3("<span lang="en">Ressurrection of evil</span>")</th>
+                    <th scope="row"><span lang="en">Artifact</span></th>
+                    <td>Arma con utilizzo analogo al "Soul Cube"</td>
+                    <td>DOOM3("<span lang="en">Ressurrection of evil</span>")</td>
                 </tr>
                 <tr>
-                    <th><span lang="en">Grabber</span></th>
-                    <th>Noto anche come "<span lang="en">Ionized Plasma Levitator</span>", permette di sollevare oggetti dal terreno e scagliarli con estrema forza. Inoltre può afferrare le palle di fuoco sparate dai nemici, raggiungere oggetti altrimenti irraggiungibili e rimuovere ostacoli</th>
-                    <th>DOOM3("<span lang="en">Ressurrection of evil</span>")</th>
+                    <th scope="row"><span lang="en">Grabber</span></th>
+                    <td>Noto anche come "<span lang="en">Ionized Plasma Levitator</span>", permette di sollevare oggetti dal terreno e scagliarli con estrema forza. Inoltre può afferrare le palle di fuoco sparate dai nemici, raggiungere oggetti altrimenti irraggiungibili e rimuovere ostacoli</td>
+                    <td>DOOM3("<span lang="en">Ressurrection of evil</span>")</td>
                 </tr>
                 <tr>
-                    <th><span lang="en">Burst Rifle</span></th>
-                    <th>Fucile semiautomatico, spara 3 colpi per volta. <span lang="en">"Multiplayer Only"</span></th>
-                    <th>DOOM(2016)</th>
+                    <th scope="row"><span lang="en">Burst Rifle</span></th>
+                    <td>Fucile semiautomatico, spara 3 colpi per volta. <span lang="en">"Multiplayer Only"</span></td>
+                    <td>DOOM(2016)</td>
                 </tr>
                 <tr>
-                    <th><span lang="en">Frag Granade</span></th>
-                    <th>Analogo a <span lang="en">Granades</span> di "<span lang="en">Doom</span> 3", ma con design e danno differenti</th>
-                    <th>DOOM(2016)</th>
+                    <th scope="row"><span lang="en">Frag Granade</span></th>
+                    <td>Analogo a <span lang="en">Granades</span> di "<span lang="en">Doom</span> 3", ma con design e danno differenti</td>
+                    <td>DOOM(2016)</td>
                 </tr>
                 <tr>
-                    <th><span lang="en">Gauss Cannon</span></th>
-                    <th>Spara una raffica di energia, maggiore è il tempo di carica maggiore è il danno della raffica</th>
-                    <th>DOOM(2016)</th>
+                    <th scope="row"><span lang="en">Gauss Cannon</span></th>
+                    <td>Spara una raffica di energia, maggiore è il tempo di carica maggiore è il danno della raffica</td>
+                    <td>DOOM(2016)</td>
                 </tr>
                 <tr>
-                    <th><span lang="en">Heavy Assault Rifle</span></th>
-                    <th>Analogo di <span lang="en">Machine Gun</span>, ma ha la possibilità di sparare missili</th>
-                    <th>DOOM(2016)</th>
+                    <th scope="row"><span lang="en">Heavy Assault Rifle</span></th>
+                    <td>Analogo di <span lang="en">Machine Gun</span>, ma ha la possibilità di sparare missili</td>
+                    <td>DOOM(2016)</td>
                 </tr>
                 <tr>
-                    <th><span lang="en">Hellshot</span></th>
-                    <th>Arma semiautomatica alimentata a energia infernale. Causa danni secondari da fuoco a chi viene colpito. "<span lang="en">Multiplayer Only</span>"</th>
-                    <th>DOOM(2016)</th>
+                    <th scope="row"><span lang="en">Hellshot</span></th>
+                    <td>Arma semiautomatica alimentata a energia infernale. Causa danni secondari da fuoco a chi viene colpito. "<span lang="en">Multiplayer Only</span>"</td>
+                    <td>DOOM(2016)</td>
                 </tr>
                 <tr>
-                    <th><span lang="en">Hologram</span></th>
-                    <th>Ologramma del giocatore. Distrae gli avversari</th>
-                    <th>DOOM(2016)</th>
+                    <th scope="row"><span lang="en">Hologram</span></th>
+                    <td>Ologramma del giocatore. Distrae gli avversari</td>
+                    <td>DOOM(2016)</td>
                 </tr>
                 <tr>
-                    <th><span lang="en">Kinetic Mine</span></th>
-                    <th>Mina che esplode quando un avversario è abbastanza vicino. "<span lang="en">Multiplayer Only</span>"</th>
-                    <th>DOOM(2016)</th>
+                    <th scope="row"><span lang="en">Kinetic Mine</span></th>
+                    <td>Mina che esplode quando un avversario è abbastanza vicino. "<span lang="en">Multiplayer Only</span>"</td>
+                    <td>DOOM(2016)</td>
                 </tr>
                 <tr>
-                    <th><span lang="en">Lighting Gun</span></th>
-                    <th>Arma a corto raggio che spara continui flussi di elettricità. "<span lang="en">Multiplayer Only</span>"</th>
-                    <th>DOOM(2016)</th>
+                    <th scope="row"><span lang="en">Lighting Gun</span></th>
+                    <td>Arma a corto raggio che spara continui flussi di elettricità. "<span lang="en">Multiplayer Only</span>"</td>
+                    <td>DOOM(2016)</td>
                 </tr>
                 <tr>
-                    <th><span lang="en">Mark V Pistol</span></th>
-                    <th>Pistola ricaricabile. "<span lang="en">Multiplayer Only</span>"</th>
-                    <th>DOOM(2016)</th>
+                    <th scope="row"><span lang="en">Mark V Pistol</span></th>
+                    <td>Pistola ricaricabile. "<span lang="en">Multiplayer Only</span>"</td>
+                    <td>DOOM(2016)</td>
                 </tr>
                 <tr>
-                    <th><span lang="en">Personal Teleporter</span></th>
-                    <th>Teletrasporta il giocatore al punto di partenza. "<span lang="en">Multiplayer Only</span>"</th>
-                    <th>DOOM(2016)</th>
+                    <th scope="row"><span lang="en">Personal Teleporter</span></th>
+                    <td>Teletrasporta il giocatore al punto di partenza. "<span lang="en">Multiplayer Only</span>"</td>
+                    <td>DOOM(2016)</td>
                 </tr>
                 <tr>
-                    <th><span lang="en">Reaper</span></th>
-                    <th>Rilascia 6 raffiche circolari di energia. "<span lang="en">Multiplayer Only</span>"</th>
-                    <th>DOOM(2016)</th>
+                    <th scope="row"><span lang="en">Reaper</span></th>
+                    <td>Rilascia 6 raffiche circolari di energia. "<span lang="en">Multiplayer Only</span>"</td>
+                    <td>DOOM(2016)</td>
                 </tr>
                 <tr>
-                    <th><span lang="en">Shield Wall</span></th>
-                    <th>Quando attivato, crea una barriera invalicabile dai nemici e dai proiettili</th>
-                    <th>DOOM(2016)</th>
+                    <th scope="row"><span lang="en">Shield Wall</span></th>
+                    <td>Quando attivato, crea una barriera invalicabile dai nemici e dai proiettili</td>
+                    <td>DOOM(2016)</td>
                 </tr>
                 <tr>
-                    <th><span lang="en">Siphon Granade</span></th>
-                    <th>Cosa diamine è il <span lang="en">siphon</span>?</th>
-                    <th>DOOM(2016)</th>
+                    <th scope="row"><span lang="en">Siphon Granade</span></th>
+                    <td>Granata che esplode creando un campo gravitazionale</td>
+                    <td>DOOM(2016)</td>
                 </tr>
                 <tr>
-                    <th><span lang="en">Static Cannon</span></th>
-                    <th>Si carica coi movimenti del giocatore, rilascia tutta l'energia in un colpo solo. "<span lang="en">Multiplayer Only</span>"</th>
-                    <th>DOOM(2016)</th>
+                    <th scope="row"><span lang="en">Static Cannon</span></th>
+                    <td>Si carica coi movimenti del giocatore, rilascia tutta l'energia in un colpo solo. "<span lang="en">Multiplayer Only</span>"</td>
+                    <td>DOOM(2016)</td>
                 </tr>
                 <tr>
-                    <th><span lang="en">Tesla Rocket</span></th>
-                    <th>Usa scintille elettriche che attaccano tutti i nemici nel suo raggio di tiro. Rallenta muovendosi</th>
-                    <th>DOOM(2016)</th>
+                    <th scope="row"><span lang="en">Tesla Rocket</span></th>
+                    <td>Usa scintille elettriche che attaccano tutti i nemici nel suo raggio di tiro. Rallenta muovendosi</td>
+                    <td>DOOM(2016)</td>
                 </tr>
                 <tr>
-                    <th><span lang="en">Thread Sensor</span></th>
-                    <th>Un dispositivo che, quando lanciato, si attacca a una superficie e rivela i nemici</th>
-                    <th>DOOM(2016)</th>
+                    <th scope="row"><span lang="en">Thread Sensor</span></th>
+                    <td>Un dispositivo che, quando lanciato, si attacca a una superficie e rivela i nemici</td>
+                    <td>DOOM(2016)</td>
                 </tr>
                 <tr>
-                    <th><span lang="en">Vortex Rifle</span></th>
-                    <th>Fucile da cecchino. "<span lang="en">Multiplayer Only</span>"</th>
-                    <th>DOOM(2016)</th>
+                    <th scope="row"><span lang="en">Vortex Rifle</span></th>
+                    <td>Fucile da cecchino. "<span lang="en">Multiplayer Only</span>"</td>
+                    <td>DOOM(2016)</td>
                 </tr>
                 <tr>
-                    <th><span lang="en">Heavy Cannon</span></th>
-                    <th>Analogo a <span lang="en">Heavy Assault Rifle</span> in DOOM(2016)</th>
-                    <th>DOOM Eternal</th>
+                    <th scope="row"><span lang="en">Heavy Cannon</span></th>
+                    <td>Analogo a <span lang="en">Heavy Assault Rifle</span> in DOOM(2016)</td>
+                    <td>DOOM Eternal</td>
                 </tr>
                 <tr>
-                    <th> <span lang="en">Plasma Rifle</span> </th>
-                    <th>Arma che spara molto velocemente, paricolarmente efficace contro gli scudi</th>
-                    <th>DOOM Eternal</th>
+                    <th scope="row"> <span lang="en">Plasma Rifle</span> </th>
+                    <td>Arma che spara molto velocemente, paricolarmente efficace contro gli scudi</td>
+                    <td>DOOM Eternal</td>
                 </tr>
                 <tr>
-                    <th> <span>Ballista</span> </th>
-                    <th>Analogo a <span lang="en">Plasma Rifle</span>. Spara lentamente e colpisce duramente. </th>
-                    <th>DOOM Eternal</th>
+                    <th scope="row"><span>Ballista</span></th>
+                    <td>Analogo a <span lang="en">Plasma Rifle</span>. Spara lentamente e colpisce duramente.</td>
+                    <td>DOOM Eternal</td>
                 </tr>
                 <tr>
-                    <th>Unmaykr</th>
-                    <th>Usa i proiettili della BFG9000, si ispira all'arma <span lang="en"> "Unmaker"</span> di "DOOM 64". Lo si sblocca solo dopo aver attraversato i sei <span>Slayer Gates</span> </th>
-                    <th>DOOM Eternal</th>
+                    <th scope="row">Unmaykr</th>
+                    <td>Usa i proiettili della BFG9000, si ispira all'arma <span lang="en"> "Unmaker"</span> di "DOOM 64". Lo si sblocca solo dopo aver attraversato i sei <span>Slayer Gates</span></td>
+                    <td>DOOM Eternal</td>
                 </tr>
                 <tr>
-                    <th>Crucible</th>
-                    <th>Puo essere trovato solo in punti singoli della mappa, usa le munizioni del BFG9000, termina i nemici in un singolo colpo.</th>
-                    <th>DOOM Eternal</th>
+                    <th scope="row">Crucible</th>
+                    <td>Puo essere trovato solo in punti singoli della mappa, usa le munizioni del BFG9000, termina i nemici in un singolo colpo.</td>
+                    <td>DOOM Eternal</td>
                 </tr>
             </tbody>
         </table>
