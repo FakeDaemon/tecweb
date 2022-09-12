@@ -50,6 +50,7 @@
     <label id="BurgherButtonLabel" for="BurgherButton">
       Menu
     </label>
+    <input type="checkbox" id="BurgherButton" aria-hidden="true" aria-label="Apri il menu">
     <nav id="NavBar">
       <ul id="MenuBar">
         <li class="MenuBarItem" lang="en"><a href="../index.php" lang="en">HOMEPAGE</a></li>
@@ -93,7 +94,7 @@
   <div class="main">
     <?php if (isset($_GET['WorkingOn'])) { ?>
       <p>RICHIESTE IN LAVORAZIONE</p>
-      <div id="auth_widget" action="users-managment.php" method="get">
+      <form id="auth_widget" action="users-managment.php" method="get">
         <?php
         $stmt = $conn->prepare("SELECT * FROM DoomWiki.helpRequests WHERE requestState='WorkingOn' AND requestMod=?");
         $stmt->bind_param("s", $user->email);
@@ -116,7 +117,7 @@
           echo "<p><a href='help-requests.php'>Richieste in attesa</a></p>";
         }
         ?>
-      </div>
+      </form>
     <?php } else { ?>
       <p>RICHIESTE IN ATTESA</p>
       <div id="auth_widget" action="users-managment.php" method="get">
@@ -186,7 +187,7 @@
     </div>
 
   </footer>
-  <script type="text/javascript" src="SCRIPTS/.js/authpage.js"></script>
+  <script src="SCRIPTS/.js/authpage.js"></script>
   <?php $conn->close(); ?>
 </body>
 

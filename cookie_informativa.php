@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="it" dir="ltr">
 <head>
   <link href="CSS/STYLE_COMMON.css" rel="stylesheet" type="text/css" media="screen" />
   <link href="CSS/STYLE_HISTORY.css" rel="stylesheet" type="text/css" media="screen" />
@@ -36,7 +36,7 @@
   <?php
   }
   ?>
-  <script type="text/javascript" src="SCRIPTS/cookie.js"></script>
+  <script src="SCRIPTS/cookie.js"></script>
   <header>
   <h1 id="logo">DOOM WIKI</h1>
     <label id="BurgherButtonLabel" for="BurgherButton">
@@ -82,7 +82,7 @@
         ?>
       </div>
     </nav>
-    <script type="text/javascript">
+    <script>
       var trama_btn = document.getElementById("I_nested_list_span");
       var nested_lst = document.getElementById("nstd_lst");
       trama_btn.addEventListener('click', function() {
@@ -304,7 +304,7 @@
       </p>
       <dl class="lista">
         <dt>
-          <h3><span lang="en">Cookie</span> tecnici</h3>
+          <span lang="en">Cookie</span> tecnici
         </dt>
         <dd>Quei cookie strettamente necessari per permettere:
           <ul>

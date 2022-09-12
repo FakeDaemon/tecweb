@@ -13,7 +13,7 @@
   <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano , Angeloni Alberto" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="SCRIPTS/css_modifier.js"></script>
-  <script type="text/javascript" src="SCRIPTS/cookie_extractor.js"></script>
+  <script src="SCRIPTS/cookie_extractor.js"></script>
 </head>
 
 <body onload="redirection()">
@@ -147,7 +147,7 @@
     </div>
 
   </footer>
-  <script type="text/javascript" src="SCRIPTS/CredentialRecoveryPage.js"></script>
+  <script src="SCRIPTS/CredentialRecoveryPage.js"></script>
 </body>
 
 </html>
