@@ -245,6 +245,7 @@
         <?php
         }
         ?>
+        <a href="account-managment.php">Vai alle impostazioni.</a>
       </div>
     <?php
     } else if (isset($_GET['Latest']) && $_GET['Latest'] === "") {

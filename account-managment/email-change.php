@@ -110,7 +110,7 @@
       if (isset($_POST['SecondEmail']) && $_POST['SecondEmail'] !== '') {
         echo '<input id="SecondaryMail" type="email" name="SecondEmail" value=' . $_POST['SecondEmail'] . '>';
       } else {
-        echo '<input id="SecondaryMail" type="email" name="SecondEmail" '. ($user->secondaryEmail!==NULL ? ('placeholder=' . $user->secondaryEmail) : ''). '>';
+        echo '<input id="SecondaryMail" type="email" name="SecondEmail" placeholder="'. ($user->secondaryEmail!==NULL ? $user->secondaryEmail : 'Non impostata') . '">';
       }
       ?>
       <label for="Password"><span lang="en">Password</span></label>
@@ -121,6 +121,7 @@
       </label>
       <input id="ConfirmButton" type="submit" value="Conferma">
       <input type="reset" value="Pulisci">
+      <a href="../account-managment.php">Torna alle impostazioni.</a>
       <a href="../help.php">Serve aiuto?</a>
     </form>
 

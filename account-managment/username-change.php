@@ -12,10 +12,13 @@
 </head>
 <body>
   <?php
+  $level=1;
   require '../SCRIPTS/.php/database_connection.php';
   include '../SCRIPTS/.php/user.php';
   if (!(isset($_COOKIE['CookieAccepted'])) || !($_COOKIE['CookieAccepted'] == 'Accetta')) {header("location:../cookie_informativa.php");}
-  $user = new User($conn); ?>
+  $user = new User($conn);
+  if (!$user->isLogged()) header("location:../login.php");
+  ?>
   <header>
   <h1 id="logo">DOOM WIKI</h1>
     <label id="BurgherButtonLabel" for="BurgherButton">
@@ -66,11 +69,12 @@
     <p>NOME UTENTE</p>
     <form id="auth_widget">
       <p>Nome utente attuale:</p>
-      <p>CURRENT_USERNAME</p>
+      <p><?php echo $user->user_name;?></p>
       <label id="NewUsernameLabel" for="NextUsername" class="up">Nuovo Nome Utente</label>
       <input id="NextUsername" type="text" name="NewUsername">
       <input id="ConfirmButton" type="submit" name="SubmitButton" value="Conferma">
       <input id="ResetButton" type="reset" value="Pulisci">
+      <a href="../account-managment.php">Torna alle impostazioni.</a>
       <a href="../help.php">Serve aiuto?</a>
     </form>
   </div>
