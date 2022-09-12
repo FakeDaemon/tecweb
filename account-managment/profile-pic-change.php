@@ -75,8 +75,8 @@
           ?>
         </div>
         <?php
-        if ($user->isLogged()) echo "<img src='..IMAGES/ProfilePics/ProfilePicN" . $user->profile_pic . ".jpg' alt='Doomguy, accedi o registrati!'>";
-        else echo "<img src='..IMAGES/ProfilePics/ProfilePicN1.jpg' alt='Doomguy, accedi o registrati!'>";
+        if ($user->isLogged()) echo "<img src='../IMAGES/ProfilePics/ProfilePicN" . $user->profile_pic . ".jpg' alt='Doomguy, accedi o registrati!'>";
+        else echo "<img src='../IMAGES/ProfilePics/ProfilePicN1.jpg' alt='Doomguy, accedi o registrati!'>";
         ?>
       </div>
     </nav>
@@ -87,34 +87,34 @@
 
       <label for="Img_1">
         <input id="Img_1" type="radio" name="profilePic" value="1" <?php if ($user->profile_pic == 1) echo "checked"; ?>>
-        <img src="..IMAGES/ProfilePics/ProfilePicN1.jpg" alt="Doomguy">
+        <img src="../IMAGES/ProfilePics/ProfilePicN1.jpg" alt="Doomguy">
         Doomguy
       </label>
 
       <label for="Img_2">
         <input id="Img_2" type="radio" name="profilePic" value="2" <?php if ($user->profile_pic == 2) echo "checked"; ?>>
-        <img src="..IMAGES/ProfilePics/ProfilePicN2.jpg" alt="Hellknight">
+        <img src="../IMAGES/ProfilePics/ProfilePicN2.jpg" alt="Hellknight">
         Hellknight
       </label>
 
       <label for="Img_3">
         <input id="Img_3" type="radio" name="profilePic" value="3" <?php if ($user->profile_pic == 3) echo "checked"; ?>>
-        <img src="..IMAGES/ProfilePics/ProfilePicN3.jpg" alt="Two Cherubs Monsters">
+        <img src="../IMAGES/ProfilePics/ProfilePicN3.jpg" alt="Two Cherubs Monsters">
         Two Cherubs Monsters
       </label>
       <label for="Img_4">
         <input id="Img_4" type="radio" name="profilePic" value="4" <?php if ($user->profile_pic == 4) echo "checked"; ?>>
-        <img src="..IMAGES/ProfilePics/ProfilePicN4.jpg" alt="Cacodemon">
+        <img src="../IMAGES/ProfilePics/ProfilePicN4.jpg" alt="Cacodemon">
         Cacodemon
       </label>
       <label for="Img_5">
         <input id="Img_5" type="radio" name="profilePic" value="5" <?php if ($user->profile_pic == 5) echo "checked"; ?>>
-        <img src="..IMAGES/ProfilePics/ProfilePicN5.jpg" alt="Bruiser Pic">
+        <img src="../IMAGES/ProfilePics/ProfilePicN5.jpg" alt="Bruiser Pic">
         Bruiser
       </label>
       <label for="Img_6">
         <input id="Img_6" type="radio" name="profilePic" value="6" <?php if ($user->profile_pic == 5) echo "checked"; ?>>
-        <img src="..IMAGES/ProfilePics/ProfilePicN6.jpg" alt="Spider Mastermind">
+        <img src="../IMAGES/ProfilePics/ProfilePicN6.jpg" alt="Spider Mastermind">
         Spider Mastermind
       </label>
       <input type="submit" name="SubmitButton" value="Conferma">

@@ -414,6 +414,15 @@ footer>img {
   }
 }
 
+@media screen and (max-width: 922px) {
+  footer > img {
+    height: 1.8em;
+  }
+
+  html {
+    background: var(--background-color);
+  }
+}
 
 @media screen and (max-width: 750px) {
 
@@ -424,17 +433,10 @@ footer>img {
   }
 }
 
-@media screen and (max-width: 922px) {
-  footer > img {
-    height: 1.8em;
-  }
-}
-
 @media screen and (max-width: 600px) {
   .lista {
     font-size: 0.8em;
   }
-
 
   footer > p {
     font-size: 0.8em;
@@ -446,9 +448,7 @@ footer>img {
     padding-right: 3em;
     margin-top: 0.50em;
   }
-}
 
-@media screen and (max-width: 550px) {
   #BurgherButtonLabel {
     display: block;
     font-family: 'Orbitron';
@@ -530,7 +530,6 @@ footer>img {
     display: block;
     width: 100%;
   }
-
 }
 
 @media screen and (max-width:360px) {
