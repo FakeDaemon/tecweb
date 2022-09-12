@@ -208,38 +208,38 @@
               <caption class="tab_title">Demoni Giocabili</caption>
               <thead class="npc_head">
                 <tr class="tab_subtitle">
-                  <th>Nome</th>
-                  <th>Foto</th>
+                  <th scope="col">Nome</th>
+                  <th scope="col">Foto</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <th class="npc_name"><span lang="en">Baron</span></th>
-                  <th><img class="npc" src="IMAGES/baron2016.png" alt="Demone rosso cornuto"></th>
+                  <th scope="row" class="npc_name"><span lang="en">Baron</span></th>
+                  <td><img class="npc" src="IMAGES/baron2016.png" alt="Demone rosso cornuto"></td>
                 </tr>
                 <tr>
-                  <th class="npc_name"><span lang="en">Mancubus</span></th>
-                  <th><img class="npc" src="IMAGES/mancubus2016.webp" alt="Grosso mostro spara laser"></th>
+                  <th scope="row" class="npc_name"><span lang="en">Mancubus</span></th>
+                  <td><img class="npc" src="IMAGES/mancubus2016.webp" alt="Grosso mostro spara laser"></td>
                 </tr>
                 <tr>
-                  <th class="npc_name"><span lang="en">Revenant</span></th>
-                  <th><img class="npc" src="IMAGES/revenant2016.webp" alt="Scheletro"></th>
+                  <th scope="row" class="npc_name"><span lang="en">Revenant</span></th>
+                  <td><img class="npc" src="IMAGES/revenant2016.webp" alt="Scheletro"></td>
                 </tr>
                 <tr>
-                  <th class="npc_name"><span lang="en">Preator</span></th>
-                  <th><img class="npc" src="IMAGES/predator2016.png" alt="Particolare suit"></th>
+                  <th scope="row" class="npc_name"><span lang="en">Preator</span></th>
+                  <td><img class="npc" src="IMAGES/predator2016.png" alt="Particolare suit"></td>
                 </tr>
                 <tr>
-                  <th class="npc_name"><span lang="en">Cacodemon (<abbr title="Downloadable Content">DLC</abbr>)</span></th>
-                  <th><img class="npc" src="IMAGES/cacodemon2016.webp" alt="Mostro tondo volante spara fuoco"></th>
+                  <th scope="row" class="npc_name"><span lang="en">Cacodemon (<abbr title="Downloadable Content">DLC</abbr>)</span></th>
+                  <td><img class="npc" src="IMAGES/cacodemon2016.webp" alt="Mostro tondo volante spara fuoco"></td>
                 </tr>
                 <tr>
-                  <th class="npc_name"><span lang="en">Harvester (<abbr title="Downloadable Content">DLC</abbr>)</span></th>
-                  <th><img class="npc" src="IMAGES/harvester2016.webp" alt="Agile mostriciattolo cornuto"></th>
+                  <th scope="row" class="npc_name"><span lang="en">Harvester (<abbr title="Downloadable Content">DLC</abbr>)</span></th>
+                  <td><img class="npc" src="IMAGES/harvester2016.webp" alt="Agile mostriciattolo cornuto"></td>
                 </tr>
                 <tr>
-                  <th class="npc_name"><span lang="en">Spectre (<abbr title="Downloadable Content">DLC</abbr>)</span></th>
-                  <th><img class="npc" src="IMAGES/spectre2016.webp" alt="Alto sacerdote demoniaco infernale"></th>
+                  <th scope="row" class="npc_name"><span lang="en">Spectre (<abbr title="Downloadable Content">DLC</abbr>)</span></th>
+                  <td><img class="npc" src="IMAGES/spectre2016.webp" alt="Alto sacerdote demoniaco infernale"></td>
                 </tr>
               </tbody>
             </table>

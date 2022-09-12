@@ -84,7 +84,7 @@
         </nav>
     </header>
 
-    <div class="main">
+    <div class="main trivia_title">
         <article>
             <h2 class="paragrafo" lang="en">Did you know?</h2>
             <section>

@@ -157,38 +157,38 @@
         <caption class="tab_title">NPC</caption>
         <thead>
           <tr class="tab_subtitle">
-            <th>Nome</th>
-            <th>Foto</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Foto</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <th class="npc_name"><span lang="en">Heavy Weapon Dude (Chaingunner)</span></th>
-            <th><img class="npc" src="IMAGES/HWD.png" alt="Tizio col mitragliatore pesante"></th>
+            <th scope="row" class="npc_name"><span lang="en">Heavy Weapon Dude (Chaingunner)</span></th>
+            <td><img class="npc" src="IMAGES/HWD.png" alt="Tizio col mitragliatore pesante"></td>
           </tr>
           <tr>
-            <th class="npc_name"><span lang="en">Hell Knight</span></th>
-            <th><img class="npc" src="IMAGES/Hellknight.png" alt="Cavaliere infernale"></th>
+            <th scope="row" class="npc_name"><span lang="en">Hell Knight</span></th>
+            <td><img class="npc" src="IMAGES/Hellknight.png" alt="Cavaliere infernale"></td>
           </tr>
           <tr>
-            <th class="npc_name"><span lang="en">Mancubus</span></th>
-            <th><img class="npc" src="IMAGES/Macunbus.png" alt="Grosso mostro spara laser"></th>
+            <th scope="row" class="npc_name"><span lang="en">Mancubus</span></th>
+            <td><img class="npc" src="IMAGES/Macunbus.png" alt="Grosso mostro spara laser"></td>
           </tr>
           <tr>
-            <th class="npc_name"><span lang="en">Revenant</span></th>
-            <th><img class="npc" src="IMAGES/Revenant.png" alt="Scheletro"></th>
+            <th scope="row" class="npc_name"><span lang="en">Revenant</span></th>
+            <td><img class="npc" src="IMAGES/Revenant.png" alt="Scheletro"></td>
           </tr>
           <tr>
-            <th class="npc_name"><span lang="en">Arachnotron</span></th>
-            <th><img class="npc" src="IMAGES/Spiderdemon.png" alt="Ragno meccanico"></th>
+            <th scope="row" class="npc_name"><span lang="en">Arachnotron</span></th>
+            <td><img class="npc" src="IMAGES/Spiderdemon.png" alt="Ragno meccanico"></td>
           </tr>
           <tr>
-            <th class="npc_name"><span lang="en">Pain Elemental</span></th>
-            <th><img class="npc" src="IMAGES/Pain-Element.png" alt="Essere volante spara fuoco"></th>
+            <th scope="row" class="npc_name"><span lang="en">Pain Elemental</span></th>
+            <td><img class="npc" src="IMAGES/Pain-Element.png" alt="Essere volante spara fuoco"></td>
           </tr>
           <tr>
-            <th class="npc_name"><span lang="en">Archvile</span></th>
-            <th><img class="npc" src="IMAGES/Archvile.png" alt="Alto sacerdote demoniaco infernale"></th>
+            <th scope="row" class="npc_name"><span lang="en">Archvile</span></th>
+            <td><img class="npc" src="IMAGES/Archvile.png" alt="Alto sacerdote demoniaco infernale"></td>
           </tr>
         </tbody>
       </table>

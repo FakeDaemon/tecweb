@@ -9,6 +9,10 @@
   text-align: center;
 }
 
+.trivia_title{
+  margin: 1vh auto 0 auto;
+}
+
 .main > article {
   width: 100%;
 }
@@ -49,8 +53,6 @@
 }
 
 .paragrafo {
-  position: relative;
-  bottom: -8px;
   padding: 0.7em;
   font-size: 1.5em;
   margin: 1em 0 0.5em 0;
@@ -209,6 +211,11 @@ tbody > tr:hover {
 }
 
 @media screen and (max-width:992px){
+
+  .trivia_title{
+    margin: unset;
+  }
+
   .paragrafo {
     background: linear-gradient(to right, rgb(8, 8, 8) 70%, transparent) no-repeat;
     background-size: auto;
@@ -217,6 +224,12 @@ tbody > tr:hover {
   .main > article > section {
     border: none;
     border-radius: 0px;
+  }
+
+  .main > article > section > .trivia_img > img  {
+    width: auto;
+    max-width: 30vw;
+    max-height: 20vh;
   }
 }
 
@@ -274,6 +287,10 @@ tbody > tr:hover {
 
   .main > article > section > img {
     height: 10em;
+  }
+
+  .main > article > section > .trivia_img > img  {
+    max-height: 15vh;
   }
 
   .tab_subtitle{
