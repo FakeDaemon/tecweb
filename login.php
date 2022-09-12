@@ -67,7 +67,7 @@
           $_COOKIE["SessionID"] = $SessID;
 
           $conn->close();
-          header("location: /");
+          header("location: index.php");
         } else {
           $ret = "wrongPassword";
         }
