@@ -100,9 +100,9 @@
       <label for="PrimaryMail"><span lang="en">Email</span> Principale</label>
       <?php
       if (isset($_POST['FirstEmail']) && $_POST['FirstEmail'] !== '') {
-        echo '<input id="PrimaryMail" type="email" name="FirstEmail" value="' . $_POST['FirstEmail'] . '"';
+        echo '<input id="PrimaryMail" type="email" name="FirstEmail" value="' . $_POST['FirstEmail'] . '">';
       } else {
-        echo '<input id="PrimaryMail" type="email" name="FirstEmail" placeholder="' . $user->email . '"';
+        echo '<input id="PrimaryMail" type="email" name="FirstEmail" placeholder="' . $user->email . '">';
       }
       ?>
       <input id="PrimaryMail" type="email" name="FirstEmail" placeholder="<?php echo $user->email; ?>">

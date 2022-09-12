@@ -140,7 +140,6 @@
   background: rgba(0,0,0,0.5);
 }
 .main form.searchBar > input[type="submit"], .main form.searchBar > input[type="reset"]{
-  width:15%;
   border: 1px solid red;
   border-radius: 10px;
   background-color: rgb(0, 0, 0);
@@ -157,8 +156,30 @@
   outline: none;
 }
 
+@media screen and (max-width: 800px) {
+  .TopicList > a{
+    padding: 10px;
+    overflow-x: hidden;
+  } 
+  .TopicList > a > p.title{
+    font-size: .8em;
+  }
+  .TopicList > a > p.details{
+    font-size: .7em;
+  }
+}
+
 @media screen and (max-width: 550px) {
   #Welcome_Messages{
     font-size: 1.7em;
+  }
+  .TopicList > a{
+    padding: 5px;
+  } 
+  .TopicList > a > p.title{
+    font-size: .7em;
+  }
+  .TopicList > a > p.details{
+    font-size: .6em;
   }
 }

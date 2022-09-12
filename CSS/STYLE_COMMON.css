@@ -290,7 +290,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 1em 0 1em 4em;
+  margin-left: 20px;
   list-style-position: inside;
   font-size: 1.25em;
 }
@@ -441,6 +441,19 @@ footer>img {
   footer > p {
     font-size: 0.8em;
   }
+  footer > div#SiteMap{
+    display: none;
+  }
+  footer > div#siteInfo{
+    width: 95%;
+    text-align: center;
+  }
+  .main form.searchBar label{
+    font-size: 1.5em;
+  }
+  .main form.searchBar > input[type="text"]{
+    font-size: 1.3em;
+  }
 
   footer > img {
     height: 1.2em;
@@ -533,7 +546,16 @@ footer>img {
 }
 
 @media screen and (max-width:360px) {
+  .lista{
+    margin:10px;
+    padding: 0;
+    list-style: none;
+    font-size: .6em;
+  }
   #logo {
     background-size: 30%;
+  }
+  footer>div#siteInfo{
+    font-size: .8em;
   }
 }

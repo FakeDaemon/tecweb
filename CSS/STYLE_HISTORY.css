@@ -293,3 +293,19 @@ tbody > tr:hover {
   }
 
 }
+
+@media screen and (max-width:260px) {
+  .npc{
+    height: 3em;
+  }
+}
+@media screen and (max-width: 210px) {
+  .npc{
+    height: 2em;
+  }
+}
+@media screen and (max-width: 180px) {
+  .npc_table{
+    display: none;
+  }
+}
