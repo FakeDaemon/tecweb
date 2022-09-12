@@ -297,18 +297,57 @@ a {
 
 
 footer {
+  font-family: "Orbitron";
   width: 100%;
-  padding: 0.75em;
+  padding: 40px;
   background-color: rgba(10, 10, 10, 1);
-  text-align: center;
-  bottom: 0;
-  left: 0;
-  display: block;
   margin-top: 3em;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+footer .screen-reader-only {
+  position: absolute;
+  width: 1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  white-space: nowrap;
 }
 
-footer>p {
-  background-color: #0A0A0A;
+footer > div#SiteMap{
+  width: 40%;
+  max-width: 512px;
+  border-left: 2px solid red;
+  border-radius: 10px;
+  padding-left: 20px;
+}
+
+footer > div#SiteMap > p{
+  font-size: large;
+}
+
+footer > div#SiteMap >  ul{
+  list-style: none;
+}
+
+footer>div#siteInfo{
+  width: 40%;
+  max-width: 512px;
+}
+footer>div#siteInfo>p{
+  width: 80%;
+  margin: auto;
+}
+footer>div#siteInfo>h1{
+  width: 80%;
+  margin: auto;
+  text-indent: -9999px;
+  height: 60px;
+  background-image: url('../IMAGES/Logo_doom.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 footer>img {
