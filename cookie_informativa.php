@@ -7,10 +7,10 @@
   <link href="CSS/PRINT.css" rel="stylesheet" type="text/css" media="print" />
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron" />
   <meta charset="utf-8">
-  <title>DOOM</title>
+  <title>Informativa Cookie | DoomWiki</title>
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <meta name="keywords" content="DOOM, cookie, info, privacy" />
-  <meta name="description" content="Pagina riguardante l'informativa cookie" />
+  <meta name="keywords" content="DOOM WIKI, cookie, info, privacy" />
+  <meta name="description" content="Informativa cookie e diritti dell'utente" />
   <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano , Angeloni Alberto" />
 </head>
 <body>
