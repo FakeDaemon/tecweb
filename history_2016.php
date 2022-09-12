@@ -82,13 +82,6 @@
                 ?>
             </div>
         </nav>
-        <script type="text/javascript">
-            var trama_btn = document.getElementById("I_nested_list_span");
-            var nested_lst = document.getElementById("nstd_lst");
-            trama_btn.addEventListener('click', function() {
-                nested_lst.classList.toggle("open");
-            });
-        </script>
     </header>
     <div class="main">
         <h1 id="replace4" lang="en">DOOM 2016</h1>

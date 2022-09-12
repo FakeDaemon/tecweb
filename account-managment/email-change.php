@@ -105,7 +105,6 @@
         echo '<input id="PrimaryMail" type="email" name="FirstEmail" placeholder="' . $user->email . '">';
       }
       ?>
-      <input id="PrimaryMail" type="email" name="FirstEmail" placeholder="<?php echo $user->email; ?>">
       <label for="SecondaryMail"><span lang="en">Email</span> Secondaria</label>
       <?php
       if (isset($_POST['SecondEmail']) && $_POST['SecondEmail'] !== '') {
