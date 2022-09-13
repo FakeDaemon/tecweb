@@ -109,15 +109,19 @@
       $resultCount = 0;
       while ($row = $result->fetch_assoc()) {
         if ($resultCount < 20) {
-          foreach ($target as $word) {
-            if (strpos($row['title'], $word) !== false) {
-              if ($resultCount < 20) {
-                echo '<a href="questions.php?id=' . $row['id'] . '"><p class="title">' . $row['title'] . '</p><p class="details">Aperto da ' . $row['user_name'] . ' in data ' . $row['creation_date'] . '</p></a>';
-                $resultCount += 1;
-                break;
+          if(count($target)>0){
+            foreach ($target as $word) {
+              if (strpos($row['title'], $word) !== false) {
+                if ($resultCount < 20) {
+                  echo '<a href="questions.php?id=' . $row['id'] . '"><p class="title">' . $row['title'] . '</p><p class="details">Aperto da ' . $row['user_name'] . ' in data ' . $row['creation_date'] . '</p></a>';
+                  $resultCount += 1;
+                  break;
+                }
               }
             }
           }
+        }else{
+          echo "<p>Richerca non valida. Riprova o prova ad usare altri termini usando l'<a href='#SearchBar'>area di testo</a>.</p>";
         }
       }
       if ($resultCount === 0) { //Nessun risultato
