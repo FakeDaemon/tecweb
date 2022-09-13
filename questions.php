@@ -9,19 +9,19 @@
   <meta charset="utf-8">
   <?php
   require 'SCRIPTS/.php/database_connection.php';
-  if (count($_GET)==0 || count($_GET) > 1 || (count($_GET) > 0 && !(isset($_GET['id']) || isset($_GET['User']) || isset($_GET['Latest']) || isset($_GET['Comments'])))) header("location:questions.php?User");
+  if (count($_GET) == 0 || count($_GET) > 1 || (count($_GET) > 0 && !(isset($_GET['id']) || isset($_GET['User']) || isset($_GET['Latest']) || isset($_GET['Comments'])))) header("location:questions.php?User");
   if (isset($_GET['id'])) {
     $stmt = $conn->prepare("SELECT * FROM DoomWiki.topics AS t LEFT OUTER JOIN DoomWiki.users AS u ON t.email = u.fst_mail WHERE t.id = ? ;");
     $stmt->bind_param("i", $_GET['id']);
     $stmt->execute();
     $result = $stmt->get_result();
     $topic = $result->fetch_assoc();
-    echo "<title>" . substr($topic['title'],0, 15) . "... | DoomWiki</title>";
-    echo '<meta name="description" content="Un utente chiede \''. $topic['title'] . '\'. Qui le risposte della community." />';
+    echo "<title>" . substr($topic['title'], 0, 15) . "... | DoomWiki</title>";
+    echo '<meta name="description" content="Un utente chiede \'' . $topic['title'] . '\'. Qui le risposte della community." />';
   } else if (isset($_GET['User'])) {
     echo "<title>Le tue domande | DoomWiki</title>";
     echo '<meta name="description" content="I tuoi contributi su DoomWiki. La lista delle tue domande, con realtivo stato." />';
-  } else{
+  } else {
     echo "<title>Ultime domande | DoomWiki</title>";
     echo '<meta name="description" content="Ultime domande della community. Vieni a vedere cosa a chiesto questo utente, scandaloso." />';
   } ?>
@@ -223,7 +223,7 @@
       $result = $stmt->get_result();
       ?>
       <div class="TList">
-        <p>DOMANDE POSTE</p>
+        <p class="title">DOMANDE POSTE</p>
         <?php
         if ($result->num_rows > 0) {
           while ($row = $result->fetch_assoc()) {
@@ -279,6 +279,7 @@
             echo '<a href="questions.php?id=' . $row['id'] . '"><p class="title">' . $row['title'] . '</p><p class="details">Aperto da ' . ($row['user_name'] != NULL ? $row['user_name'] : "utente eliminato") . ' in data ' . $row['creation_date'] . '</p></a>';
           }
         }
+        echo "</div>";
       } else if (isset($_GET['Comments']) && $_GET['Comments'] === "") {
         $stmt = $conn->prepare("SELECT t.id, u.user_name, t.title, t.creation_date,COUNT(c.id) AS CommentsCount FROM DoomWiki.topics AS t LEFT OUTER JOIN DoomWiki.users AS u ON t.email = u.fst_mail LEFT OUTER JOIN DoomWiki.comments AS c ON c.topicID=t.id WHERE t.state='Approved' GROUP BY t.id ORDER BY CommentsCount DESC;");
         $stmt->execute();
@@ -296,9 +297,11 @@
               echo '<a href="questions.php?id=' . $row['id'] . '"><p class="title">' . $row['title'] . '</p><p class="details">Aperto da ' . ($row['user_name'] != NULL ? $row['user_name'] : "utente eliminato") . ' in data ' . $row['creation_date'] . '</p><p>Numero risposte : ' . $row['CommentsCount'] . '</p></a>';
             }
           }
+          echo "</div>";
         }
         ?>
-      </div>
+
+        </div> <!-- main -->
 
 
       <footer id="foot">

@@ -40,7 +40,7 @@ header > #logo {
   font-size: 18pt;
   color: black;
   font-family: "Times New Roman", Times, serif;
-  margin: none;
+  margin: 0;
   padding: 0;
 }
 
@@ -63,7 +63,7 @@ header > #logo {
   text-align: justify;
   font-family: "Times New Roman", Times, serif;
   border: none;
-  margin: none;
+  margin: 0;
   break-inside: avoid-page;
 }
 

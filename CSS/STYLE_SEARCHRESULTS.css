@@ -12,12 +12,13 @@
   display: block;
   padding: 25px 50px;
   margin: 1% auto;
+  width: 90%;
   font-family: var(--font-family);
   font-size: 1.5em;
   background: url(../ICONS/DOOMIcon.jpg) no-repeat left, linear-gradient(to right, rgb(8, 8, 8) 70%, transparent);
   background-size: 4%, auto;
 }
-.main > span > p{
+.main > div > p{
   font-size: 1.6em;
   margin:50px auto;
 }
@@ -97,11 +98,14 @@
   cursor: default;
   pointer-events: none;
 }
-.main > span > p > a{
+.main > div > p > a{
   color: var(--link-color);
 }
 .TopicList > *{
   font-family: var(--font-family);
+}
+.TopicList > div > p{
+  font-size: 1.5em;
 }
 .TopicList > a{
   display: block;
@@ -137,4 +141,21 @@
   width: 20%;
   font-size: smaller;
   text-align: left;
+}
+
+@media only screen and (max-width:850px) {
+  .main form.searchBar label{
+    padding:5px;
+  }
+  .main form.searchBar > input[type="submit"], .main form.searchBar > input[type="reset"]{
+    width: auto;
+    font-size: 1em;
+  }
+  #AnswerPagelink, .main > a{
+    width: 90%;
+    font-size: 1em;
+  }
+  .main > p{
+    padding: 10px 30px;
+  }
 }

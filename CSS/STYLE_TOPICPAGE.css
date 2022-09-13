@@ -234,11 +234,11 @@ html>body {
   background-color: rgba(30, 30, 30);
 }
 
-.main>div.TList>p {
+.main>div.TList>p.title {
   position: relative;
   top: -45px;
   margin: 0 auto 0 auto;
-  font-size: 2em;
+  font-size: 1em;
   line-height: 45px;
   height: 90px;
   width: 300px;
@@ -246,6 +246,12 @@ html>body {
   border-radius: 15px;
   background-color: black;
   z-index: 1;
+  text-align: center;
+}
+.main>div.TList>p{
+  font-size: 1.3em;
+  width: 90%;
+  margin: 0 auto 40px auto;
   text-align: center;
 }
 
@@ -311,3 +317,4 @@ html>body {
   border-color: yellow;
   outline: none;
 }
+
