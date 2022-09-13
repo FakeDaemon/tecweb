@@ -154,3 +154,7 @@ form#auth_widget fieldset{
   form#auth_widget fieldset > p.details{
     font-size: .8em;
   }
+  p.actionResult{
+    color:#CCAE52;
+    margin: 20px auto;
+  }
