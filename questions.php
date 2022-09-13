@@ -163,7 +163,7 @@
       } else {
         echo "<div class='message'>";
         echo "<div class='userDetails'>";
-        echo "<img src='/IMAGES/ProfilePics/ProfilePicN" . ($comment['profile_pic'] != NULL ? $comment['profile_pic'] : 1) . ".jpg' alt='DoomWiki Avatar.'>";
+        echo "<img src='/IMAGES/ProfilePics/ProfilePicN1.jpg' alt='DoomWiki Avatar.'>";
         echo "<p class='username'>DoomWiki</p>";
         echo "</div>";
         echo "<p class='text'>Nessuno ha ancora risposto alla domanda.</p>";
