@@ -20,7 +20,7 @@
   $user = new User($conn);
   if (!(isset($_COOKIE['CookieAccepted'])) || !($_COOKIE['CookieAccepted'] == 'Accetta')) {header("location:../cookie_informativa.php");}
   if (!$user->isLogged() || !$user->isAdmin()) header("location:../login.php");
-  $result = $conn->query("SELECT fst_mail, user_name, profile_pic FROM DoomWiki.users WHERE ROLE = 'mod'");
+  $result = $conn->query("SELECT fst_mail, user_name, profile_pic FROM jangeli.users WHERE ROLE = 'mod'");
   $modsList = array();
   while ($row = $result->fetch_assoc()) {
     $mod = user::createUser($row['fst_mail'], $row['user_name'], $row['profile_pic']);
@@ -39,8 +39,8 @@
       }
       if ($GLOBALS["ModEmailFound"]) {
         if ($_POST['action'] == "Ban") {
-          $stmt = $conn->prepare("DELETE FROM DoomWiki.users WHERE fst_mail = ?;");
-          $stmt2 = $conn->prepare("INSERT INTO DoomWiki.blackList(fst_mail, ban_date, ban_reason) VALUES(?, ?, ?);");
+          $stmt = $conn->prepare("DELETE FROM jangeli.users WHERE fst_mail = ?;");
+          $stmt2 = $conn->prepare("INSERT INTO jangeli.blackList(fst_mail, ban_date, ban_reason) VALUES(?, ?, ?);");
           $currentDate = date("Y-m-d H:i:s");
           $stmt->bind_param("s", $_POST['ModEmail']);
           $stmt2->bind_param("sss", $_POST['ModEmail'], $currentDate, htmlentities($_POST['message']));
@@ -48,7 +48,7 @@
           $stmt2->execute();
           header("location:mod-managment.php?success");
         } else if ($_POST['action'] == "Togli privilegi") {
-          $stmt = $conn->prepare("UPDATE DoomWiki.users SET role='default', SessId=NULL WHERE fst_mail=?");
+          $stmt = $conn->prepare("UPDATE jangeli.users SET role='default', SessId=NULL WHERE fst_mail=?");
           $stmt->bind_param("s", $_POST['ModEmail']);
           $stmt->execute();
           var_dump($conn);

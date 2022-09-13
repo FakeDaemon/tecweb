@@ -26,7 +26,7 @@
   if (!$user->isLogged()) header("location:../login.php");
   if (!$user->isSuperUser()) header("location:../error.html");
 
-  $result = $conn->query("SELECT fst_mail, user_name, profile_pic FROM DoomWiki.users WHERE ROLE = 'default'");
+  $result = $conn->query("SELECT fst_mail, user_name, profile_pic FROM jangeli.users WHERE ROLE = 'default'");
   $usersList = array();
 
   while ($row = $result->fetch_assoc()) {
@@ -46,8 +46,8 @@
       }
       if ($GLOBALS["UserEmailFound"]) {
         if ($_POST['action'] == "Ban") {
-          $stmt = $conn->prepare("DELETE FROM DoomWiki.users WHERE fst_mail = ?;");
-          $stmt2 = $conn->prepare("INSERT INTO DoomWiki.blackList(fst_mail, ban_date, ban_reason) VALUES(?, ?, ?);");
+          $stmt = $conn->prepare("DELETE FROM jangeli.users WHERE fst_mail = ?;");
+          $stmt2 = $conn->prepare("INSERT INTO jangeli.blackList(fst_mail, ban_date, ban_reason) VALUES(?, ?, ?);");
           $currentDate = date("Y-m-d H:i:s");
           $stmt->bind_param("s", $_POST['UserEmail']);
           $stmt2->bind_param("sss", $_POST['UserEmail'], $currentDate, htmlentities($_POST['message']));
@@ -55,7 +55,7 @@
           $stmt2->execute();
           header("location:users-managment.php?success");
         } else if ($_POST['action'] == "Rendi Mod") {
-          $stmt = $conn->prepare("UPDATE DoomWiki.users SET role='mod' WHERE fst_mail=?");
+          $stmt = $conn->prepare("UPDATE jangeli.users SET role='mod' WHERE fst_mail=?");
           $stmt->bind_param("s", $_POST['UserEmail']);
           $stmt->execute();
           header("location:users-managment.php?success");

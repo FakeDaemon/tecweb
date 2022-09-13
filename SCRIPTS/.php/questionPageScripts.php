@@ -5,7 +5,7 @@ function sendMessage($QuestionID){
     if($conn->connect_error){
       //errore di connessione
     }else{
-      $stmt = $conn->prepare("INSERT INTO DoomWiki.comments(commentBody, writeDate, topicID, email) VALUES(?, ?, ?, ?)");
+      $stmt = $conn->prepare("INSERT INTO jangeli.comments(commentBody, writeDate, topicID, email) VALUES(?, ?, ?, ?)");
       $commentBody = $_POST['AnswerBody'];
       $currentDate = date("Y-m-d H:i:s");
       $stmt->bind_param("ssis", htmlentities($commentBody), $currentDate, $QuestionID, explode('_',$_COOKIE["SessionID"])[0]);
@@ -16,7 +16,7 @@ function sendMessage($QuestionID){
 }
 function printQuestion($QuestionID, $PageCount){
   require 'database_connection.php';
-  $stmt = $conn->prepare("SELECT * FROM DoomWiki.topics AS t JOIN DoomWiki.users AS u ON t.email = u.fst_mail WHERE t.id = ? ;");
+  $stmt = $conn->prepare("SELECT * FROM jangeli.topics AS t JOIN jangeli.users AS u ON t.email = u.fst_mail WHERE t.id = ? ;");
   $stmt->bind_param("i", $QuestionID);
   $stmt->execute();
   $result = $stmt->get_result();
@@ -36,7 +36,7 @@ function printQuestion($QuestionID, $PageCount){
   echo "<p>Tutte le risposte</p>";
   echo "<div class='chat'>";
 
-  $stmt = $conn->prepare("SELECT * FROM DoomWiki.topics AS t JOIN DoomWiki.comments AS c ON t.id = c.topicID JOIN DoomWiki.users AS u ON u.fst_mail=c.email WHERE t.id = ? ;");
+  $stmt = $conn->prepare("SELECT * FROM jangeli.topics AS t JOIN jangeli.comments AS c ON t.id = c.topicID JOIN jangeli.users AS u ON u.fst_mail=c.email WHERE t.id = ? ;");
   $stmt->bind_param("i", $QuestionID);
   $stmt->execute();
   $result = $stmt->get_result();

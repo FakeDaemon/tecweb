@@ -11,7 +11,7 @@
   require 'SCRIPTS/.php/database_connection.php';
   if (count($_GET) == 0 || count($_GET) > 1 || (count($_GET) > 0 && !(isset($_GET['id']) || isset($_GET['User']) || isset($_GET['Latest']) || isset($_GET['Comments'])))) header("location:questions.php?User");
   if (isset($_GET['id'])) {
-    $stmt = $conn->prepare("SELECT * FROM DoomWiki.topics AS t LEFT OUTER JOIN DoomWiki.users AS u ON t.email = u.fst_mail WHERE t.id = ? ;");
+    $stmt = $conn->prepare("SELECT * FROM jangeli.topics AS t LEFT OUTER JOIN jangeli.users AS u ON t.email = u.fst_mail WHERE t.id = ? ;");
     $stmt->bind_param("i", $_GET['id']);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -57,7 +57,7 @@
     if ($conn->connect_error) {
       //errore di connessione
     } else {
-      $stmt = $conn->prepare("INSERT INTO DoomWiki.comments(commentBody, writeDate, topicID, email) VALUES(?, ?, ?, ?)");
+      $stmt = $conn->prepare("INSERT INTO jangeli.comments(commentBody, writeDate, topicID, email) VALUES(?, ?, ?, ?)");
       $commentBody = $_POST['AnswerBody'];
       $currentDate = date("Y-m-d H:i:s");
       $stmt->bind_param("ssis", htmlentities($commentBody), $currentDate, $_GET['id'], $user->email);
@@ -115,7 +115,7 @@
   <div class="main">
     <?php
     if (isset($_GET['id'])) {
-      $stmt = $conn->prepare("SELECT * FROM DoomWiki.topics AS t LEFT OUTER JOIN DoomWiki.users AS u ON t.email = u.fst_mail WHERE t.id = ? ;");
+      $stmt = $conn->prepare("SELECT * FROM jangeli.topics AS t LEFT OUTER JOIN jangeli.users AS u ON t.email = u.fst_mail WHERE t.id = ? ;");
       $stmt->bind_param("i", $_GET['id']);
       $stmt->execute();
       $result = $stmt->get_result();
@@ -135,7 +135,7 @@
       echo "<p>Tutte le risposte</p>";
       echo "<div class='chat'>";
 
-      $stmt = $conn->prepare("SELECT * FROM DoomWiki.topics AS t JOIN DoomWiki.comments AS c ON t.id = c.topicID LEFT OUTER JOIN DoomWiki.users AS u ON u.fst_mail=c.email WHERE t.id = ? ;");
+      $stmt = $conn->prepare("SELECT * FROM jangeli.topics AS t JOIN jangeli.comments AS c ON t.id = c.topicID LEFT OUTER JOIN jangeli.users AS u ON u.fst_mail=c.email WHERE t.id = ? ;");
       $stmt->bind_param("i", $_GET['id']);
       $stmt->execute();
       $result = $stmt->get_result();
@@ -216,7 +216,7 @@
       <?php }
     } else if (isset($_GET['User'])) {
       if ($user->isLogged())
-        $stmt = $conn->prepare('SELECT * FROM DoomWiki.topics WHERE email = ? ORDER BY creation_date DESC');
+        $stmt = $conn->prepare('SELECT * FROM jangeli.topics WHERE email = ? ORDER BY creation_date DESC');
       $stmt->bind_param("s", $user->email);
       $stmt->execute();
       $result = $stmt->get_result();
@@ -262,7 +262,7 @@
       </div>
     <?php
     } else if (isset($_GET['Latest']) && $_GET['Latest'] === "") {
-      $stmt = $conn->prepare("SELECT * FROM DoomWiki.topics LEFT OUTER JOIN DoomWiki.users ON email = fst_mail WHERE state='Approved' ORDER BY creation_date;");
+      $stmt = $conn->prepare("SELECT * FROM jangeli.topics LEFT OUTER JOIN jangeli.users ON email = fst_mail WHERE state='Approved' ORDER BY creation_date;");
       $stmt->execute();
       $result = $stmt->get_result();
     ?>
@@ -280,7 +280,7 @@
         }
         echo "</div>";
       } else if (isset($_GET['Comments']) && $_GET['Comments'] === "") {
-        $stmt = $conn->prepare("SELECT t.id, u.user_name, t.title, t.creation_date,COUNT(c.id) AS CommentsCount FROM DoomWiki.topics AS t LEFT OUTER JOIN DoomWiki.users AS u ON t.email = u.fst_mail LEFT OUTER JOIN DoomWiki.comments AS c ON c.topicID=t.id WHERE t.state='Approved' GROUP BY t.id ORDER BY CommentsCount DESC;");
+        $stmt = $conn->prepare("SELECT t.id, u.user_name, t.title, t.creation_date,COUNT(c.id) AS CommentsCount FROM jangeli.topics AS t LEFT OUTER JOIN jangeli.users AS u ON t.email = u.fst_mail LEFT OUTER JOIN jangeli.comments AS c ON c.topicID=t.id WHERE t.state='Approved' GROUP BY t.id ORDER BY CommentsCount DESC;");
         $stmt->execute();
         $result = $stmt->get_result();
         ?>

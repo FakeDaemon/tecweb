@@ -1,3 +1,4 @@
+create database jangeli;
 USE jangeli;
 DROP TABLE IF EXISTS topics;
 DROP TABLE IF EXISTS users;

@@ -23,7 +23,7 @@
   if (!$user->isLogged() || !$user->isSuperUser()) header("location:../account-managment.php");
   if (isset($_POST['helpRequestID']) && isset($_POST['act'])) {
     if ($_POST['act'] == 'Gestisci') {
-      $stmt = $conn->prepare("UPDATE DoomWiki.helpRequests SET requestMod=?, requestState = 'WorkingOn' WHERE id=?");
+      $stmt = $conn->prepare("UPDATE jangeli.helpRequests SET requestMod=?, requestState = 'WorkingOn' WHERE id=?");
       $stmt->bind_param("si", $user->email, $_POST['helpRequestID']);
       $stmt->execute();
       $result = $stmt->get_result();
@@ -33,7 +33,7 @@
         header("location:help-requests.php?Fail");
       }
     } else if ($_POST['act'] == 'Risolvi') {
-      $stmt = $conn->prepare("UPDATE DoomWiki.helpRequests SET requestState = 'Resolved' WHERE requestMod=? AND id=?");
+      $stmt = $conn->prepare("UPDATE jangeli.helpRequests SET requestState = 'Resolved' WHERE requestMod=? AND id=?");
       $stmt->bind_param("si", $user->email, $_POST['helpRequestID']);
       $stmt->execute();
       var_dump($stmt);
@@ -98,7 +98,7 @@
       <div id="auth_widget" action="users-managment.php" method="get">
         <?php
         if(isset($_GET['Success'])) echo "<p class='actionResult'>Richiesta archiviata con successo.</p>";
-        $stmt = $conn->prepare("SELECT * FROM DoomWiki.helpRequests WHERE requestState='WorkingOn' AND requestMod=?");
+        $stmt = $conn->prepare("SELECT * FROM jangeli.helpRequests WHERE requestState='WorkingOn' AND requestMod=?");
         $stmt->bind_param("s", $user->email);
         $stmt->execute();
         $requestsList = $stmt->get_result();
@@ -126,7 +126,7 @@
       <div id="auth_widget" action="users-managment.php" method="get">
         <?php
         if (isset($_GET['Success'])) echo "<p>Modifiche effettuate con successo</p>";
-        $requestsList = $conn->query("SELECT * FROM DoomWiki.helpRequests WHERE requestState='Pending'");
+        $requestsList = $conn->query("SELECT * FROM jangeli.helpRequests WHERE requestState='Pending'");
         if ($requestsList->num_rows > 0) {
           while ($row = $requestsList->fetch_assoc()) {
             echo "<form action='help-requests.php' method='post'>";

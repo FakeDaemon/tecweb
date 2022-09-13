@@ -2,12 +2,12 @@
 class User{
   public function __construct($conn=NULL) {
     if(isset($conn) && isset($_COOKIE["SessionID"])){
-      $stmt = $conn->prepare("SELECT fst_mail, scnd_mail, user_name, profile_pic, psw, role FROM DoomWiki.users WHERE SessID = ?;");
+      $stmt = $conn->prepare("SELECT fst_mail, scnd_mail, user_name, profile_pic, psw, role FROM jangeli.users WHERE SessID = ?;");
       $stmt->bind_param("s", $_COOKIE["SessionID"]);
       $stmt->execute();
       $result = $stmt->get_result();
       if($result->num_rows > 1){
-        $stmt = $conn->query("UPDATE DoomWiki.users SET SessID = NULL WHERE SessId = ?;");
+        $stmt = $conn->query("UPDATE jangeli.users SET SessID = NULL WHERE SessId = ?;");
         $stmt->bind_param("s", $_COOKIE["SessionID"]);
         $stmt->execute();
       }else if($result->num_rows === 1){
@@ -39,7 +39,7 @@ class User{
     return false;
   }
   public function isLogged(){
-    if($this->user_name!=NULL) return true;
+    if( isset($this->user_name) && $this->user_name!=NULL) return true;
     return false;
   }
 }

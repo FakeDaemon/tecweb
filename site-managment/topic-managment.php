@@ -23,7 +23,7 @@
   if (!$user->isLogged() || !$user->isSuperUser()) header("location:../account-managment.php");
   if (isset($_POST['act'])) {
     if ($_POST['act'] == "Accetta") {
-      $stmt = $conn->prepare("UPDATE DoomWiki.topics SET state='Approved', modified_date=? WHERE id=?");
+      $stmt = $conn->prepare("UPDATE jangeli.topics SET state='Approved', modified_date=? WHERE id=?");
       $currentDate = date("Y-m-d H:i:s");
       $stmt->bind_param("ss", $currentDate, $_POST['reviewID']);
       $stmt->execute();
@@ -31,7 +31,7 @@
     } else if ($_POST['act'] == "Rifiuta") {
       $GLOBALS['RejectAction'] = true;
     } else if ($_POST['act'] == "Conferma") {
-      $stmt = $conn->prepare("UPDATE DoomWiki.topics SET state='Rejected', modified_date=?, rejectReason=? WHERE id=?");
+      $stmt = $conn->prepare("UPDATE jangeli.topics SET state='Rejected', modified_date=?, rejectReason=? WHERE id=?");
       $currentDate = date("Y-m-d H:i:s");
       var_dump($_POST);
       $stmt->bind_param("sss", $currentDate, $_POST['rejectReason'], $_POST['reviewID']);
@@ -94,7 +94,7 @@
     <div id="auth_widget" action="topic-managment.php" method="post">
       <?php
       if (isset($GLOBALS['RejectAction']) && $GLOBALS['RejectAction']) {
-        $stmt = $conn->prepare("SELECT * FROM DoomWiki.topics WHERE id=?");
+        $stmt = $conn->prepare("SELECT * FROM jangeli.topics WHERE id=?");
         $stmt->bind_param("s", $_POST['reviewID']);
         $stmt->execute();
         $result = $stmt->get_result();
@@ -114,7 +114,7 @@
         if (isset($_GET['success'])) {
           echo "<p class='alert'>Modifiche effettuate con successo!</p>";
         }
-        $topicsList = $conn->query("SELECT * FROM DoomWiki.topics WHERE STATE='Pending'");
+        $topicsList = $conn->query("SELECT * FROM jangeli.topics WHERE STATE='Pending'");
         if ($topicsList->num_rows > 0) {
           while ($topic = $topicsList->fetch_assoc()) {
             echo "<form action='topic-managment.php' method='post'>";
