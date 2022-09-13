@@ -236,7 +236,7 @@ tbody > tr:hover {
 @media screen and (max-width:600px) {
 
   .main{
-    margin: 3vh auto 0 auto;
+    margin: 0 auto 0 auto;
   }
 
   .main #replace1 {
