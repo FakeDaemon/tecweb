@@ -61,8 +61,8 @@
             <li class="NestedListItem"><a href="history_eternals.php">CAPITOLO <abbr title="Quinto">V</abbr></a></li>
           </ul>
         </li>
-        <li class="MenuBarItem"><a href="stats.php">STATISTICHE</a></li>
-        <li class="MenuBarItem"><a href="trivia.php">CURIOSITÀ</a></li>
+        <li class="MenuBarItem"><a href="stats.php">ARMI</a></li>
+        <li class="MenuBarItem"><a href="trivia.php">CURIOSIT&Agrave;</a></li>
       </ul>
       <div id="MenuUserWidget">
         <div>
@@ -97,11 +97,11 @@
     <?php
     if (strlen($_GET['SearchTerms']) > 0) {
     ?>
-      <span>
+      <div>
         <p class="SearchTerms">"&nbsp; <?php echo $_GET["SearchTerms"]; ?> &nbsp;"</p>
-      </span>
+    </div>
       <p>Risultati della ricerca:</p>
-      <span class="TopicList">
+      <div class="TopicList">
       <?php
       $target = keywordsExtraxtor($_GET['SearchTerms']);
       $sql = "SELECT * FROM DoomWiki.topics JOIN DoomWiki.users ON fst_mail = email WHERE state='Approved'";
@@ -109,25 +109,29 @@
       $resultCount = 0;
       while ($row = $result->fetch_assoc()) {
         if ($resultCount < 20) {
-          foreach ($target as $word) {
-            if (strpos($row['title'], $word) !== false) {
-              if ($resultCount < 20) {
-                echo '<a href="questions.php?id=' . $row['id'] . '"><p class="title">' . $row['title'] . '</p><p class="details">Aperto da ' . $row['user_name'] . ' in data ' . $row['creation_date'] . '</p></a>';
-                $resultCount += 1;
-                break;
+          if(count(explode(' ', $target))>0){
+            foreach (explode(' ', $target) as $word) {
+              if (strpos($row['title'], $word) !== false) {
+                if ($resultCount < 20) {
+                  echo '<a href="questions.php?id=' . $row['id'] . '"><p class="title">' . $row['title'] . '</p><p class="details">Aperto da ' . $row['user_name'] . ' in data ' . $row['creation_date'] . '</p></a>';
+                  $resultCount += 1;
+                  break;
+                }
               }
             }
           }
+        }else{
+          echo "<p>Richerca non valida. Riprova o prova ad usare altri termini usando l'<a href='#SearchBar'>area di testo</a>.</p>";
         }
       }
       if ($resultCount === 0) { //Nessun risultato
         echo "<p>Nessuno ha ancora chiesto quello che hai cercato.<a href='QuestionPage.php'>Chiedi alla community!</a></p> ";
       }
     } else {
-      echo "<span><p>Richerca non valida. Riprova o prova ad usare altri termini usando l'<a href='#SearchBar'>area di testo</a>.</p><span>";
+      echo "<p>Richerca non valida. Riprova o prova ad usare altri termini usando l'<a href='#SearchBar'>area di testo</a>.</p>";
     }
       ?>
-      </span>
+      </div>
       <?php
       if ($GLOBALS['MorePage']) { ?>
         <a class="CurrentPage" id="FirstPage" href="questions.php?id=123&page=0">Prima Pagina</a>

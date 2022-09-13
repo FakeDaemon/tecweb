@@ -88,8 +88,8 @@
             <li class="NestedListItem"><a href="history_eternals.php">CAPITOLO <abbr title="Quinto">V</abbr></a></li>
           </ul>
         </li>
-        <li class="MenuBarItem"><a href="stats.php">STATISTICHE</a></li>
-        <li class="MenuBarItem"><a href="trivia.php">CURIOSITÀ</a></li>
+        <li class="MenuBarItem"><a href="stats.php">ARMI</a></li>
+        <li class="MenuBarItem"><a href="trivia.php">CURIOSIT&Agrave;</a></li>
       </ul>
       <div id="MenuUserWidget">
         <div>
@@ -207,7 +207,7 @@
         </form>
       <?php } else { ?>
         <form class="blocked" action="questions.php?id=<?php echo $_GET['id']; ?>" method="post">
-          <label for="AnswerBox">
+          <label>
             La tua risposta:
           </label>
           <a id="AnswerBox" href="login.php">Per rispondere effettua l'accesso al sito!</a>
@@ -298,7 +298,6 @@
           }
         }
         ?>
-        </div>
       </div>
 
 
