@@ -1,0 +1,10 @@
+<Files .htaccess>
+Order allow,deny
+Deny from all
+</Files>
+
+Options -Indexes
+Options +FollowSymLinks
+Options -MultiViews
+ErrorDocument 403 /error.html
+ErrorDocument 404 /error.html
