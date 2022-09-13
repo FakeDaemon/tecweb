@@ -6,9 +6,9 @@
   <link href="CSS/STYLE_COMMON.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron" />
   <meta charset="utf-8">
-  <title>Registrazione | WikiDoom</title>
+  <title>Registrazione | DoomWiki</title>
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <meta name="keywords" content="DOOM, sign up, user" />
+  <meta name="keywords" content="DOOM WIKI, sign up, user" />
   <meta name="description" content="Pagina che permette la registrazione di un utente" />
   <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://fonts.googleapis.com/ https://fonts.gstatic.com/;">
   <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano , Angeloni Alberto" />
@@ -131,10 +131,10 @@
         <a href="/">Torna alla home page.</a>
       <?php
       } else {
-        if ($GLOBALS['AlreadySigned']) echo '<p id="ErrorMessage"><span lang="en">È gia presente un <span lang="en">account</span> registrato con l\'indirizzo <span lang="en">email</span> inserito</p>';
-        if ($GLOBALS['UsernameFormatError']) echo '<p id="ErrorMessage">Nome utente non valido.</p>';
-        if ($GLOBALS['PasswordFormatError']) echo '<p id="ErrorMessage"><span lang="en">Password</span> non valida.</p>';
-        if ($GLOBALS['PasswordsDiscordant']) echo '<p id="ErrorMessage"><span lang="en">Password</span> diverse tra loro.</p>'
+        if (isset($GLOBALS['AlreadySigned']) && $GLOBALS['AlreadySigned']) echo '<p id="ErrorMessage"><span lang="en">È gia presente un <span lang="en">account</span> registrato con l\'indirizzo <span lang="en">email</span> inserito</p>';
+        if (isset($GLOBALS['UsernameFormatError']) && $GLOBALS['UsernameFormatError']) echo '<p id="ErrorMessage">Nome utente non valido.</p>';
+        if (isset($GLOBALS['PasswordFormatError']) && $GLOBALS['PasswordFormatError']) echo '<p id="ErrorMessage"><span lang="en">Password</span> non valida.</p>';
+        if (isset($GLOBALS['PasswordsDiscordant']) && $GLOBALS['PasswordsDiscordant']) echo '<p id="ErrorMessage"><span lang="en">Password</span> diverse tra loro.</p>'
       ?>
         <p id="username_hints"><span lang="en">Username</span>: <span class="sr_only">Deve essere formato da una sola parola, può contenere uno o più numeri ma non deve contenere simboli.</span>
         </p>

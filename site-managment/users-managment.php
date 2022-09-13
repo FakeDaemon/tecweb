@@ -20,7 +20,9 @@
   include '../SCRIPTS/.php/user.php';
 
   $user = new User($conn);
-  if (!(isset($_COOKIE['CookieAccepted'])) || !($_COOKIE['CookieAccepted'] == 'Accetta')) {header("location:../cookie_informativa.php");}
+  if (!(isset($_COOKIE['CookieAccepted'])) || !($_COOKIE['CookieAccepted'] == 'Accetta')) {
+    header("location:../cookie_informativa.php");
+  }
   if (!$user->isLogged()) header("location:../login.php");
   if (!$user->isSuperUser()) header("location:../error.html");
 
@@ -63,7 +65,7 @@
   }
   ?>
   <header>
-  <h1 id="logo">DOOM WIKI</h1>
+    <h1 id="logo">DOOM WIKI</h1>
     <label id="BurgherButtonLabel" for="BurgherButton">
       Menu
     </label>

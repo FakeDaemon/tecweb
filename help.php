@@ -6,10 +6,10 @@
   <link href="CSS/STYLE_COMMON.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron" />
   <meta charset="utf-8">
-  <title>Chiedi Aiuto | WikiDoom</title>
+  <title>Chiedi Aiuto | DoomWiki</title>
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <meta name="keywords" content="DOOM, help" />
-  <meta name="description" content="Pagina riguardante il servizio help del sito" />
+  <meta name="keywords" content=" DOOM WIKI, contatto, moderatori" />
+  <meta name="description" content="Pagina per chiedere aiuto riguardo le funzioni del sito" />
   <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano , Angeloni Alberto" />
 </head>
 

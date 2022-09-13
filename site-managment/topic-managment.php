@@ -92,7 +92,7 @@
     <p>TOPICS SOSPESI</p>
     <form id="auth_widget" action="topic-managment.php" method="post">
       <?php
-      if ($GLOBALS['RejectAction']) {
+      if (isset($GLOBALS['RejectAction']) && $GLOBALS['RejectAction']) {
         $stmt = $conn->prepare("SELECT * FROM DoomWiki.topics WHERE id=?");
         $stmt->bind_param("s", $_POST['reviewID']);
         $stmt->execute();

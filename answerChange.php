@@ -7,10 +7,10 @@
     <link href="CSS/STYLE_COMMON.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron" />
     <meta charset="utf-8">
-    <title> Home </title>
+    <title> Modifica Messaggio | DoomWiki </title>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <meta name="keywords" content="DOOM, topic, answer, change" />
-    <meta name="description" content="Pagina che permette il cambio di una risposta" />
+    <meta name="keywords" content="DOOM WIKI, topic, risposta, modifica" />
+    <meta name="description" content="Pagina che permette la modifica di una risposta" />
     <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano , Angeloni Alberto" />
 </head>
 
@@ -160,6 +160,7 @@
                     <textarea maxlength='300' id='newComment' name='newComment' placeholder='Scrivi la nuova versione della risposta oppure lascia vuoto se vuoi eliminare il commento.'></textarea>
                     <input type="submit" value="Conferma">
                     <input type="reset" value="Pulisci">
+                    <a href="questions.php?id=<?php echo $_GET['tid']?>">Torna alla domanda.</a>
                 </form>
             </div>
         <?php }
