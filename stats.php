@@ -58,7 +58,7 @@
                         <li class="NestedListItem"><a href="history_eternals.php">CAPITOLO <abbr title="Quinto">V</abbr></a></li>
                     </ul>
                 </li>
-                <li class="MenuBarItem CurrentLocation">STATISTICHE</li>
+                <li class="MenuBarItem CurrentLocation">ARMI</li>
                 <li class="MenuBarItem"><a href="trivia.php">CURIOSITÀ</a></li>
             </ul>
             <div id="MenuUserWidget">
