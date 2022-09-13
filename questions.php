@@ -207,7 +207,7 @@
         </form>
       <?php } else { ?>
         <form class="blocked" action="questions.php?id=<?php echo $_GET['id']; ?>" method="post">
-          <label for="AnswerBox">
+          <label>
             La tua risposta:
           </label>
           <a id="AnswerBox" href="login.php">Per rispondere effettua l'accesso al sito!</a>
