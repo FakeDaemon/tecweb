@@ -61,8 +61,8 @@
             <li class="NestedListItem"><a href="history_eternals.php">CAPITOLO <abbr title="Quinto">V</abbr></a></li>
           </ul>
         </li>
-        <li class="MenuBarItem"><a href="stats.php">STATISTICHE</a></li>
-        <li class="MenuBarItem"><a href="trivia.php">CURIOSITÀ</a></li>
+        <li class="MenuBarItem"><a href="stats.php">ARMI</a></li>
+        <li class="MenuBarItem"><a href="trivia.php">CURIOSIT&Agrave;</a></li>
       </ul>
       <div id="MenuUserWidget">
         <div>
@@ -109,8 +109,8 @@
       $resultCount = 0;
       while ($row = $result->fetch_assoc()) {
         if ($resultCount < 20) {
-          if(count($target)>0){
-            foreach ($target as $word) {
+          if(count(explode(' ', $target))>0){
+            foreach (explode(' ', $target) as $word) {
               if (strpos($row['title'], $word) !== false) {
                 if ($resultCount < 20) {
                   echo '<a href="questions.php?id=' . $row['id'] . '"><p class="title">' . $row['title'] . '</p><p class="details">Aperto da ' . $row['user_name'] . ' in data ' . $row['creation_date'] . '</p></a>';

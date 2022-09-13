@@ -17,7 +17,7 @@
 
 <body>
   <?php
-  
+
   require 'SCRIPTS/.php/database_connection.php';
   include 'SCRIPTS/.php/user.php';
   $user = new User($conn);
@@ -61,8 +61,8 @@
             <li class="NestedListItem"><a href="history_eternals.php">CAPITOLO <abbr title="Quinto">V</abbr></a></li>
           </ul>
         </li>
-        <li class="MenuBarItem"><a href="stats.php">STATISTICHE</a></li>
-        <li class="MenuBarItem"><a href="trivia.php">CURIOSITÀ</a></li>
+        <li class="MenuBarItem"><a href="stats.php">ARMI</a></li>
+        <li class="MenuBarItem"><a href="trivia.php">CURIOSIT&Agrave;</a></li>
       </ul>
       <div id="MenuUserWidget">
         <div>
