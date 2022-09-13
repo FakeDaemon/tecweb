@@ -162,6 +162,7 @@
 #auth_widget > ul{
   width: 80%;
   margin: 10px auto;
+  padding:0;
 }
 #auth_widget > ul > li{
   display: inline-flex;
@@ -186,7 +187,7 @@
 }
 #auth_widget > ul > li > span > span{
   display: block;
-  width: 50%;
+  width: 90%;
   margin: auto;
 }
 #auth_widget > ul > li > span > span.email{
@@ -232,4 +233,55 @@ form#auth_widget fieldset > p{
 }
 form#auth_widget fieldset > p.details{
   font-size: .8em;
+}
+#auth_widget a.link{
+  color: #2DFDFF;
+  text-decoration: underline;
+}
+#auth_widget a.link:visited{
+  color: #FAFE0B;
+}
+@media only screen and (max-width:840px) {
+  .main{
+    margin:0;
+  }
+  #auth_widget > ul{
+    padding:0;
+    width: 100%;
+  }
+  #auth_widget > ul > li > span{
+    width: 80%;
+    word-break: break-all;
+  }
+  #auth_widget label{
+    bottom: 0;
+  font-size: 0.7em;
+  color: lightgrey;
+  }
+}
+@media only screen and (max-width:375px) {
+  .main > p{
+    width: 95%;
+  }
+  #auth_widget > form > fieldset{
+    word-break: break-all;
+  }
+  #auth_widget label.up{
+    font-size: .5em;
+  }
+  #auth_widget > ul{
+    font-size: .5em;
+  }
+}
+@media only screen and (max-width:320px) {
+  .main > p{
+    font-size: 1.5em;
+    height: auto;
+  }
+  #auth_widget input[type="text"], #auth_widget input[type="password"]{
+    font-size: .8em;
+  }
+  #auth_widget label{
+  font-size: 0.5em;
+  }
 }

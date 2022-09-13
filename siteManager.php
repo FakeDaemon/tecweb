@@ -137,7 +137,6 @@
       </ul>
     </div>
   </footer>
-  <script type="text/javascript" src="SCRIPTS/.js/authpage.js"></script>
   <?php $conn->close(); ?>
 </body>
 

@@ -13,7 +13,7 @@ html>body {
 }
 
 .main {
-  margin: 40px auto auto auto;
+  margin: auto;
   max-width: 1024px;
   text-align: center;
   width: 90%;
@@ -238,7 +238,7 @@ html>body {
   position: relative;
   top: -45px;
   margin: 0 auto 0 auto;
-  font-size: 1em;
+  font-size: 2em;
   line-height: 45px;
   height: 90px;
   width: 300px;
@@ -257,6 +257,7 @@ html>body {
 
 .main>div>div.TListItem {
   border: 1px solid red;
+  background-color: rgba(0,0,0,.5);
   padding: 15px;
   border-radius: 10px;
   margin: 0 0 20px 0;
@@ -318,3 +319,23 @@ html>body {
   outline: none;
 }
 
+@media only screen and (max-width:840px) {
+  .main>div.TList{
+    margin: auto;
+  }
+}
+@media only screen and (max-width:480px) {
+  .main>div.TList>p.title{
+    width: 80vw;
+    left:50%;
+    transform: translate(-50%);
+  }
+  .main>div>.TListItem>p.description{
+    word-break: break-all;
+  }
+}
+@media only screen and (max-width:250px) {
+  .main>div.TList>p.title{
+    font-size: 1em;
+  }
+}

@@ -5,6 +5,7 @@
   <link href="../CSS/STYLE_HELPREQUESTS.css" rel="stylesheet">
   <link href="../CSS/STYLE_COMMON.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <meta charset="utf-8">
   <title>Gestione Sito | DoomWiki</title>
   <meta name="keywords" content="DOOM" />
@@ -116,6 +117,7 @@
         } else {
           echo "<p>Non hai richieste in fase di lavorazione.</p>";
           echo "<p><a href='help-requests.php'>Richieste in attesa</a></p>";
+          echo "<p><a href='../siteManager.php'>Torna alla gestione del sito</a></p>";
         }
         ?>
       </div>

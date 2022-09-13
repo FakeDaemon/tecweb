@@ -158,3 +158,25 @@ form#auth_widget fieldset{
     color:#CCAE52;
     margin: 20px auto;
   }
+  div#auth_widget > p{
+    width: 90%;
+    margin: auto;
+    word-break: break-all;
+  }
+
+  @media only screen and (max-width:375px) {
+    .main>p{
+        width: 95%;
+        font-size: 1.5em;
+    }
+  }
+ 
+  @media only screen and (max-width:320px) {
+    .main>p{
+        width: 95%;
+        font-size: 1.2em;
+    }
+    .main > div > *{
+        font-size: .7em;
+    }
+  }

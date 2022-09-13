@@ -5,12 +5,12 @@
   <link href="../CSS/STYLE_SITEMANAGMENT.css" rel="stylesheet">
   <link href="../CSS/STYLE_COMMON.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <meta charset="utf-8">
   <title>Gestione Sito | DoomWiki</title>
   <meta name="keywords" content="DOOM" />
   <meta name="description" content="DOOM Wiki" />
   <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano , Angeloni Alberto" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -119,18 +119,19 @@
       if (isset($_GET['success'])) echo "<p>Modifiche effettuate con successo.</p>";
       ?>
       <label id="searchBarLabel" class="up" for="searchBar">Cerca utente per <span>email</span>.</label>
-      <input list="browsers" id="searchBar" type="text" name="UserEmail" required>
+      <input list="users" id="searchBar" type="text" name="UserEmail" required>
       <label class="up" for="text_input">Ragione</label>
       <textarea maxlength="300" id="text_input" name="message" placeholder="Scrivi un motivo della promozione a moderatore o del ban dal sito."></textarea>
       <input type="submit" name="action" value="Ban">
       <input type="submit" name="action" value="Rendi Mod">
-      <datalist id="browsers">
+      <datalist id="users">
         <?php
         foreach ($usersList as $user) {
           echo '<option value="' . $user->email . '"></option>';
         }
         ?>
       </datalist>
+      <a class="link" href="../siteManager.php">Torna alla gestione del sito</a>
     </form>
   </div>
   <footer id="foot">

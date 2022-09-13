@@ -11,8 +11,6 @@
   <meta name="keywords" content="DOOM WIKI, account, username, gestione" />
   <meta name="description" content="Pagina di gestione account" />
   <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano , Angeloni Alberto" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="SCRIPTS/css_modifier.js"></script>
 </head>
 
 <body>

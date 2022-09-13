@@ -132,3 +132,20 @@ form#auth_widget label input:checked + img{
   border-color: #CCAE52;
   outline: none;
 }
+@media only screen and (max-width:320px){
+  .main > p{
+    width: 95%;
+    font-size: 1.5em;
+  }
+  #auth_widget{
+    font-size: 1.2em;
+  }
+}
+@media only screen and (max-width:250px){
+  .main > p{
+    width: 95%;
+  }
+  #auth_widget{
+    font-size: 1em;
+  }
+}

@@ -125,6 +125,7 @@
         }
         ?>
       </datalist>
+      <a class="link" href="../siteManager.php">Torna alla gestione del sito</a>
       <p><span lang="en">Mods</span> attuali</p>
       <p class="small">(nome utente - email)</p>
       <ul>
