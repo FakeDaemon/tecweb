@@ -48,7 +48,7 @@
         $_COOKIE["email"] = "";
       }
       $ret = "userFound";
-      $stmt = $conn->prepare("SELECT psw FROM DoomWiki.users WHERE fst_mail = ?");
+      $stmt = $conn->prepare("SELECT psw FROM jangeli.users WHERE fst_mail = ?");
       $stmt->bind_param("s", $_POST['email']);
       $stmt->execute();
       $result = $stmt->get_result();
@@ -58,7 +58,7 @@
         $row = $result->fetch_assoc();
         if (password_verify($_POST['password'], $row['psw'])) {
           $SessID = bin2hex(random_bytes(64));
-          $stmt = $conn->prepare("UPDATE DoomWiki.users SET SessID = ? WHERE fst_mail= ?;");
+          $stmt = $conn->prepare("UPDATE jangeli.users SET SessID = ? WHERE fst_mail= ?;");
           $stmt->bind_param("ss", $SessID, $_POST['email']);
           $stmt->execute();
           $result = $stmt->get_result();
@@ -72,7 +72,7 @@
           $ret = "wrongPassword";
         }
       } else {
-        $stmt = $conn->prepare("SELECT * FROM DoomWiki.blackList WHERE fst_mail = ?");
+        $stmt = $conn->prepare("SELECT * FROM jangeli.blackList WHERE fst_mail = ?");
         $stmt->bind_param("s", $_POST['email']);
         $stmt->execute();
         $result = $stmt->get_result();
@@ -149,7 +149,7 @@
             echo "</div>";
             break;
           case 'YouHaveBeenBanned':
-            $stmt = $conn->prepare("SELECT * FROM DoomWiki.blackList WHERE fst_mail = ?");
+            $stmt = $conn->prepare("SELECT * FROM jangeli.blackList WHERE fst_mail = ?");
             $stmt->bind_param("s", $_POST['email']);
             $stmt->execute();
             $result = $stmt->get_result();

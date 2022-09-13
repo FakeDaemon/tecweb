@@ -39,7 +39,7 @@
   }
   if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['email'])) {
     if (preg_match('/^[A-Za-z0-9]*$/', $_POST['username']) && preg_match('/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])[a-zA-Z0-9]{8,15}$/', $_POST['password']) && $_POST['password'] === $_POST['passwordConfirm']) {
-      $stmt = $conn->prepare("SELECT Fst_mail FROM DoomWiki.users WHERE fst_mail = ?");
+      $stmt = $conn->prepare("SELECT Fst_mail FROM jangeli.users WHERE fst_mail = ?");
       $stmt->bind_param("s", $_POST['email']);
       $stmt->execute();
       $result = $stmt->get_result();
@@ -47,7 +47,7 @@
         $passw = password_hash($_POST['password'], PASSWORD_ARGON2I);
         $username = htmlspecialchars($_POST['username']);
         $currentDate = date('Y-m-d H:i:s');
-        $stmt = $conn->prepare("INSERT INTO DoomWiki.users(user_name, psw, lst_psw_change, sign_in_date, fst_mail) VALUES(?, ?, ?, ?, ?);");
+        $stmt = $conn->prepare("INSERT INTO jangeli.users(user_name, psw, lst_psw_change, sign_in_date, fst_mail) VALUES(?, ?, ?, ?, ?);");
         $stmt->bind_param("sssss", $username, $passw, $currentDate, $currentDate, $_POST['email']);
         $stmt->execute();
         if ($stmt->affected_rows > 0)

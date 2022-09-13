@@ -41,7 +41,7 @@
       $GLOBALS["emailWrongFormat"] = true;
     }else{
       if ($_POST['message'] != "") {
-        $stmt = $conn->prepare("INSERT INTO DoomWiki.helpRequests(requestBody, requestDate, requestEmail) VALUES (? , ? , ?);");
+        $stmt = $conn->prepare("INSERT INTO jangeli.helpRequests(requestBody, requestDate, requestEmail) VALUES (? , ? , ?);");
         $currentDate = date("Y-m-d H:i:s");
         $stmt->bind_param("sss", htmlentities($_POST['message']), $currentDate, $_POST['email']);
         $stmt->execute();

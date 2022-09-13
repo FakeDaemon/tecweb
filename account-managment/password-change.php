@@ -29,7 +29,7 @@
   if (isset($_POST['OldPassword']) && isset($_POST['NewPassword']) && isset($_POST['NewPasswordConfirm'])) {
     if (password_verify($_POST['OldPassword'], $user->password)) {
       if ($_POST['NewPassword'] == $_POST['NewPasswordConfirm']) {
-        $stmt = $conn->prepare("UPDATE DoomWiki.users SET psw = ?, lst_psw_change = ? WHERE SessID = ?");
+        $stmt = $conn->prepare("UPDATE jangeli.users SET psw = ?, lst_psw_change = ? WHERE SessID = ?");
         $currentDate = date('Y-m-d H:i:s');
         $psw = password_hash($_POST['NewPassword'], PASSWORD_DEFAULT);
         $stmt->bind_param("sss", $psw, $currentDate, $_COOKIE['SessionID']);

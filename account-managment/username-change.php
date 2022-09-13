@@ -20,7 +20,7 @@
   if (!$user->isLogged()) header("location:../login.php");
   if(isset($_POST['SubmitButton']) && $_POST['SubmitButton']=='Conferma'){
     if(count(explode(' ', $_POST['NewUsername']))<2){
-      $stmt=$conn->prepare("UPDATE DoomWiki.users SET user_name = ? WHERE SessId = ?");
+      $stmt=$conn->prepare("UPDATE jangeli.users SET user_name = ? WHERE SessId = ?");
       $stmt->bind_param("ss", $_POST['NewUsername'], $_COOKIE['SessionID']);
       $stmt->execute();
       header("location:username-change.php?Success");

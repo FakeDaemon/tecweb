@@ -104,7 +104,7 @@
       <div class="TopicList">
       <?php
       $target = keywordsExtraxtor($_GET['SearchTerms']);
-      $sql = "SELECT * FROM DoomWiki.topics JOIN DoomWiki.users ON fst_mail = email WHERE state='Approved'";
+      $sql = "SELECT * FROM jangeli.topics JOIN jangeli.users ON fst_mail = email WHERE state='Approved'";
       $result = $conn->query($sql);
       $resultCount = 0;
       while ($row = $result->fetch_assoc()) {

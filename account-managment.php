@@ -37,7 +37,7 @@
   }
   if (!$user->isLogged()) header("location:login.php");
   if (isset($_GET['act']) && $_GET['act'] == 'closeSess') {
-    $stmt = $conn->prepare("UPDATE DoomWiki.users SET SessID = NULL WHERE fst_mail = ?");
+    $stmt = $conn->prepare("UPDATE jangeli.users SET SessID = NULL WHERE fst_mail = ?");
     $stmt->bind_param("s", $user->email);
     $stmt->execute();
     setcookie("SessionID", "", time() + 60 * 60 * 24 * 365);

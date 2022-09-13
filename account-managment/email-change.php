@@ -14,6 +14,7 @@
 
 <body>
   <?php
+  
   $level = 1;
   require '../SCRIPTS/.php/database_connection.php';
   include '../SCRIPTS/.php/user.php';

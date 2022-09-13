@@ -29,7 +29,7 @@
     } else $GLOBALS['wrongPass'] = true;
   }
   if (isset($_POST['action']) && $_POST['action'] == "Conferma") {
-    $stmt = $conn->prepare("DELETE FROM DoomWiki.users WHERE SessID = ?");
+    $stmt = $conn->prepare("DELETE FROM jangeli.users WHERE SessID = ?");
     $stmt->bind_param("s", $_COOKIE['SessionID']);
     $stmt->execute();
     var_dump($conn);

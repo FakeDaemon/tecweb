@@ -141,10 +141,9 @@
       $result = $stmt->get_result();
 
       $commentCount = (isset($_GET['page']) ? $_GET['page'] : 0) * 10;
-      $a = 0;
       if ($result->num_rows > $commentCount) {
         while ($comment = $result->fetch_assoc()) {
-          if ($a >= $commentCount && $commentCount < 10 * ($_GET['page'] + 1)) {
+          if ($commentCount < 10 * ($_GET['page'] + 1)) {
             echo "<div class='message" . ($comment["email"] === $user->email ? " ofUser" : "") . "'>";
             echo "<div class='userDetails'>";
             echo "<img src='IMAGES/ProfilePics/ProfilePicN" . ($comment['profile_pic'] != NULL ? $comment['profile_pic'] : 1) . ".jpg' alt='Doomguy, accedi o registrati!'>";

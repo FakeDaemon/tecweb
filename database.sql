@@ -1,6 +1,4 @@
-DROP DATABASE IF EXISTS DoomWiki;
-CREATE DATABASE DoomWiki;
-USE DoomWiki;
+USE jangeli;
 DROP TABLE IF EXISTS topics;
 DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS blackList;
@@ -64,17 +62,26 @@ INSERT INTO users(fst_mail, user_name, psw, lst_psw_change, sign_in_date, scnd_m
   'mod@studenti.unipd.it', 'mod', '$2y$10$EyDf08P9xwprGAFxgdz5J.WCDmK4jIubQ6JqoPVKrpF0d7VOOez56', '2022-01-01', '2022-01-01', NULL, 'mod', 1
 );
 INSERT INTO users(fst_mail, user_name, psw, lst_psw_change, sign_in_date, scnd_mail, role, profile_pic) VALUES(
-  'utente@studenti.unipd.it', 'Mario', '$2y$10$EyDf08P9xwprGAFxgdz5J.WCDmK4jIubQ6JqoPVKrpF0d7VOOez56', '2022-01-01', '2022-01-01', NULL, 'default', 1
+  'utente@studenti.unipd.it', 'Mario', '$2y$10$x95CiC/uCJS3BjM87lzOOu4fCKiiwZD5UzhfP77hOYFdDnwNKVumm', '2022-01-01', '2022-01-01', NULL, 'default', 1
 );
 INSERT INTO users(fst_mail, user_name, psw, lst_psw_change, sign_in_date, scnd_mail, role, profile_pic) VALUES(
-  'utente1@studenti.unipd.it', 'Luca', '$2y$10$EyDf08P9xwprGAFxgdz5J.WCDmK4jIubQ6JqoPVKrpF0d7VOOez56', '2022-01-01', '2022-01-01', NULL, 'default', 1
+  'utente1@studenti.unipd.it', 'Luca', '$2y$10$x95CiC/uCJS3BjM87lzOOu4fCKiiwZD5UzhfP77hOYFdDnwNKVumm', '2022-01-01', '2022-01-01', NULL, 'default', 1
 );
 INSERT INTO users(fst_mail, user_name, psw, lst_psw_change, sign_in_date, scnd_mail, role, profile_pic) VALUES(
-  'utente2@studenti.unipd.it', 'Pietro', '$2y$10$EyDf08P9xwprGAFxgdz5J.WCDmK4jIubQ6JqoPVKrpF0d7VOOez56', '2022-01-01', '2022-01-01', NULL, 'default', 1
+  'utente2@studenti.unipd.it', 'Pietro', '$2y$10$x95CiC/uCJS3BjM87lzOOu4fCKiiwZD5UzhfP77hOYFdDnwNKVumm', '2022-01-01', '2022-01-01', NULL, 'default', 1
 );
 INSERT INTO users(fst_mail, user_name, psw, lst_psw_change, sign_in_date, scnd_mail, role, profile_pic) VALUES(
-  'utente3@studenti.unipd.it', 'Roberto', '$2y$10$EyDf08P9xwprGAFxgdz5J.WCDmK4jIubQ6JqoPVKrpF0d7VOOez56', '2022-01-01', '2022-01-01', NULL, 'default', 1
+  'utente3@studenti.unipd.it', 'Roberto', '$2y$10$x95CiC/uCJS3BjM87lzOOu4fCKiiwZD5UzhfP77hOYFdDnwNKVumm', '2022-01-01', '2022-01-01', NULL, 'default', 1
 );
 
-INSERT INTO topics(title, description, creation_date, email) VALUES('Quanto spazio di archiviazione è richiesto su Nintendo Switch?', 'Con il lancio di DOOM Eternal: The Ancient Gods - Part Two il 26 agosto, tutti i possessori di Nintendo Switch di DOOM Eternal o The Ancient Gods - Part One du quanti giga avranno bisogno?', '2000-01-01', 'utente1@studenti.unipd.it');
-INSERT INTO topics(title, description, creation_date, email) VALUES('E'' normale che, tempo 30 secondi dall''inizio della campagna, la ventola inizi a tentare il decollo?', 'Il rumore che fa la PS4 è preoccupante. Mai fatto così.', '2000-01-01', 'utente@studenti.unipd.it');
+INSERT INTO topics(title, description, creation_date, email) VALUES('Quanto spazio di archiviazione è richiesto su Nintendo Switch?', 'Con il lancio di DOOM Eternal: The Ancient Gods - Part Two il 26 agosto, tutti i possessori di Nintendo Switch di DOOM Eternal o The Ancient Gods - Part One du quanti giga avranno bisogno?', '2022-09-13 14:20:10', 'utente1@studenti.unipd.it');
+INSERT INTO topics(title, description, creation_date, email) VALUES('E'' normale che, tempo 30 secondi dall''inizio della campagna, la ventola inizi a tentare il decollo?', 'Il rumore che fa la PS4 è preoccupante. Mai fatto così.', '2022-09-13 09:12:10', 'utente@studenti.unipd.it');
+INSERT INTO topics(title, description, creation_date, email) VALUES('Cambiare difficoltà in game su DOOM?', 'E'' possibile? se si, come farlo? grazie', '2022-09-13 15:40:10', 'utente3@studenti.unipd.it');
+
+-- TOPIC 1
+INSERT INTO comments(commentBody, writeDate, topicID, email) VALUES('Ci sto giocando e dopo un 15 minuti circa ha smesso di fare quel rumore infernale.', '2022-09-13 15:41:15', 2, 'utente2@studenti.unipd.it');
+INSERT INTO comments(commentBody, writeDate, topicID, email) VALUES('Io ho la slim ed è silenziosa, cmq sia ho risolto il surriscaldamento cambiando pad e pasta termica', '2022-09-13 15:42:15', 2, 'utente3@studenti.unipd.it');
+-- TOPIC 2
+INSERT INTO comments(commentBody, writeDate, topicID, email) VALUES('mi sembra di si, ma non ricordo (l''ho giocato 3 anni fa)', '2022-09-13 15:41:15', 3, 'utente2@studenti.unipd.it');
+INSERT INTO comments(commentBody, writeDate, topicID, email) VALUES('Normalmente si può fare in game nelle opzioni, ma se hai impostato come difficoltà Incubo o Ultra Incubo allora non puoi, è bloccata lì.', '2022-09-13 15:42:15', 3, 'utente1@studenti.unipd.it');
+INSERT INTO comments(commentBody, writeDate, topicID, email) VALUES('ieri notte son diventato matto...ho scelto un livello troppo tosto e dopo 5 ore complessive me ne pento..di ricominciarlo da capo sia mai! magari si può cambiare la difficoltà ma non ho trovato nulla...boh (sara'' che l''accendo di notte e qualcosa mi e'' sfuggita nelle impostazioni)', '2022-09-13 15:45:15', 3, 'utente@studenti.unipd.it');

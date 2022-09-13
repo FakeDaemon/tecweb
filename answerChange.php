@@ -46,7 +46,7 @@
         $cid = $_GET['cid'] ? $_GET['cid'] : $_POST['cid'];
         $tid = $_GET['tid'] ? $_GET['tid'] : $_POST['tid'];
         $page = $_GET['page'] ? $_GET['page'] : $_POST['page'];
-        $stmt = $conn->prepare("SELECT * FROM DoomWiki.comments WHERE id=?");
+        $stmt = $conn->prepare("SELECT * FROM jangeli.comments WHERE id=?");
         $stmt->bind_param("i", $cid);
         $stmt->execute();
         $result = $stmt->get_result();
@@ -54,7 +54,7 @@
         if (($comment['state']) === 'Deleted') $GLOBALS['answerDeleted'] = true;
         else $GLOBALS['answerDeleted'] = false;
         if (!$GLOBALS['answerDeleted']) {
-            $stmt = $conn->prepare("SELECT title, description FROM DoomWiki.topics WHERE id=?");
+            $stmt = $conn->prepare("SELECT title, description FROM jangeli.topics WHERE id=?");
             $stmt->bind_param("i", $tid);
             $stmt->execute();
             $result = $stmt->get_result();
@@ -63,11 +63,11 @@
                 $GLOBALS['error'] = checkInput($_POST['newComment']);
                 if (!$GLOBALS['error']) {
                     if (strlen($_POST['newComment']) > 0) {
-                        $stmt = $conn->prepare("UPDATE DoomWiki.comments SET commentBody = ?, state = 'Modified' WHERE id = ?");
+                        $stmt = $conn->prepare("UPDATE jangeli.comments SET commentBody = ?, state = 'Modified' WHERE id = ?");
                         $stmt->bind_param("si", $_POST['newComment'], $_POST['cid']);
                         $stmt->execute();
                     } else {
-                        $stmt = $conn->prepare("UPDATE DoomWiki.comments SET commentBody = ?, state = 'Deleted' WHERE id = ?");
+                        $stmt = $conn->prepare("UPDATE jangeli.comments SET commentBody = ?, state = 'Deleted' WHERE id = ?");
                         $stmt->bind_param("si", $_POST['newComment'], $_POST['cid']);
                         $stmt->execute();
                     }
@@ -169,7 +169,7 @@
             <p>LE TUE RISPOSTE</p>
             <div class="commentList">
                 <?php
-                $stmt = $conn->prepare("SELECT t.title as topicTitle, c.writeDate as writeDate, c.id as commentId, c.commentBody as commentBody FROM DoomWiki.comments AS c JOIN DoomWiki.topics AS t ON c.topicID=t.id WHERE c.email=? AND c.state<>'Deleted'");
+                $stmt = $conn->prepare("SELECT t.title as topicTitle, c.writeDate as writeDate, c.id as commentId, c.commentBody as commentBody FROM jangeli.comments AS c JOIN jangeli.topics AS t ON c.topicID=t.id WHERE c.email=? AND c.state<>'Deleted'");
                 $stmt->bind_param("s", $user->email);
                 $stmt->execute();
                 $result = $stmt->get_result();

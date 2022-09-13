@@ -88,25 +88,26 @@ if (!(isset($_COOKIE['CookieAccepted'])) || !($_COOKIE['CookieAccepted'] == 'Acc
     dove consultare informazioni dettagliate su tutti gli aspetti del gioco e dove appassionati di <span lang="en">DOOM </span>possono interagire tra di loro.</p>
   <form class="searchBar" id="searchBar" action="searchResult.php" method="get" novalidate><label for="SearchBar">CERCA NEL SITO</label><input id="SearchBar" type="text" name="SearchTerms" required><input type="submit" value="CERCA"><input type="reset" value="PULISCI"></form>
   <div class="TopicList">
-    <p>ULTIME DOMANDE DELLA COMMUNITY</p><?php
-                                          $result = $conn->query("SELECT * FROM DoomWiki.topics LEFT OUTER JOIN DoomWiki.users ON email = fst_mail WHERE state='Approved' ORDER BY creation_date LIMIT 10;");
-                                          if ($result->num_rows > 0) {
-                                            while ($row = $result->fetch_assoc()) {
-                                              echo '<a href="questions.php?id=' . $row['id'] . '"><p class="title">' . $row['title'] . '</p><p class="details">Aperto da ' . ($row['user_name'] != NULL ? $row['user_name'] : "utente eliminato") . ' in data ' . $row['creation_date'] . '</p></a>';
-                                            }
-                                            echo '<a href="questions.php?Latest">Vedi Tutti</a>';
-                                            echo '</div>';
-                                            echo '<div class="TopicList">';
-                                            echo '<p>ULTIME DOMANDE DELLA COMMUNITY</p>';
-                                            $result = $conn->query("SELECT t.id, u.user_name, t.title, t.creation_date,COUNT(c.id) AS CommentsCount FROM DoomWiki.topics AS t LEFT OUTER JOIN DoomWiki.users AS u ON t.email = u.fst_mail LEFT OUTER JOIN DoomWiki.comments AS c ON c.topicID=t.id WHERE t.state='Approved' GROUP BY t.id ORDER BY CommentsCount DESC;");
-                                            while ($row = $result->fetch_assoc()) {
-                                              echo '<a href="questions.php?id=' . $row['id'] . '"><p class="title">' . $row['title'] . '</p><p class="details">Aperto da ' . ($row['user_name'] != NULL ? $row['user_name'] : "utente eliminato") . ' in data ' . explode(" ", $row['creation_date'])[0] . ' in ore ' . explode(" ", $row['creation_date'])[1] . '</p></a>';
-                                            }
-                                            echo '<a href="questions.php?Comments">Vedi Tutti</a>';
-                                          } else {
-                                            echo '<p class="subTitle">Nessuno ha ancora chiesto nulla. <a href="questionEditor.php">Chiedi</a> qualcosa per primo!</p>';
-                                          }
-                                          ?>
+    <p>ULTIME DOMANDE DELLA COMMUNITY</p>
+    <?php
+    $result = $conn->query("SELECT * FROM jangeli.topics LEFT OUTER JOIN jangeli.users ON email = fst_mail WHERE state='Approved' ORDER BY creation_date LIMIT 10;");
+    if ($result->num_rows > 0) {
+      while ($row = $result->fetch_assoc()) {
+        echo '<a href="questions.php?id=' . $row['id'] . '"><p class="title">' . $row['title'] . '</p><p class="details">Aperto da ' . ($row['user_name'] != NULL ? $row['user_name'] : "utente eliminato") . ' in data ' . $row['creation_date'] . '</p></a>';
+      }
+      echo '<a href="questions.php?Latest">Vedi Tutti</a>';
+      echo '</div>';
+      echo '<div class="TopicList">';
+      echo '<p>ULTIME DOMANDE DELLA COMMUNITY</p>';
+      $result = $conn->query("SELECT t.id, u.user_name, t.title, t.creation_date,COUNT(c.id) AS CommentsCount FROM jangeli.topics AS t LEFT OUTER JOIN jangeli.users AS u ON t.email = u.fst_mail LEFT OUTER JOIN jangeli.comments AS c ON c.topicID=t.id WHERE t.state='Approved' GROUP BY t.id ORDER BY CommentsCount DESC;");
+      while ($row = $result->fetch_assoc()) {
+        echo '<a href="questions.php?id=' . $row['id'] . '"><p class="title">' . $row['title'] . '</p><p class="details">Aperto da ' . ($row['user_name'] != NULL ? $row['user_name'] : "utente eliminato") . ' in data ' . explode(" ", $row['creation_date'])[0] . ' in ore ' . explode(" ", $row['creation_date'])[1] . '</p></a>';
+      }
+      echo '<a href="questions.php?Comments">Vedi Tutti</a>';
+    } else {
+      echo '<p class="subTitle">Nessuno ha ancora chiesto nulla. <a href="questionEditor.php">Chiedi</a> qualcosa per primo!</p>';
+    }
+    ?>
   </div>
 </div>
 <footer id="foot">
