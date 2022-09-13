@@ -1,4 +1,5 @@
-<html lang="en" dir="ltr">
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
 
 <head>
     <link href="CSS/STYLE_COMMON.css" rel="stylesheet">
