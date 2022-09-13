@@ -7,7 +7,21 @@
   <link href="CSS/PRINT_QUESTIONS.css" rel="stylesheet" type="text/css" media="print" />
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron" />
   <meta charset="utf-8">
-  <title> Home </title>
+  <?php
+  require 'SCRIPTS/.php/database_connection.php';
+  if (count($_GET)==0 || count($_GET) > 1 || (count($_GET) > 0 && !(isset($_GET['id']) || isset($_GET['User']) || isset($_GET['Latest']) || isset($_GET['Comments'])))) header("location:questions.php?User");
+  if (isset($_GET['id'])) {
+    $stmt = $conn->prepare("SELECT * FROM DoomWiki.topics AS t LEFT OUTER JOIN DoomWiki.users AS u ON t.email = u.fst_mail WHERE t.id = ? ;");
+    $stmt->bind_param("i", $_GET['id']);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $topic = $result->fetch_assoc();
+    echo "<title>" . substr($topic['title'],0, 15) . "... | DoomWiki</title>";
+  } else if (isset($_GET['User'])) {
+    echo "<title>Le tue domande | DoomWiki</title>";
+  } else{
+    echo "<title>Ultime domande | DoomWiki</title>";
+  } ?>
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <meta name="keywords" content="DOOM, question, topic" />
   <meta name="description" content="Pagina riguardante le domande poste dagli utenti" />
@@ -16,12 +30,10 @@
 
 <body>
   <?php
-  require 'SCRIPTS/.php/database_connection.php';
   require 'SCRIPTS/.php/questionPageScripts.php';
   include 'SCRIPTS/.php/user.php';
   $user = new User($conn);
   if (isset($_GET['User']) && !$user->isLogged()) header("location:login.php");
-  if (count($_GET) > 1 || (count($_GET) > 0 && !(isset($_GET['id']) || isset($_GET['User']) || isset($_GET['Latest']) || isset($_GET['Comments'])))) header("location:questions.php");
   if (isset($_POST['CookieAccepted']) && $_POST['CookieAccepted'] == 'Accetta') {
     setCookie('CookieAccepted', 'Accetta', time() + (86400 * 30));
     $_COOKIE['CookieAccepted'] = 'Accetta';
@@ -290,45 +302,45 @@
 
       <footer id="foot">
 
-<div id="siteInfo">
-  <h1>Doom Wiki</h1>
-  <p>DoomWiki è sviluppato da appassionati e ammiratori del videogioco.</p>
-  <p><span lang="en">&copy;Doom</span> è un marchio ragistrato <a href="https://bethesda.net/it/dashboard" target="_blank">2022 Bethesda Softworks LLC<span class="screen-reader-only">(apre una nuova finestra)</span></a>,
-    un'azienda <span lang="en">ZeniMax Media</span>. I marchi appartengono ai rispettivi proprietari. Tutti i diritti riservati.</p>
-</div>
+        <div id="siteInfo">
+          <h1>Doom Wiki</h1>
+          <p>DoomWiki è sviluppato da appassionati e ammiratori del videogioco.</p>
+          <p><span lang="en">&copy;Doom</span> è un marchio ragistrato <a href="https://bethesda.net/it/dashboard" target="_blank">2022 Bethesda Softworks LLC<span class="screen-reader-only">(apre una nuova finestra)</span></a>,
+            un'azienda <span lang="en">ZeniMax Media</span>. I marchi appartengono ai rispettivi proprietari. Tutti i diritti riservati.</p>
+        </div>
 
-<div id="SiteMap">
-  <p>Mappa del sito</p>
-  <ul>
-    <li lang="en"><a href="index.php">Homepage</a></li>
-    <li>Trama
-      <ul>
-        <li lang="en"><a href="history.php">Doom <abbr title="Primo">I</abbr></a></li>
-        <li lang="en"><a href="history_2.php">Doom <abbr title="Secondo">II</abbr></a></li>
-        <li lang="en"><a href="history_3.php">Doom <abbr title="Terzo">III</abbr></a></li>
-        <li lang="en"><a href="history_2016.php">Doom <abbr title="Quarto">IV</abbr></a></li>
-        <li lang="en"><a href="history_eternals.php">Doom <abbr title="Quinto">V</abbr> (Doom eternal)</a></li>
-      </ul>
-    </li>
-    <li><a href="stats.php">Statistiche</a></li>
-    <li><a href="trivia.php">Curiosità</a></li>
-    <li><a href="signup.php">Registrazione</a> (nuovo utente)</li>
-    <li><a href="signup.php">Accesso</a> (utente già registrato)</li>
-    <li><a href="account-managment.php">Impostazioni profilo (utente gia resitrato)</a>
-      <ul>
-        <li><a href="account-managment/email-change.php">Cambio <span lang="en">email</span></a></li>
-        <li><a href="account-managment/password-change.php">Cambio <span lang="en">password</span></a></li>
-        <li><a href="account-managment/profile-pic-change.php">Cambio immagine-profilo</a></li>
-        <li><a href="account-managment/username-change.php">Cambio nome utente</a></li>
-        <li><a href="account-managment/delete-account.php">Eliminazione profilo</a></li>
-      </ul>
-    </li>
-    <li><a href="help.php">Modulo assistenza</a></li>
-    <li><a href="cookie_informativa.php">Informativa <span lang="en">cookie</span></a></li>
-  </ul>
-</div>
+        <div id="SiteMap">
+          <p>Mappa del sito</p>
+          <ul>
+            <li lang="en"><a href="index.php">Homepage</a></li>
+            <li>Trama
+              <ul>
+                <li lang="en"><a href="history.php">Doom <abbr title="Primo">I</abbr></a></li>
+                <li lang="en"><a href="history_2.php">Doom <abbr title="Secondo">II</abbr></a></li>
+                <li lang="en"><a href="history_3.php">Doom <abbr title="Terzo">III</abbr></a></li>
+                <li lang="en"><a href="history_2016.php">Doom <abbr title="Quarto">IV</abbr></a></li>
+                <li lang="en"><a href="history_eternals.php">Doom <abbr title="Quinto">V</abbr> (Doom eternal)</a></li>
+              </ul>
+            </li>
+            <li><a href="stats.php">Statistiche</a></li>
+            <li><a href="trivia.php">Curiosità</a></li>
+            <li><a href="signup.php">Registrazione</a> (nuovo utente)</li>
+            <li><a href="signup.php">Accesso</a> (utente già registrato)</li>
+            <li><a href="account-managment.php">Impostazioni profilo (utente gia resitrato)</a>
+              <ul>
+                <li><a href="account-managment/email-change.php">Cambio <span lang="en">email</span></a></li>
+                <li><a href="account-managment/password-change.php">Cambio <span lang="en">password</span></a></li>
+                <li><a href="account-managment/profile-pic-change.php">Cambio immagine-profilo</a></li>
+                <li><a href="account-managment/username-change.php">Cambio nome utente</a></li>
+                <li><a href="account-managment/delete-account.php">Eliminazione profilo</a></li>
+              </ul>
+            </li>
+            <li><a href="help.php">Modulo assistenza</a></li>
+            <li><a href="cookie_informativa.php">Informativa <span lang="en">cookie</span></a></li>
+          </ul>
+        </div>
 
-</footer>
+      </footer>
 </body>
 
 </html>

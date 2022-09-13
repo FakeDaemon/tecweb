@@ -160,6 +160,7 @@
                     <textarea maxlength='300' id='newComment' name='newComment' placeholder='Scrivi la nuova versione della risposta oppure lascia vuoto se vuoi eliminare il commento.'></textarea>
                     <input type="submit" value="Conferma">
                     <input type="reset" value="Pulisci">
+                    <a href="questions.php?id=<?php echo $_GET['tid']?>">Torna alla domanda.</a>
                 </form>
             </div>
         <?php }
