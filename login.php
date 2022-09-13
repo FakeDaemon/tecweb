@@ -135,36 +135,38 @@
     <p>ACCESSO</p>
     <form id="auth_widget" method="POST" action="login.php" novalidate>
       <?php
-      switch ($ret) {
-        case 'noUserFound':
-        case 'wrongPassword':
-          echo "<div class='ErrorBox'>";
-          echo "<p class='ErrorMessage'><span lang='en'>Credenziali non corrette.</p>";
-          echo "</div>";
-          break;
-        case 'errorState':
-          echo "<div class='ErrorBox'>";
-          echo "<p class='ErrorMessage'>Errore nel sistema durante l'accesso.</p>";
-          echo "</div>";
-          break;
-        case 'YouHaveBeenBanned':
-          $stmt = $conn->prepare("SELECT * FROM DoomWiki.blackList WHERE fst_mail = ?");
-          $stmt->bind_param("s", $_POST['email']);
-          $stmt->execute();
-          $result = $stmt->get_result();
-          $row = $result->fetch_assoc();
-          echo "<div class='ErrorBox'>";
-          echo "<p class='ErrorMessage'>Sei stato bannato dal sito nel giorno<br><small>" . $row['ban_date'] . "</small>.</p>";
-          echo "<p class='ErrorMessage'>Motivo:<br><small>" . $row['ban_reason'] . "</small>.</p>";
-          echo "</div>";
-          break;
-        case 'emailWrongFormat':
-          echo "<div class='ErrorBox'>";
-          echo "<p class='ErrorMessage'>Formato <span lang='en'>email</span> non valido.</p>";
-          echo "</div>";
-          break;
-        default:
-          break;
+      if(isset($ret)){
+        switch ($ret) {
+          case 'noUserFound':
+          case 'wrongPassword':
+            echo "<div class='ErrorBox'>";
+            echo "<p class='ErrorMessage'><span lang='en'>Credenziali non corrette.</p>";
+            echo "</div>";
+            break;
+          case 'errorState':
+            echo "<div class='ErrorBox'>";
+            echo "<p class='ErrorMessage'>Errore nel sistema durante l'accesso.</p>";
+            echo "</div>";
+            break;
+          case 'YouHaveBeenBanned':
+            $stmt = $conn->prepare("SELECT * FROM DoomWiki.blackList WHERE fst_mail = ?");
+            $stmt->bind_param("s", $_POST['email']);
+            $stmt->execute();
+            $result = $stmt->get_result();
+            $row = $result->fetch_assoc();
+            echo "<div class='ErrorBox'>";
+            echo "<p class='ErrorMessage'>Sei stato bannato dal sito nel giorno<br><small>" . $row['ban_date'] . "</small>.</p>";
+            echo "<p class='ErrorMessage'>Motivo:<br><small>" . $row['ban_reason'] . "</small>.</p>";
+            echo "</div>";
+            break;
+          case 'emailWrongFormat':
+            echo "<div class='ErrorBox'>";
+            echo "<p class='ErrorMessage'>Formato <span lang='en'>email</span> non valido.</p>";
+            echo "</div>";
+            break;
+          default:
+            break;
+        }
       }
       ?>
       <label id="email_input_label" for="email_input" class="up"><span lang="en">Email</span></label>

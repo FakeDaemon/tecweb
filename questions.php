@@ -17,14 +17,16 @@
     $result = $stmt->get_result();
     $topic = $result->fetch_assoc();
     echo "<title>" . substr($topic['title'],0, 15) . "... | DoomWiki</title>";
+    echo '<meta name="description" content="Un utente chiede \''. $topic['title'] . '\'. Qui le risposte della community." />';
   } else if (isset($_GET['User'])) {
     echo "<title>Le tue domande | DoomWiki</title>";
+    echo '<meta name="description" content="I tuoi contributi su DoomWiki. La lista delle tue domande, con realtivo stato." />';
   } else{
     echo "<title>Ultime domande | DoomWiki</title>";
+    echo '<meta name="description" content="Ultime domande della community. Vieni a vedere cosa a chiesto questo utente, scandaloso." />';
   } ?>
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <meta name="keywords" content="DOOM WIKI, domanda, utenti, topic" />
-  <meta name="description" content="Pagina contenente le domande poste dagli utenti" />
+  <meta name="keywords" content="DOOM WIKI, domande, domanda, utenti" />
   <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano , Angeloni Alberto" />
 </head>
 
