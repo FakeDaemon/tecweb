@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="it" dir="ltr">
 
 <head>
   <link href="CSS/STYLE_TOPICPAGE.css" rel="stylesheet">
@@ -133,7 +133,7 @@
           if ($a >= $commentCount && $commentCount < 10 * ($_GET['page'] + 1)) {
             echo "<div class='message" . ($comment["email"] === $user->email ? " ofUser" : "") . "'>";
             echo "<div class='userDetails'>";
-            echo "<img src='/IMAGES/ProfilePics/ProfilePicN" . ($comment['profile_pic'] != NULL ? $comment['profile_pic'] : 1) . ".jpg' alt='Doomguy, accedi o registrati!'>";
+            echo "<img src='IMAGES/ProfilePics/ProfilePicN" . ($comment['profile_pic'] != NULL ? $comment['profile_pic'] : 1) . ".jpg' alt='Doomguy, accedi o registrati!'>";
             echo "<p class='username'>" . ($comment['user_name'] != NULL ? $comment['user_name'] : "utente eliminato") . "</p>";
             echo "<p class='messageDatestamp'>Postato il " . $comment['writeDate'] . "</p>";
             echo "</div>";
@@ -149,7 +149,7 @@
       } else {
         echo "<div class='message'>";
         echo "<div class='userDetails'>";
-        echo "<img src='/IMAGES/ProfilePics/ProfilePicN" . ($comment['profile_pic'] != NULL ? $comment['profile_pic'] : 1) . ".jpg' alt='DoomWiki Avatar.'>";
+        echo "<img src='IMAGES/ProfilePics/ProfilePicN" . ($comment['profile_pic'] != NULL ? $comment['profile_pic'] : 1) . ".jpg' alt='DoomWiki Avatar.'>";
         echo "<p class='username'>DoomWiki</p>";
         echo "</div>";
         echo "<p class='text'>Nessuno ha ancora risposto alla domanda.</p>";
