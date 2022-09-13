@@ -192,7 +192,7 @@
       <input id="reset_button" type="reset" value="PULISCI">
 
       <a id="HelpLink" href="help.php">Serve aiuto?</a>
-      <p id="credentialRecovery"> <a href="credentialRecovery.php">Credenziali dimenticate?</a> </p>
+      <p id="credentialRecovery"> <a href="help.php">Credenziali dimenticate?</a> </p>
 
       <hr>
       <p>Non fai ancora parte della <span lang="en">community</span>?</p>

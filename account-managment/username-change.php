@@ -18,6 +18,16 @@
   if (!(isset($_COOKIE['CookieAccepted'])) || !($_COOKIE['CookieAccepted'] == 'Accetta')) {header("location:../cookie_informativa.php");}
   $user = new User($conn);
   if (!$user->isLogged()) header("location:../login.php");
+  if(isset($_POST['SubmitButton']) && $_POST['SubmitButton']=='Conferma'){
+    if(count(explode(' ', $_POST['NewUsername']))<2){
+      $stmt=$conn->prepare("UPDATE DoomWiki.users SET user_name = ? WHERE SessId = ?");
+      $stmt->bind_param("ss", $_POST['NewUsername'], $_COOKIE['SessionID']);
+      $stmt->execute();
+      header("location:username-change.php?Success");
+    }else{
+      $GLOBALS['OneWordError'] = true;
+    }
+  }
   ?>
   <header>
   <h1 id="logo">DOOM WIKI</h1>
@@ -67,9 +77,11 @@
   </header>
   <div class="main">
     <p>NOME UTENTE</p>
-    <form id="auth_widget">
-      <p>Nome utente attuale:</p>
-      <p><?php echo $user->user_name;?></p>
+    <form id="auth_widget" action="username-change.php" method="post">
+      <?php if(isset($_GET['Success'])) echo  "<p id='notification'>Modifiche effettuate con successo</p>";?>
+      <?php if(isset($GLOBALS['OneWordError'])) echo  "<p id='notification'>Nome utente non valido : inserire una sola parola.</p>";?>
+      <p id="normal">Nome utente attuale:</p>
+      <p id="username"><?php echo $user->user_name;?></p>
       <label id="NewUsernameLabel" for="NextUsername" class="up">Nuovo Nome Utente</label>
       <input id="NextUsername" type="text" name="NewUsername">
       <input id="ConfirmButton" type="submit" name="SubmitButton" value="Conferma">

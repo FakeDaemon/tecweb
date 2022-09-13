@@ -34,12 +34,17 @@
   padding-bottom: 20px;
   font-size: 1.5em;
 }
+#auth_widget p#notification{
+  color: #CCAE52;
+  margin: 20px auto;
+  text-align: center;
+}
 #auth_widget p{
   text-align: left;
   width: 80%;
   margin: 10px auto;
 }
-#auth_widget p:nth-child(2){
+#auth_widget p#username{
   margin: 20px auto;
   text-align: center;
   color:#CCAE52;
