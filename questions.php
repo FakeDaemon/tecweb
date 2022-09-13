@@ -210,7 +210,7 @@
           <label for="AnswerBox">
             La tua risposta:
           </label>
-          <a href="login.php">Per rispondere effettua l'accesso al sito!</a>
+          <a id="AnswerBox" href="login.php">Per rispondere effettua l'accesso al sito!</a>
           <input disabled type="submit" value="INVIA">
           <input disabled type="reset" value="PULISCI">
         </form>
