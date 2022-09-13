@@ -283,7 +283,7 @@
               <li lang="en"><a href="history.php">Doom <abbr title="Primo">I</abbr></a></li>
               <li lang="en"><a href="history_2.php">Doom <abbr title="Secondo">II</abbr></a></li>
               <li lang="en"><a href="history_3.php">Doom <abbr title="Terzo">III</abbr></a></li>
-              <li lang="en">Doom <abbr title="Quarto">IV</abbr></li>
+              <li lang="en" class="on">Doom <abbr title="Quarto">IV</abbr></li>
               <li lang="en"><a href="history_eternals.php">Doom <abbr title="Quinto">V</abbr> (Doom eternal)</a></li>
             </ul>
           </li>

@@ -147,7 +147,7 @@
         <li><a href="trivia.php">Curiosit&agrave;</a></li>
         <li><a href="signup.php">Registrazione</a> (nuovo utente)</li>
         <li><a href="login.php">Accesso</a> (utente gi&agrave; registrato)</li>
-        <li>Impostazioni profilo (utente gia resitrato)
+        <li class="on">Impostazioni profilo (utente gia resitrato)
           <ul>
             <li><a href="account-managment/email-change.php">Cambio <span lang="en">email</span></a></li>
             <li><a href="account-managment/password-change.php">Cambio <span lang="en">password</span></a></li>

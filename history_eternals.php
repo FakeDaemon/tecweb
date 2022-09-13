@@ -270,7 +270,7 @@
               <li lang="en"><a href="history_2.php">Doom <abbr title="Secondo">II</abbr></a></li>
               <li lang="en"><a href="history_3.php">Doom <abbr title="Terzo">III</abbr></a></li>
               <li lang="en"><a href="history_2016.php">Doom <abbr title="Quarto">IV</abbr></a></li>
-              <li lang="en">Doom <abbr title="Quinto">V</abbr> (Doom eternal)</li>
+              <li lang="en" class="on">Doom <abbr title="Quinto">V</abbr> (Doom eternal)</li>
             </ul>
           </li>
           <li><a href="stats.php">Armi</a></li>

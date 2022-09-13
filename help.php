@@ -165,7 +165,7 @@
             <li><a href="account-managment/delete-account.php">Eliminazione profilo</a></li>
           </ul>
         </li>
-        <li>Modulo assistenza</li>
+        <li class="on">Modulo assistenza</li>
         <li><a href="cookie_informativa.php">Informativa <span lang="en">cookie</span></a></li>
       </ul>
     </div>
