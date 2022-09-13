@@ -414,6 +414,10 @@ footer>img {
   #MenuUserWidget>div>p {
     font-size: 1em;
   }
+
+  footer > div#SiteMap{
+    width: 60%;
+  }
 }
 
 @media screen and (max-width: 922px) {
@@ -433,6 +437,9 @@ footer>img {
   #MenuBar .MenuBarItemNestedList label,
   #MenuBarNestedList li a {
     font-size: .7em;
+  }
+  footer > div#SiteMap{
+    font-size:.7em;
   }
 }
 

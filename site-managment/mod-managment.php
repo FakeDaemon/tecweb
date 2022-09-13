@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="it" dir="ltr">
-
 <head>
   <link href="../CSS/STYLE_SITEMANAGMENT.css" rel="stylesheet">
   <link href="../CSS/STYLE_COMMON.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <meta charset="utf-8">
   <title>Gestione Sito | DoomWiki</title>
   <meta name="keywords" content="DOOM" />
@@ -12,7 +12,6 @@
   <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano , Angeloni Alberto" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
-
 <body>
   <?php
   $level = 1;

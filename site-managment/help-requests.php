@@ -35,11 +35,11 @@
       $stmt = $conn->prepare("UPDATE DoomWiki.helpRequests SET requestState = 'Resolved' WHERE requestMod=? AND id=?");
       $stmt->bind_param("si", $user->email, $_POST['helpRequestID']);
       $stmt->execute();
-      $result = $stmt->get_result();
-      if ($result->affected_row > 0) {
-        header("location:help-requests.php?Success");
+      var_dump($stmt);
+      if ($stmt->affected_rows > 0) {
+        header("location:help-requests.php?WorkingOn&Success");
       } else {
-        header("location:help-requests.php?Fail");
+        header("location:help-requests.php?WorkingOn&Fail");
       }
     }
   }
@@ -94,15 +94,16 @@
   <div class="main">
     <?php if (isset($_GET['WorkingOn'])) { ?>
       <p>RICHIESTE IN LAVORAZIONE</p>
-      <form id="auth_widget" action="users-managment.php" method="get">
+      <div id="auth_widget" action="users-managment.php" method="get">
         <?php
+        if(isset($_GET['Success'])) echo "<p class='actionResult'>Richiesta archiviata con successo.</p>";
         $stmt = $conn->prepare("SELECT * FROM DoomWiki.helpRequests WHERE requestState='WorkingOn' AND requestMod=?");
         $stmt->bind_param("s", $user->email);
         $stmt->execute();
         $requestsList = $stmt->get_result();
         if ($requestsList->num_rows > 0) {
           while ($row = $requestsList->fetch_assoc()) {
-            echo "<form action='help-requests.php?WorkingOn' method='post'>";
+            echo "<form action='help-requests.php' method='post'>";
             echo "<fieldset>";
             echo "<input type='hidden' name='helpRequestID' value='" . $row['id'] . "'>";
             echo "<legend>&nbsp" . $row['requestDate'] . "&nbsp</legend>";
@@ -117,7 +118,7 @@
           echo "<p><a href='help-requests.php'>Richieste in attesa</a></p>";
         }
         ?>
-      </form>
+      </div>
     <?php } else { ?>
       <p>RICHIESTE IN ATTESA</p>
       <div id="auth_widget" action="users-managment.php" method="get">
@@ -139,6 +140,8 @@
         } else {
           echo "<p>Non ci sono richieste in attesa. Funziona tutto troppo bene...</p>";
           echo "<p><a href='../'>Pagina principale.</a></p>";
+          echo "<p><a href='help-requests.php?WorkingOn'>Richieste in lavorazione</a></p>";
+          echo "<p><a href='../siteManager.php'>Gestione del sito</a></p>";
         }
         ?>
       </div>

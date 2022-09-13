@@ -9,19 +9,19 @@
   <meta charset="utf-8">
   <?php
   require 'SCRIPTS/.php/database_connection.php';
-  if (count($_GET)==0 || count($_GET) > 1 || (count($_GET) > 0 && !(isset($_GET['id']) || isset($_GET['User']) || isset($_GET['Latest']) || isset($_GET['Comments'])))) header("location:questions.php?User");
+  if (count($_GET) == 0 || count($_GET) > 1 || (count($_GET) > 0 && !(isset($_GET['id']) || isset($_GET['User']) || isset($_GET['Latest']) || isset($_GET['Comments'])))) header("location:questions.php?User");
   if (isset($_GET['id'])) {
     $stmt = $conn->prepare("SELECT * FROM DoomWiki.topics AS t LEFT OUTER JOIN DoomWiki.users AS u ON t.email = u.fst_mail WHERE t.id = ? ;");
     $stmt->bind_param("i", $_GET['id']);
     $stmt->execute();
     $result = $stmt->get_result();
     $topic = $result->fetch_assoc();
-    echo "<title>" . substr($topic['title'],0, 15) . "... | DoomWiki</title>";
-    echo '<meta name="description" content="Un utente chiede \''. $topic['title'] . '\'. Qui le risposte della community." />';
+    echo "<title>" . substr($topic['title'], 0, 15) . "... | DoomWiki</title>";
+    echo '<meta name="description" content="Un utente chiede \'' . $topic['title'] . '\'. Qui le risposte della community." />';
   } else if (isset($_GET['User'])) {
     echo "<title>Le tue domande | DoomWiki</title>";
     echo '<meta name="description" content="I tuoi contributi su DoomWiki. La lista delle tue domande, con realtivo stato." />';
-  } else{
+  } else {
     echo "<title>Ultime domande | DoomWiki</title>";
     echo '<meta name="description" content="Ultime domande della community. Vieni a vedere cosa a chiesto questo utente, scandaloso." />';
   } ?>
@@ -223,7 +223,7 @@
       $result = $stmt->get_result();
       ?>
       <div class="TList">
-        <p>DOMANDE POSTE</p>
+        <p class="title">DOMANDE POSTE</p>
         <?php
         if ($result->num_rows > 0) {
           while ($row = $result->fetch_assoc()) {
@@ -267,7 +267,7 @@
       $stmt->execute();
       $result = $stmt->get_result();
     ?>
-      <p>Ulitime domande degli utenti</p>
+      <p>Ultime domande degli utenti</p>
       <div class="TPList">
         <?php
         if ($result->num_rows === 0) {
@@ -279,12 +279,13 @@
             echo '<a href="questions.php?id=' . $row['id'] . '"><p class="title">' . $row['title'] . '</p><p class="details">Aperto da ' . ($row['user_name'] != NULL ? $row['user_name'] : "utente eliminato") . ' in data ' . $row['creation_date'] . '</p></a>';
           }
         }
+        echo "</div>";
       } else if (isset($_GET['Comments']) && $_GET['Comments'] === "") {
         $stmt = $conn->prepare("SELECT t.id, u.user_name, t.title, t.creation_date,COUNT(c.id) AS CommentsCount FROM DoomWiki.topics AS t LEFT OUTER JOIN DoomWiki.users AS u ON t.email = u.fst_mail LEFT OUTER JOIN DoomWiki.comments AS c ON c.topicID=t.id WHERE t.state='Approved' GROUP BY t.id ORDER BY CommentsCount DESC;");
         $stmt->execute();
         $result = $stmt->get_result();
         ?>
-        <p>Ulitime domande degli utenti</p>
+        <p>Ultime domande degli utenti</p>
         <div class="TPList">
           <?php
           if ($result->num_rows === 0) {
@@ -296,17 +297,18 @@
               echo '<a href="questions.php?id=' . $row['id'] . '"><p class="title">' . $row['title'] . '</p><p class="details">Aperto da ' . ($row['user_name'] != NULL ? $row['user_name'] : "utente eliminato") . ' in data ' . $row['creation_date'] . '</p><p>Numero risposte : ' . $row['CommentsCount'] . '</p></a>';
             }
           }
+          echo "</div>";
         }
         ?>
-      </div>
+
+        </div> <!-- main -->
 
 
       <footer id="foot">
-
         <div id="siteInfo">
-          <h1>Doom Wiki</h1>
-          <p>DoomWiki è sviluppato da appassionati e ammiratori del videogioco.</p>
-          <p><span lang="en">&copy;Doom</span> è un marchio ragistrato <a href="https://bethesda.net/it/dashboard" target="_blank">2022 Bethesda Softworks LLC<span class="screen-reader-only">(apre una nuova finestra)</span></a>,
+          <h1 lang="en">Doom Wiki</h1>
+          <p><span lang="en">DoomWiki</span> &egrave; sviluppato da appassionati e ammiratori del videogioco.</p>
+          <p><span lang="en">&copy;Doom</span> &egrave; un marchio ragistrato <a href="https://bethesda.net/it/dashboard" target="_blank" lang="en">2022 Bethesda Softworks LLC<span class="screen-reader-only">(apre una nuova finestra, il sito &egrave; in inglese)</span></a>,
             un'azienda <span lang="en">ZeniMax Media</span>. I marchi appartengono ai rispettivi proprietari. Tutti i diritti riservati.</p>
         </div>
 
@@ -323,10 +325,10 @@
                 <li lang="en"><a href="history_eternals.php">Doom <abbr title="Quinto">V</abbr> (Doom eternal)</a></li>
               </ul>
             </li>
-            <li><a href="stats.php">Statistiche</a></li>
-            <li><a href="trivia.php">Curiosità</a></li>
+            <li><a href="stats.php">Armi</a></li>
+            <li><a href="trivia.php">Curiosit&agrave;</a></li>
             <li><a href="signup.php">Registrazione</a> (nuovo utente)</li>
-            <li><a href="signup.php">Accesso</a> (utente già registrato)</li>
+            <li><a href="login.php">Accesso</a> (utente gi&agrave; registrato)</li>
             <li><a href="account-managment.php">Impostazioni profilo (utente gia resitrato)</a>
               <ul>
                 <li><a href="account-managment/email-change.php">Cambio <span lang="en">email</span></a></li>
@@ -340,7 +342,6 @@
             <li><a href="cookie_informativa.php">Informativa <span lang="en">cookie</span></a></li>
           </ul>
         </div>
-
       </footer>
 </body>
 
