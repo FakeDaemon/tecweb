@@ -17,6 +17,7 @@
 
 <body>
   <?php
+  
   require 'SCRIPTS/.php/database_connection.php';
   include 'SCRIPTS/.php/user.php';
   $user = new User($conn);
