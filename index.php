@@ -118,18 +118,17 @@
     </div>
   </div>
   <footer id="foot">
-
     <div id="siteInfo">
-      <h1>Doom Wiki</h1>
-      <p>DoomWiki è sviluppato da appassionati e ammiratori del videogioco.</p>
-      <p><span lang="en">&copy;Doom</span> è un marchio ragistrato <a href="https://bethesda.net/it/dashboard" target="_blank">2022 Bethesda Softworks LLC<span class="screen-reader-only">(apre una nuova finestra)</span></a>,
+      <h1 lang="en">Doom Wiki</h1>
+      <p><span lang="en">DoomWiki</span> &egrave; sviluppato da appassionati e ammiratori del videogioco.</p>
+      <p><span lang="en">&copy;Doom</span> &egrave; un marchio ragistrato <a href="https://bethesda.net/it/dashboard" target="_blank" lang="en">2022 Bethesda Softworks LLC<span class="screen-reader-only">(apre una nuova finestra, il sito &egrave; in inglese)</span></a>,
         un'azienda <span lang="en">ZeniMax Media</span>. I marchi appartengono ai rispettivi proprietari. Tutti i diritti riservati.</p>
     </div>
 
     <div id="SiteMap">
       <p>Mappa del sito</p>
       <ul>
-        <li lang="en"><a href="index.php">Homepage</a></li>
+        <li lang="en">Homepage</li>
         <li>Trama
           <ul>
             <li lang="en"><a href="history.php">Doom <abbr title="Primo">I</abbr></a></li>
@@ -140,9 +139,9 @@
           </ul>
         </li>
         <li><a href="stats.php">Statistiche</a></li>
-        <li><a href="trivia.php">Curiosità</a></li>
+        <li><a href="trivia.php">Curiosit&agrave;</a></li>
         <li><a href="signup.php">Registrazione</a> (nuovo utente)</li>
-        <li><a href="signup.php">Accesso</a> (utente già registrato)</li>
+        <li><a href="login.php">Accesso</a> (utente gi&agrave; registrato)</li>
         <li><a href="account-managment.php">Impostazioni profilo (utente gia resitrato)</a>
           <ul>
             <li><a href="account-managment/email-change.php">Cambio <span lang="en">email</span></a></li>
@@ -156,7 +155,6 @@
         <li><a href="cookie_informativa.php">Informativa <span lang="en">cookie</span></a></li>
       </ul>
     </div>
-
   </footer>
   <script src="SCRIPTS/.js/indexScripts.js"></script>
 </body>
