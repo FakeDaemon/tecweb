@@ -135,3 +135,31 @@ a#HelpLink, #credentialRecovery{
   color: white;
   font-size: .7em;
 }
+@media only screen and (max-width:600px) {
+  .main{
+    margin-top: 0;
+  }
+}
+@media only screen and (max-width:320px) {
+  .main > p{
+    width: 95%;
+    font-size: 1.5em;
+  }
+  #auth_widget{
+    font-size: 1.2em;
+  }
+  #auth_widget input[type="submit"], #auth_widget input[type="reset"]{
+    width: auto;
+    height: auto;
+    padding: 5px;
+    font-size: .8em;
+  }
+  input[type="checkbox"]{
+    height: 10px;
+  }
+}
+@media only screen and (max-width:320px) {
+  #auth_widget{
+    font-size: 1em;
+  }
+}

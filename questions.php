@@ -140,7 +140,7 @@
       $stmt->execute();
       $result = $stmt->get_result();
 
-      $commentCount = $_GET['page'] * 10;
+      $commentCount = (isset($_GET['page']) ? $_GET['page'] : 0) * 10;
       $a = 0;
       if ($result->num_rows > $commentCount) {
         while ($comment = $result->fetch_assoc()) {
@@ -188,7 +188,7 @@
         echo "'>Pagina Successiva</a>";
         echo "<a id='LastPage' href='questions.php?id=" . $QuestionID . "'>Ultima Pagina</a>";
       }
-      if ($GLOBALS['logState']) {
+      if (isset($GLOBALS['logState']) && $GLOBALS['logState']) {
         echo '<a id="AnswerPagelink" href="questionEditor.php">Fai una domanda alla community!</a>';
       } else {
         echo '<a id="AnswerPagelink" href="questionEditor.php">Fai una domanda alla community!</a>';
