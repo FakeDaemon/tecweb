@@ -37,7 +37,7 @@
   color: red;
 }
 .main > div > p.subTitle{
-  font-size: normal;
+  font-size: 1.5em;
 }
 #auth_widget{
   padding-top: 50px;
