@@ -355,7 +355,7 @@
           </ul>
         </li>
         <li><a href="help.php">Modulo assistenza</a></li>
-        <li>Informativa <span lang="en">cookie</span></li>
+        <li class="on">Informativa <span lang="en">cookie</span></li>
       </ul>
     </div>
   </footer>

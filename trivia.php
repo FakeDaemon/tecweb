@@ -287,7 +287,7 @@
           </ul>
         </li>
         <li><a href="stats.php">Armi</a></li>
-        <li>Curiosit&agrave;</li>
+        <li class="on">Curiosit&agrave;</li>
         <li><a href="signup.php">Registrazione</a> (nuovo utente)</li>
         <li><a href="signup.php">Accesso</a> (utente gi&agrave; registrato)</li>
         <li><a href="account-managment.php">Impostazioni profilo (utente gia resitrato)</a>

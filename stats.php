@@ -327,7 +327,7 @@
               <li lang="en"><a href="history_eternals.php">Doom <abbr title="Quinto">V</abbr> (Doom eternal)</a></li>
             </ul>
           </li>
-          <li>Armi</li>
+          <li class="on">Armi</li>
           <li><a href="trivia.php">Curiosit&agrave;</a></li>
           <li><a href="signup.php">Registrazione</a> (nuovo utente)</li>
           <li><a href="login.php">Accesso</a> (utente gi&agrave; registrato)</li>

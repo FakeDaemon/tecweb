@@ -122,7 +122,7 @@ if (!(isset($_COOKIE['CookieAccepted'])) || !($_COOKIE['CookieAccepted'] == 'Acc
   <div id="SiteMap">
     <p>Mappa del sito</p>
     <ul>
-      <li lang="en">Homepage</li>
+      <li lang="en" class="on">Homepage</li>
       <li>Trama <ul>
           <li lang="en"><a href="history.php">Doom <abbr title="Primo">I</abbr></a></li>
           <li lang="en"><a href="history_2.php">Doom <abbr title="Secondo">II</abbr></a></li>

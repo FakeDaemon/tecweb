@@ -198,7 +198,7 @@
         </li>
         <li><a href="stats.php">Armi</a></li>
         <li><a href="trivia.php">Curiosit&agrave;</a></li>
-        <li>Registrazione (nuovo utente)</li>
+        <li class="on">Registrazione (nuovo utente)</li>
         <li><a href="login.php">Accesso</a> (utente gi&agrave; registrato)</li>
         <li><a href="account-managment.php">Impostazioni profilo (utente gia resitrato)</a>
           <ul>

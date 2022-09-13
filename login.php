@@ -223,7 +223,7 @@
         <li><a href="stats.php">Statistiche</a></li>
         <li><a href="trivia.php">Curiosit&agrave;</a></li>
         <li><a href="signup.php">Registrazione</a> (nuovo utente)</li>
-        <li>Accesso (utente gi&agrave; registrato)</li>
+        <li class="on">Accesso (utente gi&agrave; registrato)</li>
         <li><a href="account-managment.php">Impostazioni profilo (utente gia resitrato)</a>
           <ul>
             <li><a href="account-managment/email-change.php">Cambio <span lang="en">email</span></a></li>
