@@ -423,6 +423,10 @@ footer>img {
   html {
     background: var(--background-color);
   }
+
+  .TopicList > p{
+    background-size: 7%, auto;
+  }
 }
 
 @media screen and (max-width: 750px) {
@@ -442,7 +446,7 @@ footer>img {
   .cookie-banner {
     font-size: medium;
   }
-  
+
   footer > p {
     font-size: 0.8em;
   }
