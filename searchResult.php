@@ -97,9 +97,9 @@
     <?php
     if (strlen($_GET['SearchTerms']) > 0) {
     ?>
-      <span>
+      <div>
         <p class="SearchTerms">"&nbsp; <?php echo $_GET["SearchTerms"]; ?> &nbsp;"</p>
-      </span>
+    </div>
       <p>Risultati della ricerca:</p>
       <span class="TopicList">
       <?php
