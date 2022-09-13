@@ -183,7 +183,7 @@
         Mostra <span lang="en">password</span>.
       </label>
 
-      <label class="radio_label" for="save_username">
+      <label class="radio_label" for="save_email">
         <input id="save_email" type="checkbox" name="SaveEmail" <?php if (isset($_COOKIE['email']) && $_COOKIE['email'] != "") echo "checked"; ?> value="True">
         Salva email.
       </label>
@@ -240,7 +240,7 @@
     </div>
 
   </footer>
-  <script type="text/javascript" src="SCRIPTS/.js/authpage.js"></script>
+  <script src="SCRIPTS/.js/authpage.js"></script>
   <?php $conn->close(); ?>
 </body>
 
