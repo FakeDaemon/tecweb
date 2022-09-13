@@ -90,7 +90,7 @@
   <div class="main">
 
     <p>TOPICS SOSPESI</p>
-    <form id="auth_widget" action="topic-managment.php" method="post">
+    <div id="auth_widget" action="topic-managment.php" method="post">
       <?php
       if (isset($GLOBALS['RejectAction']) && $GLOBALS['RejectAction']) {
         $stmt = $conn->prepare("SELECT * FROM DoomWiki.topics WHERE id=?");
@@ -132,7 +132,7 @@
         }
       }
       ?>
-    </form>
+    </div>
 
   </div>
   <footer id="foot">

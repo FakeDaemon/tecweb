@@ -137,3 +137,20 @@
     border-color: #CCAE52;
     outline: none;
 }
+form#auth_widget fieldset{
+    border: 2px solid red;
+    background-color: rgba(0,0,0,.5);
+    padding: 10px;
+    border-radius: 10px;
+    margin: 20px;
+  }
+  form#auth_widget fieldset > legend{
+    color:#CCAE52;
+    font-size: 1.3em;
+  }
+  form#auth_widget fieldset > p{
+    margin: 10px;
+  }
+  form#auth_widget fieldset > p.details{
+    font-size: .8em;
+  }

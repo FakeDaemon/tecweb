@@ -46,6 +46,7 @@
   margin: 20px auto;
   padding: 10px;
   width: 95%;
+  background-color: rgba(0,0,0,.5);
 }
 #auth_widget > form > fieldset.RejectForm{
   border: 0;
