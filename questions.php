@@ -267,7 +267,7 @@
       $stmt->execute();
       $result = $stmt->get_result();
     ?>
-      <p>Ulitime domande degli utenti</p>
+      <p>Ultime domande degli utenti</p>
       <div class="TPList">
         <?php
         if ($result->num_rows === 0) {
@@ -285,7 +285,7 @@
         $stmt->execute();
         $result = $stmt->get_result();
         ?>
-        <p>Ulitime domande degli utenti</p>
+        <p>Ultime domande degli utenti</p>
         <div class="TPList">
           <?php
           if ($result->num_rows === 0) {
