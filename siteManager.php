@@ -62,7 +62,7 @@
           </ul>
         </li>
         <li class="MenuBarItem"><a href="stats.php">ARMI</a></li>
-        <li class="MenuBarItem"><a href="stats.php">CURIOSIT&Agrave;</a></li>
+        <li class="MenuBarItem"><a href="trivia.php">CURIOSIT&Agrave;</a></li>
       </ul>
       <div id="MenuUserWidget">
         <div>
