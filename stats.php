@@ -30,7 +30,7 @@
             <p>
                 Il nostro sito utilizza dei <span lang="en">cookie</span> per personalizzare
                 il contenuto e analizzare il traffico di rete.
-                <a href=cookie_informativa.php>Leggi di più riguardo ai <span lang="en">cookie</span></a>
+                <a href=cookie_informativa.php>Leggi di pi&ugrave; riguardo ai <span lang="en">cookie</span></a>
             </p>
             <input type="submit" name="CookieAccepted" value="Accetta">
         </form>
@@ -100,7 +100,7 @@
                         <span lang="en">Fists</span>
                     </th>
                     <td>
-                        Arma base per attacchi ravvicinati. Munizioni infinite, crea danno quanto un colpo di <span lang="en">Pistol</span>; normalmente usate come ultima spiaggia oppure in modalità berserk.
+                        Arma base per attacchi ravvicinati. Munizioni infinite, crea danno quanto un colpo di <span lang="en">Pistol</span>; normalmente usate come ultima spiaggia oppure in modalit&agrave; berserk.
                     </td>
                     <td>DOOM, DOOM2, DOOM3, DOOM(2016), DOOM Eternal</td>
                 </tr>
@@ -109,7 +109,7 @@
                         <span lang="en">Chainsaw</span>
                     </th>
                     <td>
-                        Fa lo stesso danno dei <span lang="en">Fists</span> ma 4 volte più veloce
+                        Fa lo stesso danno dei <span lang="en">Fists</span> ma 4 volte pi&ugrave; veloce
                     </td>
                     <td>DOOM, DOOM2, DOOM3, DOOM(2016), DOOM Eternal</td>
                 </tr>
@@ -118,7 +118,7 @@
                         <span lang="en">Pistol</span>
                     </th>
                     <td>
-                        Arma a lungo raggio di default. Quasi completamente inutile con avversari più forti di <span lang="en">zombieman</span> oppure <span lang="en">shotgun guy</span>
+                        Arma a lungo raggio di default. Quasi completamente inutile con avversari pi&ugrave; forti di <span lang="en">zombieman</span> oppure <span lang="en">shotgun guy</span>
                     </td>
                     <td>DOOM, DOOM2, DOOM3, DOOM(2016), DOOM Eternal</td>
                 </tr>
@@ -146,7 +146,7 @@
 
                     </th>
                     <td>
-                        Spara impulsi di plasma blu ad elevata velocità. Se usato appropriatamente può demolire facilmente un gruppo di nemici
+                        Spara impulsi di plasma blu ad elevata velocit&agrave;. Se usato appropriatamente pu&ograve; demolire facilmente un gruppo di nemici
                     </td>
                     <td>DOOM, DOOM2, DOOM3, DOOM(2016), DOOM Eternal</td>
                 <tr>
@@ -160,17 +160,17 @@
                 </tr>
                 <tr>
                     <th scope="row"><span lang="en">Super Shotgun</span></th>
-                    <td>Una doppietta a canne mozze che richiede molto tempo per la ricarica dei proiettili, a distanza ravvicinata risulta più letale del normale <span lang="en">Shotgun</span></td>
+                    <td>Una doppietta a canne mozze che richiede molto tempo per la ricarica dei proiettili, a distanza ravvicinata risulta pi&ugrave; letale del normale <span lang="en">Shotgun</span></td>
                     <td>DOOM2, DOOM3("<span lang="en">Ressurrection of evil</span>"), DOOM(2016), DOOM Eternal</td>
                 </tr>
                 <tr>
                     <th scope="row"><span lang="en">Flashlight</span></th>
-                    <td>Di per sè non è un'arma ma fa il doppio del danno dei pugni. Ma il raggio di azione è ridotto</td>
+                    <td>Di per s&egrave; non &egrave; un'arma ma fa il doppio del danno dei pugni. Ma il raggio di azione &egrave; ridotto</td>
                     <td>DOOM3, DOOM3("<span lang="en">Ressurrection of evil</span>")</td>
                 </tr>
                 <tr>
                     <th scope="row"><span lang="en">Machine Gun</span></th>
-                    <td>Simile alla <span lang="en">Chaingun</span>, meno potente ma con mira più accurata</td>
+                    <td>Simile alla <span lang="en">Chaingun</span>, meno potente ma con mira pi&ugrave; accurata</td>
                     <td>DOOM3</td>
                 </tr>
                 <tr>
@@ -180,7 +180,7 @@
                 </tr>
                 <tr>
                     <th scope="row"><span lang="en">Soul Cube</span></th>
-                    <td>Quest'arma la si può caricare ammazzando mostri, colpisce sempre il nemico lo termina con un singolo colpo (ad eccezione dei boss Sabaoth e Cyberdemon). Inoltre può essere usata per recuperare punti vita</td>
+                    <td>Quest'arma la si pu&ograve; caricare ammazzando mostri, colpisce sempre il nemico lo termina con un singolo colpo (ad eccezione dei boss Sabaoth e Cyberdemon). Inoltre pu&ograve; essere usata per recuperare punti vita</td>
                     <td>DOOM3</td>
                 </tr>
                 <tr>
@@ -190,7 +190,7 @@
                 </tr>
                 <tr>
                     <th scope="row"><span lang="en">Grabber</span></th>
-                    <td>Noto anche come "<span lang="en">Ionized Plasma Levitator</span>", permette di sollevare oggetti dal terreno e scagliarli con estrema forza. Inoltre può afferrare le palle di fuoco sparate dai nemici, raggiungere oggetti altrimenti irraggiungibili e rimuovere ostacoli</td>
+                    <td>Noto anche come "<span lang="en">Ionized Plasma Levitator</span>", permette di sollevare oggetti dal terreno e scagliarli con estrema forza. Inoltre pu&ograve; afferrare le palle di fuoco sparate dai nemici, raggiungere oggetti altrimenti irraggiungibili e rimuovere ostacoli</td>
                     <td>DOOM3("<span lang="en">Ressurrection of evil</span>")</td>
                 </tr>
                 <tr>
@@ -205,12 +205,12 @@
                 </tr>
                 <tr>
                     <th scope="row"><span lang="en">Gauss Cannon</span></th>
-                    <td>Spara una raffica di energia, maggiore è il tempo di carica maggiore è il danno della raffica</td>
+                    <td>Spara una raffica di energia, maggiore &egrave; il tempo di carica maggiore &egrave; il danno della raffica</td>
                     <td>DOOM(2016)</td>
                 </tr>
                 <tr>
                     <th scope="row"><span lang="en">Heavy Assault Rifle</span></th>
-                    <td>Analogo di <span lang="en">Machine Gun</span>, ma ha la possibilità di sparare missili</td>
+                    <td>Analogo di <span lang="en">Machine Gun</span>, ma ha la possibilit&agrave; di sparare missili</td>
                     <td>DOOM(2016)</td>
                 </tr>
                 <tr>
@@ -225,12 +225,12 @@
                 </tr>
                 <tr>
                     <th scope="row"><span lang="en">Kinetic Mine</span></th>
-                    <td>Mina che esplode quando un avversario è abbastanza vicino. "<span lang="en">Multiplayer Only</span>"</td>
+                    <td>Mina che esplode quando un avversario &egrave; abbastanza vicino. "<span lang="en">Multiplayer Only</span>"</td>
                     <td>DOOM(2016)</td>
                 </tr>
                 <tr>
                     <th scope="row"><span lang="en">Lighting Gun</span></th>
-                    <td>Arma a corto raggio che spara continui flussi di elettricità. "<span lang="en">Multiplayer Only</span>"</td>
+                    <td>Arma a corto raggio che spara continui flussi di elettricit&agrave;. "<span lang="en">Multiplayer Only</span>"</td>
                     <td>DOOM(2016)</td>
                 </tr>
                 <tr>
