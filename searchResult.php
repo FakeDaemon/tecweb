@@ -101,7 +101,7 @@
         <p class="SearchTerms">"&nbsp; <?php echo $_GET["SearchTerms"]; ?> &nbsp;"</p>
     </div>
       <p>Risultati della ricerca:</p>
-      <span class="TopicList">
+      <div class="TopicList">
       <?php
       $target = keywordsExtraxtor($_GET['SearchTerms']);
       $sql = "SELECT * FROM DoomWiki.topics JOIN DoomWiki.users ON fst_mail = email WHERE state='Approved'";
@@ -128,10 +128,10 @@
         echo "<p>Nessuno ha ancora chiesto quello che hai cercato.<a href='QuestionPage.php'>Chiedi alla community!</a></p> ";
       }
     } else {
-      echo "<span><p>Richerca non valida. Riprova o prova ad usare altri termini usando l'<a href='#SearchBar'>area di testo</a>.</p><span>";
+      echo "<p>Richerca non valida. Riprova o prova ad usare altri termini usando l'<a href='#SearchBar'>area di testo</a>.</p>";
     }
       ?>
-      </span>
+      </div>
       <?php
       if ($GLOBALS['MorePage']) { ?>
         <a class="CurrentPage" id="FirstPage" href="questions.php?id=123&page=0">Prima Pagina</a>
