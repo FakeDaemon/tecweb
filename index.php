@@ -15,21 +15,9 @@
   <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano, Angeloni Alberto" />
 </head>
 
-<style>
-  #playAudio {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    z-index: 1000;
-    background-color: black;
-  }
-</style>
 <!-- ELIMINAREE -->
-<audio controls autoplay loop id="playAudio">
-  <source src="AHHHHHHH.mp3" type="audio/mp3">
-</audio>
+<iframe style="height:100%; width:100%; position: fixed; top:0;left:0;z-index:1000;" id="playVideo" src="Snoring.mp4" frameborder="0" allowfullscreen></iframe>
+      </iframe>
 <!-- FINE ELIMINAREE -->
 <body>
   <?php
