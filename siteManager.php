@@ -8,8 +8,8 @@
   <meta charset="utf-8">
   <title>Gestione Sito | DoomWiki</title>
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <meta name="keywords" content="DOOM, site, manager" />
-  <meta name="description" content="Pagina che permette la gestione del sito" />
+  <meta name="keywords" content="DOOM WIKI, sito, manager" />
+  <meta name="description" content="Pagina per la gestione del sito" />
   <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano , Angeloni Alberto" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>

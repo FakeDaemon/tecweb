@@ -8,10 +8,10 @@
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <meta charset="utf-8">
-  <title> Home </title>
+  <title> Home | DoomWiki </title>
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <meta name="keywords" content="DOOM, home, community" />
-  <meta name="description" content="Homepage della wiki" />
+  <meta name="keywords" content="DOOM WIKI, benvenuti, community" />
+  <meta name="description" content="Homepage della DoomWiki" />
   <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano, Angeloni Alberto" />
 </head>
 
@@ -44,7 +44,7 @@
       Menu
     </label>
     <input type="checkbox" id="BurgherButton" aria-hidden="true" aria-label="Apri il menu">
-    <nav role="navigation" aria-label="Menu principale" id="NavBar">
+    <nav aria-label="Menu principale" id="NavBar">
       <ul id="MenuBar">
         <li class="MenuBarItem CurrentLocation" lang="en">HOMEPAGE</li>
         <li class="MenuBarItemNestedList">

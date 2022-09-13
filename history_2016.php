@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="it" dir="ltr">
 
 <head>
     <link href="CSS/STYLE_COMMON.css" rel="stylesheet" type="text/css" media="screen" />
@@ -7,10 +7,10 @@
     <link href="CSS/PRINT.css" rel="stylesheet" type="text/css" media="print" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron" />
     <meta charset="utf-8">
-    <title> DOOM (2016) </title>
+    <title> DOOM (2016) | DoomWiki</title>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <meta name="keywords" content="DOOM, wiki, doom 2016, trama, gameplay, release, fun fact" />
-    <meta name="description" content="Pagina riguardante il quarto capitolo" />
+    <meta name="keywords" content="DOOM WIKI, doom 2016, introduzione, trama, gameplay, multiplayer" />
+    <meta name="description" content="DOOM (2016), Tutte le informazioni sul gioco" />
     <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano , Angeloni Alberto" />
 </head>
 
@@ -156,7 +156,7 @@
                 Alcune <span lang="en">feature</span> del <span lang="en">gameplay</span> vogliono rifarsi ai vecchi giochi della saga:
                 come nell'originale <span lang="en">DOOM</span> (ma diversamente da <span lang="en">DOOM</span> 3) non serve ricaricare l'arma, sia le carte
                 d'accesso che le chiavi-teschio vengono reintrodotte e il numero delle armi non &egrave; limitato. A differenza di<span lang="en">DOOM</span> 3 non
-                esistono <abbr title="Non Playable Character">NPC</abbr> al di fuori di <span lang="en">Samuel Hayden, VEGA,</span> e Olivia <span lang="en">Pierce</span>; Esistono diverse novit&agrave;, per esempio, il "<span lang="en">karate system</span>", che permette al giocatore di combattere i demoni in <span lang"en">melee</span>.
+                esistono <abbr title="Non Playable Character">NPC</abbr> al di fuori di <span lang="en">Samuel Hayden, VEGA,</span> e Olivia <span lang="en">Pierce</span>; Esistono diverse novit&agrave;, per esempio, il "<span lang="en">karate system</span>", che permette al giocatore di combattere i demoni in <span lang="en">melee</span>.
               </p>
               <p>
                 Questa aggiunta permette di finire gli avversari grazie alle "<span lang="en">Glory Kills</span>":

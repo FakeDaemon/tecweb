@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="it" dir="ltr">
 
 <head>
     <link href="CSS/STYLE_COMMON.css" rel="stylesheet" type="text/css" media="screen" />
@@ -7,10 +7,10 @@
     <link href="CSS/PRINT.css" rel="stylesheet" type="text/css" media="print" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron" />
     <meta charset="utf-8">
-    <title> DOOM Eternals </title>
+    <title> DOOM Eternal | DoomWiki </title>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <meta name="keywords" content="DOOM, wiki, trama, gameplay, release, fun fact" />
-    <meta name="description" content="Pagina riguardante il quinto capitolo" />
+    <meta name="keywords" content="DOOM WIKI, trama, gameplay, introduzione, livelli" />
+    <meta name="description" content="DOOM Eternal, Tutte le informazioni sul gioco" />
     <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano , Angeloni Alberto" />
 </head>
 
@@ -214,7 +214,7 @@
                     Nido di sangue
                 </li>
                 <li>
-                    Complesso ARC
+                    Complesso <abbr title="Armored Response Coalition" lang="en">ARC</abbr>
                 </li>
                 <li>
                     Il nucleo di Marte
@@ -245,7 +245,7 @@
             <p>
                 <span lang="en">DOOM Eternal</span> include speciali livelli denominati <span lang="en">Master Levels</span>, dove vengono riproposti livelli dalla
                 campagna principale a cui vengono aggiunti nemici pi&ugrave; forti e il <span lang="en">layout</span> dei livelli viene modificato in modo da offrire un
-                esperienza di gioco pi&ugrave; ardua. Al lancio era disponibile solo "Complesso ARC" in modalit&agrave; <span lang="en">master level</span> e il livello
+                esperienza di gioco pi&ugrave; ardua. Al lancio era disponibile solo "Complesso <abbr title="Armored Response Coalition" lang="en">ARC</abbr>" in modalit&agrave; <span lang="en">master level</span> e il livello
                 "Base dei Cultisti" era disponibile in questa modalit&agrave; solo con il preorder del gioco. Altri <span lang="en">master levels</span> sono gi&agrave; stati
                 confermati e usciranno presto.
             </p>

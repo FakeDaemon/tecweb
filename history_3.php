@@ -7,10 +7,10 @@
     <link href="CSS/PRINT.css" rel="stylesheet" type="text/css" media="print" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron" />
     <meta charset="utf-8">
-    <title> DOOM 3</title>
+    <title> DOOM 3 | DoomWiki</title>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <meta name="keywords" content="DOOM, wiki, doom 3, trama, gameplay, release, fun fact" />
-    <meta name="description" content="Pagina riguardante il terzo capitolo" />
+    <meta name="keywords" content="DOOM WIKI, doom 3, riassunto, features, sviluppo, trama, gameplay" />
+    <meta name="description" content="DOOM 3, Tutte le informazioni sul gioco" />
     <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano , Angeloni Alberto" />
 </head>
 
@@ -88,7 +88,7 @@
                 </div>
                 <?php
                 if ($user->isLogged()) echo "<img src='IMAGES/ProfilePics/ProfilePicN" . $user->profile_pic . ".jpg' alt='Doomguy, accedi o registrati!'>";
-                else echo "<img src='IMAGES/ProfilePics/ProfilePicN1.jpg' alt='Doomguy, accedi o registrati!'>";
+                else echo "<img src='IMAGES/ProfilePics/ProfilePicN1.jpg' alt='Doomguy, accedi o registrati!'/>";
                 ?>
             </div>
         </nav>
@@ -114,7 +114,7 @@
               </p>
               <p>
                 <span lang="en">Doom</span> 3 si concentra su un <span lang="en">gameplay</span> pi&ugrave; lento e metodico rispetto al <span lang="en">"run and gun"</span> dei suoi predecessori.
-                Ha ricevuto un'opinione positiva da parte della critica per le sue atmosfere paurose e la sua grafica rivoluzionaria, ma &egrave; stato altrettanto criticato principalmente per il suo <span lang="en">gameplay</span>, che essendo pi&ugrave; lento, alla lunga stancava, e per i suoi dettagli horror ricchi di <span lang="fra">cliché</span>.
+                Ha ricevuto un'opinione positiva da parte della critica per le sue atmosfere paurose e la sua grafica rivoluzionaria, ma &egrave; stato altrettanto criticato principalmente per il suo <span lang="en">gameplay</span>, che essendo pi&ugrave; lento, alla lunga stancava, e per i suoi dettagli horror ricchi di <span lang="fr">cliché</span>.
             </p>
           </section>
         </article>
@@ -245,7 +245,7 @@
                 Nel frattempo il <span lang="en">Bravo Team</span> viene attaccato e sterminato da un gruppo di diavoletti, ad eccezione di un unico sopravvissuto che possiede una carta di soccorso che stringe nel pugno prima di morire.
                 Quando il protagonista arriva nel luogo del massacro, egli riceve tale tessera dall'unico sopravvissuto, che sar&agrave; ucciso da uno spettro poco dopo.
                 Arrivato così al centro comunicazioni, il <span lang="en">marine</span> <span lang="en">Campbell</span>, ha distrutto la <span lang="en">console</span> con la famosissima <abbr lang="en" title="Big Fucking Gun">BFG</abbr> 9000.
-                L'unica soluzione &egrave; trasmettere la richiesta di soccorso direttamente dalla torre satellitare, in quel preciso momento <lang="en">Swann</lang> chiede al nostro eroe di non inviare tale richiesta in quanto nessuno &egrave; in grado di capire cosa stia succedendo all'interno della base,
+                L'unica soluzione &egrave; trasmettere la richiesta di soccorso direttamente dalla torre satellitare, in quel preciso momento <span lang="en">Swann</span> chiede al nostro eroe di non inviare tale richiesta in quanto nessuno &egrave; in grado di capire cosa stia succedendo all'interno della base,
                 ci si trova così davanti ad un dubbio morale gigantesco....
               </p>
               <p>

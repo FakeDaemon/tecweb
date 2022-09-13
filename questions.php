@@ -23,8 +23,8 @@
     echo "<title>Ultime domande | DoomWiki</title>";
   } ?>
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <meta name="keywords" content="DOOM, question, topic" />
-  <meta name="description" content="Pagina riguardante le domande poste dagli utenti" />
+  <meta name="keywords" content="DOOM WIKI, domanda, utenti, topic" />
+  <meta name="description" content="Pagina contenente le domande poste dagli utenti" />
   <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano , Angeloni Alberto" />
 </head>
 

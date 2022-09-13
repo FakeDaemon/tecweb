@@ -8,8 +8,8 @@
   <meta charset="utf-8">
   <title>Accedi | DoomWiki</title>
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <meta name="keywords" content="DOOM, login, user" />
-  <meta name="description" content="Pagina riguardante il login dell'utente" />
+  <meta name="keywords" content="DOOM WIKI, login, user" />
+  <meta name="description" content="Pagina per il login al sito" />
   <meta name="author" content="Antonio Oseliero, Angeli Jacopo, Destro Stefano , Angeloni Alberto" />
 </head>
 
