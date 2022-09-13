@@ -121,14 +121,14 @@
             }
           }
         }else{
-          echo "<p>Richerca non valida. Riprova o prova ad usare altri termini usando l'<a href='#SearchBar'>area di testo</a>.</p>";
+          echo "<div><p>Richerca non valida. Riprova o prova ad usare altri termini usando l'<a href='#SearchBar'>area di testo</a>.</p></div>";
         }
       }
       if ($resultCount === 0) { //Nessun risultato
-        echo "<p>Nessuno ha ancora chiesto quello che hai cercato.<a href='QuestionPage.php'>Chiedi alla community!</a></p> ";
+        echo "<div><p>Nessuno ha ancora chiesto quello che hai cercato.<a href='QuestionPage.php'>Chiedi alla community!</a></p></div>";
       }
     } else {
-      echo "<p>Richerca non valida. Riprova o prova ad usare altri termini usando l'<a href='#SearchBar'>area di testo</a>.</p>";
+      echo "<div><p>Richerca non valida. Riprova o prova ad usare altri termini usando l'<a href='#SearchBar'>area di testo</a>.</p></div>";
     }
       ?>
       </div>

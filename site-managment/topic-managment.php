@@ -176,7 +176,6 @@
     </div>
 
   </footer>
-  <script src="SCRIPTS/.js/authpage.js"></script>
   <?php $conn->close(); ?>
 </body>
 
