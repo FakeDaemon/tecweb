@@ -332,7 +332,8 @@ footer > div#SiteMap > ul {
   list-style: none;
 }
 
-footer > div#SiteMap > ul > li.on {
+footer > div#SiteMap > ul > li.on,
+footer > div#SiteMap > ul > li > ul > li.on {
   color: red;
   font-weight: bold;
 }
