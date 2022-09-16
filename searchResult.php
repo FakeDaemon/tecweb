@@ -125,20 +125,13 @@
         }
       }
       if ($resultCount === 0) { //Nessun risultato
-        echo "<div><p>Nessuno ha ancora chiesto quello che hai cercato.<a href='QuestionPage.php'>Chiedi alla community!</a></p></div>";
+        echo "<div><p>Nessuno ha ancora chiesto quello che hai cercato.<a href='questionEditor.php'>Chiedi alla community!</a></p></div>";
       }
     } else {
       echo "<div><p>Richerca non valida. Riprova o prova ad usare altri termini usando l'<a href='#SearchBar'>area di testo</a>.</p></div>";
     }
       ?>
       </div>
-      <?php
-      if ($GLOBALS['MorePage']) { ?>
-        <a class="CurrentPage" id="FirstPage" href="questions.php?id=123&page=0">Prima Pagina</a>
-        <a class="CurrentPage" href="questions.php?id=123&page=0">Pagina Precedente</a>
-        <a href="questions.php?id=123&page=0">Pagina Successiva</a>
-        <a id="LastPage" href="questions.php?id=123&page=0">Ultima Pagina</a>
-      <?php } ?>
   </div>
 
   <footer id="foot">

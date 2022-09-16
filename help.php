@@ -112,8 +112,8 @@
     ?>
       <p>METTITI IN CONTATTO</p>
       <form id="auth_widget" action="help.php" method="post">
-        <?php if($GLOBALS['emailWrongFormat']) echo "<p class='errorMessage'>Formato email non valido.</p>";?>
-        <?php if($GLOBALS['messageWrongFormat']) echo "<p class='errorMessage'>Formato del messaggio non valido.</p>";?>
+        <?php if(isset($GLOBALS['emailWrongFormat']) && $GLOBALS['emailWrongFormat']) echo "<p class='errorMessage'>Formato email non valido.</p>";?>
+        <?php if(isset($GLOBALS['messageWrongFormat']) && $GLOBALS['messageWrongFormat']) echo "<p class='errorMessage'>Formato del messaggio non valido.</p>";?>
         <label id="email_input_label" for="email_input" class="up"><span lang="en">Email</span></label>
         <input id="email_input" type="text" name="email" required>
 
